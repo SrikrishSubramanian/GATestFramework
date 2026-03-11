@@ -1,0 +1,511 @@
+{
+  "component": "statistic",
+  "generatedAt": "2026-03-11T10:12:43.598Z",
+  "source": "dom",
+  "entries": {
+    "div_42_GrowthIn_Sales": {
+      "name": "div_42_GrowthIn_Sales",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "42%\n    \n\n    \n      Growth in Sales",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_42": {
+      "name": "div_42",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "42%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_GrowthIn_Sales": {
+      "name": "div_GrowthIn_Sales",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Growth in Sales",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_3": {
+      "name": "div_3",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$5B\n    \n\n    \n      Assets Under Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_5B": {
+      "name": "div_5B",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$5B",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Assets_Under_Management": {
+      "name": "div_Assets_Under_Management",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Assets Under Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "25K+\n    \n\n    \n      Investment Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_25K": {
+      "name": "div_25K",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "25K+",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Investment_Professionals": {
+      "name": "div_Investment_Professionals",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Investment Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "89%\n    \n\n    \n      Customer Satisfaction",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_89": {
+      "name": "div_89",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "89%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Customer_Satisfaction": {
+      "name": "div_Customer_Satisfaction",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Customer Satisfaction",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "150+\n    \n\n    \n      Portfolio Companies",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_150": {
+      "name": "div_150",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "150+",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Portfolio_Companies": {
+      "name": "div_Portfolio_Companies",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Portfolio Companies",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_30T_Global_Capital": {
+      "name": "div_30T_Global_Capital",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "3.0T\n    \n\n    \n      Global Capital",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_30T": {
+      "name": "div_30T",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "3.0T",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Global_Capital": {
+      "name": "div_Global_Capital",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Capital",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$750M\n    \n\n    \n      Private Equity Dry Powder",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_750M": {
+      "name": "div_750M",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$750M",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Private_Equity_Dry_Powder": {
+      "name": "div_Private_Equity_Dry_Powder",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Private Equity Dry Powder",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_500K_People_Impacted": {
+      "name": "div_500K_People_Impacted",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "500K+\n    \n\n    \n      People Impacted",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_500K": {
+      "name": "div_500K",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "500K+",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_People_Impacted": {
+      "name": "div_People_Impacted",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "People Impacted",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

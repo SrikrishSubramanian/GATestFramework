@@ -7,12 +7,18 @@
     "playwright": "^1.51.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
     "@playwright/test": "^1.51.1",
     "@types/node": "^22.13.10",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "env:stage": "cross-env env=stage npx playwright test regression.spec.ts --project chromium",
+    "env:local": "cross-env env=local npx playwright test --project chromium",
+    "env:dev": "cross-env env=dev npx playwright test --project chromium",
+    "env:qa": "cross-env env=qa npx playwright test --project chromium",
+    "cleanup:logs": "npx ts-node scripts/cleanup-logs.ts",
     "postinstall": "playwright install"
   }
 }

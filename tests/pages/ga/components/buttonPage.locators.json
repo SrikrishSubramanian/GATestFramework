@@ -1,0 +1,491 @@
+{
+  "component": "button",
+  "generatedAt": "2026-03-11T10:12:07.132Z",
+  "source": "dom",
+  "entries": {
+    "a_Primary_CTA": {
+      "name": "a_Primary_CTA",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-997c248b6d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Primary CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Secondary_CTA": {
+      "name": "a_Secondary_CTA",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-809b2e5e65",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secondary CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Primary_Disabled": {
+      "name": "a_Primary_Disabled",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-0bd299add5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Primary Disabled",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Secondary_Disabled": {
+      "name": "a_Secondary_Disabled",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-507761f726",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secondary Disabled",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Primary_Dark_Override": {
+      "name": "a_Primary_Dark_Override",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-df09d9f66d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Primary (Dark Override)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Secondary_Dark_Override": {
+      "name": "a_Secondary_Dark_Override",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-8ded0012f6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secondary (Dark Override)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Button": {
+      "name": "a_Button",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-5f37797db6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_LearnMore": {
+      "name": "a_LearnMore",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-c606aad59e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Button_Icon_Text": {
+      "name": "a_Button_Icon_Text",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-b05b8e4f46",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button Icon Text",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Primary_CTA": {
+      "name": "span_Primary_CTA",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Primary CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Secondary_CTA": {
+      "name": "span_Secondary_CTA",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secondary CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Primary_Disabled": {
+      "name": "span_Primary_Disabled",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Primary Disabled",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Secondary_Disabled": {
+      "name": "span_Secondary_Disabled",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secondary Disabled",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Primary_Dark_Override": {
+      "name": "span_Primary_Dark_Override",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Primary (Dark Override)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Secondary_Dark_Override": {
+      "name": "span_Secondary_Dark_Override",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secondary (Dark Override)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "i_15": {
+      "name": "i_15",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Button": {
+      "name": "span_Button",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_LearnMore": {
+      "name": "span_LearnMore",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Button_Icon_Text": {
+      "name": "span_Button_Icon_Text",
+      "component": "button",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button Icon Text",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

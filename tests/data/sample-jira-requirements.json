@@ -1,0 +1,33 @@
+{
+  "_description": "Sample Jira requirements JSON matching the dev-agents-shared requirements-reader output schema. Used by generate-from-jira.spec.ts (JIRA_JSON env var) to generate test specs from Jira tickets.",
+  "_howToGenerate": "Run '/read-jira GAAM-XXX' in Claude Code (dev-agents-shared plugin) to fetch real ticket data, or create manually following this schema.",
+  "ticket_key": "GAAM-999",
+  "title": "Button component — add disabled state styling",
+  "status": "In Progress",
+  "priority": "High",
+  "assignee": "Developer",
+  "user_stories": [
+    "As a content author, I want the button to visually indicate a disabled state, so that users understand the action is unavailable"
+  ],
+  "acceptance_criteria": [
+    "Given a button with the 'disabled' style applied, the button should have reduced opacity (0.5)",
+    "Given a disabled button, the cursor should show 'not-allowed' on hover",
+    "Given a disabled button, clicking it should not trigger any navigation",
+    "Given a disabled button on a dark background (granite/azul), the disabled state should still be visible with sufficient contrast"
+  ],
+  "technical_requirements": [
+    "Use the existing 'disabled' cq:styleId from the style system",
+    "LESS styling should use the @c-ga-disabled opacity variable"
+  ],
+  "non_functional_requirements": [
+    "Must meet WCAG 2.2 AA accessibility requirements for disabled controls",
+    "Should work across all responsive breakpoints (mobile, tablet, desktop)"
+  ],
+  "dependencies": [
+    "GAAM-100"
+  ],
+  "references": [
+    "https://www.figma.com/file/abc123/GA-Design-System?node-id=456"
+  ],
+  "raw_description": "Add disabled state styling to the button component. The disabled style ID already exists in the style system but has no visual treatment.\n\nAcceptance Criteria:\n- Button with disabled style should have 0.5 opacity\n- Cursor should be not-allowed\n- Click should not navigate\n- Must work on dark backgrounds with sufficient contrast\n\nSee Figma: https://www.figma.com/file/abc123/GA-Design-System?node-id=456"
+}

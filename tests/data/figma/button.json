@@ -1,0 +1,31 @@
+{
+  "_description": "Figma design spec for the button component. Used by generate-advanced.spec.ts (FIGMA_DATA env var) to generate visual assertion tests that compare live DOM computed styles against these design tokens.",
+  "_source": "Extract from Figma via /read-figma command (dev-agents-shared design-reader agent), or create manually from design system documentation.",
+  "component": "button",
+  "colors": {
+    "background-color": "#003DA5",
+    "color": "#FFFFFF",
+    "border-color": "#003DA5"
+  },
+  "typography": {
+    "font-family": "Poppins",
+    "font-size": "16px",
+    "font-weight": "600",
+    "line-height": "24px"
+  },
+  "spacing": {
+    "padding-top": "12px",
+    "padding-right": "24px",
+    "padding-bottom": "12px",
+    "padding-left": "24px"
+  },
+  "borderRadius": "4px",
+  "breakpoints": {
+    "desktop": { "width": "auto", "min-width": "200px" },
+    "mobile": { "width": "100%", "min-width": "unset" }
+  },
+  "animations": {
+    "hover": { "property": "background-color", "duration": "0.3s", "timingFunction": "ease" }
+  },
+  "states": ["default", "hover", "focus", "disabled"]
+}

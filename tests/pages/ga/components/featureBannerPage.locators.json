@@ -1,0 +1,1812 @@
+{
+  "component": "feature-banner",
+  "generatedAt": "2026-03-11T10:12:33.296Z",
+  "source": "dom",
+  "entries": {
+    "a_Optional_CTA": {
+      "name": "a_Optional_CTA",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-86fc7b1137",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_1": {
+      "name": "a_1",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__container.cmp-content-trail__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "button_Play_Video": {
+      "name": "button_Play_Video",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-big-play-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-big-play-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Play Video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Pause": {
+      "name": "button_Pause",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-play-control.vjs-control.vjs-button.vjs-playing",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-play-control')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Pause",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_SkipBackward_5Seconds": {
+      "name": "button_SkipBackward_5Seconds",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-skip-backward-5.vjs-control.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-skip-backward-5')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Skip backward 5 seconds",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_SkipForward_5Seconds": {
+      "name": "button_SkipForward_5Seconds",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-skip-forward-5.vjs-control.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-skip-forward-5')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Skip forward 5 seconds",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Unmute": {
+      "name": "button_Unmute",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-mute-control.vjs-control.vjs-button.vjs-vol-0",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-mute-control')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Unmute",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_SeekToLiveCurrentlyBehind_": {
+      "name": "button_SeekToLiveCurrentlyBehind_",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-seek-to-live-control.vjs-control",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-seek-to-live-control')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Seek to live, currently behind liveLIVE",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Playback_Rate": {
+      "name": "button_Playback_Rate",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-playback-rate.vjs-menu-button.vjs-menu-button-popup.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-playback-rate')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Playback Rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Chapters": {
+      "name": "button_Chapters",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-chapters-button.vjs-menu-button.vjs-menu-button-popup.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-chapters-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Chapters",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Descriptions": {
+      "name": "button_Descriptions",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-descriptions-button.vjs-menu-button.vjs-menu-button-popup.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-descriptions-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Descriptions",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Subtitles": {
+      "name": "button_Subtitles",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-subs-caps-button.vjs-menu-button.vjs-menu-button-popup.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-subs-caps-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Subtitles",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Audio_Track": {
+      "name": "button_Audio_Track",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-audio-button.vjs-menu-button.vjs-menu-button-popup.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-audio-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Audio Track",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Fullscreen": {
+      "name": "button_Fullscreen",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-fullscreen-control.vjs-control.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-fullscreen-control')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Fullscreen",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Reset": {
+      "name": "button_Reset",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-default-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-default-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Reset",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Done": {
+      "name": "button_Done",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-done-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-done-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Done",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Close_Modal_Dialog": {
+      "name": "button_Close_Modal_Dialog",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-close-button.vjs-control.vjs-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'vjs-close-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Close Modal Dialog",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "PlayVideo": {
+      "name": "PlayVideo",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__video-control.cmp-feature-banner__video-control--play.hide",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-feature-banner__video-control')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "PauseVideo": {
+      "name": "PauseVideo",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__video-control.cmp-feature-banner__video-control--pause",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Pause video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-feature-banner__video-control')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "select_WhiteBlackRedGreenBlueYellowMa": {
+      "name": "select_WhiteBlackRedGreenBlueYellowMa",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "vjs_select_581",
+          "confidence": 0.95
+        },
+        {
+          "type": "text",
+          "value": "WhiteBlackRedGreenBlueYellowMagentaCyan",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "select_OpaqueSemiTransparent": {
+      "name": "select_OpaqueSemiTransparent",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "vjs_select_586",
+          "confidence": 0.95
+        },
+        {
+          "type": "text",
+          "value": "OpaqueSemi-Transparent",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "select_BlackWhiteRedGreenBlueYellowMa": {
+      "name": "select_BlackWhiteRedGreenBlueYellowMa",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "vjs_select_596",
+          "confidence": 0.95
+        },
+        {
+          "type": "text",
+          "value": "BlackWhiteRedGreenBlueYellowMagentaCyan",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "select_OpaqueSemiTransparentTranspare": {
+      "name": "select_OpaqueSemiTransparentTranspare",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "vjs_select_601",
+          "confidence": 0.95
+        },
+        {
+          "type": "text",
+          "value": "OpaqueSemi-TransparentTransparent",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "select_TransparentSemiTransparentOpaq": {
+      "name": "select_TransparentSemiTransparentOpaq",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "vjs_select_616",
+          "confidence": 0.95
+        },
+        {
+          "type": "text",
+          "value": "TransparentSemi-TransparentOpaque",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "select_5075100125150175200300400": {
+      "name": "select_5075100125150175200300400",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "vjs_select_631",
+          "confidence": 0.95
+        },
+        {
+          "type": "text",
+          "value": "50%75%100%125%150%175%200%300%400%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "select_NoneRaisedDepressedUniformDrop": {
+      "name": "select_NoneRaisedDepressedUniformDrop",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "vjs_select_650",
+          "confidence": 0.95
+        },
+        {
+          "type": "text",
+          "value": "NoneRaisedDepressedUniformDrop shadow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "vjsSelect_665": {
+      "name": "vjsSelect_665",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "vjs_select_665",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "h2_LoremIpsumDolorSitAmetCon": {
+      "name": "h2_LoremIpsumDolorSitAmetCon",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__title.headline-h2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet consectetur.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "bcPlayerFeatureBanner_4d061201c3Html5Api": {
+      "name": "bcPlayerFeatureBanner_4d061201c3Html5Api",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "bc-player-feature-banner-4d061201c3_html5_api",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".vjs-tech",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "application",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//video[contains(@class,'vjs-tech')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_30": {
+      "name": "ul_30",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'vjs-menu-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_Chapters": {
+      "name": "ul_Chapters",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'vjs-menu-content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Chapters",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ulDescriptionsOffSelected": {
+      "name": "ulDescriptionsOffSelected",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'vjs-menu-content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "descriptions off, selected",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_33": {
+      "name": "ul_33",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'vjs-menu-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ulEn_MainSelected": {
+      "name": "ulEn_MainSelected",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'vjs-menu-content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "en (Main), selected",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Close": {
+      "name": "Close",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Video_Player": {
+      "name": "Video_Player",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "bc-player-feature-banner-4d061201c3",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__video-player.video-js.vjs-controls-disabled.vjs-workinghover.vjs-v8.vjs-layout-large.bc-player-default_default.bc-player-default_default-index-0.vjs-mouse.vjs-plugins-ready.vjs-player-info.vjs-contextmenu-ui.vjs-viewability.vjs-errors.vjs-playing.vjs-has-started.vjs-user-inactive",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region[name='Video Player']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//video-js[contains(@class,'cmp-feature-banner__video-player')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Volume_Level": {
+      "name": "Volume_Level",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-volume-bar.vjs-slider-bar.vjs-slider.vjs-slider-horizontal",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "slider[name='Volume Level']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'vjs-volume-bar')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Current_Time": {
+      "name": "span_Current_Time",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-control-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "presentation",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'vjs-control-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Current Time",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_002": {
+      "name": "span_002",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-current-time-display",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "presentation",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'vjs-current-time-display')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "0:02",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Duration": {
+      "name": "span_Duration",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-control-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "presentation",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'vjs-control-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Duration",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_412": {
+      "name": "span_412",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-duration-display",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "presentation",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'vjs-duration-display')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4:12",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Progress_Bar": {
+      "name": "Progress_Bar",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-progress-holder.vjs-slider.vjs-slider-horizontal",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "slider[name='Progress Bar']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'vjs-progress-holder')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Loaded: 21.19%0:02",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Remaining_Time": {
+      "name": "span_Remaining_Time",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-control-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "presentation",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'vjs-control-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Remaining Time",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_410": {
+      "name": "span_410",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-remaining-time-display",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "presentation",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'vjs-remaining-time-display')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4:10",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "liDescriptionsOffSelected": {
+      "name": "liDescriptionsOffSelected",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-item.vjs-selected",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitemradio",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'vjs-menu-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "descriptions off, selected",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_46": {
+      "name": "li_46",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-item.vjs-texttrack-settings",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'vjs-menu-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "subtitles settings, opens subtitles settings dialog",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "liSubtitlesOffSelected": {
+      "name": "liSubtitlesOffSelected",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-item.vjs-selected",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitemradio",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'vjs-menu-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "subtitles off, selected",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "liEn_MainSelected": {
+      "name": "liEn_MainSelected",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-item.vjs-selected.vjs-main-menu-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitemradio",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'vjs-menu-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "en (Main), selected",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Modal_Window": {
+      "name": "Modal_Window",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-error-display.vjs-modal-dialog.vjs-hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "dialog[name='Modal Window']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'vjs-error-display')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "This is a modal window.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_50": {
+      "name": "div_50",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-modal-dialog-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "document",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'vjs-modal-dialog-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Caption_Settings_Dialog": {
+      "name": "Caption_Settings_Dialog",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-modal-dialog.vjs-hidden.vjs-text-track-settings",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "dialog[name='Caption Settings Dialog']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'vjs-modal-dialog')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_52": {
+      "name": "div_52",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-modal-dialog-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "document",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'vjs-modal-dialog-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Player_Information_Dialog": {
+      "name": "Player_Information_Dialog",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-player-info-modal.vjs-modal-dialog.vjs-hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "dialog[name='Player Information Dialog']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'vjs-player-info-modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Video_Player_54": {
+      "name": "Video_Player_54",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "bc-player-feature-banner-83e29934de",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__video-player.video-js.vjs-controls-disabled.vjs-workinghover.vjs-v8.vjs-layout-large.bc-player-default_default.bc-player-default_default-index-1.vjs-mouse.vjs-plugins-ready.vjs-player-info.vjs-contextmenu-ui.vjs-viewability.vjs-errors.vjs-playing.vjs-has-started.vjs-user-inactive",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region[name='Video Player']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//video-js[contains(@class,'cmp-feature-banner__video-player')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Video_Player_55": {
+      "name": "Video_Player_55",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "bc-player-feature-banner-bfe967bf98",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__video-player.video-js.vjs-controls-disabled.vjs-workinghover.vjs-v8.vjs-layout-large.bc-player-default_default.bc-player-default_default-index-2.vjs-mouse.vjs-plugins-ready.vjs-player-info.vjs-contextmenu-ui.vjs-viewability.vjs-errors.vjs-playing.vjs-has-started.vjs-user-inactive",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region[name='Video Player']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//video-js[contains(@class,'cmp-feature-banner__video-player')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_012": {
+      "name": "span_012",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-current-time-display",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "presentation",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'vjs-current-time-display')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "0:12",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Progress_Bar_57": {
+      "name": "Progress_Bar_57",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-progress-holder.vjs-slider.vjs-slider-horizontal",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "slider[name='Progress Bar']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'vjs-progress-holder')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Loaded: 21.41%0:12",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_400": {
+      "name": "span_400",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-remaining-time-display",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "presentation",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'vjs-remaining-time-display')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4:00",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "picture_59": {
+      "name": "picture_59",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-poster",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'vjs-poster')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_Chapters": {
+      "name": "li_Chapters",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".vjs-menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'vjs-menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Chapters",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_61": {
+      "name": "div_61",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_62": {
+      "name": "div_62",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__media",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__media')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_63": {
+      "name": "div_63",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_64": {
+      "name": "div_64",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_65": {
+      "name": "div_65",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__content-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__content-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_66": {
+      "name": "div_66",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__headline-block",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__headline-block')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_OptionalEyebrow": {
+      "name": "div_OptionalEyebrow",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional eyebrow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_68": {
+      "name": "div_68",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__descriptor.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_69": {
+      "name": "div_69",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__cta-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_70": {
+      "name": "i_70",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Optional_CTA": {
+      "name": "span_Optional_CTA",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_72": {
+      "name": "div_72",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__component-parsys",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__component-parsys')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_73": {
+      "name": "div_73",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_74": {
+      "name": "div_74",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ComeGrowWithUs": {
+      "name": "div_ComeGrowWithUs",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Come grow with us",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "svg_76": {
+      "name": "svg_76",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__eyebrow-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//svg[contains(@class,'cmp-content-trail__eyebrow-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_77": {
+      "name": "p_77",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-content-trail__headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "dialog_78": {
+      "name": "dialog_78",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-content-trail__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_79": {
+      "name": "div_79",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_80": {
+      "name": "div_80",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-video-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-video-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_81": {
+      "name": "div_81",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_82": {
+      "name": "div_82",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__media",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__media')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_83": {
+      "name": "div_83",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__video-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__video-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_84": {
+      "name": "span_84",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__video-icon.cmp-feature-banner__video-icon--play",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-feature-banner__video-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_85": {
+      "name": "span_85",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__video-icon.cmp-feature-banner__video-icon--pause",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-feature-banner__video-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_86": {
+      "name": "div_86",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__mobile-image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__mobile-image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_87": {
+      "name": "div_87",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__component-parsys",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__component-parsys')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_88": {
+      "name": "div_88",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_100M": {
+      "name": "div_100M",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$100M",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_90": {
+      "name": "div_90",
+      "component": "feature-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "in transactions since 2014, as of Oct 1, 2020",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

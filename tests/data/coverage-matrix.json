@@ -1,0 +1,240 @@
+{
+  "_description": "Auto-generated test coverage matrix. Tracks which components have tests, across which categories, and how many. Updated by generate-components.spec.ts and generate-advanced.spec.ts orchestrators.",
+  "_usage": "Read-only reference. Regenerated on each test generation run. Do not edit manually.",
+  "lastUpdated": "2026-03-11T13:07:26.951Z",
+  "components": {
+    "button": {
+      "component": "button",
+      "categories": {
+        "interaction": {
+          "category": "interaction",
+          "testCount": 60,
+          "specFile": "button.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 108,
+          "specFile": "button.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 7,
+          "specFile": "button.visual.spec.ts",
+          "tags": [
+            "@visual"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "button.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        },
+        "csv": {
+          "category": "csv",
+          "testCount": 23,
+          "specFile": "button.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 23,
+          "specFile": "button.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 23,
+          "specFile": "button.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 23,
+          "specFile": "button.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 23,
+          "specFile": "button.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 23,
+          "specFile": "button.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        }
+      },
+      "totalTests": 7,
+      "lastUpdated": "2026-03-11T13:07:26.951Z"
+    },
+    "feature-banner": {
+      "component": "feature-banner",
+      "categories": {
+        "interaction": {
+          "category": "interaction",
+          "testCount": 8,
+          "specFile": "feature-banner.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "feature-banner.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "feature-banner.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 72,
+          "specFile": "feature-banner.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 4,
+      "lastUpdated": "2026-03-11T13:07:14.383Z"
+    },
+    "statistic": {
+      "component": "statistic",
+      "categories": {
+        "interaction": {
+          "category": "interaction",
+          "testCount": 8,
+          "specFile": "statistic.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "statistic.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "statistic.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 36,
+          "specFile": "statistic.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 4,
+      "lastUpdated": "2026-03-11T13:07:25.961Z"
+    }
+  },
+  "button": {
+    "pomClass": "ButtonPage",
+    "pomPath": "../pages/ga/components/buttonPage.ts",
+    "sidecarPath": "../pages/ga/components/buttonPage.locators.json",
+    "specPath": "../specFiles/ga/button.author.spec.ts",
+    "elementCount": 19,
+    "testCount": 12,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility"
+    ],
+    "generatedAt": "2026-03-11T10:12:07.142Z",
+    "source": "dom"
+  },
+  "feature-banner": {
+    "pomClass": "FeatureBannerPage",
+    "pomPath": "../pages/ga/components/featureBannerPage.ts",
+    "sidecarPath": "../pages/ga/components/featureBannerPage.locators.json",
+    "specPath": "../specFiles/ga/feature-banner.author.spec.ts",
+    "elementCount": 90,
+    "testCount": 12,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility"
+    ],
+    "generatedAt": "2026-03-11T10:12:33.305Z",
+    "source": "dom"
+  },
+  "statistic": {
+    "pomClass": "StatisticPage",
+    "pomPath": "../pages/ga/components/statisticPage.ts",
+    "sidecarPath": "../pages/ga/components/statisticPage.locators.json",
+    "specPath": "../specFiles/ga/statistic.author.spec.ts",
+    "elementCount": 24,
+    "testCount": 12,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility"
+    ],
+    "generatedAt": "2026-03-11T10:12:43.604Z",
+    "source": "dom"
+  }
+}

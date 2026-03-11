@@ -8,3 +8,11 @@
 /allure-results/
 /results/
 
+# Agent / generated artifacts
+logs/
+.claude/
+tests/data/.snapshots/
+tests/data/baselines/
+tests/environments/.env.*
+!tests/environments/.env.local
+

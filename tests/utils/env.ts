@@ -3,6 +3,7 @@ class ENV {
     public static AEM_AUTHOR_URL = process.env.AEM_AUTHOR_URL
     public static AEM_AUTHOR_USERNAME = process.env.AEM_AUTHOR_USERNAME
     public static AEM_AUTHOR_PASSWORD = process.env.AEM_AUTHOR_PASSWORD
+    public static GA_AUTH_REQUIRED = process.env.GA_AUTH_REQUIRED === 'true'
     public static BIO = process.env.BIO
     public static EXPANDABLE_TEASER = process.env.EXPANDABLE_TEASER
     public static PORTFOLIO = process.env.PORTFOLIO
