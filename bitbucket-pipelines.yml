@@ -1,0 +1,50 @@
+image: mcr.microsoft.com/playwright:v1.54.1-jammy
+
+definitions:
+  steps:
+    - step: &mobile_tests
+        name: Run Mobile Test Cases
+        size: 2x
+        caches:
+          - node
+        script:
+          - export CI=true
+          - npm ci
+          - npx playwright test --grep "@mobile" --project=Mobile-Chrome --project=Mobile-WebKit --workers=4
+          # - npx playwright test portfolioFilter.spec.ts --grep "@mobile" --project=Mobile-Chrome --project=Mobile-WebKit --workers=4
+        artifacts:
+          - playwright-report/**
+          - test-results/**
+        after-script:
+          - echo "📢 Sending Mobile Test Report to Teams..."
+          - BUILD_URL="https://bitbucket.org/$BITBUCKET_WORKSPACE/$BITBUCKET_REPO_SLUG/addon/pipelines/home#!/results/$BITBUCKET_BUILD_NUMBER"
+          - export BUILD_URL
+          - export BUILD_STATUS=$BITBUCKET_EXIT_CODE
+          - export BITBUCKET_PROJECT_NAME="Mobile"
+          - node send-report.js || true
+
+    - step: &desktop_tests
+        name: Run Desktop Test Cases
+        size: 2x
+        caches:
+          - node
+        script:
+          - export CI=true
+          - npm ci
+          - npx playwright test --project=chromium --project=firefox --project=webkit --workers=4
+        artifacts:
+          - playwright-report/**
+          - test-results/**
+        after-script:
+          - echo "📢 Sending Desktop Test Report to Teams..."
+          - BUILD_URL="https://bitbucket.org/$BITBUCKET_WORKSPACE/$BITBUCKET_REPO_SLUG/addon/pipelines/home#!/results/$BITBUCKET_BUILD_NUMBER"
+          - export BUILD_URL
+          - export BUILD_STATUS=$BITBUCKET_EXIT_CODE
+          - export BITBUCKET_PROJECT_NAME="Desktop"
+          - node send-report.js || true
+
+pipelines:
+  default:
+    - parallel:
+        - step: *mobile_tests
+        - step: *desktop_tests
