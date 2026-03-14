@@ -15,6 +15,30 @@ export interface SpecWriterOptions {
   outputDir?: string;
   /** CSS selector for the component root element (defaults to '${sel}') */
   rootSelector?: string;
+  /** Starting test ID number (defaults to 1). IDs are auto-incremented. */
+  startTestId?: number;
+}
+
+/**
+ * Generate a short uppercase prefix from a component name.
+ * e.g., "button" → "BTN", "feature-banner" → "FB", "statistic" → "STAT"
+ */
+function componentToPrefix(component: string): string {
+  const parts = component.split(/[-_]/);
+  if (parts.length === 1) {
+    const name = parts[0].toUpperCase();
+    // Short names get abbreviated: button→BTN, section→SEC, text→TXT, spacer→SPC
+    if (name.length <= 4) return name;
+    // Longer single words: take first 3-4 consonant-heavy chars
+    return name.replace(/[AEIOU]/g, '').slice(0, 4) || name.slice(0, 4);
+  }
+  // Multi-word: take first letter of each part
+  return parts.map(p => p.charAt(0).toUpperCase()).join('');
+}
+
+/** Format a test ID as [PREFIX-NNN] */
+function formatTestId(prefix: string, num: number): string {
+  return `[${prefix}-${String(num).padStart(3, '0')}]`;
 }
 
 export interface SpecWriteResult {
@@ -37,6 +61,8 @@ export function writeSpecFromCSV(
   const specPath = path.join(dir, `${group.component}.${options.mode}.spec.ts`);
   let testCount = 0;
   const usedCategories = new Set<string>();
+  const prefix = componentToPrefix(group.component);
+  let idCounter = options.startTestId || 1;
 
   const imports = buildImports(options);
   const describes: string[] = [];
@@ -45,6 +71,7 @@ export function writeSpecFromCSV(
   if (group.testCases.length > 0) {
     const tests = group.testCases.map(tc => {
       testCount++;
+      const testId = formatTestId(prefix, idCounter++);
       usedCategories.add('csv');
       const tags = tc.tags.length > 0
         ? tc.tags.map(t => t.startsWith('@') ? t : `@${t}`).join(' ')
@@ -54,7 +81,7 @@ export function writeSpecFromCSV(
         .map((s, i) => `    // Step ${i + 1}: ${s}`)
         .join('\n');
 
-      return `  test('${tags} ${escapeString(tc.title)}', async ({ page }) => {
+      return `  test('${testId} ${tags} ${escapeString(tc.title)}', async ({ page }) => {
     const pom = new ${options.pomClassName}(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
 ${stepsCode}
@@ -69,9 +96,10 @@ ${tests.join('\n\n')}
 
   // Generate category-based tests
   for (const category of options.categories) {
-    const catTests = generateCategoryTests(group.component, category, options);
+    const catTests = generateCategoryTests(group.component, category, options, prefix, idCounter);
     if (catTests) {
       testCount += catTests.count;
+      idCounter += catTests.count;
       usedCategories.add(category);
       describes.push(catTests.code);
     }
@@ -94,14 +122,17 @@ export function writeComponentSpec(options: SpecWriterOptions): SpecWriteResult 
   const specPath = path.join(dir, `${options.component}.${options.mode}.spec.ts`);
   let testCount = 0;
   const usedCategories: string[] = [];
+  const prefix = componentToPrefix(options.component);
+  let idCounter = options.startTestId || 1;
 
   const imports = buildImports(options);
   const describes: string[] = [];
 
   for (const category of options.categories) {
-    const catTests = generateCategoryTests(options.component, category, options);
+    const catTests = generateCategoryTests(options.component, category, options, prefix, idCounter);
     if (catTests) {
       testCount += catTests.count;
+      idCounter += catTests.count;
       usedCategories.push(category);
       describes.push(catTests.code);
     }
@@ -147,12 +178,16 @@ function buildImports(options: SpecWriterOptions): string {
 function generateCategoryTests(
   component: string,
   category: TestCategory,
-  options: SpecWriterOptions
+  options: SpecWriterOptions,
+  prefix: string = '',
+  startId: number = 1
 ): { code: string; count: number } | null {
   const name = toPascalCase(component);
   const pom = options.pomClassName;
   const baseUrl = options.mode === 'author' ? 'ENV.AEM_AUTHOR_URL' : 'ENV.BASE_URL';
   const sel = options.rootSelector || `.ga-${component}`;
+  const pfx = prefix || componentToPrefix(component);
+  let id = startId;
 
   switch (category) {
     case 'happy-path': {
@@ -160,13 +195,13 @@ function generateCategoryTests(
       return {
         count: 2,
         code: `test.describe('${name} — Happy Path', () => {
-  test('${tags} ${name} renders correctly', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} ${name} renders correctly', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     await expect(page.locator('${sel}').first()).toBeVisible();
   });
 
-  test('${tags} ${name} interactive elements are functional', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} ${name} interactive elements are functional', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     // Verify primary interactive elements
@@ -182,13 +217,13 @@ function generateCategoryTests(
       return {
         count: 2,
         code: `test.describe('${name} — Negative & Boundary', () => {
-  test('${tags} ${name} handles empty content gracefully', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} ${name} handles empty content gracefully', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     // Component should not throw errors with minimal content
   });
 
-  test('${tags} ${name} handles missing images', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} ${name} handles missing images', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     const images = page.locator('${sel} img');
@@ -207,14 +242,14 @@ function generateCategoryTests(
       return {
         count: 2,
         code: `test.describe('${name} — Responsive', () => {
-  test('${tags} @mobile ${name} adapts to mobile viewport', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} @mobile ${name} adapts to mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     await expect(page.locator('${sel}').first()).toBeVisible();
   });
 
-  test('${tags} ${name} adapts to tablet viewport', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} ${name} adapts to tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
@@ -229,7 +264,7 @@ function generateCategoryTests(
       const tags = formatTags(getTagsForTest('accessibility', 'high', options.a11yLevel));
       const axeTags = JSON.stringify(getAxeTags(options.a11yLevel));
       const tests = [
-        `  test('${tags} ${name} passes axe-core scan', async ({ page }) => {
+        `  test('${formatTestId(pfx, id++)} ${tags} ${name} passes axe-core scan', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     const results = await new AxeBuilder({ page })
@@ -238,7 +273,7 @@ function generateCategoryTests(
       .analyze();
     expect(results.violations).toEqual([]);
   });`,
-        `  test('${tags} ${name} interactive elements meet 24px target size', async ({ page }) => {
+        `  test('${formatTestId(pfx, id++)} ${tags} ${name} interactive elements meet 24px target size', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     const interactive = page.locator('${sel} a, ${sel} button, ${sel} input');
@@ -253,7 +288,7 @@ function generateCategoryTests(
       ];
 
       if (options.a11yLevel === 'wcag22') {
-        tests.push(`  test('${tags} ${name} focus is not obscured by sticky elements', async ({ page }) => {
+        tests.push(`  test('${formatTestId(pfx, id++)} ${tags} ${name} focus is not obscured by sticky elements', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     const focusable = page.locator('${sel} a, ${sel} button, ${sel} input');
@@ -280,7 +315,7 @@ function generateCategoryTests(
       return {
         count: 1,
         code: `test.describe('${name} — Console & Resources', () => {
-  test('${tags} ${name} produces no JS errors', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} ${name} produces no JS errors', async ({ page }) => {
     const capture = new ConsoleCapture(page);
     capture.start();
     const pom = new ${pom}(page);
@@ -299,7 +334,7 @@ function generateCategoryTests(
       return {
         count: 2,
         code: `test.describe('${name} — Broken Images', () => {
-  test('${tags} ${name} all images load successfully', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} ${name} all images load successfully', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     const images = page.locator('${sel} img');
@@ -311,7 +346,7 @@ function generateCategoryTests(
     }
   });
 
-  test('${tags} ${name} all images have alt attributes', async ({ page }) => {
+  test('${formatTestId(pfx, id++)} ${tags} ${name} all images have alt attributes', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(${baseUrl} || '');
     const images = page.locator('${sel} img');

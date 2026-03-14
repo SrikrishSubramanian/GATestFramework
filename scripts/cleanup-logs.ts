@@ -2,50 +2,68 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 /**
- * Deletes test run logs older than 7 days.
+ * Deletes test run logs and reports older than 7 days.
  * Run via: npx ts-node scripts/cleanup-logs.ts
  * Or:      npm run cleanup:logs
+ *
+ * Cleans:
+ *   - logs/YYYY-MM-DD/          (JSON run logs)
+ *   - playwright-report/YYYY-MM-DD/  (HTML reports + results.json)
  */
 
-const LOGS_DIR = path.resolve(__dirname, '..', 'logs');
+const ROOT = path.resolve(__dirname, '..');
+const CLEANUP_DIRS = [
+  path.join(ROOT, 'logs'),
+  path.join(ROOT, 'playwright-report'),
+];
 const MAX_AGE_DAYS = 7;
 
-function cleanup(): void {
-  if (!fs.existsSync(LOGS_DIR)) {
-    console.log('No logs directory found. Nothing to clean.');
-    return;
-  }
+function removeDirRecursive(dirPath: string): number {
+  let count = 0;
+  if (!fs.existsSync(dirPath)) return count;
 
+  for (const entry of fs.readdirSync(dirPath)) {
+    const fullPath = path.join(dirPath, entry);
+    if (fs.statSync(fullPath).isDirectory()) {
+      count += removeDirRecursive(fullPath);
+    } else {
+      fs.unlinkSync(fullPath);
+      count++;
+    }
+  }
+  fs.rmdirSync(dirPath);
+  return count;
+}
+
+function cleanup(): void {
   const now = Date.now();
   const maxAgeMs = MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
-  let deletedFiles = 0;
-  let deletedDirs = 0;
+  let totalFiles = 0;
+  let totalDirs = 0;
 
-  const dateDirs = fs.readdirSync(LOGS_DIR);
-  for (const dateDir of dateDirs) {
-    const dirPath = path.join(LOGS_DIR, dateDir);
-    const stat = fs.statSync(dirPath);
+  for (const baseDir of CLEANUP_DIRS) {
+    if (!fs.existsSync(baseDir)) continue;
 
-    if (!stat.isDirectory()) continue;
+    const dateDirs = fs.readdirSync(baseDir);
+    for (const dateDir of dateDirs) {
+      const dirPath = path.join(baseDir, dateDir);
+      if (!fs.statSync(dirPath).isDirectory()) continue;
 
-    // Check if directory name is a date (YYYY-MM-DD)
-    const dirDate = Date.parse(dateDir);
-    if (isNaN(dirDate)) continue;
+      // Only process YYYY-MM-DD named directories
+      const dirDate = Date.parse(dateDir);
+      if (isNaN(dirDate)) continue;
 
-    if (now - dirDate > maxAgeMs) {
-      // Delete all files in this date directory
-      const files = fs.readdirSync(dirPath);
-      for (const file of files) {
-        fs.unlinkSync(path.join(dirPath, file));
-        deletedFiles++;
+      if (now - dirDate > maxAgeMs) {
+        const filesRemoved = removeDirRecursive(dirPath);
+        totalFiles += filesRemoved;
+        totalDirs++;
+        const relPath = path.relative(ROOT, dirPath);
+        console.log(`Deleted: ${relPath}/ (${filesRemoved} files)`);
       }
-      fs.rmdirSync(dirPath);
-      deletedDirs++;
-      console.log(`Deleted: ${dateDir}/ (${files.length} files)`);
     }
   }
 
-  console.log(`Cleanup complete. Removed ${deletedDirs} directories, ${deletedFiles} files.`);
+  console.log(`Cleanup complete. Removed ${totalDirs} directories, ${totalFiles} files.`);
 }
 
 cleanup();

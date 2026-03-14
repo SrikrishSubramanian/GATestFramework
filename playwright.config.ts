@@ -1,6 +1,12 @@
 import { defineConfig, devices } from '@playwright/test';
 import globalSetup from './tests/utils/globalSetup';
 import { WaitForLoadStateOptions } from './src/setup/optional-parameter-types';
+
+// Timestamped report folder: playwright-report/YYYY-MM-DD/run-YYYY-MM-DDTHH-MM-SS/
+const now = new Date();
+const dateStr = now.toISOString().split('T')[0];
+const timestamp = now.toISOString().replace(/[:.]/g, '-');
+const reportDir = `playwright-report/${dateStr}/run-${timestamp}`;
 // const config = process.env.env || 'stage';
 // // const env = require(`./config/${config}.env.json`);
 // const env = require(`./tests/environments/${config}.json`);
@@ -69,9 +75,11 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html']
-    , ['line'],
-  ['json', { outputFile: 'playwright-report/results.json' }]
+  reporter: [
+    ['html', { outputFolder: reportDir }],
+    ['line'],
+    ['json', { outputFile: `${reportDir}/results.json` }],
+    ['./tests/utils/test-run-reporter.ts'],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   globalSetup: "tests/utils/globalSetup.ts",
@@ -79,7 +87,7 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
     screenshot: 'only-on-failure',
-    video: 'on',
+    video: 'retain-on-failure',
     // launchOptions: {
     //   slowMo: 1000,
     //   args: ["--start-fullscreen"],
