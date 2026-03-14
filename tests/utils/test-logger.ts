@@ -16,11 +16,20 @@ export interface TestRunResult {
   }>;
 }
 
+export interface CSVMetadataInfo {
+  testName?: string;
+  jiraId?: string;
+  testedUrl?: string;
+  figmaLink?: string;
+  component?: string;
+}
+
 export interface TestRunLog {
   runId: string;
   timestamp: string;
   environment: string;
   browser: string;
+  csvMetadata?: CSVMetadataInfo;
   totalTests: number;
   passed: number;
   failed: number;
@@ -58,6 +67,10 @@ export class TestLogger {
       duration: 0,
       results: [],
     };
+  }
+
+  setCSVMetadata(metadata: CSVMetadataInfo): void {
+    this.log.csvMetadata = metadata;
   }
 
   addResult(result: TestRunResult): void {

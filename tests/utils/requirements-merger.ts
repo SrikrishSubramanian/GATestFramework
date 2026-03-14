@@ -147,6 +147,8 @@ export function jiraToTestCases(jira: JiraRequirement): ParsedTestCase[] {
       priority: jira.priority || 'medium',
       tags: jira.labels.map(l => l.startsWith('@') ? l : `@${l}`),
       url: '',
+      preCondition: '',
+      testData: '',
     });
   }
 
@@ -161,6 +163,8 @@ export function jiraToTestCases(jira: JiraRequirement): ParsedTestCase[] {
       priority: jira.priority || 'medium',
       tags: jira.labels.map(l => l.startsWith('@') ? l : `@${l}`),
       url: '',
+      preCondition: '',
+      testData: '',
     });
   }
 
@@ -188,6 +192,8 @@ export function figmaToVisualTestCases(figma: FigmaDesignSpec): ParsedTestCase[]
       priority: 'medium',
       tags: ['@visual'],
       url: '',
+      preCondition: '',
+      testData: '',
     });
   }
 
@@ -205,6 +211,8 @@ export function figmaToVisualTestCases(figma: FigmaDesignSpec): ParsedTestCase[]
       priority: 'medium',
       tags: ['@visual'],
       url: '',
+      preCondition: '',
+      testData: '',
     });
   }
 
@@ -223,6 +231,8 @@ export function figmaToVisualTestCases(figma: FigmaDesignSpec): ParsedTestCase[]
       priority: 'low',
       tags: ['@visual'],
       url: '',
+      preCondition: '',
+      testData: '',
     });
   }
 
@@ -241,6 +251,8 @@ export function figmaToVisualTestCases(figma: FigmaDesignSpec): ParsedTestCase[]
       priority: 'medium',
       tags: ['@visual', breakpoint === 'mobile' ? '@mobile' : '@regression'],
       url: '',
+      preCondition: '',
+      testData: '',
     });
   }
 

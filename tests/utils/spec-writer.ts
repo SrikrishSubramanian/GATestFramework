@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { ParsedTestCase, ParsedTestGroup } from './csv-test-parser';
+import { ParsedTestCase, ParsedTestGroup, CSVMetadata } from './csv-test-parser';
 import { TestCategory, A11yLevel, getTagsForTest, formatTags, getAxeTags } from './test-tagger';
 
 const GA_SPECS_DIR = path.resolve(__dirname, '..', 'specFiles', 'ga');
@@ -109,6 +109,31 @@ ${tests.join('\n\n')}
   fs.writeFileSync(specPath, content, 'utf-8');
 
   return { specPath, testCount, categories: Array.from(usedCategories) };
+}
+
+/**
+ * Generate a spec file from parsed CSV test cases, including metadata sidecar.
+ * Writes a .meta.json next to the spec file so the reporter can pick it up.
+ */
+export function writeSpecFromCSVWithMetadata(
+  group: ParsedTestGroup,
+  metadata: CSVMetadata,
+  options: SpecWriterOptions
+): SpecWriteResult {
+  const result = writeSpecFromCSV(group, options);
+
+  // Write metadata sidecar next to the spec file
+  const metaPath = result.specPath.replace(/\.spec\.ts$/, '.meta.json');
+  const metaContent = {
+    testName: metadata.testName || undefined,
+    jiraId: metadata.jiraId || undefined,
+    testedUrl: metadata.testedUrl || undefined,
+    figmaLink: metadata.figmaLink || undefined,
+    component: group.component,
+  };
+  fs.writeFileSync(metaPath, JSON.stringify(metaContent, null, 2), 'utf-8');
+
+  return result;
 }
 
 /**

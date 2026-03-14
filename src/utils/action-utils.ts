@@ -229,7 +229,7 @@ export async function clickByJS(input: string | Locator, options?: TimeoutOption
 export async function downloadFile(input: string | Locator, path: string): Promise<void> {
     const locator = getLocator(input);
     const downloadPromise = getPage().waitForEvent('download');
-    await click(locator);
+    await clickElement(locator);
     const download = await downloadPromise;
     // Wait for the download process to complete
     console.log(await download.path());
@@ -237,9 +237,13 @@ export async function downloadFile(input: string | Locator, path: string): Promi
     await download.saveAs(path);
 }
 
-export async function uploadFiles(input: string | Locator, path: UploadValues, options?: UploadOptions): Promise<void> {
+export async function uploadFiles(
+    input: string | Locator,
+    files: string | ReadonlyArray<string> | { name: string; mimeType: string; buffer: Buffer },
+    options?: { noWaitAfter?: boolean; timeout?: number }
+): Promise<void> {
     const locator = getLocator(input);
-    await locator.setInputFiles(path, options);
+    await locator.setInputFiles(files, options);
 }
 
 export async function getInputValue(input: string | Locator, options?: TimeoutOption): Promise<string> {
