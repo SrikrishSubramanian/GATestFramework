@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Statistic — Component Interactions', () => {
-  test('@interaction @regression statistic adapts to unknown parent (#1)', async ({ page }) => {
+  test('[STAT-017] @interaction @regression statistic adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
@@ -23,7 +23,7 @@ test.describe('Statistic — Component Interactions', () => {
     await expect(child).toBeVisible();
   });
 
-  test('@interaction @regression statistic adapts to unknown parent (#2)', async ({ page }) => {
+  test('[STAT-018] @interaction @regression statistic adapts to unknown parent (#2)', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
@@ -32,7 +32,7 @@ test.describe('Statistic — Component Interactions', () => {
     await expect(child).toBeVisible();
   });
 
-  test('@interaction @regression statistic adapts to unknown parent (#3)', async ({ page }) => {
+  test('[STAT-019] @interaction @regression statistic adapts to unknown parent (#3)', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
@@ -41,7 +41,7 @@ test.describe('Statistic — Component Interactions', () => {
     await expect(child).toBeVisible();
   });
 
-  test('@interaction @regression statistic adapts to unknown parent (#4)', async ({ page }) => {
+  test('[STAT-020] @interaction @regression statistic adapts to unknown parent (#4)', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
@@ -50,7 +50,7 @@ test.describe('Statistic — Component Interactions', () => {
     await expect(child).toBeVisible();
   });
 
-  test('@interaction @regression statistic adapts to unknown parent (#5)', async ({ page }) => {
+  test('[STAT-021] @interaction @regression statistic adapts to unknown parent (#5)', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
@@ -59,7 +59,7 @@ test.describe('Statistic — Component Interactions', () => {
     await expect(child).toBeVisible();
   });
 
-  test('@interaction @regression statistic adapts to unknown parent (#6)', async ({ page }) => {
+  test('[STAT-022] @interaction @regression statistic adapts to unknown parent (#6)', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
@@ -68,7 +68,7 @@ test.describe('Statistic — Component Interactions', () => {
     await expect(child).toBeVisible();
   });
 
-  test('@interaction @regression statistic adapts to unknown parent (#7)', async ({ page }) => {
+  test('[STAT-023] @interaction @regression statistic adapts to unknown parent (#7)', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
@@ -77,7 +77,7 @@ test.describe('Statistic — Component Interactions', () => {
     await expect(child).toBeVisible();
   });
 
-  test('@interaction @regression statistic adapts to unknown parent (#8)', async ({ page }) => {
+  test('[STAT-024] @interaction @regression statistic adapts to unknown parent (#8)', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background

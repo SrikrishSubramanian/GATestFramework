@@ -15,7 +15,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Button — Image Health', () => {
-  test('@regression No broken images', async ({ page }, testInfo) => {
+  test('[BTN-024] @regression No broken images', async ({ page }, testInfo) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await scanImages(page, '.button');
@@ -23,7 +23,7 @@ test.describe('Button — Image Health', () => {
     expect(results.broken).toBe(0);
   });
 
-  test('@regression All images have alt text', async ({ page }, testInfo) => {
+  test('[BTN-025] @regression All images have alt text', async ({ page }, testInfo) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await scanImages(page, '.button');
@@ -31,7 +31,7 @@ test.describe('Button — Image Health', () => {
     expect(results.missingAlt).toBe(0);
   });
 
-  test('@regression No oversized images (>500KB)', async ({ page }, testInfo) => {
+  test('[BTN-026] @regression No oversized images (>500KB)', async ({ page }, testInfo) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await scanImages(page, '.button');
@@ -39,7 +39,7 @@ test.describe('Button — Image Health', () => {
     expect(results.oversized).toBe(0);
   });
 
-  test('@regression All images have explicit dimensions (CLS prevention)', async ({ page }, testInfo) => {
+  test('[BTN-027] @regression All images have explicit dimensions (CLS prevention)', async ({ page }, testInfo) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await scanImages(page, '.button');

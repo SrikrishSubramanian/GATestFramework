@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('FeatureBanner — Visual Regression', () => {
-  test('@visual @regression Desktop screenshot matches baseline', async ({ page }) => {
+  test('[FB-097] @visual @regression Desktop screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -25,7 +25,7 @@ test.describe('FeatureBanner — Visual Regression', () => {
     });
   });
 
-  test('@visual @regression @mobile Mobile screenshot matches baseline', async ({ page }) => {
+  test('[FB-098] @visual @regression @mobile Mobile screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -36,7 +36,7 @@ test.describe('FeatureBanner — Visual Regression', () => {
     });
   });
 
-  test('@visual @regression Tablet screenshot matches baseline', async ({ page }) => {
+  test('[FB-099] @visual @regression Tablet screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');

@@ -3,7 +3,7 @@ import { ButtonPage } from '../../../pages/ga/components/buttonPage';
 import ENV from '../../../utils/env';
 
 test.describe('Button — Visual Verification', () => {
-  test('@visual button colors match Figma spec', async ({ page }) => {
+  test('[BTN-196] @visual button colors match Figma spec', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const el = page.locator('.ga-button').first();
@@ -20,7 +20,7 @@ test.describe('Button — Visual Verification', () => {
       expect(styles['border-color']).toBe('rgb(0, 61, 165)');
   });
 
-  test('@visual button typography matches Figma spec', async ({ page }) => {
+  test('[BTN-197] @visual button typography matches Figma spec', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const el = page.locator('.ga-button').first();
@@ -39,7 +39,7 @@ test.describe('Button — Visual Verification', () => {
       expect(styles['line-height']).toBe('24px');
   });
 
-  test('@visual button spacing matches Figma spec (±2px)', async ({ page }) => {
+  test('[BTN-198] @visual button spacing matches Figma spec (±2px)', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const el = page.locator('.ga-button').first();
@@ -58,7 +58,7 @@ test.describe('Button — Visual Verification', () => {
       expect(Math.abs(parseInt(styles['padding-left']) - 24)).toBeLessThanOrEqual(2);
   });
 
-  test('@visual button hover animation matches spec', async ({ page }) => {
+  test('[BTN-199] @visual button hover animation matches spec', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const el = page.locator('.ga-button').first();
@@ -74,7 +74,7 @@ test.describe('Button — Visual Verification', () => {
     expect(beforeBg).not.toBe(afterBg);
   });
 
-  test('@visual button layout at desktop', async ({ page }) => {
+  test('[BTN-200] @visual button layout at desktop', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -83,7 +83,7 @@ test.describe('Button — Visual Verification', () => {
     // min-width should be 200px
   });
 
-  test('@visual @mobile button layout at mobile', async ({ page }) => {
+  test('[BTN-201] @visual @mobile button layout at mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -92,7 +92,7 @@ test.describe('Button — Visual Verification', () => {
     // width should be 100%
   });
 
-  test('@visual button screenshot matches baseline', async ({ page }) => {
+  test('[BTN-202] @visual button screenshot matches baseline', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const el = page.locator('.ga-button').first();

@@ -17,13 +17,13 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Statistic — Happy Path', () => {
-  test('@smoke @regression Statistic renders correctly', async ({ page }) => {
+  test('[STAT-001] @smoke @regression Statistic renders correctly', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     await expect(page.locator('.cmp-statistic').first()).toBeVisible();
   });
 
-  test('@smoke @regression Statistic interactive elements are functional', async ({ page }) => {
+  test('[STAT-002] @smoke @regression Statistic interactive elements are functional', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify primary interactive elements
@@ -33,13 +33,13 @@ test.describe('Statistic — Happy Path', () => {
 });
 
 test.describe('Statistic — Negative & Boundary', () => {
-  test('@negative @regression Statistic handles empty content gracefully', async ({ page }) => {
+  test('[STAT-003] @negative @regression Statistic handles empty content gracefully', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Component should not throw errors with minimal content
   });
 
-  test('@negative @regression Statistic handles missing images', async ({ page }) => {
+  test('[STAT-004] @negative @regression Statistic handles missing images', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const images = page.locator('.cmp-statistic img');
@@ -52,14 +52,14 @@ test.describe('Statistic — Negative & Boundary', () => {
 });
 
 test.describe('Statistic — Responsive', () => {
-  test('@mobile @regression @mobile Statistic adapts to mobile viewport', async ({ page }) => {
+  test('[STAT-005] @mobile @regression @mobile Statistic adapts to mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     await expect(page.locator('.cmp-statistic').first()).toBeVisible();
   });
 
-  test('@mobile @regression Statistic adapts to tablet viewport', async ({ page }) => {
+  test('[STAT-006] @mobile @regression Statistic adapts to tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -68,7 +68,7 @@ test.describe('Statistic — Responsive', () => {
 });
 
 test.describe('Statistic — Console & Resources', () => {
-  test('@regression Statistic produces no JS errors', async ({ page }) => {
+  test('[STAT-007] @regression Statistic produces no JS errors', async ({ page }) => {
     const capture = new ConsoleCapture(page);
     capture.start();
     const pom = new StatisticPage(page);
@@ -81,7 +81,7 @@ test.describe('Statistic — Console & Resources', () => {
 });
 
 test.describe('Statistic — Broken Images', () => {
-  test('@regression Statistic all images load successfully', async ({ page }) => {
+  test('[STAT-008] @regression Statistic all images load successfully', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const images = page.locator('.cmp-statistic img');
@@ -93,7 +93,7 @@ test.describe('Statistic — Broken Images', () => {
     }
   });
 
-  test('@regression Statistic all images have alt attributes', async ({ page }) => {
+  test('[STAT-009] @regression Statistic all images have alt attributes', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const images = page.locator('.cmp-statistic img');
@@ -106,7 +106,7 @@ test.describe('Statistic — Broken Images', () => {
 });
 
 test.describe('Statistic — Accessibility', () => {
-  test('@a11y @wcag22 @regression @smoke Statistic passes axe-core scan', async ({ page }) => {
+  test('[STAT-010] @a11y @wcag22 @regression @smoke Statistic passes axe-core scan', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await new AxeBuilder({ page })
@@ -116,7 +116,7 @@ test.describe('Statistic — Accessibility', () => {
     expect(results.violations).toEqual([]);
   });
 
-  test('@a11y @wcag22 @regression @smoke Statistic interactive elements meet 24px target size', async ({ page }) => {
+  test('[STAT-011] @a11y @wcag22 @regression @smoke Statistic interactive elements meet 24px target size', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const interactive = page.locator('.cmp-statistic a, .cmp-statistic button, .cmp-statistic input');
@@ -129,7 +129,7 @@ test.describe('Statistic — Accessibility', () => {
     }
   });
 
-  test('@a11y @wcag22 @regression @smoke Statistic focus is not obscured by sticky elements', async ({ page }) => {
+  test('[STAT-012] @a11y @wcag22 @regression @smoke Statistic focus is not obscured by sticky elements', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const focusable = page.locator('.cmp-statistic a, .cmp-statistic button, .cmp-statistic input');

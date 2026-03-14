@@ -17,7 +17,7 @@ test.beforeEach(async ({ page }) => {
 // State Matrix: 36 total (24 valid, 12 invalid)
 
 test.describe('Statistic — State Matrix (Valid)', () => {
-  test('@matrix @regression default + light-theme on granite @ desktop-1440', async ({ page }) => {
+  test('[STAT-025] @matrix @regression default + light-theme on granite @ desktop-1440', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -26,7 +26,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + light-theme on granite @ tablet-1024', async ({ page }) => {
+  test('[STAT-026] @matrix @regression default + light-theme on granite @ tablet-1024', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -35,7 +35,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression @mobile default + light-theme on granite @ mobile-390', async ({ page }) => {
+  test('[STAT-027] @matrix @regression @mobile default + light-theme on granite @ mobile-390', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -44,7 +44,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + light-theme on azul @ desktop-1440', async ({ page }) => {
+  test('[STAT-028] @matrix @regression default + light-theme on azul @ desktop-1440', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -53,7 +53,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + light-theme on azul @ tablet-1024', async ({ page }) => {
+  test('[STAT-029] @matrix @regression default + light-theme on azul @ tablet-1024', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -62,7 +62,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression @mobile default + light-theme on azul @ mobile-390', async ({ page }) => {
+  test('[STAT-030] @matrix @regression @mobile default + light-theme on azul @ mobile-390', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -71,7 +71,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + dark-theme on white @ desktop-1440', async ({ page }) => {
+  test('[STAT-031] @matrix @regression default + dark-theme on white @ desktop-1440', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -80,7 +80,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + dark-theme on white @ tablet-1024', async ({ page }) => {
+  test('[STAT-032] @matrix @regression default + dark-theme on white @ tablet-1024', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -89,7 +89,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression @mobile default + dark-theme on white @ mobile-390', async ({ page }) => {
+  test('[STAT-033] @matrix @regression @mobile default + dark-theme on white @ mobile-390', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -98,7 +98,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + dark-theme on slate @ desktop-1440', async ({ page }) => {
+  test('[STAT-034] @matrix @regression default + dark-theme on slate @ desktop-1440', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -107,7 +107,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + dark-theme on slate @ tablet-1024', async ({ page }) => {
+  test('[STAT-035] @matrix @regression default + dark-theme on slate @ tablet-1024', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -116,7 +116,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression @mobile default + dark-theme on slate @ mobile-390', async ({ page }) => {
+  test('[STAT-036] @matrix @regression @mobile default + dark-theme on slate @ mobile-390', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -125,7 +125,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + auto-theme on white @ desktop-1440', async ({ page }) => {
+  test('[STAT-037] @matrix @regression default + auto-theme on white @ desktop-1440', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -134,7 +134,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + auto-theme on white @ tablet-1024', async ({ page }) => {
+  test('[STAT-038] @matrix @regression default + auto-theme on white @ tablet-1024', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -143,7 +143,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression @mobile default + auto-theme on white @ mobile-390', async ({ page }) => {
+  test('[STAT-039] @matrix @regression @mobile default + auto-theme on white @ mobile-390', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -152,7 +152,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + auto-theme on slate @ desktop-1440', async ({ page }) => {
+  test('[STAT-040] @matrix @regression default + auto-theme on slate @ desktop-1440', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -161,7 +161,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + auto-theme on slate @ tablet-1024', async ({ page }) => {
+  test('[STAT-041] @matrix @regression default + auto-theme on slate @ tablet-1024', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -170,7 +170,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression @mobile default + auto-theme on slate @ mobile-390', async ({ page }) => {
+  test('[STAT-042] @matrix @regression @mobile default + auto-theme on slate @ mobile-390', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -179,7 +179,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + auto-theme on granite @ desktop-1440', async ({ page }) => {
+  test('[STAT-043] @matrix @regression default + auto-theme on granite @ desktop-1440', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -188,7 +188,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + auto-theme on granite @ tablet-1024', async ({ page }) => {
+  test('[STAT-044] @matrix @regression default + auto-theme on granite @ tablet-1024', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -197,7 +197,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression @mobile default + auto-theme on granite @ mobile-390', async ({ page }) => {
+  test('[STAT-045] @matrix @regression @mobile default + auto-theme on granite @ mobile-390', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -206,7 +206,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + auto-theme on azul @ desktop-1440', async ({ page }) => {
+  test('[STAT-046] @matrix @regression default + auto-theme on azul @ desktop-1440', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -215,7 +215,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression default + auto-theme on azul @ tablet-1024', async ({ page }) => {
+  test('[STAT-047] @matrix @regression default + auto-theme on azul @ tablet-1024', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -224,7 +224,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     await expect(root).toBeVisible();
   });
 
-  test('@matrix @regression @mobile default + auto-theme on azul @ mobile-390', async ({ page }) => {
+  test('[STAT-048] @matrix @regression @mobile default + auto-theme on azul @ mobile-390', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -235,99 +235,16 @@ test.describe('Statistic — State Matrix (Valid)', () => {
 });
 
 test.describe('Statistic — State Matrix (Invalid Combos)', () => {
-  test('@matrix @negative default + light-theme on white is invalid', async ({ page }) => {
-    // light-theme on light background (white) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + light-theme on white is invalid', async ({ page }) => {
-    // light-theme on light background (white) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + light-theme on white is invalid', async ({ page }) => {
-    // light-theme on light background (white) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + light-theme on slate is invalid', async ({ page }) => {
-    // light-theme on light background (slate) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + light-theme on slate is invalid', async ({ page }) => {
-    // light-theme on light background (slate) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + light-theme on slate is invalid', async ({ page }) => {
-    // light-theme on light background (slate) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + dark-theme on granite is invalid', async ({ page }) => {
-    // dark-theme on dark background (granite) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + dark-theme on granite is invalid', async ({ page }) => {
-    // dark-theme on dark background (granite) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + dark-theme on granite is invalid', async ({ page }) => {
-    // dark-theme on dark background (granite) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + dark-theme on azul is invalid', async ({ page }) => {
-    // dark-theme on dark background (azul) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + dark-theme on azul is invalid', async ({ page }) => {
-    // dark-theme on dark background (azul) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
-
-  test('@matrix @negative default + dark-theme on azul is invalid', async ({ page }) => {
-    // dark-theme on dark background (azul) has insufficient contrast
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new StatisticPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });
+  test('[STAT-049] @matrix @negative default + light-theme on white is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-050] @matrix @negative default + light-theme on white is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-051] @matrix @negative default + light-theme on white is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-052] @matrix @negative default + light-theme on slate is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-053] @matrix @negative default + light-theme on slate is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-054] @matrix @negative default + light-theme on slate is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-055] @matrix @negative default + dark-theme on granite is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-056] @matrix @negative default + dark-theme on granite is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-057] @matrix @negative default + dark-theme on granite is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-058] @matrix @negative default + dark-theme on azul is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-059] @matrix @negative default + dark-theme on azul is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
+  test('[STAT-060] @matrix @negative default + dark-theme on azul is invalid', async ({ page }) => { const pom = new StatisticPage(page); await pom.navigate(ENV.AEM_AUTHOR_URL || ''); });
 });

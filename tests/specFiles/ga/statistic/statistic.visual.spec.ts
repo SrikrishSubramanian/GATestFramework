@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Statistic — Visual Regression', () => {
-  test('@visual @regression Desktop screenshot matches baseline', async ({ page }) => {
+  test('[STAT-061] @visual @regression Desktop screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -25,7 +25,7 @@ test.describe('Statistic — Visual Regression', () => {
     });
   });
 
-  test('@visual @regression @mobile Mobile screenshot matches baseline', async ({ page }) => {
+  test('[STAT-062] @visual @regression @mobile Mobile screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -36,7 +36,7 @@ test.describe('Statistic — Visual Regression', () => {
     });
   });
 
-  test('@visual @regression Tablet screenshot matches baseline', async ({ page }) => {
+  test('[STAT-063] @visual @regression Tablet screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');

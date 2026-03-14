@@ -17,13 +17,13 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('FeatureBanner — Happy Path', () => {
-  test('@smoke @regression FeatureBanner renders correctly', async ({ page }) => {
+  test('[FB-001] @smoke @regression FeatureBanner renders correctly', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     await expect(page.locator('.feature-banner').first()).toBeVisible();
   });
 
-  test('@smoke @regression FeatureBanner interactive elements are functional', async ({ page }) => {
+  test('[FB-002] @smoke @regression FeatureBanner interactive elements are functional', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify primary interactive elements
@@ -33,13 +33,13 @@ test.describe('FeatureBanner — Happy Path', () => {
 });
 
 test.describe('FeatureBanner — Negative & Boundary', () => {
-  test('@negative @regression FeatureBanner handles empty content gracefully', async ({ page }) => {
+  test('[FB-003] @negative @regression FeatureBanner handles empty content gracefully', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Component should not throw errors with minimal content
   });
 
-  test('@negative @regression FeatureBanner handles missing images', async ({ page }) => {
+  test('[FB-004] @negative @regression FeatureBanner handles missing images', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const images = page.locator('.feature-banner img');
@@ -52,14 +52,14 @@ test.describe('FeatureBanner — Negative & Boundary', () => {
 });
 
 test.describe('FeatureBanner — Responsive', () => {
-  test('@mobile @regression @mobile FeatureBanner adapts to mobile viewport', async ({ page }) => {
+  test('[FB-005] @mobile @regression @mobile FeatureBanner adapts to mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     await expect(page.locator('.feature-banner').first()).toBeVisible();
   });
 
-  test('@mobile @regression FeatureBanner adapts to tablet viewport', async ({ page }) => {
+  test('[FB-006] @mobile @regression FeatureBanner adapts to tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
@@ -68,7 +68,7 @@ test.describe('FeatureBanner — Responsive', () => {
 });
 
 test.describe('FeatureBanner — Console & Resources', () => {
-  test('@regression FeatureBanner produces no JS errors', async ({ page }) => {
+  test('[FB-007] @regression FeatureBanner produces no JS errors', async ({ page }) => {
     const capture = new ConsoleCapture(page);
     capture.start();
     const pom = new FeatureBannerPage(page);
@@ -81,7 +81,7 @@ test.describe('FeatureBanner — Console & Resources', () => {
 });
 
 test.describe('FeatureBanner — Broken Images', () => {
-  test('@regression FeatureBanner all images load successfully', async ({ page }) => {
+  test('[FB-008] @regression FeatureBanner all images load successfully', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const images = page.locator('.feature-banner img');
@@ -93,7 +93,7 @@ test.describe('FeatureBanner — Broken Images', () => {
     }
   });
 
-  test('@regression FeatureBanner all images have alt attributes', async ({ page }) => {
+  test('[FB-009] @regression FeatureBanner all images have alt attributes', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const images = page.locator('.feature-banner img');
@@ -106,7 +106,7 @@ test.describe('FeatureBanner — Broken Images', () => {
 });
 
 test.describe('FeatureBanner — Accessibility', () => {
-  test('@a11y @wcag22 @regression @smoke FeatureBanner passes axe-core scan', async ({ page }) => {
+  test('[FB-010] @a11y @wcag22 @regression @smoke FeatureBanner passes axe-core scan', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await new AxeBuilder({ page })
@@ -116,7 +116,7 @@ test.describe('FeatureBanner — Accessibility', () => {
     expect(results.violations).toEqual([]);
   });
 
-  test('@a11y @wcag22 @regression @smoke FeatureBanner interactive elements meet 24px target size', async ({ page }) => {
+  test('[FB-011] @a11y @wcag22 @regression @smoke FeatureBanner interactive elements meet 24px target size', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const interactive = page.locator('.feature-banner a, .feature-banner button, .feature-banner input');
@@ -129,7 +129,7 @@ test.describe('FeatureBanner — Accessibility', () => {
     }
   });
 
-  test('@a11y @wcag22 @regression @smoke FeatureBanner focus is not obscured by sticky elements', async ({ page }) => {
+  test('[FB-012] @a11y @wcag22 @regression @smoke FeatureBanner focus is not obscured by sticky elements', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const focusable = page.locator('.feature-banner a, .feature-banner button, .feature-banner input');

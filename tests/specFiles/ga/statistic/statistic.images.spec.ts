@@ -15,7 +15,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Statistic — Image Health', () => {
-  test('@regression No broken images', async ({ page }, testInfo) => {
+  test('[STAT-013] @regression No broken images', async ({ page }, testInfo) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await scanImages(page, '.cmp-statistic');
@@ -23,7 +23,7 @@ test.describe('Statistic — Image Health', () => {
     expect(results.broken).toBe(0);
   });
 
-  test('@regression All images have alt text', async ({ page }, testInfo) => {
+  test('[STAT-014] @regression All images have alt text', async ({ page }, testInfo) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await scanImages(page, '.cmp-statistic');
@@ -31,7 +31,7 @@ test.describe('Statistic — Image Health', () => {
     expect(results.missingAlt).toBe(0);
   });
 
-  test('@regression No oversized images (>500KB)', async ({ page }, testInfo) => {
+  test('[STAT-015] @regression No oversized images (>500KB)', async ({ page }, testInfo) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await scanImages(page, '.cmp-statistic');
@@ -39,7 +39,7 @@ test.describe('Statistic — Image Health', () => {
     expect(results.oversized).toBe(0);
   });
 
-  test('@regression All images have explicit dimensions (CLS prevention)', async ({ page }, testInfo) => {
+  test('[STAT-016] @regression All images have explicit dimensions (CLS prevention)', async ({ page }, testInfo) => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     const results = await scanImages(page, '.cmp-statistic');
