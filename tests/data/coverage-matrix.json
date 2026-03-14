@@ -1,8 +1,81 @@
 {
   "_description": "Auto-generated test coverage matrix. Tracks which components have tests, across which categories, and how many. Updated by generate-components.spec.ts and generate-advanced.spec.ts orchestrators.",
   "_usage": "Read-only reference. Regenerated on each test generation run. Do not edit manually.",
-  "lastUpdated": "2026-03-11T13:07:26.951Z",
+  "lastUpdated": "2026-03-14T00:00:00.000Z",
   "components": {
+    "spacer": {
+      "component": "spacer",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 27,
+          "specFile": "spacer.author.spec.ts",
+          "tags": [
+            "@smoke",
+            "@regression",
+            "@mobile",
+            "@a11y",
+            "@negative"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 2,
+          "specFile": "spacer.author.spec.ts",
+          "tags": [
+            "@smoke",
+            "@regression"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 2,
+          "specFile": "spacer.author.spec.ts",
+          "tags": [
+            "@negative",
+            "@regression"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 2,
+          "specFile": "spacer.author.spec.ts",
+          "tags": [
+            "@mobile",
+            "@regression"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 1,
+          "specFile": "spacer.author.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 2,
+          "specFile": "spacer.author.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 3,
+          "specFile": "spacer.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@wcag22",
+            "@regression",
+            "@smoke"
+          ]
+        }
+      },
+      "totalTests": 39,
+      "lastUpdated": "2026-03-14T00:00:00.000Z"
+    },
     "button": {
       "component": "button",
       "categories": {
@@ -182,6 +255,25 @@
       "totalTests": 4,
       "lastUpdated": "2026-03-11T13:07:25.961Z"
     }
+  },
+  "spacer": {
+    "pomClass": "SpacerPage",
+    "pomPath": "../pages/ga/components/spacerPage.ts",
+    "sidecarPath": "../pages/ga/components/spacerPage.locators.json",
+    "specPath": "../specFiles/ga/spacer/spacer.author.spec.ts",
+    "elementCount": 8,
+    "testCount": 39,
+    "categories": [
+      "csv",
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility"
+    ],
+    "generatedAt": "2026-03-14T00:00:00.000Z",
+    "source": "csv"
   },
   "button": {
     "pomClass": "ButtonPage",

@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feature Banner — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Feature Banner — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>feature-banner.author.spec.ts, feature-banner.images.spec.ts, feature-banner.interaction.spec.ts, feature-banner.matrix.spec.ts, feature-banner.visual.spec.ts</div>
+      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span><span class="source-tag">Image health generator</span><span class="source-tag">Interaction generator</span><span class="source-tag">State matrix generator</span><span class="source-tag">Visual assertion generator</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">99</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">11</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">5</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">9</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Happy Path</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner renders correctly</td>
+              
+              <td>FeatureBanner renders correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner interactive elements are functional</td>
+              
+              <td>FeatureBanner interactive elements are functional</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Negative &amp; Boundary</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner handles empty content gracefully</td>
+              
+              <td>FeatureBanner handles empty content gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner handles missing images</td>
+              
+              <td>FeatureBanner handles missing images</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Responsive</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner adapts to mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>FeatureBanner adapts to mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner adapts to tablet viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>FeatureBanner adapts to tablet viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Console &amp; Resources</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner produces no JS errors</td>
+              
+              <td>FeatureBanner produces no JS errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Broken Images</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner all images load successfully</td>
+              
+              <td>FeatureBanner all images load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner all images have alt attributes</td>
+              
+              <td>FeatureBanner all images have alt attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Accessibility</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner passes axe-core scan</td>
+              
+              <td>FeatureBanner passes axe-core scan</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner interactive elements meet 24px target size</td>
+              
+              <td>FeatureBanner interactive elements meet 24px target size</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>FeatureBanner focus is not obscured by sticky elements</td>
+              
+              <td>FeatureBanner focus is not obscured by sticky elements</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Image Health</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>No broken images</td>
+              
+              <td>No broken images</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have alt text</td>
+              
+              <td>All images have alt text</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>No oversized images (&gt;500KB)</td>
+              
+              <td>No oversized images (&gt;500KB)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Component Interactions</h2>
+        <span class="section-count">8</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>feature-banner adapts to unknown parent (#1)</td>
+              
+              <td>feature-banner adapts to unknown parent (#1)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>feature-banner adapts to unknown parent (#2)</td>
+              
+              <td>feature-banner adapts to unknown parent (#2)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>feature-banner adapts to unknown parent (#3)</td>
+              
+              <td>feature-banner adapts to unknown parent (#3)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>feature-banner adapts to unknown parent (#4)</td>
+              
+              <td>feature-banner adapts to unknown parent (#4)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>feature-banner adapts to unknown parent (#5)</td>
+              
+              <td>feature-banner adapts to unknown parent (#5)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>feature-banner adapts to unknown parent (#6)</td>
+              
+              <td>feature-banner adapts to unknown parent (#6)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>feature-banner adapts to unknown parent (#7)</td>
+              
+              <td>feature-banner adapts to unknown parent (#7)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>feature-banner adapts to unknown parent (#8)</td>
+              
+              <td>feature-banner adapts to unknown parent (#8)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — State Matrix (Valid)</h2>
+        <span class="section-count">48</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>default + light-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>default + light-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>default + light-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>default + light-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>default + light-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>default + light-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>default + dark-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>default + dark-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>default + dark-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>default + dark-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>default + dark-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>default + dark-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>default + auto-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>default + auto-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>default + auto-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>default + auto-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>default + auto-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>default + auto-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>default + auto-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>default + auto-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>default + auto-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>default + auto-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>default + auto-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + auto-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>default + auto-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>fifty-fifty + light-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>fifty-fifty + light-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>fifty-fifty + light-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>fifty-fifty + light-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>fifty-fifty + light-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>fifty-fifty + light-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>fifty-fifty + dark-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>fifty-fifty + dark-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>fifty-fifty + dark-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>fifty-fifty + dark-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>fifty-fifty + dark-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>fifty-fifty + dark-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>fifty-fifty + auto-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>fifty-fifty + auto-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>fifty-fifty + auto-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>fifty-fifty + auto-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>fifty-fifty + auto-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>fifty-fifty + auto-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>fifty-fifty + auto-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>fifty-fifty + auto-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>fifty-fifty + auto-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>fifty-fifty + auto-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>fifty-fifty + auto-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + auto-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>fifty-fifty + auto-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — State Matrix (Invalid Combos)</h2>
+        <span class="section-count">24</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on white is invalid</td>
+              
+              <td>default + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on white is invalid</td>
+              
+              <td>default + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on white is invalid</td>
+              
+              <td>default + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on slate is invalid</td>
+              
+              <td>default + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on slate is invalid</td>
+              
+              <td>default + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + light-theme on slate is invalid</td>
+              
+              <td>default + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on granite is invalid</td>
+              
+              <td>default + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on granite is invalid</td>
+              
+              <td>default + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on granite is invalid</td>
+              
+              <td>default + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on azul is invalid</td>
+              
+              <td>default + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on azul is invalid</td>
+              
+              <td>default + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>default + dark-theme on azul is invalid</td>
+              
+              <td>default + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on white is invalid</td>
+              
+              <td>fifty-fifty + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on white is invalid</td>
+              
+              <td>fifty-fifty + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on white is invalid</td>
+              
+              <td>fifty-fifty + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on slate is invalid</td>
+              
+              <td>fifty-fifty + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on slate is invalid</td>
+              
+              <td>fifty-fifty + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + light-theme on slate is invalid</td>
+              
+              <td>fifty-fifty + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on granite is invalid</td>
+              
+              <td>fifty-fifty + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on granite is invalid</td>
+              
+              <td>fifty-fifty + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on granite is invalid</td>
+              
+              <td>fifty-fifty + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on azul is invalid</td>
+              
+              <td>fifty-fifty + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on azul is invalid</td>
+              
+              <td>fifty-fifty + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>fifty-fifty + dark-theme on azul is invalid</td>
+              
+              <td>fifty-fifty + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FeatureBanner — Visual Regression</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>Desktop screenshot matches baseline</td>
+              <td class="viewport">Desktop</td>
+              <td>Desktop screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Mobile screenshot matches baseline</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Tablet screenshot matches baseline</td>
+              <td class="viewport">Tablet</td>
+              <td>Tablet screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>feature-banner.author.spec.ts</code>, <code>feature-banner.images.spec.ts</code>, <code>feature-banner.interaction.spec.ts</code>, <code>feature-banner.matrix.spec.ts</code>, <code>feature-banner.visual.spec.ts</code>
+    &mdash; feature-banner &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

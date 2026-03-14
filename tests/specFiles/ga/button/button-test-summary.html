@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Button — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>button.author.spec.ts, button.images.spec.ts, button.interaction.spec.ts, button.matrix.spec.ts, button.visual.spec.ts</div>
+      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span><span class="source-tag">Image health generator</span><span class="source-tag">Interaction generator</span><span class="source-tag">State matrix generator</span><span class="source-tag">Visual assertion generator</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">202</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">12</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">5</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">9</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — CSV Test Cases</h2>
+        <span class="section-count">11</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">BTN-001</td>
+              <td>Button component — add disabled state styling — AC1</td>
+              <td class="viewport">Mobile</td>
+              <td>Button component — add disabled state styling — AC1</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-002</td>
+              <td>Button component — add disabled state styling — AC2</td>
+              <td class="viewport">Mobile</td>
+              <td>Button component — add disabled state styling — AC2</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-003</td>
+              <td>Button component — add disabled state styling — AC3</td>
+              <td class="viewport">Mobile</td>
+              <td>Button component — add disabled state styling — AC3</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-004</td>
+              <td>Button component — add disabled state styling — AC4</td>
+              <td class="viewport">Mobile</td>
+              <td>Button component — add disabled state styling — AC4</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-005</td>
+              <td>button background-color color matches Figma spec (#003DA5)</td>
+              <td class="viewport">Desktop</td>
+              <td>button background-color color matches Figma spec (#003DA5)</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-006</td>
+              <td>button color color matches Figma spec (#FFFFFF)</td>
+              <td class="viewport">Desktop</td>
+              <td>button color color matches Figma spec (#FFFFFF)</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-007</td>
+              <td>button border-color color matches Figma spec (#003DA5)</td>
+              <td class="viewport">Desktop</td>
+              <td>button border-color color matches Figma spec (#003DA5)</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-008</td>
+              <td>button typography matches Figma spec</td>
+              <td class="viewport">Desktop</td>
+              <td>button typography matches Figma spec</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-009</td>
+              <td>button hover animation matches Figma spec</td>
+              <td class="viewport">Desktop</td>
+              <td>button hover animation matches Figma spec</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-010</td>
+              <td>button layout at desktop matches Figma</td>
+              <td class="viewport">Desktop</td>
+              <td>button layout at desktop matches Figma</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-011</td>
+              <td>button layout at mobile matches Figma</td>
+              <td class="viewport">Mobile</td>
+              <td>button layout at mobile matches Figma</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Happy Path</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">BTN-012</td>
+              <td>Button renders correctly</td>
+              
+              <td>Button renders correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-013</td>
+              <td>Button interactive elements are functional</td>
+              
+              <td>Button interactive elements are functional</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Negative &amp; Boundary</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">BTN-014</td>
+              <td>Button handles empty content gracefully</td>
+              
+              <td>Button handles empty content gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-015</td>
+              <td>Button handles missing images</td>
+              
+              <td>Button handles missing images</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Responsive</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">BTN-016</td>
+              <td>Button adapts to mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Button adapts to mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-017</td>
+              <td>Button adapts to tablet viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Button adapts to tablet viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Console &amp; Resources</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">BTN-018</td>
+              <td>Button produces no JS errors</td>
+              
+              <td>Button produces no JS errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Broken Images</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">BTN-019</td>
+              <td>Button all images load successfully</td>
+              
+              <td>Button all images load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-020</td>
+              <td>Button all images have alt attributes</td>
+              
+              <td>Button all images have alt attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Accessibility</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">BTN-021</td>
+              <td>Button passes axe-core scan</td>
+              
+              <td>Button passes axe-core scan</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-022</td>
+              <td>Button interactive elements meet 24px target size</td>
+              
+              <td>Button interactive elements meet 24px target size</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">BTN-023</td>
+              <td>Button focus is not obscured by sticky elements</td>
+              
+              <td>Button focus is not obscured by sticky elements</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Image Health</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>No broken images</td>
+              
+              <td>No broken images</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have alt text</td>
+              
+              <td>All images have alt text</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>No oversized images (&gt;500KB)</td>
+              
+              <td>No oversized images (&gt;500KB)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Component Interactions</h2>
+        <span class="section-count">60</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#1)</td>
+              
+              <td>button adapts to unknown parent (#1)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#2)</td>
+              
+              <td>button adapts to unknown parent (#2)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#3)</td>
+              
+              <td>button adapts to unknown parent (#3)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#4)</td>
+              
+              <td>button adapts to unknown parent (#4)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#5)</td>
+              
+              <td>button adapts to unknown parent (#5)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#6)</td>
+              
+              <td>button adapts to unknown parent (#6)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#7)</td>
+              
+              <td>button adapts to unknown parent (#7)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#8)</td>
+              
+              <td>button adapts to unknown parent (#8)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#9)</td>
+              
+              <td>button adapts to unknown parent (#9)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#10)</td>
+              
+              <td>button adapts to unknown parent (#10)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#11)</td>
+              
+              <td>button adapts to unknown parent (#11)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#12)</td>
+              
+              <td>button adapts to unknown parent (#12)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#13)</td>
+              
+              <td>button adapts to unknown parent (#13)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#14)</td>
+              
+              <td>button adapts to unknown parent (#14)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#15)</td>
+              
+              <td>button adapts to unknown parent (#15)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#16)</td>
+              
+              <td>button adapts to unknown parent (#16)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#17)</td>
+              
+              <td>button adapts to unknown parent (#17)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#18)</td>
+              
+              <td>button adapts to unknown parent (#18)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#19)</td>
+              
+              <td>button adapts to unknown parent (#19)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#20)</td>
+              
+              <td>button adapts to unknown parent (#20)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#21)</td>
+              
+              <td>button adapts to unknown parent (#21)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#22)</td>
+              
+              <td>button adapts to unknown parent (#22)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#23)</td>
+              
+              <td>button adapts to unknown parent (#23)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#24)</td>
+              
+              <td>button adapts to unknown parent (#24)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#25)</td>
+              
+              <td>button adapts to unknown parent (#25)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#26)</td>
+              
+              <td>button adapts to unknown parent (#26)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#27)</td>
+              
+              <td>button adapts to unknown parent (#27)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#28)</td>
+              
+              <td>button adapts to unknown parent (#28)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#29)</td>
+              
+              <td>button adapts to unknown parent (#29)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#30)</td>
+              
+              <td>button adapts to unknown parent (#30)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#31)</td>
+              
+              <td>button adapts to unknown parent (#31)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#32)</td>
+              
+              <td>button adapts to unknown parent (#32)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#33)</td>
+              
+              <td>button adapts to unknown parent (#33)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#34)</td>
+              
+              <td>button adapts to unknown parent (#34)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#35)</td>
+              
+              <td>button adapts to unknown parent (#35)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#36)</td>
+              
+              <td>button adapts to unknown parent (#36)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#37)</td>
+              
+              <td>button adapts to unknown parent (#37)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#38)</td>
+              
+              <td>button adapts to unknown parent (#38)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#39)</td>
+              
+              <td>button adapts to unknown parent (#39)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#40)</td>
+              
+              <td>button adapts to unknown parent (#40)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#41)</td>
+              
+              <td>button adapts to unknown parent (#41)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#42)</td>
+              
+              <td>button adapts to unknown parent (#42)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#43)</td>
+              
+              <td>button adapts to unknown parent (#43)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#44)</td>
+              
+              <td>button adapts to unknown parent (#44)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#45)</td>
+              
+              <td>button adapts to unknown parent (#45)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#46)</td>
+              
+              <td>button adapts to unknown parent (#46)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#47)</td>
+              
+              <td>button adapts to unknown parent (#47)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#48)</td>
+              
+              <td>button adapts to unknown parent (#48)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#49)</td>
+              
+              <td>button adapts to unknown parent (#49)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#50)</td>
+              
+              <td>button adapts to unknown parent (#50)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#51)</td>
+              
+              <td>button adapts to unknown parent (#51)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#52)</td>
+              
+              <td>button adapts to unknown parent (#52)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#53)</td>
+              
+              <td>button adapts to unknown parent (#53)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#54)</td>
+              
+              <td>button adapts to unknown parent (#54)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#55)</td>
+              
+              <td>button adapts to unknown parent (#55)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#56)</td>
+              
+              <td>button adapts to unknown parent (#56)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#57)</td>
+              
+              <td>button adapts to unknown parent (#57)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#58)</td>
+              
+              <td>button adapts to unknown parent (#58)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#59)</td>
+              
+              <td>button adapts to unknown parent (#59)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button adapts to unknown parent (#60)</td>
+              
+              <td>button adapts to unknown parent (#60)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — State Matrix (Valid)</h2>
+        <span class="section-count">72</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>primary-filled + light-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>primary-filled + light-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>primary-filled + light-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>primary-filled + light-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>primary-filled + light-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>primary-filled + light-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>primary-filled + dark-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>primary-filled + dark-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>primary-filled + dark-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>primary-filled + dark-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>primary-filled + dark-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>primary-filled + dark-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>primary-filled + auto-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>primary-filled + auto-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>primary-filled + auto-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>primary-filled + auto-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>primary-filled + auto-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>primary-filled + auto-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>primary-filled + auto-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>primary-filled + auto-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>primary-filled + auto-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>primary-filled + auto-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>primary-filled + auto-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + auto-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>primary-filled + auto-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>secondary-outline + light-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>secondary-outline + light-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>secondary-outline + light-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>secondary-outline + light-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>secondary-outline + light-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>secondary-outline + light-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>secondary-outline + dark-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>secondary-outline + dark-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>secondary-outline + dark-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>secondary-outline + dark-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>secondary-outline + dark-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>secondary-outline + dark-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>secondary-outline + auto-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>secondary-outline + auto-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>secondary-outline + auto-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>secondary-outline + auto-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>secondary-outline + auto-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>secondary-outline + auto-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>secondary-outline + auto-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>secondary-outline + auto-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>secondary-outline + auto-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>secondary-outline + auto-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>secondary-outline + auto-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + auto-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>secondary-outline + auto-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>text-only + light-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>text-only + light-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>text-only + light-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>text-only + light-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>text-only + light-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>text-only + light-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>text-only + dark-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>text-only + dark-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>text-only + dark-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>text-only + dark-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>text-only + dark-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>text-only + dark-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on white @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>text-only + auto-theme on white @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on white @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>text-only + auto-theme on white @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on white @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>text-only + auto-theme on white @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on slate @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>text-only + auto-theme on slate @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on slate @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>text-only + auto-theme on slate @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on slate @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>text-only + auto-theme on slate @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on granite @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>text-only + auto-theme on granite @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on granite @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>text-only + auto-theme on granite @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on granite @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>text-only + auto-theme on granite @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on azul @ desktop-1440</td>
+              <td class="viewport">1440 x 900</td>
+              <td>text-only + auto-theme on azul @ desktop-1440</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on azul @ tablet-1024</td>
+              <td class="viewport">Tablet</td>
+              <td>text-only + auto-theme on azul @ tablet-1024</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + auto-theme on azul @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>text-only + auto-theme on azul @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — State Matrix (Invalid Combos)</h2>
+        <span class="section-count">36</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on white is invalid</td>
+              
+              <td>primary-filled + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on white is invalid</td>
+              
+              <td>primary-filled + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on white is invalid</td>
+              
+              <td>primary-filled + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on slate is invalid</td>
+              
+              <td>primary-filled + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on slate is invalid</td>
+              
+              <td>primary-filled + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + light-theme on slate is invalid</td>
+              
+              <td>primary-filled + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on granite is invalid</td>
+              
+              <td>primary-filled + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on granite is invalid</td>
+              
+              <td>primary-filled + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on granite is invalid</td>
+              
+              <td>primary-filled + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on azul is invalid</td>
+              
+              <td>primary-filled + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on azul is invalid</td>
+              
+              <td>primary-filled + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>primary-filled + dark-theme on azul is invalid</td>
+              
+              <td>primary-filled + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on white is invalid</td>
+              
+              <td>secondary-outline + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on white is invalid</td>
+              
+              <td>secondary-outline + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on white is invalid</td>
+              
+              <td>secondary-outline + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on slate is invalid</td>
+              
+              <td>secondary-outline + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on slate is invalid</td>
+              
+              <td>secondary-outline + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + light-theme on slate is invalid</td>
+              
+              <td>secondary-outline + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on granite is invalid</td>
+              
+              <td>secondary-outline + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on granite is invalid</td>
+              
+              <td>secondary-outline + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on granite is invalid</td>
+              
+              <td>secondary-outline + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on azul is invalid</td>
+              
+              <td>secondary-outline + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on azul is invalid</td>
+              
+              <td>secondary-outline + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>secondary-outline + dark-theme on azul is invalid</td>
+              
+              <td>secondary-outline + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on white is invalid</td>
+              
+              <td>text-only + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on white is invalid</td>
+              
+              <td>text-only + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on white is invalid</td>
+              
+              <td>text-only + light-theme on white is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on slate is invalid</td>
+              
+              <td>text-only + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on slate is invalid</td>
+              
+              <td>text-only + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + light-theme on slate is invalid</td>
+              
+              <td>text-only + light-theme on slate is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on granite is invalid</td>
+              
+              <td>text-only + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on granite is invalid</td>
+              
+              <td>text-only + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on granite is invalid</td>
+              
+              <td>text-only + dark-theme on granite is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on azul is invalid</td>
+              
+              <td>text-only + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on azul is invalid</td>
+              
+              <td>text-only + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>text-only + dark-theme on azul is invalid</td>
+              
+              <td>text-only + dark-theme on azul is invalid</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Button — Visual Verification</h2>
+        <span class="section-count">7</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>button colors match Figma spec</td>
+              <td class="viewport">Desktop</td>
+              <td>button colors match Figma spec</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button typography matches Figma spec</td>
+              <td class="viewport">Desktop</td>
+              <td>button typography matches Figma spec</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button spacing matches Figma spec (±2px)</td>
+              <td class="viewport">Desktop</td>
+              <td>button spacing matches Figma spec (±2px)</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button hover animation matches spec</td>
+              <td class="viewport">Desktop</td>
+              <td>button hover animation matches spec</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button layout at desktop</td>
+              <td class="viewport">Desktop</td>
+              <td>button layout at desktop</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button layout at mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>button layout at mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>button screenshot matches baseline</td>
+              <td class="viewport">Desktop</td>
+              <td>button screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>button.author.spec.ts</code>, <code>button.images.spec.ts</code>, <code>button.interaction.spec.ts</code>, <code>button.matrix.spec.ts</code>, <code>button.visual.spec.ts</code>
+    &mdash; button &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

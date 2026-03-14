@@ -1,0 +1,100 @@
+{
+  "component": "spacer",
+  "generatedAt": "2026-03-14T00:00:00.000Z",
+  "source": "dom",
+  "entries": {
+    "div_spacer": {
+      "name": "div_spacer",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-spacer",
+          "confidence": 0.95
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-spacer')]",
+          "confidence": 0.7
+        }
+      ]
+    },
+    "div_spacer_wrapper": {
+      "name": "div_spacer_wrapper",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": "div.spacer",
+          "confidence": 0.9
+        }
+      ]
+    },
+    "div_spacer_default": {
+      "name": "div_spacer_default",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": "div.spacer:not([class*='cmp-spacer--']) > .cmp-spacer",
+          "confidence": 0.9
+        }
+      ]
+    },
+    "div_spacer_xxsmall": {
+      "name": "div_spacer_xxsmall",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-spacer--xxsmall > .cmp-spacer",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "div_spacer_xsmall": {
+      "name": "div_spacer_xsmall",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-spacer--xsmall > .cmp-spacer",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "div_spacer_small": {
+      "name": "div_spacer_small",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-spacer--small > .cmp-spacer",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "div_spacer_large": {
+      "name": "div_spacer_large",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-spacer--large > .cmp-spacer",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "div_spacer_xlarge": {
+      "name": "div_spacer_xlarge",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-spacer--xlarge > .cmp-spacer",
+          "confidence": 0.95
+        }
+      ]
+    }
+  }
+}

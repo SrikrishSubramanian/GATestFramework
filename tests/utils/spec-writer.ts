@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { ParsedTestCase, ParsedTestGroup, CSVMetadata } from './csv-test-parser';
 import { TestCategory, A11yLevel, getTagsForTest, formatTags, getAxeTags } from './test-tagger';
+import { generateHTMLSummaryFromSpecs, SummaryMetadata } from './html-summary-writer';
 
 const GA_SPECS_DIR = path.resolve(__dirname, '..', 'specFiles', 'ga');
 
@@ -108,6 +109,9 @@ ${tests.join('\n\n')}
   const content = `${imports}\n\n${describes.join('\n\n')}\n`;
   fs.writeFileSync(specPath, content, 'utf-8');
 
+  // Generate HTML summary for the component directory
+  generateHTMLSummaryForComponent(dir, group.component);
+
   return { specPath, testCount, categories: Array.from(usedCategories) };
 }
 
@@ -132,6 +136,11 @@ export function writeSpecFromCSVWithMetadata(
     component: group.component,
   };
   fs.writeFileSync(metaPath, JSON.stringify(metaContent, null, 2), 'utf-8');
+
+  // Regenerate HTML summary with metadata
+  const compDir = path.dirname(result.specPath);
+  const summaryMeta = buildSummaryMetadata(group.component, compDir, metadata);
+  generateHTMLSummaryFromSpecs(compDir, summaryMeta);
 
   return result;
 }
@@ -181,7 +190,73 @@ test.beforeEach(async ({ page }) => {
   const content = `${imports}\n${authSetup}\n${describes.join('\n\n')}\n`;
   fs.writeFileSync(specPath, content, 'utf-8');
 
+  // Generate HTML summary for the component directory
+  generateHTMLSummaryForComponent(dir, options.component);
+
   return { specPath, testCount, categories: usedCategories };
+}
+
+/**
+ * Build SummaryMetadata from a component directory, optionally enriched with CSV metadata.
+ */
+function buildSummaryMetadata(
+  component: string,
+  compDir: string,
+  csvMeta?: CSVMetadata
+): SummaryMetadata {
+  const meta: SummaryMetadata = {
+    component,
+    displayName: toPascalCase(component),
+    specFiles: [],
+  };
+
+  // Check for .meta.json files in the directory
+  if (fs.existsSync(compDir)) {
+    const metaFiles = fs.readdirSync(compDir).filter(f => f.endsWith('.meta.json'));
+    const jiraTickets = new Set<string>();
+    const figmaLinks: { label: string; url: string }[] = [];
+    const sources = new Set<string>();
+
+    for (const mf of metaFiles) {
+      try {
+        const metaContent = JSON.parse(fs.readFileSync(path.join(compDir, mf), 'utf-8'));
+        if (metaContent.jiraId) jiraTickets.add(metaContent.jiraId);
+        if (metaContent.figmaLink) {
+          figmaLinks.push({ label: 'Open Design', url: metaContent.figmaLink });
+        }
+        if (metaContent.testName) meta.description = metaContent.testName;
+      } catch { /* skip malformed meta files */ }
+    }
+
+    // Enrich with CSV metadata if provided
+    if (csvMeta) {
+      if (csvMeta.jiraId) jiraTickets.add(csvMeta.jiraId);
+      if (csvMeta.figmaLink && !figmaLinks.some(f => f.url === csvMeta.figmaLink)) {
+        figmaLinks.push({ label: 'Open Design', url: csvMeta.figmaLink });
+      }
+      if (csvMeta.testName) {
+        meta.description = csvMeta.testName;
+        sources.add(`CSV: ${csvMeta.testName}`);
+      }
+    }
+
+    if (jiraTickets.size > 0) meta.jiraTickets = Array.from(jiraTickets);
+    if (figmaLinks.length > 0) meta.figmaLinks = figmaLinks;
+    if (sources.size > 0) meta.sources = Array.from(sources);
+  }
+
+  return meta;
+}
+
+/**
+ * Generate HTML summary for a component directory by scanning all its spec files.
+ * Called automatically after spec generation.
+ */
+function generateHTMLSummaryForComponent(compDir: string, component: string): void {
+  try {
+    const meta = buildSummaryMetadata(component, compDir);
+    generateHTMLSummaryFromSpecs(compDir, meta);
+  } catch { /* non-critical — don't fail spec generation if summary fails */ }
 }
 
 function buildImports(options: SpecWriterOptions): string {
