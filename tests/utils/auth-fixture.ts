@@ -64,7 +64,7 @@ export async function navigateToAuthorPage(
 
   // Navigate to the component page with wcmmode=disabled
   const url = `${authorUrl}${componentPath}?wcmmode=disabled`;
-  await page.goto(url, { waitUntil: 'networkidle' });
+  await page.goto(url, { waitUntil: 'domcontentloaded' });
 }
 
 /**
@@ -82,7 +82,7 @@ export async function navigateToEditor(
   }
 
   const url = `${authorUrl}/editor.html${componentPath}`;
-  await page.goto(url, { waitUntil: 'networkidle' });
+  await page.goto(url, { waitUntil: 'domcontentloaded' });
 }
 
 /**

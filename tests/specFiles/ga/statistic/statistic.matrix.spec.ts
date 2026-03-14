@@ -1,6 +1,11 @@
 import { test, expect } from '@playwright/test';
 import { StatisticPage } from '../../../pages/ga/components/statisticPage';
 import ENV from '../../../utils/env';
+import { loginToAEMAuthor } from '../../../utils/auth-fixture';
+
+test.beforeEach(async ({ page }) => {
+  await loginToAEMAuthor(page);
+});
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
@@ -22,7 +27,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with light-theme renders correctly on granite section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -31,7 +36,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with light-theme renders correctly on granite section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -40,7 +45,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with light-theme renders correctly on granite section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -49,7 +54,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with light-theme renders correctly on azul section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -58,7 +63,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with light-theme renders correctly on azul section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -67,7 +72,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with light-theme renders correctly on azul section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -76,7 +81,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with dark-theme renders correctly on white section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -85,7 +90,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with dark-theme renders correctly on white section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -94,7 +99,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with dark-theme renders correctly on white section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -103,7 +108,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with dark-theme renders correctly on slate section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -112,7 +117,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with dark-theme renders correctly on slate section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -121,7 +126,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with dark-theme renders correctly on slate section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -130,7 +135,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on white section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -139,7 +144,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on white section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -148,7 +153,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on white section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -157,7 +162,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on slate section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -166,7 +171,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on slate section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -175,7 +180,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on slate section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -184,7 +189,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on granite section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -193,7 +198,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on granite section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -202,7 +207,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on granite section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -211,7 +216,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on azul section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -220,7 +225,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on azul section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 
@@ -229,7 +234,7 @@ test.describe('Statistic — State Matrix (Valid)', () => {
     const pom = new StatisticPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: default with auto-theme renders correctly on azul section
-    const root = page.locator('.ga-statistic').first();
+    const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
   });
 });

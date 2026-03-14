@@ -2,6 +2,11 @@ import { test, expect } from '@playwright/test';
 import { FeatureBannerPage } from '../../../pages/ga/components/featureBannerPage';
 import { scanImages, attachImageScanResults } from '../../../utils/broken-image-detector';
 import ENV from '../../../utils/env';
+import { loginToAEMAuthor } from '../../../utils/auth-fixture';
+
+test.beforeEach(async ({ page }) => {
+  await loginToAEMAuthor(page);
+});
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {

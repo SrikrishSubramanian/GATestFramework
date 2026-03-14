@@ -1,6 +1,11 @@
 import { test, expect } from '@playwright/test';
 import { ButtonPage } from '../../../pages/ga/components/buttonPage';
 import ENV from '../../../utils/env';
+import { loginToAEMAuthor } from '../../../utils/auth-fixture';
+
+test.beforeEach(async ({ page }) => {
+  await loginToAEMAuthor(page);
+});
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
@@ -19,7 +24,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary').first();
+    const child = page.locator('.cmp-button--primary').first();
     await expect(child).toBeVisible();
   });
 
@@ -28,7 +33,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--md').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--md').first();
     await expect(child).toBeVisible();
   });
 
@@ -37,7 +42,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -46,7 +51,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary').first();
+    const child = page.locator('.cmp-button--primary').first();
     await expect(child).toBeVisible();
   });
 
@@ -55,7 +60,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary').first();
+    const child = page.locator('.cmp-button--secondary').first();
     await expect(child).toBeVisible();
   });
 
@@ -64,7 +69,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -73,7 +78,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary').first();
+    const child = page.locator('.cmp-button--primary').first();
     await expect(child).toBeVisible();
   });
 
@@ -82,7 +87,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary').first();
+    const child = page.locator('.cmp-button--secondary').first();
     await expect(child).toBeVisible();
   });
 
@@ -91,7 +96,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary').first();
+    const child = page.locator('.cmp-button--primary').first();
     await expect(child).toBeVisible();
   });
 
@@ -100,7 +105,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary').first();
+    const child = page.locator('.cmp-button--secondary').first();
     await expect(child).toBeVisible();
   });
 
@@ -109,7 +114,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary').first();
+    const child = page.locator('.cmp-button--primary').first();
     await expect(child).toBeVisible();
   });
 
@@ -118,7 +123,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary').first();
+    const child = page.locator('.cmp-button--secondary').first();
     await expect(child).toBeVisible();
   });
 
@@ -127,7 +132,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -136,7 +141,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -145,7 +150,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--theme-dark').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--theme-dark').first();
     await expect(child).toBeVisible();
   });
 
@@ -154,7 +159,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--theme-dark').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--theme-dark').first();
     await expect(child).toBeVisible();
   });
 
@@ -163,7 +168,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary').first();
+    const child = page.locator('.cmp-button--primary').first();
     await expect(child).toBeVisible();
   });
 
@@ -172,7 +177,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -181,7 +186,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--sm').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--sm').first();
     await expect(child).toBeVisible();
   });
 
@@ -190,7 +195,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--sm.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--sm.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -199,7 +204,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary').first();
+    const child = page.locator('.cmp-button--secondary').first();
     await expect(child).toBeVisible();
   });
 
@@ -208,7 +213,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -217,7 +222,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--sm').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--sm').first();
     await expect(child).toBeVisible();
   });
 
@@ -226,7 +231,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--sm.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--sm.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -235,7 +240,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-text').first();
+    const child = page.locator('.cmp-button--icon-text').first();
     await expect(child).toBeVisible();
   });
 
@@ -244,7 +249,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-text.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--icon-text.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -253,7 +258,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-filled-light').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-filled-light').first();
     await expect(child).toBeVisible();
   });
 
@@ -262,7 +267,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-filled-light.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-filled-light.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -271,7 +276,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-filled-light').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-filled-light').first();
     await expect(child).toBeVisible();
   });
 
@@ -280,7 +285,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-filled-light.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-filled-light.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -289,7 +294,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-filled').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-filled').first();
     await expect(child).toBeVisible();
   });
 
@@ -298,7 +303,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-filled.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-filled.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -307,7 +312,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-filled').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-filled').first();
     await expect(child).toBeVisible();
   });
 
@@ -316,7 +321,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-filled.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-filled.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -325,7 +330,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-outline').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-outline').first();
     await expect(child).toBeVisible();
   });
 
@@ -334,7 +339,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-outline.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-outline.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -343,7 +348,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-outline').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-outline').first();
     await expect(child).toBeVisible();
   });
 
@@ -352,7 +357,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-outline.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-outline.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -361,7 +366,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary').first();
+    const child = page.locator('.cmp-button--primary').first();
     await expect(child).toBeVisible();
   });
 
@@ -370,7 +375,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -379,7 +384,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--sm').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--sm').first();
     await expect(child).toBeVisible();
   });
 
@@ -388,7 +393,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--primary.ga-button--sm.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--primary.cmp-button--sm.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -397,7 +402,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary').first();
+    const child = page.locator('.cmp-button--secondary').first();
     await expect(child).toBeVisible();
   });
 
@@ -406,7 +411,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -415,7 +420,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--sm').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--sm').first();
     await expect(child).toBeVisible();
   });
 
@@ -424,7 +429,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--secondary.ga-button--sm.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--secondary.cmp-button--sm.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -433,7 +438,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-text').first();
+    const child = page.locator('.cmp-button--icon-text').first();
     await expect(child).toBeVisible();
   });
 
@@ -442,7 +447,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-text.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--icon-text.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -451,7 +456,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-filled-light').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-filled-light').first();
     await expect(child).toBeVisible();
   });
 
@@ -460,7 +465,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-filled-light.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-filled-light.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -469,7 +474,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-filled-light').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-filled-light').first();
     await expect(child).toBeVisible();
   });
 
@@ -478,7 +483,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-filled-light.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-filled-light.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -487,7 +492,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-filled').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-filled').first();
     await expect(child).toBeVisible();
   });
 
@@ -496,7 +501,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-filled.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-filled.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -505,7 +510,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-filled').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-filled').first();
     await expect(child).toBeVisible();
   });
 
@@ -514,7 +519,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-filled.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-filled.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -523,7 +528,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-outline').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-outline').first();
     await expect(child).toBeVisible();
   });
 
@@ -532,7 +537,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--sm.ga-button--icon-only.ga-button--icon-outline.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--sm.cmp-button--icon-only.cmp-button--icon-outline.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 
@@ -541,7 +546,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-outline').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-outline').first();
     await expect(child).toBeVisible();
   });
 
@@ -550,7 +555,7 @@ test.describe('Button — Component Interactions', () => {
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background
     // Expected child theme: dark-theme
-    const child = page.locator('.ga-button--icon-only.ga-button--icon-outline.ga-button--disabled').first();
+    const child = page.locator('.cmp-button--icon-only.cmp-button--icon-outline.cmp-button--disabled').first();
     await expect(child).toBeVisible();
   });
 });

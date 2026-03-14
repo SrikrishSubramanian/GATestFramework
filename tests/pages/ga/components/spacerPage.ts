@@ -10,7 +10,8 @@ export class SpacerPage {
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
     await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.waitForSelector('.cmp-spacer', { timeout: 15000 });
   }
 
   /** Locator for any .cmp-spacer inner element */

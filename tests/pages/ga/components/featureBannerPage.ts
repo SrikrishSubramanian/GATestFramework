@@ -10,7 +10,8 @@ export class FeatureBannerPage {
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
     await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.waitForSelector('.feature-banner', { timeout: 15000 });
   }
 
   /** Locator for a_Optional_CTA */

@@ -3,6 +3,11 @@ import { StatisticPage } from '../../../pages/ga/components/statisticPage';
 import ENV from '../../../utils/env';
 import { ConsoleCapture } from '../../../utils/console-capture';
 import AxeBuilder from '@axe-core/playwright';
+import { loginToAEMAuthor } from '../../../utils/auth-fixture';
+
+test.beforeEach(async ({ page }) => {
+  await loginToAEMAuthor(page);
+});
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
