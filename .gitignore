@@ -11,6 +11,7 @@
 # Agent / generated artifacts
 logs/
 .claude/
+.aem-developer/
 tests/data/.snapshots/
 tests/data/baselines/
 tests/environments/.env.*
