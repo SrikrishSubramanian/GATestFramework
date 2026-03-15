@@ -1,8 +1,14 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Hard Rules
 
-> **Start here:** Read `repo-overview.md` first — it has the full project structure, utility index, generation pipeline details, and conventions. Skip repo scanning.
+- **No `cd`** — working directory is already `GATestFramework/`. Run commands directly.
+- **No repo scanning** — read `repo-overview.md` for structure. No explore agents, no `ls`/`Glob` unless a file isn't in the summary.
+- **No guessing selectors** — run the Playwright pipeline against live AEM DOM.
+- **No modifying kkr-aem** from this repo.
+- **No staging `.claude/`** — it's gitignored.
+
+> **Start here:** Read `repo-overview.md` first — it has the full project structure, utility index, generation pipeline details, and conventions.
 
 ## Project Overview
 
@@ -121,7 +127,6 @@ Two parallel steps: **Mobile** (`--grep @mobile`, Mobile-Chrome + Mobile-WebKit)
 ## Permissions & Shell
 
 - **All file reads and writes are allowed** — do not ask for permission before reading or writing files.
-- **Do not `cd` into this repo directory** — the working directory is already `GATestFramework/`. Use relative or absolute paths directly.
 - **Windows 11**, bash shell
 - **Python**: Use `py -3` (not `python` or `python3`)
 - **Temp paths**: Use `${TMPDIR:-${TEMP:-${TMP:-/tmp}}}` fallback chain
