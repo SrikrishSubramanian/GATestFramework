@@ -1,0 +1,1997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Button component test fixtures for GAAM test automation. Extends the style guide with explicit theme (light-theme, dark-theme, auto-theme) and medium-button size styleId combinations required by matrix and interaction specs."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Button — Test Fixtures"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1>Button&lt;/h1>&#xd;&#xa;&lt;p>Buttons are calls to action typically displayed after a&amp;nbsp;&lt;a title=&quot;Headline&quot; href=&quot;/content/kkr/style-guide/components/headline.html&quot;>Headline&lt;/a>&amp;nbsp;and&amp;nbsp;&lt;a title=&quot;Text&quot; href=&quot;/content/kkr/style-guide/components/text.html&quot;>Text&lt;/a>. Primary buttons are for high priority interactions while secondary buttons are for lower priority interactions.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_2131196640_copy_1694136354
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Buttons Outside Section Container (Standalone Buttons)&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_2131196640
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h6 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled M (Primary)&lt;/span>&lt;/b>&lt;/h6>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button
+                    cq:styleIds="[primary-filled]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_1758013441
+                    cq:styleIds="[primary-filled,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_1404368318
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled S (Primary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_260826422
+                    cq:styleIds="[primary-filled,small-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_868168118
+                    cq:styleIds="[primary-filled,small-button,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline M (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy
+                    cq:styleIds="[secondary-outline]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_1731731099
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_copy
+                    cq:styleIds="[secondary-outline,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_625743136
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline S (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_26082642
+                    cq:styleIds="[small-button,secondary-outline]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_359258332
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_1094401951
+                    cq:styleIds="[secondary-outline,small-button,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_409528391
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Button Icon + Text (Tertiary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_26082642_2093465727
+                    cq:styleIds="[icon-text]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Learn more"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_1807442553
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_756798446
+                    cq:styleIds="[icon-text,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Learn more"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_190327064
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon - Filled Light S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_26082642_1521946648
+                    cq:styleIds="[small-button,icon-only,icon-filled-light]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_1945677743
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_488695210
+                    cq:styleIds="[small-button,icon-only,icon-filled-light,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_1890732649
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Light M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_26082642_2051062303
+                    cq:styleIds="[icon-only,icon-filled-light]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_1619245044
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_1342993852
+                    cq:styleIds="[icon-only,icon-filled-light,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_363598146
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_26082642_1517643101
+                    cq:styleIds="[small-button,icon-only,icon-filled]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_1889373389
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_1628232848
+                    cq:styleIds="[small-button,icon-only,icon-filled,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_1339085475
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_26082642_729917626
+                    cq:styleIds="[icon-only,icon-filled]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_972423118
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_2097205224
+                    cq:styleIds="[icon-only,icon-filled,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_2063976456
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_26082642_1409086153
+                    cq:styleIds="[small-button,icon-only,icon-outline]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_238586438
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_845323341
+                    cq:styleIds="[icon-only,icon-outline,disabled-button,small-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_1928163238
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <button_copy_26082642_655178607
+                    cq:styleIds="[icon-only,icon-outline]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="#"/>
+                <spacer_copy_1123495344
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <button_copy_26082642_1557786842
+                    cq:styleIds="[icon-only,icon-outline,disabled-button]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/button"
+                    icon="Arrow-Right"
+                    isTrackingEnabled="false"
+                    label="Button Icon Text"
+                    linkTarget="_self"
+                    path="/content/global-atlantic/style-guide/components/button"/>
+                <text_2131196640_copy_1025584018
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Buttons Inside Section Container - Background White&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <text_2131196640_copy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled M (Primary)&lt;/span>&lt;/b>&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_17580134
+                            cq:styleIds="[primary-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_237835330
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled S (Primary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642
+                            cq:styleIds="[primary-filled,small-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_copy
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1462639039
+                            cq:styleIds="[primary-filled,small-button,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1314812934
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline M (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_copy
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_17317310
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_copy_cop
+                            cq:styleIds="[secondary-outline,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1093370534
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline S (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1234115447
+                            cq:styleIds="[small-button,secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_35925833
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1513331214
+                            cq:styleIds="[secondary-outline,small-button,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_2099683313
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Button Icon + Text (Tertiary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_144613838
+                            cq:styleIds="[icon-text]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Learn more"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18074425
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_905219239
+                            cq:styleIds="[icon-text,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Learn more"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_2013203531
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon - Filled Light S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1922346154
+                            cq:styleIds="[small-button,icon-only,icon-filled-light]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18074425_430501984
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_402837099
+                            cq:styleIds="[small-button,icon-only,icon-filled-light,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_83723213
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Light M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_683588202
+                            cq:styleIds="[icon-only,icon-filled-light]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_16192450
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_498024868
+                            cq:styleIds="[icon-only,icon-filled-light,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_864968012
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_164644874
+                            cq:styleIds="[small-button,icon-only,icon-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18893733
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_100554544
+                            cq:styleIds="[small-button,icon-only,icon-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1298019159
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_303113929
+                            cq:styleIds="[icon-only,icon-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_97242311
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1029290230
+                            cq:styleIds="[icon-only,icon-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_975848488
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_292610429
+                            cq:styleIds="[small-button,icon-only,icon-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_23858643
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_549303195
+                            cq:styleIds="[icon-only,icon-outline,disabled-button,small-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_562729501
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1442682998
+                            cq:styleIds="[icon-only,icon-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_11234953
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_2007695229
+                            cq:styleIds="[icon-only,icon-outline,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                    </section-par>
+                </section>
+                <text_2131196640_copy_905747307
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Buttons Inside Section Container - Background Slate&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_copy
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <text_2131196640_copy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled M (Primary)&lt;/span>&lt;/b>&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_17580134
+                            cq:styleIds="[primary-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_237835330
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled S (Primary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642
+                            cq:styleIds="[primary-filled,small-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_copy
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1462639039
+                            cq:styleIds="[primary-filled,small-button,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1314812934
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline M (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_copy
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_17317310
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_copy_cop
+                            cq:styleIds="[secondary-outline,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1093370534
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline S (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1234115447
+                            cq:styleIds="[small-button,secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_35925833
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1513331214
+                            cq:styleIds="[secondary-outline,small-button,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_2099683313
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Button Icon + Text (Tertiary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_144613838
+                            cq:styleIds="[icon-text]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Learn more"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18074425
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_905219239
+                            cq:styleIds="[icon-text,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Learn more"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_2013203531
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon - Filled Light S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1922346154
+                            cq:styleIds="[small-button,icon-only,icon-filled-light]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18074425_1549485362
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_402837099
+                            cq:styleIds="[small-button,icon-only,icon-filled-light,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_83723213
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Light M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_683588202
+                            cq:styleIds="[icon-only,icon-filled-light]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_16192450
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_498024868
+                            cq:styleIds="[icon-only,icon-filled-light,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_864968012
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_164644874
+                            cq:styleIds="[small-button,icon-only,icon-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18893733
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_100554544
+                            cq:styleIds="[small-button,icon-only,icon-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1298019159
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_303113929
+                            cq:styleIds="[icon-only,icon-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_97242311
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1029290230
+                            cq:styleIds="[icon-only,icon-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_975848488
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_292610429
+                            cq:styleIds="[small-button,icon-only,icon-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_23858643
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_549303195
+                            cq:styleIds="[icon-only,icon-outline,disabled-button,small-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_562729501
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1442682998
+                            cq:styleIds="[icon-only,icon-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_11234953
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_2007695229
+                            cq:styleIds="[icon-only,icon-outline,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                    </section-par>
+                </section_copy>
+                <text_2131196640_copy_118211344
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Buttons Inside Section Container - Background Azul&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_copy_copy
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <text_2131196640_copy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled M (Primary)&lt;/span>&lt;/b>&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_17580134
+                            cq:styleIds="[primary-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_237835330
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled S (Primary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642
+                            cq:styleIds="[primary-filled,small-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_copy
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1462639039
+                            cq:styleIds="[primary-filled,small-button,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1314812934
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline M (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_copy
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_17317310
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_copy_cop
+                            cq:styleIds="[secondary-outline,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1093370534
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline S (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1234115447
+                            cq:styleIds="[small-button,secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_35925833
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1513331214
+                            cq:styleIds="[secondary-outline,small-button,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_2099683313
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Button Icon + Text (Tertiary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_144613838
+                            cq:styleIds="[icon-text]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Learn more"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18074425
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_905219239
+                            cq:styleIds="[icon-text,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Learn more"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_2013203531
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon - Filled Light S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1922346154
+                            cq:styleIds="[small-button,icon-only,icon-filled-light]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18074425_1112112219
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_402837099
+                            cq:styleIds="[small-button,icon-only,icon-filled-light,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_83723213
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Light M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_683588202
+                            cq:styleIds="[icon-only,icon-filled-light]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_16192450
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_498024868
+                            cq:styleIds="[icon-only,icon-filled-light,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_864968012
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_164644874
+                            cq:styleIds="[small-button,icon-only,icon-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18893733
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_100554544
+                            cq:styleIds="[small-button,icon-only,icon-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1298019159
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_303113929
+                            cq:styleIds="[icon-only,icon-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_97242311
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1029290230
+                            cq:styleIds="[icon-only,icon-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_975848488
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_292610429
+                            cq:styleIds="[small-button,icon-only,icon-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_23858643
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_549303195
+                            cq:styleIds="[icon-only,icon-outline,disabled-button,small-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_562729501
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1442682998
+                            cq:styleIds="[icon-only,icon-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_11234953
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_2007695229
+                            cq:styleIds="[icon-only,icon-outline,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                    </section-par>
+                </section_copy_copy>
+                <text_2131196640_copy_133798549
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Buttons Inside Section Container - Background Granite&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_copy_copy_co
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <text_2131196640_copy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled M (Primary)&lt;/span>&lt;/b>&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_17580134
+                            cq:styleIds="[primary-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_237835330
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>&amp;nbsp;Filled S (Primary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642
+                            cq:styleIds="[primary-filled,small-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_copy
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1462639039
+                            cq:styleIds="[primary-filled,small-button,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1314812934
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline M (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_copy
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_17317310
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_copy_cop
+                            cq:styleIds="[secondary-outline,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1093370534
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Outline S (Secondary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1234115447
+                            cq:styleIds="[small-button,secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_35925833
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1513331214
+                            cq:styleIds="[secondary-outline,small-button,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_2099683313
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>&lt;span class=&quot;statistic-sm&quot;>Button Icon + Text (Tertiary)&lt;/span>&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_144613838
+                            cq:styleIds="[icon-text]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Learn more"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18074425
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_905219239
+                            cq:styleIds="[icon-text,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Learn more"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_2013203531
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon - Filled Light S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1922346154
+                            cq:styleIds="[small-button,icon-only,icon-filled-light]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18074425_1831117819
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_402837099
+                            cq:styleIds="[small-button,icon-only,icon-filled-light,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_83723213
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Light M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_683588202
+                            cq:styleIds="[icon-only,icon-filled-light]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_16192450
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_498024868
+                            cq:styleIds="[icon-only,icon-filled-light,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_864968012
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_164644874
+                            cq:styleIds="[small-button,icon-only,icon-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_18893733
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_100554544
+                            cq:styleIds="[small-button,icon-only,icon-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_1298019159
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Filled Dark M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_303113929
+                            cq:styleIds="[icon-only,icon-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_97242311
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_1029290230
+                            cq:styleIds="[icon-only,icon-filled,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_975848488
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline S&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_292610429
+                            cq:styleIds="[small-button,icon-only,icon-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_23858643
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_549303195
+                            cq:styleIds="[icon-only,icon-outline,disabled-button,small-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                        <text_2131196640_copy_562729501
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h5 style=&quot;text-align: center;&quot;>&lt;b>Button Icon -&amp;nbsp;Outline M&lt;/b>&lt;/h5>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_copy_26082642_1442682998
+                            cq:styleIds="[icon-only,icon-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_copy_11234953
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <button_copy_26082642_2007695229
+                            cq:styleIds="[icon-only,icon-outline,disabled-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button Icon Text"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide/components/button"/>
+                    </section-par>
+                </section_copy_copy_co>
+
+                <!-- ============================================================ -->
+                <!-- [Added] THEME FIXTURE SECTIONS                                -->
+                <!-- Explicit light-theme, dark-theme, auto-theme styleIds for    -->
+                <!-- primary-filled and secondary-outline on white and granite     -->
+                <!-- backgrounds. The style guide omits these combinations; they   -->
+                <!-- are required by the matrix and interaction specs to verify    -->
+                <!-- that theme overrides render correctly against both light and   -->
+                <!-- dark backgrounds.                                              -->
+                <!-- Deploy path: /content/global-atlantic/test-fixtures/button   -->
+                <!-- ============================================================ -->
+
+                <!-- [Added] Theme fixtures header -->
+                <text_fx_theme_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Theme Fixtures — Explicit light-theme / dark-theme / auto-theme StyleIds&lt;/h4>&#xd;&#xa;&lt;p>These sections provide buttons with explicit theme styleIds so that automation tests can assert the correct class presence regardless of background context.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+
+                <!-- [Added] Background White + light-theme -->
+                <text_fx_white_light_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5>Background White — light-theme&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_fx_white_light
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <!-- [Added] primary-filled + light-theme on white -->
+                        <text_fx_wl_pf
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Primary Filled + light-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_wl_pf
+                            cq:styleIds="[primary-filled,light-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_wl_pf
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] secondary-outline + light-theme on white -->
+                        <text_fx_wl_so
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Secondary Outline + light-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_wl_so
+                            cq:styleIds="[secondary-outline,light-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_wl_so
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                    </section-par>
+                </section_fx_white_light>
+
+                <!-- [Added] Background White + dark-theme -->
+                <text_fx_white_dark_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5>Background White — dark-theme&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_fx_white_dark
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <!-- [Added] primary-filled + dark-theme on white -->
+                        <text_fx_wd_pf
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Primary Filled + dark-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_wd_pf
+                            cq:styleIds="[primary-filled,dark-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_wd_pf
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] secondary-outline + dark-theme on white -->
+                        <text_fx_wd_so
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Secondary Outline + dark-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_wd_so
+                            cq:styleIds="[secondary-outline,dark-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_wd_so
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                    </section-par>
+                </section_fx_white_dark>
+
+                <!-- [Added] Background White + auto-theme -->
+                <text_fx_white_auto_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5>Background White — auto-theme&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_fx_white_auto
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <!-- [Added] primary-filled + auto-theme on white -->
+                        <text_fx_wa_pf
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Primary Filled + auto-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_wa_pf
+                            cq:styleIds="[primary-filled,auto-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_wa_pf
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] secondary-outline + auto-theme on white -->
+                        <text_fx_wa_so
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Secondary Outline + auto-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_wa_so
+                            cq:styleIds="[secondary-outline,auto-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_wa_so
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                    </section-par>
+                </section_fx_white_auto>
+
+                <!-- [Added] Background Granite + light-theme -->
+                <text_fx_granite_light_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5>Background Granite — light-theme&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_fx_granite_light
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <!-- [Added] primary-filled + light-theme on granite -->
+                        <text_fx_gl_pf
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Primary Filled + light-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_gl_pf
+                            cq:styleIds="[primary-filled,light-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_gl_pf
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] secondary-outline + light-theme on granite -->
+                        <text_fx_gl_so
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Secondary Outline + light-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_gl_so
+                            cq:styleIds="[secondary-outline,light-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_gl_so
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                    </section-par>
+                </section_fx_granite_light>
+
+                <!-- [Added] Background Granite + dark-theme -->
+                <text_fx_granite_dark_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5>Background Granite — dark-theme&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_fx_granite_dark
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <!-- [Added] primary-filled + dark-theme on granite -->
+                        <text_fx_gd_pf
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Primary Filled + dark-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_gd_pf
+                            cq:styleIds="[primary-filled,dark-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_gd_pf
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] secondary-outline + dark-theme on granite -->
+                        <text_fx_gd_so
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Secondary Outline + dark-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_gd_so
+                            cq:styleIds="[secondary-outline,dark-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_gd_so
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                    </section-par>
+                </section_fx_granite_dark>
+
+                <!-- [Added] Background Granite + auto-theme -->
+                <text_fx_granite_auto_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5>Background Granite — auto-theme&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_fx_granite_auto
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <!-- [Added] primary-filled + auto-theme on granite -->
+                        <text_fx_ga_pf
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Primary Filled + auto-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_ga_pf
+                            cq:styleIds="[primary-filled,auto-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_ga_pf
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] secondary-outline + auto-theme on granite -->
+                        <text_fx_ga_so
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Secondary Outline + auto-theme&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_ga_so
+                            cq:styleIds="[secondary-outline,auto-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_ga_so
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                    </section-par>
+                </section_fx_granite_auto>
+
+                <!-- ============================================================ -->
+                <!-- [Added] MEDIUM-BUTTON SIZE FIXTURE SECTIONS                   -->
+                <!-- Explicit medium-button styleId combined with primary-filled   -->
+                <!-- on white and granite. The style guide relies on the implicit  -->
+                <!-- default size (no size styleId) for medium. These instances    -->
+                <!-- carry medium-button explicitly so size-regression specs can   -->
+                <!-- assert class presence and dimensions without ambiguity.        -->
+                <!-- ============================================================ -->
+
+                <!-- [Added] Medium-button size fixtures header -->
+                <text_fx_medium_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Medium-Button Size Fixtures — Explicit medium-button StyleId&lt;/h4>&#xd;&#xa;&lt;p>These instances carry &lt;code>medium-button&lt;/code> explicitly even though it is the default size, enabling test assertions on the CSS class without relying on the absence of small-button.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+
+                <!-- [Added] Background White + medium-button -->
+                <text_fx_white_medium_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5>Background White — medium-button (explicit)&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_fx_white_medium
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <!-- [Added] primary-filled + medium-button on white -->
+                        <text_fx_wm_pf
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Primary Filled + medium-button&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_wm_pf
+                            cq:styleIds="[primary-filled,medium-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_wm_pf
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                    </section-par>
+                </section_fx_white_medium>
+
+                <!-- [Added] Background Granite + medium-button -->
+                <text_fx_granite_medium_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h5>Background Granite — medium-button (explicit)&lt;/h5>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_fx_granite_medium
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <!-- [Added] primary-filled + medium-button on granite -->
+                        <text_fx_gm_pf
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;h6 style=&quot;text-align: center;&quot;>Primary Filled + medium-button&lt;/h6>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button_fx_gm_pf
+                            cq:styleIds="[primary-filled,medium-button]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Button"
+                            linkTarget="_self"
+                            path="#"/>
+                        <spacer_fx_gm_pf
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                    </section-par>
+                </section_fx_granite_medium>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

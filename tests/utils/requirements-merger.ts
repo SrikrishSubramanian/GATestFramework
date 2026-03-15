@@ -58,13 +58,14 @@ export function fromRequirementsReader(
       : [raw.raw_description || raw.title];
 
   // Extract labels from technical + non-functional requirements
-  const labels: string[] = [];
+  const labelSet = new Set<string>();
   for (const nfr of raw.non_functional_requirements) {
-    if (/accessibility|a11y|wcag/i.test(nfr)) labels.push('@a11y');
-    if (/performance|speed|load/i.test(nfr)) labels.push('@performance');
-    if (/responsive|mobile|tablet/i.test(nfr)) labels.push('@mobile');
-    if (/security|auth/i.test(nfr)) labels.push('@security');
+    if (/accessibility|a11y|wcag/i.test(nfr)) labelSet.add('@a11y');
+    if (/performance|speed|load/i.test(nfr)) labelSet.add('@performance');
+    if (/responsive|mobile|tablet/i.test(nfr)) labelSet.add('@mobile');
+    if (/security|auth/i.test(nfr)) labelSet.add('@security');
   }
+  const labels: string[] = [...labelSet];
 
   return {
     ticketKey: raw.ticket_key,
@@ -86,6 +87,7 @@ const GA_COMPONENTS = [
   'footer-banner', 'breadcrumb', 'disclaimers', 'login', 'role-selector',
   'brand-relationship', 'content-trail', 'rate-sheet-grid', 'user-box',
   'ratingsCard', 'accordion', 'tabs', 'navigation',
+  'text-field', 'text-area', 'form-field',
 ];
 
 function detectComponentFromText(text: string): string | null {

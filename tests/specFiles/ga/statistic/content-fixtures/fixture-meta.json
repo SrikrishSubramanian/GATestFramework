@@ -1,0 +1,13 @@
+{
+  "component": "statistic",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/statistic/.content.xml",
+  "sourceHash": "21c0339ead4bf0dc93e59f04405b6793",
+  "generatedAt": "2026-03-15",
+  "tickets": [],
+  "additions": [
+    "Explicit stat-align-left instance",
+    "Statistics inside section backgrounds (white, slate, granite, azul)",
+    "Theme variants in matching background sections",
+    "Combined style ID instances (azul+border+left, slate+border+center)"
+  ]
+}

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Spacer style guide page demonstrating style and configuration variations."
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Spacer — Test Fixtures"
+        jcr:uuid="4864df73-25fb-4b39-ad16-9f4f3aee2eb6"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+                <text_one
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1>Spacer&lt;/h1>&#xd;&#xa;&lt;p>Empty vertical padding to create extra space between two components on a page.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_two
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Default/Medium Spacer: By default, spacer styling is medium with height 32px in mobile and 48px in desktop&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_one
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_three
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>Text Below Default/Medium Spacer&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <!-- [Added] Explicit size-medium spacer: verifies that cq:styleIds="[size-medium]" renders
+                     identically to the default spacer (no styleId). Allows tests to assert both DOM paths
+                     produce equivalent computed heights (32px mobile / 48px desktop). -->
+                <text_two_explicit_medium
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Explicit Medium Spacer (size-medium styleId): Should render identically to the default spacer — 32px mobile / 48px desktop&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_one_explicit_medium
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_two_explicit_medium_below
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>Text Below Explicit Medium Spacer&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_four
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>XXS Spacer: Height 8px in mobile and 12px in desktop&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_two
+                    cq:styleIds="[size-xxsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_five
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>Text Below XXS Spacer&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_six
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>XS Spacer: Height 16px in mobile and 20px in desktop&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_three
+                    cq:styleIds="[size-xsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_seven
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>Text Below XS Spacer&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_eight
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Small Spacer: Height 20px in mobile and 32px in desktop&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_four
+                    cq:styleIds="[size-small]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_nine
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>Text Below Small Spacer&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_ten
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Large Spacer: Height 48px in mobile and 64px in desktop&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_five
+                    cq:styleIds="[size-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_eleven
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>Text Below Large Spacer&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_twelve
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>XL Spacer: Height 64px in mobile and 112px in desktop&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_six
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_thirteen
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>Text Below XL Spacer&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <!-- [Added] Dark background section: wraps one spacer of each size inside a
+                     background-granite section to verify that spacers render at the correct computed
+                     heights on dark backgrounds (no inherited colour or margin interference). -->
+                <text_dark_section_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Spacers inside a dark (granite) section background — all sizes&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_dark_spacers
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <text_dark_intro
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;p>Content before spacers (granite background)&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <!-- [Added] XXS spacer on dark background -->
+                        <spacer_dark_xxsmall
+                            cq:styleIds="[size-xxsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] XS spacer on dark background -->
+                        <spacer_dark_xsmall
+                            cq:styleIds="[size-xsmall]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] Small spacer on dark background -->
+                        <spacer_dark_small
+                            cq:styleIds="[size-small]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] Medium (default) spacer on dark background -->
+                        <spacer_dark_medium
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] Large spacer on dark background -->
+                        <spacer_dark_large
+                            cq:styleIds="[size-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <!-- [Added] XL spacer on dark background -->
+                        <spacer_dark_xlarge
+                            cq:styleIds="[size-xlarge]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/spacer"/>
+                        <text_dark_outro
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            text="&lt;p>Content after spacers (granite background)&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </section-par>
+                </section_dark_spacers>
+                <!-- [Added] Adjacent spacers: two spacers of different sizes placed immediately next to
+                     each other with no content between them, to verify that browser margin-collapsing
+                     rules do not reduce the combined visual gap (heights must sum, not collapse). -->
+                <text_adjacent_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Adjacent spacers (XS then Large, no content between): total gap must equal sum of individual heights — no margin collapse&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <!-- [Added] First adjacent spacer: XS (16px mobile / 20px desktop) -->
+                <spacer_adjacent_first
+                    cq:styleIds="[size-xsmall]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <!-- [Added] Second adjacent spacer: Large (48px mobile / 64px desktop) — immediately follows with no intervening node -->
+                <spacer_adjacent_second
+                    cq:styleIds="[size-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_adjacent_below
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>Text Below Adjacent Spacers&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

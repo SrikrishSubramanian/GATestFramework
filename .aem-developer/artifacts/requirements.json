@@ -1,0 +1,229 @@
+{
+  "ticket": {
+    "key": "GAAM-504",
+    "id": "707509",
+    "url": "https://bounteous.jira.com/browse/GAAM-504",
+    "title": "CMS FE: Form Field Styling - Text, Text Area (Reskin)",
+    "type": "Story",
+    "status": "In Progress",
+    "priority": "P2",
+    "assignee": "Sai Ganesh (sai.ganesh@bounteous.com)",
+    "reporter": "Marianne Embree (marianne.embree@bounteous.com)",
+    "labels": [],
+    "components": []
+  },
+  "summary": "Reskin the Text Field and Text Area form field components for the Global Atlantic design system. Fields must respond to the parent section's background (light vs dark mode) and implement all interactive, filled, and error states per the Figma design specifications.",
+  "user_stories": [
+    {
+      "id": "US-1",
+      "story": "As a site visitor, I want Text Field and Text Area form components to visually adapt to their parent section background (white/slate = light mode, azul/granite = dark mode) so that form fields feel native to the page design."
+    },
+    {
+      "id": "US-2",
+      "story": "As a site visitor, I want form fields to clearly indicate interactive states (Default, Hover, Focus, Filled, Disabled/Read Only) and error states (Error Default, Error Focus, Error Filled) so that I can understand how to interact with them and what errors have occurred."
+    },
+    {
+      "id": "US-3",
+      "story": "As a user with accessibility needs, I want all form field text to meet WCAG 2.1 AA contrast requirements in both light and dark mode, and disabled fields to not be keyboard-focusable, so that the forms are accessible."
+    },
+    {
+      "id": "US-4",
+      "story": "As a mobile user, I want form field components to span the full width of their container and maintain consistent font styles with the desktop experience."
+    },
+    {
+      "id": "US-5",
+      "story": "As a content author, I want updated authoring documentation and style guide pages with all variations so that I can configure form fields correctly in AEM."
+    }
+  ],
+  "acceptance_criteria": {
+    "all_components": [
+      "All five interactive states are reskinned per Figma: Default, Hover, Focus, Filled, Disabled/Read Only",
+      "All three error states are reskinned per Figma: Error Default, Error Focus, Error Filled",
+      "Dark mode variants are implemented for all states across both components",
+      "Light and dark mode styles do not interfere with each other",
+      "Font styles (size, weight, family) are identical between light and dark mode — color only changes",
+      "All text meets WCAG 2.1 AA contrast in both light and dark mode",
+      "Mobile: components span full width of their container; font styles match desktop"
+    ],
+    "text_field": [
+      "Label renders above the field; required fields display an asterisk (*)",
+      "Helper text renders below the field",
+      "Error state shows error icon + message below the field",
+      "Disabled/Read Only state is not keyboard-focusable"
+    ],
+    "text_area": [
+      "Character count (e.g., 0/240) renders in the top-right corner and updates live on input"
+    ],
+    "delivery": [
+      "Component should be available on any existing templates (except Rate Administration)",
+      "Styles should match Figma",
+      "Authoring Guide should exist and be updated with style variations",
+      "Style Guide page should exist",
+      "Both desktop and mobile versions need to be implemented"
+    ],
+    "qa_checklist": [
+      "Notify the design team that the component is ready for their review and provide a link to the Style Guide page"
+    ]
+  },
+  "technical_requirements": {
+    "components_in_scope": [
+      "Text Field",
+      "Text Area"
+    ],
+    "components_out_of_scope": [
+      "Search Field (to be handled separately with search component — per comment by Hemanth Ponnuru)"
+    ],
+    "theme_classification": {
+      "light_backgrounds": ["white", "slate"],
+      "dark_backgrounds": ["azul", "granite"]
+    },
+    "interactive_states": [
+      "Default",
+      "Hover",
+      "Focus",
+      "Filled",
+      "Disabled / Read Only"
+    ],
+    "error_states": [
+      "Error Default",
+      "Error Focus",
+      "Error Filled"
+    ],
+    "focus_state_specs": {
+      "light_background": "box-shadow: 0 0 0 2px #FFF, 0 0 0 4px #154197 (white space, azul border)",
+      "dark_background": "box-shadow: 0 0 0 2px #1A273C, 0 0 0 4px #FFF (granite space, white border)",
+      "note": "The two-border focus ring is intentional; inner gap is visually 2px, outer outline is visually 2px"
+    },
+    "text_field_specifics": {
+      "label_position": "above the field",
+      "required_indicator": "asterisk (*) on required fields",
+      "helper_text_position": "below the field",
+      "error_display": "error icon + message below the field",
+      "disabled_behavior": "not keyboard-focusable"
+    },
+    "text_area_specifics": {
+      "character_count": "renders top-right corner (e.g., 0/240), updates live on input"
+    },
+    "responsive": {
+      "mobile": "components span full width of container",
+      "font_parity": "font styles identical between mobile and desktop"
+    },
+    "aem_authoring": {
+      "templates": "available on all existing templates except Rate Administration",
+      "authoring_guide": "must be created or updated with style variations",
+      "style_guide_page": "must be created"
+    },
+    "implementation_branch": "feature/GAAM-504-CMS_FE_Form_Field_Styling_Text_TextArea",
+    "accessibility_tool": "Level Access Extension (https://chromewebstore.google.com/detail/level-access-extension/kgbmnemfaellbfabmkmmilchbhiigpdi) — no critical or major issues permitted"
+  },
+  "non_functional_requirements": [
+    {
+      "category": "Accessibility",
+      "requirement": "WCAG 2.1 AA contrast compliance for all text in both light and dark mode"
+    },
+    {
+      "category": "Accessibility",
+      "requirement": "Disabled/Read Only state must not be keyboard-focusable"
+    },
+    {
+      "category": "Accessibility",
+      "requirement": "Zero critical or major issues flagged by the Level Access Extension"
+    },
+    {
+      "category": "Responsive Design",
+      "requirement": "Full-width layout on mobile; consistent font styles between mobile and desktop"
+    },
+    {
+      "category": "Style Isolation",
+      "requirement": "Light and dark mode styles must not interfere with each other"
+    },
+    {
+      "category": "Font Consistency",
+      "requirement": "Font size, weight, and family must remain identical across light and dark mode — only color values change"
+    },
+    {
+      "category": "Design Fidelity",
+      "requirement": "All styles must match the Figma design specification"
+    }
+  ],
+  "open_questions": [
+    {
+      "author": "Sai Ganesh",
+      "date": "2026-03-13",
+      "question": "If helper text should appear below the text box alongside an error message, the Figma design needs to show both simultaneously so that correct spacing between them can be implemented.",
+      "status": "open — awaiting design team response"
+    },
+    {
+      "author": "Marianne Embree",
+      "date": "2026-03-13",
+      "question": "An OOB error flag/message from the original KKR/Activate implementation is rendering unexpectedly in the form field. Design was unaware of this behavior and wants it removed. Decision needed: update this ticket or create a follow-up.",
+      "status": "open — Vivek Ranjan Kumar / Sai Ganesh / team to decide"
+    }
+  ],
+  "dependencies": [
+    {
+      "type": "cloned_by",
+      "ticket": "GAAM-507",
+      "title": "CMS FE: Form Field Styling - Dropdown (Reskin)",
+      "status": "In Progress",
+      "priority": "P2",
+      "note": "Dropdown reskin is a parallel clone of this story; same pattern should be applied consistently"
+    }
+  ],
+  "references": {
+    "figma": {
+      "url": null,
+      "note": "Figma link referenced in ticket description as 'the figma link below' but not stored as a structured URL in Jira. Design specs were communicated via Jira comments (e.g., focus state box-shadow values confirmed by Marianne Embree on 2026-03-12)."
+    },
+    "accessibility_tool": "https://chromewebstore.google.com/detail/level-access-extension/kgbmnemfaellbfabmkmmilchbhiigpdi",
+    "jira_ticket": "https://bounteous.jira.com/browse/GAAM-504",
+    "attachment": {
+      "filename": "image-20260313-185954.png",
+      "description": "Screenshot showing OOB error flag behavior in KKR that design wants removed",
+      "url": "https://bounteous.jira.com/rest/api/2/attachment/content/698154"
+    }
+  },
+  "comments_summary": [
+    {
+      "date": "2026-02-26",
+      "author": "Hemanth Ponnuru",
+      "note": "Search fields removed from scope — must be handled with the search component, not form fields."
+    },
+    {
+      "date": "2026-02-26",
+      "author": "Marianne Embree",
+      "note": "Confirmed: Search field removed from story description."
+    },
+    {
+      "date": "2026-03-04",
+      "author": "Srikrish Subramanian",
+      "note": "Implementation branch: feature/GAAM-504-CMS_FE_Form_Field_Styling_Text_TextArea"
+    },
+    {
+      "date": "2026-03-11",
+      "author": "Vivek Ranjan Kumar",
+      "note": "Confirmed removal of Search Field from description text as well."
+    },
+    {
+      "date": "2026-03-12",
+      "author": "Marianne Embree",
+      "note": "Clarified two-border focus ring is intentional. Light BG: box-shadow: 0 0 0 2px #FFF, 0 0 0 4px #154197. Dark BG: box-shadow: 0 0 0 2px #1A273C, 0 0 0 4px #FFF."
+    },
+    {
+      "date": "2026-03-13",
+      "author": "Sai Ganesh",
+      "note": "Raised need for Figma to show helper text + error message simultaneously for proper spacing implementation."
+    },
+    {
+      "date": "2026-03-13",
+      "author": "Marianne Embree",
+      "note": "Flagged OOB error flag from KKR/Activate appearing in form field rendering — design wants it removed. Team to decide: update this ticket or create follow-up."
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-03-15",
+    "source": "Jira REST API v2",
+    "ticket_id": "707509",
+    "project": "GAAM"
+  }
+}

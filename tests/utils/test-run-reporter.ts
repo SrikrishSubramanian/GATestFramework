@@ -9,6 +9,7 @@ import type {
   TestResult,
 } from '@playwright/test/reporter';
 import { TestLogger, TestRunResult, CSVMetadataInfo } from './test-logger';
+import { loadSyncResults, formatSyncWarnings } from './fixture-sync-checker';
 
 /**
  * Custom Playwright reporter that feeds results into TestLogger.
@@ -64,6 +65,12 @@ class TestRunReporter implements Reporter {
 
     // Also enhance the Playwright results.json with CSV metadata
     this.enhanceResultsJson();
+
+    // Show fixture sync warnings prominently at the end of the run
+    const syncReport = loadSyncResults();
+    if (syncReport?.hasWarnings) {
+      console.warn(formatSyncWarnings(syncReport));
+    }
   }
 
   /**

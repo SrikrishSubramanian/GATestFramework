@@ -313,6 +313,53 @@ A custom Claude Code command for running tests by test IDs, components, or tags.
 
 Defaults to `env=local` and `--project chromium`.
 
+## Content Fixtures
+
+Test content fixtures supplement AEM style guide pages with additional component states/variations needed for thorough test coverage. Each component can have a `content-fixtures/` directory containing:
+
+- `<component>-fixtures.xml` — JCR content XML (copy of style guide + additions marked with `<!-- [Added] -->`)
+- `fixture-meta.json` — Tracks source file hash for sync detection
+- `README.md` — Documents what was added and why
+
+### Hybrid Deployment Strategy
+
+| Environment | Strategy | How it works |
+|-------------|----------|-------------|
+| `local`, `dev` | **Option A — Auto-deploy** | Fixtures are POSTed to AEM via Sling API at `/content/global-atlantic/test-fixtures/<component>` before tests run. Tests navigate to the fixture URL. |
+| `qa`, `uat`, `prod` | **Option B — Pre-merged** | Fixtures are reviewed and merged into kkr-aem by a developer. Tests navigate to the standard style guide URL. |
+
+### URL Resolution
+
+Use `resolveComponentUrl(component)` from `tests/utils/content-fixture-deployer.ts` — it automatically picks the correct URL based on the current environment:
+
+```typescript
+import { resolveComponentUrl } from '../../utils/content-fixture-deployer';
+
+// local/dev → http://localhost:4502/content/global-atlantic/test-fixtures/button.html?wcmmode=disabled
+// qa/prod  → http://localhost:4502/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled
+const url = resolveComponentUrl('button');
+```
+
+### Fixture Sync Checker
+
+On every test run, `globalSetup.ts` checks all `fixture-meta.json` hashes against the current kkr-aem source files. If the style guide has changed since a fixture was generated:
+
+- **Warning logged** at test startup (console)
+- **Warning repeated** at end of test run (via custom reporter)
+- **Tests still run** — never blocks execution
+- Fix by re-running `/automate` for affected components
+
+Sync results are saved to `tests/data/.fixture-sync-results.json`.
+
+### Key Files
+
+| File | Purpose |
+|------|---------|
+| `tests/utils/content-fixture-deployer.ts` | Deploy fixtures to AEM, resolve component URLs |
+| `tests/utils/fixture-sync-checker.ts` | Hash-based sync check against kkr-aem source |
+| `tests/utils/globalSetup.ts` | Runs sync check before test suite |
+| `tests/utils/test-run-reporter.ts` | Shows sync warnings after test run |
+
 ## Adding New Components
 
 1. Add entry to `AVAILABLE_COMPONENTS` in `generate-components.spec.ts` and `generate-advanced.spec.ts`

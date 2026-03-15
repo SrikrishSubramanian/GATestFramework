@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Statistic style guide page demonstrating style and configuration variations."
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Statistic — Test Fixtures"
+        jcr:uuid="cff01bd9-3681-4799-86ed-c2d90ca04d92"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+                <text_title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1>Statistic&lt;/h1>&lt;p>The Statistic component displays eye-catching numerical values with optional descriptions. It supports multiple color themes, alignment options, and border styling. Authors can apply stroke styling to individual characters within the statistic value using the Rich Text Editor.&lt;/p>"
+                    textIsRich="true"/>
+                <text_default
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Default (Left Aligned, White)&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_default
+                    cq:styleIds="[stat-border]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="&lt;p>Growth in Sales&lt;/p>&#xd;&#xa;"
+                    statisticValue="&lt;p>42&lt;span class=&quot;statistic-stroke&quot;>M&lt;/span>&lt;/p>&#xd;&#xa;"
+                    textIsRich="[true,true]"/>
+                <spacer_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_center
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Center Aligned&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_center
+                    cq:styleIds="[stat-align-center]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="Assets Under Management"
+                    statisticValue="$5B"/>
+                <spacer_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_stroke_style
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Rich Text with Stroke Styling&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_stroke
+                    cq:styleIds="[stat-theme-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="&lt;p>Investment Professionals&lt;/p>&#xd;&#xa;"
+                    statisticValue="&lt;p>&lt;span class=&quot;statistic-stroke&quot;>25K+&lt;/span>&lt;/p>&#xd;&#xa;"
+                    textIsRich="[true,true]"/>
+                <spacer_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_color_theme_slate
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Color Theme - Slate&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_slate
+                    cq:styleIds="[stat-theme-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="Customer Satisfaction"
+                    statisticValue="89%"/>
+                <spacer_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_color_theme_granite
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Color Theme - Granite&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_granite
+                    cq:styleIds="[stat-theme-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="Portfolio Companies"
+                    statisticValue="150+"/>
+                <spacer_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_color_theme_azul
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Color Theme - Azul&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_azul
+                    cq:styleIds="[stat-theme-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="Global Capital"
+                    statisticValue="3.0T"/>
+                <spacer_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_border_on
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Border Enabled&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_border
+                    cq:styleIds="[stat-border]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="Private Equity Dry Powder"
+                    statisticValue="$750M"/>
+                <spacer_7
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_combined_styles
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Combined: Granite Theme + Border + Center Aligned&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_combined
+                    cq:styleIds="[stat-theme-granite,stat-border,stat-align-center]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="People Impacted"
+                    statisticValue="500K+"/>
+                <spacer_8
+                    cq:styleIds="[size-jumbo]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] ============================================================ -->
+                <!-- [Added] SECTION 1: Explicit stat-align-left                        -->
+                <!-- [Added] The original has stat-align-center but no stat-align-left. -->
+                <!-- [Added] This instance exercises the left-alignment style class.    -->
+                <!-- [Added] ============================================================ -->
+                <text_align_left
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Explicit Left Aligned&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_align_left
+                    cq:styleIds="[stat-align-left]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="Managed Assets"
+                    statisticValue="$1.2T"/>
+                <!-- [Added] Spacer after explicit left-align instance -->
+                <spacer_align_left
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] ============================================================ -->
+                <!-- [Added] SECTION 2: Additional combined style-ID instances          -->
+                <!-- [Added] Tests multiple simultaneous style IDs on a single node.    -->
+                <!-- [Added] ============================================================ -->
+                <!-- [Added] Combined: Azul theme + Border + Left aligned -->
+                <text_combined_azul_border_left
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Combined: Azul Theme + Border + Left Aligned&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_combined_azul_border_left
+                    cq:styleIds="[stat-theme-azul,stat-border,stat-align-left]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="Total Investments"
+                    statisticValue="$200B+"/>
+                <!-- [Added] Spacer after combined azul+border+left instance -->
+                <spacer_combined_azul_left
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] Combined: Slate theme + Border + Center aligned -->
+                <text_combined_slate_border_center
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h4>Combined: Slate Theme + Border + Center Aligned&lt;/h4>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <statistic_combined_slate_border_center
+                    cq:styleIds="[stat-theme-slate,stat-border,stat-align-center]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/statistic"
+                    description="Client Retention Rate"
+                    statisticValue="97%"/>
+                <!-- [Added] Spacer after combined slate+border+center instance -->
+                <spacer_combined_slate_center
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] ============================================================ -->
+                <!-- [Added] SECTION 3: Statistics inside section backgrounds            -->
+                <!-- [Added] Tests dark-mode color adaptation for each background.       -->
+                <!-- [Added] ============================================================ -->
+
+                <!-- [Added] Background: White section — light background, default theme -->
+                <text_section_white_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>In Section — Background White&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_bg_white
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] Default statistic on white background (light context) -->
+                        <statistic_in_white
+                            cq:styleIds="[stat-border]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/statistic"
+                            description="Annual Revenue"
+                            statisticValue="$4.5B"/>
+                    </section-par>
+                </section_bg_white>
+                <!-- [Added] Spacer after white-background section -->
+                <spacer_section_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] Background: Slate section — light background, slate theme -->
+                <text_section_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>In Section — Background Slate&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_bg_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] Slate-theme statistic inside a slate background section -->
+                        <statistic_in_slate
+                            cq:styleIds="[stat-theme-slate,stat-border]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/statistic"
+                            description="Customer Satisfaction"
+                            statisticValue="89%"/>
+                    </section-par>
+                </section_bg_slate>
+                <!-- [Added] Spacer after slate-background section -->
+                <spacer_section_slate
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] Background: Granite section — dark background, granite theme -->
+                <text_section_granite_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>In Section — Background Granite&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_bg_granite
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] Granite-theme statistic inside a granite background section (dark context) -->
+                        <statistic_in_granite
+                            cq:styleIds="[stat-theme-granite,stat-border]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/statistic"
+                            description="Portfolio Companies"
+                            statisticValue="150+"/>
+                    </section-par>
+                </section_bg_granite>
+                <!-- [Added] Spacer after granite-background section -->
+                <spacer_section_granite
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] Background: Azul section — dark background, azul theme -->
+                <text_section_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>In Section — Background Azul&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_bg_azul
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] Azul-theme statistic inside an azul background section (dark context) -->
+                        <statistic_in_azul
+                            cq:styleIds="[stat-theme-azul,stat-border]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/statistic"
+                            description="Global Capital Deployed"
+                            statisticValue="3.0T"/>
+                    </section-par>
+                </section_bg_azul>
+                <!-- [Added] Spacer after azul-background section -->
+                <spacer_section_azul
+                    cq:styleIds="[size-jumbo]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

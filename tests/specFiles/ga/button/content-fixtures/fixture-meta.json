@@ -1,0 +1,11 @@
+{
+  "component": "button",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/button/.content.xml",
+  "sourceHash": "fc9ffc1d2c692fbe57205f2bb72ec0db",
+  "generatedAt": "2026-03-15",
+  "tickets": [],
+  "additions": [
+    "Explicit light-theme/dark-theme/auto-theme styleIds on white and granite backgrounds",
+    "Explicit medium-button size instances on white and granite backgrounds"
+  ]
+}

@@ -48,6 +48,116 @@ const AUTH = {
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
 const SPECS_DIR = path.resolve(__dirname, 'ga');
 
+/**
+ * Normalize requirements JSON from the dev-agents-shared requirements-reader agent
+ * into the flat RequirementsReaderOutput format expected by our pipeline.
+ * Handles both the flat format (from direct Jira API fetch) and the nested format
+ * (from the requirements-reader agent).
+ */
+function normalizeRequirements(raw: any): RequirementsReaderOutput {
+  // Already flat format — return as-is
+  if (typeof raw.ticket_key === 'string' && Array.isArray(raw.acceptance_criteria)) {
+    return raw as RequirementsReaderOutput;
+  }
+
+  // Nested format from requirements-reader agent
+  const ticket = raw.ticket || {};
+
+  // Flatten acceptance_criteria from object with sub-keys to string[]
+  let acs: string[] = [];
+  if (raw.acceptance_criteria) {
+    if (Array.isArray(raw.acceptance_criteria)) {
+      acs = raw.acceptance_criteria;
+    } else if (typeof raw.acceptance_criteria === 'object') {
+      for (const values of Object.values(raw.acceptance_criteria)) {
+        if (Array.isArray(values)) {
+          acs.push(...(values as string[]));
+        }
+      }
+    }
+  }
+
+  // Flatten user_stories from {id, story}[] to string[]
+  let stories: string[] = [];
+  if (Array.isArray(raw.user_stories)) {
+    stories = raw.user_stories.map((s: any) => typeof s === 'string' ? s : s.story || s.description || '');
+  }
+
+  // Flatten technical_requirements from object to string[]
+  let techReqs: string[] = [];
+  if (Array.isArray(raw.technical_requirements)) {
+    techReqs = raw.technical_requirements;
+  } else if (typeof raw.technical_requirements === 'object' && raw.technical_requirements) {
+    techReqs = flattenObjectToStrings(raw.technical_requirements);
+  }
+
+  // Flatten non_functional_requirements from {category, requirement}[] to string[]
+  let nfrs: string[] = [];
+  if (Array.isArray(raw.non_functional_requirements)) {
+    nfrs = raw.non_functional_requirements.map((n: any) =>
+      typeof n === 'string' ? n : `${n.category || ''}: ${n.requirement || ''}`.trim()
+    );
+  }
+
+  // Flatten dependencies from object[] to string[]
+  let deps: string[] = [];
+  if (Array.isArray(raw.dependencies)) {
+    deps = raw.dependencies.map((d: any) =>
+      typeof d === 'string' ? d : d.ticket || d.key || ''
+    ).filter(Boolean);
+  }
+
+  // Flatten references from object to string[]
+  let refs: string[] = [];
+  if (Array.isArray(raw.references)) {
+    refs = raw.references;
+  } else if (typeof raw.references === 'object' && raw.references) {
+    refs = flattenObjectToUrls(raw.references);
+  }
+
+  return {
+    ticket_key: ticket.key || raw.ticket_key || '',
+    title: ticket.title || raw.title || raw.summary || '',
+    status: ticket.status || raw.status || '',
+    priority: ticket.priority || raw.priority || '',
+    assignee: ticket.assignee || raw.assignee || '',
+    user_stories: stories,
+    acceptance_criteria: acs,
+    technical_requirements: techReqs,
+    non_functional_requirements: nfrs,
+    dependencies: deps,
+    references: refs,
+    raw_description: raw.summary || raw.raw_description || '',
+  };
+}
+
+/** Recursively flatten an object's leaf string values into an array. */
+function flattenObjectToStrings(obj: any, prefix = ''): string[] {
+  const result: string[] = [];
+  for (const [key, val] of Object.entries(obj)) {
+    if (typeof val === 'string') {
+      result.push(`${prefix}${key}: ${val}`);
+    } else if (Array.isArray(val)) {
+      for (const item of val) {
+        if (typeof item === 'string') result.push(item);
+        else if (typeof item === 'object') result.push(...flattenObjectToStrings(item));
+      }
+    } else if (typeof val === 'object' && val !== null) {
+      result.push(...flattenObjectToStrings(val, `${key} > `));
+    }
+  }
+  return result;
+}
+
+/** Extract URLs from a nested references object. */
+function flattenObjectToUrls(obj: any): string[] {
+  const urls: string[] = [];
+  const json = JSON.stringify(obj);
+  const matches = json.match(/https?:\/\/[^\s"\\]+/g);
+  if (matches) urls.push(...matches);
+  return urls;
+}
+
 function toPascalCase(str: string): string {
   return str.split(/[-_\s]+/).map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()).join('');
 }
@@ -60,6 +170,7 @@ test.describe('Jira/Figma Test Generation', () => {
   const a11yLevel: A11yLevel = (process.env.A11Y_LEVEL as A11yLevel) || 'wcag22';
   const mode = (process.env.MODE as 'author' | 'publish') || 'author';
   const categories: TestCategory[] = getDefaultCategories(a11yLevel);
+  const dryRun = process.env.DRY_RUN === 'true';
 
   test('Generate tests from Jira requirements', async ({ page }) => {
     // ── Step 1: Get requirements JSON ──────────────────────────────
@@ -72,7 +183,7 @@ test.describe('Jira/Figma Test Generation', () => {
     if (jiraJsonPath) {
       // Path A: Pre-fetched JSON from requirements-reader agent
       expect(fs.existsSync(jiraJsonPath), `JSON not found: ${jiraJsonPath}`).toBe(true);
-      reqOutput = JSON.parse(fs.readFileSync(jiraJsonPath, 'utf-8'));
+      reqOutput = normalizeRequirements(JSON.parse(fs.readFileSync(jiraJsonPath, 'utf-8')));
       console.log(`\n=== Loaded requirements from: ${jiraJsonPath} ===`);
     } else if (jiraTicket) {
       // Path B: Fetch directly from Jira REST API
@@ -129,8 +240,38 @@ test.describe('Jira/Figma Test Generation', () => {
     const className = toPascalCase(jiraReq.component) + 'Page';
     const fileName = toCamelCase(jiraReq.component) + 'Page';
     const pomPath = path.join(COMPONENTS_DIR, `${fileName}.ts`);
+    const pomExists = fs.existsSync(pomPath);
 
-    if (!fs.existsSync(pomPath)) {
+    if (dryRun) {
+      // ── Dry-run: preview what would be generated ──────────────────
+      console.log(`\n=== DRY RUN — no files will be written ===`);
+
+      console.log(`\n  POM: ${pomExists ? `exists (${pomPath})` : `would be generated from DOM scan → ${pomPath}`}`);
+
+      const compSpecDir = path.join(SPECS_DIR, jiraReq.component);
+      const specPath = path.join(compSpecDir, `${jiraReq.component}.author.spec.ts`);
+      console.log(`  Spec: would be written → ${specPath}`);
+      console.log(`  Categories: ${categories.join(', ')}`);
+
+      // Preview test cases
+      console.log(`\n  Test cases (${merged.testCases.length}):`);
+      for (const tc of merged.testCases) {
+        console.log(`    [${tc.testId}] ${tc.title}`);
+        if (tc.tags.length > 0) console.log(`      Tags: ${tc.tags.join(' ')}`);
+      }
+
+      if (figmaData) {
+        console.log(`\n  Visual spec: would be generated from Figma data`);
+      }
+
+      console.log(`\n  Coverage matrix: would be updated for ${jiraReq.component}`);
+      console.log(`\n=== DRY RUN complete: ${reqOutput.ticket_key} ===`);
+      return;
+    }
+
+    // ── Actual generation (non-dry-run) ─────────────────────────────
+
+    if (!pomExists) {
       console.log(`\n  POM not found, scanning DOM for ${jiraReq.component}...`);
 
       // Authenticate

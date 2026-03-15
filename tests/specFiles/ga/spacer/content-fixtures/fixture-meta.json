@@ -1,0 +1,12 @@
+{
+  "component": "spacer",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/spacer/.content.xml",
+  "sourceHash": "a05006cfed195ad27ca88992a6981e5b",
+  "generatedAt": "2026-03-15",
+  "tickets": [],
+  "additions": [
+    "Explicit size-medium styleId instance",
+    "Spacers inside dark section (background-granite)",
+    "Adjacent spacers for margin-collapse testing"
+  ]
+}
