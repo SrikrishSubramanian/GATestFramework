@@ -286,6 +286,33 @@ npx playwright test --grep @mobile
 npx playwright test --grep @a11y
 ```
 
+## `/run-test` Command (Claude Code)
+
+A custom Claude Code command for running tests by test IDs, components, or tags. Invoke with `/run-test <args>`.
+
+### Usage Examples
+
+| Command | What it does |
+|---------|-------------|
+| `/run-test BTN-001 BTN-005` | Run specific test IDs |
+| `/run-test button` | Run all button component tests |
+| `/run-test @smoke` | Run all smoke-tagged tests |
+| `/run-test button @visual` | Run only visual tests for button |
+| `/run-test BTN-001..BTN-010` | Run a range of test IDs |
+| `/run-test @a11y @mobile` | Run accessibility + mobile tests |
+| `/run-test matrix` | Run all matrix spec files |
+| `/run-test all` | Run the entire GA test suite |
+
+### Input formats
+
+- **Test IDs** — `BTN-001`, `SPC-003`, `STAT-002` (component prefix + number)
+- **Components** — `button`, `feature-banner`, `spacer`, `statistic`
+- **Tags** — `@smoke`, `@regression`, `@a11y`, `@mobile`, `@visual`, `@interaction`, `@matrix`, `@negative`
+- **Spec categories** — `author`, `interaction`, `matrix`, `visual`, `images`
+- **Mixed** — combine freely: `BTN-001 @smoke statistic`
+
+Defaults to `env=local` and `--project chromium`.
+
 ## Adding New Components
 
 1. Add entry to `AVAILABLE_COMPONENTS` in `generate-components.spec.ts` and `generate-advanced.spec.ts`
