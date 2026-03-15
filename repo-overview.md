@@ -55,10 +55,14 @@ GATestFramework/
 │   │   │   │   └── ... (same pattern)
 │   │   │   ├── api-mock.spec.ts           # Cross-component API error/empty state tests
 │   │   │   └── content-driven.spec.ts     # Cross-component JCR content XML validation
-│   │   ├── generate-components.spec.ts    # Orchestrator: DOM scan → POM + spec generation
-│   │   ├── generate-from-csv.spec.ts      # Orchestrator: CSV → POM + spec generation
-│   │   ├── generate-from-jira.spec.ts     # Orchestrator: Jira/Figma → POM + spec generation
-│   │   └── generate-advanced.spec.ts      # Orchestrator: interaction, matrix, visual, images, content
+│   │   └── (test specs only — generators moved to tests/generators/)
+│   │
+│   ├── generators/                          # Test generation orchestrators
+│   │   ├── generate-components.ts    # Orchestrator: DOM scan → POM + spec generation
+│   │   ├── generate-from-csv.ts      # Orchestrator: CSV → POM + spec generation
+│   │   ├── generate-from-jira.ts     # Orchestrator: Jira/Figma → POM + spec generation
+│   │   ├── generate-advanced.ts      # Orchestrator: interaction, matrix, visual, images, content
+│   │   └── generate-html-summaries.ts # HTML test summary generation
 │   │
 │   ├── pages/                             # Page Object Models (POMs)
 │   │   ├── loginPage.ts                   # Hand-written POM (function-export pattern)
@@ -86,48 +90,43 @@ GATestFramework/
 │   │   ├── .env.dev / .env.qa / .env.uat / .env.prod
 │   │   └── urls.json                      # Centralized URL config for test pages
 │   │
-│   └── utils/                             # Test infrastructure and generation utilities
+│   └── utils/                             # Split into generation/ and infra/ subdirs
+│       ├── generation/                    # Generation pipeline utilities
+│       │   ├── dom-scanner.ts             # Live DOM extraction (BEM, semantic naming)
+│       │   ├── source-scanner.ts          # Source-based POM generation (HTL/dialog/LESS)
+│       │   ├── pom-writer.ts              # POM class + locator sidecar generation
+│       │   ├── spec-writer.ts             # Category-based spec file generation
+│       │   ├── csv-test-parser.ts         # CSV → structured test cases
+│       │   ├── requirements-merger.ts     # Jira requirements-reader bridge + Figma merge
+│       │   ├── visual-assertion-generator.ts # Figma design spec → visual assertion spec
+│       │   ├── interaction-detector.ts    # Parent-child nesting + theme adaptation detection
+│       │   ├── state-matrix-generator.ts  # Combinatorial variant x theme x bg x viewport
+│       │   ├── broken-image-detector.ts   # Image health (broken, missing alt, oversized, CLS)
+│       │   ├── baseline-manager.ts        # Visual baseline capture + responsive screenshots
+│       │   ├── content-driven-generator.ts # JCR content XML analysis
+│       │   ├── dispatcher-tester.ts       # Cache header verification (deployed envs)
+│       │   ├── coverage-matrix-reporter.ts # Coverage tracking + formatted report
+│       │   └── html-summary-writer.ts     # HTML test summary generation
 │       │
-│       │ ── Pre-existing infrastructure ──
-│       ├── globalSetup.ts                 # Global setup — loads .env.<env> via dotenv
-│       ├── env.ts                         # ENV class (BASE_URL, AEM_AUTHOR_URL, credentials)
-│       ├── brokenLinksUtils.ts            # Link validation (extract <a href>, check HTTP status)
-│       ├── csvUtls.ts                     # CSV handling utilities
-│       ├── reportAttach.ts                # Artifact attachment to Playwright HTML report
-│       ├── typography-master.ts           # Master baseline extraction
-│       ├── typography-compare.ts          # Visual comparison against baseline
-│       ├── typography-*-execute.ts        # Typography execution wrappers
-│       │
-│       │ ── Generation pipeline ──
-│       ├── dom-scanner.ts                 # Live DOM extraction (BEM, semantic naming)
-│       ├── source-scanner.ts              # Source-based POM generation (HTL/dialog/LESS)
-│       ├── pom-writer.ts                  # POM class + locator sidecar generation
-│       ├── spec-writer.ts                 # Category-based spec file generation
-│       ├── csv-test-parser.ts             # CSV → structured test cases
-│       ├── requirements-merger.ts         # Jira requirements-reader bridge + Figma merge
-│       ├── visual-assertion-generator.ts  # Figma design spec → visual assertion spec
-│       │
-│       │ ── Advanced test generators ──
-│       ├── interaction-detector.ts        # Parent-child nesting + theme adaptation detection
-│       ├── state-matrix-generator.ts      # Combinatorial variant x theme x bg x viewport
-│       ├── broken-image-detector.ts       # Image health (broken, missing alt, oversized, CLS)
-│       ├── baseline-manager.ts            # Visual baseline capture + responsive screenshots
-│       ├── content-driven-generator.ts    # JCR content XML analysis
-│       ├── dispatcher-tester.ts           # Cache header verification (deployed envs)
-│       ├── api-mock-helper.ts             # Playwright page.route() mocking
-│       │
-│       │ ── Test infrastructure ──
-│       ├── locator-registry.ts            # Multi-locator strategy (testid/id/aria/text/css/xpath)
-│       ├── test-tagger.ts                 # Smart tag assignment (@smoke, @regression, @a11y, etc.)
-│       ├── test-data-factory.ts           # Realistic test data generator (no external deps)
-│       ├── console-capture.ts             # Browser JS error + failed request capture
-│       ├── screenshot-compare.ts          # Pixel diff utility for visual tests
-│       ├── auth-fixture.ts                # AEM authentication fixture
-│       │
-│       │ ── Reporting ──
-│       ├── test-logger.ts                 # Per-run JSON logging to logs/
-│       ├── report-enhancer.ts             # HTML report annotations (console errors, locator fallbacks)
-│       └── coverage-matrix-reporter.ts    # Coverage tracking + formatted report
+│       └── infra/                         # Test infrastructure (used by specs at runtime)
+│           ├── globalSetup.ts             # Global setup — loads .env.<env> via dotenv
+│           ├── env.ts                     # ENV class (BASE_URL, AEM_AUTHOR_URL, credentials)
+│           ├── auth-fixture.ts            # AEM authentication fixture
+│           ├── locator-registry.ts        # Multi-locator strategy (testid/id/aria/text/css/xpath)
+│           ├── test-tagger.ts             # Smart tag assignment (@smoke, @regression, @a11y, etc.)
+│           ├── test-data-factory.ts       # Realistic test data generator (no external deps)
+│           ├── console-capture.ts         # Browser JS error + failed request capture
+│           ├── screenshot-compare.ts      # Pixel diff utility for visual tests
+│           ├── api-mock-helper.ts         # Playwright page.route() mocking
+│           ├── test-logger.ts             # Per-run JSON logging to logs/
+│           ├── report-enhancer.ts         # HTML report annotations (console errors, locator fallbacks)
+│           ├── test-run-reporter.ts       # Custom Playwright reporter
+│           ├── reportAttach.ts            # Artifact attachment to Playwright HTML report
+│           ├── fixture-sync-checker.ts    # Hash-based sync check against kkr-aem source
+│           ├── content-fixture-deployer.ts # Deploy fixtures to AEM
+│           ├── brokenLinksUtils.ts        # Link validation (extract <a href>, check HTTP status)
+│           ├── csvUtls.ts                 # CSV handling utilities
+│           └── typography-*.ts            # Typography baseline + comparison utilities
 │
 ├── logs/                                   # Test run logs (JSON, cleaned weekly)
 │   └── YYYY-MM-DD/run-<timestamp>.json
@@ -147,13 +146,14 @@ GATestFramework/
 | Directory | Purpose | Pattern | Used by |
 |-----------|---------|---------|---------|
 | **`src/utils/`** | Playwright API wrappers | Singleton `getPage()` pattern, function exports | Hand-written specs (e.g., `login.spec.ts`) |
-| **`tests/utils/`** | Test infrastructure + generation | Class-based, constructor-injected `Page` | Auto-generated specs, orchestrators |
+| **`tests/utils/generation/`** | Code-producing generation pipeline | Class-based, writes files to disk | Orchestrators in `tests/generators/` |
+| **`tests/utils/infra/`** | Test infrastructure | Class-based, constructor-injected `Page` | Auto-generated + hand-written specs |
 
 `src/utils/` is the **original framework layer** — thin wrappers around Playwright APIs (`clickElement()`, `getLocator()`, `isVisible()`) using a singleton page. These are used by manually written tests.
 
-`tests/utils/` is the **generation + infrastructure layer** — DOM scanning, POM/spec generation, environment config, accessibility, coverage tracking. These are used by the auto-generation orchestrators and the generated test specs.
+`tests/utils/generation/` is the **generation pipeline** — DOM scanning, POM/spec writing, CSV parsing, Jira/Figma merging. Used by orchestrators in `tests/generators/` to produce test code.
 
-The two don't overlap: `src/utils/` wraps Playwright APIs for manual test authoring; `tests/utils/` provides the machinery to auto-generate and run tests at scale.
+`tests/utils/infra/` is the **runtime infrastructure** — environment config, authentication, locator resolution, reporting, console capture. Used by test specs at execution time.
 
 ## Test Generation Pipeline
 
@@ -161,10 +161,10 @@ The two don't overlap: `src/utils/` wraps Playwright APIs for manual test author
 
 | Orchestrator | Purpose | Command |
 |-------------|---------|---------|
-| `generate-components.spec.ts` | DOM scan → POM + spec | `env=local npx playwright test generate-components.spec --project chromium --workers 1` |
-| `generate-from-csv.spec.ts` | CSV → POM + spec | `CSV_PATH=file.csv env=local npx playwright test generate-from-csv.spec --project chromium` |
-| `generate-from-jira.spec.ts` | Jira ticket → POM + spec | `JIRA_JSON=req.json env=local npx playwright test generate-from-jira.spec --project chromium` |
-| `generate-advanced.spec.ts` | Interaction, matrix, visual, images, content, mocks | `env=local npx playwright test generate-advanced.spec --project chromium --workers 1` |
+| `generate-components.ts` | DOM scan → POM + spec | `env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1` |
+| `generate-from-csv.ts` | CSV → POM + spec | `CSV_PATH=file.csv env=local npx playwright test tests/generators/generate-from-csv.ts --project chromium` |
+| `generate-from-jira.ts` | Jira ticket → POM + spec | `JIRA_JSON=req.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium` |
+| `generate-advanced.ts` | Interaction, matrix, visual, images, content, mocks | `env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1` |
 
 ### What gets generated
 
@@ -253,8 +253,8 @@ The Jira/Figma test generation (Phase 4) integrates with the `dev-agents-shared`
 
 | Agent | Purpose | Output consumed by |
 |-------|---------|-------------------|
-| `requirements-reader` | Fetches Jira ticket → structured JSON | `generate-from-jira.spec.ts` via `JIRA_JSON` env var |
-| `design-reader` | Extracts Figma design spec → JSON | `generate-advanced.spec.ts` via `FIGMA_DATA` env var |
+| `requirements-reader` | Fetches Jira ticket → structured JSON | `tests/generators/generate-from-jira.ts` via `JIRA_JSON` env var |
+| `design-reader` | Extracts Figma design spec → JSON | `tests/generators/generate-advanced.ts` via `FIGMA_DATA` env var |
 
 The `requirements-merger.ts` utility bridges the requirements-reader JSON output into the test generation pipeline via `fromRequirementsReader()`.
 
@@ -271,7 +271,7 @@ Results posted to Microsoft Teams via `send-report.js`.
 
 ```bash
 # Generate tests for components (requires AEM running on localhost:4502)
-env=local npx playwright test generate-components.spec --project chromium --workers 1
+env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
 
 # Run all generated GA tests
 env=local npx playwright test tests/specFiles/ga/ --project chromium
@@ -330,10 +330,10 @@ Test content fixtures supplement AEM style guide pages with additional component
 
 ### URL Resolution
 
-Use `resolveComponentUrl(component)` from `tests/utils/content-fixture-deployer.ts` — it automatically picks the correct URL based on the current environment:
+Use `resolveComponentUrl(component)` from `tests/utils/infra/content-fixture-deployer.ts` — it automatically picks the correct URL based on the current environment:
 
 ```typescript
-import { resolveComponentUrl } from '../../utils/content-fixture-deployer';
+import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
 
 // local/dev → http://localhost:4502/content/global-atlantic/test-fixtures/button.html?wcmmode=disabled
 // qa/prod  → http://localhost:4502/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled
@@ -355,18 +355,18 @@ Sync results are saved to `tests/data/.fixture-sync-results.json`.
 
 | File | Purpose |
 |------|---------|
-| `tests/utils/content-fixture-deployer.ts` | Deploy fixtures to AEM, resolve component URLs |
-| `tests/utils/fixture-sync-checker.ts` | Hash-based sync check against kkr-aem source |
-| `tests/utils/globalSetup.ts` | Runs sync check before test suite |
-| `tests/utils/test-run-reporter.ts` | Shows sync warnings after test run |
+| `tests/utils/infra/content-fixture-deployer.ts` | Deploy fixtures to AEM, resolve component URLs |
+| `tests/utils/infra/fixture-sync-checker.ts` | Hash-based sync check against kkr-aem source |
+| `tests/utils/infra/globalSetup.ts` | Runs sync check before test suite |
+| `tests/utils/infra/test-run-reporter.ts` | Shows sync warnings after test run |
 
 ## Adding New Components
 
-1. Add entry to `AVAILABLE_COMPONENTS` in `generate-components.spec.ts` and `generate-advanced.spec.ts`
+1. Add entry to `AVAILABLE_COMPONENTS` in `tests/generators/generate-components.ts` and `tests/generators/generate-advanced.ts`
 2. Add `KNOWN_VARIANTS` entry in `state-matrix-generator.ts` (for matrix tests)
 3. Run the generators:
    ```bash
-   COMPONENTS=new-component env=local npx playwright test generate-components.spec --project chromium --workers 1
-   COMPONENTS=new-component env=local npx playwright test generate-advanced.spec --project chromium --workers 1
+   COMPONENTS=new-component env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
+   COMPONENTS=new-component env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
    ```
 4. Generated files appear in `tests/specs/ga/<component>/` and `tests/pages/ga/components/`

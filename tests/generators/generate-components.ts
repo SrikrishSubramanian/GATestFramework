@@ -7,16 +7,16 @@
  *   - Updates coverage-matrix.json
  *
  * Usage:
- *   npx playwright test scripts/generate-components.ts --project Desktop-1440x900-Chrome
+ *   env=local npx playwright test tests/generators/generate-components.ts --project chromium
  *
  * Or run specific components:
- *   COMPONENTS=button,section npx playwright test scripts/generate-components.ts
+ *   COMPONENTS=button,section env=local npx playwright test tests/generators/generate-components.ts --project chromium
  */
 import { test } from '@playwright/test';
-import { scanDOM, DOMSnapshot, loadLatestSnapshot } from '../utils/dom-scanner';
-import { writePOMFromDOM, POMWriteResult } from '../utils/pom-writer';
-import { writeComponentSpec, SpecWriteResult } from '../utils/spec-writer';
-import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/test-tagger';
+import { scanDOM, DOMSnapshot, loadLatestSnapshot } from '../utils/generation/dom-scanner';
+import { writePOMFromDOM, POMWriteResult } from '../utils/generation/pom-writer';
+import { writeComponentSpec, SpecWriteResult } from '../utils/generation/spec-writer';
+import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/infra/test-tagger';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -51,7 +51,7 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
-const SPECS_DIR = path.resolve(__dirname, 'ga');
+const SPECS_DIR = path.resolve(__dirname, '../specFiles/ga');
 const COVERAGE_PATH = path.resolve(__dirname, '..', 'data', 'coverage-matrix.json');
 
 // Parse COMPONENTS env var if set

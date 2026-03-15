@@ -2,7 +2,7 @@
  * Phase 3: CSV → POM + Spec generation.
  *
  * Usage:
- *   CSV_PATH=path/to/tests.csv env=local npx playwright test generate-from-csv.spec --project chromium
+ *   CSV_PATH=path/to/tests.csv env=local npx playwright test tests/generators/generate-from-csv.ts --project chromium
  *
  * Optional env vars:
  *   CSV_MAP="steps=Action Steps,expected=Pass Criteria"  — override column detection
@@ -11,12 +11,12 @@
  *   MODE=author|publish                                   — AEM mode
  */
 import { test, expect } from '@playwright/test';
-import { parseCSV, parseMapFlag, ParsedTestGroup } from '../utils/csv-test-parser';
-import { scanDOM } from '../utils/dom-scanner';
-import { writePOMFromDOM } from '../utils/pom-writer';
-import { writeSpecFromCSV, writeComponentSpec } from '../utils/spec-writer';
-import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/test-tagger';
-import { updateComponentCoverage } from '../utils/coverage-matrix-reporter';
+import { parseCSV, parseMapFlag, ParsedTestGroup } from '../utils/generation/csv-test-parser';
+import { scanDOM } from '../utils/generation/dom-scanner';
+import { writePOMFromDOM } from '../utils/generation/pom-writer';
+import { writeSpecFromCSV, writeComponentSpec } from '../utils/generation/spec-writer';
+import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/infra/test-tagger';
+import { updateComponentCoverage } from '../utils/generation/coverage-matrix-reporter';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -27,7 +27,7 @@ const AUTH = {
 };
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
-const SPECS_DIR = path.resolve(__dirname, 'ga');
+const SPECS_DIR = path.resolve(__dirname, '../specFiles/ga');
 
 test.describe('CSV Test Generation', () => {
   const csvPath = process.env.CSV_PATH;

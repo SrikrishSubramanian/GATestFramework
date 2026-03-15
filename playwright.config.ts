@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import globalSetup from './tests/utils/globalSetup';
+import globalSetup from './tests/utils/infra/globalSetup';
 import { WaitForLoadStateOptions } from './src/setup/optional-parameter-types';
 
 // Timestamped report folder: playwright-report/YYYY-MM-DD/run-YYYY-MM-DDTHH-MM-SS/
@@ -79,10 +79,10 @@ export default defineConfig({
     ['html', { outputFolder: reportDir }],
     ['line'],
     ['json', { outputFile: `${reportDir}/results.json` }],
-    ['./tests/utils/test-run-reporter.ts'],
+    ['./tests/utils/infra/test-run-reporter.ts'],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  globalSetup: "tests/utils/globalSetup.ts",
+  globalSetup: "tests/utils/infra/globalSetup.ts",
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',

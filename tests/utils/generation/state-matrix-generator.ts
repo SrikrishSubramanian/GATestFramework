@@ -134,7 +134,7 @@ export function generateMatrixSpec(
 
   return `import { test, expect } from '@playwright/test';
 import { ${pomClassName} } from '${pomImportPath}';
-import ENV from '../../../utils/env';
+import ENV from '../../../utils/infra/env';
 
 // State Matrix: ${matrix.combinations.length} total (${matrix.validCount} valid, ${matrix.invalidCount} invalid)
 

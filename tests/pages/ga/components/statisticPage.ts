@@ -1,5 +1,5 @@
 import { Page, Locator } from '@playwright/test';
-import { loadLocators, resolveLocator } from '../../../utils/locator-registry';
+import { loadLocators, resolveLocator } from '../../../utils/infra/locator-registry';
 import path from 'path';
 
 const registry = loadLocators(path.join(__dirname, 'statisticPage.locators.json'));

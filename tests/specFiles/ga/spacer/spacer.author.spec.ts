@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { SpacerPage } from '../../../pages/ga/components/spacerPage';
-import ENV from '../../../utils/env';
-import { ConsoleCapture } from '../../../utils/console-capture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/report-enhancer';
-import { loginToAEMAuthor } from '../../../utils/auth-fixture';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 
 test.beforeEach(async ({ page }) => {

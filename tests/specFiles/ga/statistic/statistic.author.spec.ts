@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { StatisticPage } from '../../../pages/ga/components/statisticPage';
-import ENV from '../../../utils/env';
-import { ConsoleCapture } from '../../../utils/console-capture';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import AxeBuilder from '@axe-core/playwright';
-import { loginToAEMAuthor } from '../../../utils/auth-fixture';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);

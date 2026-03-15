@@ -7,7 +7,7 @@ import {
   resolveLocatorWithLog,
   LocatorRegistry,
   LocatorEntry,
-} from '../../utils/locator-registry';
+} from '../../utils/infra/locator-registry';
 
 // Write a temp sidecar file for testing
 const TEMP_SIDECAR = path.resolve(__dirname, '..', '..', 'data', '_test_temp.locators.json');

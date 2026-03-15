@@ -1,13 +1,13 @@
 /**
  * One-time utility: Generate HTML test summaries for all existing component spec directories.
- * Usage: npx playwright test generate-html-summaries.spec --project chromium --workers 1
+ * Usage: npx playwright test tests/generators/generate-html-summaries.ts --project chromium --workers 1
  */
 import { test } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
-import { generateHTMLSummaryFromSpecs, SummaryMetadata } from '../utils/html-summary-writer';
+import { generateHTMLSummaryFromSpecs, SummaryMetadata } from '../utils/generation/html-summary-writer';
 
-const GA_SPECS_DIR = path.resolve(__dirname, 'ga');
+const GA_SPECS_DIR = path.resolve(__dirname, '../specFiles/ga');
 
 test('Generate HTML summaries for all components', async () => {
   const components = fs.readdirSync(GA_SPECS_DIR).filter(f =>

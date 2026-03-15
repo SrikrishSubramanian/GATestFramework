@@ -1,7 +1,7 @@
 import { Page } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
-import { LocatorStrategy, LocatorEntry } from './locator-registry';
+import { LocatorStrategy, LocatorEntry } from '../infra/locator-registry';
 
 /**
  * Represents a single interactive element extracted from live DOM.

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
-import { TestLogger } from '../../utils/test-logger';
+import { TestLogger } from '../../utils/infra/test-logger';
 
 test.describe('TestLogger — Unit Tests', () => {
   let logger: TestLogger;

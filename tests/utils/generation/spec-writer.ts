@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { ParsedTestCase, ParsedTestGroup, CSVMetadata } from './csv-test-parser';
-import { TestCategory, A11yLevel, getTagsForTest, formatTags, getAxeTags } from './test-tagger';
+import { TestCategory, A11yLevel, getTagsForTest, formatTags, getAxeTags } from '../infra/test-tagger';
 import { generateHTMLSummaryFromSpecs, SummaryMetadata } from './html-summary-writer';
 
 const GA_SPECS_DIR = path.resolve(__dirname, '..', 'specFiles', 'ga');
@@ -263,9 +263,9 @@ function buildImports(options: SpecWriterOptions): string {
   const lines = [
     `import { test, expect } from '@playwright/test';`,
     `import { ${options.pomClassName} } from '${options.pomImportPath}';`,
-    `import ENV from '../../../utils/env';`,
-    `import { ConsoleCapture } from '../../../utils/console-capture';`,
-    `import { attachConsoleCapture, annotateEnvironment } from '../../../utils/report-enhancer';`,
+    `import ENV from '../../../utils/infra/env';`,
+    `import { ConsoleCapture } from '../../../utils/infra/console-capture';`,
+    `import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';`,
   ];
 
   if (options.a11yLevel !== 'none') {

@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { LocatorRegistry, LocatorEntry } from './locator-registry';
+import { LocatorRegistry, LocatorEntry } from '../infra/locator-registry';
 import { DOMSnapshot, DOMElement, elementToLocatorEntry } from './dom-scanner';
 import { SourceComponentData, inferElementsFromSource, sourceElementToStrategies } from './source-scanner';
 
@@ -213,7 +213,7 @@ function generatePOMClass(
   const relativeUtils = path.relative(resolvedOutputDir, utilsDir).replace(/\\/g, '/');
 
   return `import { Page, Locator } from '@playwright/test';
-import { loadLocators, resolveLocator } from '${relativeUtils}/locator-registry';
+import { loadLocators, resolveLocator } from '${relativeUtils}/infra/locator-registry';
 import path from 'path';
 
 const registry = loadLocators(path.join(__dirname, '${fileName}.locators.json'));

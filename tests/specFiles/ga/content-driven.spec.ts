@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import ENV from '../../utils/env';
+import ENV from '../../utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {

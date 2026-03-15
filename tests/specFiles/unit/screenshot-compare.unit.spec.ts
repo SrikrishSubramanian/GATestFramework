@@ -6,7 +6,7 @@ import {
   getBaselinePath,
   captureBaseline,
   baselineExists,
-} from '../../utils/screenshot-compare';
+} from '../../utils/infra/screenshot-compare';
 
 const TEST_COMPONENT = '_test_screenshot_temp';
 const TEST_ENV = 'test';

@@ -4,7 +4,7 @@
  * content-driven, and dispatcher specs for components.
  *
  * Usage:
- *   env=local npx playwright test generate-advanced.spec --project chromium --workers 1
+ *   env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
  *
  * Env vars:
  *   COMPONENTS=button,feature-banner    — target components (default: all)
@@ -13,20 +13,20 @@
  *   KKR_AEM_ROOT=../kkr-aem            — path to kkr-aem repo (for content-driven)
  */
 import { test, expect } from '@playwright/test';
-import { detectInteractions, InteractionContext, getExpectedChildTheme, isDarkBackground, BackgroundType } from '../utils/interaction-detector';
-import { generateStateMatrix, generateMatrixSpec, KNOWN_VARIANTS, StateMatrix } from '../utils/state-matrix-generator';
-import { scanImages, ImageScanResult } from '../utils/broken-image-detector';
-import { captureComponentBaseline, captureResponsiveBaselines } from '../utils/baseline-manager';
-import { analyzeContentXML, generateContentTests, ContentAnalysis } from '../utils/content-driven-generator';
-import { generateDispatcherSpec } from '../utils/dispatcher-tester';
-import { formatCoverageReport, updateComponentCoverage } from '../utils/coverage-matrix-reporter';
-import { generateVisualSpec } from '../utils/visual-assertion-generator';
-import { FigmaDesignSpec } from '../utils/requirements-merger';
-import { setupMocks, clearMocks, initMockData, MockConfig } from '../utils/api-mock-helper';
-import { TestLogger, TestRunResult } from '../utils/test-logger';
-import { testInfoToLogResult, attachConsoleCapture, annotateEnvironment } from '../utils/report-enhancer';
-import { ConsoleCapture } from '../utils/console-capture';
-import { TestCategory } from '../utils/test-tagger';
+import { detectInteractions, InteractionContext, getExpectedChildTheme, isDarkBackground, BackgroundType } from '../utils/generation/interaction-detector';
+import { generateStateMatrix, generateMatrixSpec, KNOWN_VARIANTS, StateMatrix } from '../utils/generation/state-matrix-generator';
+import { scanImages, ImageScanResult } from '../utils/generation/broken-image-detector';
+import { captureComponentBaseline, captureResponsiveBaselines } from '../utils/generation/baseline-manager';
+import { analyzeContentXML, generateContentTests, ContentAnalysis } from '../utils/generation/content-driven-generator';
+import { generateDispatcherSpec } from '../utils/generation/dispatcher-tester';
+import { formatCoverageReport, updateComponentCoverage } from '../utils/generation/coverage-matrix-reporter';
+import { generateVisualSpec } from '../utils/generation/visual-assertion-generator';
+import { FigmaDesignSpec } from '../utils/generation/requirements-merger';
+import { setupMocks, clearMocks, initMockData, MockConfig } from '../utils/infra/api-mock-helper';
+import { TestLogger, TestRunResult } from '../utils/infra/test-logger';
+import { testInfoToLogResult, attachConsoleCapture, annotateEnvironment } from '../utils/infra/report-enhancer';
+import { ConsoleCapture } from '../utils/infra/console-capture';
+import { TestCategory } from '../utils/infra/test-tagger';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -36,7 +36,7 @@ const AUTH = {
   password: process.env.AEM_AUTHOR_PASSWORD || 'admin',
 };
 
-const SPECS_DIR = path.resolve(__dirname, 'ga');
+const SPECS_DIR = path.resolve(__dirname, '../specFiles/ga');
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
 const KKR_AEM_ROOT = process.env.KKR_AEM_ROOT || path.resolve(__dirname, '..', '..', '..', 'kkr-aem');
 
@@ -142,7 +142,7 @@ test.describe('Phase 5 — Interaction Tests', () => {
 
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import ENV from '../../../utils/env';
+import ENV from '../../../utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
@@ -210,8 +210,8 @@ test.beforeEach(async ({ page }) => {
 });
 `;
       const withAuth = specContent.replace(
-        "import ENV from '../../../utils/env';",
-        "import ENV from '../../../utils/env';\n" + authBlock
+        "import ENV from '../../../utils/infra/env';",
+        "import ENV from '../../../utils/infra/env';\n" + authBlock
       );
 
       const specPath = path.join(compSpecDir(comp.name), `${comp.name}.matrix.spec.ts`);
@@ -258,7 +258,7 @@ test.describe('Phase 5 — Visual Baselines', () => {
       const className = toPascalCase(comp.name) + 'Page';
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import ENV from '../../../utils/env';
+import ENV from '../../../utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
@@ -343,8 +343,8 @@ test.describe('Phase 6 — Broken Image Specs', () => {
       const className = toPascalCase(comp.name) + 'Page';
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import { scanImages, attachImageScanResults } from '../../../utils/broken-image-detector';
-import ENV from '../../../utils/env';
+import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
+import ENV from '../../../utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
@@ -456,7 +456,7 @@ test.describe('Phase 7 — Content-Driven Tests', () => {
 
     // Generate content validation spec (cross-component, lives at ga/ root)
     const specContent = `import { test, expect } from '@playwright/test';
-import ENV from '../../utils/env';
+import ENV from '../../utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
@@ -511,9 +511,9 @@ test.describe('Phase 7 — Dispatcher Tests', () => {
 
     // Add auth beforeEach
     const withAuth = specContent.replace(
-      "import { testDispatcherCache } from '../../utils/dispatcher-tester';",
-      `import { testDispatcherCache } from '../../utils/dispatcher-tester';
-import ENV from '../../utils/env';
+      "import { testDispatcherCache } from '../../utils/generation/dispatcher-tester';",
+      `import { testDispatcherCache } from '../../utils/generation/dispatcher-tester';
+import ENV from '../../utils/infra/env';
 
 test.beforeEach(async ({ page }) => {
   if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
@@ -585,8 +585,8 @@ test.describe('Phase 7 — API Mocking', () => {
 
     // Generate a sample API mock spec (cross-component, lives at ga/ root)
     const specContent = `import { test, expect } from '@playwright/test';
-import { setupMocks, clearMocks, MockConfig } from '../../utils/api-mock-helper';
-import ENV from '../../utils/env';
+import { setupMocks, clearMocks, MockConfig } from '../../utils/infra/api-mock-helper';
+import ENV from '../../utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {

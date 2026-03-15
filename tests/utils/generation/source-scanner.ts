@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { LocatorStrategy } from './locator-registry';
+import { LocatorStrategy } from '../infra/locator-registry';
 
 /**
  * Source-based component data extracted from kkr-aem repo.

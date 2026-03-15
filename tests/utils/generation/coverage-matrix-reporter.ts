@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { TestCategory } from './test-tagger';
+import { TestCategory } from '../infra/test-tagger';
 
 const MATRIX_PATH = path.resolve(__dirname, '..', 'data', 'coverage-matrix.json');
 

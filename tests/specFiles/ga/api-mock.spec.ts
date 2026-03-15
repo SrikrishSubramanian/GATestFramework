@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { setupMocks, clearMocks, MockConfig } from '../../utils/api-mock-helper';
-import ENV from '../../utils/env';
+import { setupMocks, clearMocks, MockConfig } from '../../utils/infra/api-mock-helper';
+import ENV from '../../utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {

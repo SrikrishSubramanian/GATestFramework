@@ -23,16 +23,16 @@ npx playwright test --grep @a11y
 npx playwright test --grep @smoke
 
 # Generate tests from live DOM (requires AEM on localhost:4502)
-env=local npx playwright test generate-components.spec --project chromium --workers 1
+env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
 
 # Generate advanced tests (interaction, matrix, visual, images, content, mocks)
-env=local npx playwright test generate-advanced.spec --project chromium --workers 1
+env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
 
 # Generate from CSV
-CSV_PATH=file.csv env=local npx playwright test generate-from-csv.spec --project chromium
+CSV_PATH=file.csv env=local npx playwright test tests/generators/generate-from-csv.ts --project chromium
 
 # Generate from Jira/Figma
-JIRA_JSON=req.json env=local npx playwright test generate-from-jira.spec --project chromium
+JIRA_JSON=req.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
 
 # Environment-specific runs (local, dev, qa, uat, prod)
 env=qa npx playwright test tests/specFiles/ga/ --project chromium
@@ -46,14 +46,15 @@ npm install
 
 ## Architecture
 
-### Two Utils Layers (do not conflate)
+### Three Utils Layers (do not conflate)
 
 | Layer | Location | Pattern | Used By |
 |-------|----------|---------|---------|
 | **Framework core** | `src/utils/` | Singleton `getPage()`, function exports | Hand-written specs (`login.spec.ts`) |
-| **Generation + infra** | `tests/utils/` | Class-based, constructor `Page` injection | Orchestrators, auto-generated specs |
+| **Generation pipeline** | `tests/utils/generation/` | Class-based, code-producing | Orchestrators in `tests/generators/` |
+| **Test infrastructure** | `tests/utils/infra/` | Class-based, constructor `Page` injection | Auto-generated + hand-written specs |
 
-These do not overlap. `src/utils/` wraps Playwright APIs for manual authoring. `tests/utils/` provides generation machinery and test infrastructure.
+`src/utils/` wraps Playwright APIs for manual authoring. `tests/utils/generation/` produces test code (POMs, specs). `tests/utils/infra/` provides runtime utilities consumed by specs.
 
 ### Auto-Generated POM Pattern
 
@@ -75,11 +76,11 @@ Plus cross-component specs: `api-mock.spec.ts` and `content-driven.spec.ts`.
 
 ### Test Generation Pipeline
 
-Orchestrators live in `tests/specFiles/generate-*.spec.ts`. They drive utilities in `tests/utils/` through 7 phases: DOM scanning → POM generation → CSV import → Jira/Figma merge → advanced tests (interaction, matrix, visual) → quality/reporting → content/API/dispatcher testing.
+Orchestrators live in `tests/generators/generate-*.ts`. They drive utilities in `tests/utils/` through 7 phases: DOM scanning → POM generation → CSV import → Jira/Figma merge → advanced tests (interaction, matrix, visual) → quality/reporting → content/API/dispatcher testing.
 
 ### Adding New Components
 
-1. Add to `AVAILABLE_COMPONENTS` in `generate-components.spec.ts` and `generate-advanced.spec.ts`
+1. Add to `AVAILABLE_COMPONENTS` in `tests/generators/generate-components.ts` and `tests/generators/generate-advanced.ts`
 2. Add `KNOWN_VARIANTS` entry in `state-matrix-generator.ts`
 3. Run both generators with `COMPONENTS=new-component`
 

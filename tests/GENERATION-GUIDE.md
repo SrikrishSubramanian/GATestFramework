@@ -9,13 +9,13 @@
 
 ### Generate tests for existing components (Phase 2)
 ```bash
-env=local npx playwright test generate-components.spec --project chromium --workers 1
+env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
 ```
 Scans live AEM DOM for button, feature-banner, statistic. Generates POMs + specs.
 
 ### Generate from CSV (Phase 3)
 ```bash
-CSV_PATH=path/to/tests.csv env=local npx playwright test generate-from-csv.spec --project chromium
+CSV_PATH=path/to/tests.csv env=local npx playwright test tests/generators/generate-from-csv.ts --project chromium
 ```
 Optional env vars: `CSV_MAP`, `CATEGORIES`, `A11Y_LEVEL`, `MODE`.
 
@@ -24,19 +24,19 @@ Optional env vars: `CSV_MAP`, `CATEGORIES`, `A11Y_LEVEL`, `MODE`.
 # Option A: Pre-fetch with dev-agents-shared (recommended)
 # 1. In Claude Code: /read-jira GAAM-XXX
 # 2. Then:
-JIRA_JSON=.aem-developer/artifacts/requirements.json env=local npx playwright test generate-from-jira.spec --project chromium
+JIRA_JSON=.aem-developer/artifacts/requirements.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
 
 # Option B: Direct Jira API
-JIRA_TICKET=GAAM-123 JIRA_URL=https://bounteous.jira.com JIRA_USERNAME=you@email JIRA_API_TOKEN=token env=local npx playwright test generate-from-jira.spec --project chromium
+JIRA_TICKET=GAAM-123 JIRA_URL=https://bounteous.jira.com JIRA_USERNAME=you@email JIRA_API_TOKEN=token env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
 
 # With Figma visual tests:
-JIRA_JSON=path/to/req.json FIGMA_DATA=path/to/design.json env=local npx playwright test generate-from-jira.spec --project chromium
+JIRA_JSON=path/to/req.json FIGMA_DATA=path/to/design.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
 ```
 Auto-detects component from ticket, merges ACs + Figma, generates POMs + specs.
 
 ### Generate advanced tests (Phases 5-7)
 ```bash
-env=local npx playwright test generate-advanced.spec --project chromium --workers 1
+env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
 ```
 Generates interaction, state-matrix, visual, broken-image, content-driven, API mock, and dispatcher specs.
 
@@ -92,25 +92,32 @@ tests/
 │   ├── baselines/                       # Visual regression golden screenshots
 │   └── mocks/<component>/              # API mock data (success/empty/error)
 └── utils/
-    ├── dom-scanner.ts                   # Live DOM extraction
-    ├── pom-writer.ts                    # POM + sidecar generation
-    ├── spec-writer.ts                   # Category-based spec generation
-    ├── interaction-detector.ts          # Parent-child nesting detection
-    ├── state-matrix-generator.ts        # Combinatorial state testing
-    ├── broken-image-detector.ts         # Image health scanning
-    ├── baseline-manager.ts              # Visual baseline capture
-    ├── visual-assertion-generator.ts    # Figma → visual assertion spec
-    ├── content-driven-generator.ts      # JCR XML analysis
-    ├── dispatcher-tester.ts             # Cache header verification
-    ├── api-mock-helper.ts               # Route mocking utilities
-    ├── csv-test-parser.ts               # CSV → test case parser
-    ├── test-tagger.ts                   # Smart tag assignment
-    ├── coverage-matrix-reporter.ts      # Coverage tracking
-    ├── test-logger.ts                   # JSON run logging
-    ├── report-enhancer.ts               # HTML report attachments
-    ├── console-capture.ts               # Browser error capture
-    ├── locator-registry.ts              # Multi-locator strategy
-    └── screenshot-compare.ts            # Pixel diff utility
+    ├── generation/                      # Code-producing utilities (used by generators)
+    │   ├── dom-scanner.ts               # Live DOM extraction
+    │   ├── pom-writer.ts                # POM + sidecar generation
+    │   ├── spec-writer.ts               # Category-based spec generation
+    │   ├── csv-test-parser.ts           # CSV → test case parser
+    │   ├── requirements-merger.ts       # Jira/Figma requirements bridge
+    │   ├── interaction-detector.ts      # Parent-child nesting detection
+    │   ├── state-matrix-generator.ts    # Combinatorial state testing
+    │   ├── broken-image-detector.ts     # Image health scanning
+    │   ├── baseline-manager.ts          # Visual baseline capture
+    │   ├── visual-assertion-generator.ts # Figma → visual assertion spec
+    │   ├── content-driven-generator.ts  # JCR XML analysis
+    │   ├── dispatcher-tester.ts         # Cache header verification
+    │   ├── coverage-matrix-reporter.ts  # Coverage tracking
+    │   └── html-summary-writer.ts       # HTML test summary generation
+    │
+    └── infra/                           # Runtime utilities (used by specs)
+        ├── env.ts                       # Environment config
+        ├── auth-fixture.ts              # AEM authentication
+        ├── locator-registry.ts          # Multi-locator strategy
+        ├── test-tagger.ts               # Smart tag assignment
+        ├── api-mock-helper.ts           # Route mocking utilities
+        ├── console-capture.ts           # Browser error capture
+        ├── report-enhancer.ts           # HTML report attachments
+        ├── test-logger.ts               # JSON run logging
+        └── screenshot-compare.ts        # Pixel diff utility
 
 ```
 
@@ -129,12 +136,12 @@ tests/
 
 ## Adding a New Component
 
-1. Add entry to `AVAILABLE_COMPONENTS` in `generate-advanced.spec.ts`
+1. Add entry to `AVAILABLE_COMPONENTS` in `tests/generators/generate-advanced.ts`
 2. Add `KNOWN_VARIANTS` entry in `state-matrix-generator.ts` (for matrix tests)
 3. Run the generators:
    ```bash
-   COMPONENTS=new-component env=local npx playwright test generate-components.spec --project chromium --workers 1
-   COMPONENTS=new-component env=local npx playwright test generate-advanced.spec --project chromium --workers 1
+   COMPONENTS=new-component env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
+   COMPONENTS=new-component env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
    ```
 
 ## Logs

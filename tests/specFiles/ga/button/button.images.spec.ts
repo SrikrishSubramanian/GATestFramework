@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { ButtonPage } from '../../../pages/ga/components/buttonPage';
-import { scanImages, attachImageScanResults } from '../../../utils/broken-image-detector';
-import ENV from '../../../utils/env';
-import { loginToAEMAuthor } from '../../../utils/auth-fixture';
+import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);

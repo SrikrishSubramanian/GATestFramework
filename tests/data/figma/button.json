@@ -1,5 +1,5 @@
 {
-  "_description": "Figma design spec for the button component. Used by generate-advanced.spec.ts (FIGMA_DATA env var) to generate visual assertion tests that compare live DOM computed styles against these design tokens.",
+  "_description": "Figma design spec for the button component. Used by tests/generators/generate-advanced.ts (FIGMA_DATA env var) to generate visual assertion tests that compare live DOM computed styles against these design tokens.",
   "_source": "Extract from Figma via /read-figma command (dev-agents-shared design-reader agent), or create manually from design system documentation.",
   "component": "button",
   "colors": {

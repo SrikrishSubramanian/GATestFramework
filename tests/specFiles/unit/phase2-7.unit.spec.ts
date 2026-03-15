@@ -3,34 +3,34 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 // Phase 2
-import { scanDOM, loadLatestSnapshot, generateStrategies, elementToLocatorEntry, DOMElement } from '../../utils/dom-scanner';
-import { scanSource, inferElementsFromSource, sourceElementToStrategies, SourceComponentData } from '../../utils/source-scanner';
-import { writePOMFromDOM, POMWriterOptions } from '../../utils/pom-writer';
-import { isDarkBackground, isLightBackground, getExpectedChildTheme, getSectionBackgrounds } from '../../utils/interaction-detector';
-import { loginToAEMAuthor, isPreviewMode } from '../../utils/auth-fixture';
+import { scanDOM, loadLatestSnapshot, generateStrategies, elementToLocatorEntry, DOMElement } from '../../utils/generation/dom-scanner';
+import { scanSource, inferElementsFromSource, sourceElementToStrategies, SourceComponentData } from '../../utils/generation/source-scanner';
+import { writePOMFromDOM, POMWriterOptions } from '../../utils/generation/pom-writer';
+import { isDarkBackground, isLightBackground, getExpectedChildTheme, getSectionBackgrounds } from '../../utils/generation/interaction-detector';
+import { loginToAEMAuthor, isPreviewMode } from '../../utils/infra/auth-fixture';
 
 // Phase 3
-import { parseCSV, parseMapFlag } from '../../utils/csv-test-parser';
-import { getTagsForTest, formatTags, getDefaultCategories, getAxeTags, getCITier } from '../../utils/test-tagger';
-import { writeComponentSpec } from '../../utils/spec-writer';
+import { parseCSV, parseMapFlag } from '../../utils/generation/csv-test-parser';
+import { getTagsForTest, formatTags, getDefaultCategories, getAxeTags, getCITier } from '../../utils/infra/test-tagger';
+import { writeComponentSpec } from '../../utils/generation/spec-writer';
 
 // Phase 4
-import { jiraToTestCases, figmaToVisualTestCases, mergeRequirements, JiraRequirement, FigmaDesignSpec } from '../../utils/requirements-merger';
+import { jiraToTestCases, figmaToVisualTestCases, mergeRequirements, JiraRequirement, FigmaDesignSpec } from '../../utils/generation/requirements-merger';
 
 // Phase 5
-import { generateVisualSpec } from '../../utils/visual-assertion-generator';
-import { captureComponentBaseline, getBaselineForViewport, clearBaselines, listBaselines } from '../../utils/baseline-manager';
+import { generateVisualSpec } from '../../utils/generation/visual-assertion-generator';
+import { captureComponentBaseline, getBaselineForViewport, clearBaselines, listBaselines } from '../../utils/generation/baseline-manager';
 
 // Phase 6
-import { annotateEnvironment, testInfoToLogResult } from '../../utils/report-enhancer';
-import { scanImages } from '../../utils/broken-image-detector';
-import { loadMatrix, saveMatrix, updateComponentCoverage, getCoverageSummary, formatCoverageReport } from '../../utils/coverage-matrix-reporter';
+import { annotateEnvironment, testInfoToLogResult } from '../../utils/infra/report-enhancer';
+import { scanImages } from '../../utils/generation/broken-image-detector';
+import { loadMatrix, saveMatrix, updateComponentCoverage, getCoverageSummary, formatCoverageReport } from '../../utils/generation/coverage-matrix-reporter';
 
 // Phase 7
-import { generateStateMatrix, generateMatrixSpec, KNOWN_VARIANTS } from '../../utils/state-matrix-generator';
-import { setupMocks, clearMocks, loadMockData, saveMockData, initMockData } from '../../utils/api-mock-helper';
-import { analyzeContentXML, generateContentTests } from '../../utils/content-driven-generator';
-import { testDispatcherCache } from '../../utils/dispatcher-tester';
+import { generateStateMatrix, generateMatrixSpec, KNOWN_VARIANTS } from '../../utils/generation/state-matrix-generator';
+import { setupMocks, clearMocks, loadMockData, saveMockData, initMockData } from '../../utils/infra/api-mock-helper';
+import { analyzeContentXML, generateContentTests } from '../../utils/generation/content-driven-generator';
+import { testDispatcherCache } from '../../utils/generation/dispatcher-tester';
 
 const TEMP_DIR = path.resolve(__dirname, '..', '..', '_test_temp');
 

@@ -1,7 +1,7 @@
 {
-  "_description": "Auto-generated test coverage matrix. Tracks which components have tests, across which categories, and how many. Updated by generate-components.spec.ts and generate-advanced.spec.ts orchestrators.",
+  "_description": "Auto-generated test coverage matrix. Tracks which components have tests, across which categories, and how many. Updated by tests/generators/generate-components.ts and tests/generators/generate-advanced.ts orchestrators.",
   "_usage": "Read-only reference. Regenerated on each test generation run. Do not edit manually.",
-  "lastUpdated": "2026-03-14T00:00:00.000Z",
+  "lastUpdated": "2026-03-15T04:16:25.501Z",
   "components": {
     "spacer": {
       "component": "spacer",
@@ -254,6 +254,90 @@
       },
       "totalTests": 4,
       "lastUpdated": "2026-03-11T13:07:25.961Z"
+    },
+    "text": {
+      "component": "text",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 30,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@a11y",
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 30,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@a11y",
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 30,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@a11y",
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 30,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@a11y",
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 30,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@a11y",
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 30,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@a11y",
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 30,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@a11y",
+            "@a11y",
+            "@mobile"
+          ]
+        }
+      },
+      "totalTests": 210,
+      "lastUpdated": "2026-03-15T04:16:25.501Z"
     }
   },
   "spacer": {

@@ -1,5 +1,5 @@
 {
-  "_description": "Sample Jira requirements JSON matching the dev-agents-shared requirements-reader output schema. Used by generate-from-jira.spec.ts (JIRA_JSON env var) to generate test specs from Jira tickets.",
+  "_description": "Sample Jira requirements JSON matching the dev-agents-shared requirements-reader output schema. Used by tests/generators/generate-from-jira.ts (JIRA_JSON env var) to generate test specs from Jira tickets.",
   "_howToGenerate": "Run '/read-jira GAAM-XXX' in Claude Code (dev-agents-shared plugin) to fetch real ticket data, or create manually following this schema.",
   "ticket_key": "GAAM-999",
   "title": "Button component — add disabled state styling",

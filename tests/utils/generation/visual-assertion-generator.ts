@@ -153,7 +153,7 @@ ${dimAssertions}
 
   const content = `import { test, expect } from '@playwright/test';
 import { ${pomClassName} } from '${pomImportPath}';
-import ENV from '../../../utils/env';
+import ENV from '../../../utils/infra/env';
 
 test.describe('${toPascalCase(figma.component)} — Visual Verification', () => {
 ${tests.join('\n\n')}

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { ConsoleCapture } from '../../utils/console-capture';
+import { ConsoleCapture } from '../../utils/infra/console-capture';
 
 test.describe('ConsoleCapture — Unit Tests', () => {
   test('captures console errors', async ({ page }) => {

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { TestDataFactory } from '../../utils/test-data-factory';
+import { TestDataFactory } from '../../utils/infra/test-data-factory';
 
 test.describe('TestDataFactory — Unit Tests', () => {
   test.beforeEach(() => {

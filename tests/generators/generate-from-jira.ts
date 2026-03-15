@@ -9,10 +9,10 @@
  *   2. Run this spec with the JSON path to generate tests
  *
  * Usage:
- *   JIRA_JSON=path/to/requirements.json env=local npx playwright test generate-from-jira.spec --project chromium
+ *   JIRA_JSON=path/to/requirements.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
  *
  * Or fetch directly from Jira REST API:
- *   JIRA_TICKET=GAAM-123 env=local npx playwright test generate-from-jira.spec --project chromium
+ *   JIRA_TICKET=GAAM-123 env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
  *
  * Optional env vars:
  *   FIGMA_DATA=path/to/design-spec.json   — merge Figma visual tests
@@ -28,13 +28,13 @@ import {
   fromRequirementsReader,
   jiraToTestCases,
   mergeRequirements,
-} from '../utils/requirements-merger';
-import { scanDOM } from '../utils/dom-scanner';
-import { writePOMFromDOM } from '../utils/pom-writer';
-import { writeSpecFromCSV, writeComponentSpec } from '../utils/spec-writer';
-import { generateVisualSpec } from '../utils/visual-assertion-generator';
-import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/test-tagger';
-import { updateComponentCoverage } from '../utils/coverage-matrix-reporter';
+} from '../utils/generation/requirements-merger';
+import { scanDOM } from '../utils/generation/dom-scanner';
+import { writePOMFromDOM } from '../utils/generation/pom-writer';
+import { writeSpecFromCSV, writeComponentSpec } from '../utils/generation/spec-writer';
+import { generateVisualSpec } from '../utils/generation/visual-assertion-generator';
+import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/infra/test-tagger';
+import { updateComponentCoverage } from '../utils/generation/coverage-matrix-reporter';
 import * as fs from 'fs';
 import * as path from 'path';
 import { execSync } from 'child_process';
@@ -46,7 +46,7 @@ const AUTH = {
 };
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
-const SPECS_DIR = path.resolve(__dirname, 'ga');
+const SPECS_DIR = path.resolve(__dirname, '../specFiles/ga');
 
 /**
  * Normalize requirements JSON from the dev-agents-shared requirements-reader agent

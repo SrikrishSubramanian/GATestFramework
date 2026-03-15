@@ -120,7 +120,7 @@ export function generateDispatcherSpec(
   }).join('\n\n');
 
   return `import { test, expect } from '@playwright/test';
-import { testDispatcherCache } from '../../utils/dispatcher-tester';
+import { testDispatcherCache } from '../../utils/generation/dispatcher-tester';
 
 test.describe('Dispatcher Cache Tests — ${envName}', () => {
 ${tests}
