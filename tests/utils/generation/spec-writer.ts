@@ -66,6 +66,7 @@ export function writeSpecFromCSV(
   let idCounter = options.startTestId || 1;
 
   const imports = buildImports(options);
+  const authBlock = buildAuthBlock(options.mode);
   const describes: string[] = [];
 
   // Generate tests from CSV test cases
@@ -84,7 +85,7 @@ export function writeSpecFromCSV(
 
       return `  test('${testId} ${tags} ${escapeString(tc.title)}', async ({ page }) => {
     const pom = new ${options.pomClassName}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
 ${stepsCode}
     // Expected: ${escapeString(tc.expected)}
   });`;
@@ -106,7 +107,7 @@ ${tests.join('\n\n')}
     }
   }
 
-  const content = `${imports}\n\n${describes.join('\n\n')}\n`;
+  const content = `${imports}\n${authBlock}\n${describes.join('\n\n')}\n`;
   fs.writeFileSync(specPath, content, 'utf-8');
 
   // Generate HTML summary for the component directory
@@ -172,22 +173,9 @@ export function writeComponentSpec(options: SpecWriterOptions): SpecWriteResult 
     }
   }
 
-  // Add auth setup for author mode
-  const authSetup = options.mode === 'author' ? `
-// Authenticate with AEM Author before each test
-test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    const loginUrl = \`\${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html\`;
-    await page.goto(loginUrl);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
-});
-` : '';
+  const authBlock = buildAuthBlock(options.mode);
 
-  const content = `${imports}\n${authSetup}\n${describes.join('\n\n')}\n`;
+  const content = `${imports}\n${authBlock}\n${describes.join('\n\n')}\n`;
   fs.writeFileSync(specPath, content, 'utf-8');
 
   // Generate HTML summary for the component directory
@@ -266,6 +254,7 @@ function buildImports(options: SpecWriterOptions): string {
     `import ENV from '../../../utils/infra/env';`,
     `import { ConsoleCapture } from '../../../utils/infra/console-capture';`,
     `import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';`,
+    `import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';`,
   ];
 
   if (options.a11yLevel !== 'none') {
@@ -273,6 +262,20 @@ function buildImports(options: SpecWriterOptions): string {
   }
 
   return lines.join('\n');
+}
+
+/** Build the auth beforeEach block and BASE() helper */
+function buildAuthBlock(mode: 'author' | 'publish'): string {
+  if (mode === 'author') {
+    return `
+const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
+test.beforeEach(async ({ page }) => {
+  await loginToAEMAuthor(page);
+});
+`;
+  }
+  return `\nconst BASE = () => ENV.BASE_URL || 'http://localhost:4503';\n`;
 }
 
 function generateCategoryTests(
@@ -284,7 +287,6 @@ function generateCategoryTests(
 ): { code: string; count: number } | null {
   const name = toPascalCase(component);
   const pom = options.pomClassName;
-  const baseUrl = options.mode === 'author' ? 'ENV.AEM_AUTHOR_URL' : 'ENV.BASE_URL';
   const sel = options.rootSelector || `.cmp-${component}`;
   const pfx = prefix || componentToPrefix(component);
   let id = startId;
@@ -297,13 +299,13 @@ function generateCategoryTests(
         code: `test.describe('${name} — Happy Path', () => {
   test('${formatTestId(pfx, id++)} ${tags} ${name} renders correctly', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     await expect(page.locator('${sel}').first()).toBeVisible();
   });
 
   test('${formatTestId(pfx, id++)} ${tags} ${name} interactive elements are functional', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     // Verify primary interactive elements
     const root = page.locator('${sel}').first();
     await expect(root).toBeVisible();
@@ -319,13 +321,13 @@ function generateCategoryTests(
         code: `test.describe('${name} — Negative & Boundary', () => {
   test('${formatTestId(pfx, id++)} ${tags} ${name} handles empty content gracefully', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     // Component should not throw errors with minimal content
   });
 
   test('${formatTestId(pfx, id++)} ${tags} ${name} handles missing images', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     const images = page.locator('${sel} img');
     const count = await images.count();
     for (let i = 0; i < count; i++) {
@@ -345,14 +347,14 @@ function generateCategoryTests(
   test('${formatTestId(pfx, id++)} ${tags} @mobile ${name} adapts to mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     await expect(page.locator('${sel}').first()).toBeVisible();
   });
 
   test('${formatTestId(pfx, id++)} ${tags} ${name} adapts to tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     await expect(page.locator('${sel}').first()).toBeVisible();
   });
 });`,
@@ -366,7 +368,7 @@ function generateCategoryTests(
       const tests = [
         `  test('${formatTestId(pfx, id++)} ${tags} ${name} passes axe-core scan', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     const results = await new AxeBuilder({ page })
       .include('${sel}')
       .withTags(${axeTags})
@@ -375,7 +377,7 @@ function generateCategoryTests(
   });`,
         `  test('${formatTestId(pfx, id++)} ${tags} ${name} interactive elements meet 24px target size', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     const interactive = page.locator('${sel} a, ${sel} button, ${sel} input');
     const count = await interactive.count();
     for (let i = 0; i < count; i++) {
@@ -390,7 +392,7 @@ function generateCategoryTests(
       if (options.a11yLevel === 'wcag22') {
         tests.push(`  test('${formatTestId(pfx, id++)} ${tags} ${name} focus is not obscured by sticky elements', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     const focusable = page.locator('${sel} a, ${sel} button, ${sel} input');
     const count = await focusable.count();
     for (let i = 0; i < Math.min(count, 5); i++) {
@@ -419,7 +421,7 @@ function generateCategoryTests(
     const capture = new ConsoleCapture(page);
     capture.start();
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     const errors = capture.getErrors();
     capture.stop();
@@ -436,7 +438,7 @@ function generateCategoryTests(
         code: `test.describe('${name} — Broken Images', () => {
   test('${formatTestId(pfx, id++)} ${tags} ${name} all images load successfully', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     const images = page.locator('${sel} img');
     const count = await images.count();
     for (let i = 0; i < count; i++) {
@@ -448,7 +450,7 @@ function generateCategoryTests(
 
   test('${formatTestId(pfx, id++)} ${tags} ${name} all images have alt attributes', async ({ page }) => {
     const pom = new ${pom}(page);
-    await pom.navigate(${baseUrl} || '');
+    await pom.navigate(BASE());
     const images = page.locator('${sel} img');
     const count = await images.count();
     for (let i = 0; i < count; i++) {
