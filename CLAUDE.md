@@ -125,6 +125,40 @@ Environment selected via `env=<name>` prefix. Config loaded from `tests/environm
 
 Two parallel steps: **Mobile** (`--grep @mobile`, Mobile-Chrome + Mobile-WebKit) and **Desktop** (chromium, firefox, webkit), 4 workers each. Results posted to Microsoft Teams via `send-report.js`.
 
+## AEM Development Conventions (from kkr-aem docs/dev-conventions.md)
+
+Tests must validate that AEM components follow these project conventions. Use these as the basis for convention-compliance test assertions.
+
+### HTML / Accessibility (what tests should verify in rendered DOM)
+- Semantic HTML5 elements: `<nav>`, `<section>`, `<header>`, `<button>`, `<ol>`, `<li>` — not generic `<div>`s
+- Headings use `<h1>`–`<h6>` tags (not styled divs/spans)
+- All `<img>` elements have `alt` attributes; decorative images use empty `alt=""`
+- `<label>` elements associated with form controls via `for` attribute
+- `aria-live` on dynamically updated regions; `required` on required form fields
+- No inline CSS or JS in component markup
+- All tags/attributes lowercase; double quotes on attribute values
+- No trailing slashes on self-closing elements (HTML5)
+- HTL comments (`<!--/* */-->`) must NOT appear in published HTML output
+
+### CSS / BEM Naming (what tests should verify via computed styles and class names)
+- Component root selector: `.cmp-<component>` (BEM block)
+- Child elements: `.cmp-<component>__<element>` (BEM element)
+- Modifiers: `.cmp-<component>--<modifier>` or style-system classes
+- All CSS class names lowercase with hyphens
+- No ID-based selectors used for styling
+- Zero-value properties should have no units (`margin: 0` not `margin: 0px`)
+
+### Interactive States (what tests should verify for interactive components)
+- All 5 states render correctly: default, hover, focus, active, disabled
+- Focus indicators visible on keyboard Tab navigation
+- Both light-background and dark-background variants tested
+- State transitions use CSS transitions (not instant changes)
+
+### AEM Component Structure (what tests should verify in author mode)
+- Components show placeholder when required authored fields are empty
+- Dialog fields have `fieldDescription` for non-obvious inputs
+- Components have visible `cq:icon` in the component browser
+
 ## Permissions & Shell
 
 - **All file reads and writes are allowed** — do not ask for permission before reading or writing files.
