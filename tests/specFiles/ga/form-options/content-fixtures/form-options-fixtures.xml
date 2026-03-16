@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Form Options (Dropdown) — Test Fixtures
+    Based on: kkr-aem/ui.content.ga/.../style-guide/components/form-options/.content.xml
+    (Source covers: radio buttons, checkboxes — no dropdown types present)
+    Additions: Single-select and multi-select dropdown types across all 4 backgrounds,
+               all interactive states, error states, required field, helper text,
+               open panel state, selection count display — per GAAM-507 acceptance criteria
+    Deploy path: /content/global-atlantic/test-fixtures/form-options
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Form Options Dropdown — test fixtures with all states for GAAM-507 automation."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Form Options (Dropdown) — Test Fixtures"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+                <text_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1 class=&quot;style-guide__page-headline&quot;>Form Options (Dropdown) — Test Fixtures&lt;/h1>&lt;div class=&quot;style-guide__page-description&quot;>Single-select and multi-select dropdown components across light and dark backgrounds. Covers all GAAM-507 states: Default, Filled, Disabled/Read Only, Required, Helper Text, Error, Open Panel, Selection Count. The existing style guide only covers radio and checkbox types — all dropdown content here is new.&lt;/div>"
+                    textIsRich="true"/>
+
+                <!-- ================================================================
+                     SINGLE-SELECT DROPDOWN — LIGHT MODE (WHITE)
+                     [Added] GAAM-507: All single-select states on white background
+                     States: Default, Filled (selection made), Disabled, Required+Helper,
+                             Error Default, Error Filled
+                     ================================================================ -->
+                <!-- [Added] GAAM-507: Section header for single-select on white -->
+                <text_ss_white_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Single-Select Dropdown — Light Mode (White Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <!-- [Added] GAAM-507: Single-select dropdown instances on white background -->
+                <section_ss_white
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_ss_white
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Added] GAAM-507: Default state — no selection made -->
+                            <dropdown_ss_white_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Select one option from the list."
+                                name="ss-white-default"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Investment Type">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuity"
+                                                value="annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life-insurance"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Retirement Plan"
+                                                value="retirement"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Fixed Income"
+                                                value="fixed-income"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_white_default>
+                            <spacer_ss_w_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Filled state — pre-selected item shows checkmark on open -->
+                            <dropdown_ss_white_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="A selection has already been made."
+                                name="ss-white-filled"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Investment Type (Filled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuity"
+                                                value="annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Life Insurance"
+                                                value="life-insurance"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Retirement Plan"
+                                                value="retirement"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Fixed Income"
+                                                value="fixed-income"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_white_filled>
+                            <spacer_ss_w_02
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Disabled/Read Only state -->
+                            <dropdown_ss_white_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-white-disabled"
+                                readOnly="{Boolean}true"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Investment Type (Disabled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuity"
+                                                value="annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life-insurance"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_white_disabled>
+                            <spacer_ss_w_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Required + helper text (non-error, not yet submitted) -->
+                            <dropdown_ss_white_req
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="This field is required. Choose one that matches your profile."
+                                name="ss-white-required"
+                                required="{Boolean}true"
+                                requiredMessage="Please select an investment type to continue."
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Investment Type (Required)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuity"
+                                                value="annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life-insurance"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Retirement Plan"
+                                                value="retirement"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_white_req>
+                            <spacer_ss_w_04
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error Default — required, not submitted yet (submit triggers error) -->
+                            <dropdown_ss_white_err_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-white-error-default"
+                                required="{Boolean}true"
+                                requiredMessage="You must select an investment type."
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Investment Type (Error Default — submit to trigger)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuity"
+                                                value="annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life-insurance"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_white_err_default>
+                            <spacer_ss_w_05
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error Filled — required but also has pre-selected value;
+                                 used to test "error + filled" visual combination after interaction -->
+                            <dropdown_ss_white_err_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-white-error-filled"
+                                required="{Boolean}true"
+                                requiredMessage="You must select an investment type."
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Investment Type (Error Filled — clear then submit)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Annuity"
+                                                value="annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life-insurance"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_white_err_filled>
+                            <spacer_ss_w_06
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_submit_ss_white
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-ss-white"
+                                type="submit"/>
+                        </form_container_ss_white>
+                    </section-par>
+                </section_ss_white>
+                <spacer_1
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     SINGLE-SELECT DROPDOWN — LIGHT MODE (SLATE)
+                     [Added] GAAM-507: All single-select states on slate background
+                     ================================================================ -->
+                <!-- [Added] GAAM-507: Section header for single-select on slate -->
+                <text_ss_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Single-Select Dropdown — Light Mode (Slate Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <!-- [Added] GAAM-507: Single-select dropdown instances on slate background -->
+                <section_ss_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_ss_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Added] GAAM-507: Default state on slate -->
+                            <dropdown_ss_slate_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Select one option from the list."
+                                name="ss-slate-default"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Product Type">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Fixed Annuity"
+                                                value="fixed-annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Variable Annuity"
+                                                value="variable-annuity"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Indexed Annuity"
+                                                value="indexed-annuity"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_slate_default>
+                            <spacer_ss_sl_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Filled state on slate -->
+                            <dropdown_ss_slate_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="A selection has already been made."
+                                name="ss-slate-filled"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Product Type (Filled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Fixed Annuity"
+                                                value="fixed-annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Variable Annuity"
+                                                value="variable-annuity"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Indexed Annuity"
+                                                value="indexed-annuity"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_slate_filled>
+                            <spacer_ss_sl_02
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Disabled state on slate -->
+                            <dropdown_ss_slate_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-slate-disabled"
+                                readOnly="{Boolean}true"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Product Type (Disabled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Fixed Annuity"
+                                                value="fixed-annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Variable Annuity"
+                                                value="variable-annuity"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_slate_disabled>
+                            <spacer_ss_sl_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error Default on slate -->
+                            <dropdown_ss_slate_err
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-slate-error"
+                                required="{Boolean}true"
+                                requiredMessage="Please select a product type."
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Product Type (Error — submit to trigger)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Fixed Annuity"
+                                                value="fixed-annuity"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Variable Annuity"
+                                                value="variable-annuity"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_slate_err>
+                            <spacer_ss_sl_04
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_submit_ss_slate
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-ss-slate"
+                                type="submit"/>
+                        </form_container_ss_slate>
+                    </section-par>
+                </section_ss_slate>
+                <spacer_2
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     SINGLE-SELECT DROPDOWN — DARK MODE (GRANITE)
+                     [Added] GAAM-507: All single-select states on granite background
+                     ================================================================ -->
+                <!-- [Added] GAAM-507: Section header for single-select on granite -->
+                <text_ss_granite_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Single-Select Dropdown — Dark Mode (Granite Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <!-- [Added] GAAM-507: Single-select dropdown instances on granite background -->
+                <section_ss_granite
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_ss_granite
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Added] GAAM-507: Default state on granite dark background -->
+                            <dropdown_ss_granite_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Select your region."
+                                name="ss-granite-default"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Region">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Northeast"
+                                                value="northeast"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Southeast"
+                                                value="southeast"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Midwest"
+                                                value="midwest"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="West"
+                                                value="west"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_granite_default>
+                            <spacer_ss_gr_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Filled state on granite — shows selected checkmark in open panel -->
+                            <dropdown_ss_granite_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="A region has already been selected."
+                                name="ss-granite-filled"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Region (Filled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Northeast"
+                                                value="northeast"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Southeast"
+                                                value="southeast"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Midwest"
+                                                value="midwest"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="West"
+                                                value="west"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_granite_filled>
+                            <spacer_ss_gr_02
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Disabled state on granite -->
+                            <dropdown_ss_granite_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-granite-disabled"
+                                readOnly="{Boolean}true"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Region (Disabled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Northeast"
+                                                value="northeast"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Southeast"
+                                                value="southeast"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_granite_disabled>
+                            <spacer_ss_gr_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Required + helper text on dark (granite) -->
+                            <dropdown_ss_granite_req
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Region is required for routing your inquiry."
+                                name="ss-granite-required"
+                                required="{Boolean}true"
+                                requiredMessage="Please select your region."
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Region (Required)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Northeast"
+                                                value="northeast"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Southeast"
+                                                value="southeast"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Midwest"
+                                                value="midwest"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_granite_req>
+                            <spacer_ss_gr_04
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error state on granite dark background -->
+                            <dropdown_ss_granite_err
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-granite-error"
+                                required="{Boolean}true"
+                                requiredMessage="Region selection is required."
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Region (Error — submit to trigger)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Northeast"
+                                                value="northeast"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Southeast"
+                                                value="southeast"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_granite_err>
+                            <spacer_ss_gr_05
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_submit_ss_granite
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-ss-granite"
+                                type="submit"/>
+                        </form_container_ss_granite>
+                    </section-par>
+                </section_ss_granite>
+                <spacer_3
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     SINGLE-SELECT DROPDOWN — DARK MODE (AZUL)
+                     [Added] GAAM-507: All single-select states on azul background
+                     ================================================================ -->
+                <!-- [Added] GAAM-507: Section header for single-select on azul -->
+                <text_ss_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Single-Select Dropdown — Dark Mode (Azul Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <!-- [Added] GAAM-507: Single-select dropdown instances on azul background -->
+                <section_ss_azul
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_ss_azul
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Added] GAAM-507: Default state on azul dark background -->
+                            <dropdown_ss_azul_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Select a financial goal."
+                                name="ss-azul-default"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Financial Goal">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Grow Wealth"
+                                                value="grow"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Protect Assets"
+                                                value="protect"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Generate Income"
+                                                value="income"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Leave a Legacy"
+                                                value="legacy"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_azul_default>
+                            <spacer_ss_az_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Filled state on azul -->
+                            <dropdown_ss_azul_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="A goal has been selected."
+                                name="ss-azul-filled"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Financial Goal (Filled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Grow Wealth"
+                                                value="grow"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Protect Assets"
+                                                value="protect"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Generate Income"
+                                                value="income"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Leave a Legacy"
+                                                value="legacy"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_azul_filled>
+                            <spacer_ss_az_02
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Disabled state on azul -->
+                            <dropdown_ss_azul_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-azul-disabled"
+                                readOnly="{Boolean}true"
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Financial Goal (Disabled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Grow Wealth"
+                                                value="grow"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Protect Assets"
+                                                value="protect"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_azul_disabled>
+                            <spacer_ss_az_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error state on azul dark background -->
+                            <dropdown_ss_azul_err
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ss-azul-error"
+                                required="{Boolean}true"
+                                requiredMessage="Please select a financial goal."
+                                source="local"
+                                type="drop-down"
+                                jcr:title="Financial Goal (Error — submit to trigger)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Grow Wealth"
+                                                value="grow"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Protect Assets"
+                                                value="protect"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ss_azul_err>
+                            <spacer_ss_az_04
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_submit_ss_azul
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-ss-azul"
+                                type="submit"/>
+                        </form_container_ss_azul>
+                    </section-par>
+                </section_ss_azul>
+                <spacer_4
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     MULTI-SELECT DROPDOWN — LIGHT MODE (WHITE)
+                     [Added] GAAM-507: All multi-select states on white background.
+                     Multi-select uses type="multi-drop-down". Supports multiple
+                     selected items, checkbox-style rows in open panel, and a
+                     count badge (e.g., "2 selected") on the trigger when closed.
+                     ================================================================ -->
+                <!-- [Added] GAAM-507: Section header for multi-select on white -->
+                <text_ms_white_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Multi-Select Dropdown — Light Mode (White Background)&lt;/h3>&lt;div class=&quot;style-guide__page-description&quot;>Multi-select displays checkbox-style rows in the open panel and a count badge (e.g., &amp;quot;2 selected&amp;quot;) on the closed trigger.&lt;/div>"
+                    textIsRich="true"/>
+                <!-- [Added] GAAM-507: Multi-select dropdown instances on white background -->
+                <section_ms_white
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_ms_white
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Added] GAAM-507: Default state — no selections -->
+                            <dropdown_ms_white_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Select all product types that apply."
+                                name="ms-white-default"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Products of Interest">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuities"
+                                                value="annuities"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Retirement Solutions"
+                                                value="retirement"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Asset Management"
+                                                value="asset-mgmt"/>
+                                            <item4
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Institutional Products"
+                                                value="institutional"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_white_default>
+                            <spacer_ms_w_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Filled state — 2 items pre-selected, count badge visible on trigger -->
+                            <dropdown_ms_white_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="2 items have already been selected (count badge test)."
+                                name="ms-white-filled"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Products of Interest (Filled — 2 selected)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Annuities"
+                                                value="annuities"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Retirement Solutions"
+                                                value="retirement"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Asset Management"
+                                                value="asset-mgmt"/>
+                                            <item4
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Institutional Products"
+                                                value="institutional"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_white_filled>
+                            <spacer_ms_w_02
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Disabled state for multi-select -->
+                            <dropdown_ms_white_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ms-white-disabled"
+                                readOnly="{Boolean}true"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Products of Interest (Disabled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuities"
+                                                value="annuities"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_white_disabled>
+                            <spacer_ms_w_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Required + helper text for multi-select -->
+                            <dropdown_ms_white_req
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Select at least one product you are interested in."
+                                name="ms-white-required"
+                                required="{Boolean}true"
+                                requiredMessage="Please select at least one product."
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Products of Interest (Required)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuities"
+                                                value="annuities"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Retirement Solutions"
+                                                value="retirement"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_white_req>
+                            <spacer_ms_w_04
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error state for multi-select (submit to trigger) -->
+                            <dropdown_ms_white_err
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ms-white-error"
+                                required="{Boolean}true"
+                                requiredMessage="Please select at least one product of interest."
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Products of Interest (Error — submit to trigger)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Annuities"
+                                                value="annuities"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Life Insurance"
+                                                value="life"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Retirement Solutions"
+                                                value="retirement"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_white_err>
+                            <spacer_ms_w_05
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_submit_ms_white
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-ms-white"
+                                type="submit"/>
+                        </form_container_ms_white>
+                    </section-par>
+                </section_ms_white>
+                <spacer_5
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     MULTI-SELECT DROPDOWN — LIGHT MODE (SLATE)
+                     [Added] GAAM-507: Multi-select states on slate background
+                     ================================================================ -->
+                <!-- [Added] GAAM-507: Section header for multi-select on slate -->
+                <text_ms_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Multi-Select Dropdown — Light Mode (Slate Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <!-- [Added] GAAM-507: Multi-select dropdown instances on slate background -->
+                <section_ms_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_ms_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Added] GAAM-507: Default state on slate -->
+                            <dropdown_ms_slate_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Select all topics of interest."
+                                name="ms-slate-default"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Topics of Interest">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Market Trends"
+                                                value="market"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Tax Strategies"
+                                                value="tax"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Estate Planning"
+                                                value="estate"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Retirement Income"
+                                                value="retirement-income"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_slate_default>
+                            <spacer_ms_sl_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Filled state on slate — 3 items pre-selected (count badge) -->
+                            <dropdown_ms_slate_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="3 topics already selected."
+                                name="ms-slate-filled"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Topics of Interest (Filled — 3 selected)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Market Trends"
+                                                value="market"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Tax Strategies"
+                                                value="tax"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Estate Planning"
+                                                value="estate"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Retirement Income"
+                                                value="retirement-income"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_slate_filled>
+                            <spacer_ms_sl_02
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error state on slate -->
+                            <dropdown_ms_slate_err
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ms-slate-error"
+                                required="{Boolean}true"
+                                requiredMessage="Please select at least one topic."
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Topics of Interest (Error — submit to trigger)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Market Trends"
+                                                value="market"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Tax Strategies"
+                                                value="tax"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_slate_err>
+                            <spacer_ms_sl_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_submit_ms_slate
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-ms-slate"
+                                type="submit"/>
+                        </form_container_ms_slate>
+                    </section-par>
+                </section_ms_slate>
+                <spacer_6
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     MULTI-SELECT DROPDOWN — DARK MODE (GRANITE)
+                     [Added] GAAM-507: Multi-select states on granite background
+                     ================================================================ -->
+                <!-- [Added] GAAM-507: Section header for multi-select on granite -->
+                <text_ms_granite_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Multi-Select Dropdown — Dark Mode (Granite Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <!-- [Added] GAAM-507: Multi-select dropdown instances on granite background -->
+                <section_ms_granite
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_ms_granite
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Added] GAAM-507: Default state on granite dark -->
+                            <dropdown_ms_granite_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Choose one or more communication preferences."
+                                name="ms-granite-default"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Communication Preferences">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Email"
+                                                value="email"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Phone"
+                                                value="phone"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="SMS"
+                                                value="sms"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Mail"
+                                                value="mail"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_granite_default>
+                            <spacer_ms_gr_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Filled state on granite — 2 items pre-selected -->
+                            <dropdown_ms_granite_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="2 preferences already selected."
+                                name="ms-granite-filled"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Communication Preferences (Filled — 2 selected)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Email"
+                                                value="email"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Phone"
+                                                value="phone"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="SMS"
+                                                value="sms"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Mail"
+                                                value="mail"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_granite_filled>
+                            <spacer_ms_gr_02
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Disabled state on granite -->
+                            <dropdown_ms_granite_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ms-granite-disabled"
+                                readOnly="{Boolean}true"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Communication Preferences (Disabled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Email"
+                                                value="email"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Phone"
+                                                value="phone"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_granite_disabled>
+                            <spacer_ms_gr_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error state on granite dark -->
+                            <dropdown_ms_granite_err
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ms-granite-error"
+                                required="{Boolean}true"
+                                requiredMessage="Please select at least one communication preference."
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Communication Preferences (Error — submit to trigger)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Email"
+                                                value="email"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Phone"
+                                                value="phone"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_granite_err>
+                            <spacer_ms_gr_04
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_submit_ms_granite
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-ms-granite"
+                                type="submit"/>
+                        </form_container_ms_granite>
+                    </section-par>
+                </section_ms_granite>
+                <spacer_7
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     MULTI-SELECT DROPDOWN — DARK MODE (AZUL)
+                     [Added] GAAM-507: Multi-select states on azul background
+                     ================================================================ -->
+                <!-- [Added] GAAM-507: Section header for multi-select on azul -->
+                <text_ms_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Multi-Select Dropdown — Dark Mode (Azul Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <!-- [Added] GAAM-507: Multi-select dropdown instances on azul background -->
+                <section_ms_azul
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_ms_azul
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Added] GAAM-507: Default state on azul dark -->
+                            <dropdown_ms_azul_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="Select all investment goals."
+                                name="ms-azul-default"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Investment Goals">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Capital Growth"
+                                                value="growth"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Income Generation"
+                                                value="income"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Capital Preservation"
+                                                value="preservation"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Tax Efficiency"
+                                                value="tax"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_azul_default>
+                            <spacer_ms_az_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Filled state on azul — 2 items pre-selected -->
+                            <dropdown_ms_azul_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="2 goals already selected."
+                                name="ms-azul-filled"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Investment Goals (Filled — 2 selected)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Capital Growth"
+                                                value="growth"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Income Generation"
+                                                value="income"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Capital Preservation"
+                                                value="preservation"/>
+                                            <item3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Tax Efficiency"
+                                                value="tax"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_azul_filled>
+                            <spacer_ms_az_02
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Disabled state on azul -->
+                            <dropdown_ms_azul_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ms-azul-disabled"
+                                readOnly="{Boolean}true"
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Investment Goals (Disabled)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Capital Growth"
+                                                value="growth"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Income Generation"
+                                                value="income"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_azul_disabled>
+                            <spacer_ms_az_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Required + helper on azul -->
+                            <dropdown_ms_azul_req
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                helpMessage="You must select at least one investment goal."
+                                name="ms-azul-required"
+                                required="{Boolean}true"
+                                requiredMessage="Please select at least one investment goal."
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Investment Goals (Required)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Capital Growth"
+                                                value="growth"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Income Generation"
+                                                value="income"/>
+                                            <item2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Capital Preservation"
+                                                value="preservation"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_azul_req>
+                            <spacer_ms_az_04
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] GAAM-507: Error state on azul dark -->
+                            <dropdown_ms_azul_err
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/options"
+                                name="ms-azul-error"
+                                required="{Boolean}true"
+                                requiredMessage="Please select at least one investment goal."
+                                source="local"
+                                type="multi-drop-down"
+                                jcr:title="Investment Goals (Error — submit to trigger)">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        sectionTitle="\0">
+                                        <options jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Capital Growth"
+                                                value="growth"/>
+                                            <item1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Income Generation"
+                                                value="income"/>
+                                        </options>
+                                    </item0>
+                                </items>
+                            </dropdown_ms_azul_err>
+                            <spacer_ms_az_05
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_submit_ms_azul
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-ms-azul"
+                                type="submit"/>
+                        </form_container_ms_azul>
+                    </section-par>
+                </section_ms_azul>
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

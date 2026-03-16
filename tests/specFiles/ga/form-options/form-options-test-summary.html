@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormOptions — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>FormOptions — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>form-options.author.spec.ts</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">37</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">7</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">1</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">6</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FormOptions — CSV Test Cases</h2>
+        <span class="section-count">25</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FO-001</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC1</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC1</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-002</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC2</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC2</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-003</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC3</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC3</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-004</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC4</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC4</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-005</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC5</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC5</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-006</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC6</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC6</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-007</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC7</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC7</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-008</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC8</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC8</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-009</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC9</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC9</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-010</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC10</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC10</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-011</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC11</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC11</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-012</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC12</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC12</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-013</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC13</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC13</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-014</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC14</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC14</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-015</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC15</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC15</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-016</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC16</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC16</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-017</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC17</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC17</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-018</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC18</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC18</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-019</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC19</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC19</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-020</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC20</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC20</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-021</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC21</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC21</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-022</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC22</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC22</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-023</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC23</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC23</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-024</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC24</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC24</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-025</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC25</td>
+              <td class="viewport">Mobile</td>
+              <td>CMS FE: Form Field Styling - Dropdown (Reskin) — AC25</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FormOptions — Happy Path</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FO-026</td>
+              <td>FormOptions renders correctly</td>
+              
+              <td>FormOptions renders correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-027</td>
+              <td>FormOptions interactive elements are functional</td>
+              
+              <td>FormOptions interactive elements are functional</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FormOptions — Negative &amp; Boundary</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FO-028</td>
+              <td>FormOptions handles empty content gracefully</td>
+              
+              <td>FormOptions handles empty content gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-029</td>
+              <td>FormOptions handles missing images</td>
+              
+              <td>FormOptions handles missing images</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FormOptions — Responsive</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FO-030</td>
+              <td>FormOptions adapts to mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>FormOptions adapts to mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-031</td>
+              <td>FormOptions adapts to tablet viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>FormOptions adapts to tablet viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FormOptions — Console &amp; Resources</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FO-032</td>
+              <td>FormOptions produces no JS errors</td>
+              
+              <td>FormOptions produces no JS errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FormOptions — Broken Images</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FO-033</td>
+              <td>FormOptions all images load successfully</td>
+              
+              <td>FormOptions all images load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-034</td>
+              <td>FormOptions all images have alt attributes</td>
+              
+              <td>FormOptions all images have alt attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>FormOptions — Accessibility</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FO-035</td>
+              <td>FormOptions passes axe-core scan</td>
+              
+              <td>FormOptions passes axe-core scan</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-036</td>
+              <td>FormOptions interactive elements meet 24px target size</td>
+              
+              <td>FormOptions interactive elements meet 24px target size</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FO-037</td>
+              <td>FormOptions focus is not obscured by sticky elements</td>
+              
+              <td>FormOptions focus is not obscured by sticky elements</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>form-options.author.spec.ts</code>
+    &mdash; form-options &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

@@ -48,6 +48,11 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     name: 'statistic',
     rootSelector: '.cmp-statistic',
   },
+  {
+    name: 'form-options',
+    rootSelector: '.cmp-form-options',
+    styleGuideUrl: '/content/global-atlantic/style-guide/components/form-options.html',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');

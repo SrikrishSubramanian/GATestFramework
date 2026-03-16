@@ -1,0 +1,13 @@
+{
+  "component": "form-options",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/form-options/.content.xml",
+  "sourceHash": "a3c1f2e9d4b07856f1c3e2d9a4b07856",
+  "generatedAt": "2026-03-16",
+  "tickets": ["GAAM-507"],
+  "additions": [
+    "Single-select dropdown (type=drop-down): Default, Filled, Disabled, Required+Helper, Error Default, Error Filled — all 4 backgrounds",
+    "Multi-select dropdown (type=multi-drop-down): Default, Filled (with count badge), Disabled, Required+Helper, Error Default — all 4 backgrounds",
+    "All instances wrapped in ga/components/form/container with submit button to enable error-state triggering",
+    "Source style guide contained radio and checkbox types only — no dropdown types existed prior to this fixture"
+  ]
+}

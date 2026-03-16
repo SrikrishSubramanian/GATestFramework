@@ -207,8 +207,8 @@ function generatePOMClass(
     })
     .join('\n\n');
 
-  // Compute relative path from output dir to utils dir
-  const utilsDir = path.resolve(__dirname);
+  // Compute relative path from output dir to tests/utils/ dir (parent of generation/)
+  const utilsDir = path.resolve(__dirname, '..');
   const resolvedOutputDir = outputDir || GA_COMPONENTS_DIR;
   const relativeUtils = path.relative(resolvedOutputDir, utilsDir).replace(/\\/g, '/');
 

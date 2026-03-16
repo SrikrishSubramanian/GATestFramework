@@ -289,7 +289,8 @@ test.describe('Jira/Figma Test Generation', () => {
       await page.waitForLoadState('networkidle');
       await page.waitForTimeout(2000);
 
-      const snapshot = await scanDOM(page, jiraReq.component);
+      const rootSelector = process.env.ROOT_SELECTOR;
+      const snapshot = await scanDOM(page, jiraReq.component, rootSelector);
       if (snapshot.elements.length > 0) {
         const pomResult = writePOMFromDOM(snapshot, {
           component: jiraReq.component,

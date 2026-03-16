@@ -168,6 +168,14 @@ export const KNOWN_VARIANTS: Record<string, { variants: string[]; themes: string
     variants: ['default'],
     themes: ['default'],
   },
+  'form-options': {
+    // type dialog values: drop-down, multi-drop-down
+    // wrapper: .cmp-form-options; type classes: .cmp-form-options--drop-down, .cmp-form-options--multi-drop-down
+    // no style system IDs — theme is inherited from parent section background
+    // states: default, hover, focus, filled, disabled, error-default, error-focus, error-filled
+    variants: ['drop-down', 'multi-drop-down'],
+    themes: ['light-theme', 'dark-theme'],
+  },
 };
 
 function toPascalCase(str: string): string {

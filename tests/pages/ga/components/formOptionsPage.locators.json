@@ -1,0 +1,933 @@
+{
+  "component": "form-options",
+  "generatedAt": "2026-03-16T05:13:34.439Z",
+  "source": "dom",
+  "entries": {
+    "Option_ARadioButton": {
+      "name": "Option_ARadioButton",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field.cmp-form-options__field--radio",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "textbox[name='Option A radio button']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//input[contains(@class,'cmp-form-options__field')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Retirement_PlanningCheckbox": {
+      "name": "Retirement_PlanningCheckbox",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field.cmp-form-options__field--checkbox",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "textbox[name='Retirement Planning checkbox']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//input[contains(@class,'cmp-form-options__field')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "informationIconTooltip_Choos": {
+      "name": "informationIconTooltip_Choos",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".info-light-icon.cmp-form-options__help-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "img[name='information icon tooltip Choose one option that best fits your needs.']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'info-light-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "informationIconTooltip_Choos_3": {
+      "name": "informationIconTooltip_Choos_3",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".info-dark-icon.cmp-form-options__help-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "img[name='information icon tooltip Choose one option that best fits your needs.']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'info-dark-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "legend_SelectAPlan": {
+      "name": "legend_SelectAPlan",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__legend",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//legend[contains(@class,'cmp-form-options__legend')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Select a plan",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__help",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__help')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_6": {
+      "name": "span_6",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "legend_7": {
+      "name": "legend_7",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options-section__legend",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//legend[contains(@class,'cmp-form-options-section__legend')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Option_A": {
+      "name": "span_Option_A",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Option A",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_9": {
+      "name": "span_9",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field.cmp-form-options__field__radiomark",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Option_A": {
+      "name": "div_Option_A",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Option A",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Option_B": {
+      "name": "span_Option_B",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Option B",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Option_B": {
+      "name": "div_Option_B",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Option B",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Option_CPreselected": {
+      "name": "span_Option_CPreselected",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Option C (pre-selected)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Option_CPreselected": {
+      "name": "div_Option_CPreselected",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Option C (pre-selected)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Option_DDisabled": {
+      "name": "span_Option_DDisabled",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Option D (disabled)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Option_DDisabled": {
+      "name": "div_Option_DDisabled",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Option D (disabled)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "legend_SelectARegion": {
+      "name": "legend_SelectARegion",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__legend",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//legend[contains(@class,'cmp-form-options__legend')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Select a region",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_18": {
+      "name": "span_18",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_North_America": {
+      "name": "span_North_America",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "North America",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_North_America": {
+      "name": "div_North_America",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "North America",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Europe": {
+      "name": "span_Europe",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Europe",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Europe": {
+      "name": "div_Europe",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Europe",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Asia_Pacific": {
+      "name": "span_Asia_Pacific",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Asia Pacific",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Asia_Pacific": {
+      "name": "div_Asia_Pacific",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Asia Pacific",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Disabled_Region": {
+      "name": "span_Disabled_Region",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Disabled Region",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Disabled_Region": {
+      "name": "div_Disabled_Region",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Disabled Region",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "legend_SelectYourInterests": {
+      "name": "legend_SelectYourInterests",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__legend",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//legend[contains(@class,'cmp-form-options__legend')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Select your interests",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_28": {
+      "name": "span_28",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Retirement_Planning": {
+      "name": "span_Retirement_Planning",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Retirement Planning",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_30": {
+      "name": "span_30",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field.cmp-form-options__field__checkmark",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Retirement_Planning": {
+      "name": "div_Retirement_Planning",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Retirement Planning",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Life_Insurance": {
+      "name": "span_Life_Insurance",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Life Insurance",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Life_Insurance": {
+      "name": "div_Life_Insurance",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Life Insurance",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_AnnuitiesPreselected": {
+      "name": "span_AnnuitiesPreselected",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Annuities (pre-selected)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_AnnuitiesPreselected": {
+      "name": "div_AnnuitiesPreselected",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Annuities (pre-selected)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Unavailable_OptionDisabled": {
+      "name": "span_Unavailable_OptionDisabled",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Unavailable Option (disabled)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Unavailable_OptionDisabled": {
+      "name": "div_Unavailable_OptionDisabled",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Unavailable Option (disabled)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "legend_Preferences": {
+      "name": "legend_Preferences",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__legend",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//legend[contains(@class,'cmp-form-options__legend')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Preferences",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_39": {
+      "name": "span_39",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_EmailNotifications": {
+      "name": "span_EmailNotifications",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Email notifications",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_EmailNotifications": {
+      "name": "div_EmailNotifications",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Email notifications",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_SMSNotifications": {
+      "name": "span_SMSNotifications",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SMS notifications",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_SMSNotifications": {
+      "name": "div_SMSNotifications",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SMS notifications",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_PhoneCalls": {
+      "name": "span_PhoneCalls",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-options__field-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Phone calls",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_PhoneCalls": {
+      "name": "div_PhoneCalls",
+      "component": "form-options",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-options__field-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-options__field-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Phone calls",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}
