@@ -412,5 +412,23 @@
     ],
     "generatedAt": "2026-03-11T10:12:43.604Z",
     "source": "dom"
+  },
+  "form-options": {
+    "pomClass": "FormOptionsPage",
+    "pomPath": "../pages/ga/components/formOptionsPage.ts",
+    "sidecarPath": "../pages/ga/components/formOptionsPage.locators.json",
+    "specPath": "../specFiles/ga/form-options/form-options.author.spec.ts",
+    "elementCount": 90,
+    "testCount": 12,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility"
+    ],
+    "generatedAt": "2026-03-16T07:01:38.574Z",
+    "source": "dom"
   }
 }
