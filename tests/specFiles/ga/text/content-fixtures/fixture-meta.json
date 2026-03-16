@@ -1,0 +1,8 @@
+{
+  "component": "text",
+  "sourceFile": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/text/.content.xml",
+  "sourceHash": "",
+  "generatedAt": "2026-03-16",
+  "tickets": ["GAAM-523"],
+  "notes": "Added RTE table variations: all cell types (header, subheader, stripe, blank, blank-stripe, highlight), icon placement (left/right), column dividers, caption/title, 2-5 column layouts, light mode (white section), dark mode (granite and azul sections)"
+}

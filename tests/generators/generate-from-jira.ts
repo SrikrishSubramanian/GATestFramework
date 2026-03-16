@@ -9,10 +9,10 @@
  *   2. Run this spec with the JSON path to generate tests
  *
  * Usage:
- *   JIRA_JSON=path/to/requirements.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
+ *   JIRA_JSON=path/to/requirements.json env=local npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium
  *
  * Or fetch directly from Jira REST API:
- *   JIRA_TICKET=GAAM-123 env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
+ *   JIRA_TICKET=GAAM-123 env=local npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium
  *
  * Optional env vars:
  *   FIGMA_DATA=path/to/design-spec.json   — merge Figma visual tests

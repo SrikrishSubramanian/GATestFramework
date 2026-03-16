@@ -4,7 +4,7 @@
  * content-driven, and dispatcher specs for components.
  *
  * Usage:
- *   env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
+ *   env=local npx playwright test generate-advanced --config playwright.generators.config.ts --project chromium --workers 1
  *
  * Env vars:
  *   COMPONENTS=button,feature-banner    — target components (default: all)

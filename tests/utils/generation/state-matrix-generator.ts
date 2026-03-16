@@ -117,7 +117,7 @@ export function generateMatrixSpec(
     const pom = new ${pomClassName}(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Verify: ${combo.variant} with ${combo.theme} renders correctly on ${combo.background} section
-    const root = page.locator('.ga-${matrix.component}').first();
+    const root = page.locator('.cmp-${matrix.component}').first();
     await expect(root).toBeVisible();
   });`;
   }).join('\n\n');

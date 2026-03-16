@@ -243,7 +243,7 @@ export function inferElementsFromSource(data: SourceComponentData): InferredElem
 
   // From LESS — component root and key sub-elements
   if (data.lessClasses.length > 0) {
-    const rootClass = data.lessClasses.find(c => c.startsWith(`.ga-${data.component}`));
+    const rootClass = data.lessClasses.find(c => c.startsWith(`.cmp-${data.component}`));
     if (rootClass) {
       elements.push({
         name: 'componentRoot',

@@ -285,7 +285,7 @@ function generateCategoryTests(
   const name = toPascalCase(component);
   const pom = options.pomClassName;
   const baseUrl = options.mode === 'author' ? 'ENV.AEM_AUTHOR_URL' : 'ENV.BASE_URL';
-  const sel = options.rootSelector || `.ga-${component}`;
+  const sel = options.rootSelector || `.cmp-${component}`;
   const pfx = prefix || componentToPrefix(component);
   let id = startId;
 

@@ -9,13 +9,13 @@
 
 ### Generate tests for existing components (Phase 2)
 ```bash
-env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
+env=local npx playwright test generate-components --config playwright.generators.config.ts --project chromium --workers 1
 ```
 Scans live AEM DOM for button, feature-banner, statistic. Generates POMs + specs.
 
 ### Generate from CSV (Phase 3)
 ```bash
-CSV_PATH=path/to/tests.csv env=local npx playwright test tests/generators/generate-from-csv.ts --project chromium
+CSV_PATH=path/to/tests.csv env=local npx playwright test generate-from-csv --config playwright.generators.config.ts --project chromium
 ```
 Optional env vars: `CSV_MAP`, `CATEGORIES`, `A11Y_LEVEL`, `MODE`.
 
@@ -24,19 +24,19 @@ Optional env vars: `CSV_MAP`, `CATEGORIES`, `A11Y_LEVEL`, `MODE`.
 # Option A: Pre-fetch with dev-agents-shared (recommended)
 # 1. In Claude Code: /read-jira GAAM-XXX
 # 2. Then:
-JIRA_JSON=.aem-developer/artifacts/requirements.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
+JIRA_JSON=.aem-developer/artifacts/requirements.json env=local npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium
 
 # Option B: Direct Jira API
-JIRA_TICKET=GAAM-123 JIRA_URL=https://bounteous.jira.com JIRA_USERNAME=you@email JIRA_API_TOKEN=token env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
+JIRA_TICKET=GAAM-123 JIRA_URL=https://bounteous.jira.com JIRA_USERNAME=you@email JIRA_API_TOKEN=token env=local npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium
 
 # With Figma visual tests:
-JIRA_JSON=path/to/req.json FIGMA_DATA=path/to/design.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
+JIRA_JSON=path/to/req.json FIGMA_DATA=path/to/design.json env=local npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium
 ```
 Auto-detects component from ticket, merges ACs + Figma, generates POMs + specs.
 
 ### Generate advanced tests (Phases 5-7)
 ```bash
-env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
+env=local npx playwright test generate-advanced --config playwright.generators.config.ts --project chromium --workers 1
 ```
 Generates interaction, state-matrix, visual, broken-image, content-driven, API mock, and dispatcher specs.
 
@@ -140,8 +140,8 @@ tests/
 2. Add `KNOWN_VARIANTS` entry in `state-matrix-generator.ts` (for matrix tests)
 3. Run the generators:
    ```bash
-   COMPONENTS=new-component env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
-   COMPONENTS=new-component env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
+   COMPONENTS=new-component env=local npx playwright test generate-components --config playwright.generators.config.ts --project chromium --workers 1
+   COMPONENTS=new-component env=local npx playwright test generate-advanced --config playwright.generators.config.ts --project chromium --workers 1
    ```
 
 ## Logs

@@ -1,6 +1,6 @@
 /**
  * One-time utility: Generate HTML test summaries for all existing component spec directories.
- * Usage: npx playwright test tests/generators/generate-html-summaries.ts --project chromium --workers 1
+ * Usage: npx playwright test generate-html-summaries --config playwright.generators.config.ts --project chromium --workers 1
  */
 import { test } from '@playwright/test';
 import * as fs from 'fs';

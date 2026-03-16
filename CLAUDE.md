@@ -29,16 +29,17 @@ npx playwright test --grep @a11y
 npx playwright test --grep @smoke
 
 # Generate tests from live DOM (requires AEM on localhost:4502)
-env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
+# NOTE: Generators use a separate config because they live outside testDir
+env=local npx playwright test generate-components --config playwright.generators.config.ts --project chromium --workers 1
 
 # Generate advanced tests (interaction, matrix, visual, images, content, mocks)
-env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
+env=local npx playwright test generate-advanced --config playwright.generators.config.ts --project chromium --workers 1
 
 # Generate from CSV
-CSV_PATH=file.csv env=local npx playwright test tests/generators/generate-from-csv.ts --project chromium
+CSV_PATH=file.csv env=local npx playwright test generate-from-csv --config playwright.generators.config.ts --project chromium
 
 # Generate from Jira/Figma
-JIRA_JSON=req.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium
+JIRA_JSON=req.json COMPONENT=text env=local npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium
 
 # Environment-specific runs (local, dev, qa, uat, prod)
 env=qa npx playwright test tests/specFiles/ga/ --project chromium

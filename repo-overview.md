@@ -161,10 +161,10 @@ GATestFramework/
 
 | Orchestrator | Purpose | Command |
 |-------------|---------|---------|
-| `generate-components.ts` | DOM scan → POM + spec | `env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1` |
-| `generate-from-csv.ts` | CSV → POM + spec | `CSV_PATH=file.csv env=local npx playwright test tests/generators/generate-from-csv.ts --project chromium` |
-| `generate-from-jira.ts` | Jira ticket → POM + spec | `JIRA_JSON=req.json env=local npx playwright test tests/generators/generate-from-jira.ts --project chromium` |
-| `generate-advanced.ts` | Interaction, matrix, visual, images, content, mocks | `env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1` |
+| `generate-components.ts` | DOM scan → POM + spec | `env=local npx playwright test generate-components --config playwright.generators.config.ts --project chromium --workers 1` |
+| `generate-from-csv.ts` | CSV → POM + spec | `CSV_PATH=file.csv env=local npx playwright test generate-from-csv --config playwright.generators.config.ts --project chromium` |
+| `generate-from-jira.ts` | Jira ticket → POM + spec | `JIRA_JSON=req.json env=local npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium` |
+| `generate-advanced.ts` | Interaction, matrix, visual, images, content, mocks | `env=local npx playwright test generate-advanced --config playwright.generators.config.ts --project chromium --workers 1` |
 
 ### What gets generated
 
@@ -271,7 +271,7 @@ Results posted to Microsoft Teams via `send-report.js`.
 
 ```bash
 # Generate tests for components (requires AEM running on localhost:4502)
-env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
+env=local npx playwright test generate-components --config playwright.generators.config.ts --project chromium --workers 1
 
 # Run all generated GA tests
 env=local npx playwright test tests/specFiles/ga/ --project chromium
@@ -366,7 +366,7 @@ Sync results are saved to `tests/data/.fixture-sync-results.json`.
 2. Add `KNOWN_VARIANTS` entry in `state-matrix-generator.ts` (for matrix tests)
 3. Run the generators:
    ```bash
-   COMPONENTS=new-component env=local npx playwright test tests/generators/generate-components.ts --project chromium --workers 1
-   COMPONENTS=new-component env=local npx playwright test tests/generators/generate-advanced.ts --project chromium --workers 1
+   COMPONENTS=new-component env=local npx playwright test generate-components --config playwright.generators.config.ts --project chromium --workers 1
+   COMPONENTS=new-component env=local npx playwright test generate-advanced --config playwright.generators.config.ts --project chromium --workers 1
    ```
 4. Generated files appear in `tests/specs/ga/<component>/` and `tests/pages/ga/components/`

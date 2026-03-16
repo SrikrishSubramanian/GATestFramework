@@ -2,7 +2,7 @@
  * Phase 3: CSV → POM + Spec generation.
  *
  * Usage:
- *   CSV_PATH=path/to/tests.csv env=local npx playwright test tests/generators/generate-from-csv.ts --project chromium
+ *   CSV_PATH=path/to/tests.csv env=local npx playwright test generate-from-csv --config playwright.generators.config.ts --project chromium
  *
  * Optional env vars:
  *   CSV_MAP="steps=Action Steps,expected=Pass Criteria"  — override column detection

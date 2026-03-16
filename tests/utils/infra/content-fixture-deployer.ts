@@ -12,6 +12,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { Page } from '@playwright/test';
 import ENV from './env';
+import { loginToAEMAuthor } from './auth-fixture';
 
 const GA_SPECS_DIR = path.resolve(__dirname, '..', 'specFiles', 'ga');
 
@@ -77,6 +78,11 @@ export function resolveComponentUrl(
   } else if (AUTO_DEPLOY_ENVS.includes(env)) {
     // local/dev with fixture — use test-fixtures path (auto-deployed)
     contentPath = `${TEST_FIXTURES_BASE}/${component}`;
+    console.warn(
+      `[fixture-deployer] Using test-fixtures path for "${component}" (env=${env}). ` +
+      `If tests fail with timeout, the fixture may not be deployed to AEM. ` +
+      `Run deployFixture('${component}', page) first, or use { forceStyleGuide: true } to fall back.`
+    );
   } else {
     // qa/uat/prod — use style guide (fixture should be pre-merged)
     contentPath = resolveStyleGuidePath(component);
@@ -136,30 +142,37 @@ export async function deployFixture(component: string, page: Page): Promise<Depl
   }
 
   const authorUrl = ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
-  const username = ENV.AEM_AUTHOR_USERNAME || 'admin';
-  const password = ENV.AEM_AUTHOR_PASSWORD || 'admin';
   const targetPath = `${TEST_FIXTURES_BASE}/${component}`;
 
   const fixtureContent = fs.readFileSync(fixturePath, 'utf-8');
 
   try {
-    // Step 1: Ensure parent path exists
-    const authHeader = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64');
+    // Step 1: Authenticate via browser login (AEM CSRF filter blocks basic auth headers)
+    await loginToAEMAuthor(page);
 
+    // Step 2: Get CSRF token for Sling POST requests
+    const tokenRes = await page.request.get(`${authorUrl}/libs/granite/csrf/token.json`);
+    let csrfToken: string | undefined;
+    if (tokenRes.ok()) {
+      const tokenJson = await tokenRes.json();
+      csrfToken = tokenJson.token;
+    }
+
+    const headers: Record<string, string> = {};
+    if (csrfToken) headers['CSRF-Token'] = csrfToken;
+
+    // Step 3: Ensure parent path exists
     await page.request.post(`${authorUrl}${TEST_FIXTURES_BASE}`, {
-      headers: { Authorization: authHeader },
+      headers,
       form: {
         'jcr:primaryType': 'sling:OrderedFolder',
-        ':operation': 'import',
-        ':contentType': 'json',
-        ':content': '{"jcr:primaryType":"sling:OrderedFolder"}',
       },
       ignoreHTTPSErrors: true,
     });
 
-    // Step 2: Import the fixture XML
-    await page.request.post(`${authorUrl}${targetPath}`, {
-      headers: { Authorization: authHeader },
+    // Step 4: Import the fixture XML via Sling POST
+    const importRes = await page.request.post(`${authorUrl}${targetPath}`, {
+      headers,
       form: {
         ':operation': 'import',
         ':contentType': 'xml',
@@ -169,6 +182,29 @@ export async function deployFixture(component: string, page: Page): Promise<Depl
       },
       ignoreHTTPSErrors: true,
     });
+
+    if (!importRes.ok()) {
+      return {
+        component,
+        deployed: false,
+        path: targetPath,
+        message: `Deploy HTTP ${importRes.status()}: ${(await importRes.text()).substring(0, 200)}`,
+      };
+    }
+
+    // Step 5: Verify the page actually renders
+    const verifyRes = await page.request.get(
+      `${authorUrl}${targetPath}.1.json`,
+      { ignoreHTTPSErrors: true }
+    );
+    if (!verifyRes.ok()) {
+      return {
+        component,
+        deployed: false,
+        path: targetPath,
+        message: `Import returned ${importRes.status()} but page node not found at ${targetPath}`,
+      };
+    }
 
     return {
       component,

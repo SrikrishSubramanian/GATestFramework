@@ -22,7 +22,7 @@ export function generateVisualSpec(
   const specPath = path.join(compDir, `${figma.component}.visual.spec.ts`);
 
   const tests: string[] = [];
-  const componentSelector = `.ga-${figma.component}`;
+  const componentSelector = `.cmp-${figma.component}`;
 
   // Color assertions
   if (Object.keys(figma.colors).length > 0) {

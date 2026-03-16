@@ -7,10 +7,10 @@
  *   - Updates coverage-matrix.json
  *
  * Usage:
- *   env=local npx playwright test tests/generators/generate-components.ts --project chromium
+ *   env=local npx playwright test generate-components --config playwright.generators.config.ts --project chromium
  *
  * Or run specific components:
- *   COMPONENTS=button,section env=local npx playwright test tests/generators/generate-components.ts --project chromium
+ *   COMPONENTS=button,section env=local npx playwright test generate-components --config playwright.generators.config.ts --project chromium
  */
 import { test } from '@playwright/test';
 import { scanDOM, DOMSnapshot, loadLatestSnapshot } from '../utils/generation/dom-scanner';

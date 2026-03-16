@@ -52,7 +52,7 @@ export async function scanDOM(
   // Wait for page stability
   await page.waitForLoadState('networkidle');
 
-  const resolvedRoot = rootSelector || `.ga-${componentName}`;
+  const resolvedRoot = rootSelector || `.cmp-${componentName}`;
   const url = page.url();
   const title = await page.title();
   const viewport = page.viewportSize() || { width: 1280, height: 720 };
