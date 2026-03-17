@@ -142,8 +142,8 @@
   </div>
 
   <div class="stats">
-    <div class="stat-box"><div class="num">202</div><div class="label">Total Tests</div></div>
-    <div class="stat-box"><div class="num">12</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">177</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">10</div><div class="label">Sections</div></div>
     <div class="stat-box"><div class="num">5</div><div class="label">Spec Files</div></div>
     <div class="stat-box"><div class="num">9</div><div class="label">Tag Types</div></div>
   </div>
@@ -153,7 +153,7 @@
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
         <h2>Button — CSV Test Cases</h2>
-        <span class="section-count">11</span>
+        <span class="section-count">4</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -196,55 +196,7 @@
               <td>Button component — add disabled state styling — AC4</td>
               <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
             </tr>
-            <tr>
-              <td class="test-id">BTN-005</td>
-              <td>button background-color color matches Figma spec (#003DA5)</td>
-              <td class="viewport">Desktop</td>
-              <td>button background-color color matches Figma spec (#003DA5)</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-006</td>
-              <td>button color color matches Figma spec (#FFFFFF)</td>
-              <td class="viewport">Desktop</td>
-              <td>button color color matches Figma spec (#FFFFFF)</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-007</td>
-              <td>button border-color color matches Figma spec (#003DA5)</td>
-              <td class="viewport">Desktop</td>
-              <td>button border-color color matches Figma spec (#003DA5)</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-008</td>
-              <td>button typography matches Figma spec</td>
-              <td class="viewport">Desktop</td>
-              <td>button typography matches Figma spec</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-009</td>
-              <td>button hover animation matches Figma spec</td>
-              <td class="viewport">Desktop</td>
-              <td>button hover animation matches Figma spec</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-010</td>
-              <td>button layout at desktop matches Figma</td>
-              <td class="viewport">Desktop</td>
-              <td>button layout at desktop matches Figma</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-011</td>
-              <td>button layout at mobile matches Figma</td>
-              <td class="viewport">Mobile</td>
-              <td>button layout at mobile matches Figma</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
-            </tr>
+            <!-- BTN-005–011 removed: covered by button.visual.spec.ts (BTN-196–202) -->
           </tbody>
         </table>
       </div>
@@ -391,42 +343,7 @@
       </div>
     </div>
 
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Button — Broken Images</h2>
-        <span class="section-count">2</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">BTN-019</td>
-              <td>Button all images load successfully</td>
-              
-              <td>Button all images load successfully</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-020</td>
-              <td>Button all images have alt attributes</td>
-              
-              <td>Button all images have alt attributes</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <!-- BTN-019–020 "Broken Images" section removed: covered by button.images.spec.ts (BTN-024–027) -->
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
@@ -526,7 +443,7 @@
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
         <h2>Button — Component Interactions</h2>
-        <span class="section-count">60</span>
+        <span class="section-count">44</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -541,118 +458,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="test-id">BTN-028</td>
-              <td>button adapts to unknown parent (#1)</td>
-              
-              <td>button adapts to unknown parent (#1)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-029</td>
-              <td>button adapts to unknown parent (#2)</td>
-              
-              <td>button adapts to unknown parent (#2)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-030</td>
-              <td>button adapts to unknown parent (#3)</td>
-              
-              <td>button adapts to unknown parent (#3)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-031</td>
-              <td>button adapts to unknown parent (#4)</td>
-              
-              <td>button adapts to unknown parent (#4)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-032</td>
-              <td>button adapts to unknown parent (#5)</td>
-              
-              <td>button adapts to unknown parent (#5)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-033</td>
-              <td>button adapts to unknown parent (#6)</td>
-              
-              <td>button adapts to unknown parent (#6)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-034</td>
-              <td>button adapts to unknown parent (#7)</td>
-              
-              <td>button adapts to unknown parent (#7)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-035</td>
-              <td>button adapts to unknown parent (#8)</td>
-              
-              <td>button adapts to unknown parent (#8)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-036</td>
-              <td>button adapts to unknown parent (#9)</td>
-              
-              <td>button adapts to unknown parent (#9)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-037</td>
-              <td>button adapts to unknown parent (#10)</td>
-              
-              <td>button adapts to unknown parent (#10)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-038</td>
-              <td>button adapts to unknown parent (#11)</td>
-              
-              <td>button adapts to unknown parent (#11)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-039</td>
-              <td>button adapts to unknown parent (#12)</td>
-              
-              <td>button adapts to unknown parent (#12)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-040</td>
-              <td>button adapts to unknown parent (#13)</td>
-              
-              <td>button adapts to unknown parent (#13)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-041</td>
-              <td>button adapts to unknown parent (#14)</td>
-              
-              <td>button adapts to unknown parent (#14)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-042</td>
-              <td>button adapts to unknown parent (#15)</td>
-              
-              <td>button adapts to unknown parent (#15)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">BTN-043</td>
-              <td>button adapts to unknown parent (#16)</td>
-              
-              <td>button adapts to unknown parent (#16)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
+            <!-- BTN-028–043 removed: duplicate interaction tests superseded by BTN-066–087 -->
             <tr>
               <td class="test-id">BTN-044</td>
               <td>button adapts to unknown parent (#17)</td>

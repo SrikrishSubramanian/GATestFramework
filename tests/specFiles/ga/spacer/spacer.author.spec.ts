@@ -352,17 +352,7 @@ test.describe('Spacer — Console & Resources', () => {
 });
 
 test.describe('Spacer — Broken Images', () => {
-  test('[SPC-035] @regression Spacer all images load successfully', async ({ page }) => {
-    const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const images = page.locator('.cmp-spacer img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
+  // SPC-035 removed: duplicate of SPC-031 (both check naturalWidth on .cmp-spacer img)
 
   test('[SPC-036] @regression Spacer all images have alt attributes', async ({ page }) => {
     const pom = new SpacerPage(page);

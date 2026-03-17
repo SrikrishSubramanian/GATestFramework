@@ -9,18 +9,6 @@ test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
 
-// Authenticate with AEM Author before each test
-test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    const loginUrl = `${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html`;
-    await page.goto(loginUrl);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
-});
-
 test.describe('FeatureBanner — Happy Path', () => {
   test('[FB-001] @smoke @regression FeatureBanner renders correctly', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
@@ -85,30 +73,7 @@ test.describe('FeatureBanner — Console & Resources', () => {
   });
 });
 
-test.describe('FeatureBanner — Broken Images', () => {
-  test('[FB-008] @regression FeatureBanner all images load successfully', async ({ page }) => {
-    const pom = new FeatureBannerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const images = page.locator('.feature-banner img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
-
-  test('[FB-009] @regression FeatureBanner all images have alt attributes', async ({ page }) => {
-    const pom = new FeatureBannerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const images = page.locator('.feature-banner img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const alt = await images.nth(i).getAttribute('alt');
-      expect(alt).not.toBeNull();
-    }
-  });
-});
+// FB-008–009 removed: Image health tests covered by feature-banner.images.spec.ts (FB-013–016)
 
 test.describe('FeatureBanner — Accessibility', () => {
   test('[FB-010] @a11y @wcag22 @regression @smoke FeatureBanner passes axe-core scan', async ({ page }) => {

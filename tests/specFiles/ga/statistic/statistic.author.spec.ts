@@ -197,30 +197,7 @@ test.describe('Statistic — Console & Resources', () => {
   });
 });
 
-test.describe('Statistic — Broken Images', () => {
-  test('[STTS-025] @regression Statistic all images load successfully', async ({ page }) => {
-    const pom = new StatisticPage(page);
-    await pom.navigate(BASE());
-    const images = page.locator('.cmp-statistic img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
-
-  test('[STTS-026] @regression Statistic all images have alt attributes', async ({ page }) => {
-    const pom = new StatisticPage(page);
-    await pom.navigate(BASE());
-    const images = page.locator('.cmp-statistic img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const alt = await images.nth(i).getAttribute('alt');
-      expect(alt).not.toBeNull();
-    }
-  });
-});
+// STTS-025–026 removed: Image health tests covered by statistic.images.spec.ts (STAT-013–016)
 
 test.describe('Statistic — Accessibility', () => {
   test('[STTS-027] @a11y @wcag22 @regression @smoke Statistic passes axe-core scan', async ({ page }) => {

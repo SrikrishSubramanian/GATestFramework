@@ -390,16 +390,7 @@ test.describe('FormOptions — Console & Resources', () => {
 });
 
 test.describe('FormOptions — Broken Images', () => {
-  test('[FO-033] @regression FormOptions all images load', async ({ page }) => {
-    const pom = new FormOptionsPage(page);
-    await loginAndNavigate(page, pom);
-    const images = page.locator('.cmp-form-options img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
+  // FO-033 removed: duplicate of FO-029 (both check naturalWidth on .cmp-form-options img)
 
   test('[FO-034] @regression FormOptions all images have alt attributes', async ({ page }) => {
     const pom = new FormOptionsPage(page);

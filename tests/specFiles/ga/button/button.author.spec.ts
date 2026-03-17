@@ -39,64 +39,7 @@ test.describe('Button — CSV Test Cases', () => {
     // Expected: Given a disabled button on a dark background (granite/azul), the disabled state should still be visible with sufficient contrast
   });
 
-  test('[BTN-005] @visual button background-color color matches Figma spec (#003DA5)', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
-    // Step 1: Navigate to button style guide page
-    // Step 2: Get computed background-color of component
-    // Expected: background-color should be #003DA5
-  });
-
-  test('[BTN-006] @visual button color color matches Figma spec (#FFFFFF)', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
-    // Step 1: Navigate to button style guide page
-    // Step 2: Get computed color of component
-    // Expected: color should be #FFFFFF
-  });
-
-  test('[BTN-007] @visual button border-color color matches Figma spec (#003DA5)', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
-    // Step 1: Navigate to button style guide page
-    // Step 2: Get computed border-color of component
-    // Expected: border-color should be #003DA5
-  });
-
-  test('[BTN-008] @visual button typography matches Figma spec', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
-    // Step 1: Navigate to button style guide page
-    // Step 2: Get computed font properties
-    // Expected: Typography should match: {"font-family":"Poppins","font-size":"16px","font-weight":"600","line-height":"24px"}
-  });
-
-  test('[BTN-009] @visual button hover animation matches Figma spec', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
-    // Step 1: Navigate to button style guide page
-    // Step 2: Trigger hover interaction
-    // Step 3: Capture before/after states
-    // Expected: Animation: {"property":"background-color","duration":"0.3s","timingFunction":"ease"}
-  });
-
-  test('[BTN-010] @visual @regression button layout at desktop matches Figma', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
-    // Step 1: Set viewport to desktop
-    // Step 2: Navigate to button style guide page
-    // Step 3: Verify dimensions
-    // Expected: Layout should match: {"width":"auto","min-width":"200px"}
-  });
-
-  test('[BTN-011] @visual @mobile button layout at mobile matches Figma', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
-    // Step 1: Set viewport to mobile
-    // Step 2: Navigate to button style guide page
-    // Step 3: Verify dimensions
-    // Expected: Layout should match: {"width":"100%","min-width":"unset"}
-  });
+  // BTN-005–011 removed: Figma visual tests are covered with real assertions in button.visual.spec.ts (BTN-196–202)
 });
 
 test.describe('Button — Happy Path', () => {
@@ -163,30 +106,7 @@ test.describe('Button — Console & Resources', () => {
   });
 });
 
-test.describe('Button — Broken Images', () => {
-  test('[BTN-019] @regression Button all images load successfully', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const images = page.locator('.cmp-button img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
-
-  test('[BTN-020] @regression Button all images have alt attributes', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const images = page.locator('.cmp-button img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const alt = await images.nth(i).getAttribute('alt');
-      expect(alt).not.toBeNull();
-    }
-  });
-});
+// BTN-019–020 removed: Image health tests are covered with scanImages() in button.images.spec.ts (BTN-024–027)
 
 test.describe('Button — Accessibility', () => {
   test('[BTN-021] @a11y @wcag22 @regression @smoke Button passes axe-core scan', async ({ page }) => {

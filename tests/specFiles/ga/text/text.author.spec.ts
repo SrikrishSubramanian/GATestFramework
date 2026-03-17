@@ -345,17 +345,7 @@ test.describe('Text — Console & Resources', () => {
 });
 
 test.describe('Text — Broken Images', () => {
-  test('[TEXT-047] @regression Text all images load successfully', async ({ page }) => {
-    const pom = new TextPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const images = page.locator('.cmp-text img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
+  // TEXT-047 removed: duplicate of TEXT-043 (both check naturalWidth on .cmp-text img)
 
   test('[TEXT-048] @regression Text all images have alt attributes', async ({ page }) => {
     const pom = new TextPage(page);

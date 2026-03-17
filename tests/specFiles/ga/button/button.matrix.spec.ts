@@ -7,17 +7,6 @@ test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
 
-// Authenticate with AEM Author before each test
-test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(`${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
-});
-
 
 // State Matrix: 108 total (72 valid, 36 invalid)
 
