@@ -14,6 +14,5 @@ logs/
 .aem-developer/
 tests/data/.snapshots/
 tests/data/baselines/
-tests/environments/.env.*
-!tests/environments/.env.local
+tests/environments/.env.*.credentials
 
