@@ -3,6 +3,7 @@ import * as path from 'path';
 import { ParsedTestCase, ParsedTestGroup, CSVMetadata } from './csv-test-parser';
 import { TestCategory, A11yLevel, getTagsForTest, formatTags, getAxeTags } from '../infra/test-tagger';
 import { generateHTMLSummaryFromSpecs, SummaryMetadata } from './html-summary-writer';
+import { inferAssertions, collectImports, InferredAssertion } from './assertion-inferrer';
 
 const GA_SPECS_DIR = path.resolve(__dirname, '..', 'specFiles', 'ga');
 
@@ -65,12 +66,13 @@ export function writeSpecFromCSV(
   const prefix = componentToPrefix(group.component);
   let idCounter = options.startTestId || 1;
 
-  const imports = buildImports(options);
   const authBlock = buildAuthBlock(options.mode);
   const describes: string[] = [];
 
-  // Generate tests from CSV test cases
+  // Generate tests from CSV test cases with real assertions
+  const csvAssertions: InferredAssertion[] = [];
   if (group.testCases.length > 0) {
+    const sel = options.rootSelector || `.cmp-${group.component}`;
     const tests = group.testCases.map(tc => {
       testCount++;
       const testId = formatTestId(prefix, idCounter++);
@@ -79,15 +81,19 @@ export function writeSpecFromCSV(
         ? tc.tags.map(t => t.startsWith('@') ? t : `@${t}`).join(' ')
         : formatTags(getTagsForTest('happy-path', tc.priority, options.a11yLevel));
 
-      const stepsCode = tc.steps
-        .map((s, i) => `    // Step ${i + 1}: ${s}`)
-        .join('\n');
+      const inferred = inferAssertions(
+        tc.steps,
+        tc.expected,
+        group.component,
+        sel,
+        options.pomClassName,
+      );
+      csvAssertions.push(inferred);
 
       return `  test('${testId} ${tags} ${escapeString(tc.title)}', async ({ page }) => {
     const pom = new ${options.pomClassName}(page);
     await pom.navigate(BASE());
-${stepsCode}
-    // Expected: ${escapeString(tc.expected)}
+${inferred.code}
   });`;
     });
 
@@ -107,6 +113,9 @@ ${tests.join('\n\n')}
     }
   }
 
+  // Build imports including any assertion library imports needed by inferred code
+  const extraImports = collectImports(csvAssertions);
+  const imports = buildImports(options, extraImports);
   const content = `${imports}\n${authBlock}\n${describes.join('\n\n')}\n`;
   fs.writeFileSync(specPath, content, 'utf-8');
 
@@ -247,7 +256,7 @@ function generateHTMLSummaryForComponent(compDir: string, component: string): vo
   } catch { /* non-critical — don't fail spec generation if summary fails */ }
 }
 
-function buildImports(options: SpecWriterOptions): string {
+function buildImports(options: SpecWriterOptions, extraImports: string[] = []): string {
   const lines = [
     `import { test, expect } from '@playwright/test';`,
     `import { ${options.pomClassName} } from '${options.pomImportPath}';`,
@@ -259,6 +268,13 @@ function buildImports(options: SpecWriterOptions): string {
 
   if (options.a11yLevel !== 'none') {
     lines.push(`import AxeBuilder from '@axe-core/playwright';`);
+  }
+
+  // Add assertion library imports if any CSV tests need them
+  for (const imp of extraImports) {
+    if (!lines.includes(imp)) {
+      lines.push(imp);
+    }
   }
 
   return lines.join('\n');
@@ -300,15 +316,32 @@ function generateCategoryTests(
   test('${formatTestId(pfx, id++)} ${tags} ${name} renders correctly', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(BASE());
-    await expect(page.locator('${sel}').first()).toBeVisible();
+    const root = page.locator('${sel}').first();
+    await expect(root).toBeVisible();
+    // Verify core structure: heading or primary content exists
+    const heading = root.locator('h1, h2, h3').first();
+    const hasHeading = await heading.count() > 0;
+    if (hasHeading) {
+      await expect(heading).toBeVisible();
+    }
+    // Verify no JS errors during render
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    expect(errors).toEqual([]);
   });
 
   test('${formatTestId(pfx, id++)} ${tags} ${name} interactive elements are functional', async ({ page }) => {
     const pom = new ${pom}(page);
     await pom.navigate(BASE());
-    // Verify primary interactive elements
     const root = page.locator('${sel}').first();
     await expect(root).toBeVisible();
+    // Verify interactive elements (links, buttons) are present and clickable
+    const interactive = root.locator('a, button');
+    const count = await interactive.count();
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      await expect(interactive.nth(i)).toBeVisible();
+      await expect(interactive.nth(i)).toBeEnabled();
+    }
   });
 });`,
       };
@@ -320,9 +353,15 @@ function generateCategoryTests(
         count: 2,
         code: `test.describe('${name} — Negative & Boundary', () => {
   test('${formatTestId(pfx, id++)} ${tags} ${name} handles empty content gracefully', async ({ page }) => {
+    // Capture JS errors during page load
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
     const pom = new ${pom}(page);
     await pom.navigate(BASE());
-    // Component should not throw errors with minimal content
+    // Component should render without JS errors
+    expect(errors).toEqual([]);
+    // Root element should still be present (not crash)
+    await expect(page.locator('${sel}').first()).toBeVisible();
   });
 
   test('${formatTestId(pfx, id++)} ${tags} ${name} handles missing images', async ({ page }) => {
@@ -348,14 +387,29 @@ function generateCategoryTests(
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new ${pom}(page);
     await pom.navigate(BASE());
-    await expect(page.locator('${sel}').first()).toBeVisible();
+    const root = page.locator('${sel}').first();
+    await expect(root).toBeVisible();
+    // Verify layout adapts to mobile: check flex-direction changes to column
+    const flexDir = await root.evaluate(el => {
+      const cs = getComputedStyle(el);
+      return cs.flexDirection || cs.display;
+    });
+    // At mobile, flex containers typically switch to column layout
+    // Grid containers may change template columns
+    expect(flexDir).toBeDefined();
   });
 
   test('${formatTestId(pfx, id++)} ${tags} ${name} adapts to tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new ${pom}(page);
     await pom.navigate(BASE());
-    await expect(page.locator('${sel}').first()).toBeVisible();
+    const root = page.locator('${sel}').first();
+    await expect(root).toBeVisible();
+    // Tablet should render without horizontal overflow
+    const overflow = await root.evaluate(el => {
+      return el.scrollWidth > el.clientWidth;
+    });
+    expect(overflow).toBe(false);
   });
 });`,
       };

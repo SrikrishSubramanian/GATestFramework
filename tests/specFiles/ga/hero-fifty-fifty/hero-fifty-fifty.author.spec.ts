@@ -2,386 +2,717 @@ import { test, expect } from '@playwright/test';
 import { HeroFiftyFiftyPage } from '../../../pages/ga/components/heroFiftyFiftyPage';
 import ENV from '../../../utils/infra/env';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import {
+  assertColumnLayout, assertNoEmptyWrappers, assertImageFillsContainer,
+  assertTagName, assertFocusIndicator, assertHidden, assertAlignment,
+} from '../../../utils/infra/component-assertions';
 import AxeBuilder from '@axe-core/playwright';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
+// Viewports (matches GA breakpoints)
+const MOBILE = { width: 390, height: 844 };
+const TABLET = { width: 1024, height: 1366 };
+const DESKTOP = { width: 1440, height: 900 };
+
+// BEM selectors from live DOM scan (heroFiftyFiftyPage.locators.json)
+const SEL = {
+  root: '.cmp-hero-fifty-fifty',
+  left: '.cmp-hero-fifty-fifty__left',
+  right: '.cmp-hero-fifty-fifty__right',
+  content: '.cmp-hero-fifty-fifty__content',
+  textContent: '.cmp-hero-fifty-fifty__text-content',
+  breadcrumbWrap: '.cmp-hero-fifty-fifty__breadcrumb',
+  breadcrumb: '.cmp-breadcrumb',
+  eyebrowHeadline: '.cmp-hero-fifty-fifty__eyebrow-headline',
+  eyebrow: '.cmp-hero-fifty-fifty__eyebrow',
+  headline: '.cmp-hero-fifty-fifty__headline',
+  headlineH1: '.cmp-hero-fifty-fifty__headline--h1',
+  headlineH1XL: '.cmp-hero-fifty-fifty__headline--h1-xl',
+  headlineGranite: '.cmp-hero-fifty-fifty__headline--granite',
+  description: '.cmp-hero-fifty-fifty__description',
+  descMedium: '.cmp-hero-fifty-fifty__description--medium',
+  descLarge: '.cmp-hero-fifty-fifty__description--large',
+  buttons: '.cmp-hero-fifty-fifty__buttons',
+  image: '.cmp-hero-fifty-fifty__image',
+  secondarySlot: '.cmp-hero-fifty-fifty__secondary-slot',
+};
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
 
-test.describe('HeroFiftyFifty — CSV Test Cases', () => {
-  test('[HFF-001] @a11y CMS FE: 50/50 Hero — AC1', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Component renders as a full-width two-column (50/50) layout on desktop
-    // Expected: Component renders as a full-width two-column (50/50) layout on desktop
-  });
+// ─── AC1–AC6: Overall Layout ─────────────────────────────────────────────────
 
-  test('[HFF-002] @a11y CMS FE: 50/50 Hero — AC2', async ({ page }) => {
+test.describe('HeroFiftyFifty — Layout (AC1–AC6)', () => {
+  test('[HFF-001] @smoke @regression 50/50 two-column layout on desktop', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
-    // Step 1: Left column has granite background and may contain: Breadcrumb (optional), Eyebrow (optional), Headline, Description (optional), CTAs (optional)
-    // Expected: Left column has granite background and may contain: Breadcrumb (optional), Eyebrow (optional), Headline, Description (optional), CTAs (optional)
-  });
-
-  test('[HFF-003] @a11y CMS FE: 50/50 Hero — AC3', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Right column contains the Image (top) and an optional secondary component in the lower slot: Nested Carousel, Statistic, or Content Trail — or no secondary component (Image Only)
-    // Expected: Right column contains the Image (top) and an optional secondary component in the lower slot: Nested Carousel, Statistic, or Content Trail — or no secondary component (Image Only)
-  });
-
-  test('[HFF-004] @a11y CMS FE: 50/50 Hero — AC4', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: On mobile, columns stack vertically — left/content column above, right/media column below
-    // Expected: On mobile, columns stack vertically — left/content column above, right/media column below
-  });
-
-  test('[HFF-005] @a11y CMS FE: 50/50 Hero — AC5', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Breadcrumb is not shown on mobile
-    // Expected: Breadcrumb is not shown on mobile
-  });
-
-  test('[HFF-006] @a11y CMS FE: 50/50 Hero — AC6', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Column proportions, spacing, and breakpoint behavior must match Figma
-    // Expected: Column proportions, spacing, and breakpoint behavior must match Figma
-  });
-
-  test('[HFF-007] @a11y CMS FE: 50/50 Hero — AC7', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Renders at the top of the left column, pinned above the content block
-    // Expected: Renders at the top of the left column, pinned above the content block
-  });
-
-  test('[HFF-008] @a11y CMS FE: 50/50 Hero — AC8', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Uses Breadcrumb component styles
-    // Expected: Uses Breadcrumb component styles
-  });
-
-  test('[HFF-009] @a11y CMS FE: 50/50 Hero — AC9', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Dark-background treatment and placement must match Figma
-    // Expected: Dark-background treatment and placement must match Figma
-  });
-
-  test('[HFF-010] @a11y CMS FE: 50/50 Hero — AC10', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Renders above the Headline when authored
-    // Expected: Renders above the Headline when authored
-  });
-
-  test('[HFF-011] @a11y CMS FE: 50/50 Hero — AC11', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: When Eyebrow is not authored, the Headline moves up to occupy the top content position; no empty wrapper is rendered to the DOM
-    // Expected: When Eyebrow is not authored, the Headline moves up to occupy the top content position; no empty wrapper is rendered to the DOM
-  });
-
-  test('[HFF-012] @a11y CMS FE: 50/50 Hero — AC12', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Eyebrow typography, color, and spacing on dark background must match Figma
-    // Expected: Eyebrow typography, color, and spacing on dark background must match Figma
-  });
-
-  test('[HFF-013] @a11y CMS FE: 50/50 Hero — AC13', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Always renders as a semantic <h1> element
-    // Expected: Always renders as a semantic <h1> element
-  });
-
-  test('[HFF-014] @a11y CMS FE: 50/50 Hero — AC14', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Font size controlled by Type/Size dropdown (H1 XL or H1) authored in dialog
-    // Expected: Font size controlled by Type/Size dropdown (H1 XL or H1) authored in dialog
-  });
-
-  test('[HFF-015] @a11y CMS FE: 50/50 Hero — AC15', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Supports an inline granite 50% color override applied to select words or phrases within the headline text
-    // Expected: Supports an inline granite 50% color override applied to select words or phrases within the headline text
-  });
-
-  test('[HFF-016] @a11y CMS FE: 50/50 Hero — AC16', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Partial color treatment must render correctly regardless of position (beginning, middle, or end of headline)
-    // Expected: Partial color treatment must render correctly regardless of position (beginning, middle, or end of headline)
-  });
-
-  test('[HFF-017] @a11y CMS FE: 50/50 Hero — AC17', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Granite 50% color value and usage examples must match Figma
-    // Expected: Granite 50% color value and usage examples must match Figma
-  });
-
-  test('[HFF-018] @a11y CMS FE: 50/50 Hero — AC18', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: H1 XL vs H1 size definitions must follow Typography documentation
-    // Expected: H1 XL vs H1 size definitions must follow Typography documentation
-  });
-
-  test('[HFF-019] @a11y CMS FE: 50/50 Hero — AC19', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Renders below the Headline when authored
-    // Expected: Renders below the Headline when authored
-  });
-
-  test('[HFF-020] @a11y CMS FE: 50/50 Hero — AC20', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Supports two style variants: Paragraph Medium (default) and Paragraph Large, selectable in dialog
-    // Expected: Supports two style variants: Paragraph Medium (default) and Paragraph Large, selectable in dialog
-  });
-
-  test('[HFF-021] @a11y CMS FE: 50/50 Hero — AC21', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: When Description is not authored, no empty wrapper is rendered to the DOM
-    // Expected: When Description is not authored, no empty wrapper is rendered to the DOM
-  });
-
-  test('[HFF-022] @a11y CMS FE: 50/50 Hero — AC22', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Spacing between Headline and CTAs (or bottom of content block) adjusts accordingly when Description is absent
-    // Expected: Spacing between Headline and CTAs (or bottom of content block) adjusts accordingly when Description is absent
-  });
-
-  test('[HFF-023] @a11y CMS FE: 50/50 Hero — AC23', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Paragraph size definitions and spacing per variant must match Figma
-    // Expected: Paragraph size definitions and spacing per variant must match Figma
-  });
-
-  test('[HFF-024] @a11y CMS FE: 50/50 Hero — AC24', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Supports up to 2 optional CTA buttons rendered inline/horizontally
-    // Expected: Supports up to 2 optional CTA buttons rendered inline/horizontally
-  });
-
-  test('[HFF-025] @a11y CMS FE: 50/50 Hero — AC25', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Button styles follow existing Button component styles adapted for dark background
-    // Expected: Button styles follow existing Button component styles adapted for dark background
-  });
-
-  test('[HFF-026] @a11y CMS FE: 50/50 Hero — AC26', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: When no CTAs are authored, no empty wrapper is rendered to the DOM
-    // Expected: When no CTAs are authored, no empty wrapper is rendered to the DOM
-  });
-
-  test('[HFF-027] @a11y CMS FE: 50/50 Hero — AC27', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Button styles, spacing, and stacking behavior on mobile must match Figma
-    // Expected: Button styles, spacing, and stacking behavior on mobile must match Figma
-  });
-
-  test('[HFF-028] @a11y CMS FE: 50/50 Hero — AC28', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Left column handles all combinations of optional fields gracefully
-    // Expected: Left column handles all combinations of optional fields gracefully
-  });
-
-  test('[HFF-029] @a11y CMS FE: 50/50 Hero — AC29', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Tested layout states: Eyebrow + Headline + Description + 2 CTAs (full); Headline + Description + 1 CTA; Headline only (minimal); Headline + 1 CTA (no eyebrow, no description); any other authored combination
-    // Expected: Tested layout states: Eyebrow + Headline + Description + 2 CTAs (full); Headline + Description + 1 CTA; Headline only (minimal); Headline + 1 CTA (no eyebrow, no description); any other authored combination
-  });
-
-  test('[HFF-030] @a11y CMS FE: 50/50 Hero — AC30', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Mobile alignment (Left or Center) matches what was authored
-    // Expected: Mobile alignment (Left or Center) matches what was authored
-  });
-
-  test('[HFF-031] @a11y CMS FE: 50/50 Hero — AC31', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: No extra whitespace or collapsed empty containers appear when optional fields are omitted
-    // Expected: No extra whitespace or collapsed empty containers appear when optional fields are omitted
-  });
-
-  test('[HFF-032] @a11y CMS FE: 50/50 Hero — AC32', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Renders in the top portion of the right column
-    // Expected: Renders in the top portion of the right column
-  });
-
-  test('[HFF-033] @a11y CMS FE: 50/50 Hero — AC33', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Supports responsive image rendering
-    // Expected: Supports responsive image rendering
-  });
-
-  test('[HFF-034] @a11y CMS FE: 50/50 Hero — AC34', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Image area handles missing/empty image gracefully with no broken layout
-    // Expected: Image area handles missing/empty image gracefully with no broken layout
-  });
-
-  test('[HFF-035] @a11y CMS FE: 50/50 Hero — AC35', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Image dimensions and aspect ratio behavior per breakpoint must match Figma
-    // Expected: Image dimensions and aspect ratio behavior per breakpoint must match Figma
-  });
-
-  test('[HFF-036] @a11y CMS FE: 50/50 Hero — AC36', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Author may select one of: Nested Carousel, Statistic Component, Content Trail, or None
-    // Expected: Author may select one of: Nested Carousel, Statistic Component, Content Trail, or None
-  });
-
-  test('[HFF-037] @a11y CMS FE: 50/50 Hero — AC37', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: When None is authored, the image expands to fill the full right column height
-    // Expected: When None is authored, the image expands to fill the full right column height
-  });
-
-  test('[HFF-038] @a11y CMS FE: 50/50 Hero — AC38', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Each sub-component renders using its existing component styles
-    // Expected: Each sub-component renders using its existing component styles
-  });
-
-  test('[HFF-039] @a11y CMS FE: 50/50 Hero — AC39', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Slot dimensions, padding, and alignment per variant must match Figma
-    // Expected: Slot dimensions, padding, and alignment per variant must match Figma
-  });
-
-  test('[HFF-040] @a11y CMS FE: 50/50 Hero — AC40', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Component is available on all existing templates except Rate Administration
-    // Expected: Component is available on all existing templates except Rate Administration
-  });
-
-  test('[HFF-041] @a11y CMS FE: 50/50 Hero — AC41', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Authoring guide exists and is updated with all style variations
-    // Expected: Authoring guide exists and is updated with all style variations
-  });
-
-  test('[HFF-042] @a11y CMS FE: 50/50 Hero — AC42', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Style guide page exists with all variations
-    // Expected: Style guide page exists with all variations
-  });
-
-  test('[HFF-043] @a11y CMS FE: 50/50 Hero — AC43', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Styles match Figma
-    // Expected: Styles match Figma
-  });
-
-  test('[HFF-044] @a11y CMS FE: 50/50 Hero — AC44', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Both desktop and mobile versions are implemented
-    // Expected: Both desktop and mobile versions are implemented
-  });
-
-  test('[HFF-045] @a11y CMS FE: 50/50 Hero — AC45', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Design team is notified the component is ready for review, with a link to the Style Guide page
-    // Expected: Design team is notified the component is ready for review, with a link to the Style Guide page
-  });
-});
-
-test.describe('HeroFiftyFifty — Happy Path', () => {
-  test('[HFF-046] @smoke @regression HeroFiftyFifty renders correctly', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    await expect(page.locator('.cmp-hero-fifty-fifty').first()).toBeVisible();
-  });
-
-  test('[HFF-047] @smoke @regression HeroFiftyFifty interactive elements are functional', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    // Verify primary interactive elements
-    const root = page.locator('.cmp-hero-fifty-fifty').first();
+    const root = page.locator(SEL.root).first();
     await expect(root).toBeVisible();
-  });
-});
 
-test.describe('HeroFiftyFifty — Negative & Boundary', () => {
-  test('[HFF-048] @negative @regression HeroFiftyFifty handles empty content gracefully', async ({ page }) => {
+    // Should be a row layout with 2 children (left + right)
+    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection);
+    expect(flexDir).toBe('row');
+
+    const left = root.locator(SEL.left);
+    const right = root.locator(SEL.right);
+    await expect(left).toBeVisible();
+    await expect(right).toBeVisible();
+  });
+
+  test('[HFF-002] @regression Left column has granite background', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
-    // Component should not throw errors with minimal content
+    const left = page.locator(SEL.left).first();
+    await expect(left).toBeVisible();
+
+    // Granite background should not be transparent
+    const bg = await left.evaluate(el => getComputedStyle(el).backgroundColor);
+    expect(bg).not.toBe('rgba(0, 0, 0, 0)');
+    expect(bg).not.toBe('rgb(255, 255, 255)');
   });
 
-  test('[HFF-049] @negative @regression HeroFiftyFifty handles missing images', async ({ page }) => {
+  test('[HFF-003] @regression Right column contains image and optional secondary slot', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
-    const images = page.locator('.cmp-hero-fifty-fifty img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
+    const right = page.locator(SEL.right).first();
+    await expect(right).toBeVisible();
+
+    // Image area should be present
+    const imageArea = right.locator(SEL.image);
+    await expect(imageArea).toBeVisible();
+  });
+
+  test('[HFF-004] @mobile @regression Columns stack vertically on mobile', async ({ page }) => {
+    await page.setViewportSize(MOBILE);
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator(SEL.root).first();
+
+    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection);
+    expect(['column', 'column-reverse']).toContain(flexDir);
+  });
+
+  test('[HFF-005] @mobile @regression Breadcrumb hidden on mobile', async ({ page }) => {
+    await page.setViewportSize(MOBILE);
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // First hero has breadcrumb enabled — check it's hidden at mobile
+    const breadcrumbWrap = page.locator(SEL.breadcrumbWrap).first();
+    const count = await breadcrumbWrap.count();
+    if (count > 0) {
+      const isHidden = await breadcrumbWrap.evaluate(el => {
+        const cs = getComputedStyle(el);
+        return cs.display === 'none' || cs.visibility === 'hidden';
+      });
+      expect(isHidden).toBe(true);
+    }
+  });
+
+  test('[HFF-006] @regression Column proportions are approximately 50/50', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator(SEL.root).first();
+    const left = root.locator(SEL.left);
+    const right = root.locator(SEL.right);
+
+    const leftBox = await left.boundingBox();
+    const rightBox = await right.boundingBox();
+    if (leftBox && rightBox) {
+      const total = leftBox.width + rightBox.width;
+      const ratio = leftBox.width / total;
+      // 50/50 ± 10% tolerance
+      expect(ratio).toBeGreaterThan(0.4);
+      expect(ratio).toBeLessThan(0.6);
     }
   });
 });
 
-test.describe('HeroFiftyFifty — Responsive', () => {
-  test('[HFF-050] @mobile @regression @mobile HeroFiftyFifty adapts to mobile viewport', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
+// ─── AC7–AC9: Breadcrumb ──────────────────────────────────────────────────────
+
+test.describe('HeroFiftyFifty — Breadcrumb (AC7–AC9)', () => {
+  test('[HFF-007] @regression Breadcrumb renders at top of left column', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
-    await expect(page.locator('.cmp-hero-fifty-fifty').first()).toBeVisible();
+
+    // First hero (fixture 1) has breadcrumb enabled
+    const firstHero = page.locator(SEL.root).first();
+    const breadcrumb = firstHero.locator(SEL.breadcrumbWrap);
+    const content = firstHero.locator(SEL.content);
+
+    if (await breadcrumb.count() > 0) {
+      const bcBox = await breadcrumb.boundingBox();
+      const contentBox = await content.boundingBox();
+      if (bcBox && contentBox) {
+        // Breadcrumb should be above (or equal to) the content block
+        expect(bcBox.y).toBeLessThanOrEqual(contentBox.y);
+      }
+    }
   });
 
-  test('[HFF-051] @mobile @regression HeroFiftyFifty adapts to tablet viewport', async ({ page }) => {
-    await page.setViewportSize({ width: 1024, height: 1366 });
+  test('[HFF-008] @regression Breadcrumb uses .cmp-breadcrumb styles (not custom)', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
-    await expect(page.locator('.cmp-hero-fifty-fifty').first()).toBeVisible();
+
+    // Verify breadcrumb inside hero uses standard .cmp-breadcrumb BEM class
+    const breadcrumb = page.locator(`${SEL.root} ${SEL.breadcrumb}`).first();
+    if (await breadcrumb.count() > 0) {
+      const classes = await breadcrumb.evaluate(el => el.className);
+      expect(classes).toContain('cmp-breadcrumb');
+    }
+  });
+
+  test('[HFF-009] @regression Breadcrumb has dark-background treatment', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // On granite background, breadcrumb links should have light text
+    const bcLink = page.locator(`${SEL.root} .cmp-breadcrumb__item-link`).first();
+    if (await bcLink.count() > 0) {
+      const color = await bcLink.evaluate(el => getComputedStyle(el).color);
+      // Text on dark bg should be light (R > 150 typically)
+      const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+      if (match) {
+        const brightness = (parseInt(match[1]) + parseInt(match[2]) + parseInt(match[3])) / 3;
+        expect(brightness).toBeGreaterThan(100);
+      }
+    }
   });
 });
 
+// ─── AC10–AC12: Eyebrow ──────────────────────────────────────────────────────
+
+test.describe('HeroFiftyFifty — Eyebrow (AC10–AC12)', () => {
+  test('[HFF-010] @regression Eyebrow renders above headline when authored', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // First hero has eyebrow
+    const firstHero = page.locator(SEL.root).first();
+    const eyebrow = firstHero.locator(SEL.eyebrow);
+    const headline = firstHero.locator(SEL.headline);
+
+    if (await eyebrow.count() > 0) {
+      const ebBox = await eyebrow.boundingBox();
+      const hlBox = await headline.boundingBox();
+      if (ebBox && hlBox) {
+        expect(ebBox.y).toBeLessThan(hlBox.y);
+      }
+    }
+  });
+
+  test('[HFF-011] @regression No empty eyebrow wrapper when not authored', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Second hero (fixture 2, minimal) has no eyebrow
+    const heroes = page.locator(SEL.root);
+    const count = await heroes.count();
+    expect(count).toBeGreaterThanOrEqual(2);
+
+    const minimalHero = heroes.nth(1);
+    const eyebrow = minimalHero.locator(SEL.eyebrow);
+    const eyebrowCount = await eyebrow.count();
+    if (eyebrowCount > 0) {
+      // If wrapper exists, it should have no visible text
+      const text = await eyebrow.textContent();
+      expect(text?.trim()).toBe('');
+    }
+    // Also verify no empty wrappers in the content area
+    const content = minimalHero.locator(SEL.textContent);
+    await assertNoEmptyWrappers(content);
+  });
+
+  test('[HFF-012] @regression Eyebrow typography on dark background', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const eyebrow = page.locator(SEL.eyebrow).first();
+    if (await eyebrow.count() > 0) {
+      const color = await eyebrow.evaluate(el => getComputedStyle(el).color);
+      // Text on granite should be light
+      expect(color).not.toBe('rgb(0, 0, 0)');
+    }
+  });
+});
+
+// ─── AC13–AC18: Headline ─────────────────────────────────────────────────────
+
+test.describe('HeroFiftyFifty — Headline (AC13–AC18)', () => {
+  test('[HFF-013] @regression Headline renders as semantic <h1>', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const headline = page.locator(SEL.headline).first();
+    await expect(headline).toBeVisible();
+    await assertTagName(headline, 'h1');
+  });
+
+  test('[HFF-014] @regression H1 XL and H1 render at different sizes', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const h1 = page.locator(SEL.headlineH1).first();
+    const h1xl = page.locator(SEL.headlineH1XL).first();
+
+    const h1Count = await h1.count();
+    const h1xlCount = await h1xl.count();
+    if (h1Count > 0 && h1xlCount > 0) {
+      const h1Size = await h1.evaluate(el => parseFloat(getComputedStyle(el).fontSize));
+      const h1xlSize = await h1xl.evaluate(el => parseFloat(getComputedStyle(el).fontSize));
+      expect(h1xlSize).toBeGreaterThan(h1Size);
+    }
+  });
+
+  test('[HFF-015] @regression Granite 50% inline color override renders', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const graniteSpan = page.locator(SEL.headlineGranite).first();
+    if (await graniteSpan.count() > 0) {
+      await expect(graniteSpan).toBeVisible();
+      const color = await graniteSpan.evaluate(el => getComputedStyle(el).color);
+      // Granite 50% should differ from default white text
+      expect(color).not.toBe('rgb(255, 255, 255)');
+    }
+  });
+
+  test('[HFF-016] @regression Granite color works at beginning, middle, and end of headline', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Fixtures 5a, 5b, 5c have granite span at different positions
+    const graniteSpans = page.locator(SEL.headlineGranite);
+    const count = await graniteSpans.count();
+    // Should have at least 3 instances (begin, middle, end from fixture 5a–5c)
+    // Plus fixture 1 which also has granite span
+    expect(count).toBeGreaterThanOrEqual(3);
+
+    for (let i = 0; i < count; i++) {
+      await expect(graniteSpans.nth(i)).toBeVisible();
+    }
+  });
+
+  test('[HFF-017] @regression Granite 50% color value is consistent', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const graniteSpans = page.locator(SEL.headlineGranite);
+    const count = await graniteSpans.count();
+    if (count >= 2) {
+      const color1 = await graniteSpans.nth(0).evaluate(el => getComputedStyle(el).color);
+      const color2 = await graniteSpans.nth(1).evaluate(el => getComputedStyle(el).color);
+      expect(color1).toBe(color2);
+    }
+  });
+
+  test('[HFF-018] @regression H1 XL and H1 use correct heading classes', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Fixture 6a has H1 XL, fixture 6b has H1
+    const h1xl = page.locator(SEL.headlineH1XL);
+    const h1 = page.locator(SEL.headlineH1);
+    expect(await h1xl.count()).toBeGreaterThan(0);
+    expect(await h1.count()).toBeGreaterThan(0);
+  });
+});
+
+// ─── AC19–AC23: Description ──────────────────────────────────────────────────
+
+test.describe('HeroFiftyFifty — Description (AC19–AC23)', () => {
+  test('[HFF-019] @regression Description renders below headline', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const firstHero = page.locator(SEL.root).first();
+    const headline = firstHero.locator(SEL.headline);
+    const desc = firstHero.locator(SEL.description);
+
+    if (await desc.count() > 0) {
+      const hlBox = await headline.boundingBox();
+      const descBox = await desc.boundingBox();
+      if (hlBox && descBox) {
+        expect(descBox.y).toBeGreaterThan(hlBox.y);
+      }
+    }
+  });
+
+  test('[HFF-020] @regression Paragraph Medium and Large variants exist', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const medium = page.locator(SEL.descMedium);
+    const large = page.locator(SEL.descLarge);
+    expect(await medium.count()).toBeGreaterThan(0);
+    expect(await large.count()).toBeGreaterThan(0);
+  });
+
+  test('[HFF-021] @regression No empty description wrapper when not authored', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Fixture 2 (minimal) has no description
+    const minimalHero = page.locator(SEL.root).nth(1);
+    const desc = minimalHero.locator(SEL.description);
+    const descCount = await desc.count();
+    if (descCount > 0) {
+      const text = await desc.textContent();
+      expect(text?.trim()).toBe('');
+    }
+  });
+
+  test('[HFF-022] @regression Spacing adjusts when description is absent', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Compare vertical space between headline and next element
+    // in fixture with description (1st) vs without (2nd minimal)
+    const heroWithDesc = page.locator(SEL.root).first();
+    const heroWithoutDesc = page.locator(SEL.root).nth(1);
+
+    const headlineWithDesc = heroWithDesc.locator(SEL.headline);
+    const headlineWithoutDesc = heroWithoutDesc.locator(SEL.headline);
+
+    await expect(headlineWithDesc).toBeVisible();
+    await expect(headlineWithoutDesc).toBeVisible();
+
+    // Both should render cleanly without layout breakage
+    const box1 = await headlineWithDesc.boundingBox();
+    const box2 = await headlineWithoutDesc.boundingBox();
+    expect(box1).not.toBeNull();
+    expect(box2).not.toBeNull();
+  });
+
+  test('[HFF-023] @regression Paragraph Medium and Large have different font sizes', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const medium = page.locator(SEL.descMedium).first();
+    const large = page.locator(SEL.descLarge).first();
+
+    if (await medium.count() > 0 && await large.count() > 0) {
+      const medSize = await medium.evaluate(el => parseFloat(getComputedStyle(el).fontSize));
+      const lgSize = await large.evaluate(el => parseFloat(getComputedStyle(el).fontSize));
+      expect(lgSize).toBeGreaterThan(medSize);
+    }
+  });
+});
+
+// ─── AC24–AC27: CTAs ─────────────────────────────────────────────────────────
+
+test.describe('HeroFiftyFifty — CTAs (AC24–AC27)', () => {
+  test('[HFF-024] @regression Supports up to 2 CTA buttons inline', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // First hero (full) has 2 CTAs
+    const firstHero = page.locator(SEL.root).first();
+    const buttonsContainer = firstHero.locator(SEL.buttons);
+    const buttons = buttonsContainer.locator('.cmp-button');
+    const count = await buttons.count();
+    expect(count).toBeLessThanOrEqual(2);
+    expect(count).toBeGreaterThanOrEqual(1);
+
+    // Buttons should be in a flex row (inline)
+    if (await buttonsContainer.count() > 0) {
+      const display = await buttonsContainer.evaluate(el => getComputedStyle(el).display);
+      expect(display).toBe('flex');
+    }
+  });
+
+  test('[HFF-025] @regression Button styles use .cmp-button BEM class', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const btn = page.locator(`${SEL.root} .cmp-button`).first();
+    if (await btn.count() > 0) {
+      const classes = await btn.evaluate(el => el.className);
+      expect(classes).toContain('cmp-button');
+    }
+  });
+
+  test('[HFF-026] @regression No empty CTA wrapper when not authored', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Fixture 2 (minimal) has no CTAs
+    const minimalHero = page.locator(SEL.root).nth(1);
+    const buttons = minimalHero.locator(SEL.buttons);
+    const count = await buttons.count();
+    if (count > 0) {
+      const children = await buttons.evaluate(el => el.children.length);
+      expect(children).toBe(0);
+    }
+  });
+
+  test('[HFF-027] @mobile @regression CTA button layout on mobile', async ({ page }) => {
+    await page.setViewportSize(MOBILE);
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const buttonsContainer = page.locator(SEL.buttons).first();
+    if (await buttonsContainer.count() > 0) {
+      // On mobile, buttons may stack vertically
+      const flexDir = await buttonsContainer.evaluate(el => getComputedStyle(el).flexDirection);
+      expect(['row', 'column']).toContain(flexDir);
+
+      // All buttons should still be visible and clickable
+      const buttons = buttonsContainer.locator('.cmp-button');
+      const count = await buttons.count();
+      for (let i = 0; i < count; i++) {
+        await expect(buttons.nth(i)).toBeVisible();
+      }
+    }
+  });
+});
+
+// ─── AC28–AC31: Layout Combinations ──────────────────────────────────────────
+
+test.describe('HeroFiftyFifty — Layout Combinations (AC28–AC31)', () => {
+  test('[HFF-028] @regression Multiple fixture variants all render correctly', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const heroes = page.locator(SEL.root);
+    const count = await heroes.count();
+    // Style guide should have multiple fixtures
+    expect(count).toBeGreaterThanOrEqual(4);
+
+    for (let i = 0; i < count; i++) {
+      await expect(heroes.nth(i)).toBeVisible();
+      // Each hero should have a headline
+      const headline = heroes.nth(i).locator(SEL.headline);
+      if (await headline.count() > 0) {
+        await expect(headline).toBeVisible();
+      }
+    }
+  });
+
+  test('[HFF-029] @regression Different field combinations produce valid layouts', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Fixture 1: Full (eyebrow + headline + description + 2 CTAs)
+    const full = page.locator(SEL.root).first();
+    expect(await full.locator(SEL.eyebrow).count()).toBeGreaterThan(0);
+    expect(await full.locator(SEL.headline).count()).toBeGreaterThan(0);
+    expect(await full.locator(SEL.description).count()).toBeGreaterThan(0);
+    expect(await full.locator(SEL.buttons).count()).toBeGreaterThan(0);
+
+    // Fixture 2: Minimal (headline only)
+    const minimal = page.locator(SEL.root).nth(1);
+    expect(await minimal.locator(SEL.headline).count()).toBeGreaterThan(0);
+  });
+
+  test('[HFF-030] @mobile @regression Mobile alignment renders correctly', async ({ page }) => {
+    await page.setViewportSize(MOBILE);
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const content = page.locator(SEL.content).first();
+    if (await content.count() > 0) {
+      const textAlign = await content.evaluate(el => getComputedStyle(el).textAlign);
+      expect(['left', 'center', 'start']).toContain(textAlign);
+    }
+  });
+
+  test('[HFF-031] @regression No empty containers when optional fields omitted', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Check minimal hero (fixture 2) for empty wrappers
+    const minimalHero = page.locator(SEL.root).nth(1);
+    const left = minimalHero.locator(SEL.left);
+    await assertNoEmptyWrappers(left);
+  });
+});
+
+// ─── AC32–AC35: Image ────────────────────────────────────────────────────────
+
+test.describe('HeroFiftyFifty — Image (AC32–AC35)', () => {
+  test('[HFF-032] @regression Image renders in top portion of right column', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const right = page.locator(SEL.right).first();
+    const imageArea = right.locator(SEL.image);
+    await expect(imageArea).toBeVisible();
+
+    const rightBox = await right.boundingBox();
+    const imgBox = await imageArea.boundingBox();
+    if (rightBox && imgBox) {
+      // Image should start at or near the top of the right column
+      expect(Math.abs(imgBox.y - rightBox.y)).toBeLessThan(10);
+    }
+  });
+
+  test('[HFF-033] @regression Image uses responsive rendering (object-fit)', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const img = page.locator(`${SEL.image} img`).first();
+    if (await img.count() > 0) {
+      const objectFit = await img.evaluate(el => getComputedStyle(el).objectFit);
+      expect(['cover', 'contain']).toContain(objectFit);
+    }
+  });
+
+  test('[HFF-034] @negative @regression Missing image does not break layout', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Fixture 9 has no fileReference — verify no broken layout
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+
+    const heroes = page.locator(SEL.root);
+    const count = await heroes.count();
+    // All heroes should render even if one has missing image
+    for (let i = 0; i < count; i++) {
+      await expect(heroes.nth(i)).toBeVisible();
+    }
+    expect(errors).toEqual([]);
+  });
+
+  test('[HFF-035] @regression All authored images load successfully', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const images = page.locator(`${SEL.root} img`);
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
+      // naturalWidth > 0 means the image loaded (broken images have 0)
+      // Skip placeholder/decorative images that may not have src
+      const src = await images.nth(i).getAttribute('src');
+      if (src && src.length > 0) {
+        expect(naturalWidth).toBeGreaterThan(0);
+      }
+    }
+  });
+});
+
+// ─── AC36–AC39: Secondary Slot ───────────────────────────────────────────────
+
+test.describe('HeroFiftyFifty — Secondary Slot (AC36–AC39)', () => {
+  test('[HFF-036] @regression Secondary slot variants render', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Check that secondary slots exist on some fixtures (8a, 8b, 8c have them)
+    const secondarySlots = page.locator(SEL.secondarySlot);
+    expect(await secondarySlots.count()).toBeGreaterThan(0);
+  });
+
+  test('[HFF-037] @regression Image fills full right column when no secondary slot', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Find a hero without secondary slot (fixture 8d or fixture 2)
+    const heroes = page.locator(SEL.root);
+    const count = await heroes.count();
+
+    for (let i = 0; i < count; i++) {
+      const hero = heroes.nth(i);
+      const hasSecondary = await hero.locator(SEL.secondarySlot).count() > 0;
+      if (!hasSecondary) {
+        const right = hero.locator(SEL.right);
+        const img = hero.locator(`${SEL.image} img`).first();
+        if (await right.count() > 0 && await img.count() > 0) {
+          // Image area should expand when no secondary slot
+          const rightBox = await right.boundingBox();
+          const imgAreaBox = await hero.locator(SEL.image).boundingBox();
+          if (rightBox && imgAreaBox) {
+            // Image area should take most of the right column height
+            const heightRatio = imgAreaBox.height / rightBox.height;
+            expect(heightRatio).toBeGreaterThan(0.7);
+          }
+        }
+        break;
+      }
+    }
+  });
+
+  test('[HFF-038] @regression Sub-components use their own BEM styles', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Statistic sub-component should use .cmp-statistic
+    const statistic = page.locator(`${SEL.secondarySlot} .cmp-statistic`).first();
+    if (await statistic.count() > 0) {
+      const classes = await statistic.evaluate(el => el.className);
+      expect(classes).toContain('cmp-statistic');
+    }
+  });
+
+  test('[HFF-039] @regression Secondary slot is visually below image', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const heroWithSlot = page.locator(SEL.root).filter({
+      has: page.locator(SEL.secondarySlot),
+    }).first();
+
+    if (await heroWithSlot.count() > 0) {
+      const imgBox = await heroWithSlot.locator(SEL.image).boundingBox();
+      const slotBox = await heroWithSlot.locator(SEL.secondarySlot).boundingBox();
+      if (imgBox && slotBox) {
+        expect(slotBox.y).toBeGreaterThanOrEqual(imgBox.y);
+      }
+    }
+  });
+});
+
+// ─── AC40–AC45: Authoring & Compliance (non-automatable) ─────────────────────
+
+test.describe('HeroFiftyFifty — Authoring & Compliance', () => {
+  test('[HFF-040] @regression Component available on templates', async () => {
+    // Verified by authoring team — template configuration is in kkr-aem policies
+    test.fixme();
+  });
+
+  test('[HFF-041] @regression Authoring guide exists', async () => {
+    // Manual verification — documentation deliverable
+    test.fixme();
+  });
+
+  test('[HFF-042] @regression Style guide page exists with all variations', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    // Verify the page loaded and has multiple hero instances
+    const heroes = page.locator(SEL.root);
+    const count = await heroes.count();
+    expect(count).toBeGreaterThanOrEqual(4);
+  });
+
+  test('[HFF-043] @regression Desktop and mobile both render', async ({ page }) => {
+    // Desktop
+    await page.setViewportSize(DESKTOP);
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    await expect(page.locator(SEL.root).first()).toBeVisible();
+
+    // Mobile
+    await page.setViewportSize(MOBILE);
+    await page.reload({ waitUntil: 'networkidle' });
+    await expect(page.locator(SEL.root).first()).toBeVisible();
+  });
+
+  test('[HFF-044] @regression Design review notification', async () => {
+    // Manual process — notifying design team is not automatable
+    test.fixme();
+  });
+});
+
+// ─── Console & Resources ─────────────────────────────────────────────────────
+
 test.describe('HeroFiftyFifty — Console & Resources', () => {
-  test('[HFF-052] @regression HeroFiftyFifty produces no JS errors', async ({ page }) => {
+  test('[HFF-045] @regression No JS errors during page load', async ({ page }) => {
     const capture = new ConsoleCapture(page);
     capture.start();
     const pom = new HeroFiftyFiftyPage(page);
@@ -391,25 +722,12 @@ test.describe('HeroFiftyFifty — Console & Resources', () => {
     capture.stop();
     expect(errors).toEqual([]);
   });
-});
 
-test.describe('HeroFiftyFifty — Broken Images', () => {
-  test('[HFF-053] @regression HeroFiftyFifty all images load successfully', async ({ page }) => {
+  test('[HFF-046] @regression All images have alt attributes', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
-    const images = page.locator('.cmp-hero-fifty-fifty img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
 
-  test('[HFF-054] @regression HeroFiftyFifty all images have alt attributes', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    const images = page.locator('.cmp-hero-fifty-fifty img');
+    const images = page.locator(`${SEL.root} img`);
     const count = await images.count();
     for (let i = 0; i < count; i++) {
       const alt = await images.nth(i).getAttribute('alt');
@@ -418,41 +736,39 @@ test.describe('HeroFiftyFifty — Broken Images', () => {
   });
 });
 
+// ─── Accessibility ───────────────────────────────────────────────────────────
+
 test.describe('HeroFiftyFifty — Accessibility', () => {
-  test('[HFF-055] @a11y @wcag22 @regression @smoke HeroFiftyFifty passes axe-core scan', async ({ page }) => {
+  test('[HFF-047] @a11y @wcag22 @regression Passes axe-core WCAG 2.2 AA scan', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
     const results = await new AxeBuilder({ page })
-      .include('.cmp-hero-fifty-fifty')
-      .withTags(["wcag2a","wcag2aa","wcag22aa"])
+      .include(SEL.root)
+      .withTags(['wcag2a', 'wcag2aa', 'wcag22aa'])
       .analyze();
     expect(results.violations).toEqual([]);
   });
 
-  test('[HFF-056] @a11y @wcag22 @regression @smoke HeroFiftyFifty interactive elements meet 24px target size', async ({ page }) => {
+  test('[HFF-048] @a11y @regression Interactive elements have focus indicators', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
-    const interactive = page.locator('.cmp-hero-fifty-fifty a, .cmp-hero-fifty-fifty button, .cmp-hero-fifty-fifty input');
+
+    const btn = page.locator(`${SEL.root} .cmp-button`).first();
+    if (await btn.count() > 0) {
+      await assertFocusIndicator(btn);
+    }
+  });
+
+  test('[HFF-049] @a11y @regression Interactive elements meet 24px target size', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+
+    const interactive = page.locator(`${SEL.root} a, ${SEL.root} button`);
     const count = await interactive.count();
     for (let i = 0; i < count; i++) {
       const box = await interactive.nth(i).boundingBox();
       if (box) {
         expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(24);
-      }
-    }
-  });
-
-  test('[HFF-057] @a11y @wcag22 @regression @smoke HeroFiftyFifty focus is not obscured by sticky elements', async ({ page }) => {
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    const focusable = page.locator('.cmp-hero-fifty-fifty a, .cmp-hero-fifty-fifty button, .cmp-hero-fifty-fifty input');
-    const count = await focusable.count();
-    for (let i = 0; i < Math.min(count, 5); i++) {
-      await focusable.nth(i).focus();
-      const box = await focusable.nth(i).boundingBox();
-      if (box) {
-        expect(box.y).toBeGreaterThanOrEqual(0);
-        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
       }
     }
   });

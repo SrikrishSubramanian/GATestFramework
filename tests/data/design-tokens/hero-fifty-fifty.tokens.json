@@ -1,0 +1,41 @@
+{
+  "component": "hero-fifty-fifty",
+  "figmaUrl": "https://www.figma.com/file/C7DwRfnSXu89s42cug1QyS?type=design&node-id=12366%3A11710&mode=dev",
+  "tokens": {
+    "layout": {
+      "desktop": { "columns": 2, "direction": "row", "columnRatio": "50/50" },
+      "mobile": { "columns": 1, "direction": "column" }
+    },
+    "leftColumn": {
+      "backgroundClass": "cmp-hero-fifty-fifty__left",
+      "padding": { "desktop": "60px 48px", "mobile": "40px 24px" },
+      "verticalGap": { "desktop": "24px", "mobile": "16px" },
+      "alignment": {
+        "withDescription": "flex-end",
+        "withoutDescription": "flex-start"
+      }
+    },
+    "rightColumn": {
+      "image": { "objectFit": "cover", "fillsContainer": true },
+      "secondaryOverlay": true
+    },
+    "typography": {
+      "headline": {
+        "h1xl": { "fontWeight": "700" },
+        "h1": { "fontWeight": "700" }
+      },
+      "eyebrow": {
+        "default": { "fontWeight": "400" }
+      }
+    },
+    "breadcrumb": {
+      "hiddenOnMobile": true,
+      "usesOwnStyles": true
+    },
+    "cta": {
+      "maxCount": 2,
+      "layout": "inline-horizontal",
+      "usesButtonStyles": true
+    }
+  }
+}

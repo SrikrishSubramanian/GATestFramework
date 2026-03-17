@@ -3,6 +3,8 @@ import { FeatureBannerPage } from '../../../pages/ga/components/featureBannerPag
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
+const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
@@ -10,7 +12,7 @@ test.beforeEach(async ({ page }) => {
 test.describe('FeatureBanner — Component Interactions', () => {
   test('[FB-017] @interaction @regression feature-banner adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new FeatureBannerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     // Parent: main-wrapper with unknown background
     // Expected child theme: dark-theme
     const child = page.locator('.feature-banner').first();

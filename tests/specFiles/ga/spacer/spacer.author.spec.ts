@@ -6,6 +6,8 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 
+const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
@@ -13,7 +15,7 @@ test.beforeEach(async ({ page }) => {
 test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-001] @smoke @regression TC_SPC_001 Verify Spacer component availability', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Pre-condition: User logged into CMS
     // Step 1: Open page template
     // Step 2: Open component list
@@ -23,21 +25,21 @@ test.describe('Spacer — CSV Test Cases', () => {
 
   test('[SPC-002] @smoke @regression TC_SPC_002 Insert Spacer between components', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacer inserts successfully and persists after refresh
     await expect(pom.getAllSpacers().first()).toBeVisible();
   });
 
   test('[SPC-003] @smoke @regression TC_SPC_003 Verify Spacer label & visual indicator', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: "Spacer" label visible and placement distinguishable in author mode
     await expect(pom.getAllSpacers().first()).toBeVisible();
   });
 
   test('[SPC-004] @smoke @regression TC_SPC_004 Verify style options availability', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: XXS, XS, Small, Medium (default), Large, XL options visible
     // Verify that multiple spacer variants are rendered on the style guide page
     const wrappers = pom.getAllSpacerWrappers();
@@ -48,7 +50,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-005] @smoke @regression TC_SPC_005 Validate 3XS style — Desktop spacing', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // NOTE: 3XS variant not present on style guide — CSV specifies 6px desktop.
     test.skip();
   });
@@ -56,7 +58,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-006] @smoke @regression TC_SPC_006 Validate 2XS/XXS style — Desktop spacing', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // CSV says "2XS = 12px desktop" — maps to XXS (cmp-spacer--xxsmall)
     const spacer = page.locator('.cmp-spacer--xxsmall > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -67,7 +69,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-007] @smoke @regression TC_SPC_007 Validate XS style — Desktop spacing', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 20px
     const spacer = page.locator('.cmp-spacer--xsmall > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -78,7 +80,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-008] @smoke @regression TC_SPC_008 Validate Small style — Desktop spacing', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 32px
     const spacer = page.locator('.cmp-spacer--small > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -89,7 +91,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-009] @smoke @regression TC_SPC_009 Validate default Medium style — Desktop', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Default is Medium; spacing equals 48px
     // Default spacer has no size modifier class on the wrapper
     const spacer = page.locator('div.spacer:not([class*="cmp-spacer--"]) > .cmp-spacer').first();
@@ -101,7 +103,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-010] @smoke @regression TC_SPC_010 Validate Large style — Desktop spacing', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 64px
     const spacer = page.locator('.cmp-spacer--large > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -112,7 +114,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-011] @smoke @regression TC_SPC_011 Validate XL style — Desktop spacing', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 112px
     const spacer = page.locator('.cmp-spacer--xlarge > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -123,7 +125,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-012] @smoke @regression @mobile TC_SPC_012 Validate 3XS style — Mobile spacing', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // NOTE: 3XS variant not present on style guide — CSV specifies 4px mobile.
     test.skip();
   });
@@ -131,7 +133,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-013] @smoke @regression @mobile TC_SPC_013 Validate 2XS/XXS style — Mobile spacing', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // CSV says "2XS = 8px mobile" — maps to XXS (cmp-spacer--xxsmall)
     const spacer = page.locator('.cmp-spacer--xxsmall > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -142,7 +144,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-014] @smoke @regression @mobile TC_SPC_014 Validate XS style — Mobile spacing', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 16px
     const spacer = page.locator('.cmp-spacer--xsmall > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -153,7 +155,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-015] @smoke @regression @mobile TC_SPC_015 Validate Small style — Mobile spacing', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 20px
     const spacer = page.locator('.cmp-spacer--small > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -164,7 +166,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-016] @smoke @regression @mobile TC_SPC_016 Validate Medium style — Mobile spacing', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 32px
     const spacer = page.locator('div.spacer:not([class*="cmp-spacer--"]) > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -175,7 +177,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-017] @smoke @regression @mobile TC_SPC_017 Validate Large style — Mobile spacing', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 48px
     const spacer = page.locator('.cmp-spacer--large > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -186,7 +188,7 @@ test.describe('Spacer — CSV Test Cases', () => {
   test('[SPC-018] @smoke @regression @mobile TC_SPC_018 Validate XL style — Mobile spacing', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacing equals 64px
     const spacer = page.locator('.cmp-spacer--xlarge > .cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -196,7 +198,7 @@ test.describe('Spacer — CSV Test Cases', () => {
 
   test('[SPC-019] @a11y @smoke @regression TC_SPC_019 Accessibility validation (aria-hidden)', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: aria-hidden="true" present; no reading interruption
     const spacers = pom.getAllSpacers();
     const count = await spacers.count();
@@ -209,7 +211,7 @@ test.describe('Spacer — CSV Test Cases', () => {
 
   test('[SPC-020] @smoke @regression TC_SPC_020 Multiple Spacer components rendering', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Each spacer renders correct spacing
     const spacers = pom.getAllSpacers();
     const count = await spacers.count();
@@ -223,21 +225,21 @@ test.describe('Spacer — CSV Test Cases', () => {
 
   test('[SPC-021] @smoke @regression TC_SPC_021 Reposition Spacer component', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Position updates correctly and persists
     await expect(pom.getAllSpacers().first()).toBeVisible();
   });
 
   test('[SPC-022] @smoke @regression TC_SPC_022 Verify Authoring Guide documentation', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Usage, style variations, desktop & mobile values documented
     await expect(pom.getAllSpacers().first()).toBeVisible();
   });
 
   test('[SPC-023] @smoke @regression TC_SPC_023 Verify Style Guide reference', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: All spacer variations match design specifications
     const wrappers = pom.getAllSpacerWrappers();
     const count = await wrappers.count();
@@ -246,7 +248,7 @@ test.describe('Spacer — CSV Test Cases', () => {
 
   test('[SPC-024] @smoke @regression TC_SPC_024 Validate default style without manual selection', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Default style is Medium
     const defaultSpacer = page.locator('div.spacer:not([class*="cmp-spacer--"]) > .cmp-spacer').first();
     await expect(defaultSpacer).toBeVisible();
@@ -254,14 +256,14 @@ test.describe('Spacer — CSV Test Cases', () => {
 
   test('[SPC-025] @smoke @regression TC_SPC_025 Publish page with Spacer', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Spacer renders correctly on published site
     await expect(pom.getAllSpacers().first()).toBeVisible();
   });
 
   test('[SPC-026] @negative @regression TC_SPC_026 Prevent multiple style selection', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Only one style can be active at a time
     // Each spacer wrapper should have at most one cmp-spacer--* modifier
     const wrappers = pom.getAllSpacerWrappers();
@@ -275,7 +277,7 @@ test.describe('Spacer — CSV Test Cases', () => {
 
   test('[SPC-027] @negative @regression TC_SPC_027 Remove Spacer and verify layout stability', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || ENV.BASE_URL || '');
+    await pom.navigate(BASE());
     // Expected: Layout adjusts correctly without residual spacing
     await expect(pom.getAllSpacers().first()).toBeVisible();
   });
@@ -284,13 +286,13 @@ test.describe('Spacer — CSV Test Cases', () => {
 test.describe('Spacer — Happy Path', () => {
   test('[SPC-028] @smoke @regression Spacer renders correctly', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     await expect(page.locator('.cmp-spacer').first()).toBeVisible();
   });
 
   test('[SPC-029] @smoke @regression Spacer all variants have positive height', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const spacers = pom.getAllSpacers();
     const count = await spacers.count();
     expect(count).toBeGreaterThan(0);
@@ -305,14 +307,14 @@ test.describe('Spacer — Happy Path', () => {
 test.describe('Spacer — Negative & Boundary', () => {
   test('[SPC-030] @negative @regression Spacer handles empty content gracefully', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     // Component should not throw errors with minimal content
     await expect(page.locator('.cmp-spacer').first()).toBeVisible();
   });
 
   test('[SPC-031] @negative @regression Spacer handles missing images', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const images = page.locator('.cmp-spacer img');
     const count = await images.count();
     for (let i = 0; i < count; i++) {
@@ -326,14 +328,14 @@ test.describe('Spacer — Responsive', () => {
   test('[SPC-032] @mobile @regression Spacer adapts to mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     await expect(page.locator('.cmp-spacer').first()).toBeVisible();
   });
 
   test('[SPC-033] @mobile @regression Spacer adapts to tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     await expect(page.locator('.cmp-spacer').first()).toBeVisible();
   });
 });
@@ -343,7 +345,7 @@ test.describe('Spacer — Console & Resources', () => {
     const capture = new ConsoleCapture(page);
     capture.start();
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     const errors = capture.getErrors();
     capture.stop();
@@ -356,7 +358,7 @@ test.describe('Spacer — Broken Images', () => {
 
   test('[SPC-036] @regression Spacer all images have alt attributes', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const images = page.locator('.cmp-spacer img');
     const count = await images.count();
     for (let i = 0; i < count; i++) {
@@ -369,7 +371,7 @@ test.describe('Spacer — Broken Images', () => {
 test.describe('Spacer — Accessibility', () => {
   test('[SPC-037] @a11y @wcag22 @regression @smoke Spacer passes axe-core scan', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const results = await new AxeBuilder({ page })
       .include('.cmp-spacer')
       .withTags(["wcag2a", "wcag2aa", "wcag22aa"])
@@ -379,7 +381,7 @@ test.describe('Spacer — Accessibility', () => {
 
   test('[SPC-038] @a11y @wcag22 @regression @smoke Spacer interactive elements meet 24px target size', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const interactive = page.locator('.cmp-spacer a, .cmp-spacer button, .cmp-spacer input');
     const count = await interactive.count();
     for (let i = 0; i < count; i++) {
@@ -392,7 +394,7 @@ test.describe('Spacer — Accessibility', () => {
 
   test('[SPC-039] @a11y @wcag22 @regression @smoke Spacer focus is not obscured by sticky elements', async ({ page }) => {
     const pom = new SpacerPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const focusable = page.locator('.cmp-spacer a, .cmp-spacer button, .cmp-spacer input');
     const count = await focusable.count();
     for (let i = 0; i < Math.min(count, 5); i++) {

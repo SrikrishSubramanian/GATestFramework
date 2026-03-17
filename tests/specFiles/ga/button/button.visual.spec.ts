@@ -3,6 +3,8 @@ import { ButtonPage } from '../../../pages/ga/components/buttonPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
+const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
@@ -12,7 +14,7 @@ const BTN_SELECTOR = '.cmp-button:not(.basepage__skip-nav)';
 test.describe('Button — Visual Verification', () => {
   test('[BTN-196] @visual button colors match Figma spec', async ({ page }) => {
     const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator(BTN_SELECTOR).first();
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
@@ -29,7 +31,7 @@ test.describe('Button — Visual Verification', () => {
 
   test('[BTN-197] @visual button typography matches Figma spec', async ({ page }) => {
     const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator(BTN_SELECTOR).first();
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
@@ -48,7 +50,7 @@ test.describe('Button — Visual Verification', () => {
 
   test('[BTN-198] @visual button spacing matches Figma spec (±2px)', async ({ page }) => {
     const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator(BTN_SELECTOR).first();
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
@@ -67,7 +69,7 @@ test.describe('Button — Visual Verification', () => {
 
   test('[BTN-199] @visual button hover animation matches spec', async ({ page }) => {
     const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator(BTN_SELECTOR).first();
     const transition = await el.evaluate(el => getComputedStyle(el).transition);
     expect(transition).toContain('background');
@@ -84,7 +86,7 @@ test.describe('Button — Visual Verification', () => {
   test('[BTN-200] @visual button layout at desktop', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator(BTN_SELECTOR).first();
     await expect(el).toBeVisible();
   });
@@ -92,14 +94,14 @@ test.describe('Button — Visual Verification', () => {
   test('[BTN-201] @visual @mobile button layout at mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator(BTN_SELECTOR).first();
     await expect(el).toBeVisible();
   });
 
   test('[BTN-202] @visual button screenshot matches baseline', async ({ page }) => {
     const pom = new ButtonPage(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator(BTN_SELECTOR).first();
     await expect(el).toHaveScreenshot('button-baseline.png', {
       maxDiffPixelRatio: 0.001,
