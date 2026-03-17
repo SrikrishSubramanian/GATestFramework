@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Accordion component style guide page — Default variant with expand/collapse drawers."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Accordion"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+                <text_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1 class=&quot;style-guide__page-headline&quot;>Accordion&lt;/h1>&lt;div class=&quot;style-guide__page-description&quot;>The accordion allows users to expand and collapse content within panels. Drawers can hold images, text, and other components. Icon transitions from + to &amp;minus; on expand.&lt;/div>"
+                    textIsRich="true"/>
+
+                <!-- ============================================ -->
+                <!-- Variation: Default on White Background        -->
+                <!-- ============================================ -->
+
+                <text_white_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Default — Light (White Background)&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_white
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_white
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}false"
+                            singleExpansionAllClosed="{Boolean}true">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="What is Global Atlantic?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Global Atlantic Financial Group is a leading insurance company meeting the retirement and life insurance needs of individuals and institutions. With a focus on long-term value creation, Global Atlantic acquires and manages insurance portfolios.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="How do I contact customer service?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>You can reach our customer service team by calling 1-800-555-0100 during business hours, Monday through Friday, 8:00 AM to 6:00 PM ET. You can also email us at support@globalatlantic.com.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                            <item_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="What products does Global Atlantic offer?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Global Atlantic offers a range of retirement and life insurance products including fixed annuities, fixed indexed annuities, and institutional products. Our solutions are designed to help individuals and institutions meet their long-term financial goals.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_2>
+                            <item_3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Where can I find my policy documents?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_3
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Policy documents can be accessed through your online account portal. If you need assistance locating your documents, please contact customer service and a representative will be happy to help.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_3>
+                        </accordion_white>
+                    </section-par>
+                </section_white>
+
+                <spacer_1
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ============================================ -->
+                <!-- Variation: Default on Slate Background        -->
+                <!-- ============================================ -->
+
+                <text_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Default — Light (Slate Background)&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}true"
+                            singleExpansionAllClosed="{Boolean}false"
+                            expandedItems="[item_0]">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Single expansion mode example">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>This accordion is configured with single expansion. When you open one item, all others close automatically. This is useful for FAQ-style content where users typically only need one answer at a time.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="How does single expansion work?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Authors can toggle the single expansion option in the component dialog. When enabled, only one accordion panel can be open at a time. The author can also select which item is expanded by default.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                            <item_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Can I customize the default expanded item?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Yes, authors can select which accordion item is expanded by default through the component properties dialog. They can also choose to have all items closed on initial page load.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_2>
+                        </accordion_slate>
+                    </section-par>
+                </section_slate>
+
+                <spacer_2
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ============================================ -->
+                <!-- Variation: Default on Granite Background      -->
+                <!-- ============================================ -->
+
+                <text_granite_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Default — Dark (Granite Background)&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_granite
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_granite
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}false"
+                            singleExpansionAllClosed="{Boolean}true">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Dark background accordion item">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>This demonstrates the accordion on a dark granite background. Text and borders automatically switch to light colors for proper contrast and readability.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="How do dark background styles work?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>The accordion automatically detects when it is placed inside a dark-background section (granite or azul) and adjusts its colors. Borders become white, text becomes white, and the icon background darkens.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                            <item_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Is the icon animation the same on dark?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Yes, the same rotation animation from + to &amp;minus; applies on dark backgrounds. The icon circle uses a darker shade and the lines become white for contrast.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_2>
+                        </accordion_granite>
+                    </section-par>
+                </section_granite>
+
+                <spacer_3
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ============================================ -->
+                <!-- Variation: Default on Azul Background         -->
+                <!-- ============================================ -->
+
+                <text_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Default — Dark (Azul Background)&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_azul
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_azul
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}false"
+                            singleExpansionAllClosed="{Boolean}true">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Azul background accordion item">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>This demonstrates the accordion on the azul (blue) background. Like granite, colors automatically adapt for dark-mode readability.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Another accordion item on azul">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>All the same accordion behaviors work on azul: single expansion, force closed on load, and author-selected default expanded items.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                        </accordion_azul>
+                    </section-par>
+                </section_azul>
+
+                <spacer_4
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-381: Pre-expanded non-first item (AC: author can select which item is expanded by default) -->
+                <!-- Tests that expandedItems can target any item index, not just item_0 -->
+
+                <text_preexpanded_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Pre-expanded Non-First Item (item_2 open on load)&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_preexpanded
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_preexpanded
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}false"
+                            singleExpansionAllClosed="{Boolean}false"
+                            expandedItems="[item_2]">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="First item — closed on load">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>This item is closed on initial page load. The author has configured item_2 to be the default expanded item.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Second item — also closed on load">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>This item is also closed on initial page load. Only item_2 (the third item) is expanded when the page first renders.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                            <item_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Third item — expanded on load by author configuration">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>This is the item configured to be expanded on initial page load via &lt;code>expandedItems=&quot;[item_2]&quot;&lt;/code> in the component dialog. This verifies that the author can select any accordion item — not just the first — as the default open item.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_2>
+                            <item_3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Fourth item — closed on load">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_3
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>This fourth item is closed on load, confirming that items after the pre-expanded item are also collapsed by default.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_3>
+                        </accordion_preexpanded>
+                    </section-par>
+                </section_preexpanded>
+
+                <spacer_5
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-381: Variable height content (AC: accordion height is variable based on content) -->
+                <!-- Items have significantly different content lengths to exercise dynamic panel height -->
+
+                <text_varheight_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Variable Height Content (short, medium, long, nested)&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_varheight
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_varheight
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}false"
+                            singleExpansionAllClosed="{Boolean}false"
+                            expandedItems="[item_0,item_1,item_2,item_3]">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Short content — single line">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Yes.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Medium content — a short paragraph">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Global Atlantic Financial Group is a leading insurance company meeting the retirement and life insurance needs of individuals and institutions. With a strong balance sheet and a long-term perspective, Global Atlantic partners with banks, asset managers, and other financial institutions.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                            <item_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Long content — multiple paragraphs">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Global Atlantic offers a comprehensive suite of retirement and protection solutions designed to address the complex financial needs of individuals and institutions alike.&lt;/p>&lt;p>Our fixed annuity products provide guaranteed interest rates over a specified term, giving clients certainty in an uncertain world. Fixed indexed annuities offer upside participation linked to market indices while protecting against downside risk — an attractive balance for many retirees.&lt;/p>&lt;p>For institutional clients, our reinsurance and funding agreement programs provide flexible capital solutions. We work with banks, broker-dealers, and wirehouses to deliver competitive products tailored to each distribution channel.&lt;/p>&lt;p>All products are backed by Global Atlantic's strong investment portfolio and prudent risk management philosophy, which has been core to our culture since the company was founded in 2004. For more information, please visit our product resource center or contact your regional wholesaler.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_2>
+                            <item_3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Nested content — heading, list, and paragraph">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_3
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>&lt;strong>Key benefits include:&lt;/strong>&lt;/p>&lt;ul>&lt;li>Tax-deferred growth on all annuity products&lt;/li>&lt;li>Principal protection on fixed indexed products&lt;/li>&lt;li>Guaranteed minimum interest rates&lt;/li>&lt;li>Optional income riders for lifetime income&lt;/li>&lt;li>Death benefit options for beneficiary protection&lt;/li>&lt;/ul>&lt;p>Contact your financial professional to determine which product is right for your situation.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_3>
+                        </accordion_varheight>
+                    </section-par>
+                </section_varheight>
+
+                <spacer_6
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-381: Maximum items stress test (AC: no limit on number of accordion items) -->
+                <!-- 6+ items verify that the component renders correctly at scale -->
+
+                <text_stress_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Maximum Items Stress Test (6+ items, all closed)&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_stress
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_stress
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}false"
+                            singleExpansionAllClosed="{Boolean}true">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="FAQ item 1: What is an annuity?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>An annuity is a contract between you and an insurance company that provides a steady income stream, typically during retirement.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="FAQ item 2: What is a fixed annuity?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>A fixed annuity offers a guaranteed interest rate for a set period, providing predictable, stable growth for your savings.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                            <item_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="FAQ item 3: What is a fixed indexed annuity?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>A fixed indexed annuity links interest credits to the performance of a market index such as the S&amp;amp;P 500, while protecting against market losses.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_2>
+                            <item_3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="FAQ item 4: How are my funds protected?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_3
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Your funds are protected by state insurance guaranty associations up to statutory limits, and by the financial strength of Global Atlantic itself.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_3>
+                            <item_4
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="FAQ item 5: Can I withdraw funds before maturity?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_4
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Yes. Most products allow penalty-free withdrawals of up to 10% per year. Early withdrawals beyond that may be subject to surrender charges and IRS penalties.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_4>
+                            <item_5
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="FAQ item 6: What happens to my annuity when I die?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_5
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Upon your death, remaining contract value passes to your named beneficiaries, typically avoiding the probate process. Optional enhanced death benefit riders may provide additional protection.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_5>
+                            <item_6
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="FAQ item 7: How do I get started?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_6
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Contact a licensed financial professional who can evaluate your situation and recommend the right Global Atlantic product for your retirement goals.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_6>
+                        </accordion_stress>
+                    </section-par>
+                </section_stress>
+
+                <spacer_7
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-381: Header fields (eyebrow, headline, description) -->
+                <!-- None of the existing style guide sections exercise the optional accordion header fields -->
+
+                <text_header_fields_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>With Header — Eyebrow, Headline, and Description&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_header_fields
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_header_fields
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}false"
+                            singleExpansionAllClosed="{Boolean}true"
+                            eyebrow="Frequently Asked Questions"
+                            headline="Everything You Need to Know"
+                            description="Browse the topics below to find answers to our most common questions. If you don't find what you're looking for, please contact our customer service team.">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Why choose Global Atlantic?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Global Atlantic is backed by KKR, one of the world's leading investment firms. Our financial strength, innovative products, and commitment to service make us a trusted choice for retirement planning.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="What makes our products different?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Our products are designed with both safety and growth in mind. We combine guaranteed protection features with market-linked growth opportunities so clients can pursue their retirement goals with confidence.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                            <item_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="How do I find a financial professional?">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Use our Find a Financial Professional tool on the website to locate a licensed advisor in your area who works with Global Atlantic products.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_2>
+                        </accordion_header_fields>
+                    </section-par>
+                </section_header_fields>
+
+                <spacer_8
+                    cq:styleIds="[size-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,1559 @@
+{
+  "component": "accordion",
+  "generatedAt": "2026-03-17T06:19:56.827Z",
+  "source": "dom",
+  "entries": {
+    "button_WhatIs_Global_Atlantic": {
+      "name": "button_WhatIs_Global_Atlantic",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "6ce19e6e2d6247d3adf1ea137c1e1884",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What is Global Atlantic?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_HowDo_IContactCustomerServ": {
+      "name": "button_HowDo_IContactCustomerServ",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "cdae5b248bae4fc79ca1901ec8cc5184",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How do I contact customer service?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "f5a1a9051a8d4c52bf83deaacfb86401": {
+      "name": "f5a1a9051a8d4c52bf83deaacfb86401",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "f5a1a9051a8d4c52bf83deaacfb86401",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What products does Global Atlantic offer?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_WhereCan_IFindMyPolicyDoc": {
+      "name": "button_WhereCan_IFindMyPolicyDoc",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "2b0495a2704d4291be05adbff1263a83",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Where can I find my policy documents?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_SingleExpansionModeExample": {
+      "name": "button_SingleExpansionModeExample",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "e423b8f31a224b6db8095cd02849deac",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Single expansion mode example",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_HowDoesSingleExpansionWork": {
+      "name": "button_HowDoesSingleExpansionWork",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "b3dac746b97b48779dd4cb2d32e4e384",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How does single expansion work?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "el2667027661d04d6682d7782a3c576df4": {
+      "name": "el2667027661d04d6682d7782a3c576df4",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "2667027661d04d6682d7782a3c576df4",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Can I customize the default expanded item?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_DarkBackgroundAccordionItem": {
+      "name": "button_DarkBackgroundAccordionItem",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "369aceee66a842a29c9a2a76a0e8996b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Dark background accordion item",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_HowDoDarkBackgroundStyles_": {
+      "name": "button_HowDoDarkBackgroundStyles_",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "ab074a4e38774a77a3ddf0593692d3f4",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How do dark background styles work?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_IsTheIconAnimationTheSame": {
+      "name": "button_IsTheIconAnimationTheSame",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "e33c23fe10834e398f29b173c07b89fe",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Is the icon animation the same on dark?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_AzulBackgroundAccordionItem": {
+      "name": "button_AzulBackgroundAccordionItem",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "17e3941c2ceb4418ad7b25f9bc9a4df8",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Azul background accordion item",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_AnotherAccordionItemOnAzul": {
+      "name": "button_AnotherAccordionItemOnAzul",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "1d28bc01468a470394ac8b7b16739fbd",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Another accordion item on azul",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "accordionItem_7bcebf78d9Panel": {
+      "name": "accordionItem_7bcebf78d9Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-7bcebf78d9-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "fd8b24fd82984d84904e505e54ca5327": {
+      "name": "fd8b24fd82984d84904e505e54ca5327",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "fd8b24fd82984d84904e505e54ca5327",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemF96058c61bPanel": {
+      "name": "accordionItemF96058c61bPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-f96058c61b-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el2c73a685e6c14760b7875fe7ab447cd8": {
+      "name": "el2c73a685e6c14760b7875fe7ab447cd8",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "2c73a685e6c14760b7875fe7ab447cd8",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemE92b3cd16dPanel": {
+      "name": "accordionItemE92b3cd16dPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-e92b3cd16d-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el531fd91b5b464ef091b4a24043ec0b9b": {
+      "name": "el531fd91b5b464ef091b4a24043ec0b9b",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "531fd91b5b464ef091b4a24043ec0b9b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_139cc6958aPanel": {
+      "name": "accordionItem_139cc6958aPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-139cc6958a-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el1c0c5c9513fb4b5b97e97c0c543c69e1": {
+      "name": "el1c0c5c9513fb4b5b97e97c0c543c69e1",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "1c0c5c9513fb4b5b97e97c0c543c69e1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemA3f45cd64aPanel": {
+      "name": "accordionItemA3f45cd64aPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-a3f45cd64a-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--expanded",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "b36d86405f5b49d48080eb0195066610": {
+      "name": "b36d86405f5b49d48080eb0195066610",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "b36d86405f5b49d48080eb0195066610",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemCfae96c9ecPanel": {
+      "name": "accordionItemCfae96c9ecPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-cfae96c9ec-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "e091e79310e8414ba2b38615833cf056": {
+      "name": "e091e79310e8414ba2b38615833cf056",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "e091e79310e8414ba2b38615833cf056",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_0765808f57Panel": {
+      "name": "accordionItem_0765808f57Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-0765808f57-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el060da03dc95c4fb2884d72efc391b9dc": {
+      "name": "el060da03dc95c4fb2884d72efc391b9dc",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "060da03dc95c4fb2884d72efc391b9dc",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_769a592d51Panel": {
+      "name": "accordionItem_769a592d51Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-769a592d51-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el2a9b45692f2c43a7b1da2189387308ee": {
+      "name": "el2a9b45692f2c43a7b1da2189387308ee",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "2a9b45692f2c43a7b1da2189387308ee",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_2e8d31b3a6Panel": {
+      "name": "accordionItem_2e8d31b3a6Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-2e8d31b3a6-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "c2f9114a542a478eae5fcab39451ddd6": {
+      "name": "c2f9114a542a478eae5fcab39451ddd6",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "c2f9114a542a478eae5fcab39451ddd6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_590b2cc446Panel": {
+      "name": "accordionItem_590b2cc446Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-590b2cc446-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el371c1276b2da4216a20c39e8ce107e11": {
+      "name": "el371c1276b2da4216a20c39e8ce107e11",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "371c1276b2da4216a20c39e8ce107e11",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_60d74c83b5Panel": {
+      "name": "accordionItem_60d74c83b5Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-60d74c83b5-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el9658c6dfe3dd470aa51dc8fbb2c00996": {
+      "name": "el9658c6dfe3dd470aa51dc8fbb2c00996",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "9658c6dfe3dd470aa51dc8fbb2c00996",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemF44480987fPanel": {
+      "name": "accordionItemF44480987fPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-f44480987f-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "c4e15c23df484fcaaffec099c42cc6e5": {
+      "name": "c4e15c23df484fcaaffec099c42cc6e5",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "c4e15c23df484fcaaffec099c42cc6e5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_36": {
+      "name": "div_36",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_7bcebf78d9": {
+      "name": "accordionItem_7bcebf78d9",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-7bcebf78d9",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_WhatIs_Global_Atlantic": {
+      "name": "div_WhatIs_Global_Atlantic",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What is Global Atlantic?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_39": {
+      "name": "span_39",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-indicator.cmp-accordion__item-indicator--ga",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-indicator')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_40": {
+      "name": "span_40",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-icon-line.cmp-accordion__item-icon-line--horizontal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-icon-line')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_41": {
+      "name": "span_41",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-icon-line.cmp-accordion__item-icon-line--vertical",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-icon-line')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemF96058c61b": {
+      "name": "accordionItemF96058c61b",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-f96058c61b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_HowDo_IContactCustomerServ": {
+      "name": "div_HowDo_IContactCustomerServ",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How do I contact customer service?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "accordionItemE92b3cd16d": {
+      "name": "accordionItemE92b3cd16d",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-e92b3cd16d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_45": {
+      "name": "div_45",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What products does Global Atlantic offer?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "accordionItem_139cc6958a": {
+      "name": "accordionItem_139cc6958a",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-139cc6958a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_WhereCan_IFindMyPolicyDoc": {
+      "name": "div_WhereCan_IFindMyPolicyDoc",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Where can I find my policy documents?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_48": {
+      "name": "div_48",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemA3f45cd64a": {
+      "name": "accordionItemA3f45cd64a",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-a3f45cd64a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item.expanded",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_SingleExpansionModeExample": {
+      "name": "div_SingleExpansionModeExample",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Single expansion mode example",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "accordionItemCfae96c9ec": {
+      "name": "accordionItemCfae96c9ec",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-cfae96c9ec",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_HowDoesSingleExpansionWork": {
+      "name": "div_HowDoesSingleExpansionWork",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How does single expansion work?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "accordionItem_0765808f57": {
+      "name": "accordionItem_0765808f57",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-0765808f57",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_54": {
+      "name": "div_54",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Can I customize the default expanded item?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_55": {
+      "name": "div_55",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_769a592d51": {
+      "name": "accordionItem_769a592d51",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-769a592d51",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_DarkBackgroundAccordionItem": {
+      "name": "div_DarkBackgroundAccordionItem",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Dark background accordion item",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "accordionItem_2e8d31b3a6": {
+      "name": "accordionItem_2e8d31b3a6",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-2e8d31b3a6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_HowDoDarkBackgroundStyles_": {
+      "name": "div_HowDoDarkBackgroundStyles_",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How do dark background styles work?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "accordionItem_590b2cc446": {
+      "name": "accordionItem_590b2cc446",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-590b2cc446",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_IsTheIconAnimationTheSame": {
+      "name": "div_IsTheIconAnimationTheSame",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Is the icon animation the same on dark?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_62": {
+      "name": "div_62",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_60d74c83b5": {
+      "name": "accordionItem_60d74c83b5",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-60d74c83b5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_AzulBackgroundAccordionItem": {
+      "name": "div_AzulBackgroundAccordionItem",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Azul background accordion item",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "accordionItemF44480987f": {
+      "name": "accordionItemF44480987f",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-f44480987f",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_AnotherAccordionItemOnAzul": {
+      "name": "div_AnotherAccordionItemOnAzul",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Another accordion item on azul",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

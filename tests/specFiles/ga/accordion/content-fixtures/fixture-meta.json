@@ -1,0 +1,91 @@
+{
+  "component": "accordion",
+  "sourceFile": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/accordion/.content.xml",
+  "sourceHash": "",
+  "generatedAt": "2026-03-17",
+  "ticket": "GAAM-381",
+  "sections": {
+    "preserved": [
+      {
+        "id": "section_white",
+        "background": "background-white",
+        "description": "Multi-expand, all closed on load, 4 items",
+        "singleExpansion": false,
+        "singleExpansionAllClosed": true,
+        "expandedItems": []
+      },
+      {
+        "id": "section_slate",
+        "background": "background-slate",
+        "description": "Single expansion, item_0 expanded on load, 3 items",
+        "singleExpansion": true,
+        "singleExpansionAllClosed": false,
+        "expandedItems": ["item_0"]
+      },
+      {
+        "id": "section_granite",
+        "background": "background-granite",
+        "description": "Multi-expand, all closed on load, 3 items, dark theme",
+        "singleExpansion": false,
+        "singleExpansionAllClosed": true,
+        "expandedItems": []
+      },
+      {
+        "id": "section_azul",
+        "background": "background-azul",
+        "description": "Multi-expand, all closed on load, 2 items, dark theme",
+        "singleExpansion": false,
+        "singleExpansionAllClosed": true,
+        "expandedItems": []
+      }
+    ],
+    "added": [
+      {
+        "id": "section_preexpanded",
+        "background": "background-white",
+        "description": "Pre-expanded non-first item: item_2 open on load. Covers AC: author can select which item is expanded by default.",
+        "singleExpansion": false,
+        "singleExpansionAllClosed": false,
+        "expandedItems": ["item_2"],
+        "itemCount": 4,
+        "addedFor": "AC: author can select which item is expanded by default (non-first item)"
+      },
+      {
+        "id": "section_varheight",
+        "background": "background-white",
+        "description": "4 items all open, with dramatically different content lengths: single word, short paragraph, multi-paragraph, nested list. Covers AC: accordion height is variable based on content.",
+        "singleExpansion": false,
+        "singleExpansionAllClosed": false,
+        "expandedItems": ["item_0", "item_1", "item_2", "item_3"],
+        "itemCount": 4,
+        "contentTypes": ["single-line", "short-paragraph", "multi-paragraph", "nested-list"],
+        "addedFor": "AC: accordion height is variable based on content"
+      },
+      {
+        "id": "section_stress",
+        "background": "background-white",
+        "description": "7 items, all closed on load. Verifies no upper limit on item count.",
+        "singleExpansion": false,
+        "singleExpansionAllClosed": true,
+        "expandedItems": [],
+        "itemCount": 7,
+        "addedFor": "AC: no limit on accordion items (stress test with 6+ items)"
+      },
+      {
+        "id": "section_header_fields",
+        "background": "background-white",
+        "description": "3 items with eyebrow, headline, and description header fields all populated. Verifies optional header renders correctly above the accordion panels.",
+        "singleExpansion": false,
+        "singleExpansionAllClosed": true,
+        "expandedItems": [],
+        "itemCount": 3,
+        "headerFields": {
+          "eyebrow": "Frequently Asked Questions",
+          "headline": "Everything You Need to Know",
+          "description": "Browse the topics below to find answers to our most common questions."
+        },
+        "addedFor": "AC: optional eyebrow/headline/description header fields"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-03-15T05:23:32.082Z",
+  "kkrAemRoot": "C:\\Users\\SrikrishSubramanian\\Downloads\\workspace\\kkr-aem",
+  "results": [
+    {
+      "component": "button",
+      "status": "ok",
+      "message": "Fixture in sync",
+      "currentHash": "fc9ffc1d2c692fbe57205f2bb72ec0db",
+      "expectedHash": "fc9ffc1d2c692fbe57205f2bb72ec0db",
+      "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/button/.content.xml",
+      "generatedAt": "2026-03-15"
+    },
+    {
+      "component": "feature-banner",
+      "status": "ok",
+      "message": "Fixture in sync",
+      "currentHash": "70a58a880f3fdfcb9373964e02e0419d",
+      "expectedHash": "70a58a880f3fdfcb9373964e02e0419d",
+      "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/feature-banner/.content.xml",
+      "generatedAt": "2026-03-15"
+    },
+    {
+      "component": "form-text",
+      "status": "ok",
+      "message": "Fixture in sync",
+      "currentHash": "e06bd39370993ca3a4e308444c775e77",
+      "expectedHash": "e06bd39370993ca3a4e308444c775e77",
+      "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/form/form-text/.content.xml",
+      "generatedAt": "2026-03-15"
+    },
+    {
+      "component": "spacer",
+      "status": "ok",
+      "message": "Fixture in sync",
+      "currentHash": "a05006cfed195ad27ca88992a6981e5b",
+      "expectedHash": "a05006cfed195ad27ca88992a6981e5b",
+      "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/spacer/.content.xml",
+      "generatedAt": "2026-03-15"
+    },
+    {
+      "component": "statistic",
+      "status": "ok",
+      "message": "Fixture in sync",
+      "currentHash": "21c0339ead4bf0dc93e59f04405b6793",
+      "expectedHash": "21c0339ead4bf0dc93e59f04405b6793",
+      "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/statistic/.content.xml",
+      "generatedAt": "2026-03-15"
+    }
+  ],
+  "hasWarnings": false
+}
