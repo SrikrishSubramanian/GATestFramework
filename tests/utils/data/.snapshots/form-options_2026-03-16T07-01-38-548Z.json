@@ -1,0 +1,2348 @@
+{
+  "component": "form-options",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/form-options.html?wcmmode=disabled",
+  "scannedAt": "2026-03-16T07:01:38.548Z",
+  "rootSelector": ".cmp-form-options",
+  "elements": [
+    {
+      "name": "Option_ARadioButton",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field--radio"
+      ],
+      "attributes": {
+        "aria-label": "Option A radio button",
+        "type": "radio",
+        "name": "plan-light",
+        "value": "a"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": "Option A radio button",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 12,
+        "y": 207,
+        "width": 210,
+        "height": 37
+      }
+    },
+    {
+      "name": "Retirement_PlanningCheckbox",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field--checkbox"
+      ],
+      "attributes": {
+        "aria-label": "Retirement Planning checkbox",
+        "type": "checkbox",
+        "name": "interests-light",
+        "value": "retirement"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": "Retirement Planning checkbox",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 12,
+        "y": 856,
+        "width": 217,
+        "height": 37
+      }
+    },
+    {
+      "name": "input_2",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field--checkbox"
+      ],
+      "attributes": {
+        "type": "checkbox",
+        "value": "retirement"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_ChooseAnOption",
+      "tag": "select",
+      "text": "Choose an option...",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field--drop-down",
+        "choices__input"
+      ],
+      "attributes": {
+        "name": "dd_white",
+        "data-empty-option": "Choose an option...",
+        "data-initialized": "true",
+        "hidden": "",
+        "tabindex": "-1",
+        "data-choice": "active"
+      },
+      "testId": null,
+      "id": "form-options-1728599660",
+      "parentClasses": [
+        "choices__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "formOptions_818373936",
+      "tag": "select",
+      "text": "Retirement Planning\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tLife Insurance\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAnnuities\n\t\t\t\t\t",
+      "classes": [
+        "multiSelect",
+        "cmp-form-options__field",
+        "cmp-form-options__field--multi-drop-down"
+      ],
+      "attributes": {
+        "name": "mdd_white",
+        "data-id": "form-options-818373936",
+        "data-empty-option": "Select all that apply...",
+        "multiple": ""
+      },
+      "testId": null,
+      "id": "form-options-818373936",
+      "parentClasses": [
+        "custom-multiselect"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_ChooseARegion",
+      "tag": "select",
+      "text": "Choose a region...",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field--drop-down",
+        "choices__input"
+      ],
+      "attributes": {
+        "name": "dd_preselected",
+        "data-empty-option": "Choose a region...",
+        "data-initialized": "true",
+        "hidden": "",
+        "tabindex": "-1",
+        "data-choice": "active"
+      },
+      "testId": null,
+      "id": "form-options-1913832180",
+      "parentClasses": [
+        "choices__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_NotAvailable",
+      "tag": "select",
+      "text": "Not available",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field--drop-down",
+        "choices__input"
+      ],
+      "attributes": {
+        "name": "dd_disabled",
+        "data-empty-option": "Not available",
+        "data-initialized": "true",
+        "hidden": "",
+        "tabindex": "-1",
+        "data-choice": "active"
+      },
+      "testId": null,
+      "id": "form-options-1057915192",
+      "parentClasses": [
+        "choices__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "informationIconTooltip_Choos",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "info-light-icon",
+        "cmp-form-options__help-icon"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "aria-label": "information icon tooltip Choose one option that best fits your needs.",
+        "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzIwNTAxXzEzNzgiIHN0eWxlPSJtYXNrLXR5cGU6bHVtaW5hbmNlIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEwLjAwMDIgMC4zMzM0OTZDNC42NjQxNiAwLjMzMzQ5NiAwLjMzMzQ5NiA0LjY2NDE2IDAuMzMzNDk2IDEwLjAwMDJDMC4zMzM0OTYgMTUuMzM2MiA0LjY2NDE2IDE5LjY2NjggMTAuMDAwMiAxOS42NjY4QzE1LjMzNjIgMTkuNjY2OCAxOS42NjY4IDE1LjMzNjIgMTkuNjY2OCAxMC4wMDAyQzE5LjY2NjggNC42NjQxNiAxNS4zMzYyIDAuMzMzNDk2IDEwLjAwMDIgMC4zMzM0OTZaTTEwLjk2NjggMTQuODMzNUg5LjAzMzQ2VjEyLjkwMDJIMTAuOTY2OFYxNC44MzM1Wk0xMC45NjY4IDEwLjk2NjhIOS4wMzM0NlY1LjE2NjgzSDEwLjk2NjhWMTAuOTY2OFoiIGZpbGw9IndoaXRlIi8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8yMDUwMV8xMzc4KSI+CjxyZWN0IHg9Ii0xNC4xNjY1IiB5PSItMTQuMTY2NSIgd2lkdGg9IjQ4LjMzMzMiIGhlaWdodD0iNDguMzMzMyIgZmlsbD0iIzAyMjlCMSIvPgo8bWFzayBpZD0ibWFzazFfMjA1MDFfMTM3OCIgc3R5bGU9Im1hc2stdHlwZTpsdW1pbmFuY2UiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9Ii0xNSIgeT0iLTE1IiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPgo8cmVjdCB4PSItMTQuMTY2NSIgeT0iLTE0LjE2NjUiIHdpZHRoPSI0OC4zMzMzIiBoZWlnaHQ9IjQ4LjMzMzMiIGZpbGw9IndoaXRlIi8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMV8yMDUwMV8xMzc4KSI+CjwvZz4KPC9nPgo8L3N2Zz4K"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__help"
+      ],
+      "role": null,
+      "ariaLabel": "information icon tooltip Choose one option that best fits your needs.",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "informationIconTooltip_Choos_8",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "info-dark-icon",
+        "cmp-form-options__help-icon"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "aria-label": "information icon tooltip Choose one option that best fits your needs.",
+        "src": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE2IDE3Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZkODI4OwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICMwNzI1MzU7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyOC43LjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiAxLjIuMCBCdWlsZCAxNDIpICAtLT4KICA8Zz4KICAgIDxnIGlkPSJMYXllcl8xIj4KICAgICAgPGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSI4IiBjeT0iOC44IiByPSI4Ii8+CiAgICAgIDxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iNy4yIiB5PSI0LjYiIHdpZHRoPSIxLjYiIGhlaWdodD0iNC43Ii8+CiAgICAgIDxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iNy4yIiB5PSIxMC44IiB3aWR0aD0iMS42IiBoZWlnaHQ9IjEuNiIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__help"
+      ],
+      "role": null,
+      "ariaLabel": "information icon tooltip Choose one option that best fits your needs.",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "Choose an option...Choose an option...Choose an option...\\0Option AOption BOption COption D (disable",
+      "classes": [
+        "choices"
+      ],
+      "attributes": {
+        "data-type": "select-one",
+        "tabindex": "0",
+        "role": "listbox",
+        "aria-haspopup": "true",
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--drop-down"
+      ],
+      "role": "listbox",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 14,
+        "y": 1794,
+        "width": 250,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "Choose an option...\\0Option AOption BOption COption D (disabled)",
+      "classes": [
+        "choices__list"
+      ],
+      "attributes": {
+        "role": "listbox"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__list",
+        "choices__list--dropdown"
+      ],
+      "role": "listbox",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 1853,
+        "width": 250,
+        "height": 263
+      }
+    },
+    {
+      "name": "div_ChooseAnOption",
+      "tag": "div",
+      "text": "Choose an option...",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "is-selected",
+        "choices__placeholder",
+        "choices__item--disabled"
+      ],
+      "attributes": {
+        "role": "option",
+        "data-choice": "",
+        "data-id": "1",
+        "data-value": "",
+        "data-select-text": "Press to select",
+        "data-choice-disabled": "",
+        "aria-disabled": "true"
+      },
+      "testId": null,
+      "id": "choices--form-options-1728599660-item-choice-1",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "option",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 1853,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_0",
+      "tag": "div",
+      "text": "\\0",
+      "classes": [
+        "choices__group"
+      ],
+      "attributes": {
+        "role": "group",
+        "data-group": "",
+        "data-id": "1014624877205",
+        "data-value": "\\0"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "group",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 1897,
+        "width": 250,
+        "height": 43
+      }
+    },
+    {
+      "name": "div_Option_A",
+      "tag": "div",
+      "text": "Option A",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "choices__item--selectable",
+        "is-highlighted"
+      ],
+      "attributes": {
+        "role": "treeitem",
+        "data-choice": "",
+        "data-id": "2",
+        "data-value": "a",
+        "data-select-text": "Press to select",
+        "data-choice-selectable": "",
+        "aria-selected": "true"
+      },
+      "testId": null,
+      "id": "choices--form-options-1728599660-item-choice-2",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "treeitem",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 1940,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_Option_B",
+      "tag": "div",
+      "text": "Option B",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "choices__item--selectable"
+      ],
+      "attributes": {
+        "role": "treeitem",
+        "data-choice": "",
+        "data-id": "3",
+        "data-value": "b",
+        "data-select-text": "Press to select",
+        "data-choice-selectable": ""
+      },
+      "testId": null,
+      "id": "choices--form-options-1728599660-item-choice-3",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "treeitem",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 1984,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_Option_C",
+      "tag": "div",
+      "text": "Option C",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "choices__item--selectable"
+      ],
+      "attributes": {
+        "role": "treeitem",
+        "data-choice": "",
+        "data-id": "4",
+        "data-value": "c",
+        "data-select-text": "Press to select",
+        "data-choice-selectable": ""
+      },
+      "testId": null,
+      "id": "choices--form-options-1728599660-item-choice-4",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "treeitem",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 2028,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_Option_DDisabled",
+      "tag": "div",
+      "text": "Option D (disabled)",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "choices__item--selectable"
+      ],
+      "attributes": {
+        "role": "treeitem",
+        "data-choice": "",
+        "data-id": "5",
+        "data-value": "d",
+        "data-select-text": "Press to select",
+        "data-choice-selectable": ""
+      },
+      "testId": null,
+      "id": "choices--form-options-1728599660-item-choice-5",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "treeitem",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 2072,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "Choose a region...Choose a region...Choose a region...\\0North AmericaEuropeAsia Pacific",
+      "classes": [
+        "choices"
+      ],
+      "attributes": {
+        "data-type": "select-one",
+        "tabindex": "0",
+        "role": "listbox",
+        "aria-haspopup": "true",
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--drop-down"
+      ],
+      "role": "listbox",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 14,
+        "y": 3448,
+        "width": 250,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Choose a region...\\0North AmericaEuropeAsia Pacific",
+      "classes": [
+        "choices__list"
+      ],
+      "attributes": {
+        "role": "listbox"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__list",
+        "choices__list--dropdown"
+      ],
+      "role": "listbox",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 3507,
+        "width": 250,
+        "height": 219
+      }
+    },
+    {
+      "name": "div_ChooseARegion",
+      "tag": "div",
+      "text": "Choose a region...",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "is-selected",
+        "choices__placeholder",
+        "choices__item--disabled"
+      ],
+      "attributes": {
+        "role": "option",
+        "data-choice": "",
+        "data-id": "1",
+        "data-value": "",
+        "data-select-text": "Press to select",
+        "data-choice-disabled": "",
+        "aria-disabled": "true"
+      },
+      "testId": null,
+      "id": "choices--form-options-1913832180-item-choice-1",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "option",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 3507,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_North_America",
+      "tag": "div",
+      "text": "North America",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "choices__item--selectable",
+        "is-highlighted"
+      ],
+      "attributes": {
+        "role": "treeitem",
+        "data-choice": "",
+        "data-id": "2",
+        "data-value": "na",
+        "data-select-text": "Press to select",
+        "data-choice-selectable": "",
+        "aria-selected": "true"
+      },
+      "testId": null,
+      "id": "choices--form-options-1913832180-item-choice-2",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "treeitem",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 3594,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_Europe",
+      "tag": "div",
+      "text": "Europe",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "choices__item--selectable"
+      ],
+      "attributes": {
+        "role": "treeitem",
+        "data-choice": "",
+        "data-id": "3",
+        "data-value": "eu",
+        "data-select-text": "Press to select",
+        "data-choice-selectable": ""
+      },
+      "testId": null,
+      "id": "choices--form-options-1913832180-item-choice-3",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "treeitem",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 3638,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_Asia_Pacific",
+      "tag": "div",
+      "text": "Asia Pacific",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "choices__item--selectable"
+      ],
+      "attributes": {
+        "role": "treeitem",
+        "data-choice": "",
+        "data-id": "4",
+        "data-value": "apac",
+        "data-select-text": "Press to select",
+        "data-choice-selectable": ""
+      },
+      "testId": null,
+      "id": "choices--form-options-1913832180-item-choice-4",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "treeitem",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 3682,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "Not availableNot availableNot available\\0Option AOption B",
+      "classes": [
+        "choices"
+      ],
+      "attributes": {
+        "data-type": "select-one",
+        "tabindex": "0",
+        "role": "listbox",
+        "aria-haspopup": "true",
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--drop-down"
+      ],
+      "role": "listbox",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 14,
+        "y": 3736,
+        "width": 250,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_NotAvailable0Option_AOption_B",
+      "tag": "div",
+      "text": "Not available\\0Option AOption B",
+      "classes": [
+        "choices__list"
+      ],
+      "attributes": {
+        "role": "listbox"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__list",
+        "choices__list--dropdown"
+      ],
+      "role": "listbox",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 3794,
+        "width": 250,
+        "height": 175
+      }
+    },
+    {
+      "name": "div_NotAvailable",
+      "tag": "div",
+      "text": "Not available",
+      "classes": [
+        "choices__item",
+        "choices__item--choice",
+        "is-selected",
+        "choices__placeholder",
+        "choices__item--disabled"
+      ],
+      "attributes": {
+        "role": "option",
+        "data-choice": "",
+        "data-id": "1",
+        "data-value": "",
+        "data-select-text": "Press to select",
+        "data-choice-disabled": "",
+        "aria-disabled": "true"
+      },
+      "testId": null,
+      "id": "choices--form-options-1057915192-item-choice-1",
+      "parentClasses": [
+        "choices__list"
+      ],
+      "role": "option",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 3794,
+        "width": 250,
+        "height": 44
+      }
+    },
+    {
+      "name": "legend_SelectAPlan",
+      "tag": "legend",
+      "text": "Select a plan",
+      "classes": [
+        "cmp-form-options__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--radio"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 169,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_27",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-form-options__help"
+      ],
+      "attributes": {
+        "tooltip": "Choose one option that best fits your needs."
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__legend"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 187,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_28",
+      "tag": "span",
+      "text": "Option A\n                                \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                                \n     ",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--radio"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 195,
+        "width": 1268,
+        "height": 179
+      }
+    },
+    {
+      "name": "legend_29",
+      "tag": "legend",
+      "text": "",
+      "classes": [
+        "cmp-form-options-section__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 195,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Option_A",
+      "tag": "span",
+      "text": "Option A",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 207,
+        "width": 210,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_31",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field__radiomark"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 209,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_Option_A_32",
+      "tag": "div",
+      "text": "Option A",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 207,
+        "width": 182,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Option_B",
+      "tag": "span",
+      "text": "Option B",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 260,
+        "width": 208,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_Option_B_34",
+      "tag": "div",
+      "text": "Option B",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 260,
+        "width": 180,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Option_CPreselected",
+      "tag": "span",
+      "text": "Option C (pre-selected)",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 313,
+        "width": 183,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Option_CPreselected",
+      "tag": "div",
+      "text": "Option C (pre-selected)",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 313,
+        "width": 155,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_Option_DDisabled",
+      "tag": "span",
+      "text": "Option D (disabled)",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 347,
+        "width": 158,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Option_DDisabled_38",
+      "tag": "div",
+      "text": "Option D (disabled)",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 347,
+        "width": 130,
+        "height": 18
+      }
+    },
+    {
+      "name": "legend_SelectARegion",
+      "tag": "legend",
+      "text": "Select a region",
+      "classes": [
+        "cmp-form-options__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--radio"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 494,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_40",
+      "tag": "span",
+      "text": "North America\n                                \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                                \n",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--radio"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 520,
+        "width": 1268,
+        "height": 179
+      }
+    },
+    {
+      "name": "span_North_America",
+      "tag": "span",
+      "text": "North America",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 532,
+        "width": 175,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_North_America_42",
+      "tag": "div",
+      "text": "North America",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 532,
+        "width": 147,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Europe",
+      "tag": "span",
+      "text": "Europe",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 585,
+        "width": 204,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_Europe_44",
+      "tag": "div",
+      "text": "Europe",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 585,
+        "width": 176,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Asia_Pacific",
+      "tag": "span",
+      "text": "Asia Pacific",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 638,
+        "width": 105,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Asia_Pacific_46",
+      "tag": "div",
+      "text": "Asia Pacific",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 638,
+        "width": 77,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_Disabled_Region",
+      "tag": "span",
+      "text": "Disabled Region",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 672,
+        "width": 135,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Disabled_Region",
+      "tag": "div",
+      "text": "Disabled Region",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 672,
+        "width": 107,
+        "height": 18
+      }
+    },
+    {
+      "name": "legend_SelectYourInterests",
+      "tag": "legend",
+      "text": "Select your interests",
+      "classes": [
+        "cmp-form-options__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--checkbox"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 818,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_50",
+      "tag": "span",
+      "text": "Retirement Planning\n                                \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                           ",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--checkbox"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 844,
+        "width": 1268,
+        "height": 179
+      }
+    },
+    {
+      "name": "span_Retirement_Planning",
+      "tag": "span",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 856,
+        "width": 217,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_52",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field__checkmark"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 858,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_Retirement_Planning",
+      "tag": "div",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 856,
+        "width": 189,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Life_Insurance",
+      "tag": "span",
+      "text": "Life Insurance",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 910,
+        "width": 204,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_Life_Insurance",
+      "tag": "div",
+      "text": "Life Insurance",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 910,
+        "width": 176,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_AnnuitiesPreselected",
+      "tag": "span",
+      "text": "Annuities (pre-selected)",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 963,
+        "width": 188,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_AnnuitiesPreselected",
+      "tag": "div",
+      "text": "Annuities (pre-selected)",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 963,
+        "width": 160,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_Unavailable_OptionDisabled",
+      "tag": "span",
+      "text": "Unavailable Option (disabled)",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 997,
+        "width": 225,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Unavailable_OptionDisabled",
+      "tag": "div",
+      "text": "Unavailable Option (disabled)",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 997,
+        "width": 197,
+        "height": 18
+      }
+    },
+    {
+      "name": "legend_Preferences",
+      "tag": "legend",
+      "text": "Preferences",
+      "classes": [
+        "cmp-form-options__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--checkbox"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1143,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_61",
+      "tag": "span",
+      "text": "Email notifications\n                                \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                           ",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--checkbox"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 1169,
+        "width": 1268,
+        "height": 144
+      }
+    },
+    {
+      "name": "span_EmailNotifications",
+      "tag": "span",
+      "text": "Email notifications",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 1181,
+        "width": 185,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_EmailNotifications",
+      "tag": "div",
+      "text": "Email notifications",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 1181,
+        "width": 157,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_SMSNotifications",
+      "tag": "span",
+      "text": "SMS notifications",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 1234,
+        "width": 233,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_SMSNotifications",
+      "tag": "div",
+      "text": "SMS notifications",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 1234,
+        "width": 205,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_PhoneCalls",
+      "tag": "span",
+      "text": "Phone calls",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 1287,
+        "width": 102,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_PhoneCalls",
+      "tag": "div",
+      "text": "Phone calls",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 1287,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "SelectAPlan",
+      "tag": "label",
+      "text": "Select a plan",
+      "classes": [
+        "cmp-form-options__label"
+      ],
+      "attributes": {
+        "aria-label": "Select a plan",
+        "for": "form-options-1728599660"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--drop-down"
+      ],
+      "role": null,
+      "ariaLabel": "Select a plan",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 1764,
+        "width": 250,
+        "height": 22
+      }
+    },
+    {
+      "name": "div_ChooseAnOptionChooseAnOpti",
+      "tag": "div",
+      "text": "Choose an option...Choose an option...",
+      "classes": [
+        "choices__inner"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 1794,
+        "width": 250,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_ChooseAnOption_70",
+      "tag": "div",
+      "text": "Choose an option...",
+      "classes": [
+        "choices__list",
+        "choices__list--single"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 31,
+        "y": 1803,
+        "width": 220,
+        "height": 32
+      }
+    },
+    {
+      "name": "div_ChooseAnOption_71",
+      "tag": "div",
+      "text": "Choose an option...",
+      "classes": [
+        "choices__item",
+        "choices__placeholder",
+        "choices__item--selectable"
+      ],
+      "attributes": {
+        "data-item": "",
+        "data-id": "1",
+        "data-value": "",
+        "data-custom-properties": "[object Object]",
+        "aria-selected": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__list",
+        "choices__list--single"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 35,
+        "y": 1807,
+        "width": 200,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_72",
+      "tag": "div",
+      "text": "Choose an option...\\0Option AOption BOption COption D (disabled)",
+      "classes": [
+        "choices__list",
+        "choices__list--dropdown"
+      ],
+      "attributes": {
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 1848,
+        "width": 252,
+        "height": 273
+      }
+    },
+    {
+      "name": "div_0_73",
+      "tag": "div",
+      "text": "\\0",
+      "classes": [
+        "choices__heading"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__group"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 15,
+        "y": 1897,
+        "width": 250,
+        "height": 43
+      }
+    },
+    {
+      "name": "SelectYourInterests",
+      "tag": "label",
+      "text": "Select your interests",
+      "classes": [
+        "cmp-form-options__label"
+      ],
+      "attributes": {
+        "aria-label": "Select your interests",
+        "for": "form-options-818373936"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--multi-drop-down"
+      ],
+      "role": null,
+      "ariaLabel": "Select your interests",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 2594,
+        "width": 250,
+        "height": 22
+      }
+    },
+    {
+      "name": "label_Retirement_Planning",
+      "tag": "label",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "checkboxes"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "label_Life_Insurance",
+      "tag": "label",
+      "text": "Life Insurance",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "checkboxes"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "label_Annuities",
+      "tag": "label",
+      "text": "Annuities",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "checkboxes"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "label_Wealth_Management",
+      "tag": "label",
+      "text": "Wealth Management",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "checkboxes"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "label_Tax_Planning",
+      "tag": "label",
+      "text": "Tax Planning",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "checkboxes"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "SelectARegion",
+      "tag": "label",
+      "text": "Select a region",
+      "classes": [
+        "cmp-form-options__label"
+      ],
+      "attributes": {
+        "aria-label": "Select a region",
+        "for": "form-options-1913832180"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--drop-down"
+      ],
+      "role": null,
+      "ariaLabel": "Select a region",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 3418,
+        "width": 250,
+        "height": 22
+      }
+    },
+    {
+      "name": "div_ChooseARegionChooseARegion",
+      "tag": "div",
+      "text": "Choose a region...Choose a region...",
+      "classes": [
+        "choices__inner"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 3448,
+        "width": 250,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_ChooseARegion_82",
+      "tag": "div",
+      "text": "Choose a region...",
+      "classes": [
+        "choices__list",
+        "choices__list--single"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 31,
+        "y": 3457,
+        "width": 220,
+        "height": 32
+      }
+    },
+    {
+      "name": "div_ChooseARegion_83",
+      "tag": "div",
+      "text": "Choose a region...",
+      "classes": [
+        "choices__item",
+        "choices__placeholder",
+        "choices__item--selectable"
+      ],
+      "attributes": {
+        "data-item": "",
+        "data-id": "1",
+        "data-value": "",
+        "data-custom-properties": "[object Object]",
+        "aria-selected": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__list",
+        "choices__list--single"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 35,
+        "y": 3461,
+        "width": 200,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_84",
+      "tag": "div",
+      "text": "Choose a region...\\0North AmericaEuropeAsia Pacific",
+      "classes": [
+        "choices__list",
+        "choices__list--dropdown"
+      ],
+      "attributes": {
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 3502,
+        "width": 252,
+        "height": 229
+      }
+    },
+    {
+      "name": "DisabledDropdown",
+      "tag": "label",
+      "text": "Disabled dropdown",
+      "classes": [
+        "cmp-form-options__label"
+      ],
+      "attributes": {
+        "aria-label": "Disabled dropdown",
+        "for": "form-options-1057915192"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--drop-down"
+      ],
+      "role": null,
+      "ariaLabel": "Disabled dropdown",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 3705,
+        "width": 250,
+        "height": 22
+      }
+    },
+    {
+      "name": "div_NotAvailableNotAvailable",
+      "tag": "div",
+      "text": "Not availableNot available",
+      "classes": [
+        "choices__inner"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 3736,
+        "width": 250,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_NotAvailable_87",
+      "tag": "div",
+      "text": "Not available",
+      "classes": [
+        "choices__list",
+        "choices__list--single"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 31,
+        "y": 3745,
+        "width": 220,
+        "height": 32
+      }
+    },
+    {
+      "name": "div_NotAvailable_88",
+      "tag": "div",
+      "text": "Not available",
+      "classes": [
+        "choices__item",
+        "choices__placeholder",
+        "choices__item--selectable"
+      ],
+      "attributes": {
+        "data-item": "",
+        "data-id": "1",
+        "data-value": "",
+        "data-custom-properties": "[object Object]",
+        "aria-selected": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices__list",
+        "choices__list--single"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 35,
+        "y": 3749,
+        "width": 200,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_NotAvailable0Option_AOption_B_89",
+      "tag": "div",
+      "text": "Not available\\0Option AOption B",
+      "classes": [
+        "choices__list",
+        "choices__list--dropdown"
+      ],
+      "attributes": {
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "choices"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 3789,
+        "width": 252,
+        "height": 185
+      }
+    }
+  ],
+  "pageTitle": "Form Options",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

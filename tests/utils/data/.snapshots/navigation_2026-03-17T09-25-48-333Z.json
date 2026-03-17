@@ -1,0 +1,3378 @@
+{
+  "component": "navigation",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/navigation.html?wcmmode=disabled",
+  "scannedAt": "2026-03-17T09:25:48.329Z",
+  "rootSelector": ".cmp-navigation",
+  "elements": [
+    {
+      "name": "Corporate_Agnostic",
+      "tag": "a",
+      "text": "Corporate (Agnostic)",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/corporate-agnostic.html",
+        "target": "_self",
+        "aria-label": "Corporate (Agnostic)",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Corporate (Agnostic)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 80,
+        "y": 264,
+        "width": 140,
+        "height": 18
+      }
+    },
+    {
+      "name": "Main",
+      "tag": "a",
+      "text": "Main",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/corporate-agnostic/main.html",
+        "target": "_self",
+        "aria-label": "Main",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Main",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 77,
+        "y": 299,
+        "width": 45,
+        "height": 26
+      }
+    },
+    {
+      "name": "English",
+      "tag": "a",
+      "text": "English",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/corporate-agnostic/main/en.html",
+        "target": "_self",
+        "aria-label": "English",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "English",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 122,
+        "y": 330,
+        "width": 58,
+        "height": 26
+      }
+    },
+    {
+      "name": "Financial_Professionals",
+      "tag": "a",
+      "text": "Financial Professionals",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/financial-professionals.html",
+        "target": "_self",
+        "aria-label": "Financial Professionals",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Financial Professionals",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 313,
+        "y": 264,
+        "width": 149,
+        "height": 18
+      }
+    },
+    {
+      "name": "Individuals",
+      "tag": "a",
+      "text": "Individuals",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/individuals.html",
+        "target": "_self",
+        "aria-label": "Individuals",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Individuals",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 556,
+        "y": 264,
+        "width": 70,
+        "height": 18
+      }
+    },
+    {
+      "name": "Preneed",
+      "tag": "a",
+      "text": "Preneed",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/preneed.html",
+        "target": "_self",
+        "aria-label": "Preneed",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Preneed",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 759,
+        "y": 264,
+        "width": 55,
+        "height": 18
+      }
+    },
+    {
+      "name": "Style_Guide",
+      "tag": "a",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "aria-current": "page",
+        "aria-label": "Style Guide",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Style Guide",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 963,
+        "y": 264,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "Branding",
+      "tag": "a",
+      "text": "Branding",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/branding.html",
+        "target": "_self",
+        "aria-label": "Branding",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Branding",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 960,
+        "y": 299,
+        "width": 71,
+        "height": 26
+      }
+    },
+    {
+      "name": "Templates",
+      "tag": "a",
+      "text": "Templates",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates.html",
+        "target": "_self",
+        "aria-label": "Templates",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Templates",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 960,
+        "y": 336,
+        "width": 79,
+        "height": 26
+      }
+    },
+    {
+      "name": "Homepage_Template",
+      "tag": "a",
+      "text": "Homepage Template",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates/homepage-template.html",
+        "target": "_self",
+        "aria-label": "Homepage Template",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Homepage Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 368,
+        "width": 149,
+        "height": 26
+      }
+    },
+    {
+      "name": "Rate_Admin_Template",
+      "tag": "a",
+      "text": "Rate Admin Template",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates/rate-admin-page.html",
+        "target": "_self",
+        "aria-label": "Rate Admin Template",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Rate Admin Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 404,
+        "width": 154,
+        "height": 26
+      }
+    },
+    {
+      "name": "Component_Library",
+      "tag": "a",
+      "text": "Component Library",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components.html",
+        "target": "_self",
+        "aria-current": "page",
+        "aria-label": "Component Library",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Component Library",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 960,
+        "y": 446,
+        "width": 138,
+        "height": 26
+      }
+    },
+    {
+      "name": "Tabs",
+      "tag": "a",
+      "text": "Tabs",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/tabs.html",
+        "target": "_self",
+        "aria-label": "Tabs",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Tabs",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 477,
+        "width": 43,
+        "height": 26
+      }
+    },
+    {
+      "name": "Form_Options",
+      "tag": "a",
+      "text": "Form Options",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/form-options.html",
+        "target": "_self",
+        "aria-label": "Form Options",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Form Options",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 513,
+        "width": 100,
+        "height": 26
+      }
+    },
+    {
+      "name": "RTE_Table",
+      "tag": "a",
+      "text": "RTE Table",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/rte-table.html",
+        "target": "_self",
+        "aria-label": "RTE Table",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "RTE Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 550,
+        "width": 77,
+        "height": 26
+      }
+    },
+    {
+      "name": "Accordion",
+      "tag": "a",
+      "text": "Accordion",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion.html",
+        "target": "_self",
+        "aria-label": "Accordion",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Accordion",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 586,
+        "width": 78,
+        "height": 26
+      }
+    },
+    {
+      "name": "Rating_Card",
+      "tag": "a",
+      "text": "Rating Card",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/rating-card.html",
+        "target": "_self",
+        "aria-label": "Rating Card",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Rating Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 622,
+        "width": 91,
+        "height": 26
+      }
+    },
+    {
+      "name": "Hero_5050",
+      "tag": "a",
+      "text": "Hero 50/50",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/hero-fifty-fifty.html",
+        "target": "_self",
+        "aria-label": "Hero 50/50",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Hero 50/50",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 658,
+        "width": 91,
+        "height": 26
+      }
+    },
+    {
+      "name": "Navigation",
+      "tag": "a",
+      "text": "Navigation",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/navigation.html",
+        "target": "_self",
+        "aria-current": "page",
+        "aria-label": "Navigation",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2",
+        "cmp-navigation__item--active"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Navigation",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 694,
+        "width": 84,
+        "height": 26
+      }
+    },
+    {
+      "name": "Accordion_Tabs_Feature",
+      "tag": "a",
+      "text": "Accordion Tabs Feature",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion-tabs-feature.html",
+        "target": "_self",
+        "aria-label": "Accordion Tabs Feature",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Accordion Tabs Feature",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 730,
+        "width": 167,
+        "height": 26
+      }
+    },
+    {
+      "name": "Brand_Relationship",
+      "tag": "a",
+      "text": "Brand Relationship",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/brand-relationship.html",
+        "target": "_self",
+        "aria-label": "Brand Relationship",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Brand Relationship",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 767,
+        "width": 135,
+        "height": 26
+      }
+    },
+    {
+      "name": "Button",
+      "tag": "a",
+      "text": "Button",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/button.html",
+        "target": "_self",
+        "aria-label": "Button",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Button",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 803,
+        "width": 56,
+        "height": 26
+      }
+    },
+    {
+      "name": "Content_Trail",
+      "tag": "a",
+      "text": "Content Trail",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/content-trail.html",
+        "target": "_self",
+        "aria-label": "Content Trail",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Content Trail",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 875,
+        "width": 96,
+        "height": 26
+      }
+    },
+    {
+      "name": "Feature_Banner",
+      "tag": "a",
+      "text": "Feature Banner",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/feature-banner.html",
+        "target": "_self",
+        "aria-label": "Feature Banner",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Feature Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 911,
+        "width": 114,
+        "height": 26
+      }
+    },
+    {
+      "name": "Grid_Container",
+      "tag": "a",
+      "text": "Grid Container",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/grid-container.html",
+        "target": "_self",
+        "aria-label": "Grid Container",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Grid Container",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 948,
+        "width": 107,
+        "height": 26
+      }
+    },
+    {
+      "name": "Homepage_Hero",
+      "tag": "a",
+      "text": "Homepage Hero",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/homepage-hero.html",
+        "target": "_self",
+        "aria-label": "Homepage Hero",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Homepage Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 984,
+        "width": 120,
+        "height": 26
+      }
+    },
+    {
+      "name": "Image_With_Nested_Content",
+      "tag": "a",
+      "text": "Image With Nested Content",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/image-with-nested-content.html",
+        "target": "_self",
+        "aria-label": "Image With Nested Content",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Image With Nested Content",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1020,
+        "width": 193,
+        "height": 26
+      }
+    },
+    {
+      "name": "Rate_Sheet_Grid",
+      "tag": "a",
+      "text": "Rate Sheet Grid",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/rate-sheet-grid.html",
+        "target": "_self",
+        "aria-label": "Rate Sheet Grid",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Rate Sheet Grid",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1056,
+        "width": 115,
+        "height": 26
+      }
+    },
+    {
+      "name": "Ratings_Card",
+      "tag": "a",
+      "text": "Ratings Card",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/ratingsCard.html",
+        "target": "_self",
+        "aria-label": "Ratings Card",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Ratings Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1092,
+        "width": 97,
+        "height": 26
+      }
+    },
+    {
+      "name": "Role_Selector",
+      "tag": "a",
+      "text": "Role Selector",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/role-selector.html",
+        "target": "_self",
+        "aria-label": "Role Selector",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Role Selector",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1129,
+        "width": 98,
+        "height": 26
+      }
+    },
+    {
+      "name": "Section",
+      "tag": "a",
+      "text": "Section",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/section.html",
+        "target": "_self",
+        "aria-label": "Section",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Section",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1165,
+        "width": 60,
+        "height": 26
+      }
+    },
+    {
+      "name": "Separator",
+      "tag": "a",
+      "text": "Separator",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/separator.html",
+        "target": "_self",
+        "aria-label": "Separator",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Separator",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1201,
+        "width": 78,
+        "height": 26
+      }
+    },
+    {
+      "name": "Spacer",
+      "tag": "a",
+      "text": "Spacer",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/spacer.html",
+        "target": "_self",
+        "aria-label": "Spacer",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Spacer",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1237,
+        "width": 58,
+        "height": 26
+      }
+    },
+    {
+      "name": "Statistic",
+      "tag": "a",
+      "text": "Statistic",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/statistic.html",
+        "target": "_self",
+        "aria-label": "Statistic",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Statistic",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1273,
+        "width": 65,
+        "height": 26
+      }
+    },
+    {
+      "name": "Text",
+      "tag": "a",
+      "text": "Text",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/text.html",
+        "target": "_self",
+        "aria-label": "Text",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Text",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1309,
+        "width": 40,
+        "height": 26
+      }
+    },
+    {
+      "name": "Video_External",
+      "tag": "a",
+      "text": "Video (External)",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/video-external.html",
+        "target": "_self",
+        "aria-label": "Video (External)",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Video (External)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1005,
+        "y": 1346,
+        "width": 119,
+        "height": 26
+      }
+    },
+    {
+      "name": "ul_36",
+      "tag": "ul",
+      "text": "Corporate (Agnostic)\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n        \n",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 259,
+        "width": 1280,
+        "height": 1128
+      }
+    },
+    {
+      "name": "ul_37",
+      "tag": "ul",
+      "text": "Main\n    \n\n    \n\n        \n    \n        \n    \n        \n    English",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 72,
+        "y": 282,
+        "width": 148,
+        "height": 84
+      }
+    },
+    {
+      "name": "ul_English",
+      "tag": "ul",
+      "text": "English",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 77,
+        "y": 325,
+        "width": 178,
+        "height": 36
+      }
+    },
+    {
+      "name": "ul_39",
+      "tag": "ul",
+      "text": "Branding\n    \n\n    \n\n        \n    \n\n    \n        \n    \n        \n    Templates\n    \n\n    \n\n        \n ",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 955,
+        "y": 282,
+        "width": 253,
+        "height": 1100
+      }
+    },
+    {
+      "name": "ul_40",
+      "tag": "ul",
+      "text": "Homepage Template\n    \n\n    \n\n        \n    \n\n    \n        \n    \n        \n    Rate Admin Template",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 960,
+        "y": 363,
+        "width": 283,
+        "height": 72
+      }
+    },
+    {
+      "name": "ul_41",
+      "tag": "ul",
+      "text": "Tabs\n    \n\n    \n\n        \n    \n\n    \n        \n    \n        \n    Form Options\n    \n\n    \n\n        \n  ",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 960,
+        "y": 472,
+        "width": 283,
+        "height": 905
+      }
+    },
+    {
+      "name": "ul_Button",
+      "tag": "ul",
+      "text": "Button",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1005,
+        "y": 829,
+        "width": 273,
+        "height": 36
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_83f7afdff6",
+      "tag": "li",
+      "text": "Corporate (Agnostic)\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n        \n",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-83f7afdff6",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 67,
+        "y": 259,
+        "width": 158,
+        "height": 1128
+      }
+    },
+    {
+      "name": "Corporate_Agnostic_44",
+      "tag": "span",
+      "text": "Corporate (Agnostic)",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Corporate (Agnostic)"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Corporate (Agnostic)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 80,
+        "y": 265,
+        "width": 140,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1ItemC131db0ef8",
+      "tag": "li",
+      "text": "Main\n    \n\n    \n\n        \n    \n        \n    \n        \n    English",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-c131db0ef8",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 72,
+        "y": 294,
+        "width": 148,
+        "height": 72
+      }
+    },
+    {
+      "name": "Main_46",
+      "tag": "span",
+      "text": "Main",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Main"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Main",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 83,
+        "y": 304,
+        "width": 33,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_English",
+      "tag": "li",
+      "text": "English",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-90a28c8cd7",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 117,
+        "y": 325,
+        "width": 138,
+        "height": 36
+      }
+    },
+    {
+      "name": "English_48",
+      "tag": "span",
+      "text": "English",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "English"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "English",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 128,
+        "y": 335,
+        "width": 46,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1ItemCc78444b86",
+      "tag": "li",
+      "text": "Financial Professionals\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n      ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-cc78444b86",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 300,
+        "y": 259,
+        "width": 167,
+        "height": 1128
+      }
+    },
+    {
+      "name": "Financial_Professionals_50",
+      "tag": "span",
+      "text": "Financial Professionals",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Financial Professionals"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Financial Professionals",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 313,
+        "y": 265,
+        "width": 149,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_0e452ee23a",
+      "tag": "li",
+      "text": "Individuals\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n        \n    \n    ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-0e452ee23a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 543,
+        "y": 259,
+        "width": 128,
+        "height": 1128
+      }
+    },
+    {
+      "name": "Individuals_52",
+      "tag": "span",
+      "text": "Individuals",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Individuals"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Individuals",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 556,
+        "y": 265,
+        "width": 70,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_047745266e",
+      "tag": "li",
+      "text": "Preneed\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n        \n    \n        ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-047745266e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 746,
+        "y": 259,
+        "width": 128,
+        "height": 1128
+      }
+    },
+    {
+      "name": "Preneed_54",
+      "tag": "span",
+      "text": "Preneed",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Preneed"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Preneed",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 759,
+        "y": 265,
+        "width": 55,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_3dd3bf6e7a",
+      "tag": "li",
+      "text": "Style Guide\n    \n\n    \n\n        \n    \n        \n    \n        \n    Branding\n    \n\n    \n\n        \n    \n",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-3dd3bf6e7a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 950,
+        "y": 259,
+        "width": 263,
+        "height": 1128
+      }
+    },
+    {
+      "name": "Style_Guide_56",
+      "tag": "span",
+      "text": "Style Guide",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Style Guide"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Style Guide",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 963,
+        "y": 265,
+        "width": 74,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Branding",
+      "tag": "li",
+      "text": "Branding",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-bd4e658c81",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 955,
+        "y": 294,
+        "width": 253,
+        "height": 36
+      }
+    },
+    {
+      "name": "Branding_58",
+      "tag": "span",
+      "text": "Branding",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Branding"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Branding",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 966,
+        "y": 304,
+        "width": 59,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1ItemF52820d1fe",
+      "tag": "li",
+      "text": "Templates\n    \n\n    \n\n        \n    \n        \n    \n        \n    Homepage Template\n    \n\n    \n\n       ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-f52820d1fe",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 955,
+        "y": 331,
+        "width": 253,
+        "height": 109
+      }
+    },
+    {
+      "name": "Templates_60",
+      "tag": "span",
+      "text": "Templates",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Templates"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Templates",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 966,
+        "y": 341,
+        "width": 67,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Homepage_Template",
+      "tag": "li",
+      "text": "Homepage Template",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-7fd03f3a1e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 363,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Homepage_Template_62",
+      "tag": "span",
+      "text": "Homepage Template",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Homepage Template"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Homepage Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 373,
+        "width": 137,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Rate_Admin_Template",
+      "tag": "li",
+      "text": "Rate Admin Template",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-9993dd6b92",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 399,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Rate_Admin_Template_64",
+      "tag": "span",
+      "text": "Rate Admin Template",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Rate Admin Template"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Rate Admin Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 409,
+        "width": 142,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_2b248a5ea1",
+      "tag": "li",
+      "text": "Component Library\n    \n\n    \n\n        \n    \n        \n    \n        \n    Tabs\n    \n\n    \n\n        \n   ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-2b248a5ea1",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 955,
+        "y": 441,
+        "width": 253,
+        "height": 941
+      }
+    },
+    {
+      "name": "Component_Library_66",
+      "tag": "span",
+      "text": "Component Library",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Component Library"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Component Library",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 966,
+        "y": 451,
+        "width": 126,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Tabs",
+      "tag": "li",
+      "text": "Tabs",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-24dadcccb0",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 472,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Tabs_68",
+      "tag": "span",
+      "text": "Tabs",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Tabs"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Tabs",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 482,
+        "width": 31,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Form_Options",
+      "tag": "li",
+      "text": "Form Options",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-105bb71bd1",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 508,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Form_Options_70",
+      "tag": "span",
+      "text": "Form Options",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Form Options"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Form Options",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 518,
+        "width": 88,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_RTE_Table",
+      "tag": "li",
+      "text": "RTE Table",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-9b83b16ee6",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 545,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "RTE_Table_72",
+      "tag": "span",
+      "text": "RTE Table",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "RTE Table"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "RTE Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 555,
+        "width": 65,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Accordion",
+      "tag": "li",
+      "text": "Accordion",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-106e51afa9",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 581,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Accordion_74",
+      "tag": "span",
+      "text": "Accordion",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Accordion"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Accordion",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 591,
+        "width": 66,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Rating_Card",
+      "tag": "li",
+      "text": "Rating Card",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-f459dc2728",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 617,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Rating_Card_76",
+      "tag": "span",
+      "text": "Rating Card",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Rating Card"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Rating Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 627,
+        "width": 79,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Hero_5050",
+      "tag": "li",
+      "text": "Hero 50/50",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6b3b0b94b5",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 653,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Hero_5050_78",
+      "tag": "span",
+      "text": "Hero 50/50",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Hero 50/50"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Hero 50/50",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 663,
+        "width": 79,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Navigation",
+      "tag": "li",
+      "text": "Navigation",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2",
+        "cmp-navigation__item--active"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-50eebe3d65",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 689,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Navigation_80",
+      "tag": "span",
+      "text": "Navigation",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Navigation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Navigation",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 699,
+        "width": 72,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Accordion_Tabs_Feature",
+      "tag": "li",
+      "text": "Accordion Tabs Feature",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-7282c86477",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 725,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Accordion_Tabs_Feature_82",
+      "tag": "span",
+      "text": "Accordion Tabs Feature",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Accordion Tabs Feature"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Accordion Tabs Feature",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 735,
+        "width": 155,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Brand_Relationship",
+      "tag": "li",
+      "text": "Brand Relationship",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-769211bf99",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 762,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Brand_Relationship_84",
+      "tag": "span",
+      "text": "Brand Relationship",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Brand Relationship"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Brand Relationship",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 772,
+        "width": 123,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_04b7f5ce83",
+      "tag": "li",
+      "text": "Button\n    \n\n    \n\n        \n    \n        \n    \n        \n    Button",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-04b7f5ce83",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 798,
+        "width": 243,
+        "height": 72
+      }
+    },
+    {
+      "name": "Button_86",
+      "tag": "span",
+      "text": "Button",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Button"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Button",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 808,
+        "width": 44,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Button",
+      "tag": "li",
+      "text": "Button",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-368f25e1bc",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1045,
+        "y": 829,
+        "width": 233,
+        "height": 36
+      }
+    },
+    {
+      "name": "li_Content_Trail",
+      "tag": "li",
+      "text": "Content Trail",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-be460d42e5",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 870,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Content_Trail_89",
+      "tag": "span",
+      "text": "Content Trail",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Content Trail"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Content Trail",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 880,
+        "width": 84,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Feature_Banner",
+      "tag": "li",
+      "text": "Feature Banner",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-80dcc26317",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 906,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Feature_Banner_91",
+      "tag": "span",
+      "text": "Feature Banner",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Feature Banner"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Feature Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 916,
+        "width": 102,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Grid_Container",
+      "tag": "li",
+      "text": "Grid Container",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-a87dd8e8c9",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 943,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Grid_Container_93",
+      "tag": "span",
+      "text": "Grid Container",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Grid Container"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Grid Container",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 953,
+        "width": 95,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Homepage_Hero",
+      "tag": "li",
+      "text": "Homepage Hero",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-223eaddd53",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 979,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Homepage_Hero_95",
+      "tag": "span",
+      "text": "Homepage Hero",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Homepage Hero"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Homepage Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 989,
+        "width": 108,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Image_With_Nested_Content",
+      "tag": "li",
+      "text": "Image With Nested Content",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6cef0e71ad",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1015,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Image_With_Nested_Content_97",
+      "tag": "span",
+      "text": "Image With Nested Content",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Image With Nested Content"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Image With Nested Content",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1025,
+        "width": 181,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Rate_Sheet_Grid",
+      "tag": "li",
+      "text": "Rate Sheet Grid",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-3dac6658d6",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1051,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Rate_Sheet_Grid_99",
+      "tag": "span",
+      "text": "Rate Sheet Grid",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Rate Sheet Grid"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Rate Sheet Grid",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1061,
+        "width": 103,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Ratings_Card",
+      "tag": "li",
+      "text": "Ratings Card",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-b4a597e712",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1087,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Ratings_Card_101",
+      "tag": "span",
+      "text": "Ratings Card",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Ratings Card"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Ratings Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1097,
+        "width": 85,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Role_Selector",
+      "tag": "li",
+      "text": "Role Selector",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6064c8a8f8",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1124,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Role_Selector_103",
+      "tag": "span",
+      "text": "Role Selector",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Role Selector"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Role Selector",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1134,
+        "width": 86,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Section",
+      "tag": "li",
+      "text": "Section",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6b635e8a49",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1160,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Section_105",
+      "tag": "span",
+      "text": "Section",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Section"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Section",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1170,
+        "width": 48,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Separator",
+      "tag": "li",
+      "text": "Separator",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-f935003d88",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1196,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Separator_107",
+      "tag": "span",
+      "text": "Separator",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Separator"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Separator",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1206,
+        "width": 66,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Spacer",
+      "tag": "li",
+      "text": "Spacer",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-63a9878b6e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1232,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Spacer_109",
+      "tag": "span",
+      "text": "Spacer",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Spacer"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Spacer",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1242,
+        "width": 46,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Statistic",
+      "tag": "li",
+      "text": "Statistic",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-72696c922f",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1268,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Statistic_111",
+      "tag": "span",
+      "text": "Statistic",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Statistic"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Statistic",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1278,
+        "width": 53,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Text",
+      "tag": "li",
+      "text": "Text",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-66eaf01900",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1304,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Text_113",
+      "tag": "span",
+      "text": "Text",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Text"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Text",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1314,
+        "width": 28,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Video_External",
+      "tag": "li",
+      "text": "Video (External)",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-b3b79669a5",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1000,
+        "y": 1341,
+        "width": 243,
+        "height": 36
+      }
+    },
+    {
+      "name": "Video_External_115",
+      "tag": "span",
+      "text": "Video (External)",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Video (External)"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Video (External)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1011,
+        "y": 1351,
+        "width": 107,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigation_862a3a9298Item_83f7afdff6",
+      "tag": "li",
+      "text": "Corporate (Agnostic)\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n        \n",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-862a3a9298-item-83f7afdff6",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 67,
+        "y": 1685,
+        "width": 158,
+        "height": 1128
+      }
+    },
+    {
+      "name": "navigation_862a3a9298ItemC131db0ef8",
+      "tag": "li",
+      "text": "Main\n    \n\n    \n\n        \n    \n        \n    \n        \n    English",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-862a3a9298-item-c131db0ef8",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 72,
+        "y": 1720,
+        "width": 148,
+        "height": 72
+      }
+    },
+    {
+      "name": "navigation_862a3a9298ItemCc78444b86",
+      "tag": "li",
+      "text": "Financial Professionals\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n      ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-862a3a9298-item-cc78444b86",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 300,
+        "y": 1685,
+        "width": 167,
+        "height": 1128
+      }
+    },
+    {
+      "name": "navigation_862a3a9298Item_0e452ee23a",
+      "tag": "li",
+      "text": "Individuals\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n        \n    \n    ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-862a3a9298-item-0e452ee23a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 543,
+        "y": 1685,
+        "width": 128,
+        "height": 1128
+      }
+    },
+    {
+      "name": "navigation_862a3a9298Item_047745266e",
+      "tag": "li",
+      "text": "Preneed\n    \n\n    \n\n        \n    \n        \n    \n        \n    Main\n    \n\n    \n\n        \n    \n        ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-862a3a9298-item-047745266e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 746,
+        "y": 1685,
+        "width": 128,
+        "height": 1128
+      }
+    },
+    {
+      "name": "navigation_862a3a9298Item_3dd3bf6e7a",
+      "tag": "li",
+      "text": "Style Guide\n    \n\n    \n\n        \n    \n        \n    \n        \n    Branding\n    \n\n    \n\n        \n    \n",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--active"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-862a3a9298-item-3dd3bf6e7a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 950,
+        "y": 1685,
+        "width": 263,
+        "height": 1128
+      }
+    },
+    {
+      "name": "navigation_862a3a9298ItemF52820d1fe",
+      "tag": "li",
+      "text": "Templates\n    \n\n    \n\n        \n    \n        \n    \n        \n    Homepage Template\n    \n\n    \n\n       ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-862a3a9298-item-f52820d1fe",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 955,
+        "y": 1757,
+        "width": 253,
+        "height": 109
+      }
+    },
+    {
+      "name": "navigation_862a3a9298Item_2b248a5ea1",
+      "tag": "li",
+      "text": "Component Library\n    \n\n    \n\n        \n    \n        \n    \n        \n    Tabs\n    \n\n    \n\n        \n   ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--active"
+      ],
+      "attributes": {
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-862a3a9298-item-2b248a5ea1",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 955,
+        "y": 1867,
+        "width": 253,
+        "height": 941
+      }
+    }
+  ],
+  "pageTitle": "Navigation",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -1,0 +1,805 @@
+{
+  "component": "hero-fifty-fifty",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled",
+  "scannedAt": "2026-03-17T07:22:03.068Z",
+  "rootSelector": ".cmp-hero-fifty-fifty",
+  "elements": [
+    {
+      "name": "a_Style_Guide",
+      "tag": "a",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Style Guide"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 103,
+        "y": 413,
+        "width": 76,
+        "height": 17
+      }
+    },
+    {
+      "name": "a_Component_Library",
+      "tag": "a",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Component Library"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 212,
+        "y": 413,
+        "width": 127,
+        "height": 17
+      }
+    },
+    {
+      "name": "h1_2",
+      "tag": "h1",
+      "text": "Securing Your Financial Future With Confidence",
+      "classes": [
+        "cmp-hero-fifty-fifty__headline",
+        "cmp-hero-fifty-fifty__headline--h1"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 482,
+        "width": 514,
+        "height": 182
+      }
+    },
+    {
+      "name": "h1_Invest_In_What_Matters_Most",
+      "tag": "h1",
+      "text": "Invest In What Matters Most",
+      "classes": [
+        "cmp-hero-fifty-fifty__headline",
+        "cmp-hero-fifty-fifty__headline--h1-xl"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1403,
+        "width": 514,
+        "height": 152
+      }
+    },
+    {
+      "name": "h1_Global_Atlantic_At_A_Glance",
+      "tag": "h1",
+      "text": "Global Atlantic At A Glance",
+      "classes": [
+        "cmp-hero-fifty-fifty__headline",
+        "cmp-hero-fifty-fifty__headline--h1"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2297,
+        "width": 514,
+        "height": 122
+      }
+    },
+    {
+      "name": "h1_Building_ForeIncome_II_For_Tom",
+      "tag": "h1",
+      "text": "Building ForeIncome II For Tomorrow",
+      "classes": [
+        "cmp-hero-fifty-fifty__headline",
+        "cmp-hero-fifty-fifty__headline--h1"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3107,
+        "width": 514,
+        "height": 182
+      }
+    },
+    {
+      "name": "nav_6",
+      "tag": "nav",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": "breadcrumb-b9ed866281",
+      "parentClasses": [
+        "breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 397,
+        "width": 514,
+        "height": 50
+      }
+    },
+    {
+      "name": "ol_7",
+      "tag": "ol",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb__list"
+      ],
+      "attributes": {
+        "itemscope": "",
+        "itemtype": "http://schema.org/BreadcrumbList"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 413,
+        "width": 514,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-hero-fifty-fifty__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 235,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-hero-fifty-fifty__breadcrumb"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 397,
+        "width": 514,
+        "height": 50
+      }
+    },
+    {
+      "name": "li_Style_Guide",
+      "tag": "li",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 103,
+        "y": 413,
+        "width": 76,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Component_Library",
+      "tag": "li",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 193,
+        "y": 413,
+        "width": 146,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Hero_5050",
+      "tag": "li",
+      "text": "Hero 50/50",
+      "classes": [
+        "cmp-breadcrumb__item",
+        "cmp-breadcrumb__item--active"
+      ],
+      "attributes": {
+        "aria-current": "page",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 352,
+        "y": 413,
+        "width": 94,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "Retirement Solutions\n                        Securing Your Financial Future With Confidence\n        ",
+      "classes": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 451,
+        "width": 514,
+        "height": 332
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "Retirement Solutions\n                        Securing Your Financial Future With Confidence\n        ",
+      "classes": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 451,
+        "width": 514,
+        "height": 300
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "Retirement Solutions\n                        Securing Your Financial Future With Confidence",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 451,
+        "width": 514,
+        "height": 213
+      }
+    },
+    {
+      "name": "p_Retirement_Solutions",
+      "tag": "p",
+      "text": "Retirement Solutions",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 451,
+        "width": 514,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "Our comprehensive approach combines decades of investment expertise with innovative retirement solut",
+      "classes": [
+        "cmp-hero-fifty-fifty__description",
+        "cmp-hero-fifty-fifty__description--medium"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 676,
+        "width": 514,
+        "height": 76
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-hero-fifty-fifty__buttons"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 784,
+        "width": 514,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 235,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-hero-fifty-fifty__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 235,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-hero-fifty-fifty__secondary-slot"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 857,
+        "width": 640,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_Invest_In_What_Matters_Most",
+      "tag": "div",
+      "text": "Invest In What Matters Most",
+      "classes": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1403,
+        "width": 514,
+        "height": 184
+      }
+    },
+    {
+      "name": "div_Invest_In_What_Matters_Most_23",
+      "tag": "div",
+      "text": "Invest In What Matters Most",
+      "classes": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1403,
+        "width": 514,
+        "height": 152
+      }
+    },
+    {
+      "name": "div_Invest_In_What_Matters_Most_24",
+      "tag": "div",
+      "text": "Invest In What Matters Most",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1403,
+        "width": 514,
+        "height": 152
+      }
+    },
+    {
+      "name": "div_Global_Atlantic_At_A_Glance",
+      "tag": "div",
+      "text": "Global Atlantic At A Glance",
+      "classes": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2297,
+        "width": 514,
+        "height": 154
+      }
+    },
+    {
+      "name": "div_Global_Atlantic_At_A_Glance_26",
+      "tag": "div",
+      "text": "Global Atlantic At A Glance",
+      "classes": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2297,
+        "width": 514,
+        "height": 122
+      }
+    },
+    {
+      "name": "div_Global_Atlantic_At_A_Glance_27",
+      "tag": "div",
+      "text": "Global Atlantic At A Glance",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2297,
+        "width": 514,
+        "height": 122
+      }
+    },
+    {
+      "name": "div_28",
+      "tag": "div",
+      "text": "Investment Management\n                        Building ForeIncome II For Tomorrow\n                  ",
+      "classes": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3077,
+        "width": 514,
+        "height": 349
+      }
+    },
+    {
+      "name": "div_29",
+      "tag": "div",
+      "text": "Investment Management\n                        Building ForeIncome II For Tomorrow\n                  ",
+      "classes": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3077,
+        "width": 514,
+        "height": 317
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "Investment Management\n                        Building ForeIncome II For Tomorrow",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3077,
+        "width": 514,
+        "height": 213
+      }
+    },
+    {
+      "name": "p_Investment_Management",
+      "tag": "p",
+      "text": "Investment Management",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3077,
+        "width": 514,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_32",
+      "tag": "div",
+      "text": "We partner with leading companies across industries to drive long-term value creation and sustainabl",
+      "classes": [
+        "cmp-hero-fifty-fifty__description",
+        "cmp-hero-fifty-fifty__description--large"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3302,
+        "width": 514,
+        "height": 92
+      }
+    }
+  ],
+  "pageTitle": "Hero 50/50",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

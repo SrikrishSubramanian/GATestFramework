@@ -1,0 +1,3346 @@
+{
+  "component": "navigation",
+  "generatedAt": "2026-03-17T09:25:48.342Z",
+  "source": "dom",
+  "entries": {
+    "Corporate_Agnostic": {
+      "name": "Corporate_Agnostic",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Corporate (Agnostic)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate (Agnostic)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Main": {
+      "name": "Main",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Main']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Main",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "English": {
+      "name": "English",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='English']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "English",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Financial_Professionals": {
+      "name": "Financial_Professionals",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Financial Professionals']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Individuals": {
+      "name": "Individuals",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Individuals']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Preneed": {
+      "name": "Preneed",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Preneed']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Preneed",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Style_Guide": {
+      "name": "Style_Guide",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Style Guide']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Branding": {
+      "name": "Branding",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Branding']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Branding",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Templates": {
+      "name": "Templates",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Templates']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Templates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Homepage_Template": {
+      "name": "Homepage_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Homepage Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Admin_Template": {
+      "name": "Rate_Admin_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Rate Admin Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Admin Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Component_Library": {
+      "name": "Component_Library",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Component Library']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Tabs": {
+      "name": "Tabs",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Tabs']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tabs",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Form_Options": {
+      "name": "Form_Options",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Form Options']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Form Options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "RTE_Table": {
+      "name": "RTE_Table",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='RTE Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "RTE Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion": {
+      "name": "Accordion",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Accordion']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rating_Card": {
+      "name": "Rating_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Rating Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rating Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Hero_5050": {
+      "name": "Hero_5050",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Hero 50/50']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Hero 50/50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Navigation": {
+      "name": "Navigation",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Navigation']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Navigation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_Feature": {
+      "name": "Accordion_Tabs_Feature",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Accordion Tabs Feature']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Brand_Relationship": {
+      "name": "Brand_Relationship",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Brand Relationship']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Brand Relationship",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Button": {
+      "name": "Button",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Button']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Content_Trail": {
+      "name": "Content_Trail",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Content Trail']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Trail",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Feature_Banner": {
+      "name": "Feature_Banner",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Feature Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Grid_Container": {
+      "name": "Grid_Container",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Grid Container']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Grid Container",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Homepage_Hero": {
+      "name": "Homepage_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Homepage Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Image_With_Nested_Content": {
+      "name": "Image_With_Nested_Content",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Image With Nested Content']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image With Nested Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Sheet_Grid": {
+      "name": "Rate_Sheet_Grid",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Rate Sheet Grid']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Sheet Grid",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Ratings_Card": {
+      "name": "Ratings_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Ratings Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Ratings Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Role_Selector": {
+      "name": "Role_Selector",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Role Selector']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Role Selector",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Section": {
+      "name": "Section",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Section']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Section",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Separator": {
+      "name": "Separator",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Separator']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Separator",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Spacer": {
+      "name": "Spacer",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Spacer']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spacer",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Statistic": {
+      "name": "Statistic",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Statistic']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Statistic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Text": {
+      "name": "Text",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Text']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Text",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Video_External": {
+      "name": "Video_External",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Video (External)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Video (External)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_36": {
+      "name": "ul_36",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_37": {
+      "name": "ul_37",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_English": {
+      "name": "ul_English",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "English",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_39": {
+      "name": "ul_39",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_40": {
+      "name": "ul_40",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_41": {
+      "name": "ul_41",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_Button": {
+      "name": "ul_Button",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_83f7afdff6": {
+      "name": "navigationD95ec9c1a1Item_83f7afdff6",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-83f7afdff6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Corporate_Agnostic_44": {
+      "name": "Corporate_Agnostic_44",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Corporate (Agnostic)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate (Agnostic)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1ItemC131db0ef8": {
+      "name": "navigationD95ec9c1a1ItemC131db0ef8",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-c131db0ef8",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Main_46": {
+      "name": "Main_46",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Main']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Main",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_English": {
+      "name": "li_English",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-90a28c8cd7",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "English",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "English_48": {
+      "name": "English_48",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='English']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "English",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1ItemCc78444b86": {
+      "name": "navigationD95ec9c1a1ItemCc78444b86",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-cc78444b86",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Financial_Professionals_50": {
+      "name": "Financial_Professionals_50",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Financial Professionals']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_0e452ee23a": {
+      "name": "navigationD95ec9c1a1Item_0e452ee23a",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-0e452ee23a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Individuals_52": {
+      "name": "Individuals_52",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Individuals']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_047745266e": {
+      "name": "navigationD95ec9c1a1Item_047745266e",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-047745266e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Preneed_54": {
+      "name": "Preneed_54",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Preneed']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Preneed",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_3dd3bf6e7a": {
+      "name": "navigationD95ec9c1a1Item_3dd3bf6e7a",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-3dd3bf6e7a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--active.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Style_Guide_56": {
+      "name": "Style_Guide_56",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Style Guide']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Branding": {
+      "name": "li_Branding",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-bd4e658c81",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Branding",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Branding_58": {
+      "name": "Branding_58",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Branding']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Branding",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1ItemF52820d1fe": {
+      "name": "navigationD95ec9c1a1ItemF52820d1fe",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-f52820d1fe",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Templates_60": {
+      "name": "Templates_60",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Templates']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Templates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Homepage_Template": {
+      "name": "li_Homepage_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-7fd03f3a1e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Homepage_Template_62": {
+      "name": "Homepage_Template_62",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Homepage Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Rate_Admin_Template": {
+      "name": "li_Rate_Admin_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-9993dd6b92",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Admin Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Admin_Template_64": {
+      "name": "Rate_Admin_Template_64",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Rate Admin Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Admin Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_2b248a5ea1": {
+      "name": "navigationD95ec9c1a1Item_2b248a5ea1",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-2b248a5ea1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1.cmp-navigation__item--active.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Component_Library_66": {
+      "name": "Component_Library_66",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Component Library']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Tabs": {
+      "name": "li_Tabs",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-24dadcccb0",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tabs",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Tabs_68": {
+      "name": "Tabs_68",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Tabs']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tabs",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Form_Options": {
+      "name": "li_Form_Options",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-105bb71bd1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Form Options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Form_Options_70": {
+      "name": "Form_Options_70",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Form Options']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Form Options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_RTE_Table": {
+      "name": "li_RTE_Table",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-9b83b16ee6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "RTE Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "RTE_Table_72": {
+      "name": "RTE_Table_72",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='RTE Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "RTE Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Accordion": {
+      "name": "li_Accordion",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-106e51afa9",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_74": {
+      "name": "Accordion_74",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Accordion']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Rating_Card": {
+      "name": "li_Rating_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-f459dc2728",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rating Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rating_Card_76": {
+      "name": "Rating_Card_76",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Rating Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rating Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Hero_5050": {
+      "name": "li_Hero_5050",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6b3b0b94b5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Hero 50/50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Hero_5050_78": {
+      "name": "Hero_5050_78",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Hero 50/50']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Hero 50/50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Navigation": {
+      "name": "li_Navigation",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-50eebe3d65",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2.cmp-navigation__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Navigation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Navigation_80": {
+      "name": "Navigation_80",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Navigation']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Navigation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Accordion_Tabs_Feature": {
+      "name": "li_Accordion_Tabs_Feature",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-7282c86477",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_Feature_82": {
+      "name": "Accordion_Tabs_Feature_82",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Accordion Tabs Feature']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Brand_Relationship": {
+      "name": "li_Brand_Relationship",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-769211bf99",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Brand Relationship",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Brand_Relationship_84": {
+      "name": "Brand_Relationship_84",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Brand Relationship']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Brand Relationship",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_04b7f5ce83": {
+      "name": "navigationD95ec9c1a1Item_04b7f5ce83",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-04b7f5ce83",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Button_86": {
+      "name": "Button_86",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Button']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Button": {
+      "name": "li_Button",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-368f25e1bc",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Content_Trail": {
+      "name": "li_Content_Trail",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-be460d42e5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Trail",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Content_Trail_89": {
+      "name": "Content_Trail_89",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Content Trail']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Trail",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Feature_Banner": {
+      "name": "li_Feature_Banner",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-80dcc26317",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Feature_Banner_91": {
+      "name": "Feature_Banner_91",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Feature Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Grid_Container": {
+      "name": "li_Grid_Container",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-a87dd8e8c9",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Grid Container",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Grid_Container_93": {
+      "name": "Grid_Container_93",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Grid Container']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Grid Container",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Homepage_Hero": {
+      "name": "li_Homepage_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-223eaddd53",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Homepage_Hero_95": {
+      "name": "Homepage_Hero_95",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Homepage Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Image_With_Nested_Content": {
+      "name": "li_Image_With_Nested_Content",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6cef0e71ad",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image With Nested Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Image_With_Nested_Content_97": {
+      "name": "Image_With_Nested_Content_97",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Image With Nested Content']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image With Nested Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Rate_Sheet_Grid": {
+      "name": "li_Rate_Sheet_Grid",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-3dac6658d6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Sheet Grid",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Sheet_Grid_99": {
+      "name": "Rate_Sheet_Grid_99",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Rate Sheet Grid']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Sheet Grid",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Ratings_Card": {
+      "name": "li_Ratings_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-b4a597e712",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Ratings Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Ratings_Card_101": {
+      "name": "Ratings_Card_101",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Ratings Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Ratings Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Role_Selector": {
+      "name": "li_Role_Selector",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6064c8a8f8",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Role Selector",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Role_Selector_103": {
+      "name": "Role_Selector_103",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Role Selector']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Role Selector",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Section": {
+      "name": "li_Section",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6b635e8a49",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Section",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Section_105": {
+      "name": "Section_105",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Section']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Section",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Separator": {
+      "name": "li_Separator",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-f935003d88",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Separator",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Separator_107": {
+      "name": "Separator_107",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Separator']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Separator",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Spacer": {
+      "name": "li_Spacer",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-63a9878b6e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spacer",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Spacer_109": {
+      "name": "Spacer_109",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Spacer']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spacer",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Statistic": {
+      "name": "li_Statistic",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-72696c922f",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Statistic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Statistic_111": {
+      "name": "Statistic_111",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Statistic']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Statistic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Text": {
+      "name": "li_Text",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-66eaf01900",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Text",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Text_113": {
+      "name": "Text_113",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Text']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Text",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Video_External": {
+      "name": "li_Video_External",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-b3b79669a5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Video (External)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Video_External_115": {
+      "name": "Video_External_115",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Video (External)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Video (External)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigation_862a3a9298Item_83f7afdff6": {
+      "name": "navigation_862a3a9298Item_83f7afdff6",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-862a3a9298-item-83f7afdff6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "navigation_862a3a9298ItemC131db0ef8": {
+      "name": "navigation_862a3a9298ItemC131db0ef8",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-862a3a9298-item-c131db0ef8",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "navigation_862a3a9298ItemCc78444b86": {
+      "name": "navigation_862a3a9298ItemCc78444b86",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-862a3a9298-item-cc78444b86",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "navigation_862a3a9298Item_0e452ee23a": {
+      "name": "navigation_862a3a9298Item_0e452ee23a",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-862a3a9298-item-0e452ee23a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "navigation_862a3a9298Item_047745266e": {
+      "name": "navigation_862a3a9298Item_047745266e",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-862a3a9298-item-047745266e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "navigation_862a3a9298Item_3dd3bf6e7a": {
+      "name": "navigation_862a3a9298Item_3dd3bf6e7a",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-862a3a9298-item-3dd3bf6e7a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "navigation_862a3a9298ItemF52820d1fe": {
+      "name": "navigation_862a3a9298ItemF52820d1fe",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-862a3a9298-item-f52820d1fe",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "navigation_862a3a9298Item_2b248a5ea1": {
+      "name": "navigation_862a3a9298Item_2b248a5ea1",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-862a3a9298-item-2b248a5ea1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1.cmp-navigation__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

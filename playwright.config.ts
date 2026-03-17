@@ -63,7 +63,7 @@ const viewportProjects = viewports.flatMap(viewport => {
 export default defineConfig({
 
   // timeout: 120_000,
-  timeout: 15 * 60 * 1000,
+  timeout: 5 * 60 * 1000,
   testDir: './tests/specFiles',
   /* Run tests in files in parallel */
   fullyParallel: true,

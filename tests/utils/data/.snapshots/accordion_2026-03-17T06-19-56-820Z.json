@@ -1,0 +1,1753 @@
+{
+  "component": "accordion",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/accordion.html?wcmmode=disabled",
+  "scannedAt": "2026-03-17T06:19:56.818Z",
+  "rootSelector": ".cmp-accordion",
+  "elements": [
+    {
+      "name": "button_WhatIs_Global_Atlantic",
+      "tag": "button",
+      "text": "What is Global Atlantic?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "fd8b24fd82984d84904e505e54ca5327"
+      },
+      "testId": null,
+      "id": "6ce19e6e2d6247d3adf1ea137c1e1884",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 169,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_HowDo_IContactCustomerServ",
+      "tag": "button",
+      "text": "How do I contact customer service?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "2c73a685e6c14760b7875fe7ab447cd8"
+      },
+      "testId": null,
+      "id": "cdae5b248bae4fc79ca1901ec8cc5184",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 274,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "f5a1a9051a8d4c52bf83deaacfb86401",
+      "tag": "button",
+      "text": "What products does Global Atlantic offer?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "531fd91b5b464ef091b4a24043ec0b9b"
+      },
+      "testId": null,
+      "id": "f5a1a9051a8d4c52bf83deaacfb86401",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 379,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_WhereCan_IFindMyPolicyDoc",
+      "tag": "button",
+      "text": "Where can I find my policy documents?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "1c0c5c9513fb4b5b97e97c0c543c69e1"
+      },
+      "testId": null,
+      "id": "2b0495a2704d4291be05adbff1263a83",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 484,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_SingleExpansionModeExample",
+      "tag": "button",
+      "text": "Single expansion mode example",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "true",
+        "aria-controls": "b36d86405f5b49d48080eb0195066610"
+      },
+      "testId": null,
+      "id": "e423b8f31a224b6db8095cd02849deac",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 701,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_HowDoesSingleExpansionWork",
+      "tag": "button",
+      "text": "How does single expansion work?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "e091e79310e8414ba2b38615833cf056"
+      },
+      "testId": null,
+      "id": "b3dac746b97b48779dd4cb2d32e4e384",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 908,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "el2667027661d04d6682d7782a3c576df4",
+      "tag": "button",
+      "text": "Can I customize the default expanded item?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "060da03dc95c4fb2884d72efc391b9dc"
+      },
+      "testId": null,
+      "id": "2667027661d04d6682d7782a3c576df4",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 1013,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_DarkBackgroundAccordionItem",
+      "tag": "button",
+      "text": "Dark background accordion item",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "2a9b45692f2c43a7b1da2189387308ee"
+      },
+      "testId": null,
+      "id": "369aceee66a842a29c9a2a76a0e8996b",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 1230,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_HowDoDarkBackgroundStyles_",
+      "tag": "button",
+      "text": "How do dark background styles work?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "c2f9114a542a478eae5fcab39451ddd6"
+      },
+      "testId": null,
+      "id": "ab074a4e38774a77a3ddf0593692d3f4",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 1335,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_IsTheIconAnimationTheSame",
+      "tag": "button",
+      "text": "Is the icon animation the same on dark?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "371c1276b2da4216a20c39e8ce107e11"
+      },
+      "testId": null,
+      "id": "e33c23fe10834e398f29b173c07b89fe",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 1440,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_AzulBackgroundAccordionItem",
+      "tag": "button",
+      "text": "Azul background accordion item",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "9658c6dfe3dd470aa51dc8fbb2c00996"
+      },
+      "testId": null,
+      "id": "17e3941c2ceb4418ad7b25f9bc9a4df8",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 1657,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_AnotherAccordionItemOnAzul",
+      "tag": "button",
+      "text": "Another accordion item on azul",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "c4e15c23df484fcaaffec099c42cc6e5"
+      },
+      "testId": null,
+      "id": "1d28bc01468a470394ac8b7b16739fbd",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 1762,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "accordionItem_7bcebf78d9Panel",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                    \n                    \n                ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-7bcebf78d9-button"
+      },
+      "testId": null,
+      "id": "accordion-item-7bcebf78d9-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 169,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "fd8b24fd82984d84904e505e54ca5327",
+      "tag": "div",
+      "text": "Global Atlantic Financial Group is a leading insurance company meeting the retirement and life insur",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "6ce19e6e2d6247d3adf1ea137c1e1884"
+      },
+      "testId": null,
+      "id": "fd8b24fd82984d84904e505e54ca5327",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 273,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItemF96058c61bPanel",
+      "tag": "div",
+      "text": "How do I contact customer service?\n                \n                    \n                    \n      ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-f96058c61b-button"
+      },
+      "testId": null,
+      "id": "accordion-item-f96058c61b-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 274,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "el2c73a685e6c14760b7875fe7ab447cd8",
+      "tag": "div",
+      "text": "You can reach our customer service team by calling 1-800-555-0100 during business hours, Monday thro",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "cdae5b248bae4fc79ca1901ec8cc5184"
+      },
+      "testId": null,
+      "id": "2c73a685e6c14760b7875fe7ab447cd8",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 378,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItemE92b3cd16dPanel",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?\n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-e92b3cd16d-button"
+      },
+      "testId": null,
+      "id": "accordion-item-e92b3cd16d-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 379,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "el531fd91b5b464ef091b4a24043ec0b9b",
+      "tag": "div",
+      "text": "Global Atlantic offers a range of retirement and life insurance products including fixed annuities, ",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "f5a1a9051a8d4c52bf83deaacfb86401"
+      },
+      "testId": null,
+      "id": "531fd91b5b464ef091b4a24043ec0b9b",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 483,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_139cc6958aPanel",
+      "tag": "div",
+      "text": "Where can I find my policy documents?\n                \n                    \n                    \n   ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-139cc6958a-button"
+      },
+      "testId": null,
+      "id": "accordion-item-139cc6958a-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 484,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "el1c0c5c9513fb4b5b97e97c0c543c69e1",
+      "tag": "div",
+      "text": "Policy documents can be accessed through your online account portal. If you need assistance locating",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "2b0495a2704d4291be05adbff1263a83"
+      },
+      "testId": null,
+      "id": "1c0c5c9513fb4b5b97e97c0c543c69e1",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 588,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItemA3f45cd64aPanel",
+      "tag": "div",
+      "text": "Single expansion mode example\n                \n                    \n                    \n           ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-a3f45cd64a-button"
+      },
+      "testId": null,
+      "id": "accordion-item-a3f45cd64a-panel",
+      "parentClasses": [
+        "cmp-accordion__item",
+        "expanded"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 701,
+        "width": 1145,
+        "height": 206
+      }
+    },
+    {
+      "name": "b36d86405f5b49d48080eb0195066610",
+      "tag": "div",
+      "text": "This accordion is configured with single expansion. When you open one item, all others close automat",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "false",
+        "role": "region",
+        "aria-labelledby": "e423b8f31a224b6db8095cd02849deac"
+      },
+      "testId": null,
+      "id": "b36d86405f5b49d48080eb0195066610",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 805,
+        "width": 1145,
+        "height": 102
+      }
+    },
+    {
+      "name": "accordionItemCfae96c9ecPanel",
+      "tag": "div",
+      "text": "How does single expansion work?\n                \n                    \n                    \n         ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-cfae96c9ec-button"
+      },
+      "testId": null,
+      "id": "accordion-item-cfae96c9ec-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 908,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "e091e79310e8414ba2b38615833cf056",
+      "tag": "div",
+      "text": "Authors can toggle the single expansion option in the component dialog. When enabled, only one accor",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "b3dac746b97b48779dd4cb2d32e4e384"
+      },
+      "testId": null,
+      "id": "e091e79310e8414ba2b38615833cf056",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1012,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_0765808f57Panel",
+      "tag": "div",
+      "text": "Can I customize the default expanded item?\n                \n                    \n                   ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-0765808f57-button"
+      },
+      "testId": null,
+      "id": "accordion-item-0765808f57-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1013,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "el060da03dc95c4fb2884d72efc391b9dc",
+      "tag": "div",
+      "text": "Yes, authors can select which accordion item is expanded by default through the component properties",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "2667027661d04d6682d7782a3c576df4"
+      },
+      "testId": null,
+      "id": "060da03dc95c4fb2884d72efc391b9dc",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1117,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_769a592d51Panel",
+      "tag": "div",
+      "text": "Dark background accordion item\n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-769a592d51-button"
+      },
+      "testId": null,
+      "id": "accordion-item-769a592d51-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1230,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "el2a9b45692f2c43a7b1da2189387308ee",
+      "tag": "div",
+      "text": "This demonstrates the accordion on a dark granite background. Text and borders automatically switch ",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "369aceee66a842a29c9a2a76a0e8996b"
+      },
+      "testId": null,
+      "id": "2a9b45692f2c43a7b1da2189387308ee",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1334,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_2e8d31b3a6Panel",
+      "tag": "div",
+      "text": "How do dark background styles work?\n                \n                    \n                    \n     ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-2e8d31b3a6-button"
+      },
+      "testId": null,
+      "id": "accordion-item-2e8d31b3a6-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1335,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "c2f9114a542a478eae5fcab39451ddd6",
+      "tag": "div",
+      "text": "The accordion automatically detects when it is placed inside a dark-background section (granite or a",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "ab074a4e38774a77a3ddf0593692d3f4"
+      },
+      "testId": null,
+      "id": "c2f9114a542a478eae5fcab39451ddd6",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1439,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_590b2cc446Panel",
+      "tag": "div",
+      "text": "Is the icon animation the same on dark?\n                \n                    \n                    \n ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-590b2cc446-button"
+      },
+      "testId": null,
+      "id": "accordion-item-590b2cc446-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1440,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "el371c1276b2da4216a20c39e8ce107e11",
+      "tag": "div",
+      "text": "Yes, the same rotation animation from + to − applies on dark backgrounds. The icon circle uses a dar",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "e33c23fe10834e398f29b173c07b89fe"
+      },
+      "testId": null,
+      "id": "371c1276b2da4216a20c39e8ce107e11",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1544,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_60d74c83b5Panel",
+      "tag": "div",
+      "text": "Azul background accordion item\n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-60d74c83b5-button"
+      },
+      "testId": null,
+      "id": "accordion-item-60d74c83b5-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1657,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "el9658c6dfe3dd470aa51dc8fbb2c00996",
+      "tag": "div",
+      "text": "This demonstrates the accordion on the azul (blue) background. Like granite, colors automatically ad",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "17e3941c2ceb4418ad7b25f9bc9a4df8"
+      },
+      "testId": null,
+      "id": "9658c6dfe3dd470aa51dc8fbb2c00996",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1761,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItemF44480987fPanel",
+      "tag": "div",
+      "text": "Another accordion item on azul\n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel",
+        "role": "region",
+        "aria-labelledby": "accordion-item-f44480987f-button"
+      },
+      "testId": null,
+      "id": "accordion-item-f44480987f-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1762,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "c4e15c23df484fcaaffec099c42cc6e5",
+      "tag": "div",
+      "text": "All the same accordion behaviors work on azul: single expansion, force closed on load, and author-se",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "role": "region",
+        "hidden": "true",
+        "aria-labelledby": "1d28bc01468a470394ac8b7b16739fbd"
+      },
+      "testId": null,
+      "id": "c4e15c23df484fcaaffec099c42cc6e5",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1866,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_36",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                    \n                    \n                ",
+      "classes": [
+        "cmp-accordion__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 169,
+        "width": 1145,
+        "height": 420
+      }
+    },
+    {
+      "name": "accordionItem_7bcebf78d9",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                    \n                    \n                ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_0",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-7bcebf78d9",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 169,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_WhatIs_Global_Atlantic",
+      "tag": "div",
+      "text": "What is Global Atlantic?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 169,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "span_39",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--ga"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1173,
+        "y": 201,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "name": "span_40",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-icon-line",
+        "cmp-accordion__item-icon-line--horizontal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--ga"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1185,
+        "y": 220,
+        "width": 16,
+        "height": 2
+      }
+    },
+    {
+      "name": "span_41",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-icon-line",
+        "cmp-accordion__item-icon-line--vertical"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--ga"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1192,
+        "y": 213,
+        "width": 2,
+        "height": 16
+      }
+    },
+    {
+      "name": "accordionItemF96058c61b",
+      "tag": "div",
+      "text": "How do I contact customer service?\n                \n                    \n                    \n      ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_1",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-f96058c61b",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 274,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_HowDo_IContactCustomerServ",
+      "tag": "div",
+      "text": "How do I contact customer service?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 274,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "accordionItemE92b3cd16d",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?\n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_2",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-e92b3cd16d",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 379,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_45",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 379,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "accordionItem_139cc6958a",
+      "tag": "div",
+      "text": "Where can I find my policy documents?\n                \n                    \n                    \n   ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_3",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-139cc6958a",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 484,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_WhereCan_IFindMyPolicyDoc",
+      "tag": "div",
+      "text": "Where can I find my policy documents?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 484,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_48",
+      "tag": "div",
+      "text": "Single expansion mode example\n                \n                    \n                    \n           ",
+      "classes": [
+        "cmp-accordion__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 701,
+        "width": 1145,
+        "height": 417
+      }
+    },
+    {
+      "name": "accordionItemA3f45cd64a",
+      "tag": "div",
+      "text": "Single expansion mode example\n                \n                    \n                    \n           ",
+      "classes": [
+        "cmp-accordion__item",
+        "expanded"
+      ],
+      "attributes": {
+        "name": "item_0",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-expanded": ""
+      },
+      "testId": null,
+      "id": "accordion-item-a3f45cd64a",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 701,
+        "width": 1145,
+        "height": 207
+      }
+    },
+    {
+      "name": "div_SingleExpansionModeExample",
+      "tag": "div",
+      "text": "Single expansion mode example",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 701,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "accordionItemCfae96c9ec",
+      "tag": "div",
+      "text": "How does single expansion work?\n                \n                    \n                    \n         ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_1",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-cfae96c9ec",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 908,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_HowDoesSingleExpansionWork",
+      "tag": "div",
+      "text": "How does single expansion work?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 908,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "accordionItem_0765808f57",
+      "tag": "div",
+      "text": "Can I customize the default expanded item?\n                \n                    \n                   ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_2",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-0765808f57",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1013,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_54",
+      "tag": "div",
+      "text": "Can I customize the default expanded item?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1013,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_55",
+      "tag": "div",
+      "text": "Dark background accordion item\n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-accordion__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1230,
+        "width": 1145,
+        "height": 315
+      }
+    },
+    {
+      "name": "accordionItem_769a592d51",
+      "tag": "div",
+      "text": "Dark background accordion item\n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_0",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-769a592d51",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1230,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_DarkBackgroundAccordionItem",
+      "tag": "div",
+      "text": "Dark background accordion item",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1230,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "accordionItem_2e8d31b3a6",
+      "tag": "div",
+      "text": "How do dark background styles work?\n                \n                    \n                    \n     ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_1",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-2e8d31b3a6",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1335,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_HowDoDarkBackgroundStyles_",
+      "tag": "div",
+      "text": "How do dark background styles work?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1335,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "accordionItem_590b2cc446",
+      "tag": "div",
+      "text": "Is the icon animation the same on dark?\n                \n                    \n                    \n ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_2",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-590b2cc446",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1440,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_IsTheIconAnimationTheSame",
+      "tag": "div",
+      "text": "Is the icon animation the same on dark?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1440,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_62",
+      "tag": "div",
+      "text": "Azul background accordion item\n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-accordion__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1657,
+        "width": 1145,
+        "height": 210
+      }
+    },
+    {
+      "name": "accordionItem_60d74c83b5",
+      "tag": "div",
+      "text": "Azul background accordion item\n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_0",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-60d74c83b5",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1657,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_AzulBackgroundAccordionItem",
+      "tag": "div",
+      "text": "Azul background accordion item",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1657,
+        "width": 1145,
+        "height": 104
+      }
+    },
+    {
+      "name": "accordionItemF44480987f",
+      "tag": "div",
+      "text": "Another accordion item on azul\n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_1",
+        "data-cmp-hook-accordion": "item"
+      },
+      "testId": null,
+      "id": "accordion-item-f44480987f",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1762,
+        "width": 1145,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_AnotherAccordionItemOnAzul",
+      "tag": "div",
+      "text": "Another accordion item on azul",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1762,
+        "width": 1145,
+        "height": 104
+      }
+    }
+  ],
+  "pageTitle": "Accordion",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

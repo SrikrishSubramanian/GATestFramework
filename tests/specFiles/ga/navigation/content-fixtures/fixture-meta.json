@@ -1,0 +1,12 @@
+{
+  "component": "navigation",
+  "sourceFile": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/navigation/.content.xml",
+  "sourceHash": "",
+  "generatedAt": "2026-03-17",
+  "tickets": ["GAAM-396"],
+  "additions": [
+    "Single List on slate background",
+    "Vertical Orientation on white background",
+    "Manual navigation authoring mode instance"
+  ]
+}

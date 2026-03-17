@@ -1,0 +1,558 @@
+{
+  "lastUpdated": "2026-03-17T09:25:48.386Z",
+  "components": {
+    "form-options": {
+      "component": "form-options",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 37,
+          "specFile": "form-options.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 37,
+          "specFile": "form-options.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 37,
+          "specFile": "form-options.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 37,
+          "specFile": "form-options.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 37,
+          "specFile": "form-options.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 37,
+          "specFile": "form-options.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 37,
+          "specFile": "form-options.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        }
+      },
+      "totalTests": 259,
+      "lastUpdated": "2026-03-16T07:02:39.651Z"
+    },
+    "section": {
+      "component": "section",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 37,
+          "specFile": "section.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 37,
+          "specFile": "section.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 37,
+          "specFile": "section.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 37,
+          "specFile": "section.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 37,
+          "specFile": "section.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 37,
+          "specFile": "section.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 37,
+          "specFile": "section.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        }
+      },
+      "totalTests": 259,
+      "lastUpdated": "2026-03-16T07:02:02.087Z"
+    },
+    "text": {
+      "component": "text",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 51,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 51,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 51,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 51,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 51,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 51,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 51,
+          "specFile": "text.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        }
+      },
+      "totalTests": 357,
+      "lastUpdated": "2026-03-16T14:31:12.756Z"
+    },
+    "statistic": {
+      "component": "statistic",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 29,
+          "specFile": "statistic.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile",
+            "@security"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 29,
+          "specFile": "statistic.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile",
+            "@security"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 29,
+          "specFile": "statistic.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile",
+            "@security"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 29,
+          "specFile": "statistic.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile",
+            "@security"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 29,
+          "specFile": "statistic.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile",
+            "@security"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 29,
+          "specFile": "statistic.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile",
+            "@security"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 29,
+          "specFile": "statistic.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile",
+            "@security"
+          ]
+        }
+      },
+      "totalTests": 203,
+      "lastUpdated": "2026-03-16T16:52:44.105Z"
+    },
+    "accordion": {
+      "component": "accordion",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 28,
+          "specFile": "accordion.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 28,
+          "specFile": "accordion.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 28,
+          "specFile": "accordion.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 28,
+          "specFile": "accordion.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 28,
+          "specFile": "accordion.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 28,
+          "specFile": "accordion.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 28,
+          "specFile": "accordion.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        }
+      },
+      "totalTests": 196,
+      "lastUpdated": "2026-03-17T06:19:56.850Z"
+    },
+    "fifty-fifty-hero": {
+      "component": "fifty-fifty-hero",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 57,
+          "specFile": "fifty-fifty-hero.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 57,
+          "specFile": "fifty-fifty-hero.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 57,
+          "specFile": "fifty-fifty-hero.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 57,
+          "specFile": "fifty-fifty-hero.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 57,
+          "specFile": "fifty-fifty-hero.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 57,
+          "specFile": "fifty-fifty-hero.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 57,
+          "specFile": "fifty-fifty-hero.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        }
+      },
+      "totalTests": 399,
+      "lastUpdated": "2026-03-17T07:21:19.573Z"
+    },
+    "hero-fifty-fifty": {
+      "component": "hero-fifty-fifty",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 57,
+          "specFile": "hero-fifty-fifty.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 57,
+          "specFile": "hero-fifty-fifty.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 57,
+          "specFile": "hero-fifty-fifty.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 57,
+          "specFile": "hero-fifty-fifty.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 57,
+          "specFile": "hero-fifty-fifty.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 57,
+          "specFile": "hero-fifty-fifty.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 57,
+          "specFile": "hero-fifty-fifty.author.spec.ts",
+          "tags": [
+            "@a11y"
+          ]
+        }
+      },
+      "totalTests": 399,
+      "lastUpdated": "2026-03-17T07:22:03.091Z"
+    },
+    "navigation": {
+      "component": "navigation",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 30,
+          "specFile": "navigation.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 30,
+          "specFile": "navigation.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 30,
+          "specFile": "navigation.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 30,
+          "specFile": "navigation.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 30,
+          "specFile": "navigation.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 30,
+          "specFile": "navigation.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 30,
+          "specFile": "navigation.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        }
+      },
+      "totalTests": 210,
+      "lastUpdated": "2026-03-17T09:25:48.385Z"
+    }
+  }
+}
