@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../../../utils/infra/persistent-context';
 import { ButtonPage } from '../../../pages/ga/components/buttonPage';
 import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
 import ENV from '../../../utils/infra/env';

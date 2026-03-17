@@ -1,22 +1,23 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+import path from 'path';
 import globalSetup from './tests/utils/infra/globalSetup';
 import { WaitForLoadStateOptions } from './src/setup/optional-parameter-types';
+
+// Load environment variables early so they're available in all worker processes.
+// globalSetup runs in a separate process, so env vars set there don't reach test workers.
+if (process.env.env) {
+  dotenv.config({
+    path: path.resolve(__dirname, 'tests', 'environments', `.env.${process.env.env}`),
+    override: true,
+  });
+}
 
 // Timestamped report folder: playwright-report/YYYY-MM-DD/run-YYYY-MM-DDTHH-MM-SS/
 const now = new Date();
 const dateStr = now.toISOString().split('T')[0];
 const timestamp = now.toISOString().replace(/[:.]/g, '-');
 const reportDir = `playwright-report/${dateStr}/run-${timestamp}`;
-// const config = process.env.env || 'stage';
-// // const env = require(`./config/${config}.env.json`);
-// const env = require(`./tests/environments/${config}.json`);
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
  * See https://playwright.dev/docs/test-configuration.

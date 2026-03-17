@@ -1,21 +1,21 @@
 class ENV {
-    public static BASE_URL = process.env.BASE_URL
-    public static AEM_AUTHOR_URL = process.env.AEM_AUTHOR_URL
-    public static AEM_AUTHOR_USERNAME = process.env.AEM_AUTHOR_USERNAME
-    public static AEM_AUTHOR_PASSWORD = process.env.AEM_AUTHOR_PASSWORD
-    public static GA_AUTH_REQUIRED = process.env.GA_AUTH_REQUIRED === 'true'
-    public static BIO = process.env.BIO
-    public static EXPANDABLE_TEASER = process.env.EXPANDABLE_TEASER
-    public static PORTFOLIO = process.env.PORTFOLIO
-    public static INSIGHTSFILTER = process.env.INSIGHTSFILTER
-    public static PREFILTER = process.env.PREFILTER
-    public static LINKLIST = process.env.LINKLIST
-    public static BLOGRELATEDINSIGHTS = process.env.BLOGRELATEDINSIGHTS
-    public static SIDEBYSIDEINSIGHTS = process.env.SIDEBYSIDEINSIGHTS
-    public static BLOGRELATEDINSIGHTSONECARD = process.env.BLOGRELATEDINSIGHTSONECARD
-    public static BLOGRELATEDINSIGHTSTWOCARD = process.env.BLOGRELATEDINSIGHTSTWOCARD
-    public static BLOGRELATEDINSIGHTSTHREECARD = process.env.BLOGRELATEDINSIGHTSTHREECARD
-    public static SUBSCRIBEfORM = process.env.SUBSCRIBEfORM
+    public static get BASE_URL() { return process.env.BASE_URL }
+    public static get AEM_AUTHOR_URL() { return process.env.AEM_AUTHOR_URL }
+    public static get AEM_AUTHOR_USERNAME() { return process.env.AEM_AUTHOR_USERNAME }
+    public static get AEM_AUTHOR_PASSWORD() { return process.env.AEM_AUTHOR_PASSWORD }
+    public static get GA_AUTH_REQUIRED() { return process.env.GA_AUTH_REQUIRED === 'true' }
+    public static get BIO() { return process.env.BIO }
+    public static get EXPANDABLE_TEASER() { return process.env.EXPANDABLE_TEASER }
+    public static get PORTFOLIO() { return process.env.PORTFOLIO }
+    public static get INSIGHTSFILTER() { return process.env.INSIGHTSFILTER }
+    public static get PREFILTER() { return process.env.PREFILTER }
+    public static get LINKLIST() { return process.env.LINKLIST }
+    public static get BLOGRELATEDINSIGHTS() { return process.env.BLOGRELATEDINSIGHTS }
+    public static get SIDEBYSIDEINSIGHTS() { return process.env.SIDEBYSIDEINSIGHTS }
+    public static get BLOGRELATEDINSIGHTSONECARD() { return process.env.BLOGRELATEDINSIGHTSONECARD }
+    public static get BLOGRELATEDINSIGHTSTWOCARD() { return process.env.BLOGRELATEDINSIGHTSTWOCARD }
+    public static get BLOGRELATEDINSIGHTSTHREECARD() { return process.env.BLOGRELATEDINSIGHTSTHREECARD }
+    public static get SUBSCRIBEfORM() { return process.env.SUBSCRIBEfORM }
 }
 
 

@@ -15,4 +15,5 @@ logs/
 tests/data/.snapshots/
 tests/data/baselines/
 tests/environments/.env.*.credentials
-
+.playwright-session/
+.auth-state.json
