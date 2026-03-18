@@ -1,0 +1,1589 @@
+{
+  "component": "accordion-tabs-feature",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled",
+  "scannedAt": "2026-03-18T06:44:00.007Z",
+  "rootSelector": ".cmp-accordion-tabs-feature",
+  "elements": [
+    {
+      "name": "aContentglobalatlanticstyleguid",
+      "tag": "a",
+      "text": "/content/global-atlantic/style-guide",
+      "classes": [
+        "cmp-accordion-tab__ctaUrl"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 304,
+        "width": 224,
+        "height": 17
+      }
+    },
+    {
+      "name": "h2_1",
+      "tag": "h2",
+      "text": "",
+      "classes": [
+        "ga-headline-block__title",
+        "headline-"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 239,
+        "width": 560,
+        "height": 0
+      }
+    },
+    {
+      "name": "ol_2",
+      "tag": "ol",
+      "text": "Investment Strategy\n               \n                   \n                   Portfolio Management\n    ",
+      "classes": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "attributes": {
+        "role": "tablist"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 287,
+        "width": 560,
+        "height": 55
+      }
+    },
+    {
+      "name": "ol_3",
+      "tag": "ol",
+      "text": "Discover\n               \n                   \n                   Evaluate\n               \n           ",
+      "classes": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "attributes": {
+        "role": "tablist"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 1221,
+        "width": 560,
+        "height": 55
+      }
+    },
+    {
+      "name": "ol_4",
+      "tag": "ol",
+      "text": "Financial Strength\n               \n                   \n                   Expert Team\n              ",
+      "classes": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "attributes": {
+        "role": "tablist"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 2155,
+        "width": 560,
+        "height": 55
+      }
+    },
+    {
+      "name": "li_Investment_Strategy",
+      "tag": "li",
+      "text": "Investment Strategy",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-cbe058cfe6--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 287,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Portfolio_Management",
+      "tag": "li",
+      "text": "Portfolio Management",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-b58b139277--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 305,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Risk_Assessment",
+      "tag": "li",
+      "text": "Risk Assessment",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-2cb0f20a56--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 324,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "accordionTabCbe058cfe6",
+      "tag": "div",
+      "text": "Investment Strategy\n        \n        \n            Our investment approach focuses on long-term value",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-cbe058cfe6",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 227,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "accordionTabB58b139277",
+      "tag": "div",
+      "text": "Portfolio Management\n        \n        \n            We actively manage a diverse portfolio of compani",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-b58b139277",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 346,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "accordionTab_2cb0f20a56",
+      "tag": "div",
+      "text": "Risk Assessment\n        \n        \n            Our comprehensive risk management framework ensures su",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-2cb0f20a56",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 465,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "li_Discover",
+      "tag": "li",
+      "text": "Discover",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-247651daa6--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 1221,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Evaluate",
+      "tag": "li",
+      "text": "Evaluate",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-358981e219--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 1239,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Execute",
+      "tag": "li",
+      "text": "Execute",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-1c86a17c0e--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 1258,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "accordionTab_247651daa6",
+      "tag": "div",
+      "text": "Discover\n        \n        \n            Explore investment opportunities through comprehensive market",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-247651daa6",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 1161,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "accordionTab_358981e219",
+      "tag": "div",
+      "text": "Evaluate\n        \n        \n            Assess potential investments using our proprietary evaluation",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-358981e219",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 1280,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "accordionTab_1c86a17c0e",
+      "tag": "div",
+      "text": "Execute\n        \n        \n            Complete transactions with precision and efficiency, ensuring ",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-1c86a17c0e",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 1399,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "li_Financial_Strength",
+      "tag": "li",
+      "text": "Financial Strength",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-684bf12147--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 2155,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Expert_Team",
+      "tag": "li",
+      "text": "Expert Team",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-4030f728d5--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 2173,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Innovation_Focus",
+      "tag": "li",
+      "text": "Innovation Focus",
+      "classes": [
+        "cmp-accordion-tabs-feature__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-d3a71b7036--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 72,
+        "y": 2192,
+        "width": 520,
+        "height": 18
+      }
+    },
+    {
+      "name": "accordionTab_684bf12147",
+      "tag": "div",
+      "text": "Financial Strength\n        \n        \n            Backed by KKR, we offer the stability and resources",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-684bf12147",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 2095,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "accordionTab_4030f728d5",
+      "tag": "div",
+      "text": "Expert Team\n        \n        \n            Our team of seasoned professionals brings decades of combi",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-4030f728d5",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 2214,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "accordionTabD3a71b7036",
+      "tag": "div",
+      "text": "Innovation Focus\n        \n        \n            We continuously innovate our products and services to",
+      "classes": [
+        "cmp-accordion-tabs-feature__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tabpanel"
+      },
+      "testId": null,
+      "id": "accordion-tab-d3a71b7036",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 640,
+        "y": 2333,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "Investment Strategy\n               \n                   \n                   Portfolio Management\n    ",
+      "classes": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 163,
+        "width": 1280,
+        "height": 828
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "Investment Strategy\n               \n                   \n                   Portfolio Management\n    ",
+      "classes": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 227,
+        "width": 560,
+        "height": 131
+      }
+    },
+    {
+      "name": "div_25",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tabs-feature__headline-block"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 227,
+        "width": 560,
+        "height": 12
+      }
+    },
+    {
+      "name": "div_26",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "ga-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 239,
+        "width": 560,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_27",
+      "tag": "div",
+      "text": "Investment Strategy\n        \n        \n            Our investment approach focuses on long-term value",
+      "classes": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 227,
+        "width": 677,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_28",
+      "tag": "div",
+      "text": "Investment Strategy\n        \n        \n            Our investment approach focuses on long-term value",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 227,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Investment_Strategy",
+      "tag": "div",
+      "text": "Investment Strategy",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 227,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "Our investment approach focuses on long-term value creation through strategic partnerships and opera",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 253,
+        "width": 677,
+        "height": 50
+      }
+    },
+    {
+      "name": "divContentglobalatlanticstyleguid",
+      "tag": "div",
+      "text": "/content/global-atlantic/style-guide",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 304,
+        "width": 677,
+        "height": 18
+      }
+    },
+    {
+      "name": "spanContentglobalatlanticstyleguid",
+      "tag": "span",
+      "text": "/content/global-atlantic/style-guide",
+      "classes": [
+        "cmp-accordion-tab__ctaLabel"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__ctaUrl"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 304,
+        "width": 224,
+        "height": 17
+      }
+    },
+    {
+      "name": "div_33",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tab__image-with-nested-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 346,
+        "width": 677,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_34",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image-with-nested-content__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image-with-nested-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 346,
+        "width": 677,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_35",
+      "tag": "div",
+      "text": "Portfolio Management\n        \n        \n            We actively manage a diverse portfolio of compani",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 346,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Portfolio_Management",
+      "tag": "div",
+      "text": "Portfolio Management",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 346,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_37",
+      "tag": "div",
+      "text": "We actively manage a diverse portfolio of companies across multiple sectors, providing strategic gui",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 372,
+        "width": 677,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_38",
+      "tag": "div",
+      "text": "Risk Assessment\n        \n        \n            Our comprehensive risk management framework ensures su",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 465,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Risk_Assessment",
+      "tag": "div",
+      "text": "Risk Assessment",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 465,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_40",
+      "tag": "div",
+      "text": "Our comprehensive risk management framework ensures sustainable growth while protecting stakeholder ",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 492,
+        "width": 677,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_41",
+      "tag": "div",
+      "text": "Discover\n               \n                   \n                   Evaluate\n               \n           ",
+      "classes": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1097,
+        "width": 1280,
+        "height": 828
+      }
+    },
+    {
+      "name": "div_42",
+      "tag": "div",
+      "text": "Discover\n               \n                   \n                   Evaluate\n               \n           ",
+      "classes": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 1161,
+        "width": 560,
+        "height": 131
+      }
+    },
+    {
+      "name": "div_43",
+      "tag": "div",
+      "text": "Discover\n        \n        \n            Explore investment opportunities through comprehensive market",
+      "classes": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1161,
+        "width": 677,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "Discover\n        \n        \n            Explore investment opportunities through comprehensive market",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1161,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Discover",
+      "tag": "div",
+      "text": "Discover",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1161,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_46",
+      "tag": "div",
+      "text": "Explore investment opportunities through comprehensive market research and analysis.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1187,
+        "width": 677,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "Evaluate\n        \n        \n            Assess potential investments using our proprietary evaluation",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1280,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Evaluate",
+      "tag": "div",
+      "text": "Evaluate",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1280,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_49",
+      "tag": "div",
+      "text": "Assess potential investments using our proprietary evaluation framework and due diligence process.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1306,
+        "width": 677,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_50",
+      "tag": "div",
+      "text": "Execute\n        \n        \n            Complete transactions with precision and efficiency, ensuring ",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1399,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Execute",
+      "tag": "div",
+      "text": "Execute",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1399,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_52",
+      "tag": "div",
+      "text": "Complete transactions with precision and efficiency, ensuring optimal outcomes for all stakeholders.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1426,
+        "width": 677,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_53",
+      "tag": "div",
+      "text": "Financial Strength\n               \n                   \n                   Expert Team\n              ",
+      "classes": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 2031,
+        "width": 1280,
+        "height": 828
+      }
+    },
+    {
+      "name": "div_54",
+      "tag": "div",
+      "text": "Financial Strength\n               \n                   \n                   Expert Team\n              ",
+      "classes": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 2095,
+        "width": 560,
+        "height": 131
+      }
+    },
+    {
+      "name": "div_55",
+      "tag": "div",
+      "text": "Financial Strength\n        \n        \n            Backed by KKR, we offer the stability and resources",
+      "classes": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2095,
+        "width": 677,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_56",
+      "tag": "div",
+      "text": "Financial Strength\n        \n        \n            Backed by KKR, we offer the stability and resources",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2095,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Financial_Strength",
+      "tag": "div",
+      "text": "Financial Strength",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2095,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_58",
+      "tag": "div",
+      "text": "Backed by KKR, we offer the stability and resources of a world-class investment firm.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2121,
+        "width": 677,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_59",
+      "tag": "div",
+      "text": "Expert Team\n        \n        \n            Our team of seasoned professionals brings decades of combi",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2214,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Expert_Team",
+      "tag": "div",
+      "text": "Expert Team",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2214,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_61",
+      "tag": "div",
+      "text": "Our team of seasoned professionals brings decades of combined experience in insurance and investment",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2240,
+        "width": 677,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_62",
+      "tag": "div",
+      "text": "Innovation Focus\n        \n        \n            We continuously innovate our products and services to",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2333,
+        "width": 677,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_Innovation_Focus",
+      "tag": "div",
+      "text": "Innovation Focus",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2333,
+        "width": 677,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_64",
+      "tag": "div",
+      "text": "We continuously innovate our products and services to deliver better outcomes for policyholders and ",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2360,
+        "width": 677,
+        "height": 50
+      }
+    }
+  ],
+  "pageTitle": "Accordion Tabs Feature",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}
