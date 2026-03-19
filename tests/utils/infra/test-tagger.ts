@@ -30,7 +30,10 @@ export type TestCategory =
   | 'policy-mapping'
   | 'style-system'
   | 'resourcetype-chain'
-  | 'clientlib-integrity';
+  | 'clientlib-integrity'
+  | 'performance'
+  | 'link-integrity'
+  | 'seo';
 
 export type A11yLevel = 'none' | 'wcag21' | 'wcag22';
 
@@ -51,6 +54,9 @@ const CATEGORY_TAGS: Record<TestCategory, TestTag[]> = {
   'style-system': ['@regression'],
   'resourcetype-chain': ['@author', '@regression'],
   'clientlib-integrity': ['@regression'],
+  'performance': ['@regression'],
+  'link-integrity': ['@regression'],
+  'seo': ['@regression'],
 };
 
 /** Priority-based tag assignment */
