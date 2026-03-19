@@ -19,6 +19,14 @@ export interface SpecWriterOptions {
   rootSelector?: string;
   /** Starting test ID number (defaults to 1). IDs are auto-incremented. */
   startTestId?: number;
+  /** Sling path to the component's _cq_dialog (for aem-dialog category) */
+  dialogPath?: string;
+  /** Whether this component is a container with an inner parsys accepting child components */
+  isContainer?: boolean;
+  /** Expected child component CSS selectors for parsys-policy tests */
+  expectedChildSelectors?: string[];
+  /** URL path to the fixture page with mixed child content (for parsys-policy tests) */
+  fixtureUrl?: string;
 }
 
 /**
@@ -511,6 +519,69 @@ function generateCategoryTests(
       const alt = await images.nth(i).getAttribute('alt');
       expect(alt).not.toBeNull();
     }
+  });
+});`,
+      };
+    }
+
+    case 'aem-dialog': {
+      const dialogPath = options.dialogPath || `/apps/ga/components/content/${component}/_cq_dialog`;
+      const helpPathTarget = `/mnt/overlay/wcm/core/content/sites/components/details.html/apps/ga/components/content/${component}`;
+      const tags = formatTags(getTagsForTest('aem-dialog', 'high', options.a11yLevel));
+      return {
+        count: 2,
+        code: `test.describe('${name} — AEM Dialog Configuration', () => {
+  // Regression: GA overlay components must have their own _cq_dialog with helpPath.
+  // Without helpPath, authors see no help link in the component toolbar.
+
+  test('${formatTestId(pfx, id++)} ${tags} @smoke ${name} dialog has helpPath configured', async ({ page }) => {
+    const dialogUrl = \`\${BASE()}${dialogPath}.1.json\`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok(), '${name} GA dialog overlay not found — component may be missing _cq_dialog').toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath, '${name} dialog missing helpPath property').toBeTruthy();
+  });
+
+  test('${formatTestId(pfx, id++)} ${tags} ${name} helpPath points to correct component details page', async ({ page }) => {
+    const dialogUrl = \`\${BASE()}${dialogPath}.1.json\`;
+    const response = await page.request.get(dialogUrl);
+    if (!response.ok()) { test.skip(); return; }
+    const dialog = await response.json();
+    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
+  });
+});`,
+      };
+    }
+
+    case 'parsys-policy': {
+      if (!options.isContainer) return null;
+      const childSelectors = options.expectedChildSelectors || ['.cmp-text', '.cmp-button'];
+      const fixtureUrl = options.fixtureUrl || `/content/global-atlantic/test-fixtures/${component}.html?wcmmode=disabled`;
+      const tags = formatTags(getTagsForTest('parsys-policy', 'high', options.a11yLevel));
+      const childChecks = childSelectors.map((sel, i) => {
+        const className = sel.replace(/^\./, '');
+        return `    // Verify ${className} renders inside the component
+    const child${i} = page.locator('${sel}');
+    expect(await child${i}.count(), '${className} not found — policy may block this component type').toBeGreaterThanOrEqual(1);`;
+      }).join('\n');
+
+      return {
+        count: 2,
+        code: `test.describe('${name} — Parsys Policy: Allowed Child Components', () => {
+  // Regression: Container component policies must allow expected child component types.
+  // If the policy only lists the container's own child type, content components can't be added.
+
+  test('${formatTestId(pfx, id++)} ${tags} @smoke ${name} renders diverse child component types', async ({ page }) => {
+    await page.goto(\`\${BASE()}${fixtureUrl}\`);
+    await page.waitForLoadState('networkidle');
+${childChecks}
+  });
+
+  test('${formatTestId(pfx, id++)} ${tags} ${name} inner parsys has responsive grid', async ({ page }) => {
+    await page.goto(\`\${BASE()}${fixtureUrl}\`);
+    await page.waitForLoadState('networkidle');
+    const responsiveGrid = page.locator('.aem-Grid, .responsivegrid');
+    expect(await responsiveGrid.count()).toBeGreaterThanOrEqual(1);
   });
 });`,
       };

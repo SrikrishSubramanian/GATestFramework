@@ -593,3 +593,26 @@ test.describe('AccordionTabsFeature — Tablet Viewport', () => {
     expect(errors).toEqual([]);
   });
 });
+
+// ─── Bug Regression Tests ─────────────────────────────────────────────────────
+// Added after GAAM-381 bugs: dialog helpPath missing + parsys policy blocking child components.
+
+test.describe('AccordionTabsFeature — AEM Dialog Configuration', () => {
+  test('[ATF-047] @author @regression @smoke Dialog has helpPath configured', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/accordion-tabs-feature/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok(), 'GA dialog overlay not found — missing _cq_dialog').toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath, 'Dialog missing helpPath — authors see no help link').toBeTruthy();
+  });
+
+  test('[ATF-048] @author @regression helpPath points to correct component details page', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/accordion-tabs-feature/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    if (!response.ok()) { test.skip(); return; }
+    const dialog = await response.json();
+    if (!dialog.helpPath) { test.skip(); return; }
+    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
+    expect(dialog.helpPath).toContain('/apps/ga/components/content/');
+  });
+});

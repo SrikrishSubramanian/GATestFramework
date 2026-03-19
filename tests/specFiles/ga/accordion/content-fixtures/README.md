@@ -90,6 +90,20 @@ No existing style guide section uses the optional header. This section populates
 Tests should assert the eyebrow, headline, and description are rendered above the accordion panels
 and that the panel triggers appear below the header block.
 
+### 5. `section_mixed_content` — Mixed child component types (Bug 1 regression)
+
+**Bug covered:** Accordion-item policy only allowed `accordion-item` as child — content components couldn't be added to the inner parsys.
+
+3 items, all pre-expanded, each containing non-text child components:
+
+| Item | Child components |
+|------|-----------------|
+| `item_0` | text + **button** (primary-filled, light-theme) |
+| `item_1` | **headline-block** + **separator** + text |
+| `item_2` | text + **spacer** (size-small) + text |
+
+Tests should assert that each non-text component type is visible inside the expanded accordion item panel. If the policy reverts, these components won't render.
+
 ## Usage in Tests
 
 Reference section IDs from `fixture-meta.json` to locate the accordion under test:

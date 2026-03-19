@@ -33,6 +33,14 @@ interface ComponentConfig {
   styleGuideUrl?: string;      // Override style guide path
   categories?: TestCategory[]; // Override default categories
   mode?: 'author' | 'publish';
+  /** Sling path to the component's _cq_dialog (auto-derived if not set) */
+  dialogPath?: string;
+  /** Whether this component is a container with an inner parsys */
+  isContainer?: boolean;
+  /** Expected child component selectors (for parsys-policy tests) */
+  expectedChildSelectors?: string[];
+  /** Fixture URL for parsys tests (auto-derived if not set) */
+  fixtureUrl?: string;
 }
 
 const DEFAULT_COMPONENTS: ComponentConfig[] = [
@@ -162,9 +170,15 @@ test.describe('Component Generation', () => {
         pomImportPath: pomRelativePath,
         mode: componentMode,
         a11yLevel,
-        categories,
+        categories: config.isContainer
+          ? [...categories, 'parsys-policy']
+          : categories,
         outputDir: SPECS_DIR,
         rootSelector: config.rootSelector,
+        dialogPath: config.dialogPath,
+        isContainer: config.isContainer,
+        expectedChildSelectors: config.expectedChildSelectors,
+        fixtureUrl: config.fixtureUrl,
       });
 
       console.log(`\nSpec generated:`);

@@ -560,6 +560,103 @@ test.describe('Accordion — ARIA Accessibility', () => {
   });
 });
 
+// ─── Bug Regression Tests ─────────────────────────────────────────────────────
+// Tests added after two post-GAAM-381 bugs were found and fixed.
+// Bug 1: Accordion-item policy only allowed accordion-item children — content
+//         components (text, button, image, etc.) couldn't be added to the inner parsys.
+// Bug 2: GA accordion-item had no _cq_dialog overlay, so helpPath was missing.
+
+const FIXTURE_URL = () => `${BASE()}/content/global-atlantic/test-fixtures/accordion.html?wcmmode=disabled`;
+
+test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion Items', () => {
+  // The accordion_item_content policy must allow: text, button, image, headline-block,
+  // separator, spacer, statistic, image-with-nested-content, video-external.
+  // The fixture section_mixed_content has pre-expanded items with diverse child types.
+
+  test('[ACRD-048] @regression @smoke Accordion item renders button child component', async ({ page }) => {
+    await page.goto(FIXTURE_URL());
+    await page.waitForLoadState('networkidle');
+    // The mixed-content accordion has a button inside item_0
+    const buttonInItem = page.locator(`${ITEM_CONTENT} .cmp-button`);
+    await expect(buttonInItem.first()).toBeVisible();
+    // Verify it rendered as a proper button with an anchor link
+    await expect(buttonInItem.first().locator('a')).toBeVisible();
+  });
+
+  test('[ACRD-049] @regression Accordion item renders headline-block child component', async ({ page }) => {
+    await page.goto(FIXTURE_URL());
+    await page.waitForLoadState('networkidle');
+    const headlineInItem = page.locator(`${ITEM_CONTENT} .cmp-headline-block`);
+    await expect(headlineInItem.first()).toBeVisible();
+  });
+
+  test('[ACRD-050] @regression Accordion item renders separator child component', async ({ page }) => {
+    await page.goto(FIXTURE_URL());
+    await page.waitForLoadState('networkidle');
+    const separatorInItem = page.locator(`${ITEM_CONTENT} .cmp-separator`);
+    await expect(separatorInItem.first()).toBeVisible();
+  });
+
+  test('[ACRD-051] @regression Accordion item renders spacer child component', async ({ page }) => {
+    await page.goto(FIXTURE_URL());
+    await page.waitForLoadState('networkidle');
+    const spacerInItem = page.locator(`${ITEM_CONTENT} .cmp-spacer`);
+    await expect(spacerInItem.first()).toBeVisible();
+  });
+
+  test('[ACRD-052] @regression Multiple component types coexist in same accordion item parsys', async ({ page }) => {
+    await page.goto(FIXTURE_URL());
+    await page.waitForLoadState('networkidle');
+    // item_1 has headline-block + separator + text — verify all three render in one panel
+    const panels = page.locator(ITEM_CONTENT);
+    const count = await panels.count();
+    let foundMixed = false;
+    for (let i = 0; i < count; i++) {
+      const panel = panels.nth(i);
+      const hasHeadline = (await panel.locator('.cmp-headline-block').count()) > 0;
+      const hasSeparator = (await panel.locator('.cmp-separator').count()) > 0;
+      const hasText = (await panel.locator('.cmp-text').count()) > 0;
+      if (hasHeadline && hasSeparator && hasText) {
+        foundMixed = true;
+        break;
+      }
+    }
+    expect(foundMixed).toBe(true);
+  });
+
+  test('[ACRD-053] @regression Accordion item inner parsys has responsive grid resource type', async ({ page }) => {
+    await page.goto(FIXTURE_URL());
+    await page.waitForLoadState('networkidle');
+    // The inner parsys should be a responsive grid (allows arbitrary child components)
+    const responsiveGrid = page.locator(`${ITEM_CONTENT} .aem-Grid, ${ITEM_CONTENT} .responsivegrid`);
+    expect(await responsiveGrid.count()).toBeGreaterThanOrEqual(1);
+  });
+});
+
+test.describe('Accordion — Bug 2 Regression: Accordion-Item Dialog helpPath', () => {
+  // GA accordion-item must have its own _cq_dialog overlay with helpPath set.
+  // Without it, authors see no help link in the component toolbar.
+
+  test('[ACRD-054] @regression @smoke Accordion-item dialog has helpPath configured', async ({ page }) => {
+    // Fetch the dialog configuration via Sling JSON API
+    const dialogUrl = `${BASE()}/apps/ga/components/content/accordion/accordion-item/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok()).toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath).toBeTruthy();
+  });
+
+  test('[ACRD-055] @regression helpPath points to GA accordion component details page', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/accordion/accordion-item/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    const dialog = await response.json();
+    // Should point to the GA accordion component's details overlay
+    expect(dialog.helpPath).toBe(
+      '/mnt/overlay/wcm/core/content/sites/components/details.html/apps/ga/components/content/accordion'
+    );
+  });
+});
+
 test.describe('Accordion — Console & Resources', () => {
   test('[ACRD-045] @regression Accordion produces no unexpected JS errors on interaction', async ({ page }) => {
     // Known issue: base accordion JS throws "Cannot read properties of null (reading 'getAttribute')"

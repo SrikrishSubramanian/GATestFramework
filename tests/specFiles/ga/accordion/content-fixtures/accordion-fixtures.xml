@@ -672,6 +672,104 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="ga/components/content/spacer"/>
 
+                <!-- ============================================ -->
+                <!-- Bug 1 Regression: Mixed child component types -->
+                <!-- Verifies accordion_item_content policy allows -->
+                <!-- text, button, headline-block, separator,      -->
+                <!-- spacer, statistic inside accordion items      -->
+                <!-- ============================================ -->
+
+                <text_mixed_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Mixed Content Types Inside Accordion Items&lt;/h3>"
+                    textIsRich="true"/>
+
+                <section_mixed_content
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_mixed
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion"
+                            singleExpansion="{Boolean}false"
+                            singleExpansionAllClosed="{Boolean}false"
+                            expandedItems="[item_0,item_1,item_2]">
+                            <item_0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Item with button component">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_intro
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>This accordion item contains a button component to verify the parsys policy allows it:&lt;/p>"
+                                        textIsRich="true"/>
+                                    <button_0
+                                        cq:styleIds="[primary-filled,light-theme]"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/button"
+                                        linkURL="/content/global-atlantic"
+                                        text="Learn More"/>
+                                </accordion-item-par>
+                            </item_0>
+                            <item_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Item with headline-block and separator">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <headline_block_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/headline-block"
+                                        headline="Nested Headline Inside Accordion"
+                                        headlineLevel="h3"/>
+                                    <separator_0
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/separator"/>
+                                    <text_below
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Content below the separator, verifying multiple component types coexist in one accordion item.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_1>
+                            <item_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/accordion/accordion-item"
+                                cq:panelTitle="Item with spacer between text blocks">
+                                <accordion-item-par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                                    <text_above
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Text above the spacer component.&lt;/p>"
+                                        textIsRich="true"/>
+                                    <spacer_inner
+                                        cq:styleIds="[size-small]"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/spacer"/>
+                                    <text_below_spacer
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="ga/components/content/text"
+                                        text="&lt;p>Text below the spacer, verifying vertical spacing between content blocks works inside accordion items.&lt;/p>"
+                                        textIsRich="true"/>
+                                </accordion-item-par>
+                            </item_2>
+                        </accordion_mixed>
+                    </section-par>
+                </section_mixed_content>
+
+                <spacer_9
+                    cq:styleIds="[size-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
             </main-par>
         </root>
     </jcr:content>

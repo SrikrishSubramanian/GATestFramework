@@ -85,6 +85,17 @@
           "description": "Browse the topics below to find answers to our most common questions."
         },
         "addedFor": "AC: optional eyebrow/headline/description header fields"
+      },
+      {
+        "id": "section_mixed_content",
+        "background": "background-white",
+        "description": "3 items pre-expanded, each containing non-text child components: button, headline-block+separator, spacer. Verifies accordion_item_content policy allows diverse component types inside accordion items.",
+        "singleExpansion": false,
+        "singleExpansionAllClosed": false,
+        "expandedItems": ["item_0", "item_1", "item_2"],
+        "itemCount": 3,
+        "childComponentTypes": ["button", "headline-block", "separator", "spacer", "text"],
+        "addedFor": "Bug 1 regression: accordion-item parsys must accept content components, not just accordion-item"
       }
     ]
   }

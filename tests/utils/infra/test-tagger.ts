@@ -24,7 +24,9 @@ export type TestCategory =
   | 'console-errors'
   | 'interaction'
   | 'state-matrix'
-  | 'broken-images';
+  | 'broken-images'
+  | 'aem-dialog'
+  | 'parsys-policy';
 
 export type A11yLevel = 'none' | 'wcag21' | 'wcag22';
 
@@ -39,6 +41,8 @@ const CATEGORY_TAGS: Record<TestCategory, TestTag[]> = {
   'interaction': ['@interaction', '@regression'],
   'state-matrix': ['@matrix', '@regression'],
   'broken-images': ['@regression'],
+  'aem-dialog': ['@author', '@regression'],
+  'parsys-policy': ['@author', '@regression'],
 };
 
 /** Priority-based tag assignment */
@@ -100,6 +104,7 @@ export function getDefaultCategories(a11yLevel: A11yLevel = 'wcag22'): TestCateg
   if (a11yLevel !== 'none') {
     categories.push('accessibility');
   }
+  categories.push('aem-dialog');
   return categories;
 }
 
