@@ -44,6 +44,213 @@ test.describe('FormOptions — Happy Path', () => {
   });
 });
 
+// ─── Selectors (from style guide DOM) ────────────────────────────────────────
+const ROOT = '.cmp-form-options';
+const FIELD = '.cmp-form-options__field';
+const FIELD_RADIO = '.cmp-form-options__field--radio';
+const FIELD_CHECKBOX = '.cmp-form-options__field--checkbox';
+const LEGEND = '.cmp-form-options__legend';
+const LABEL = '.cmp-form-options__field-label';
+const HELP_TEXT = '.cmp-form-options__help-message';
+
+const SECTION_WHITE = '.cmp-section--background-color-white';
+const SECTION_GRANITE = '.cmp-section--background-color-granite';
+const SECTION_AZUL = '.cmp-section--background-color-azul';
+
+test.describe('FormOptions — Radio Buttons', () => {
+  test('[FO-020] @regression @smoke Style guide renders radio button groups', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const radios = page.locator(`${ROOT} input[type="radio"]`);
+    expect(await radios.count()).toBeGreaterThanOrEqual(4);
+  });
+
+  test('[FO-021] @regression Radio buttons have associated labels', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const radios = page.locator(`${ROOT} input[type="radio"]`);
+    const count = await radios.count();
+    for (let i = 0; i < Math.min(count, 4); i++) {
+      const id = await radios.nth(i).getAttribute('id');
+      expect(id).toBeTruthy();
+      if (id) {
+        const label = page.locator(`label[for="${id}"]`);
+        expect(await label.count(), `Radio ${id} has no associated <label>`).toBe(1);
+      }
+    }
+  });
+
+  test('[FO-022] @regression Radio buttons share the same name within a group', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const firstGroup = page.locator(`${ROOT}`).first();
+    const radios = firstGroup.locator('input[type="radio"]');
+    const count = await radios.count();
+    if (count < 2) { test.skip(); return; }
+    const firstName = await radios.nth(0).getAttribute('name');
+    const secondName = await radios.nth(1).getAttribute('name');
+    expect(firstName).toBe(secondName);
+  });
+
+  test('[FO-023] @regression @interaction Clicking a radio button selects it', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const radio = page.locator(`${ROOT} input[type="radio"]`).first();
+    await radio.check({ force: true });
+    await expect(radio).toBeChecked();
+  });
+
+  test('[FO-024] @regression @interaction Selecting one radio deselects others in group', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const firstGroup = page.locator(`${ROOT}`).first();
+    const radios = firstGroup.locator('input[type="radio"]');
+    const count = await radios.count();
+    if (count < 2) { test.skip(); return; }
+    await radios.nth(0).check({ force: true });
+    await expect(radios.nth(0)).toBeChecked();
+    await radios.nth(1).check({ force: true });
+    await expect(radios.nth(1)).toBeChecked();
+    await expect(radios.nth(0)).not.toBeChecked();
+  });
+});
+
+test.describe('FormOptions — Checkboxes', () => {
+  test('[FO-025] @regression @smoke Style guide renders checkbox groups', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const checkboxes = page.locator(`${ROOT} input[type="checkbox"]`);
+    expect(await checkboxes.count()).toBeGreaterThanOrEqual(3);
+  });
+
+  test('[FO-026] @regression Checkboxes have associated labels', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const checkboxes = page.locator(`${ROOT} input[type="checkbox"]`);
+    const count = await checkboxes.count();
+    for (let i = 0; i < Math.min(count, 4); i++) {
+      const id = await checkboxes.nth(i).getAttribute('id');
+      expect(id).toBeTruthy();
+      if (id) {
+        const label = page.locator(`label[for="${id}"]`);
+        expect(await label.count(), `Checkbox ${id} has no associated <label>`).toBe(1);
+      }
+    }
+  });
+
+  test('[FO-027] @regression @interaction Multiple checkboxes can be selected simultaneously', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    // Find a checkbox group
+    const groups = page.locator(`${ROOT}`);
+    const count = await groups.count();
+    for (let g = 0; g < count; g++) {
+      const checkboxes = groups.nth(g).locator('input[type="checkbox"]');
+      if (await checkboxes.count() >= 2) {
+        await checkboxes.nth(0).check({ force: true });
+        await checkboxes.nth(1).check({ force: true });
+        await expect(checkboxes.nth(0)).toBeChecked();
+        await expect(checkboxes.nth(1)).toBeChecked();
+        return;
+      }
+    }
+    test.skip();
+  });
+});
+
+test.describe('FormOptions — Legend & Labels', () => {
+  test('[FO-028] @regression Each form group has a legend/title', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const groups = page.locator(`${ROOT}`);
+    const count = await groups.count();
+    for (let i = 0; i < count; i++) {
+      const legend = groups.nth(i).locator('legend, .cmp-form-options__legend');
+      expect(await legend.count(), `Form group ${i} has no legend`).toBeGreaterThanOrEqual(1);
+    }
+  });
+
+  test('[FO-029] @regression Option labels have visible text', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const labels = page.locator(`${ROOT} label`);
+    const count = await labels.count();
+    for (let i = 0; i < Math.min(count, 6); i++) {
+      const text = await labels.nth(i).textContent();
+      expect(text?.trim().length).toBeGreaterThan(0);
+    }
+  });
+});
+
+test.describe('FormOptions — Disabled & Pre-selected States', () => {
+  test('[FO-030] @regression Disabled options have disabled attribute', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const disabled = page.locator(`${ROOT} input[disabled]`);
+    expect(await disabled.count(), 'No disabled options found on style guide').toBeGreaterThanOrEqual(1);
+  });
+
+  test('[FO-031] @regression Disabled options cannot be interacted with', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const disabled = page.locator(`${ROOT} input[disabled]`).first();
+    if (await disabled.count() === 0) { test.skip(); return; }
+    await expect(disabled).toBeDisabled();
+  });
+
+  test('[FO-032] @regression Pre-selected options are checked on load', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    // Style guide should have at least one pre-selected option
+    const checked = page.locator(`${ROOT} input:checked`);
+    expect(await checked.count(), 'No pre-selected options found on style guide').toBeGreaterThanOrEqual(1);
+  });
+});
+
+test.describe('FormOptions — Dark Background', () => {
+  test('[FO-033] @regression Form labels are readable on granite background', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const graniteSection = page.locator(SECTION_GRANITE);
+    if (await graniteSection.count() === 0) { test.skip(); return; }
+    const label = graniteSection.locator(`${ROOT} label`).first();
+    if (await label.count() === 0) { test.skip(); return; }
+    const color = await label.evaluate(el => getComputedStyle(el).color);
+    // Text on dark background should be light
+    expect(color).toContain('255');
+  });
+
+  test('[FO-034] @regression Form labels are readable on azul background', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const azulSection = page.locator(SECTION_AZUL);
+    if (await azulSection.count() === 0) { test.skip(); return; }
+    const label = azulSection.locator(`${ROOT} label`).first();
+    if (await label.count() === 0) { test.skip(); return; }
+    const color = await label.evaluate(el => getComputedStyle(el).color);
+    expect(color).toContain('255');
+  });
+});
+
+test.describe('FormOptions — BEM Structure', () => {
+  test('[FO-035] @regression Component root uses .cmp-form-options class', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    expect(await page.locator(ROOT).count()).toBeGreaterThanOrEqual(4);
+  });
+
+  test('[FO-036] @regression No inline styles on form option elements', async ({ page }) => {
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    const inputs = page.locator(`${ROOT} input`);
+    const count = await inputs.count();
+    for (let i = 0; i < Math.min(count, 5); i++) {
+      const style = await inputs.nth(i).getAttribute('style');
+      expect(style).toBeFalsy();
+    }
+  });
+});
+
 test.describe('FormOptions — Negative & Boundary', () => {
   test('[FO-004] @negative @regression FormOptions handles missing images', async ({ page }) => {
     const pom = new FormOptionsPage(page);
