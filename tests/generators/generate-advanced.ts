@@ -45,6 +45,15 @@ const AVAILABLE_COMPONENTS = [
   { name: 'button', rootSelector: '.button' },
   { name: 'feature-banner', rootSelector: '.feature-banner' },
   { name: 'statistic', rootSelector: '.cmp-statistic' },
+  { name: 'accordion', rootSelector: '.cmp-accordion' },
+  { name: 'accordion-tabs-feature', rootSelector: '.cmp-accordion-tabs-feature' },
+  { name: 'form-options', rootSelector: '.cmp-form-options' },
+  { name: 'hero-fifty-fifty', rootSelector: '.cmp-hero-fifty-fifty' },
+  { name: 'navigation', rootSelector: '.cmp-navigation' },
+  { name: 'rate-table', rootSelector: '.cmp-rate-sheet-grid',
+    styleGuideUrl: '/content/global-atlantic/style-guide/components/rate-sheet-grid.html' },
+  { name: 'spacer', rootSelector: '.cmp-spacer' },
+  { name: 'text', rootSelector: '.cmp-text' },
 ];
 
 function getTargetComponents() {
@@ -91,6 +100,12 @@ function pomImportPath(component: string): string {
   return path.relative(compDir, path.join(COMPONENTS_DIR, fileName)).replace(/\\/g, '/');
 }
 
+/** Resolve style guide URL for a component, using override if available */
+function styleGuideUrl(comp: { name: string; rootSelector: string; styleGuideUrl?: string }): string {
+  const sgPath = comp.styleGuideUrl || `/content/global-atlantic/style-guide/components/${comp.name}.html`;
+  return `${AUTHOR_URL}${sgPath}?wcmmode=disabled`;
+}
+
 // ─── Shared Auth ───────────────────────────────────────────────────
 
 async function aemLogin(page: any) {
@@ -112,8 +127,7 @@ test.describe('Phase 5 — Interaction Tests', () => {
       if (!phases.includes('interaction')) { test.skip(); return; }
 
       await aemLogin(page);
-      const url = `${AUTHOR_URL}/content/global-atlantic/style-guide/components/${comp.name}.html?wcmmode=disabled`;
-      await page.goto(url);
+      await page.goto(styleGuideUrl(comp));
       await page.waitForLoadState('networkidle');
       await page.waitForTimeout(2000);
 
@@ -229,8 +243,7 @@ test.describe('Phase 5 — Visual Baselines', () => {
       if (!phases.includes('visual')) { test.skip(); return; }
 
       await aemLogin(page);
-      const url = `${AUTHOR_URL}/content/global-atlantic/style-guide/components/${comp.name}.html?wcmmode=disabled`;
-      await page.goto(url);
+      await page.goto(styleGuideUrl(comp));
       await page.waitForLoadState('networkidle');
       await page.waitForTimeout(2000);
 
@@ -320,8 +333,7 @@ test.describe('Phase 6 — Broken Image Specs', () => {
       if (!phases.includes('images')) { test.skip(); return; }
 
       await aemLogin(page);
-      const url = `${AUTHOR_URL}/content/global-atlantic/style-guide/components/${comp.name}.html?wcmmode=disabled`;
-      await page.goto(url);
+      await page.goto(styleGuideUrl(comp));
       await page.waitForLoadState('networkidle');
       await page.waitForTimeout(2000);
 

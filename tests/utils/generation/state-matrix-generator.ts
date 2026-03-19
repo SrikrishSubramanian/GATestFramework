@@ -287,6 +287,17 @@ export const KNOWN_VARIANTS: Record<string, {
     variants: ['drop-down', 'multi-drop-down'],
     themes: ['light-theme', 'dark-theme'],
   },
+  'accordion-tabs-feature': {
+    // cq:styleIds behavior variants: behavior-accordion (default), behavior-scroll (scrolling tabs)
+    // no theme system — inherits from parent section background
+    variants: ['behavior-accordion', 'behavior-scroll'],
+    themes: ['default'],
+    variantClasses: {
+      'behavior-accordion': '.cmp-accordion-tabs-feature',
+      'behavior-scroll': '.cmp-accordion-tabs-feature',
+    },
+    innerSelector: '.cmp-accordion-tabs-feature',
+  },
 };
 
 function toPascalCase(str: string): string {
