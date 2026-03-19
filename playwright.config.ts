@@ -1,8 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 import path from 'path';
+import fs from 'fs';
 import globalSetup from './tests/utils/infra/globalSetup';
 import { WaitForLoadStateOptions } from './src/setup/optional-parameter-types';
+import { AUTH_STORAGE_STATE } from './tests/utils/infra/globalSetup';
 
 // Load environment variables early so they're available in all worker processes.
 // globalSetup runs in a separate process, so env vars set there don't reach test workers.
@@ -95,8 +97,10 @@ export default defineConfig({
     // },
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    ignoreHTTPSErrors: true
+    ignoreHTTPSErrors: true,
 
+    /* Reuse auth state from globalSetup — eliminates per-test login overhead */
+    ...(fs.existsSync(AUTH_STORAGE_STATE) ? { storageState: AUTH_STORAGE_STATE } : {}),
   },
 
   /* Configure projects for major browsers */

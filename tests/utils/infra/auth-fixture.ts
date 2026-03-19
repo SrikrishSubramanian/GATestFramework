@@ -38,6 +38,25 @@ export async function loginToAEMAuthor(page: Page, options?: AuthOptions): Promi
   const password = options?.password || ENV.AEM_AUTHOR_PASSWORD || 'admin';
   const timeout = options?.timeout || 60000;
 
+  // Fast path: if globalSetup already saved auth cookies, they're loaded via storageState
+  // in the project config. Just verify the session is valid with a lightweight check.
+  const cookies = await page.context().cookies(authorUrl);
+  const hasLoginToken = cookies.some(c => c.name === 'login-token' || c.name === 'JSESSIONID');
+  if (hasLoginToken) {
+    // Cookies present from globalSetup — verify they work with a quick request
+    try {
+      const resp = await page.request.get(`${authorUrl}/libs/granite/core/content/login.html`, {
+        maxRedirects: 0,
+      });
+      // 302 redirect means authenticated, 200 means login page (session expired)
+      if (resp.status() === 302 || resp.status() === 303) {
+        return; // Session valid — skip full login
+      }
+    } catch {
+      // Fall through to full login
+    }
+  }
+
   // Navigate to login page
   await page.goto(`${authorUrl}/libs/granite/core/content/login.html`, {
     waitUntil: 'domcontentloaded',
