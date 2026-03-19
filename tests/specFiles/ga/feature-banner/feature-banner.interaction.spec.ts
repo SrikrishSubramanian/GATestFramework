@@ -10,14 +10,5 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('FeatureBanner — Component Interactions', () => {
-  test('[FB-017] @interaction @regression feature-banner adapts to unknown parent (#1)', async ({ page }) => {
-    const pom = new FeatureBannerPage(page);
-    await pom.navigate(BASE());
-    // Parent: main-wrapper with unknown background
-    // Expected child theme: dark-theme
-    const child = page.locator('.feature-banner').first();
-    await expect(child).toBeVisible();
-  });
-
-  // FB-018–024 removed: all 7 were identical to FB-017 (same locator, same parent, same assertion)
+  // FB-017–024 removed: all tests were visibility-only checks redundant with author spec (FB-001)
 });

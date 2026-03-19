@@ -63,7 +63,8 @@ function variantInSection(
 
 test.describe('Button — State Matrix (Valid)', () => {
 
-  for (const [i, bg] of BACKGROUNDS.entries()) {
+  for (let i = 0; i < BACKGROUNDS.length; i++) {
+    const bg = BACKGROUNDS[i];
     const id = String(88 + i).padStart(3, '0');
 
     test(`[BTN-${id}] @matrix @regression primary-filled in ${bg} section`, async ({ page }) => {
@@ -79,7 +80,8 @@ test.describe('Button — State Matrix (Valid)', () => {
 
   // ── Valid: secondary-outline across all backgrounds (BTN-092..BTN-095) ─
 
-  for (const [i, bg] of BACKGROUNDS.entries()) {
+  for (let i = 0; i < BACKGROUNDS.length; i++) {
+    const bg = BACKGROUNDS[i];
     const id = String(92 + i).padStart(3, '0');
 
     test(`[BTN-${id}] @matrix @regression secondary-outline in ${bg} section`, async ({ page }) => {
@@ -95,7 +97,8 @@ test.describe('Button — State Matrix (Valid)', () => {
 
   // ── Valid: text-only (tertiary) across all backgrounds (BTN-096..BTN-099) ─
 
-  for (const [i, bg] of BACKGROUNDS.entries()) {
+  for (let i = 0; i < BACKGROUNDS.length; i++) {
+    const bg = BACKGROUNDS[i];
     const id = String(96 + i).padStart(3, '0');
 
     test(`[BTN-${id}] @matrix @regression text-only in ${bg} section`, async ({ page }) => {
@@ -114,7 +117,8 @@ test.describe('Button — State Matrix (Valid)', () => {
 
 test.describe('Button — State Matrix (Responsive)', () => {
 
-  for (const [i, bg] of BACKGROUNDS.entries()) {
+  for (let i = 0; i < BACKGROUNDS.length; i++) {
+    const bg = BACKGROUNDS[i];
     const id = String(100 + i).padStart(3, '0');
 
     test(`[BTN-${id}] @matrix @regression @mobile buttons in ${bg} section @ mobile-390`, async ({ page }) => {

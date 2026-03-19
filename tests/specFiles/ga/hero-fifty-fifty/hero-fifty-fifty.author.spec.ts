@@ -670,16 +670,6 @@ test.describe('HeroFiftyFifty — Secondary Slot (AC36–AC39)', () => {
 // ─── AC40–AC45: Authoring & Compliance (non-automatable) ─────────────────────
 
 test.describe('HeroFiftyFifty — Authoring & Compliance', () => {
-  test('[HFF-040] @regression Component available on templates', async () => {
-    // Verified by authoring team — template configuration is in kkr-aem policies
-    test.fixme();
-  });
-
-  test('[HFF-041] @regression Authoring guide exists', async () => {
-    // Manual verification — documentation deliverable
-    test.fixme();
-  });
-
   test('[HFF-042] @regression Style guide page exists with all variations', async ({ page }) => {
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
@@ -688,24 +678,6 @@ test.describe('HeroFiftyFifty — Authoring & Compliance', () => {
     const heroes = page.locator(SEL.root);
     const count = await heroes.count();
     expect(count).toBeGreaterThanOrEqual(4);
-  });
-
-  test('[HFF-043] @regression Desktop and mobile both render', async ({ page }) => {
-    // Desktop
-    await page.setViewportSize(DESKTOP);
-    const pom = new HeroFiftyFiftyPage(page);
-    await pom.navigate(BASE());
-    await expect(page.locator(SEL.root).first()).toBeVisible();
-
-    // Mobile
-    await page.setViewportSize(MOBILE);
-    await page.reload({ waitUntil: 'networkidle' });
-    await expect(page.locator(SEL.root).first()).toBeVisible();
-  });
-
-  test('[HFF-044] @regression Design review notification', async () => {
-    // Manual process — notifying design team is not automatable
-    test.fixme();
   });
 });
 

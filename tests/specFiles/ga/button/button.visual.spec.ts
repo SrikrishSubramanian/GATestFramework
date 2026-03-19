@@ -83,21 +83,7 @@ test.describe('Button — Visual Verification', () => {
     expect(beforeBg).not.toBe(afterBg);
   });
 
-  test('[BTN-200] @visual button layout at desktop', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 });
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    const el = page.locator(BTN_SELECTOR).first();
-    await expect(el).toBeVisible();
-  });
-
-  test('[BTN-201] @visual @mobile button layout at mobile', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    const el = page.locator(BTN_SELECTOR).first();
-    await expect(el).toBeVisible();
-  });
+  // BTN-200, BTN-201 removed: visibility-only checks at desktop/mobile, redundant with author spec
 
   test('[BTN-202] @visual button screenshot matches baseline', async ({ page }) => {
     const pom = new ButtonPage(page);

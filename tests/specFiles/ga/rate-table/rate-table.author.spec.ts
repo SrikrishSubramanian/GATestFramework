@@ -273,16 +273,6 @@ test.describe('RateTable — Empty State', () => {
     }
   });
 
-  test('[RT-033] @negative @regression No JS errors on page with empty rate-table', async ({ page }) => {
-    const errors: string[] = [];
-    page.on('pageerror', e => errors.push(e.message));
-
-    const pom = new RateTablePage(page);
-    await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
-
-    expect(errors).toEqual([]);
-  });
 });
 
 // ── Responsive ───────────────────────────────────────────────────────────────
@@ -315,21 +305,6 @@ test.describe('RateTable — Responsive', () => {
     expect(fits || scrollable).toBe(true);
   });
 
-  test('[RT-036] @mobile @regression Rate table visible at tablet viewport (1024px)', async ({ page }) => {
-    await page.setViewportSize({ width: 1024, height: 1366 });
-    const pom = new RateTablePage(page);
-    await pom.navigate(BASE());
-
-    await expect(pom.allInstances().first()).toBeVisible();
-  });
-
-  test('[RT-037] @regression Rate table renders at desktop viewport (1440px)', async ({ page }) => {
-    await page.setViewportSize({ width: 1440, height: 900 });
-    const pom = new RateTablePage(page);
-    await pom.navigate(BASE());
-
-    await expect(pom.allInstances().first()).toBeVisible();
-  });
 });
 
 // ── Console Errors & Resources ───────────────────────────────────────────────

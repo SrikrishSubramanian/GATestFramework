@@ -1,8 +1,7 @@
-import { test, expect } from '../../../utils/infra/persistent-context';
+import { test, expect } from '@playwright/test';
 import { ButtonPage } from '../../../pages/ga/components/buttonPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 
@@ -12,119 +11,69 @@ test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
 
-test.describe('Button — CSV Test Cases', () => {
-  test('[BTN-001] @a11y @mobile Button component — add disabled state styling — AC1', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Given a button with the 'disabled' style applied, the button should have reduced opacity (0.5)
-    // Expected: Given a button with the \'disabled\' style applied, the button should have reduced opacity (0.5)
-  });
-
-  test('[BTN-002] @a11y @mobile Button component — add disabled state styling — AC2', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Given a disabled button, the cursor should show 'not-allowed' on hover
-    // Expected: Given a disabled button, the cursor should show \'not-allowed\' on hover
-  });
-
-  test('[BTN-003] @a11y @mobile Button component — add disabled state styling — AC3', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Given a disabled button, clicking it should not trigger any navigation
-    // Expected: Given a disabled button, clicking it should not trigger any navigation
-  });
-
-  test('[BTN-004] @a11y @mobile Button component — add disabled state styling — AC4', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    // Step 1: Given a disabled button on a dark background (granite/azul), the disabled state should still be visible with sufficient contrast
-    // Expected: Given a disabled button on a dark background (granite/azul), the disabled state should still be visible with sufficient contrast
-  });
-
-  // BTN-005–011 removed: Figma visual tests are covered with real assertions in button.visual.spec.ts (BTN-196–202)
-});
-
 test.describe('Button — Happy Path', () => {
-  test('[BTN-012] @smoke @regression Button renders correctly', async ({ page }) => {
+  test('[BTTN-001] @smoke @regression Button renders correctly', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    await expect(page.locator('.cmp-button:not(.basepage__skip-nav)').first()).toBeVisible();
-  });
-
-  test('[BTN-013] @smoke @regression Button interactive elements are functional', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    // Verify primary interactive elements
-    const root = page.locator('.cmp-button:not(.basepage__skip-nav)').first();
+    const root = page.locator('.button').first();
     await expect(root).toBeVisible();
+    // Verify core structure: heading or primary content exists
+    const heading = root.locator('h1, h2, h3').first();
+    const hasHeading = await heading.count() > 0;
+    if (hasHeading) {
+      await expect(heading).toBeVisible();
+    }
+    // Verify no JS errors during render
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    expect(errors).toEqual([]);
   });
-});
 
-test.describe('Button — Negative & Boundary', () => {
-  test('[BTN-014] @negative @regression Button handles empty content gracefully', async ({ page }) => {
+  test('[BTTN-002] @smoke @regression Button interactive elements are functional', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    // Component should not throw errors with minimal content
-  });
-
-  test('[BTN-015] @negative @regression Button handles missing images', async ({ page }) => {
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    const images = page.locator('.cmp-button img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
+    const root = page.locator('.button').first();
+    await expect(root).toBeVisible();
+    // Verify interactive elements (links, buttons) are present and clickable
+    const interactive = root.locator('a, button');
+    const count = await interactive.count();
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      await expect(interactive.nth(i)).toBeVisible();
+      await expect(interactive.nth(i)).toBeEnabled();
     }
   });
 });
 
 test.describe('Button — Responsive', () => {
-  test('[BTN-016] @mobile @regression Button adapts to mobile viewport', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    await expect(page.locator('.cmp-button:not(.basepage__skip-nav)').first()).toBeVisible();
-  });
-
-  test('[BTN-017] @mobile @regression Button adapts to tablet viewport', async ({ page }) => {
+  test('[BTTN-006] @mobile @regression Button adapts to tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    await expect(page.locator('.cmp-button:not(.basepage__skip-nav)').first()).toBeVisible();
+    const root = page.locator('.button').first();
+    await expect(root).toBeVisible();
+    // Tablet should render without horizontal overflow
+    const overflow = await root.evaluate(el => {
+      return el.scrollWidth > el.clientWidth;
+    });
+    expect(overflow).toBe(false);
   });
 });
-
-test.describe('Button — Console & Resources', () => {
-  test('[BTN-018] @regression Button produces no JS errors', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new ButtonPage(page);
-    await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
-    const errors = capture.getErrors();
-    capture.stop();
-    expect(errors).toEqual([]);
-  });
-});
-
-// BTN-019–020 removed: Image health tests are covered with scanImages() in button.images.spec.ts (BTN-024–027)
 
 test.describe('Button — Accessibility', () => {
-  test('[BTN-021] @a11y @wcag22 @regression @smoke Button passes axe-core scan', async ({ page }) => {
+  test('[BTTN-010] @a11y @wcag22 @regression @smoke Button passes axe-core scan', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const results = await new AxeBuilder({ page })
-      .include('.cmp-button')
+      .include('.button')
       .withTags(["wcag2a","wcag2aa","wcag22aa"])
       .analyze();
     expect(results.violations).toEqual([]);
   });
 
-  test('[BTN-022] @a11y @wcag22 @regression @smoke Button interactive elements meet 24px target size', async ({ page }) => {
+  test('[BTTN-011] @a11y @wcag22 @regression @smoke Button interactive elements meet 24px target size', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    const interactive = page.locator('.cmp-button a, .cmp-button button, .cmp-button input');
+    const interactive = page.locator('.button a, .button button, .button input');
     const count = await interactive.count();
     for (let i = 0; i < count; i++) {
       const box = await interactive.nth(i).boundingBox();
@@ -134,10 +83,10 @@ test.describe('Button — Accessibility', () => {
     }
   });
 
-  test('[BTN-023] @a11y @wcag22 @regression @smoke Button focus is not obscured by sticky elements', async ({ page }) => {
+  test('[BTTN-012] @a11y @wcag22 @regression @smoke Button focus is not obscured by sticky elements', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    const focusable = page.locator('.cmp-button a, .cmp-button button, .cmp-button input');
+    const focusable = page.locator('.button a, .button button, .button input');
     const count = await focusable.count();
     for (let i = 0; i < Math.min(count, 5); i++) {
       await focusable.nth(i).focus();

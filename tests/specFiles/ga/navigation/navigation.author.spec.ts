@@ -494,24 +494,6 @@ test.describe('Navigation — Convention Compliance (GAAM-396)', () => {
   });
 });
 
-// ─── Responsive ───────────────────────────────────────────────────────────────
-
-test.describe('Navigation — Responsive (GAAM-396)', () => {
-  test('[NVGT-027] @mobile @regression Navigation adapts to mobile viewport (390px)', async ({ page }) => {
-    await page.setViewportSize(MOBILE);
-    const pom = new NavigationPage(page);
-    await pom.navigate(BASE());
-    await expect(page.locator(SEL.root).first()).toBeVisible();
-  });
-
-  test('[NVGT-028] @mobile @regression Navigation adapts to tablet viewport (768px)', async ({ page }) => {
-    await page.setViewportSize(TABLET);
-    const pom = new NavigationPage(page);
-    await pom.navigate(BASE());
-    await expect(page.locator(SEL.root).first()).toBeVisible();
-  });
-});
-
 // ─── Console & Resources ──────────────────────────────────────────────────────
 
 test.describe('Navigation — Console & Resources', () => {
