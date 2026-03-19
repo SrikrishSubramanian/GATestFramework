@@ -196,31 +196,20 @@ test.describe('Phase 5 — State Matrix', () => {
       const className = toPascalCase(comp.name) + 'Page';
       const specContent = generateMatrixSpec(matrix, className, pomImportPath(comp.name));
 
-      // Add auth beforeEach for author mode
-      const authBlock = `
-// Authenticate with AEM Author before each test
-test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(\`\${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html\`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
-});
-`;
-      const withAuth = specContent.replace(
-        "import ENV from '../../../utils/infra/env';",
-        "import ENV from '../../../utils/infra/env';\n" + authBlock
-      );
-
+      // Generator now emits loginToAEMAuthor + persistent-context — no auth injection needed
       const specPath = path.join(compSpecDir(comp.name), `${comp.name}.matrix.spec.ts`);
-      fs.writeFileSync(specPath, withAuth, 'utf-8');
+      fs.writeFileSync(specPath, specContent, 'utf-8');
       console.log(`  Spec: ${specPath}`);
+
+      // Count deduplicated tests (viewport collapsed)
+      const uniqueValid = new Set(matrix.combinations.filter(c => c.isValid).map(c => `${c.variant}|${c.theme}|${c.background}`)).size;
+      const uniqueInvalid = new Set(matrix.combinations.filter(c => !c.isValid).map(c => `${c.variant}|${c.theme}|${c.background}`)).size;
+      const uniqueBackgrounds = new Set(matrix.combinations.map(c => c.background)).size;
+      const testCount = uniqueValid + uniqueBackgrounds + uniqueInvalid;
 
       updateComponentCoverage(comp.name, [{
         category: 'state-matrix' as TestCategory,
-        testCount: matrix.combinations.length,
+        testCount,
         specFile: path.basename(specPath),
         tags: ['@matrix', '@regression'],
       }]);

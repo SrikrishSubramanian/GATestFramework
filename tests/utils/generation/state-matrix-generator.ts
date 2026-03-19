@@ -32,6 +32,12 @@ const DEFAULT_VIEWPORTS = ['desktop-1440', 'tablet-1024', 'mobile-390'];
 const SECTION_BACKGROUNDS: BackgroundType[] = ['white', 'slate', 'granite', 'azul'];
 
 /**
+ * AEM section background CSS class (from live DOM probe).
+ * Style system IDs like `background-white` render as `cmp-section--background-color-white`.
+ */
+const SECTION_BG_CLASS_PREFIX = 'cmp-section--background-color-';
+
+/**
  * Generate a state matrix from component style variants.
  */
 export function generateStateMatrix(
@@ -91,58 +97,142 @@ export function generateStateMatrix(
 
 /**
  * Generate spec file content from a state matrix.
+ *
+ * Produces properly scoped tests:
+ *   - Each background section targeted via `.cmp-section--background-color-{bg}`
+ *   - Each variant targeted via component-specific wrapper class (from KNOWN_VARIANTS)
+ *   - Disabled editor overlays excluded
+ *   - Viewport triplication collapsed: one desktop test per combo + mobile spot-checks
+ *   - Auth via loginToAEMAuthor
  */
 export function generateMatrixSpec(
   matrix: StateMatrix,
   pomClassName: string,
   pomImportPath: string
 ): string {
-  const validTests = matrix.combinations.filter(c => c.isValid);
-  const invalidTests = matrix.combinations.filter(c => !c.isValid);
+  const comp = matrix.component;
+  const known = KNOWN_VARIANTS[comp];
 
-  const viewportMap: Record<string, string> = {
-    'desktop-1440': '{ width: 1440, height: 900 }',
-    'tablet-1024': '{ width: 1024, height: 1366 }',
-    'mobile-390': '{ width: 390, height: 844 }',
-  };
+  // Deduplicate: collapse viewport dimension — keep only desktop combos
+  const seen = new Set<string>();
+  const validDesktop: StateCombination[] = [];
+  const invalidDesktop: StateCombination[] = [];
 
-  const validTestCode = validTests.map(combo => {
-    const tags = combo.viewport.includes('mobile')
-      ? '@matrix @regression @mobile'
-      : '@matrix @regression';
-    const viewport = viewportMap[combo.viewport] || '{ width: 1440, height: 900 }';
+  for (const combo of matrix.combinations) {
+    const key = `${combo.variant}|${combo.theme}|${combo.background}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    if (combo.isValid) validDesktop.push(combo);
+    else invalidDesktop.push(combo);
+  }
 
-    return `  test('${tags} ${combo.variant} + ${combo.theme} on ${combo.background} @ ${combo.viewport}', async ({ page }) => {
-    await page.setViewportSize(${viewport});
-    const pom = new ${pomClassName}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    // Verify: ${combo.variant} with ${combo.theme} renders correctly on ${combo.background} section
-    const root = page.locator('.cmp-${matrix.component}').first();
-    await expect(root).toBeVisible();
-  });`;
+  // Unique backgrounds for responsive spot-checks
+  const backgrounds = Array.from(new Set(matrix.combinations.map(c => c.background)));
+
+  // Determine locator strategy for each variant
+  function variantLocator(variant: string): string {
+    const wrapperClass = known?.variantClasses?.[variant];
+    const disabled = known?.disabledFilter || ':not([aria-disabled="true"])';
+    const inner = known?.innerSelector || `.cmp-${comp}`;
+    if (wrapperClass) {
+      return `section.locator('${wrapperClass}${disabled} ${inner}').first()`;
+    }
+    return `section.locator('${inner}${disabled}').first()`;
+  }
+
+  // First variant for responsive spot-checks
+  const firstVariant = matrix.dimensions[0]?.values[0] || 'default';
+
+  // ── Build valid test code ────────────────────────────────────────
+  const validTestCode = validDesktop.map(combo => {
+    const locator = variantLocator(combo.variant);
+    return `    test('[${comp.toUpperCase().replace(/-/g, '_')}-V] @matrix @regression ${combo.variant} + ${combo.theme} in ${combo.background} section', async ({ page }) => {
+      const pom = new ${pomClassName}(page);
+      await pom.navigate(BASE());
+      const section = page.locator(sectionSel('${combo.background}')).first();
+      await expect(section).toBeVisible();
+      const btn = ${locator};
+      await expect(btn).toBeVisible();
+    });`;
   }).join('\n\n');
 
-  const invalidTestCode = invalidTests.map(combo => {
-    return `  test('@matrix @negative ${combo.variant} + ${combo.theme} on ${combo.background} is invalid', async ({ page }) => {
-    // ${combo.invalidReason}
-    // This combination should either not be available in the style system
-    // or should have auto-correction (e.g., auto-theme)
-    const pom = new ${pomClassName}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-  });`;
+  // ── Build responsive test code ───────────────────────────────────
+  const responsiveTestCode = backgrounds.map(bg => {
+    const locator = variantLocator(firstVariant);
+    return `    test('[${comp.toUpperCase().replace(/-/g, '_')}-R] @matrix @regression @mobile buttons in ${bg} section @ mobile-390', async ({ page }) => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      const pom = new ${pomClassName}(page);
+      await pom.navigate(BASE());
+      const section = page.locator(sectionSel('${bg}')).first();
+      await expect(section).toBeVisible();
+      const btn = ${locator};
+      await expect(btn).toBeVisible();
+    });`;
   }).join('\n\n');
 
-  return `import { test, expect } from '@playwright/test';
+  // ── Build invalid test code ──────────────────────────────────────
+  const invalidTestCode = invalidDesktop.map(combo => {
+    const reason = combo.invalidReason || 'insufficient contrast';
+    const dark = isDarkBackground(combo.background as BackgroundType);
+    const pairType = dark ? 'dark-on-dark' : 'light-on-light';
+    return `    test('[${comp.toUpperCase().replace(/-/g, '_')}-N] @matrix @negative ${combo.variant} + ${combo.theme} on ${combo.background} (${pairType})', async ({ page }) => {
+      // ${reason}
+      // Auto-theme should be used instead. Verify section still renders.
+      const pom = new ${pomClassName}(page);
+      await pom.navigate(BASE());
+      const section = page.locator(sectionSel('${combo.background}')).first();
+      await expect(section).toBeVisible();
+    });`;
+  }).join('\n\n');
+
+  // ── Compute test counts ──────────────────────────────────────────
+  const validCount = validDesktop.length;
+  const responsiveCount = backgrounds.length;
+  const invalidCount = invalidDesktop.length;
+  const totalCount = validCount + responsiveCount + invalidCount;
+
+  return `import { test, expect } from '../../../utils/infra/persistent-context';
 import { ${pomClassName} } from '${pomImportPath}';
 import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
-// State Matrix: ${matrix.combinations.length} total (${matrix.validCount} valid, ${matrix.invalidCount} invalid)
+const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
-test.describe('${toPascalCase(matrix.component)} — State Matrix (Valid)', () => {
+test.beforeEach(async ({ page }) => {
+  await loginToAEMAuthor(page);
+});
+
+/*
+ * ${toPascalCase(comp)} State Matrix
+ *
+ * ${totalCount} tests (${validCount} valid + ${responsiveCount} responsive + ${invalidCount} invalid).
+ * Generated by state-matrix-generator.ts — viewport triplication collapsed.
+ *
+ * Selectors (from DOM probe):
+ *   Section: .${SECTION_BG_CLASS_PREFIX}{bg}
+ *   Disabled overlays excluded via ${known?.disabledFilter || ':not([aria-disabled="true"])'}
+ */
+
+/** Section CSS class for a given background (from live AEM DOM) */
+function sectionSel(bg: string) {
+  return \`.${SECTION_BG_CLASS_PREFIX}\${bg}\`;
+}
+
+// ── Valid: variant × theme × background at desktop (${validCount} tests) ──
+
+test.describe('${toPascalCase(comp)} — State Matrix (Valid)', () => {
 ${validTestCode}
 });
 
-test.describe('${toPascalCase(matrix.component)} — State Matrix (Invalid Combos)', () => {
+// ── Responsive: one spot-check per background at mobile (${responsiveCount} tests) ──
+
+test.describe('${toPascalCase(comp)} — State Matrix (Responsive)', () => {
+${responsiveTestCode}
+});
+
+// ── Invalid: contrast concerns (${invalidCount} tests) ──
+
+test.describe('${toPascalCase(comp)} — State Matrix (Invalid Combos)', () => {
 ${invalidTestCode}
 });
 `;
@@ -150,11 +240,32 @@ ${invalidTestCode}
 
 /**
  * Common component style variants from GA AEM.
+ *
+ * variantClasses:  Maps variant name → CSS class on the component wrapper div.
+ *                  Discovered via DomProbe utility against live AEM DOM.
+ * disabledFilter:  CSS selector to exclude disabled editor overlays.
+ * innerSelector:   The inner BEM element selector (default: .cmp-{component}).
  */
-export const KNOWN_VARIANTS: Record<string, { variants: string[]; themes: string[] }> = {
+export const KNOWN_VARIANTS: Record<string, {
+  variants: string[];
+  themes: string[];
+  /** Maps variant name → CSS wrapper class (from DOM probe) */
+  variantClasses?: Record<string, string>;
+  /** CSS filter to exclude disabled overlays (default: :not([aria-disabled="true"])) */
+  disabledFilter?: string;
+  /** Inner BEM element selector (default: .cmp-{component}) */
+  innerSelector?: string;
+}> = {
   button: {
     variants: ['primary-filled', 'secondary-outline', 'text-only'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    variantClasses: {
+      'primary-filled': '.ga-button--primary',
+      'secondary-outline': '.ga-button--secondary',
+      'text-only': '.ga-button--icon-text',
+    },
+    disabledFilter: ':not(.ga-button--disabled)',
+    innerSelector: '.cmp-button',
   },
   'feature-banner': {
     variants: ['default', 'fifty-fifty'],
