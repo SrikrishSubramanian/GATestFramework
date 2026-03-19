@@ -26,7 +26,11 @@ export type TestCategory =
   | 'state-matrix'
   | 'broken-images'
   | 'aem-dialog'
-  | 'parsys-policy';
+  | 'parsys-policy'
+  | 'policy-mapping'
+  | 'style-system'
+  | 'resourcetype-chain'
+  | 'clientlib-integrity';
 
 export type A11yLevel = 'none' | 'wcag21' | 'wcag22';
 
@@ -43,6 +47,10 @@ const CATEGORY_TAGS: Record<TestCategory, TestTag[]> = {
   'broken-images': ['@regression'],
   'aem-dialog': ['@author', '@regression'],
   'parsys-policy': ['@author', '@regression'],
+  'policy-mapping': ['@author', '@regression'],
+  'style-system': ['@regression'],
+  'resourcetype-chain': ['@author', '@regression'],
+  'clientlib-integrity': ['@regression'],
 };
 
 /** Priority-based tag assignment */
