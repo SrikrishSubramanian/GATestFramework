@@ -1,6 +1,6 @@
 {
   "component": "feature-banner",
-  "generatedAt": "2026-03-11T10:12:33.296Z",
+  "generatedAt": "2026-03-18T11:46:41.284Z",
   "source": "dom",
   "entries": {
     "a_Optional_CTA": {
@@ -766,8 +766,8 @@
         }
       ]
     },
-    "span_002": {
-      "name": "span_002",
+    "span_000": {
+      "name": "span_000",
       "component": "feature-banner",
       "strategies": [
         {
@@ -787,7 +787,7 @@
         },
         {
           "type": "text",
-          "value": "0:02",
+          "value": "0:00",
           "confidence": 0.4
         }
       ]
@@ -865,7 +865,7 @@
         },
         {
           "type": "text",
-          "value": "Loaded: 21.19%0:02",
+          "value": "Loaded: 19.04%0:00",
           "confidence": 0.4
         }
       ]
@@ -896,8 +896,8 @@
         }
       ]
     },
-    "span_410": {
-      "name": "span_410",
+    "span_412_44": {
+      "name": "span_412_44",
       "component": "feature-banner",
       "strategies": [
         {
@@ -917,7 +917,7 @@
         },
         {
           "type": "text",
-          "value": "4:10",
+          "value": "4:12",
           "confidence": 0.4
         }
       ]
@@ -1188,8 +1188,8 @@
         }
       ]
     },
-    "span_012": {
-      "name": "span_012",
+    "span_010": {
+      "name": "span_010",
       "component": "feature-banner",
       "strategies": [
         {
@@ -1209,7 +1209,7 @@
         },
         {
           "type": "text",
-          "value": "0:12",
+          "value": "0:10",
           "confidence": 0.4
         }
       ]
@@ -1235,13 +1235,13 @@
         },
         {
           "type": "text",
-          "value": "Loaded: 21.41%0:12",
+          "value": "Loaded: 19.04%0:10",
           "confidence": 0.4
         }
       ]
     },
-    "span_400": {
-      "name": "span_400",
+    "span_402": {
+      "name": "span_402",
       "component": "feature-banner",
       "strategies": [
         {
@@ -1261,7 +1261,7 @@
         },
         {
           "type": "text",
-          "value": "4:00",
+          "value": "4:02",
           "confidence": 0.4
         }
       ]

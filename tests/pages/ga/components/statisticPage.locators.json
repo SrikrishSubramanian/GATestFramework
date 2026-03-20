@@ -1,10 +1,10 @@
 {
   "component": "statistic",
-  "generatedAt": "2026-03-11T10:12:43.598Z",
+  "generatedAt": "2026-03-18T11:46:49.309Z",
   "source": "dom",
   "entries": {
-    "div_42_GrowthIn_Sales": {
-      "name": "div_42_GrowthIn_Sales",
+    "div_42M_GrowthIn_Sales": {
+      "name": "div_42M_GrowthIn_Sales",
       "component": "statistic",
       "strategies": [
         {
@@ -19,13 +19,13 @@
         },
         {
           "type": "text",
-          "value": "42%\n    \n\n    \n      Growth in Sales",
+          "value": "42M\n\n    \n\n    \n      Growth in Sales",
           "confidence": 0.4
         }
       ]
     },
-    "div_42": {
-      "name": "div_42",
+    "div_42M": {
+      "name": "div_42M",
       "component": "statistic",
       "strategies": [
         {
@@ -40,7 +40,7 @@
         },
         {
           "type": "text",
-          "value": "42%",
+          "value": "42M",
           "confidence": 0.4
         }
       ]
@@ -145,7 +145,7 @@
         },
         {
           "type": "text",
-          "value": "25K+\n    \n\n    \n      Investment Professionals",
+          "value": "25K+\n\n    \n\n    \n      Investment Professionals",
           "confidence": 0.4
         }
       ]

@@ -1,0 +1,565 @@
+{
+  "component": "statistic",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/statistic.html?wcmmode=disabled",
+  "scannedAt": "2026-03-18T11:46:49.306Z",
+  "rootSelector": ".cmp-statistic",
+  "elements": [
+    {
+      "name": "div_42M_GrowthIn_Sales",
+      "tag": "div",
+      "text": "42M\n\n    \n\n    \n      Growth in Sales",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 207,
+        "width": 1280,
+        "height": 91
+      }
+    },
+    {
+      "name": "div_42M",
+      "tag": "div",
+      "text": "42M",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 25,
+        "y": 244,
+        "width": 30,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_GrowthIn_Sales",
+      "tag": "div",
+      "text": "Growth in Sales",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 71,
+        "y": 240,
+        "width": 126,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "$5B\n    \n\n    \n      Assets Under Management",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 401,
+        "width": 1280,
+        "height": 117
+      }
+    },
+    {
+      "name": "div_5B",
+      "tag": "div",
+      "text": "$5B",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 627,
+        "y": 433,
+        "width": 27,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Assets_Under_Management",
+      "tag": "div",
+      "text": "Assets Under Management",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 553,
+        "y": 467,
+        "width": 173,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "25K+\n\n    \n\n    \n      Investment Professionals",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 620,
+        "width": 1280,
+        "height": 89
+      }
+    },
+    {
+      "name": "div_25K",
+      "tag": "div",
+      "text": "25K+",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 655,
+        "width": 37,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Investment_Professionals",
+      "tag": "div",
+      "text": "Investment Professionals",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 77,
+        "y": 652,
+        "width": 202,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "89%\n    \n\n    \n      Customer Satisfaction",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 812,
+        "width": 1280,
+        "height": 82
+      }
+    },
+    {
+      "name": "div_89",
+      "tag": "div",
+      "text": "89%",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 844,
+        "width": 29,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Customer_Satisfaction",
+      "tag": "div",
+      "text": "Customer Satisfaction",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 69,
+        "y": 844,
+        "width": 142,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "150+\n    \n\n    \n      Portfolio Companies",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 996,
+        "width": 1280,
+        "height": 82
+      }
+    },
+    {
+      "name": "div_150",
+      "tag": "div",
+      "text": "150+",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 1028,
+        "width": 33,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Portfolio_Companies",
+      "tag": "div",
+      "text": "Portfolio Companies",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 73,
+        "y": 1028,
+        "width": 133,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_30T_Global_Capital",
+      "tag": "div",
+      "text": "3.0T\n    \n\n    \n      Global Capital",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1181,
+        "width": 1280,
+        "height": 82
+      }
+    },
+    {
+      "name": "div_30T",
+      "tag": "div",
+      "text": "3.0T",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 1213,
+        "width": 30,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Global_Capital",
+      "tag": "div",
+      "text": "Global Capital",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 70,
+        "y": 1213,
+        "width": 94,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "$750M\n    \n\n    \n      Private Equity Dry Powder",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1366,
+        "width": 1280,
+        "height": 84
+      }
+    },
+    {
+      "name": "div_750M",
+      "tag": "div",
+      "text": "$750M",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 25,
+        "y": 1399,
+        "width": 46,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Private_Equity_Dry_Powder",
+      "tag": "div",
+      "text": "Private Equity Dry Powder",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 1399,
+        "width": 174,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_500K_People_Impacted",
+      "tag": "div",
+      "text": "500K+\n    \n\n    \n      People Impacted",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1553,
+        "width": 1280,
+        "height": 119
+      }
+    },
+    {
+      "name": "div_500K",
+      "tag": "div",
+      "text": "500K+",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 618,
+        "y": 1586,
+        "width": 45,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_People_Impacted",
+      "tag": "div",
+      "text": "People Impacted",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 586,
+        "y": 1620,
+        "width": 107,
+        "height": 18
+      }
+    }
+  ],
+  "pageTitle": "Statistic",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

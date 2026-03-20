@@ -10,18 +10,17 @@ export class StatisticPage {
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
     await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/statistic.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('domcontentloaded');
-    await this.page.waitForSelector('.cmp-statistic', { timeout: 15000 });
+    await this.page.waitForLoadState('networkidle');
   }
 
-  /** Locator for div_42_GrowthIn_Sales */
-  get div_42_GrowthIn_Sales(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_42_GrowthIn_Sales);
+  /** Locator for div_42M_GrowthIn_Sales */
+  get div_42M_GrowthIn_Sales(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_42M_GrowthIn_Sales);
   }
 
-  /** Locator for div_42 */
-  get div_42(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_42);
+  /** Locator for div_42M */
+  get div_42M(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_42M);
   }
 
   /** Locator for div_GrowthIn_Sales */
@@ -136,15 +135,15 @@ export class StatisticPage {
 
   // --- Actions ---
 
-  /** Click div_42_GrowthIn_Sales */
-  async clickDiv42GrowthinSales() {
-    const el = await this.div_42_GrowthIn_Sales;
+  /** Click div_42M_GrowthIn_Sales */
+  async clickDiv42mGrowthinSales() {
+    const el = await this.div_42M_GrowthIn_Sales;
     await el.click();
   }
 
-  /** Click div_42 */
-  async clickDiv42() {
-    const el = await this.div_42;
+  /** Click div_42M */
+  async clickDiv42m() {
+    const el = await this.div_42M;
     await el.click();
   }
 

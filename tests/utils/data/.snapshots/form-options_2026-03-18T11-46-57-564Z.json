@@ -1,0 +1,1105 @@
+{
+  "component": "form-options",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/form-options.html?wcmmode=disabled",
+  "scannedAt": "2026-03-18T11:46:57.564Z",
+  "rootSelector": ".cmp-form-options",
+  "elements": [
+    {
+      "name": "Option_ARadioButton",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field--radio"
+      ],
+      "attributes": {
+        "aria-label": "Option A radio button",
+        "type": "radio",
+        "name": "plan-light",
+        "value": "a"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": "Option A radio button",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 12,
+        "y": 201,
+        "width": 210,
+        "height": 37
+      }
+    },
+    {
+      "name": "Retirement_PlanningCheckbox",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field--checkbox"
+      ],
+      "attributes": {
+        "aria-label": "Retirement Planning checkbox",
+        "type": "checkbox",
+        "name": "interests-light",
+        "value": "retirement"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": "Retirement Planning checkbox",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 12,
+        "y": 838,
+        "width": 217,
+        "height": 37
+      }
+    },
+    {
+      "name": "informationIconTooltip_Choos",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "info-light-icon",
+        "cmp-form-options__help-icon"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "aria-label": "information icon tooltip Choose one option that best fits your needs.",
+        "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzIwNTAxXzEzNzgiIHN0eWxlPSJtYXNrLXR5cGU6bHVtaW5hbmNlIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEwLjAwMDIgMC4zMzM0OTZDNC42NjQxNiAwLjMzMzQ5NiAwLjMzMzQ5NiA0LjY2NDE2IDAuMzMzNDk2IDEwLjAwMDJDMC4zMzM0OTYgMTUuMzM2MiA0LjY2NDE2IDE5LjY2NjggMTAuMDAwMiAxOS42NjY4QzE1LjMzNjIgMTkuNjY2OCAxOS42NjY4IDE1LjMzNjIgMTkuNjY2OCAxMC4wMDAyQzE5LjY2NjggNC42NjQxNiAxNS4zMzYyIDAuMzMzNDk2IDEwLjAwMDIgMC4zMzM0OTZaTTEwLjk2NjggMTQuODMzNUg5LjAzMzQ2VjEyLjkwMDJIMTAuOTY2OFYxNC44MzM1Wk0xMC45NjY4IDEwLjk2NjhIOS4wMzM0NlY1LjE2NjgzSDEwLjk2NjhWMTAuOTY2OFoiIGZpbGw9IndoaXRlIi8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8yMDUwMV8xMzc4KSI+CjxyZWN0IHg9Ii0xNC4xNjY1IiB5PSItMTQuMTY2NSIgd2lkdGg9IjQ4LjMzMzMiIGhlaWdodD0iNDguMzMzMyIgZmlsbD0iIzAyMjlCMSIvPgo8bWFzayBpZD0ibWFzazFfMjA1MDFfMTM3OCIgc3R5bGU9Im1hc2stdHlwZTpsdW1pbmFuY2UiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9Ii0xNSIgeT0iLTE1IiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPgo8cmVjdCB4PSItMTQuMTY2NSIgeT0iLTE0LjE2NjUiIHdpZHRoPSI0OC4zMzMzIiBoZWlnaHQ9IjQ4LjMzMzMiIGZpbGw9IndoaXRlIi8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMV8yMDUwMV8xMzc4KSI+CjwvZz4KPC9nPgo8L3N2Zz4K"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__help"
+      ],
+      "role": null,
+      "ariaLabel": "information icon tooltip Choose one option that best fits your needs.",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "informationIconTooltip_Choos_3",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "info-dark-icon",
+        "cmp-form-options__help-icon"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "aria-label": "information icon tooltip Choose one option that best fits your needs.",
+        "src": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE2IDE3Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZkODI4OwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICMwNzI1MzU7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyOC43LjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiAxLjIuMCBCdWlsZCAxNDIpICAtLT4KICA8Zz4KICAgIDxnIGlkPSJMYXllcl8xIj4KICAgICAgPGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSI4IiBjeT0iOC44IiByPSI4Ii8+CiAgICAgIDxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iNy4yIiB5PSI0LjYiIHdpZHRoPSIxLjYiIGhlaWdodD0iNC43Ii8+CiAgICAgIDxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iNy4yIiB5PSIxMC44IiB3aWR0aD0iMS42IiBoZWlnaHQ9IjEuNiIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__help"
+      ],
+      "role": null,
+      "ariaLabel": "information icon tooltip Choose one option that best fits your needs.",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "legend_SelectAPlan",
+      "tag": "legend",
+      "text": "Select a plan",
+      "classes": [
+        "cmp-form-options__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--radio"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 163,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-form-options__help"
+      ],
+      "attributes": {
+        "tooltip": "Choose one option that best fits your needs."
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__legend"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 181,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_6",
+      "tag": "span",
+      "text": "Option A\n                                \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                                \n     ",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--radio"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 189,
+        "width": 1268,
+        "height": 179
+      }
+    },
+    {
+      "name": "legend_7",
+      "tag": "legend",
+      "text": "",
+      "classes": [
+        "cmp-form-options-section__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 189,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Option_A",
+      "tag": "span",
+      "text": "Option A",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 201,
+        "width": 210,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_9",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field__radiomark"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 203,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_Option_A",
+      "tag": "div",
+      "text": "Option A",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 201,
+        "width": 182,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Option_B",
+      "tag": "span",
+      "text": "Option B",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 254,
+        "width": 208,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_Option_B",
+      "tag": "div",
+      "text": "Option B",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 254,
+        "width": 180,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Option_CPreselected",
+      "tag": "span",
+      "text": "Option C (pre-selected)",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 307,
+        "width": 183,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Option_CPreselected",
+      "tag": "div",
+      "text": "Option C (pre-selected)",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 307,
+        "width": 155,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_Option_DDisabled",
+      "tag": "span",
+      "text": "Option D (disabled)",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 341,
+        "width": 158,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Option_DDisabled",
+      "tag": "div",
+      "text": "Option D (disabled)",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 341,
+        "width": 130,
+        "height": 18
+      }
+    },
+    {
+      "name": "legend_SelectARegion",
+      "tag": "legend",
+      "text": "Select a region",
+      "classes": [
+        "cmp-form-options__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--radio"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 482,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_18",
+      "tag": "span",
+      "text": "North America\n                                \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                                \n",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--radio"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 508,
+        "width": 1268,
+        "height": 179
+      }
+    },
+    {
+      "name": "span_North_America",
+      "tag": "span",
+      "text": "North America",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 520,
+        "width": 175,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_North_America",
+      "tag": "div",
+      "text": "North America",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 520,
+        "width": 147,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Europe",
+      "tag": "span",
+      "text": "Europe",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 573,
+        "width": 204,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_Europe",
+      "tag": "div",
+      "text": "Europe",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 573,
+        "width": 176,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Asia_Pacific",
+      "tag": "span",
+      "text": "Asia Pacific",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 626,
+        "width": 105,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Asia_Pacific",
+      "tag": "div",
+      "text": "Asia Pacific",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 626,
+        "width": 77,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_Disabled_Region",
+      "tag": "span",
+      "text": "Disabled Region",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 660,
+        "width": 135,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Disabled_Region",
+      "tag": "div",
+      "text": "Disabled Region",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 660,
+        "width": 107,
+        "height": 18
+      }
+    },
+    {
+      "name": "legend_SelectYourInterests",
+      "tag": "legend",
+      "text": "Select your interests",
+      "classes": [
+        "cmp-form-options__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--checkbox"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 800,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_28",
+      "tag": "span",
+      "text": "Retirement Planning\n                                \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                           ",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--checkbox"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 826,
+        "width": 1268,
+        "height": 179
+      }
+    },
+    {
+      "name": "span_Retirement_Planning",
+      "tag": "span",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 838,
+        "width": 217,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_30",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-form-options__field",
+        "cmp-form-options__field__checkmark"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 840,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_Retirement_Planning",
+      "tag": "div",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 838,
+        "width": 189,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_Life_Insurance",
+      "tag": "span",
+      "text": "Life Insurance",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 892,
+        "width": 204,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_Life_Insurance",
+      "tag": "div",
+      "text": "Life Insurance",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 892,
+        "width": 176,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_AnnuitiesPreselected",
+      "tag": "span",
+      "text": "Annuities (pre-selected)",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 945,
+        "width": 188,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_AnnuitiesPreselected",
+      "tag": "div",
+      "text": "Annuities (pre-selected)",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 945,
+        "width": 160,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_Unavailable_OptionDisabled",
+      "tag": "span",
+      "text": "Unavailable Option (disabled)",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 979,
+        "width": 225,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_Unavailable_OptionDisabled",
+      "tag": "div",
+      "text": "Unavailable Option (disabled)",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 979,
+        "width": 197,
+        "height": 18
+      }
+    },
+    {
+      "name": "legend_Preferences",
+      "tag": "legend",
+      "text": "Preferences",
+      "classes": [
+        "cmp-form-options__legend"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--checkbox"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1119,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_39",
+      "tag": "span",
+      "text": "Email notifications\n                                \n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n                           ",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options",
+        "cmp-form-options--checkbox"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 1145,
+        "width": 1268,
+        "height": 144
+      }
+    },
+    {
+      "name": "span_EmailNotifications",
+      "tag": "span",
+      "text": "Email notifications",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 1157,
+        "width": 185,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_EmailNotifications",
+      "tag": "div",
+      "text": "Email notifications",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 1157,
+        "width": 157,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_SMSNotifications",
+      "tag": "span",
+      "text": "SMS notifications",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 1210,
+        "width": 233,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_SMSNotifications",
+      "tag": "div",
+      "text": "SMS notifications",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 1210,
+        "width": 205,
+        "height": 37
+      }
+    },
+    {
+      "name": "span_PhoneCalls",
+      "tag": "span",
+      "text": "Phone calls",
+      "classes": [
+        "cmp-form-options__field-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 12,
+        "y": 1263,
+        "width": 102,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_PhoneCalls",
+      "tag": "div",
+      "text": "Phone calls",
+      "classes": [
+        "cmp-form-options__field-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-options__field-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 40,
+        "y": 1263,
+        "width": 74,
+        "height": 18
+      }
+    }
+  ],
+  "pageTitle": "Form Options",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

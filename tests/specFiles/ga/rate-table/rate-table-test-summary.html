@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RateTable — Test Case Summary</title>
+  <title>Rate Table — Test Case Summary</title>
   <style>
     :root {
       --azul: #003DA5;
@@ -133,16 +133,17 @@
 <body>
 
   <div class="header">
-    <h1>RateTable — Test Summary</h1>
+    <h1>Rate Table — Test Summary</h1>
     
     <div class="meta-bar">
       <div class="meta-item"><strong>Spec Files</strong>rate-table.author.spec.ts</div>
+      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span></div>
     </div>
   </div>
 
   <div class="stats">
-    <div class="stat-box"><div class="num">12</div><div class="label">Total Tests</div></div>
-    <div class="stat-box"><div class="num">6</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">23</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">7</div><div class="label">Sections</div></div>
     <div class="stat-box"><div class="num">1</div><div class="label">Spec Files</div></div>
     <div class="stat-box"><div class="num">6</div><div class="label">Tag Types</div></div>
   </div>
@@ -151,8 +152,8 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>RateTable — Happy Path</h2>
-        <span class="section-count">2</span>
+        <h2>RateTable — GAAM-558 Dialog Acceptance Criteria</h2>
+        <span class="section-count">3</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -169,16 +170,23 @@
           <tbody>
             <tr>
               <td class="test-id">RT-001</td>
-              <td>RateTable renders correctly</td>
+              <td>Dialog lists all 5 table variations</td>
               
-              <td>RateTable renders correctly</td>
+              <td>Dialog lists all 5 table variations</td>
               <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
               <td class="test-id">RT-002</td>
-              <td>RateTable interactive elements are functional</td>
+              <td>Selecting a variation renders the table on the page</td>
               
-              <td>RateTable interactive elements are functional</td>
+              <td>Selecting a variation renders the table on the page</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-003</td>
+              <td>Dialog table variation field is required</td>
+              
+              <td>Dialog table variation field is required</td>
               <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
@@ -188,8 +196,8 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>RateTable — Negative &amp; Boundary</h2>
-        <span class="section-count">2</span>
+        <h2>RateTable — HTML Semantics &amp; BEM</h2>
+        <span class="section-count">8</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -205,17 +213,89 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">RT-003</td>
-              <td>RateTable handles empty content gracefully</td>
+              <td class="test-id">RT-024</td>
+              <td>Table uses semantic &lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;th&gt;, &lt;td&gt; elements</td>
               
-              <td>RateTable handles empty content gracefully</td>
-              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>Table uses semantic &lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;th&gt;, &lt;td&gt; elements</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">RT-004</td>
-              <td>RateTable handles missing images</td>
+              <td class="test-id">RT-025</td>
+              <td>Table has summary attribute for accessibility</td>
               
-              <td>RateTable handles missing images</td>
+              <td>Table has summary attribute for accessibility</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-026</td>
+              <td>Component root uses .cmp-rate-table BEM block class</td>
+              
+              <td>Component root uses .cmp-rate-table BEM block class</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-027</td>
+              <td>Child elements follow BEM .cmp-rate-table__element naming</td>
+              
+              <td>Child elements follow BEM .cmp-rate-table__element naming</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-028</td>
+              <td>Header row uses BEM modifier .cmp-rate-table__row--header</td>
+              
+              <td>Header row uses BEM modifier .cmp-rate-table__row--header</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-029</td>
+              <td>Title uses &lt;h2&gt; semantic heading</td>
+              
+              <td>Title uses &lt;h2&gt; semantic heading</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-030</td>
+              <td>No inline style attributes on component elements</td>
+              
+              <td>No inline style attributes on component elements</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-031</td>
+              <td>Data attributes are set correctly on root</td>
+              
+              <td>Data attributes are set correctly on root</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>RateTable — Empty State</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">RT-032</td>
+              <td>Empty rate-table shows placeholder in editor mode</td>
+              
+              <td>Empty rate-table shows placeholder in editor mode</td>
               <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
@@ -242,17 +322,17 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">RT-005</td>
-              <td>RateTable adapts to mobile viewport</td>
+              <td class="test-id">RT-034</td>
+              <td>Rate table is visible at mobile viewport (390px)</td>
               <td class="viewport">Mobile</td>
-              <td>RateTable adapts to mobile viewport</td>
-              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+              <td>Rate table is visible at mobile viewport (390px)</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">RT-006</td>
-              <td>RateTable adapts to tablet viewport</td>
+              <td class="test-id">RT-035</td>
+              <td>Rate table container handles overflow at mobile</td>
               <td class="viewport">Mobile</td>
-              <td>RateTable adapts to tablet viewport</td>
+              <td>Rate table container handles overflow at mobile</td>
               <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
@@ -263,36 +343,6 @@
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
         <h2>RateTable — Console &amp; Resources</h2>
-        <span class="section-count">1</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">RT-007</td>
-              <td>RateTable produces no JS errors</td>
-              
-              <td>RateTable produces no JS errors</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>RateTable — Broken Images</h2>
         <span class="section-count">2</span>
         <span class="chevron">&#9660;</span>
       </div>
@@ -309,17 +359,17 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">RT-008</td>
-              <td>RateTable all images load successfully</td>
+              <td class="test-id">RT-038</td>
+              <td>No JS console errors during page load</td>
               
-              <td>RateTable all images load successfully</td>
+              <td>No JS console errors during page load</td>
               <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">RT-009</td>
-              <td>RateTable all images have alt attributes</td>
+              <td class="test-id">RT-039</td>
+              <td>No HTL comments in published HTML output</td>
               
-              <td>RateTable all images have alt attributes</td>
+              <td>No HTL comments in published HTML output</td>
               <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
@@ -346,25 +396,76 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">RT-010</td>
-              <td>RateTable passes axe-core scan</td>
+              <td class="test-id">RT-040</td>
+              <td>Passes axe-core WCAG 2.2 AA scan</td>
               
-              <td>RateTable passes axe-core scan</td>
-              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+              <td>Passes axe-core WCAG 2.2 AA scan</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">RT-011</td>
-              <td>RateTable interactive elements meet 24px target size</td>
+              <td class="test-id">RT-041</td>
+              <td>Table headers use &lt;th&gt; not styled &lt;td&gt;</td>
               
-              <td>RateTable interactive elements meet 24px target size</td>
-              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+              <td>Table headers use &lt;th&gt; not styled &lt;td&gt;</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">RT-012</td>
-              <td>RateTable focus is not obscured by sticky elements</td>
+              <td class="test-id">RT-042</td>
+              <td>BEM class names are lowercase</td>
               
-              <td>RateTable focus is not obscured by sticky elements</td>
-              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+              <td>BEM class names are lowercase</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>RateTable — Cross-Variation Consistency</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">RT-043</td>
+              <td>All 5 variations render on the page</td>
+              
+              <td>All 5 variations render on the page</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-044</td>
+              <td>All 5 variations are distinct (different column counts)</td>
+              
+              <td>All 5 variations are distinct (different column counts)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-045</td>
+              <td>Each variation has an Effective Date column</td>
+              
+              <td>Each variation has an Effective Date column</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">RT-046</td>
+              <td>Each variation has a Product column</td>
+              
+              <td>Each variation has a Product column</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
         </table>

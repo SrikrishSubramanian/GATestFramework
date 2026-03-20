@@ -9,13 +9,25 @@ test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
 
-const BTN_SELECTOR = '.cmp-button:not(.basepage__skip-nav)';
+/**
+ * All visual tests scope to the primary button variant inside the white
+ * background section for deterministic element targeting. The previous
+ * `.cmp-button:first()` was hitting a different variant depending on
+ * page layout, causing color/typography mismatches.
+ */
+function primaryBtn(page: import('@playwright/test').Page) {
+  return page
+    .locator('.cmp-section--background-color-white')
+    .first()
+    .locator('.ga-button--primary:not(.ga-button--disabled) .cmp-button')
+    .first();
+}
 
 test.describe('Button — Visual Verification', () => {
   test('[BTN-196] @visual button colors match Figma spec', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    const el = page.locator(BTN_SELECTOR).first();
+    const el = primaryBtn(page);
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
@@ -32,7 +44,7 @@ test.describe('Button — Visual Verification', () => {
   test('[BTN-197] @visual button typography matches Figma spec', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    const el = page.locator(BTN_SELECTOR).first();
+    const el = primaryBtn(page);
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
@@ -51,7 +63,7 @@ test.describe('Button — Visual Verification', () => {
   test('[BTN-198] @visual button spacing matches Figma spec (±2px)', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    const el = page.locator(BTN_SELECTOR).first();
+    const el = primaryBtn(page);
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
@@ -70,7 +82,7 @@ test.describe('Button — Visual Verification', () => {
   test('[BTN-199] @visual button hover animation matches spec', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    const el = page.locator(BTN_SELECTOR).first();
+    const el = primaryBtn(page);
     const transition = await el.evaluate(el => getComputedStyle(el).transition);
     expect(transition).toContain('background');
     expect(transition).toContain('0.18s');
@@ -83,12 +95,10 @@ test.describe('Button — Visual Verification', () => {
     expect(beforeBg).not.toBe(afterBg);
   });
 
-  // BTN-200, BTN-201 removed: visibility-only checks at desktop/mobile, redundant with author spec
-
   test('[BTN-202] @visual button screenshot matches baseline', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    const el = page.locator(BTN_SELECTOR).first();
+    const el = primaryBtn(page);
     await expect(el).toHaveScreenshot('button-baseline.png', {
       maxDiffPixelRatio: 0.001,
       animations: 'disabled',

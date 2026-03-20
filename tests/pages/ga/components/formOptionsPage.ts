@@ -23,124 +23,14 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.Retirement_PlanningCheckbox);
   }
 
-  /** Locator for input_2 */
-  get input_2(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.input_2);
-  }
-
-  /** Locator for select_ChooseAnOption */
-  get select_ChooseAnOption(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.select_ChooseAnOption);
-  }
-
-  /** Locator for formOptions_818373936 */
-  get formOptions_818373936(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.formOptions_818373936);
-  }
-
-  /** Locator for select_ChooseARegion */
-  get select_ChooseARegion(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.select_ChooseARegion);
-  }
-
-  /** Locator for select_NotAvailable */
-  get select_NotAvailable(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.select_NotAvailable);
-  }
-
   /** Locator for informationIconTooltip_Choos */
   get informationIconTooltip_Choos(): Promise<Locator> {
     return resolveLocator(this.page, registry.entries.informationIconTooltip_Choos);
   }
 
-  /** Locator for informationIconTooltip_Choos_8 */
-  get informationIconTooltip_Choos_8(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.informationIconTooltip_Choos_8);
-  }
-
-  /** Locator for div_9 */
-  get div_9(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_9);
-  }
-
-  /** Locator for div_10 */
-  get div_10(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_10);
-  }
-
-  /** Locator for div_ChooseAnOption */
-  get div_ChooseAnOption(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_ChooseAnOption);
-  }
-
-  /** Locator for div_0 */
-  get div_0(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_0);
-  }
-
-  /** Locator for div_Option_A */
-  get div_Option_A(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Option_A);
-  }
-
-  /** Locator for div_Option_B */
-  get div_Option_B(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Option_B);
-  }
-
-  /** Locator for div_Option_C */
-  get div_Option_C(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Option_C);
-  }
-
-  /** Locator for div_Option_DDisabled */
-  get div_Option_DDisabled(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Option_DDisabled);
-  }
-
-  /** Locator for div_17 */
-  get div_17(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_17);
-  }
-
-  /** Locator for div_18 */
-  get div_18(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_18);
-  }
-
-  /** Locator for div_ChooseARegion */
-  get div_ChooseARegion(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_ChooseARegion);
-  }
-
-  /** Locator for div_North_America */
-  get div_North_America(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_North_America);
-  }
-
-  /** Locator for div_Europe */
-  get div_Europe(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Europe);
-  }
-
-  /** Locator for div_Asia_Pacific */
-  get div_Asia_Pacific(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Asia_Pacific);
-  }
-
-  /** Locator for div_23 */
-  get div_23(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_23);
-  }
-
-  /** Locator for div_NotAvailable0Option_AOption_B */
-  get div_NotAvailable0Option_AOption_B(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_NotAvailable0Option_AOption_B);
-  }
-
-  /** Locator for div_NotAvailable */
-  get div_NotAvailable(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_NotAvailable);
+  /** Locator for informationIconTooltip_Choos_3 */
+  get informationIconTooltip_Choos_3(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.informationIconTooltip_Choos_3);
   }
 
   /** Locator for legend_SelectAPlan */
@@ -148,19 +38,19 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.legend_SelectAPlan);
   }
 
-  /** Locator for div_27 */
-  get div_27(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_27);
+  /** Locator for div_5 */
+  get div_5(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_5);
   }
 
-  /** Locator for span_28 */
-  get span_28(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_28);
+  /** Locator for span_6 */
+  get span_6(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_6);
   }
 
-  /** Locator for legend_29 */
-  get legend_29(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.legend_29);
+  /** Locator for legend_7 */
+  get legend_7(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.legend_7);
   }
 
   /** Locator for span_Option_A */
@@ -168,14 +58,14 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.span_Option_A);
   }
 
-  /** Locator for span_31 */
-  get span_31(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_31);
+  /** Locator for span_9 */
+  get span_9(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_9);
   }
 
-  /** Locator for div_Option_A_32 */
-  get div_Option_A_32(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Option_A_32);
+  /** Locator for div_Option_A */
+  get div_Option_A(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Option_A);
   }
 
   /** Locator for span_Option_B */
@@ -183,9 +73,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.span_Option_B);
   }
 
-  /** Locator for div_Option_B_34 */
-  get div_Option_B_34(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Option_B_34);
+  /** Locator for div_Option_B */
+  get div_Option_B(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Option_B);
   }
 
   /** Locator for span_Option_CPreselected */
@@ -203,9 +93,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.span_Option_DDisabled);
   }
 
-  /** Locator for div_Option_DDisabled_38 */
-  get div_Option_DDisabled_38(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Option_DDisabled_38);
+  /** Locator for div_Option_DDisabled */
+  get div_Option_DDisabled(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Option_DDisabled);
   }
 
   /** Locator for legend_SelectARegion */
@@ -213,9 +103,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.legend_SelectARegion);
   }
 
-  /** Locator for span_40 */
-  get span_40(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_40);
+  /** Locator for span_18 */
+  get span_18(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_18);
   }
 
   /** Locator for span_North_America */
@@ -223,9 +113,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.span_North_America);
   }
 
-  /** Locator for div_North_America_42 */
-  get div_North_America_42(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_North_America_42);
+  /** Locator for div_North_America */
+  get div_North_America(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_North_America);
   }
 
   /** Locator for span_Europe */
@@ -233,9 +123,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.span_Europe);
   }
 
-  /** Locator for div_Europe_44 */
-  get div_Europe_44(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Europe_44);
+  /** Locator for div_Europe */
+  get div_Europe(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Europe);
   }
 
   /** Locator for span_Asia_Pacific */
@@ -243,9 +133,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.span_Asia_Pacific);
   }
 
-  /** Locator for div_Asia_Pacific_46 */
-  get div_Asia_Pacific_46(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Asia_Pacific_46);
+  /** Locator for div_Asia_Pacific */
+  get div_Asia_Pacific(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Asia_Pacific);
   }
 
   /** Locator for span_Disabled_Region */
@@ -263,9 +153,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.legend_SelectYourInterests);
   }
 
-  /** Locator for span_50 */
-  get span_50(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_50);
+  /** Locator for span_28 */
+  get span_28(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_28);
   }
 
   /** Locator for span_Retirement_Planning */
@@ -273,9 +163,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.span_Retirement_Planning);
   }
 
-  /** Locator for span_52 */
-  get span_52(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_52);
+  /** Locator for span_30 */
+  get span_30(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_30);
   }
 
   /** Locator for div_Retirement_Planning */
@@ -318,9 +208,9 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.legend_Preferences);
   }
 
-  /** Locator for span_61 */
-  get span_61(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_61);
+  /** Locator for span_39 */
+  get span_39(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_39);
   }
 
   /** Locator for span_EmailNotifications */
@@ -353,116 +243,6 @@ export class FormOptionsPage {
     return resolveLocator(this.page, registry.entries.div_PhoneCalls);
   }
 
-  /** Locator for SelectAPlan */
-  get SelectAPlan(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.SelectAPlan);
-  }
-
-  /** Locator for div_ChooseAnOptionChooseAnOpti */
-  get div_ChooseAnOptionChooseAnOpti(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_ChooseAnOptionChooseAnOpti);
-  }
-
-  /** Locator for div_ChooseAnOption_70 */
-  get div_ChooseAnOption_70(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_ChooseAnOption_70);
-  }
-
-  /** Locator for div_ChooseAnOption_71 */
-  get div_ChooseAnOption_71(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_ChooseAnOption_71);
-  }
-
-  /** Locator for div_72 */
-  get div_72(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_72);
-  }
-
-  /** Locator for div_0_73 */
-  get div_0_73(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_0_73);
-  }
-
-  /** Locator for SelectYourInterests */
-  get SelectYourInterests(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.SelectYourInterests);
-  }
-
-  /** Locator for label_Retirement_Planning */
-  get label_Retirement_Planning(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.label_Retirement_Planning);
-  }
-
-  /** Locator for label_Life_Insurance */
-  get label_Life_Insurance(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.label_Life_Insurance);
-  }
-
-  /** Locator for label_Annuities */
-  get label_Annuities(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.label_Annuities);
-  }
-
-  /** Locator for label_Wealth_Management */
-  get label_Wealth_Management(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.label_Wealth_Management);
-  }
-
-  /** Locator for label_Tax_Planning */
-  get label_Tax_Planning(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.label_Tax_Planning);
-  }
-
-  /** Locator for SelectARegion */
-  get SelectARegion(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.SelectARegion);
-  }
-
-  /** Locator for div_ChooseARegionChooseARegion */
-  get div_ChooseARegionChooseARegion(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_ChooseARegionChooseARegion);
-  }
-
-  /** Locator for div_ChooseARegion_82 */
-  get div_ChooseARegion_82(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_ChooseARegion_82);
-  }
-
-  /** Locator for div_ChooseARegion_83 */
-  get div_ChooseARegion_83(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_ChooseARegion_83);
-  }
-
-  /** Locator for div_84 */
-  get div_84(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_84);
-  }
-
-  /** Locator for DisabledDropdown */
-  get DisabledDropdown(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.DisabledDropdown);
-  }
-
-  /** Locator for div_NotAvailableNotAvailable */
-  get div_NotAvailableNotAvailable(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_NotAvailableNotAvailable);
-  }
-
-  /** Locator for div_NotAvailable_87 */
-  get div_NotAvailable_87(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_NotAvailable_87);
-  }
-
-  /** Locator for div_NotAvailable_88 */
-  get div_NotAvailable_88(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_NotAvailable_88);
-  }
-
-  /** Locator for div_NotAvailable0Option_AOption_B_89 */
-  get div_NotAvailable0Option_AOption_B_89(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_NotAvailable0Option_AOption_B_89);
-  }
-
   // --- Actions ---
 
   /** Click Option_ARadioButton */
@@ -477,51 +257,51 @@ export class FormOptionsPage {
     await el.click();
   }
 
-  /** Click input_2 */
-  async clickInput2() {
-    const el = await this.input_2;
-    await el.click();
-  }
-
-  /** Click select_ChooseAnOption */
-  async clickSelectChooseanoption() {
-    const el = await this.select_ChooseAnOption;
-    await el.click();
-  }
-
-  /** Click formOptions_818373936 */
-  async clickFormoptions818373936() {
-    const el = await this.formOptions_818373936;
-    await el.click();
-  }
-
-  /** Click select_ChooseARegion */
-  async clickSelectChoosearegion() {
-    const el = await this.select_ChooseARegion;
-    await el.click();
-  }
-
-  /** Click select_NotAvailable */
-  async clickSelectNotavailable() {
-    const el = await this.select_NotAvailable;
-    await el.click();
-  }
-
   /** Click informationIconTooltip_Choos */
   async clickInformationicontooltipChoos() {
     const el = await this.informationIconTooltip_Choos;
     await el.click();
   }
 
-  /** Click informationIconTooltip_Choos_8 */
-  async clickInformationicontooltipChoos8() {
-    const el = await this.informationIconTooltip_Choos_8;
+  /** Click informationIconTooltip_Choos_3 */
+  async clickInformationicontooltipChoos3() {
+    const el = await this.informationIconTooltip_Choos_3;
     await el.click();
   }
 
-  /** Click div_9 */
-  async clickDiv9() {
-    const el = await this.div_9;
+  /** Click legend_SelectAPlan */
+  async clickLegendSelectaplan() {
+    const el = await this.legend_SelectAPlan;
+    await el.click();
+  }
+
+  /** Click div_5 */
+  async clickDiv5() {
+    const el = await this.div_5;
+    await el.click();
+  }
+
+  /** Click span_6 */
+  async clickSpan6() {
+    const el = await this.span_6;
+    await el.click();
+  }
+
+  /** Click legend_7 */
+  async clickLegend7() {
+    const el = await this.legend_7;
+    await el.click();
+  }
+
+  /** Click span_Option_A */
+  async clickSpanOptionA() {
+    const el = await this.span_Option_A;
+    await el.click();
+  }
+
+  /** Click span_9 */
+  async clickSpan9() {
+    const el = await this.span_9;
     await el.click();
   }
 }

@@ -363,8 +363,8 @@
     "pomClass": "ButtonPage",
     "pomPath": "../pages/ga/components/buttonPage.ts",
     "sidecarPath": "../pages/ga/components/buttonPage.locators.json",
-    "specPath": "../specFiles/ga/button.author.spec.ts",
-    "elementCount": 19,
+    "specPath": "../specFiles/ga/button/button.author.spec.ts",
+    "elementCount": 17,
     "testCount": 12,
     "categories": [
       "happy-path",
@@ -374,14 +374,14 @@
       "broken-images",
       "accessibility"
     ],
-    "generatedAt": "2026-03-11T10:12:07.142Z",
+    "generatedAt": "2026-03-18T11:46:22.074Z",
     "source": "dom"
   },
   "feature-banner": {
     "pomClass": "FeatureBannerPage",
     "pomPath": "../pages/ga/components/featureBannerPage.ts",
     "sidecarPath": "../pages/ga/components/featureBannerPage.locators.json",
-    "specPath": "../specFiles/ga/feature-banner.author.spec.ts",
+    "specPath": "../specFiles/ga/feature-banner/feature-banner.author.spec.ts",
     "elementCount": 90,
     "testCount": 12,
     "categories": [
@@ -392,14 +392,14 @@
       "broken-images",
       "accessibility"
     ],
-    "generatedAt": "2026-03-11T10:12:33.305Z",
+    "generatedAt": "2026-03-18T11:46:41.305Z",
     "source": "dom"
   },
   "statistic": {
     "pomClass": "StatisticPage",
     "pomPath": "../pages/ga/components/statisticPage.ts",
     "sidecarPath": "../pages/ga/components/statisticPage.locators.json",
-    "specPath": "../specFiles/ga/statistic.author.spec.ts",
+    "specPath": "../specFiles/ga/statistic/statistic.author.spec.ts",
     "elementCount": 24,
     "testCount": 12,
     "categories": [
@@ -410,7 +410,7 @@
       "broken-images",
       "accessibility"
     ],
-    "generatedAt": "2026-03-11T10:12:43.604Z",
+    "generatedAt": "2026-03-18T11:46:49.330Z",
     "source": "dom"
   },
   "form-options": {
@@ -418,7 +418,7 @@
     "pomPath": "../pages/ga/components/formOptionsPage.ts",
     "sidecarPath": "../pages/ga/components/formOptionsPage.locators.json",
     "specPath": "../specFiles/ga/form-options/form-options.author.spec.ts",
-    "elementCount": 90,
+    "elementCount": 46,
     "testCount": 12,
     "categories": [
       "happy-path",
@@ -428,7 +428,7 @@
       "broken-images",
       "accessibility"
     ],
-    "generatedAt": "2026-03-16T07:01:38.574Z",
+    "generatedAt": "2026-03-18T11:46:57.579Z",
     "source": "dom"
   },
   "accordion-tabs-feature": {
@@ -447,6 +447,24 @@
       "accessibility"
     ],
     "generatedAt": "2026-03-18T06:44:00.085Z",
+    "source": "dom"
+  },
+  "rate-table": {
+    "pomClass": "RateTablePage",
+    "pomPath": "../pages/ga/components/rateTablePage.ts",
+    "sidecarPath": "../pages/ga/components/rateTablePage.locators.json",
+    "specPath": "../specFiles/ga/rate-table/rate-table.author.spec.ts",
+    "elementCount": 105,
+    "testCount": 12,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility"
+    ],
+    "generatedAt": "2026-03-18T11:47:30.470Z",
     "source": "dom"
   }
 }

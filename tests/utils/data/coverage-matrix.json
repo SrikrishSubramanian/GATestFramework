@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-17T09:25:48.386Z",
+  "lastUpdated": "2026-03-18T10:40:14.545Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -553,6 +553,55 @@
       },
       "totalTests": 210,
       "lastUpdated": "2026-03-17T09:25:48.385Z"
+    },
+    "rate-table": {
+      "component": "rate-table",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 14,
+          "specFile": "rate-table.author.spec.ts",
+          "tags": []
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 14,
+          "specFile": "rate-table.author.spec.ts",
+          "tags": []
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 14,
+          "specFile": "rate-table.author.spec.ts",
+          "tags": []
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 14,
+          "specFile": "rate-table.author.spec.ts",
+          "tags": []
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 14,
+          "specFile": "rate-table.author.spec.ts",
+          "tags": []
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 14,
+          "specFile": "rate-table.author.spec.ts",
+          "tags": []
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 14,
+          "specFile": "rate-table.author.spec.ts",
+          "tags": []
+        }
+      },
+      "totalTests": 98,
+      "lastUpdated": "2026-03-18T10:40:14.544Z"
     }
   }
 }

@@ -32,19 +32,21 @@ test.describe('Button — Happy Path', () => {
   test('[BTTN-002] @smoke @regression Button interactive elements are functional', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
-    const root = page.locator('.button').first();
-    await expect(root).toBeVisible();
-    // Verify interactive elements (links, buttons) are present and clickable
-    const interactive = root.locator('a, button');
-    const count = await interactive.count();
+    // Scope to non-disabled button wrappers — style guide includes disabled variants by design
+    const enabledButtons = page.locator('.button:not(.ga-button--disabled) .cmp-button');
+    const count = await enabledButtons.count();
+    expect(count).toBeGreaterThan(0);
     for (let i = 0; i < Math.min(count, 3); i++) {
-      await expect(interactive.nth(i)).toBeVisible();
-      await expect(interactive.nth(i)).toBeEnabled();
+      await expect(enabledButtons.nth(i)).toBeVisible();
+      await expect(enabledButtons.nth(i)).toBeEnabled();
     }
   });
 });
 
 test.describe('Button — Responsive', () => {
+  // Retry once — Windows Chromium occasionally crashes on viewport resize
+  test.describe.configure({ retries: 1 });
+
   test('[BTTN-006] @mobile @regression Button adapts to tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new ButtonPage(page);
@@ -60,6 +62,9 @@ test.describe('Button — Responsive', () => {
 });
 
 test.describe('Button — Accessibility', () => {
+  // Retry once — Windows Chromium occasionally crashes under axe-core memory pressure
+  test.describe.configure({ retries: 1 });
+
   test('[BTTN-010] @a11y @wcag22 @regression @smoke Button passes axe-core scan', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());

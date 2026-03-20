@@ -1,0 +1,2610 @@
+{
+  "component": "feature-banner",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled",
+  "scannedAt": "2026-03-18T11:46:41.279Z",
+  "rootSelector": ".feature-banner",
+  "elements": [
+    {
+      "name": "a_Optional_CTA",
+      "tag": "a",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/ga/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-86fc7b1137",
+        "data-cta": "1"
+      },
+      "testId": null,
+      "id": "button-86fc7b1137",
+      "parentClasses": [
+        "button",
+        "ga-button--primary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 603,
+        "y": 558,
+        "width": 157,
+        "height": 46
+      }
+    },
+    {
+      "name": "a_1",
+      "tag": "a",
+      "text": "Come grow with us\n                \n                    \n                    \n                \n      ",
+      "classes": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "attributes": {
+        "target": "_self",
+        "href": "/content/ga/style-guide.html",
+        "data-cta": "1",
+        "data-link-location": "content-trail-312c0e1d2f",
+        "data-content-type": "link"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 603,
+        "y": 646,
+        "width": 549,
+        "height": 146
+      }
+    },
+    {
+      "name": "button_Play_Video",
+      "tag": "button",
+      "text": "Play Video",
+      "classes": [
+        "vjs-big-play-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Play Video",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-player",
+        "video-js",
+        "vjs-controls-disabled",
+        "vjs-workinghover",
+        "vjs-v8",
+        "vjs-layout-large",
+        "bc-player-default_default",
+        "bc-player-default_default-index-0",
+        "vjs-mouse",
+        "vjs-plugins-ready",
+        "vjs-player-info",
+        "vjs-contextmenu-ui",
+        "vjs-viewability",
+        "vjs-errors",
+        "vjs-playing",
+        "vjs-has-started",
+        "vjs-user-inactive"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Pause",
+      "tag": "button",
+      "text": "Pause",
+      "classes": [
+        "vjs-play-control",
+        "vjs-control",
+        "vjs-button",
+        "vjs-playing"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Pause",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-control-bar"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_SkipBackward_5Seconds",
+      "tag": "button",
+      "text": "Skip backward 5 seconds",
+      "classes": [
+        "vjs-skip-backward-5",
+        "vjs-control",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Skip backward 5 seconds",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-control-bar"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_SkipForward_5Seconds",
+      "tag": "button",
+      "text": "Skip forward 5 seconds",
+      "classes": [
+        "vjs-skip-forward-5",
+        "vjs-control",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Skip forward 5 seconds",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-control-bar"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Unmute",
+      "tag": "button",
+      "text": "Unmute",
+      "classes": [
+        "vjs-mute-control",
+        "vjs-control",
+        "vjs-button",
+        "vjs-vol-0"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Unmute",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-volume-panel",
+        "vjs-control",
+        "vjs-volume-panel-horizontal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_SeekToLiveCurrentlyBehind_",
+      "tag": "button",
+      "text": "Seek to live, currently behind liveLIVE",
+      "classes": [
+        "vjs-seek-to-live-control",
+        "vjs-control"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Seek to live, currently behind live",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-control-bar"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Playback_Rate",
+      "tag": "button",
+      "text": "Playback Rate",
+      "classes": [
+        "vjs-playback-rate",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-disabled": "false",
+        "title": "Playback Rate",
+        "aria-haspopup": "true",
+        "aria-expanded": "false",
+        "aria-describedby": "vjs-playback-rate-value-label-bc-player-feature-banner-4d061201c3_component_344"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-playback-rate",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-control",
+        "vjs-button",
+        "vjs-hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Chapters",
+      "tag": "button",
+      "text": "Chapters",
+      "classes": [
+        "vjs-chapters-button",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-disabled": "false",
+        "title": "Chapters",
+        "aria-haspopup": "true",
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-chapters-button",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-control",
+        "vjs-button",
+        "vjs-hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Descriptions",
+      "tag": "button",
+      "text": "Descriptions",
+      "classes": [
+        "vjs-descriptions-button",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-disabled": "false",
+        "title": "Descriptions",
+        "aria-haspopup": "true",
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-descriptions-button",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-control",
+        "vjs-button",
+        "vjs-hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Subtitles",
+      "tag": "button",
+      "text": "Subtitles",
+      "classes": [
+        "vjs-subs-caps-button",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-disabled": "false",
+        "title": "Subtitles",
+        "aria-haspopup": "true",
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-subs-caps-button",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-control",
+        "vjs-button",
+        "vjs-hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Audio_Track",
+      "tag": "button",
+      "text": "Audio Track",
+      "classes": [
+        "vjs-audio-button",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-disabled": "false",
+        "title": "Audio Track",
+        "aria-haspopup": "true",
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-audio-button",
+        "vjs-menu-button",
+        "vjs-menu-button-popup",
+        "vjs-control",
+        "vjs-button",
+        "vjs-hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Fullscreen",
+      "tag": "button",
+      "text": "Fullscreen",
+      "classes": [
+        "vjs-fullscreen-control",
+        "vjs-control",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Fullscreen",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-control-bar"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Reset",
+      "tag": "button",
+      "text": "Reset",
+      "classes": [
+        "vjs-default-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "restore all settings to the default values",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-track-settings-controls"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Done",
+      "tag": "button",
+      "text": "Done",
+      "classes": [
+        "vjs-done-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Done",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-track-settings-controls"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Close_Modal_Dialog",
+      "tag": "button",
+      "text": "Close Modal Dialog",
+      "classes": [
+        "vjs-close-button",
+        "vjs-control",
+        "vjs-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "title": "Close Modal Dialog",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-modal-dialog",
+        "vjs-hidden",
+        "vjs-text-track-settings"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "PlayVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-control",
+        "cmp-feature-banner__video-control--play",
+        "hide"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Play video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Play video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "PauseVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-control",
+        "cmp-feature-banner__video-control--pause"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Pause video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Pause video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 64,
+        "y": 1619,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "name": "select_WhiteBlackRedGreenBlueYellowMa",
+      "tag": "select",
+      "text": "WhiteBlackRedGreenBlueYellowMagentaCyan",
+      "classes": [],
+      "attributes": {
+        "aria-labelledby": "captions-text-legend-bc-player-feature-banner-4d061201c3_component_554 captions-foreground-color-bc-player-feature-banner-4d061201c3_component_554"
+      },
+      "testId": null,
+      "id": "vjs_select_581",
+      "parentClasses": [
+        "vjs-text-color"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_OpaqueSemiTransparent",
+      "tag": "select",
+      "text": "OpaqueSemi-Transparent",
+      "classes": [],
+      "attributes": {
+        "aria-labelledby": "captions-text-legend-bc-player-feature-banner-4d061201c3_component_554 captions-foreground-opacity-bc-player-feature-banner-4d061201c3_component_554"
+      },
+      "testId": null,
+      "id": "vjs_select_586",
+      "parentClasses": [
+        "vjs-text-opacity",
+        "vjs-opacity"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_BlackWhiteRedGreenBlueYellowMa",
+      "tag": "select",
+      "text": "BlackWhiteRedGreenBlueYellowMagentaCyan",
+      "classes": [],
+      "attributes": {
+        "aria-labelledby": "captions-background-bc-player-feature-banner-4d061201c3_component_554 captions-background-color-bc-player-feature-banner-4d061201c3_component_554"
+      },
+      "testId": null,
+      "id": "vjs_select_596",
+      "parentClasses": [
+        "vjs-bg-color"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_OpaqueSemiTransparentTranspare",
+      "tag": "select",
+      "text": "OpaqueSemi-TransparentTransparent",
+      "classes": [],
+      "attributes": {
+        "aria-labelledby": "captions-background-bc-player-feature-banner-4d061201c3_component_554 captions-background-opacity-bc-player-feature-banner-4d061201c3_component_554"
+      },
+      "testId": null,
+      "id": "vjs_select_601",
+      "parentClasses": [
+        "vjs-bg-opacity",
+        "vjs-opacity"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_TransparentSemiTransparentOpaq",
+      "tag": "select",
+      "text": "TransparentSemi-TransparentOpaque",
+      "classes": [],
+      "attributes": {
+        "aria-labelledby": "captions-window-bc-player-feature-banner-4d061201c3_component_554 captions-window-opacity-bc-player-feature-banner-4d061201c3_component_554"
+      },
+      "testId": null,
+      "id": "vjs_select_616",
+      "parentClasses": [
+        "vjs-window-opacity",
+        "vjs-opacity"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_5075100125150175200300400",
+      "tag": "select",
+      "text": "50%75%100%125%150%175%200%300%400%",
+      "classes": [],
+      "attributes": {
+        "aria-labelledby": "captions-font-size-bc-player-feature-banner-4d061201c3_component_554"
+      },
+      "testId": null,
+      "id": "vjs_select_631",
+      "parentClasses": [
+        "vjs-font-percent",
+        "vjs-track-setting"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "select_NoneRaisedDepressedUniformDrop",
+      "tag": "select",
+      "text": "NoneRaisedDepressedUniformDrop shadow",
+      "classes": [],
+      "attributes": {
+        "aria-labelledby": "captions-edge-style-bc-player-feature-banner-4d061201c3_component_554"
+      },
+      "testId": null,
+      "id": "vjs_select_650",
+      "parentClasses": [
+        "vjs-edge-style",
+        "vjs-track-setting"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "vjsSelect_665",
+      "tag": "select",
+      "text": "Proportional Sans-SerifMonospace Sans-SerifProportional SerifMonospace SerifCasualScriptSmall Caps",
+      "classes": [],
+      "attributes": {
+        "aria-labelledby": "captions-font-family-bc-player-feature-banner-4d061201c3_component_554"
+      },
+      "testId": null,
+      "id": "vjs_select_665",
+      "parentClasses": [
+        "vjs-font-family",
+        "vjs-track-setting"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h2_LoremIpsumDolorSitAmetCon",
+      "tag": "h2",
+      "text": "Lorem ipsum dolor sit amet consectetur.",
+      "classes": [
+        "ga-headline-block__title",
+        "headline-h2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 320,
+        "width": 549,
+        "height": 101
+      }
+    },
+    {
+      "name": "img_AltText",
+      "tag": "img",
+      "text": "",
+      "classes": [],
+      "attributes": {
+        "alt": "Alt text"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 628,
+        "y": 679,
+        "width": 80,
+        "height": 18
+      }
+    },
+    {
+      "name": "bcPlayerFeatureBanner_4d061201c3Html5Api",
+      "tag": "video",
+      "text": "",
+      "classes": [
+        "vjs-tech"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "role": "application",
+        "playsinline": "playsinline",
+        "muted": "muted",
+        "data-embed": "default",
+        "data-loop-end": "10",
+        "data-loop-start": "0",
+        "data-player": "default",
+        "data-account": "6415685851001",
+        "data-video-id": "6365778310112",
+        "preload": "none",
+        "poster": "https://house-fastly-signed-us-east-1-prod.brightcovecdn.com/image/v1/static/6415685851001/7e08d035-45d1-44c6-baec-1e4d57c622df/2f3a4931-bb23-485f-93b6-e17e3f5d60c3/1280x720/match/image.jpg?fastly_token=NjliYWU5OWRfMGU5Y2I0ZDBjYTEyYTkzNGViMGRkMDRjYzNmOTQ0ZjJjYTlkMmMyNGVhYzQ1NmUxN2M3ZTMwNGQ0Y2I2ZmUyOV9odHRwczovL2hvdXNlLWZhc3RseS1zaWduZWQtdXMtZWFzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vaW1hZ2UvdjEvc3RhdGljLzY0MTU2ODU4NTEwMDEvN2UwOGQwMzUtNDVkMS00NGM2LWJhZWMtMWU0ZDU3YzYyMmRmLzJmM2E0OTMxLWJiMjMtNDg1Zi05M2I2LWUxN2UzZjVkNjBjMy8xMjgweDcyMC9tYXRjaC9pbWFnZS5qcGc%3D",
+        "src": "blob:http://localhost:4502/1bb5fd02-5948-41b9-9ba2-20a9eec1491c"
+      },
+      "testId": null,
+      "id": "bc-player-feature-banner-4d061201c3_html5_api",
+      "parentClasses": [
+        "cmp-feature-banner__video-player",
+        "video-js",
+        "vjs-controls-disabled",
+        "vjs-workinghover",
+        "vjs-v8",
+        "vjs-layout-large",
+        "bc-player-default_default",
+        "bc-player-default_default-index-0",
+        "vjs-mouse",
+        "vjs-plugins-ready",
+        "vjs-player-info",
+        "vjs-contextmenu-ui",
+        "vjs-viewability",
+        "vjs-errors",
+        "vjs-playing",
+        "vjs-has-started",
+        "vjs-user-inactive"
+      ],
+      "role": "application",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 999,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "ul_30",
+      "tag": "ul",
+      "text": "",
+      "classes": [
+        "vjs-menu-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ul_Chapters",
+      "tag": "ul",
+      "text": "Chapters",
+      "classes": [
+        "vjs-menu-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ulDescriptionsOffSelected",
+      "tag": "ul",
+      "text": "descriptions off, selected",
+      "classes": [
+        "vjs-menu-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ul_33",
+      "tag": "ul",
+      "text": "subtitles settings, opens subtitles settings dialogsubtitles off, selected",
+      "classes": [
+        "vjs-menu-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ulEn_MainSelected",
+      "tag": "ul",
+      "text": "en (Main), selected",
+      "classes": [
+        "vjs-menu-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Video_Player",
+      "tag": "video-js",
+      "text": "Video Player is loading.Play VideoPauseSkip backward 5 secondsSkip forward 5 secondsUnmuteCurrent Ti",
+      "classes": [
+        "cmp-feature-banner__video-player",
+        "video-js",
+        "vjs-controls-disabled",
+        "vjs-workinghover",
+        "vjs-v8",
+        "vjs-layout-large",
+        "bc-player-default_default",
+        "bc-player-default_default-index-0",
+        "vjs-mouse",
+        "vjs-plugins-ready",
+        "vjs-player-info",
+        "vjs-contextmenu-ui",
+        "vjs-viewability",
+        "vjs-errors",
+        "vjs-playing",
+        "vjs-has-started",
+        "vjs-user-inactive"
+      ],
+      "attributes": {
+        "data-video-id": "6365778310112",
+        "data-account": "6415685851001",
+        "data-player": "default",
+        "data-loop-start": "0",
+        "data-loop-end": "10",
+        "data-embed": "default",
+        "muted": "true",
+        "playsinline": "true",
+        "tabindex": "-1",
+        "role": "region",
+        "lang": "en-in",
+        "translate": "no",
+        "aria-label": "Video Player"
+      },
+      "testId": null,
+      "id": "bc-player-feature-banner-4d061201c3",
+      "parentClasses": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "role": "region",
+      "ariaLabel": "Video Player",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 999,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "Volume_Level",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "vjs-volume-bar",
+        "vjs-slider-bar",
+        "vjs-slider",
+        "vjs-slider-horizontal"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "role": "slider",
+        "aria-valuenow": "0",
+        "aria-valuemin": "0",
+        "aria-valuemax": "100",
+        "aria-label": "Volume Level",
+        "aria-live": "polite",
+        "aria-valuetext": "0%"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-volume-control",
+        "vjs-control",
+        "vjs-volume-horizontal"
+      ],
+      "role": "slider",
+      "ariaLabel": "Volume Level",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Current_Time",
+      "tag": "span",
+      "text": "Current Time",
+      "classes": [
+        "vjs-control-text"
+      ],
+      "attributes": {
+        "role": "presentation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-current-time",
+        "vjs-time-control",
+        "vjs-control"
+      ],
+      "role": "presentation",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_000",
+      "tag": "span",
+      "text": "0:00",
+      "classes": [
+        "vjs-current-time-display"
+      ],
+      "attributes": {
+        "role": "presentation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-current-time",
+        "vjs-time-control",
+        "vjs-control"
+      ],
+      "role": "presentation",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Duration",
+      "tag": "span",
+      "text": "Duration",
+      "classes": [
+        "vjs-control-text"
+      ],
+      "attributes": {
+        "role": "presentation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-duration",
+        "vjs-time-control",
+        "vjs-control"
+      ],
+      "role": "presentation",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_412",
+      "tag": "span",
+      "text": "4:12",
+      "classes": [
+        "vjs-duration-display"
+      ],
+      "attributes": {
+        "role": "presentation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-duration",
+        "vjs-time-control",
+        "vjs-control"
+      ],
+      "role": "presentation",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Progress_Bar",
+      "tag": "div",
+      "text": "Loaded: 19.04%0:00",
+      "classes": [
+        "vjs-progress-holder",
+        "vjs-slider",
+        "vjs-slider-horizontal"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "role": "slider",
+        "aria-valuenow": "0.17",
+        "aria-valuemin": "0",
+        "aria-valuemax": "100",
+        "aria-label": "Progress Bar",
+        "aria-valuetext": "0:00 of 4:12"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-progress-control",
+        "vjs-control"
+      ],
+      "role": "slider",
+      "ariaLabel": "Progress Bar",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Remaining_Time",
+      "tag": "span",
+      "text": "Remaining Time",
+      "classes": [
+        "vjs-control-text"
+      ],
+      "attributes": {
+        "role": "presentation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-remaining-time",
+        "vjs-time-control",
+        "vjs-control"
+      ],
+      "role": "presentation",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_412_44",
+      "tag": "span",
+      "text": "4:12",
+      "classes": [
+        "vjs-remaining-time-display"
+      ],
+      "attributes": {
+        "role": "presentation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-remaining-time",
+        "vjs-time-control",
+        "vjs-control"
+      ],
+      "role": "presentation",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "liDescriptionsOffSelected",
+      "tag": "li",
+      "text": "descriptions off, selected",
+      "classes": [
+        "vjs-menu-item",
+        "vjs-selected"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "role": "menuitemradio",
+        "aria-disabled": "false",
+        "aria-checked": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu-content"
+      ],
+      "role": "menuitemradio",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "li_46",
+      "tag": "li",
+      "text": "subtitles settings, opens subtitles settings dialog",
+      "classes": [
+        "vjs-menu-item",
+        "vjs-texttrack-settings"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "role": "menuitem",
+        "aria-disabled": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu-content"
+      ],
+      "role": "menuitem",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "liSubtitlesOffSelected",
+      "tag": "li",
+      "text": "subtitles off, selected",
+      "classes": [
+        "vjs-menu-item",
+        "vjs-selected"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "role": "menuitemradio",
+        "aria-disabled": "false",
+        "aria-checked": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu-content"
+      ],
+      "role": "menuitemradio",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "liEn_MainSelected",
+      "tag": "li",
+      "text": "en (Main), selected",
+      "classes": [
+        "vjs-menu-item",
+        "vjs-selected",
+        "vjs-main-menu-item"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "role": "menuitemradio",
+        "aria-disabled": "false",
+        "aria-checked": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu-content"
+      ],
+      "role": "menuitemradio",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Modal_Window",
+      "tag": "div",
+      "text": "This is a modal window.",
+      "classes": [
+        "vjs-error-display",
+        "vjs-modal-dialog",
+        "vjs-hidden"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "aria-describedby": "bc-player-feature-banner-4d061201c3_component_548_description",
+        "aria-hidden": "true",
+        "aria-label": "Modal Window",
+        "role": "dialog",
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-player",
+        "video-js",
+        "vjs-controls-disabled",
+        "vjs-workinghover",
+        "vjs-v8",
+        "vjs-layout-large",
+        "bc-player-default_default",
+        "bc-player-default_default-index-0",
+        "vjs-mouse",
+        "vjs-plugins-ready",
+        "vjs-player-info",
+        "vjs-contextmenu-ui",
+        "vjs-viewability",
+        "vjs-errors",
+        "vjs-playing",
+        "vjs-has-started",
+        "vjs-user-inactive"
+      ],
+      "role": "dialog",
+      "ariaLabel": "Modal Window",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_50",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "vjs-modal-dialog-content"
+      ],
+      "attributes": {
+        "role": "document"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-error-display",
+        "vjs-modal-dialog",
+        "vjs-hidden"
+      ],
+      "role": "document",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Caption_Settings_Dialog",
+      "tag": "div",
+      "text": "Beginning of dialog window. Escape will cancel and close the window.TextColorWhiteBlackRedGreenBlueY",
+      "classes": [
+        "vjs-modal-dialog",
+        "vjs-hidden",
+        "vjs-text-track-settings"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "aria-describedby": "bc-player-feature-banner-4d061201c3_component_554_description",
+        "aria-hidden": "true",
+        "aria-label": "Caption Settings Dialog",
+        "role": "dialog",
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-player",
+        "video-js",
+        "vjs-controls-disabled",
+        "vjs-workinghover",
+        "vjs-v8",
+        "vjs-layout-large",
+        "bc-player-default_default",
+        "bc-player-default_default-index-0",
+        "vjs-mouse",
+        "vjs-plugins-ready",
+        "vjs-player-info",
+        "vjs-contextmenu-ui",
+        "vjs-viewability",
+        "vjs-errors",
+        "vjs-playing",
+        "vjs-has-started",
+        "vjs-user-inactive"
+      ],
+      "role": "dialog",
+      "ariaLabel": "Caption Settings Dialog",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_52",
+      "tag": "div",
+      "text": "TextColorWhiteBlackRedGreenBlueYellowMagentaCyanOpacityOpaqueSemi-TransparentText BackgroundColorBla",
+      "classes": [
+        "vjs-modal-dialog-content"
+      ],
+      "attributes": {
+        "role": "document"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-modal-dialog",
+        "vjs-hidden",
+        "vjs-text-track-settings"
+      ],
+      "role": "document",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Player_Information_Dialog",
+      "tag": "div",
+      "text": "Close Modal DialogThis is a modal window. This modal can be closed by pressing the Escape key or act",
+      "classes": [
+        "vjs-player-info-modal",
+        "vjs-modal-dialog",
+        "vjs-hidden"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "aria-describedby": "bc-player-feature-banner-4d061201c3_component_2537_description",
+        "aria-hidden": "true",
+        "aria-label": "Player Information Dialog",
+        "role": "dialog",
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-player",
+        "video-js",
+        "vjs-controls-disabled",
+        "vjs-workinghover",
+        "vjs-v8",
+        "vjs-layout-large",
+        "bc-player-default_default",
+        "bc-player-default_default-index-0",
+        "vjs-mouse",
+        "vjs-plugins-ready",
+        "vjs-player-info",
+        "vjs-contextmenu-ui",
+        "vjs-viewability",
+        "vjs-errors",
+        "vjs-playing",
+        "vjs-has-started",
+        "vjs-user-inactive"
+      ],
+      "role": "dialog",
+      "ariaLabel": "Player Information Dialog",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Video_Player_54",
+      "tag": "video-js",
+      "text": "Video Player is loading.Play VideoPauseSkip backward 5 secondsSkip forward 5 secondsUnmuteCurrent Ti",
+      "classes": [
+        "cmp-feature-banner__video-player",
+        "video-js",
+        "vjs-controls-disabled",
+        "vjs-workinghover",
+        "vjs-v8",
+        "vjs-layout-large",
+        "bc-player-default_default",
+        "bc-player-default_default-index-1",
+        "vjs-mouse",
+        "vjs-plugins-ready",
+        "vjs-player-info",
+        "vjs-contextmenu-ui",
+        "vjs-viewability",
+        "vjs-errors",
+        "vjs-playing",
+        "vjs-has-started",
+        "vjs-user-inactive"
+      ],
+      "attributes": {
+        "data-video-id": "6365778310112",
+        "data-account": "6415685851001",
+        "data-player": "default",
+        "data-loop-start": "0",
+        "data-loop-end": "10",
+        "data-embed": "default",
+        "muted": "true",
+        "playsinline": "true",
+        "tabindex": "-1",
+        "role": "region",
+        "lang": "en-in",
+        "translate": "no",
+        "aria-label": "Video Player"
+      },
+      "testId": null,
+      "id": "bc-player-feature-banner-83e29934de",
+      "parentClasses": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "role": "region",
+      "ariaLabel": "Video Player",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 3559,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "Video_Player_55",
+      "tag": "video-js",
+      "text": "Video Player is loading.Play VideoPauseSkip backward 5 secondsSkip forward 5 secondsUnmuteCurrent Ti",
+      "classes": [
+        "cmp-feature-banner__video-player",
+        "video-js",
+        "vjs-controls-disabled",
+        "vjs-workinghover",
+        "vjs-v8",
+        "vjs-layout-large",
+        "bc-player-default_default",
+        "bc-player-default_default-index-2",
+        "vjs-mouse",
+        "vjs-plugins-ready",
+        "vjs-player-info",
+        "vjs-contextmenu-ui",
+        "vjs-viewability",
+        "vjs-errors",
+        "vjs-playing",
+        "vjs-has-started",
+        "vjs-user-inactive"
+      ],
+      "attributes": {
+        "data-video-id": "6365778310112",
+        "data-account": "6415685851001",
+        "data-player": "default",
+        "data-loop-start": "0",
+        "data-loop-end": "15",
+        "data-embed": "default",
+        "muted": "true",
+        "playsinline": "true",
+        "tabindex": "-1",
+        "role": "region",
+        "lang": "en-in",
+        "translate": "no",
+        "aria-label": "Video Player"
+      },
+      "testId": null,
+      "id": "bc-player-feature-banner-bfe967bf98",
+      "parentClasses": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "role": "region",
+      "ariaLabel": "Video Player",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 6054,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "span_010",
+      "tag": "span",
+      "text": "0:10",
+      "classes": [
+        "vjs-current-time-display"
+      ],
+      "attributes": {
+        "role": "presentation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-current-time",
+        "vjs-time-control",
+        "vjs-control"
+      ],
+      "role": "presentation",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Progress_Bar_57",
+      "tag": "div",
+      "text": "Loaded: 19.04%0:10",
+      "classes": [
+        "vjs-progress-holder",
+        "vjs-slider",
+        "vjs-slider-horizontal"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "role": "slider",
+        "aria-valuenow": "4.24",
+        "aria-valuemin": "0",
+        "aria-valuemax": "100",
+        "aria-label": "Progress Bar",
+        "aria-valuetext": "0:10 of 4:12"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-progress-control",
+        "vjs-control"
+      ],
+      "role": "slider",
+      "ariaLabel": "Progress Bar",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_402",
+      "tag": "span",
+      "text": "4:02",
+      "classes": [
+        "vjs-remaining-time-display"
+      ],
+      "attributes": {
+        "role": "presentation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-remaining-time",
+        "vjs-time-control",
+        "vjs-control"
+      ],
+      "role": "presentation",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "picture_59",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "vjs-poster"
+      ],
+      "attributes": {
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-poster"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "li_Chapters",
+      "tag": "li",
+      "text": "Chapters",
+      "classes": [
+        "vjs-menu-title"
+      ],
+      "attributes": {
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "vjs-menu-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_61",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 194,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_62",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__media"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 194,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_63",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 194,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_64",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 539,
+        "y": 226,
+        "width": 677,
+        "height": 630
+      }
+    },
+    {
+      "name": "div_65",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 539,
+        "y": 226,
+        "width": 677,
+        "height": 630
+      }
+    },
+    {
+      "name": "div_66",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__headline-block"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 290,
+        "width": 549,
+        "height": 316
+      }
+    },
+    {
+      "name": "div_OptionalEyebrow",
+      "tag": "div",
+      "text": "Optional eyebrow",
+      "classes": [
+        "ga-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 290,
+        "width": 549,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_68",
+      "tag": "div",
+      "text": "Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscin",
+      "classes": [
+        "ga-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 433,
+        "width": 549,
+        "height": 101
+      }
+    },
+    {
+      "name": "div_69",
+      "tag": "div",
+      "text": "Optional CTA\n    \n      \n        \n        \n      \n      \n        \n          \n        \n      \n    \n  ",
+      "classes": [
+        "ga-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 558,
+        "width": 549,
+        "height": 48
+      }
+    },
+    {
+      "name": "i_70",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 724,
+        "y": 573,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Optional_CTA",
+      "tag": "span",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 623,
+        "y": 573,
+        "width": 97,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_72",
+      "tag": "div",
+      "text": "Come grow with us\n                \n                    \n                    \n                \n      ",
+      "classes": [
+        "cmp-feature-banner__component-parsys"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 646,
+        "width": 549,
+        "height": 146
+      }
+    },
+    {
+      "name": "div_73",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 628,
+        "y": 679,
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
+      "name": "div_74",
+      "tag": "div",
+      "text": "Come grow with us\n                \n                    \n                    \n                \n      ",
+      "classes": [
+        "cmp-content-trail__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 732,
+        "y": 680,
+        "width": 395,
+        "height": 77
+      }
+    },
+    {
+      "name": "div_ComeGrowWithUs",
+      "tag": "div",
+      "text": "Come grow with us",
+      "classes": [
+        "cmp-content-trail__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 732,
+        "y": 680,
+        "width": 395,
+        "height": 22
+      }
+    },
+    {
+      "name": "svg_76",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__eyebrow-icon"
+      ],
+      "attributes": {
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width": "18",
+        "height": "12",
+        "viewBox": "0 0 18 12",
+        "fill": "none"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "p_77",
+      "tag": "p",
+      "text": "We’re looking for passionate, success-focused individuals to collaborate with",
+      "classes": [
+        "cmp-content-trail__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 732,
+        "y": 707,
+        "width": 395,
+        "height": 50
+      }
+    },
+    {
+      "name": "dialog_78",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_79",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_80",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-video-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_81",
+      "tag": "div",
+      "text": "Video Player is loading.Play VideoPauseSkip backward 5 secondsSkip forward 5 secondsUnmuteCurrent Ti",
+      "classes": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 999,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_82",
+      "tag": "div",
+      "text": "Video Player is loading.Play VideoPauseSkip backward 5 secondsSkip forward 5 secondsUnmuteCurrent Ti",
+      "classes": [
+        "cmp-feature-banner__media"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 999,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_83",
+      "tag": "div",
+      "text": "Video Player is loading.Play VideoPauseSkip backward 5 secondsSkip forward 5 secondsUnmuteCurrent Ti",
+      "classes": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "attributes": {
+        "data-brightcove-account-id": "6415685851001",
+        "data-brightcove-player-id": "default",
+        "data-brightcove-video-id": "6365778310112"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 999,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "span_84",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-icon",
+        "cmp-feature-banner__video-icon--play"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-control",
+        "cmp-feature-banner__video-control--play",
+        "hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_85",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-icon",
+        "cmp-feature-banner__video-icon--pause"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-control",
+        "cmp-feature-banner__video-control--pause"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1619,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_86",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__mobile-image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_87",
+      "tag": "div",
+      "text": "$100M\n\n    \n\n    \n      in transactions since 2014, as of Oct 1, 2020",
+      "classes": [
+        "cmp-feature-banner__component-parsys"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 1451,
+        "width": 549,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_88",
+      "tag": "div",
+      "text": "$100M\n\n    \n\n    \n      in transactions since 2014, as of Oct 1, 2020",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 1451,
+        "width": 549,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_100M",
+      "tag": "div",
+      "text": "$100M",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 627,
+        "y": 1483,
+        "width": 207,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_90",
+      "tag": "div",
+      "text": "in transactions since 2014, as of Oct 1, 2020",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 850,
+        "y": 1490,
+        "width": 278,
+        "height": 50
+      }
+    }
+  ],
+  "pageTitle": "Feature Banner",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -10,8 +10,7 @@ export class FeatureBannerPage {
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
     await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('domcontentloaded');
-    await this.page.waitForSelector('.feature-banner', { timeout: 15000 });
+    await this.page.waitForLoadState('networkidle');
   }
 
   /** Locator for a_Optional_CTA */
@@ -204,9 +203,9 @@ export class FeatureBannerPage {
     return resolveLocator(this.page, registry.entries.span_Current_Time);
   }
 
-  /** Locator for span_002 */
-  get span_002(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_002);
+  /** Locator for span_000 */
+  get span_000(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_000);
   }
 
   /** Locator for span_Duration */
@@ -229,9 +228,9 @@ export class FeatureBannerPage {
     return resolveLocator(this.page, registry.entries.span_Remaining_Time);
   }
 
-  /** Locator for span_410 */
-  get span_410(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_410);
+  /** Locator for span_412_44 */
+  get span_412_44(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_412_44);
   }
 
   /** Locator for liDescriptionsOffSelected */
@@ -289,9 +288,9 @@ export class FeatureBannerPage {
     return resolveLocator(this.page, registry.entries.Video_Player_55);
   }
 
-  /** Locator for span_012 */
-  get span_012(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_012);
+  /** Locator for span_010 */
+  get span_010(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_010);
   }
 
   /** Locator for Progress_Bar_57 */
@@ -299,9 +298,9 @@ export class FeatureBannerPage {
     return resolveLocator(this.page, registry.entries.Progress_Bar_57);
   }
 
-  /** Locator for span_400 */
-  get span_400(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_400);
+  /** Locator for span_402 */
+  get span_402(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_402);
   }
 
   /** Locator for picture_59 */

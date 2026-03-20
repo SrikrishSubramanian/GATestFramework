@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AccordionTabsFeature — Test Case Summary</title>
+  <title>Accordion Tabs Feature — Test Case Summary</title>
   <style>
     :root {
       --azul: #003DA5;
@@ -133,16 +133,17 @@
 <body>
 
   <div class="header">
-    <h1>AccordionTabsFeature — Test Summary</h1>
+    <h1>Accordion Tabs Feature — Test Summary</h1>
     
     <div class="meta-bar">
       <div class="meta-item"><strong>Spec Files</strong>accordion-tabs-feature.author.spec.ts</div>
+      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span></div>
     </div>
   </div>
 
   <div class="stats">
     <div class="stat-box"><div class="num">48</div><div class="label">Total Tests</div></div>
-    <div class="stat-box"><div class="num">11</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">10</div><div class="label">Sections</div></div>
     <div class="stat-box"><div class="num">1</div><div class="label">Spec Files</div></div>
     <div class="stat-box"><div class="num">6</div><div class="label">Tag Types</div></div>
   </div>
@@ -151,8 +152,8 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>AccordionTabsFeature — Happy Path</h2>
-        <span class="section-count">2</span>
+        <h2>AccordionTabsFeature — Accordion Variant (Desktop)</h2>
+        <span class="section-count">10</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -169,157 +170,72 @@
           <tbody>
             <tr>
               <td class="test-id">ATF-001</td>
-              <td>AccordionTabsFeature renders correctly</td>
+              <td>Style guide page loads with all 3 component instances</td>
               
-              <td>AccordionTabsFeature renders correctly</td>
+              <td>Style guide page loads with all 3 component instances</td>
               <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
               <td class="test-id">ATF-002</td>
-              <td>AccordionTabsFeature interactive elements are functional</td>
+              <td>Accordion instance renders left/right two-column layout</td>
               
-              <td>AccordionTabsFeature interactive elements are functional</td>
+              <td>Accordion instance renders left/right two-column layout</td>
               <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>AccordionTabsFeature — Negative &amp; Boundary</h2>
-        <span class="section-count">2</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
             <tr>
               <td class="test-id">ATF-003</td>
-              <td>AccordionTabsFeature handles empty content gracefully</td>
+              <td>Tab list uses semantic ordered list with role=&quot;tablist&quot;</td>
               
-              <td>AccordionTabsFeature handles empty content gracefully</td>
-              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>Tab list uses semantic ordered list with role=&quot;tablist&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
               <td class="test-id">ATF-004</td>
-              <td>AccordionTabsFeature handles missing images</td>
+              <td>Accordion instance has 3 tabs with correct titles</td>
               
-              <td>AccordionTabsFeature handles missing images</td>
-              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>Accordion instance has 3 tabs with correct titles</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>AccordionTabsFeature — Responsive</h2>
-        <span class="section-count">2</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              <th style="width:100px">Viewport</th>
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
             <tr>
               <td class="test-id">ATF-005</td>
-              <td>AccordionTabsFeature adapts to mobile viewport</td>
-              <td class="viewport">Mobile</td>
-              <td>AccordionTabsFeature adapts to mobile viewport</td>
-              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+              <td>Tabs have role=&quot;tab&quot; attribute</td>
+              
+              <td>Tabs have role=&quot;tab&quot; attribute</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
               <td class="test-id">ATF-006</td>
-              <td>AccordionTabsFeature adapts to tablet viewport</td>
-              <td class="viewport">Mobile</td>
-              <td>AccordionTabsFeature adapts to tablet viewport</td>
-              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>AccordionTabsFeature — Console &amp; Resources</h2>
-        <span class="section-count">1</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
+              <td>Tabs are clickable without JS errors</td>
               
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">ATF-007</td>
-              <td>AccordionTabsFeature produces no JS errors</td>
-              
-              <td>AccordionTabsFeature produces no JS errors</td>
+              <td>Tabs are clickable without JS errors</td>
               <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>AccordionTabsFeature — Broken Images</h2>
-        <span class="section-count">2</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
             <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
+              <td class="test-id">ATF-007</td>
+              <td>Tab panels contain title, description, and CTA</td>
               
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
+              <td>Tab panels contain title, description, and CTA</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
-          </thead>
-          <tbody>
             <tr>
               <td class="test-id">ATF-008</td>
-              <td>AccordionTabsFeature all images load successfully</td>
+              <td>CTA links have valid href</td>
               
-              <td>AccordionTabsFeature all images load successfully</td>
+              <td>CTA links have valid href</td>
               <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
               <td class="test-id">ATF-009</td>
-              <td>AccordionTabsFeature all images have alt attributes</td>
+              <td>JS initialization flag is set on all instances</td>
               
-              <td>AccordionTabsFeature all images have alt attributes</td>
+              <td>JS initialization flag is set on all instances</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-010</td>
+              <td>Each tab has unique ID and data-cmp-hook attribute</td>
+              
+              <td>Each tab has unique ID and data-cmp-hook attribute</td>
               <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
@@ -329,7 +245,7 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>AccordionTabsFeature — Accessibility</h2>
+        <h2>AccordionTabsFeature — Accordion with Headline (Desktop)</h2>
         <span class="section-count">3</span>
         <span class="chevron">&#9660;</span>
       </div>
@@ -346,25 +262,454 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">ATF-010</td>
-              <td>AccordionTabsFeature passes axe-core scan</td>
-              
-              <td>AccordionTabsFeature passes axe-core scan</td>
-              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
-            </tr>
-            <tr>
               <td class="test-id">ATF-011</td>
-              <td>AccordionTabsFeature interactive elements meet 24px target size</td>
+              <td>Headline variant has headline block in DOM</td>
               
-              <td>AccordionTabsFeature interactive elements meet 24px target size</td>
-              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+              <td>Headline variant has headline block in DOM</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
               <td class="test-id">ATF-012</td>
-              <td>AccordionTabsFeature focus is not obscured by sticky elements</td>
+              <td>Headline variant has 3 tabs with correct titles</td>
               
-              <td>AccordionTabsFeature focus is not obscured by sticky elements</td>
-              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+              <td>Headline variant has 3 tabs with correct titles</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-013</td>
+              <td>Headline variant panels match tab content</td>
+              
+              <td>Headline variant panels match tab content</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>AccordionTabsFeature — Scrolling Tabs Variant (Desktop)</h2>
+        <span class="section-count">6</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">ATF-014</td>
+              <td>Scrolling tabs instance has 3 tabs (Discover/Evaluate/Execute)</td>
+              
+              <td>Scrolling tabs instance has 3 tabs (Discover/Evaluate/Execute)</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-015</td>
+              <td>Scrolling tabs right column uses sticky positioning</td>
+              
+              <td>Scrolling tabs right column uses sticky positioning</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-016</td>
+              <td>Scrolling tabs right column has top:64px for sticky</td>
+              
+              <td>Scrolling tabs right column has top:64px for sticky</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-017</td>
+              <td>Scrolling tabs left column width is 440px</td>
+              
+              <td>Scrolling tabs left column width is 440px</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-018</td>
+              <td>Scrolling tabs panels all visible on desktop</td>
+              
+              <td>Scrolling tabs panels all visible on desktop</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-019</td>
+              <td>Scrolling tabs panels have content titles</td>
+              
+              <td>Scrolling tabs panels have content titles</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>AccordionTabsFeature — Accordion Variant (Mobile)</h2>
+        <span class="section-count">6</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">ATF-020</td>
+              <td>Component renders on mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Component renders on mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-021</td>
+              <td>Mobile hides right column (display:none)</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile hides right column (display:none)</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-022</td>
+              <td>All tabs visible and accessible on mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>All tabs visible and accessible on mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-023</td>
+              <td>Tab click does not cause errors on mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>Tab click does not cause errors on mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-024</td>
+              <td>Mobile has no horizontal overflow</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile has no horizontal overflow</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-025</td>
+              <td>Mobile font size for panel titles</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile font size for panel titles</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>AccordionTabsFeature — Scrolling Tabs Variant (Mobile)</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">ATF-026</td>
+              <td>Scrolling tabs renders on mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>Scrolling tabs renders on mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-027</td>
+              <td>Scrolling tabs right column hidden on mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>Scrolling tabs right column hidden on mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-028</td>
+              <td>Scrolling tabs mobile has no horizontal overflow</td>
+              <td class="viewport">Mobile</td>
+              <td>Scrolling tabs mobile has no horizontal overflow</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-029</td>
+              <td>Scrolling tabs tabs clickable on mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>Scrolling tabs tabs clickable on mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>AccordionTabsFeature — BEM Structure</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">ATF-030</td>
+              <td>Root uses .cmp-accordion-tabs-feature class</td>
+              
+              <td>Root uses .cmp-accordion-tabs-feature class</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-031</td>
+              <td>Wrapper follows BEM __wrapper pattern</td>
+              
+              <td>Wrapper follows BEM __wrapper pattern</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-032</td>
+              <td>Child elements follow BEM naming (tab, tabpanel, tablist)</td>
+              
+              <td>Child elements follow BEM naming (tab, tabpanel, tablist)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-033</td>
+              <td>Tab panel child uses .cmp-accordion-tab BEM block</td>
+              
+              <td>Tab panel child uses .cmp-accordion-tab BEM block</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>AccordionTabsFeature — Accessibility</h2>
+        <span class="section-count">7</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">ATF-034</td>
+              <td>Tab list has role=&quot;tablist&quot;</td>
+              
+              <td>Tab list has role=&quot;tablist&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-035</td>
+              <td>Tabs have role=&quot;tab&quot;</td>
+              
+              <td>Tabs have role=&quot;tab&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-036</td>
+              <td>Tab panels have role=&quot;tabpanel&quot;</td>
+              
+              <td>Tab panels have role=&quot;tabpanel&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-037</td>
+              <td>Tab panels have tabindex for keyboard access</td>
+              
+              <td>Tab panels have tabindex for keyboard access</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-038</td>
+              <td>Keyboard navigation moves focus between tabs</td>
+              
+              <td>Keyboard navigation moves focus between tabs</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-039</td>
+              <td>axe-core WCAG 2.2 scan (first instance)</td>
+              
+              <td>axe-core WCAG 2.2 scan (first instance)</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-040</td>
+              <td>Focus indicator visible on tab elements</td>
+              
+              <td>Focus indicator visible on tab elements</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>AccordionTabsFeature — Console &amp; Resources</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">ATF-041</td>
+              <td>No unexpected JS errors on load and interaction</td>
+              
+              <td>No unexpected JS errors on load and interaction</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-042</td>
+              <td>No HTL comments in published HTML</td>
+              
+              <td>No HTL comments in published HTML</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-043</td>
+              <td>All images load successfully</td>
+              
+              <td>All images load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-044</td>
+              <td>All images have alt attributes</td>
+              
+              <td>All images have alt attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>AccordionTabsFeature — Tablet Viewport</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">ATF-045</td>
+              <td>Component renders on tablet (1024px)</td>
+              <td class="viewport">Tablet</td>
+              <td>Component renders on tablet (1024px)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-046</td>
+              <td>Tablet tab interaction is error-free</td>
+              <td class="viewport">Tablet</td>
+              <td>Tablet tab interaction is error-free</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>AccordionTabsFeature — AEM Dialog Configuration</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">ATF-047</td>
+              <td>Dialog has helpPath configured</td>
+              
+              <td>Dialog has helpPath configured</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">ATF-048</td>
+              <td>helpPath points to correct component details page</td>
+              
+              <td>helpPath points to correct component details page</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
         </table>

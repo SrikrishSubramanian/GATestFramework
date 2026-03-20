@@ -1,6 +1,6 @@
 {
   "component": "form-options",
-  "generatedAt": "2026-03-16T07:01:38.554Z",
+  "generatedAt": "2026-03-18T11:46:57.567Z",
   "source": "dom",
   "entries": {
     "Option_ARadioButton": {
@@ -45,121 +45,6 @@
         }
       ]
     },
-    "input_2": {
-      "name": "input_2",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field.cmp-form-options__field--checkbox",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//input[contains(@class,'cmp-form-options__field')]",
-          "confidence": 0.6
-        }
-      ]
-    },
-    "select_ChooseAnOption": {
-      "name": "select_ChooseAnOption",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "form-options-1728599660",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field.cmp-form-options__field--drop-down.choices__input",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//select[contains(@class,'cmp-form-options__field')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose an option...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "formOptions_818373936": {
-      "name": "formOptions_818373936",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "form-options-818373936",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".multiSelect.cmp-form-options__field.cmp-form-options__field--multi-drop-down",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//select[contains(@class,'multiSelect')]",
-          "confidence": 0.6
-        }
-      ]
-    },
-    "select_ChooseARegion": {
-      "name": "select_ChooseARegion",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "form-options-1913832180",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field.cmp-form-options__field--drop-down.choices__input",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//select[contains(@class,'cmp-form-options__field')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose a region...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "select_NotAvailable": {
-      "name": "select_NotAvailable",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "form-options-1057915192",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field.cmp-form-options__field--drop-down.choices__input",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//select[contains(@class,'cmp-form-options__field')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Not available",
-          "confidence": 0.4
-        }
-      ]
-    },
     "informationIconTooltip_Choos": {
       "name": "informationIconTooltip_Choos",
       "component": "form-options",
@@ -181,8 +66,8 @@
         }
       ]
     },
-    "informationIconTooltip_Choos_8": {
-      "name": "informationIconTooltip_Choos_8",
+    "informationIconTooltip_Choos_3": {
+      "name": "informationIconTooltip_Choos_3",
       "component": "form-options",
       "strategies": [
         {
@@ -199,478 +84,6 @@
           "type": "xpath",
           "value": "//img[contains(@class,'info-dark-icon')]",
           "confidence": 0.6
-        }
-      ]
-    },
-    "div_9": {
-      "name": "div_9",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "listbox",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices')]",
-          "confidence": 0.6
-        }
-      ]
-    },
-    "div_10": {
-      "name": "div_10",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "listbox",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        }
-      ]
-    },
-    "div_ChooseAnOption": {
-      "name": "div_ChooseAnOption",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1728599660-item-choice-1",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.is-selected.choices__placeholder.choices__item--disabled",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "option",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose an option...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_0": {
-      "name": "div_0",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__group",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "group",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__group')]",
-          "confidence": 0.6
-        }
-      ]
-    },
-    "div_Option_A": {
-      "name": "div_Option_A",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1728599660-item-choice-2",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.choices__item--selectable.is-highlighted",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "treeitem",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Option A",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_Option_B": {
-      "name": "div_Option_B",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1728599660-item-choice-3",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.choices__item--selectable",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "treeitem",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Option B",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_Option_C": {
-      "name": "div_Option_C",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1728599660-item-choice-4",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.choices__item--selectable",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "treeitem",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Option C",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_Option_DDisabled": {
-      "name": "div_Option_DDisabled",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1728599660-item-choice-5",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.choices__item--selectable",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "treeitem",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Option D (disabled)",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_17": {
-      "name": "div_17",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "listbox",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices')]",
-          "confidence": 0.6
-        }
-      ]
-    },
-    "div_18": {
-      "name": "div_18",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "listbox",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose a region...\\0North AmericaEuropeAsia Pacific",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_ChooseARegion": {
-      "name": "div_ChooseARegion",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1913832180-item-choice-1",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.is-selected.choices__placeholder.choices__item--disabled",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "option",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose a region...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_North_America": {
-      "name": "div_North_America",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1913832180-item-choice-2",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.choices__item--selectable.is-highlighted",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "treeitem",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "North America",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_Europe": {
-      "name": "div_Europe",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1913832180-item-choice-3",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.choices__item--selectable",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "treeitem",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Europe",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_Asia_Pacific": {
-      "name": "div_Asia_Pacific",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1913832180-item-choice-4",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.choices__item--selectable",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "treeitem",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Asia Pacific",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_23": {
-      "name": "div_23",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "listbox",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Not availableNot availableNot available\\0Option AOption B",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_NotAvailable0Option_AOption_B": {
-      "name": "div_NotAvailable0Option_AOption_B",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "listbox",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Not available\\0Option AOption B",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_NotAvailable": {
-      "name": "div_NotAvailable",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "id",
-          "value": "choices--form-options-1057915192-item-choice-1",
-          "confidence": 0.95
-        },
-        {
-          "type": "css",
-          "value": ".choices__item.choices__item--choice.is-selected.choices__placeholder.choices__item--disabled",
-          "confidence": 0.8
-        },
-        {
-          "type": "role",
-          "value": "option",
-          "confidence": 0.7
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Not available",
-          "confidence": 0.4
         }
       ]
     },
@@ -695,8 +108,8 @@
         }
       ]
     },
-    "div_27": {
-      "name": "div_27",
+    "div_5": {
+      "name": "div_5",
       "component": "form-options",
       "strategies": [
         {
@@ -711,8 +124,8 @@
         }
       ]
     },
-    "span_28": {
-      "name": "span_28",
+    "span_6": {
+      "name": "span_6",
       "component": "form-options",
       "strategies": [
         {
@@ -727,8 +140,8 @@
         }
       ]
     },
-    "legend_29": {
-      "name": "legend_29",
+    "legend_7": {
+      "name": "legend_7",
       "component": "form-options",
       "strategies": [
         {
@@ -764,8 +177,8 @@
         }
       ]
     },
-    "span_31": {
-      "name": "span_31",
+    "span_9": {
+      "name": "span_9",
       "component": "form-options",
       "strategies": [
         {
@@ -780,8 +193,8 @@
         }
       ]
     },
-    "div_Option_A_32": {
-      "name": "div_Option_A_32",
+    "div_Option_A": {
+      "name": "div_Option_A",
       "component": "form-options",
       "strategies": [
         {
@@ -822,8 +235,8 @@
         }
       ]
     },
-    "div_Option_B_34": {
-      "name": "div_Option_B_34",
+    "div_Option_B": {
+      "name": "div_Option_B",
       "component": "form-options",
       "strategies": [
         {
@@ -906,8 +319,8 @@
         }
       ]
     },
-    "div_Option_DDisabled_38": {
-      "name": "div_Option_DDisabled_38",
+    "div_Option_DDisabled": {
+      "name": "div_Option_DDisabled",
       "component": "form-options",
       "strategies": [
         {
@@ -948,8 +361,8 @@
         }
       ]
     },
-    "span_40": {
-      "name": "span_40",
+    "span_18": {
+      "name": "span_18",
       "component": "form-options",
       "strategies": [
         {
@@ -985,8 +398,8 @@
         }
       ]
     },
-    "div_North_America_42": {
-      "name": "div_North_America_42",
+    "div_North_America": {
+      "name": "div_North_America",
       "component": "form-options",
       "strategies": [
         {
@@ -1027,8 +440,8 @@
         }
       ]
     },
-    "div_Europe_44": {
-      "name": "div_Europe_44",
+    "div_Europe": {
+      "name": "div_Europe",
       "component": "form-options",
       "strategies": [
         {
@@ -1069,8 +482,8 @@
         }
       ]
     },
-    "div_Asia_Pacific_46": {
-      "name": "div_Asia_Pacific_46",
+    "div_Asia_Pacific": {
+      "name": "div_Asia_Pacific",
       "component": "form-options",
       "strategies": [
         {
@@ -1153,8 +566,8 @@
         }
       ]
     },
-    "span_50": {
-      "name": "span_50",
+    "span_28": {
+      "name": "span_28",
       "component": "form-options",
       "strategies": [
         {
@@ -1190,8 +603,8 @@
         }
       ]
     },
-    "span_52": {
-      "name": "span_52",
+    "span_30": {
+      "name": "span_30",
       "component": "form-options",
       "strategies": [
         {
@@ -1374,8 +787,8 @@
         }
       ]
     },
-    "span_61": {
-      "name": "span_61",
+    "span_39": {
+      "name": "span_39",
       "component": "form-options",
       "strategies": [
         {
@@ -1512,458 +925,6 @@
         {
           "type": "text",
           "value": "Phone calls",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "SelectAPlan": {
-      "name": "SelectAPlan",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Select a plan",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_ChooseAnOptionChooseAnOpti": {
-      "name": "div_ChooseAnOptionChooseAnOpti",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__inner",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__inner')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose an option...Choose an option...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_ChooseAnOption_70": {
-      "name": "div_ChooseAnOption_70",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list.choices__list--single",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose an option...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_ChooseAnOption_71": {
-      "name": "div_ChooseAnOption_71",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__item.choices__placeholder.choices__item--selectable",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose an option...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_72": {
-      "name": "div_72",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list.choices__list--dropdown",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        }
-      ]
-    },
-    "div_0_73": {
-      "name": "div_0_73",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__heading",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__heading')]",
-          "confidence": 0.6
-        }
-      ]
-    },
-    "SelectYourInterests": {
-      "name": "SelectYourInterests",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Select your interests",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "label_Retirement_Planning": {
-      "name": "label_Retirement_Planning",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field-label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__field-label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Retirement Planning",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "label_Life_Insurance": {
-      "name": "label_Life_Insurance",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field-label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__field-label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Life Insurance",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "label_Annuities": {
-      "name": "label_Annuities",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field-label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__field-label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Annuities",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "label_Wealth_Management": {
-      "name": "label_Wealth_Management",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field-label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__field-label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Wealth Management",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "label_Tax_Planning": {
-      "name": "label_Tax_Planning",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__field-label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__field-label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Tax Planning",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "SelectARegion": {
-      "name": "SelectARegion",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Select a region",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_ChooseARegionChooseARegion": {
-      "name": "div_ChooseARegionChooseARegion",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__inner",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__inner')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose a region...Choose a region...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_ChooseARegion_82": {
-      "name": "div_ChooseARegion_82",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list.choices__list--single",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose a region...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_ChooseARegion_83": {
-      "name": "div_ChooseARegion_83",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__item.choices__placeholder.choices__item--selectable",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose a region...",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_84": {
-      "name": "div_84",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list.choices__list--dropdown",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Choose a region...\\0North AmericaEuropeAsia Pacific",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "DisabledDropdown": {
-      "name": "DisabledDropdown",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".cmp-form-options__label",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//label[contains(@class,'cmp-form-options__label')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Disabled dropdown",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_NotAvailableNotAvailable": {
-      "name": "div_NotAvailableNotAvailable",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__inner",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__inner')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Not availableNot available",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_NotAvailable_87": {
-      "name": "div_NotAvailable_87",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list.choices__list--single",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Not available",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_NotAvailable_88": {
-      "name": "div_NotAvailable_88",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__item.choices__placeholder.choices__item--selectable",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__item')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Not available",
-          "confidence": 0.4
-        }
-      ]
-    },
-    "div_NotAvailable0Option_AOption_B_89": {
-      "name": "div_NotAvailable0Option_AOption_B_89",
-      "component": "form-options",
-      "strategies": [
-        {
-          "type": "css",
-          "value": ".choices__list.choices__list--dropdown",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "value": "//div[contains(@class,'choices__list')]",
-          "confidence": 0.6
-        },
-        {
-          "type": "text",
-          "value": "Not available\\0Option AOption B",
           "confidence": 0.4
         }
       ]

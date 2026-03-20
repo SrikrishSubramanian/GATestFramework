@@ -10,38 +10,7 @@ export class ButtonPage {
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
     await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('domcontentloaded');
-    await this.page.waitForSelector('.cmp-button:not(.basepage__skip-nav)', { timeout: 15000 });
-  }
-
-  /** Locator for a_Primary_CTA */
-  get a_Primary_CTA(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_Primary_CTA);
-  }
-
-  /** Locator for a_Secondary_CTA */
-  get a_Secondary_CTA(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_Secondary_CTA);
-  }
-
-  /** Locator for a_Primary_Disabled */
-  get a_Primary_Disabled(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_Primary_Disabled);
-  }
-
-  /** Locator for a_Secondary_Disabled */
-  get a_Secondary_Disabled(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_Secondary_Disabled);
-  }
-
-  /** Locator for a_Primary_Dark_Override */
-  get a_Primary_Dark_Override(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_Primary_Dark_Override);
-  }
-
-  /** Locator for a_Secondary_Dark_Override */
-  get a_Secondary_Dark_Override(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_Secondary_Dark_Override);
+    await this.page.waitForLoadState('networkidle');
   }
 
   /** Locator for a_Button */
@@ -59,39 +28,29 @@ export class ButtonPage {
     return resolveLocator(this.page, registry.entries.a_Button_Icon_Text);
   }
 
-  /** Locator for span_Primary_CTA */
-  get span_Primary_CTA(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_Primary_CTA);
+  /** Locator for PlayVideo */
+  get PlayVideo(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.PlayVideo);
   }
 
-  /** Locator for span_Secondary_CTA */
-  get span_Secondary_CTA(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_Secondary_CTA);
+  /** Locator for CloseVideo */
+  get CloseVideo(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.CloseVideo);
   }
 
-  /** Locator for span_Primary_Disabled */
-  get span_Primary_Disabled(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_Primary_Disabled);
+  /** Locator for img_Close */
+  get img_Close(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.img_Close);
   }
 
-  /** Locator for span_Secondary_Disabled */
-  get span_Secondary_Disabled(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_Secondary_Disabled);
+  /** Locator for img_Close_6 */
+  get img_Close_6(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.img_Close_6);
   }
 
-  /** Locator for span_Primary_Dark_Override */
-  get span_Primary_Dark_Override(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_Primary_Dark_Override);
-  }
-
-  /** Locator for span_Secondary_Dark_Override */
-  get span_Secondary_Dark_Override(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_Secondary_Dark_Override);
-  }
-
-  /** Locator for i_15 */
-  get i_15(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.i_15);
+  /** Locator for i_7 */
+  get i_7(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.i_7);
   }
 
   /** Locator for span_Button */
@@ -109,43 +68,37 @@ export class ButtonPage {
     return resolveLocator(this.page, registry.entries.span_Button_Icon_Text);
   }
 
+  /** Locator for i_11 */
+  get i_11(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.i_11);
+  }
+
+  /** Locator for span_Watch_Video */
+  get span_Watch_Video(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_Watch_Video);
+  }
+
+  /** Locator for dialog_13 */
+  get dialog_13(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.dialog_13);
+  }
+
+  /** Locator for div_14 */
+  get div_14(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_14);
+  }
+
+  /** Locator for div_15 */
+  get div_15(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_15);
+  }
+
+  /** Locator for bcPlayerButtonCb72533200 */
+  get bcPlayerButtonCb72533200(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.bcPlayerButtonCb72533200);
+  }
+
   // --- Actions ---
-
-  /** Click a_Primary_CTA */
-  async clickAPrimaryCta() {
-    const el = await this.a_Primary_CTA;
-    await el.click();
-  }
-
-  /** Click a_Secondary_CTA */
-  async clickASecondaryCta() {
-    const el = await this.a_Secondary_CTA;
-    await el.click();
-  }
-
-  /** Click a_Primary_Disabled */
-  async clickAPrimaryDisabled() {
-    const el = await this.a_Primary_Disabled;
-    await el.click();
-  }
-
-  /** Click a_Secondary_Disabled */
-  async clickASecondaryDisabled() {
-    const el = await this.a_Secondary_Disabled;
-    await el.click();
-  }
-
-  /** Click a_Primary_Dark_Override */
-  async clickAPrimaryDarkOverride() {
-    const el = await this.a_Primary_Dark_Override;
-    await el.click();
-  }
-
-  /** Click a_Secondary_Dark_Override */
-  async clickASecondaryDarkOverride() {
-    const el = await this.a_Secondary_Dark_Override;
-    await el.click();
-  }
 
   /** Click a_Button */
   async clickAButton() {
@@ -165,9 +118,45 @@ export class ButtonPage {
     await el.click();
   }
 
-  /** Click span_Primary_CTA */
-  async clickSpanPrimaryCta() {
-    const el = await this.span_Primary_CTA;
+  /** Click PlayVideo */
+  async clickPlayvideo() {
+    const el = await this.PlayVideo;
+    await el.click();
+  }
+
+  /** Click CloseVideo */
+  async clickClosevideo() {
+    const el = await this.CloseVideo;
+    await el.click();
+  }
+
+  /** Click img_Close */
+  async clickImgClose() {
+    const el = await this.img_Close;
+    await el.click();
+  }
+
+  /** Click img_Close_6 */
+  async clickImgClose6() {
+    const el = await this.img_Close_6;
+    await el.click();
+  }
+
+  /** Click i_7 */
+  async clickI7() {
+    const el = await this.i_7;
+    await el.click();
+  }
+
+  /** Click span_Button */
+  async clickSpanButton() {
+    const el = await this.span_Button;
+    await el.click();
+  }
+
+  /** Click span_LearnMore */
+  async clickSpanLearnmore() {
+    const el = await this.span_LearnMore;
     await el.click();
   }
 }
