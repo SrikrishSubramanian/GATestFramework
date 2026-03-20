@@ -12,126 +12,143 @@ test.beforeEach(async ({ page }) => {
 /*
  * Feature Banner State Matrix
  *
- * Dimensions: variant × background × viewport
- *   Variants: default, fifty-fifty
- *   Backgrounds: white (light), slate (light), granite (dark), azul (dark)
- *   Viewports: desktop-1440, mobile-390
+ * Background variants are applied directly on the .feature-banner wrapper
+ * as style-system classes (not on parent sections):
+ *   - default (no bg class) = white background
+ *   - cmp-feature-banner-slate = slate background
+ *   - cmp-feature-banner-granite = granite background
  *
- * Valid theme pairings:
- *   light-theme  → dark backgrounds (granite, azul)
- *   dark-theme   → light backgrounds (white, slate)
- *   auto-theme   → all backgrounds
+ * Layout variants:
+ *   - default = page-width, image-left
+ *   - cmp-feature-banner-image-right = image on right
+ *   - cmp-feature-banner-grid-width = narrower grid width
  *
- * Invalid theme pairings (contrast issues):
- *   light-theme  → light backgrounds (white, slate)
- *   dark-theme   → dark backgrounds (granite, azul)
- *
- * Each test scopes to the correct background section on the style guide
- * page and verifies the feature-banner component is visible within it.
- * Without confirmed variant wrapper classes, valid tests verify any
- * .feature-banner inside each section (one test per background).
- *
- * Selectors (from DOM probe):
- *   Section:   .cmp-section--background-color-{bg}
- *   Component: .feature-banner
- *
- * 16 tests (reduced from 72 with viewport triplication and broken locators).
+ * 8 instances on the style guide page:
+ *   1. default (white, image-left, page-width)
+ *   2. default (white, video, page-width)
+ *   3. slate (image-left, page-width)
+ *   4. granite + image-right (page-width)
+ *   5. image-right (video, page-width)
+ *   6. image-right (image, page-width)
+ *   7. grid-width (image-left)
+ *   8. slate + image-right + grid-width (video)
  */
 
-const BACKGROUNDS = ['white', 'slate', 'granite', 'azul'] as const;
+const COMPONENT = '.feature-banner';
+const CMP_ROOT = '.cmp-feature-banner';
 
-/** Section selector for a given background */
-function sectionSel(bg: string) {
-  return `.cmp-section--background-color-${bg}`;
-}
-
-/** Enabled feature-banner inside a background section */
-function componentInSection(
-  page: import('@playwright/test').Page,
-  bg: string,
-) {
-  return page
-    .locator(sectionSel(bg))
-    .first()
-    .locator(`.feature-banner:not([aria-disabled="true"])`)
-    .first();
-}
-
-// ── Valid: feature-banner across all backgrounds (FB-025..FB-028) ─────
+// ── Valid: feature-banner across available backgrounds ─────────────────
 
 test.describe('FeatureBanner — State Matrix (Valid)', () => {
 
-  for (let i = 0; i < BACKGROUNDS.length; i++) {
-    const bg = BACKGROUNDS[i];
-    const id = String(25 + i).padStart(3, '0');
+  test('[FB-025] @matrix @regression feature-banner in default (white) background', async ({ page }) => {
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    // Default = no background modifier class
+    const defaultBanner = page.locator(`${COMPONENT}:not(.cmp-feature-banner-slate):not(.cmp-feature-banner-granite)`).first();
+    await expect(defaultBanner).toBeVisible();
+    await expect(defaultBanner.locator(CMP_ROOT)).toBeVisible();
+  });
 
-    test(`[FB-${id}] @matrix @regression feature-banner in ${bg} section`, async ({ page }) => {
-      const pom = new FeatureBannerPage(page);
-      await pom.navigate(BASE());
-      const section = page.locator(sectionSel(bg)).first();
-      await expect(section).toBeVisible();
-      const comp = componentInSection(page, bg);
-      await expect(comp).toBeVisible();
-    });
-  }
+  test('[FB-026] @matrix @regression feature-banner in slate background', async ({ page }) => {
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    const slateBanner = page.locator(`${COMPONENT}.cmp-feature-banner-slate`).first();
+    await expect(slateBanner).toBeVisible();
+    await expect(slateBanner.locator(CMP_ROOT)).toBeVisible();
+  });
+
+  test('[FB-027] @matrix @regression feature-banner in granite background', async ({ page }) => {
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    const graniteBanner = page.locator(`${COMPONENT}.cmp-feature-banner-granite`).first();
+    await expect(graniteBanner).toBeVisible();
+    await expect(graniteBanner.locator(CMP_ROOT)).toBeVisible();
+  });
 });
 
-// ── Responsive: one spot-check per background at mobile (FB-029..FB-032) ─
+// ── Layout Variants ───────────────────────────────────────────────────
+
+test.describe('FeatureBanner — State Matrix (Layout Variants)', () => {
+
+  test('[FB-028] @matrix @regression image-right variant renders', async ({ page }) => {
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    const imageRight = page.locator(`${COMPONENT}.cmp-feature-banner-image-right`).first();
+    await expect(imageRight).toBeVisible();
+    await expect(imageRight.locator(CMP_ROOT)).toBeVisible();
+  });
+
+  test('[FB-029] @matrix @regression grid-width variant renders', async ({ page }) => {
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    const gridWidth = page.locator(`${COMPONENT}.cmp-feature-banner-grid-width`).first();
+    await expect(gridWidth).toBeVisible();
+    await expect(gridWidth.locator(CMP_ROOT)).toBeVisible();
+  });
+
+  test('[FB-030] @matrix @regression combined variant: slate + image-right + grid-width', async ({ page }) => {
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    const combined = page.locator(`${COMPONENT}.cmp-feature-banner-slate.cmp-feature-banner-image-right.cmp-feature-banner-grid-width`).first();
+    await expect(combined).toBeVisible();
+    await expect(combined.locator(CMP_ROOT)).toBeVisible();
+  });
+});
+
+// ── Responsive: mobile viewport ───────────────────────────────────────
 
 test.describe('FeatureBanner — State Matrix (Responsive)', () => {
 
-  for (let i = 0; i < BACKGROUNDS.length; i++) {
-    const bg = BACKGROUNDS[i];
-    const id = String(29 + i).padStart(3, '0');
+  test('[FB-031] @matrix @regression @mobile default banner renders at mobile-390', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    const banner = page.locator(COMPONENT).first();
+    await expect(banner).toBeVisible();
+    const box = await banner.boundingBox();
+    expect(box).toBeTruthy();
+    // Should use full width at mobile
+    if (box) expect(box.width).toBeGreaterThanOrEqual(350);
+  });
 
-    test(`[FB-${id}] @matrix @regression @mobile feature-banner in ${bg} section @ mobile-390`, async ({ page }) => {
-      await page.setViewportSize({ width: 390, height: 844 });
-      const pom = new FeatureBannerPage(page);
-      await pom.navigate(BASE());
-      const section = page.locator(sectionSel(bg)).first();
-      await expect(section).toBeVisible();
-      const comp = componentInSection(page, bg);
-      await expect(comp).toBeVisible();
-    });
-  }
+  test('[FB-032] @matrix @regression @mobile slate banner renders at mobile-390', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    const slateBanner = page.locator(`${COMPONENT}.cmp-feature-banner-slate`).first();
+    await expect(slateBanner).toBeVisible();
+  });
+
+  test('[FB-033] @matrix @regression @mobile granite banner renders at mobile-390', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    const graniteBanner = page.locator(`${COMPONENT}.cmp-feature-banner-granite`).first();
+    await expect(graniteBanner).toBeVisible();
+  });
 });
 
-// ── Invalid Combos: contrast concerns (FB-033..FB-040) ───────────────
+// ── Cross-variant: video + background combos ──────────────────────────
 
-test.describe('FeatureBanner — State Matrix (Invalid Combos)', () => {
-  /*
-   * These variant + theme + background combinations have insufficient contrast:
-   *   - light-theme on light backgrounds (white, slate)
-   *   - dark-theme on dark backgrounds (granite, azul)
-   *
-   * The style system should either not offer these combos or auto-correct
-   * via auto-theme. Tests verify the section still renders (auto-theme
-   * handles contrast) and document the invalid pairing.
-   */
+test.describe('FeatureBanner — State Matrix (Media Types)', () => {
 
-  const INVALID_PAIRS = [
-    { theme: 'light-theme', bg: 'white', reason: 'light-on-light' },
-    { theme: 'light-theme', bg: 'slate', reason: 'light-on-light' },
-    { theme: 'dark-theme', bg: 'granite', reason: 'dark-on-dark' },
-    { theme: 'dark-theme', bg: 'azul', reason: 'dark-on-dark' },
-  ] as const;
+  test('[FB-034] @matrix @regression image-based banner has __image container in DOM', async ({ page }) => {
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    // First instance is image-based (no video); __image div exists but may be
+    // hidden if no DAM asset is configured in the style guide
+    const imageBanner = page.locator(COMPONENT).first();
+    const imageContainer = imageBanner.locator('.cmp-feature-banner__image');
+    await expect(imageContainer).toHaveCount(1);
+  });
 
-  const VARIANT_NAMES = ['default', 'fifty-fifty'] as const;
-
-  let testNum = 33;
-
-  for (const pair of INVALID_PAIRS) {
-    for (const variant of VARIANT_NAMES) {
-      const id = String(testNum++).padStart(3, '0');
-
-      test(`[FB-${id}] @matrix @negative ${variant} + ${pair.theme} on ${pair.bg} (${pair.reason})`, async ({ page }) => {
-        // This combo has insufficient contrast if applied manually.
-        // Auto-theme should be used instead. Verify section still renders.
-        const pom = new FeatureBannerPage(page);
-        await pom.navigate(BASE());
-        const section = page.locator(sectionSel(pair.bg)).first();
-        await expect(section).toBeVisible();
-      });
-    }
-  }
+  test('[FB-035] @matrix @regression video-based banner has __video-wrapper container', async ({ page }) => {
+    const pom = new FeatureBannerPage(page);
+    await pom.navigate(BASE());
+    // Second instance has video
+    const videoBanner = page.locator(`${COMPONENT}:has(.cmp-feature-banner__video-wrapper)`).first();
+    await expect(videoBanner).toBeVisible();
+    await expect(videoBanner.locator('.cmp-feature-banner__video-wrapper')).toBeVisible();
+  });
 });
