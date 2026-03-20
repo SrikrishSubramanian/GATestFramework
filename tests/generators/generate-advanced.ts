@@ -41,9 +41,12 @@ const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components'
 const KKR_AEM_ROOT = process.env.KKR_AEM_ROOT || path.resolve(__dirname, '..', '..', '..', 'kkr-aem');
 
 // Components with known style guide pages
+// imageSelector: optional CSS scope for image health tests (avoids false positives
+//   from video player poster images, third-party widget internals, etc.)
 const AVAILABLE_COMPONENTS = [
   { name: 'button', rootSelector: '.button' },
-  { name: 'feature-banner', rootSelector: '.feature-banner' },
+  { name: 'feature-banner', rootSelector: '.feature-banner',
+    imageSelector: '.cmp-feature-banner__component-parsys' },
   { name: 'statistic', rootSelector: '.cmp-statistic' },
   { name: 'accordion', rootSelector: '.cmp-accordion' },
   { name: 'accordion-tabs-feature', rootSelector: '.cmp-accordion-tabs-feature' },
@@ -157,16 +160,10 @@ test.describe('Phase 5 — Interaction Tests', () => {
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
 import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
-// Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(\`\${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html\`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
+  await loginToAEMAuthor(page);
 });
 
 test.describe('${toPascalCase(comp.name)} — Component Interactions', () => {
@@ -261,23 +258,19 @@ test.describe('Phase 5 — Visual Baselines', () => {
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
 import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
-// Authenticate with AEM Author before each test
+const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
 test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(\`\${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html\`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
+  await loginToAEMAuthor(page);
 });
 
 test.describe('${toPascalCase(comp.name)} — Visual Regression', () => {
   test('@visual @regression Desktop screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new ${className}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator('${comp.rootSelector}').first();
     await expect(el).toHaveScreenshot('${comp.name}-desktop.png', {
       maxDiffPixelRatio: 0.001,
@@ -288,7 +281,7 @@ test.describe('${toPascalCase(comp.name)} — Visual Regression', () => {
   test('@visual @regression @mobile Mobile screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new ${className}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator('${comp.rootSelector}').first();
     await expect(el).toHaveScreenshot('${comp.name}-mobile.png', {
       maxDiffPixelRatio: 0.001,
@@ -299,7 +292,7 @@ test.describe('${toPascalCase(comp.name)} — Visual Regression', () => {
   test('@visual @regression Tablet screenshot matches baseline', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });
     const pom = new ${className}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
+    await pom.navigate(BASE());
     const el = page.locator('${comp.rootSelector}').first();
     await expect(el).toHaveScreenshot('${comp.name}-tablet.png', {
       maxDiffPixelRatio: 0.001,
@@ -337,8 +330,11 @@ test.describe('Phase 6 — Broken Image Specs', () => {
       await page.waitForLoadState('networkidle');
       await page.waitForTimeout(2000);
 
-      const results = await scanImages(page, comp.rootSelector);
-      console.log(`\n[images] ${comp.name}: ${results.total} images, ${results.broken} broken, ${results.missingAlt} missing alt, ${results.oversized} oversized, ${results.missingDimensions} missing dimensions`);
+      // Use component-specific image selector if available to avoid false
+      // positives from video player poster images and third-party widget internals
+      const imgSelector = (comp as any).imageSelector || comp.rootSelector;
+      const results = await scanImages(page, imgSelector);
+      console.log(`\n[images] ${comp.name}: ${results.total} images (selector: ${imgSelector}), ${results.broken} broken, ${results.missingAlt} missing alt, ${results.oversized} oversized, ${results.missingDimensions} missing dimensions`);
 
       // Generate enhanced broken-image spec
       const className = toPascalCase(comp.name) + 'Page';
@@ -346,47 +342,43 @@ test.describe('Phase 6 — Broken Image Specs', () => {
 import { ${className} } from '${pomImportPath(comp.name)}';
 import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
 import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
-// Authenticate with AEM Author before each test
+const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
 test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(\`\${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html\`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
+  await loginToAEMAuthor(page);
 });
 
 test.describe('${toPascalCase(comp.name)} — Image Health', () => {
   test('@regression No broken images', async ({ page }, testInfo) => {
     const pom = new ${className}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const results = await scanImages(page, '${comp.rootSelector}');
+    await pom.navigate(BASE());
+    const results = await scanImages(page, '${imgSelector}');
     await attachImageScanResults(testInfo, results);
     expect(results.broken).toBe(0);
   });
 
   test('@regression All images have alt text', async ({ page }, testInfo) => {
     const pom = new ${className}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const results = await scanImages(page, '${comp.rootSelector}');
+    await pom.navigate(BASE());
+    const results = await scanImages(page, '${imgSelector}');
     await attachImageScanResults(testInfo, results);
     expect(results.missingAlt).toBe(0);
   });
 
   test('@regression No oversized images (>500KB)', async ({ page }, testInfo) => {
     const pom = new ${className}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const results = await scanImages(page, '${comp.rootSelector}');
+    await pom.navigate(BASE());
+    const results = await scanImages(page, '${imgSelector}');
     await attachImageScanResults(testInfo, results);
     expect(results.oversized).toBe(0);
   });
 
   test('@regression All images have explicit dimensions (CLS prevention)', async ({ page }, testInfo) => {
     const pom = new ${className}(page);
-    await pom.navigate(ENV.AEM_AUTHOR_URL || '');
-    const results = await scanImages(page, '${comp.rootSelector}');
+    await pom.navigate(BASE());
+    const results = await scanImages(page, '${imgSelector}');
     await attachImageScanResults(testInfo, results);
     expect(results.missingDimensions).toBe(0);
   });

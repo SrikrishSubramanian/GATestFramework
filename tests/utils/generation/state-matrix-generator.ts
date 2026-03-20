@@ -44,9 +44,14 @@ export function generateStateMatrix(
   component: string,
   variants: string[],
   themes: string[],
-  backgrounds: BackgroundType[] = SECTION_BACKGROUNDS,
+  backgrounds?: BackgroundType[],
   viewports: string[] = DEFAULT_VIEWPORTS
 ): StateMatrix {
+  // Use component-specific backgrounds if defined, otherwise default
+  const known = KNOWN_VARIANTS[component];
+  if (!backgrounds) {
+    backgrounds = known?.availableBackgrounds || SECTION_BACKGROUNDS;
+  }
   const dimensions: StateMatrixDimension[] = [
     { name: 'variant', values: variants, source: 'policy-xml' },
     { name: 'theme', values: themes, source: 'policy-xml' },
@@ -112,6 +117,7 @@ export function generateMatrixSpec(
 ): string {
   const comp = matrix.component;
   const known = KNOWN_VARIANTS[comp];
+  const bgStrategy = known?.backgroundStrategy || 'section';
 
   // Deduplicate: collapse viewport dimension — keep only desktop combos
   const seen = new Set<string>();
@@ -129,15 +135,38 @@ export function generateMatrixSpec(
   // Unique backgrounds for responsive spot-checks
   const backgrounds = Array.from(new Set(matrix.combinations.map(c => c.background)));
 
+  // ── Background selector strategy ─────────────────────────────────
+  // 'section': backgrounds on parent .cmp-section--background-color-{bg}
+  // 'component': backgrounds as classes on the component wrapper itself
+
+  function bgSelectorCode(bg: string): string {
+    if (bgStrategy === 'component') {
+      const bgClass = known?.backgroundClasses?.[bg];
+      const wrapper = known?.wrapperSelector || `.cmp-${comp}`;
+      if (!bgClass) {
+        // Default (white) = wrapper without any bg modifier class
+        const excludes = Object.values(known?.backgroundClasses || {}).filter(c => c).map(c => `:not(${c})`).join('');
+        return `page.locator('${wrapper}${excludes}').first()`;
+      }
+      return `page.locator('${wrapper}${bgClass}').first()`;
+    }
+    return `page.locator(sectionSel('${bg}')).first()`;
+  }
+
   // Determine locator strategy for each variant
-  function variantLocator(variant: string): string {
+  function variantLocator(variant: string, bg: string): string {
+    if (bgStrategy === 'component') {
+      // For component-scoped backgrounds, the component IS the background container
+      const inner = known?.innerSelector || `.cmp-${comp}`;
+      return `container.locator('${inner}').first()`;
+    }
     const wrapperClass = known?.variantClasses?.[variant];
     const disabled = known?.disabledFilter || ':not([aria-disabled="true"])';
     const inner = known?.innerSelector || `.cmp-${comp}`;
     if (wrapperClass) {
-      return `section.locator('${wrapperClass}${disabled} ${inner}').first()`;
+      return `container.locator('${wrapperClass}${disabled} ${inner}').first()`;
     }
-    return `section.locator('${inner}${disabled}').first()`;
+    return `container.locator('${inner}${disabled}').first()`;
   }
 
   // First variant for responsive spot-checks
@@ -145,28 +174,32 @@ export function generateMatrixSpec(
 
   // ── Build valid test code ────────────────────────────────────────
   const validTestCode = validDesktop.map(combo => {
-    const locator = variantLocator(combo.variant);
-    return `    test('[${comp.toUpperCase().replace(/-/g, '_')}-V] @matrix @regression ${combo.variant} + ${combo.theme} in ${combo.background} section', async ({ page }) => {
+    const containerCode = bgSelectorCode(combo.background);
+    const locator = variantLocator(combo.variant, combo.background);
+    const label = bgStrategy === 'component' ? `${combo.background} background` : `${combo.background} section`;
+    return `    test('[${comp.toUpperCase().replace(/-/g, '_')}-V] @matrix @regression ${combo.variant} + ${combo.theme} in ${label}', async ({ page }) => {
       const pom = new ${pomClassName}(page);
       await pom.navigate(BASE());
-      const section = page.locator(sectionSel('${combo.background}')).first();
-      await expect(section).toBeVisible();
-      const btn = ${locator};
-      await expect(btn).toBeVisible();
+      const container = ${containerCode};
+      await expect(container).toBeVisible();
+      const el = ${locator};
+      await expect(el).toBeVisible();
     });`;
   }).join('\n\n');
 
   // ── Build responsive test code ───────────────────────────────────
   const responsiveTestCode = backgrounds.map(bg => {
-    const locator = variantLocator(firstVariant);
-    return `    test('[${comp.toUpperCase().replace(/-/g, '_')}-R] @matrix @regression @mobile buttons in ${bg} section @ mobile-390', async ({ page }) => {
+    const containerCode = bgSelectorCode(bg);
+    const locator = variantLocator(firstVariant, bg);
+    const label = bgStrategy === 'component' ? `${bg} background` : `${bg} section`;
+    return `    test('[${comp.toUpperCase().replace(/-/g, '_')}-R] @matrix @regression @mobile ${comp} in ${label} @ mobile-390', async ({ page }) => {
       await page.setViewportSize({ width: 390, height: 844 });
       const pom = new ${pomClassName}(page);
       await pom.navigate(BASE());
-      const section = page.locator(sectionSel('${bg}')).first();
-      await expect(section).toBeVisible();
-      const btn = ${locator};
-      await expect(btn).toBeVisible();
+      const container = ${containerCode};
+      await expect(container).toBeVisible();
+      const el = ${locator};
+      await expect(el).toBeVisible();
     });`;
   }).join('\n\n');
 
@@ -175,13 +208,14 @@ export function generateMatrixSpec(
     const reason = combo.invalidReason || 'insufficient contrast';
     const dark = isDarkBackground(combo.background as BackgroundType);
     const pairType = dark ? 'dark-on-dark' : 'light-on-light';
+    const containerCode = bgSelectorCode(combo.background);
     return `    test('[${comp.toUpperCase().replace(/-/g, '_')}-N] @matrix @negative ${combo.variant} + ${combo.theme} on ${combo.background} (${pairType})', async ({ page }) => {
       // ${reason}
-      // Auto-theme should be used instead. Verify section still renders.
+      // Auto-theme should be used instead. Verify container still renders.
       const pom = new ${pomClassName}(page);
       await pom.navigate(BASE());
-      const section = page.locator(sectionSel('${combo.background}')).first();
-      await expect(section).toBeVisible();
+      const container = ${containerCode};
+      await expect(container).toBeVisible();
     });`;
   }).join('\n\n');
 
@@ -190,6 +224,18 @@ export function generateMatrixSpec(
   const responsiveCount = backgrounds.length;
   const invalidCount = invalidDesktop.length;
   const totalCount = validCount + responsiveCount + invalidCount;
+
+  // ── Section selector helper (only for section strategy) ──────────
+  const sectionSelHelper = bgStrategy === 'section' ? `
+/** Section CSS class for a given background (from live AEM DOM) */
+function sectionSel(bg: string) {
+  return \`.${SECTION_BG_CLASS_PREFIX}\${bg}\`;
+}
+` : '';
+
+  const strategyComment = bgStrategy === 'component'
+    ? `Background: component-level classes on ${known?.wrapperSelector || `.cmp-${comp}`}`
+    : `Section: .${SECTION_BG_CLASS_PREFIX}{bg}`;
 
   return `import { test, expect } from '../../../utils/infra/persistent-context';
 import { ${pomClassName} } from '${pomImportPath}';
@@ -209,15 +255,10 @@ test.beforeEach(async ({ page }) => {
  * Generated by state-matrix-generator.ts — viewport triplication collapsed.
  *
  * Selectors (from DOM probe):
- *   Section: .${SECTION_BG_CLASS_PREFIX}{bg}
+ *   ${strategyComment}
  *   Disabled overlays excluded via ${known?.disabledFilter || ':not([aria-disabled="true"])'}
  */
-
-/** Section CSS class for a given background (from live AEM DOM) */
-function sectionSel(bg: string) {
-  return \`.${SECTION_BG_CLASS_PREFIX}\${bg}\`;
-}
-
+${sectionSelHelper}
 // ── Valid: variant × theme × background at desktop (${validCount} tests) ──
 
 test.describe('${toPascalCase(comp)} — State Matrix (Valid)', () => {
@@ -246,6 +287,18 @@ ${invalidTestCode}
  * disabledFilter:  CSS selector to exclude disabled editor overlays.
  * innerSelector:   The inner BEM element selector (default: .cmp-{component}).
  */
+/**
+ * Background strategy for matrix tests.
+ *
+ * 'section' (default): backgrounds are on parent section elements
+ *   → selector: `.cmp-section--background-color-{bg}`
+ *
+ * 'component': backgrounds are style-system classes on the component wrapper itself
+ *   → selector uses `backgroundClasses` map, e.g., `.cmp-feature-banner-granite`
+ *   → default (white) is the absence of any bg class
+ */
+export type BackgroundStrategy = 'section' | 'component';
+
 export const KNOWN_VARIANTS: Record<string, {
   variants: string[];
   themes: string[];
@@ -255,6 +308,26 @@ export const KNOWN_VARIANTS: Record<string, {
   disabledFilter?: string;
   /** Inner BEM element selector (default: .cmp-{component}) */
   innerSelector?: string;
+  /**
+   * How backgrounds are applied: 'section' = parent section wrappers (default),
+   * 'component' = style-system classes on the component wrapper itself.
+   */
+  backgroundStrategy?: BackgroundStrategy;
+  /**
+   * For 'component' strategy: maps background name → CSS class on the wrapper.
+   * Use empty string for the default/white background (no class needed).
+   */
+  backgroundClasses?: Record<string, string>;
+  /**
+   * Override which backgrounds are available on the style guide page.
+   * Defaults to SECTION_BACKGROUNDS if not specified.
+   */
+  availableBackgrounds?: BackgroundType[];
+  /**
+   * The outer wrapper selector (e.g., '.feature-banner').
+   * Used by component-scoped background strategy.
+   */
+  wrapperSelector?: string;
 }> = {
   button: {
     variants: ['primary-filled', 'secondary-outline', 'text-only'],
@@ -270,6 +343,14 @@ export const KNOWN_VARIANTS: Record<string, {
   'feature-banner': {
     variants: ['default', 'fifty-fifty'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    backgroundStrategy: 'component',
+    wrapperSelector: '.feature-banner',
+    availableBackgrounds: ['white', 'slate', 'granite'],
+    backgroundClasses: {
+      'white': '',  // default — no bg class
+      'slate': '.cmp-feature-banner-slate',
+      'granite': '.cmp-feature-banner-granite',
+    },
   },
   statistic: {
     variants: ['default'],
@@ -280,16 +361,10 @@ export const KNOWN_VARIANTS: Record<string, {
     themes: ['default'],
   },
   'form-options': {
-    // type dialog values: drop-down, multi-drop-down
-    // wrapper: .cmp-form-options; type classes: .cmp-form-options--drop-down, .cmp-form-options--multi-drop-down
-    // no style system IDs — theme is inherited from parent section background
-    // states: default, hover, focus, filled, disabled, error-default, error-focus, error-filled
     variants: ['drop-down', 'multi-drop-down'],
     themes: ['light-theme', 'dark-theme'],
   },
   'accordion-tabs-feature': {
-    // cq:styleIds behavior variants: behavior-accordion (default), behavior-scroll (scrolling tabs)
-    // no theme system — inherits from parent section background
     variants: ['behavior-accordion', 'behavior-scroll'],
     themes: ['default'],
     variantClasses: {
