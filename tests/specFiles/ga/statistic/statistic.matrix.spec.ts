@@ -12,156 +12,147 @@ test.beforeEach(async ({ page }) => {
 /*
  * Statistic State Matrix
  *
- * Dimensions: variant × background × viewport
- *   Variants: default (only 1)
- *   Backgrounds: white (light), slate (light), granite (dark), azul (dark)
- *   Viewports: desktop-1440, mobile-390
+ * Statistic uses component-level theme classes on the parent wrapper div,
+ * NOT section-level backgrounds:
+ *   - default (no theme class) = white/default
+ *   - cmp-statistic--theme-slate
+ *   - cmp-statistic--theme-granite
+ *   - cmp-statistic--theme-azul
  *
- * Valid theme pairings:
- *   light-theme  → dark backgrounds (granite, azul)
- *   dark-theme   → light backgrounds (white, slate)
- *   auto-theme   → all backgrounds
+ * Other modifiers:
+ *   - cmp-statistic--align-center (text alignment)
+ *   - cmp-statistic--border (left border accent)
  *
- * Invalid theme pairings (contrast issues):
- *   light-theme  → light backgrounds (white, slate)
- *   dark-theme   → dark backgrounds (granite, azul)
- *
- * Each test scopes to the correct background section on the style guide
- * page and verifies the statistic component is visible within it.
- *
- * Selectors (from DOM probe):
- *   Section:   .cmp-section--background-color-{bg}
- *   Component: .cmp-statistic
- *
- * 16 tests (reduced from 36 with viewport triplication and broken locators).
+ * 8 instances on style guide:
+ *   0: default + border
+ *   1: center-aligned
+ *   2: theme-slate
+ *   3: theme-slate
+ *   4: theme-granite
+ *   5: theme-azul
+ *   6: border
+ *   7: center + granite + border
  */
 
-const BACKGROUNDS = ['white', 'slate', 'granite', 'azul'] as const;
+const ROOT = '.cmp-statistic';
+const VALUE = '.cmp-statistic__value';
+const WRAPPER = '.statistic';
 
-/** Section selector for a given background */
-function sectionSel(bg: string) {
-  return `.cmp-section--background-color-${bg}`;
-}
+// ── Theme Variants ───────────────────────────────────────────────────
 
-/** Enabled statistic inside a background section */
-function componentInSection(
-  page: import('@playwright/test').Page,
-  bg: string,
-) {
-  return page
-    .locator(sectionSel(bg))
-    .first()
-    .locator(`.cmp-statistic:not([aria-disabled="true"])`)
-    .first();
-}
+test.describe('Statistic — State Matrix (Theme Variants)', () => {
 
-// ── Valid: light-theme on dark backgrounds (STAT-025..STAT-026) ──────
+  test('[STAT-025] @matrix @regression default theme statistic renders', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    // Default = no theme class on wrapper
+    const defaultStat = page.locator(`${WRAPPER}:not([class*="theme-"])`).first();
+    await expect(defaultStat).toBeVisible();
+    await expect(defaultStat.locator(ROOT)).toBeVisible();
+  });
 
-test.describe('Statistic — State Matrix (Valid)', () => {
+  test('[STAT-026] @matrix @regression slate theme statistic renders', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const slate = page.locator(`${WRAPPER}.cmp-statistic--theme-slate`).first();
+    await expect(slate).toBeVisible();
+    await expect(slate.locator(ROOT)).toBeVisible();
+  });
 
-  const LIGHT_ON_DARK: readonly string[] = ['granite', 'azul'];
+  test('[STAT-027] @matrix @regression granite theme statistic renders', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const granite = page.locator(`${WRAPPER}.cmp-statistic--theme-granite`).first();
+    await expect(granite).toBeVisible();
+    await expect(granite.locator(ROOT)).toBeVisible();
+  });
 
-  for (let i = 0; i < LIGHT_ON_DARK.length; i++) {
-    const bg = LIGHT_ON_DARK[i];
-    const id = String(25 + i).padStart(3, '0');
-
-    test(`[STAT-${id}] @matrix @regression default + light-theme in ${bg} section`, async ({ page }) => {
-      const pom = new StatisticPage(page);
-      await pom.navigate(BASE());
-      const section = page.locator(sectionSel(bg)).first();
-      await expect(section).toBeVisible();
-      const comp = componentInSection(page, bg);
-      await expect(comp).toBeVisible();
-    });
-  }
-
-  // ── Valid: dark-theme on light backgrounds (STAT-027..STAT-028) ─────
-
-  const DARK_ON_LIGHT: readonly string[] = ['white', 'slate'];
-
-  for (let i = 0; i < DARK_ON_LIGHT.length; i++) {
-    const bg = DARK_ON_LIGHT[i];
-    const id = String(27 + i).padStart(3, '0');
-
-    test(`[STAT-${id}] @matrix @regression default + dark-theme in ${bg} section`, async ({ page }) => {
-      const pom = new StatisticPage(page);
-      await pom.navigate(BASE());
-      const section = page.locator(sectionSel(bg)).first();
-      await expect(section).toBeVisible();
-      const comp = componentInSection(page, bg);
-      await expect(comp).toBeVisible();
-    });
-  }
-
-  // ── Valid: auto-theme on all backgrounds (STAT-029..STAT-032) ───────
-
-  for (let i = 0; i < BACKGROUNDS.length; i++) {
-    const bg = BACKGROUNDS[i];
-    const id = String(29 + i).padStart(3, '0');
-
-    test(`[STAT-${id}] @matrix @regression default + auto-theme in ${bg} section`, async ({ page }) => {
-      const pom = new StatisticPage(page);
-      await pom.navigate(BASE());
-      const section = page.locator(sectionSel(bg)).first();
-      await expect(section).toBeVisible();
-      const comp = componentInSection(page, bg);
-      await expect(comp).toBeVisible();
-    });
-  }
+  test('[STAT-028] @matrix @regression azul theme statistic renders', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const azul = page.locator(`${WRAPPER}.cmp-statistic--theme-azul`).first();
+    await expect(azul).toBeVisible();
+    await expect(azul.locator(ROOT)).toBeVisible();
+  });
 });
 
-// ── Responsive: one spot-check per background at mobile (STAT-033..STAT-036) ─
+// ── Modifier Combos ──────────────────────────────────────────────────
+
+test.describe('Statistic — State Matrix (Modifiers)', () => {
+
+  test('[STAT-029] @matrix @regression border modifier renders', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const bordered = page.locator(`${WRAPPER}.cmp-statistic--border`).first();
+    await expect(bordered).toBeVisible();
+    await expect(bordered.locator(ROOT)).toBeVisible();
+  });
+
+  test('[STAT-030] @matrix @regression center-aligned modifier renders', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const centered = page.locator(`${WRAPPER}.cmp-statistic--align-center`).first();
+    await expect(centered).toBeVisible();
+    await expect(centered.locator(ROOT)).toBeVisible();
+  });
+
+  test('[STAT-031] @matrix @regression combined: granite + center + border', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const combined = page.locator(`${WRAPPER}.cmp-statistic--theme-granite.cmp-statistic--align-center.cmp-statistic--border`).first();
+    await expect(combined).toBeVisible();
+    await expect(combined.locator(ROOT)).toBeVisible();
+  });
+});
+
+// ── Responsive ───────────────────────────────────────────────────────
 
 test.describe('Statistic — State Matrix (Responsive)', () => {
 
-  for (let i = 0; i < BACKGROUNDS.length; i++) {
-    const bg = BACKGROUNDS[i];
-    const id = String(33 + i).padStart(3, '0');
+  test('[STAT-032] @matrix @regression @mobile default statistic renders at mobile-390', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const stat = page.locator(ROOT).first();
+    await expect(stat).toBeVisible();
+    const box = await stat.boundingBox();
+    expect(box).toBeTruthy();
+  });
 
-    test(`[STAT-${id}] @matrix @regression @mobile statistic in ${bg} section @ mobile-390`, async ({ page }) => {
-      await page.setViewportSize({ width: 390, height: 844 });
-      const pom = new StatisticPage(page);
-      await pom.navigate(BASE());
-      const section = page.locator(sectionSel(bg)).first();
-      await expect(section).toBeVisible();
-      const comp = componentInSection(page, bg);
-      await expect(comp).toBeVisible();
-    });
-  }
+  test('[STAT-033] @matrix @regression @mobile granite theme renders at mobile-390', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const granite = page.locator(`${WRAPPER}.cmp-statistic--theme-granite`).first();
+    await expect(granite).toBeVisible();
+  });
+
+  test('[STAT-034] @matrix @regression @mobile azul theme renders at mobile-390', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const azul = page.locator(`${WRAPPER}.cmp-statistic--theme-azul`).first();
+    await expect(azul).toBeVisible();
+  });
 });
 
-// ── Invalid Combos: contrast concerns (STAT-037..STAT-040) ───────────
+// ── Theme Value Colors ───────────────────────────────────────────────
 
-test.describe('Statistic — State Matrix (Invalid Combos)', () => {
-  /*
-   * These theme + background combinations have insufficient contrast:
-   *   - light-theme on light backgrounds (white, slate)
-   *   - dark-theme on dark backgrounds (granite, azul)
-   *
-   * The style system should either not offer these combos or auto-correct
-   * via auto-theme. Tests verify the section still renders (auto-theme
-   * handles contrast) and document the invalid pairing.
-   */
+test.describe('Statistic — State Matrix (Theme Colors)', () => {
 
-  const INVALID_PAIRS = [
-    { theme: 'light-theme', bg: 'white', reason: 'light-on-light' },
-    { theme: 'light-theme', bg: 'slate', reason: 'light-on-light' },
-    { theme: 'dark-theme', bg: 'granite', reason: 'dark-on-dark' },
-    { theme: 'dark-theme', bg: 'azul', reason: 'dark-on-dark' },
-  ] as const;
-
-  let testNum = 37;
-
-  for (const pair of INVALID_PAIRS) {
-    const id = String(testNum++).padStart(3, '0');
-
-    test(`[STAT-${id}] @matrix @negative default + ${pair.theme} on ${pair.bg} (${pair.reason})`, async ({ page }) => {
-      // This combo has insufficient contrast if applied manually.
-      // Auto-theme should be used instead. Verify section still renders.
-      const pom = new StatisticPage(page);
-      await pom.navigate(BASE());
-      const section = page.locator(sectionSel(pair.bg)).first();
-      await expect(section).toBeVisible();
-    });
-  }
+  test('[STAT-035] @matrix @regression theme variants produce distinct value colors', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const themes = ['theme-slate', 'theme-granite', 'theme-azul'];
+    const colors: string[] = [];
+    for (const theme of themes) {
+      const el = page.locator(`${WRAPPER}.cmp-statistic--${theme}`).first();
+      if (await el.count() === 0) continue;
+      const color = await el.locator(VALUE).evaluate(el => getComputedStyle(el).color);
+      colors.push(color);
+    }
+    // At least 2 distinct colors among themes
+    const unique = new Set(colors);
+    expect(unique.size).toBeGreaterThanOrEqual(2);
+  });
 });
