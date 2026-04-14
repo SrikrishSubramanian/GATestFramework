@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import path from 'path';
 import fs from 'fs';
 import { checkFixtureSync, formatSyncWarnings } from './fixture-sync-checker';
+import { loginToAEMAuthor } from './auth-fixture';
 
 /** Path where authenticated storage state is saved for reuse across all workers */
 export const AUTH_STORAGE_STATE = path.resolve(__dirname, '..', '..', '..', '.auth-state.json');
@@ -48,26 +49,18 @@ async function globalSetup(config: FullConfig) {
 
     console.log('[globalSetup] Authenticating with AEM author...');
     const browser = await chromium.launch();
-    const context = await browser.newContext();
+    const context = await browser.newContext({ ignoreHTTPSErrors: true });
     const page = await context.newPage();
 
     try {
-        await page.goto(`${authorUrl}/libs/granite/core/content/login.html`, {
-            waitUntil: 'domcontentloaded',
-            timeout: 30000,
+        // Use the shared auth fixture which handles both local AEM SDK
+        // and cloud Adobe IMS SSO (dev/qa/uat/prod) login flows.
+        await loginToAEMAuthor(page, {
+            authorUrl,
+            username,
+            password,
+            timeout: 60000,
         });
-
-        // Check if already on an authenticated page
-        const url = page.url();
-        if (url.includes('/aem/start') || url.includes('/sites.html') || url.includes('/welcome')) {
-            // Already authenticated
-        } else {
-            // Local AEM SDK login
-            await page.locator('#username').fill(username);
-            await page.locator('#password').fill(password);
-            await page.locator('#submit-button').click();
-            await page.waitForURL(/\/(aem\/start|sites\.html|welcome)/, { timeout: 30000 });
-        }
 
         // Save storage state for all workers
         await context.storageState({ path: AUTH_STORAGE_STATE });

@@ -85,19 +85,75 @@ export async function loginToAEMAuthor(page: Page, options?: AuthOptions): Promi
     await loginViaLocalAEM(page, username, password, timeout);
   }
 
-  // Wait for redirect after successful login (generous timeout for MFA)
+  // Wait for redirect after successful login.
+  // For cloud environments, Microsoft may show post-login interstitials
+  // ("Stay signed in?", "Protect your account", MFA registration upsell)
+  // that block the redirect to AEM. Poll and dismiss them.
   const mfaTimeout = isCloudEnv(authorUrl) ? 120000 : timeout;
-  await page.waitForURL(/\/(aem\/start|sites\.html|welcome)/, { timeout: mfaTimeout });
+  const deadline = Date.now() + mfaTimeout;
 
-  // Save auth state immediately after successful login for REUSE_BROWSER
-  if (process.env.REUSE_BROWSER === 'true') {
-    try {
-      const state = await page.context().storageState();
-      fs.writeFileSync(AUTH_STATE_PATH, JSON.stringify(state, null, 2));
-      console.log('Auth state saved to .auth-state.json');
-    } catch {
-      // Non-fatal — test can still proceed
+  while (Date.now() < deadline) {
+    const url = page.url();
+
+    // Success — we've reached AEM
+    if (/\/(aem\/start|sites\.html|welcome)/.test(url)) {
+      break;
     }
+
+    // While on login.microsoftonline.com, MFA is still in progress —
+    // do NOT click anything; let the user complete it in headed mode.
+    if (url.includes('login.microsoftonline.com')) {
+      await page.waitForTimeout(3000);
+      continue;
+    }
+
+    // Post-MFA interstitial handling (mysignins.microsoft.com, etc.)
+    if (url.includes('microsoftonline.com') || url.includes('mysignins.microsoft.com')) {
+      // "Stay signed in?" prompt
+      const staySignedIn = page.locator('#idSIButton9');
+      if (await staySignedIn.isVisible({ timeout: 1000 }).catch(() => false)) {
+        console.log('[auth] Dismissing "Stay signed in?" prompt');
+        await staySignedIn.click();
+        await page.waitForTimeout(2000);
+        continue;
+      }
+
+      // "Protect your account" / AppUpsell — skip or cancel
+      const skipOrCancel = page.locator('a:has-text("Skip for now"), button:has-text("Skip for now"), a:has-text("Skip"), button:has-text("Ask later")');
+      if (await skipOrCancel.first().isVisible({ timeout: 1000 }).catch(() => false)) {
+        console.log('[auth] Dismissing Microsoft interstitial (skip/cancel)');
+        await skipOrCancel.first().click();
+        await page.waitForTimeout(2000);
+        continue;
+      }
+
+      // "Next" button on interstitial pages (may lead to skip on next page)
+      const nextBtn = page.locator('button:has-text("Next"), input[type="submit"][value="Next"]');
+      if (await nextBtn.first().isVisible({ timeout: 1000 }).catch(() => false)) {
+        console.log('[auth] Clicking "Next" on Microsoft interstitial');
+        await nextBtn.first().click();
+        await page.waitForTimeout(2000);
+        continue;
+      }
+    }
+
+    // Not on AEM yet, not a recognized interstitial — wait and retry
+    await page.waitForTimeout(2000);
+  }
+
+  // Final check — if we never reached AEM, throw
+  if (!/\/(aem\/start|sites\.html|welcome)/.test(page.url())) {
+    throw new Error(`Auth flow did not reach AEM. Final URL: ${page.url()}`);
+  }
+
+  // Save auth state after successful login so subsequent runs (and globalSetup)
+  // can reuse the session without repeating MFA.
+  try {
+    const state = await page.context().storageState();
+    fs.writeFileSync(AUTH_STATE_PATH, JSON.stringify(state, null, 2));
+    console.log('[auth] Auth state saved to .auth-state.json');
+  } catch {
+    // Non-fatal — test can still proceed
   }
 }
 
@@ -156,20 +212,26 @@ async function loginViaAdobeIMS(page: Page, email: string, password: string, tim
   const submitButton = page.locator('button:has-text("Continue"), button:has-text("Sign In"), input[type="submit"], #PasswordPage-ContinueButton');
   await submitButton.first().click();
 
-  // Step 6: Handle Microsoft Authenticator MFA prompt.
-  // The page shows a 2-digit number to match on the Authenticator app.
-  // Log the number to console so the tester can see it, then wait for approval.
-  const mfaPrompt = page.locator('#idRichContext_DisplaySign, [id*="DisplaySign"], text=/Enter the number/i');
-  const hasMfa = await mfaPrompt.isVisible({ timeout: 5000 }).catch(() => false);
-  if (hasMfa) {
-    // Extract the 2-digit number shown on screen
+  // Step 6: Handle Microsoft MFA.
+  // Supports both push-notification (number matching) and TOTP (enter code) flows.
+  // In headed mode the tester can interact manually; in headless the TOTP code entry
+  // will time out (run --headed for first login).
+  const mfaNumberPrompt = page.locator('#idRichContext_DisplaySign, [id*="DisplaySign"], text=/Enter the number/i');
+  const mfaCodePrompt = page.locator('input#idTxtBx_SAOTCC_OTC, input[name="otc"], text=/Enter the code/i');
+  const hasPushMfa = await mfaNumberPrompt.isVisible({ timeout: 5000 }).catch(() => false);
+  const hasCodeMfa = !hasPushMfa && await mfaCodePrompt.isVisible({ timeout: 3000 }).catch(() => false);
+
+  if (hasPushMfa) {
     const numberDisplay = page.locator('#idRichContext_DisplaySign, [id*="DisplaySign"]');
     const mfaNumber = await numberDisplay.textContent().catch(() => '??');
     console.log(`\n🔐 Microsoft Authenticator MFA — approve the number: ${mfaNumber?.trim()}\n`);
-
-    // Wait up to 2 minutes for the user to approve on their phone
+    await page.waitForURL((url) => !url.toString().includes('login.microsoftonline.com'), { timeout: 120000 });
+  } else if (hasCodeMfa) {
+    console.log('\n🔐 Microsoft Authenticator MFA — enter the TOTP code in the browser window\n');
     await page.waitForURL((url) => !url.toString().includes('login.microsoftonline.com'), { timeout: 120000 });
   }
+
+  // Post-login interstitials are handled by the polling loop in loginToAEMAuthor.
 }
 
 /**
