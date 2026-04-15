@@ -203,6 +203,15 @@ async function loginViaAdobeIMS(page: Page, email: string, password: string, tim
   const continueButton = page.locator('button:has-text("Continue"), input[type="submit"][value="Continue"], #EmailPage-ContinueButton');
   await continueButton.first().click();
 
+  // Step 3b: Handle "Personal account" vs "Work or school account" disambiguation.
+  // Microsoft shows this when the email is linked to both account types.
+  const workAccountOption = page.locator('#aadTile, #aadTileTitle, div:has-text("Work or school account")').first();
+  if (await workAccountOption.isVisible({ timeout: 3000 }).catch(() => false)) {
+    console.log('[auth] Selecting "Work or school account"');
+    await workAccountOption.click();
+    await page.waitForTimeout(1000);
+  }
+
   // Step 4: Wait for password page and fill password
   const passwordField = page.locator('input[name="password"], input[type="password"], #PasswordPage-PasswordField');
   await passwordField.waitFor({ state: 'visible', timeout });
