@@ -373,6 +373,19 @@ export const KNOWN_VARIANTS: Record<string, {
     },
     innerSelector: '.cmp-accordion-tabs-feature',
   },
+  'content-trail': {
+    variants: ['default-transparent', 'light-mode', 'dark-mode', 'dark-mode-granite'],
+    themes: ['default'],
+    backgroundStrategy: 'section',
+    availableBackgrounds: ['white', 'granite'],
+    variantClasses: {
+      'default-transparent': '.cmp-section--background-transparent',
+      'light-mode': '.cmp-section--background-light-color',
+      'dark-mode': '.cmp-section--background-dark-color',
+      'dark-mode-granite': '.cmp-section--background-dark-no-border',
+    },
+    innerSelector: '.cmp-content-trail',
+  },
 };
 
 function toPascalCase(str: string): string {

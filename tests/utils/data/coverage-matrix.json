@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-18T10:40:14.545Z",
+  "lastUpdated": "2026-04-16T15:49:29.436Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -602,6 +602,90 @@
       },
       "totalTests": 98,
       "lastUpdated": "2026-03-18T10:40:14.544Z"
+    },
+    "content-trail": {
+      "component": "content-trail",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 15,
+          "specFile": "content-trail.author.spec.ts",
+          "tags": []
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 15,
+          "specFile": "content-trail.author.spec.ts",
+          "tags": []
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 15,
+          "specFile": "content-trail.author.spec.ts",
+          "tags": []
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 15,
+          "specFile": "content-trail.author.spec.ts",
+          "tags": []
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 15,
+          "specFile": "content-trail.author.spec.ts",
+          "tags": []
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "content-trail.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 15,
+          "specFile": "content-trail.author.spec.ts",
+          "tags": []
+        },
+        "aem-dialog": {
+          "category": "aem-dialog",
+          "testCount": 15,
+          "specFile": "content-trail.author.spec.ts",
+          "tags": []
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 8,
+          "specFile": "content-trail.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 10,
+          "specFile": "content-trail.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "content-trail.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 10,
+      "lastUpdated": "2026-04-16T15:49:29.436Z"
     }
   }
 }

@@ -61,6 +61,10 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     rootSelector: '.cmp-form-options',
     styleGuideUrl: '/content/global-atlantic/style-guide/components/form-options.html',
   },
+  {
+    name: 'content-trail',
+    rootSelector: '.cmp-content-trail',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');

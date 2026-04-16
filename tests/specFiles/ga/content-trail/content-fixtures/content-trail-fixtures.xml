@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:mixinTypes="[mix:referenceable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Content Trail"
+        jcr:uuid="44547d34-3638-4d21-abd5-83ef4134d67a"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+                <!-- ==================================================================
+                     ORIGINAL STYLE GUIDE CONTENT (8 variations - unchanged)
+                     ================================================================== -->
+
+                <text_one_copy
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1>Content Trail&lt;/h1>&#xd;&#xa;&lt;p>The&amp;nbsp;Content Trail&amp;nbsp;component allows content authors to showcase different types of content —&amp;nbsp;Written,&amp;nbsp;Video, or&amp;nbsp;Link&amp;nbsp;— using a unified display format. Each type is accompanied by an appropriate icon, enabling consistent representation and enhanced content discovery across the site.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_copy
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Default Variation (Transparent Background with Border and Small Size) | Video&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="video"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self"
+                    videoId="6365778310112">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail>
+                <spacer
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_copy
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Light Mode (White Background without Border and Small Size) | Written&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_copy
+                    cq:styleIds="[content-trail-background-light-color,content-trail-small]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="written"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self">
+                    <image
+                        jcr:lastModified="{Date}2026-01-22T13:43:31.545Z"
+                        jcr:lastModifiedBy="shubham.gupta@bounteous.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_copy>
+                <spacer_copy_1441339214
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_copy_852190586
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Dark Mode (Transparent Background with Border and Small Size) | Link&lt;/b>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The text color is white and visible only on dark background&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_copy_249442947
+                    cq:styleIds="[content-trail-background-dark-color]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="link"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_copy_249442947>
+                <spacer_copy_455799571
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_copy_copy
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Dark Mode (Granite Background with Border and Small Size) | Video&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_copy_c
+                    cq:styleIds="[content-trail-background-dark-color-no-border]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="video"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self"
+                    videoId="6365778310112">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_copy_c>
+                <spacer_copy_612706875
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_copy_copy_copy
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Light Mode (White Background without Border and Large Size) | Video&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_copy_c_2003914106
+                    cq:styleIds="[content-trail-large,content-trail-background-light-color]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="video"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self"
+                    videoId="6365778310112">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_copy_c_2003914106>
+                <spacer_copy_86225563
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_copy_copy_copy_1286597595
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Dark Mode (Granite Background with Border and Large Size) | Written&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_copy_c_1509132237
+                    cq:styleIds="[content-trail-background-dark-color-no-border,content-trail-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="written"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self"
+                    videoId="6365778310112">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_copy_c_1509132237>
+                <spacer_copy_86225563_120262291
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_copy_244582544
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Default Variation (Transparent Background with Border and Large Size) | Link&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_copy_1521364670
+                    cq:styleIds="[content-trail-background-transparent,content-trail-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="link"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_copy_1521364670>
+                <spacer_one
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_one
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail With Section Background Granite - Default Variation (Transparent Background with Border and Small Size) | Written&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail
+                            cq:styleIds="[content-trail-small,content-trail-background-transparent]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="test"
+                            contentType="written"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/global-atlantic/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail>
+                    </section-par>
+                </section>
+                <sspacer_two
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ==================================================================
+                     ADDED VARIATIONS - GAAM-328 / GAAM-672
+                     ================================================================== -->
+
+                <!-- [Added] GAAM-328 - GAP 1: Inside Azul Section (Transparent + Border, Small) | Video
+                     LESS rule: .cmp-section-background-color-azul applies white border + transparent bg
+                     to nested content-trail containers. Style ID verified in policies/.content.xml. -->
+                <text_added_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail With Section Background Azul - Default Variation (Transparent Background with Border and Small Size) | Video&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_azul
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail_azul_video
+                            cq:styleIds="[content-trail-small,content-trail-background-transparent]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="test"
+                            contentType="video"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/global-atlantic/style-guide"
+                            linkTarget="_self"
+                            videoId="6365778310112">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail_azul_video>
+                    </section-par>
+                </section_azul>
+                <spacer_added_azul
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-328 — GAP 2: Dark Mode (Transparent + Border, Small) | Video
+                     Style guide only had Link for dark-transparent; Video needed to test dark hover
+                     icon swap (dark video icon differs from light video icon in LESS). -->
+                <text_added_dark_transparent_video_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Dark Mode (Transparent Background with Border and Small Size) | Video&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_dark_transparent_video
+                    cq:styleIds="[content-trail-background-dark-color]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="video"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self"
+                    videoId="6365778310112">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_dark_transparent_video>
+                <spacer_added_dark_transparent_video
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-328 — GAP 3: Dark Mode (Transparent + Border, Small) | Written
+                     Completes the three content-type matrix for dark-transparent mode. LESS has
+                     distinct dark-bg hover icon for written vs video vs link. -->
+                <text_added_dark_transparent_written_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Dark Mode (Transparent Background with Border and Small Size) | Written&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_dark_transparent_written
+                    cq:styleIds="[content-trail-background-dark-color]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="written"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_dark_transparent_written>
+                <spacer_added_dark_transparent_written
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-672 — GAP 4: Link target _blank (external link behavior)
+                     All existing instances use _self. This tests that rel="noopener noreferrer"
+                     is rendered and the external link opens in a new tab. Using Light Mode
+                     (White BG, Small) so background context is neutral. -->
+                <text_added_blank_target_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Light Mode (White Background without Border and Small Size) | Link | Opens in New Tab (_blank)&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_blank_target
+                    cq:styleIds="[content-trail-background-light-color,content-trail-small]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="link"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_blank">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_blank_target>
+                <spacer_added_blank_target
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-672 — GAP 5: Clean Written (no stray videoId) — Dark Granite Large
+                     Variation 6 in the style guide (content_trail_copy_c_1509132237) is contentType="written"
+                     but has videoId="6365778310112" set, which is incorrect authored content.
+                     This adds a clean Written instance without videoId so tests can assert
+                     that the video modal is NOT triggered for written content. -->
+                <text_added_clean_written_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail - Dark Mode (Granite Background without Border and Large Size) | Written | Clean (no videoId)&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <content_trail_clean_written
+                    cq:styleIds="[content-trail-background-dark-color-no-border,content-trail-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/content-trail"
+                    altText="test"
+                    contentType="written"
+                    eyebrow="Come grow with us"
+                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                    linkDestination="/content/global-atlantic/style-guide"
+                    linkTarget="_self">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                </content_trail_clean_written>
+                <spacer_added_clean_written
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-328 - GAP 6: Inside Feature Banner (White BG) context | Link
+                     LESS rules at lines 332-388 apply special overrides when content-trail with
+                     content-trail-background-light-color is nested inside .cmp-feature-banner-white
+                     inside a granite or azul section. This fixture targets the feature-banner-white
+                     context inside a granite section - covering the CSS selector:
+                     .cmp-section-background-color-granite .cmp-feature-banner-white .cmp-section-background-light-color -->
+                <text_added_fb_white_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail Inside Feature Banner (White BG) inside Granite Section | Link&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_granite_fb_white
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <feature_banner_white
+                            cq:styleIds="[feature-banner-white-bg]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/feature-banner"
+                            graphicType="image">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                alt="Feature Banner"
+                                fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                                isDecorative="true"/>
+                            <mobileImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                isDecorative="false"/>
+                            <feature-banner-par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid">
+                                <content_trail_fb_white_link
+                                    cq:styleIds="[content-trail-background-light-color,content-trail-large]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="ga/components/content/content-trail"
+                                    altText="test"
+                                    contentType="link"
+                                    eyebrow="Come grow with us"
+                                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                                    linkDestination="/content/global-atlantic/style-guide"
+                                    linkTarget="_self">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                                </content_trail_fb_white_link>
+                            </feature-banner-par>
+                            <headlineBlock
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/headline-block"
+                                descriptor="&lt;p>Optional additional descriptor if more text is needed.&lt;/p>&#xd;&#xa;"
+                                eyebrow="Optional eyebrow"
+                                textIsRich="[true,true]"
+                                title="Lorem ipsum dolor sit amet consectetur."
+                                type="h2"/>
+                        </feature_banner_white>
+                    </section-par>
+                </section_granite_fb_white>
+                <spacer_added_fb_white
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-328 - GAP 6b: Inside Feature Banner (Slate BG) context | Written
+                     Covers the CSS selector:
+                     .cmp-section-background-color-azul .cmp-feature-banner-slate .cmp-section-background-light-color
+                     Tests that the transparent-border override fires for slate feature-banner
+                     inside an azul section. -->
+                <text_added_fb_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Content Trail Inside Feature Banner (Slate BG) inside Azul Section | Written&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_azul_fb_slate
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <feature_banner_slate
+                            cq:styleIds="[feature-banner-slate-bg]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/feature-banner"
+                            graphicType="image">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                alt="Feature Banner"
+                                fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                                isDecorative="true"/>
+                            <mobileImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                isDecorative="false"/>
+                            <feature-banner-par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid">
+                                <content_trail_fb_slate_written
+                                    cq:styleIds="[content-trail-background-light-color,content-trail-small]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="ga/components/content/content-trail"
+                                    altText="test"
+                                    contentType="written"
+                                    eyebrow="Come grow with us"
+                                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                                    linkDestination="/content/global-atlantic/style-guide"
+                                    linkTarget="_self">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                                </content_trail_fb_slate_written>
+                            </feature-banner-par>
+                            <headlineBlock
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/headline-block"
+                                descriptor="&lt;p>Optional additional descriptor if more text is needed.&lt;/p>&#xd;&#xa;"
+                                eyebrow="Optional eyebrow"
+                                textIsRich="[true,true]"
+                                title="Lorem ipsum dolor sit amet consectetur."
+                                type="h2"/>
+                        </feature_banner_slate>
+                    </section-par>
+                </section_azul_fb_slate>
+                <spacer_added_fb_slate
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

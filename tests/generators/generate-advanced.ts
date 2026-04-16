@@ -57,6 +57,7 @@ const AVAILABLE_COMPONENTS = [
     styleGuideUrl: '/content/global-atlantic/style-guide/components/rate-sheet-grid.html' },
   { name: 'spacer', rootSelector: '.cmp-spacer' },
   { name: 'text', rootSelector: '.cmp-text' },
+  { name: 'content-trail', rootSelector: '.cmp-content-trail' },
 ];
 
 function getTargetComponents() {
