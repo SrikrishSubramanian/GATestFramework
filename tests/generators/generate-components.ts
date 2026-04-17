@@ -98,6 +98,10 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     name: 'image',
     rootSelector: '.cmp-image',
   },
+  {
+    name: 'breadcrumb',
+    rootSelector: '.cmp-breadcrumb',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');

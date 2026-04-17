@@ -65,6 +65,7 @@ const AVAILABLE_COMPONENTS = [
   { name: 'tabs', rootSelector: '.cmp-tabs' },
   { name: 'promo-banner', rootSelector: '.cmp-promo-banner' },
   { name: 'image', rootSelector: '.cmp-image' },
+  { name: 'breadcrumb', rootSelector: '.cmp-breadcrumb' },
 ];
 
 function getTargetComponents() {

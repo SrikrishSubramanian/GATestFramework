@@ -1,0 +1,183 @@
+{
+  "component": "breadcrumb",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/breadcrumb.html?wcmmode=disabled",
+  "scannedAt": "2026-04-17T11:43:00.006Z",
+  "rootSelector": ".cmp-breadcrumb",
+  "elements": [
+    {
+      "name": "a_Style_Guide",
+      "tag": "a",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Style Guide",
+        "data-cmp-clickable": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 30,
+        "y": 157,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "a_Component_Library",
+      "tag": "a",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Component Library",
+        "data-cmp-clickable": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 130,
+        "y": 157,
+        "width": 127,
+        "height": 18
+      }
+    },
+    {
+      "name": "ol_2",
+      "tag": "ol",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb__list"
+      ],
+      "attributes": {
+        "itemscope": "",
+        "itemtype": "http://schema.org/BreadcrumbList"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 30,
+        "y": 157,
+        "width": 1280,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Style_Guide",
+      "tag": "li",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-1b92cc3115-item-3dd3bf6e7a\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Style Guide\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\"}}",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 30,
+        "y": 157,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Component_Library",
+      "tag": "li",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-1b92cc3115-item-2b248a5ea1\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Component Library\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\"}}",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 157,
+        "width": 145,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Breadcrumb",
+      "tag": "li",
+      "text": "Breadcrumb",
+      "classes": [
+        "cmp-breadcrumb__item",
+        "cmp-breadcrumb__item--active"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-1b92cc3115-item-18f4a4ad22\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Breadcrumb\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/breadcrumb.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\"}}",
+        "aria-current": "page",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 265,
+        "y": 157,
+        "width": 99,
+        "height": 18
+      }
+    }
+  ],
+  "pageTitle": "Breadcrumb",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

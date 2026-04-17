@@ -1,0 +1,128 @@
+{
+  "component": "breadcrumb",
+  "generatedAt": "2026-04-17T11:43:00.015Z",
+  "source": "dom",
+  "entries": {
+    "a_Style_Guide": {
+      "name": "a_Style_Guide",
+      "component": "breadcrumb",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Component_Library": {
+      "name": "a_Component_Library",
+      "component": "breadcrumb",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ol_2": {
+      "name": "ol_2",
+      "component": "breadcrumb",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ol[contains(@class,'cmp-breadcrumb__list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_Style_Guide": {
+      "name": "li_Style_Guide",
+      "component": "breadcrumb",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Component_Library": {
+      "name": "li_Component_Library",
+      "component": "breadcrumb",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Breadcrumb": {
+      "name": "li_Breadcrumb",
+      "component": "breadcrumb",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item.cmp-breadcrumb__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Breadcrumb",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}
