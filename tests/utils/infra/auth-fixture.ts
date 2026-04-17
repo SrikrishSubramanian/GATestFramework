@@ -203,18 +203,58 @@ async function loginViaAdobeIMS(page: Page, email: string, password: string, tim
   const continueButton = page.locator('button:has-text("Continue"), input[type="submit"][value="Continue"], #EmailPage-ContinueButton');
   await continueButton.first().click();
 
-  // Step 3b: Handle "Personal account" vs "Work or school account" disambiguation.
-  // Microsoft shows this when the email is linked to both account types.
-  const workAccountOption = page.locator('#aadTile, #aadTileTitle, div:has-text("Work or school account")').first();
-  if (await workAccountOption.isVisible({ timeout: 3000 }).catch(() => false)) {
-    console.log('[auth] Selecting "Work or school account"');
+  // Step 3b: Handle account-type disambiguation.
+  // Adobe IMS shows "Select an account" with "Personal Account" vs "Company or School Account".
+  // Microsoft shows a similar picker with "Work or school account". Target the
+  // clickable tile (button/anchor/role=button) rather than any parent div.
+  const workAccountOption = page.locator('button, a, [role="button"]').filter({
+    hasText: /company or school account|work or school account/i,
+  }).first();
+  try {
+    await workAccountOption.waitFor({ state: 'visible', timeout: 10000 });
+    console.log('[auth] Selecting "Company or School Account"');
     await workAccountOption.click();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(1500);
+  } catch {
+    // No disambiguation page shown — may have skipped straight to password/FIDO.
+    // Try legacy Microsoft tile as a last-ditch fallback.
+    const legacyTile = page.locator('#aadTile, #aadTileTitle').first();
+    if (await legacyTile.isVisible().catch(() => false)) {
+      console.log('[auth] Selecting legacy "Work or school account" tile');
+      await legacyTile.click();
+      await page.waitForTimeout(1500);
+    }
   }
 
-  // Step 4: Wait for password page and fill password
-  const passwordField = page.locator('input[name="password"], input[type="password"], #PasswordPage-PasswordField');
-  await passwordField.waitFor({ state: 'visible', timeout });
+  // Step 3c: Handle FIDO / passkey prompt by switching to password sign-in.
+  // Microsoft may redirect to a passwordless/FIDO page (.../fido/get) before
+  // showing the password field. Try several selectors, then fall back to
+  // waiting for the tester to click it manually in headed mode.
+  if (page.url().includes('/fido/')) {
+    const useOtherMethodButton = page.locator(
+      '#signInAnotherWay, #signInAnotherWayLink, [data-testid*="other"], a:has-text("Use my password"), a:has-text("Use your password"), a:has-text("Sign-in options"), button:has-text("Sign-in options"), a:has-text("Other ways to sign in"), button:has-text("Other ways to sign in"), a:has-text("Use password"), a[href*="challenge/Password"]'
+    ).first();
+    if (await useOtherMethodButton.isVisible({ timeout: 8000 }).catch(() => false)) {
+      console.log('[auth] FIDO prompt detected — switching to password sign-in');
+      await useOtherMethodButton.click();
+      const passwordTile = page.locator(
+        '[data-value="Password"], div[role="button"]:has-text("Password"), button:has-text("Password"), a:has-text("Password")'
+      ).first();
+      if (await passwordTile.isVisible({ timeout: 5000 }).catch(() => false)) {
+        await passwordTile.click();
+      }
+      await page.waitForTimeout(1500);
+    } else {
+      console.log('\n🔐 FIDO / passkey prompt shown. In the browser, click "Sign-in options" → "Password" to continue. Waiting up to 3 minutes…\n');
+    }
+  }
+
+  // Step 4: Wait for password page and fill password (exclude hidden autofill inputs).
+  const passwordField = page.locator(
+    'input[name="password"]:not([aria-hidden="true"]), input[type="password"]:not([aria-hidden="true"]):not([tabindex="-1"]), #PasswordPage-PasswordField, #i0118'
+  );
+  const passwordTimeout = page.url().includes('/fido/') ? 180000 : timeout;
+  await passwordField.waitFor({ state: 'visible', timeout: passwordTimeout });
   await passwordField.fill(password);
 
   // Step 5: Submit password
