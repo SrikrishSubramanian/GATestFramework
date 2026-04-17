@@ -198,10 +198,18 @@ async function loginViaAdobeIMS(page: Page, email: string, password: string, tim
   await emailField.fill('');
   await page.keyboard.type(email, { delay: 50 });
 
-  // Step 3: Wait for the typed value to settle, then click Continue
+  // Step 3: Wait for the typed value to settle, then click Continue.
+  // When SSO is active, the Continue click triggers an immediate redirect and the
+  // button detaches mid-click — Playwright's actionability retry loop would then
+  // spin forever trying to re-click a button that no longer exists. Race the click
+  // against a navigation-away signal so we move on the moment the page transitions.
   await page.waitForTimeout(1000);
   const continueButton = page.locator('button:has-text("Continue"), input[type="submit"][value="Continue"], #EmailPage-ContinueButton');
-  await continueButton.first().click();
+  const emailPageUrl = page.url();
+  await Promise.all([
+    page.waitForURL((u) => u.toString() !== emailPageUrl, { timeout }).catch(() => null),
+    continueButton.first().click({ noWaitAfter: true }).catch(() => null),
+  ]);
 
   // Step 3b: Handle account-type disambiguation.
   // Adobe IMS shows "Select an account" with "Personal Account" vs "Company or School Account".
