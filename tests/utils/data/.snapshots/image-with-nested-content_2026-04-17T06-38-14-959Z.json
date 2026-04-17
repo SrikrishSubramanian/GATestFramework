@@ -1,0 +1,375 @@
+{
+  "component": "image-with-nested-content",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/image-with-nested-content.html?wcmmode=disabled",
+  "scannedAt": "2026-04-17T06:38:14.952Z",
+  "rootSelector": ".cmp-image-with-nested-content",
+  "elements": [
+    {
+      "name": "a_0",
+      "tag": "a",
+      "text": "Come grow with us\n                \n                    \n                    \n                \n      ",
+      "classes": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "attributes": {
+        "target": "_self",
+        "href": "/content/global-atlantic/style-guide/components/content-trail.html",
+        "data-cta": "1",
+        "data-link-location": "content-trail-7b4a684b24",
+        "data-content-type": "link"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 54,
+        "y": 290,
+        "width": 1232,
+        "height": 98
+      }
+    },
+    {
+      "name": "imgImage_1",
+      "tag": "img",
+      "text": "",
+      "classes": [],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 71,
+        "y": 307,
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image-with-nested-content__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image-with-nested-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 30,
+        "y": 412,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 71,
+        "y": 307,
+        "width": 64,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "Come grow with us\n                \n                    \n                    \n                \n      ",
+      "classes": [
+        "cmp-content-trail__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 151,
+        "y": 316,
+        "width": 493,
+        "height": 45
+      }
+    },
+    {
+      "name": "div_ComeGrowWithUs",
+      "tag": "div",
+      "text": "Come grow with us",
+      "classes": [
+        "cmp-content-trail__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 151,
+        "y": 316,
+        "width": 493,
+        "height": 22
+      }
+    },
+    {
+      "name": "svg_7",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__eyebrow-icon"
+      ],
+      "attributes": {
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width": "18",
+        "height": "12",
+        "viewBox": "0 0 18 12",
+        "fill": "none"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "p_8",
+      "tag": "p",
+      "text": "We’re looking for passionate, success-focused individuals to collaborate with",
+      "classes": [
+        "cmp-content-trail__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 151,
+        "y": 343,
+        "width": 493,
+        "height": 18
+      }
+    },
+    {
+      "name": "dialog_9",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-video-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "$100M\n\n    \n\n    \n      in transactions since 2014, as of Oct 1, 2020",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 54,
+        "y": 648,
+        "width": 1232,
+        "height": 130
+      }
+    },
+    {
+      "name": "div_100M",
+      "tag": "div",
+      "text": "$100M",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 79,
+        "y": 681,
+        "width": 207,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "in transactions since 2014, as of Oct 1, 2020",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 302,
+        "y": 700,
+        "width": 709,
+        "height": 25
+      }
+    }
+  ],
+  "pageTitle": "Image With Nested Content",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

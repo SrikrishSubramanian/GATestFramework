@@ -61,6 +61,7 @@ const AVAILABLE_COMPONENTS = [
   { name: 'headline-block', rootSelector: '.ga-headline-block' },
   { name: 'grid-container', rootSelector: '.cmp-grid-container' },
   { name: 'nested-content-carousel', rootSelector: '.cmp-nested-content-carousel' },
+  { name: 'image-with-nested-content', rootSelector: '.cmp-image-with-nested-content' },
 ];
 
 function getTargetComponents() {

@@ -542,5 +542,24 @@
     ],
     "generatedAt": "2026-04-17T06:05:39.986Z",
     "source": "dom"
+  },
+  "image-with-nested-content": {
+    "pomClass": "ImageWithNestedContentPage",
+    "pomPath": "../pages/ga/components/imageWithNestedContentPage.ts",
+    "sidecarPath": "../pages/ga/components/imageWithNestedContentPage.locators.json",
+    "specPath": "../specFiles/ga/image-with-nested-content/image-with-nested-content.author.spec.ts",
+    "elementCount": 14,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-04-17T06:38:14.983Z",
+    "source": "dom"
   }
 }
