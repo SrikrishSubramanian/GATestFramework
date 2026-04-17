@@ -169,11 +169,17 @@ test.describe('GridContainer — Column Layouts', () => {
     expect(pct2).toBeLessThanOrEqual(80);
   });
 
-  test('[GC-012] @regression 2col 3:1 grid has first column ~75% and second ~25%', async ({ page }) => {
+  test('[GC-012] @regression 2col 3:1 CSS grid-template-columns defines 75%/25% split', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new GridContainerPage(page);
     await pom.navigate(BASE());
-    const grid = page.locator(`.ga-grid--2col.ga-grid--ratio-3-1 ${AEM_GRID}`).first();
-    if (await grid.count() === 0) { test.skip(); return; }
+    // If ratio-3-1 exists natively, use it; otherwise inject class on a 2col grid
+    let grid = page.locator(`.ga-grid--2col.ga-grid--ratio-3-1 ${AEM_GRID}`).first();
+    if (await grid.count() === 0) {
+      const wrapper = page.locator('.ga-grid--2col').first();
+      await wrapper.evaluate(el => el.classList.add('ga-grid--ratio-3-1'));
+      grid = wrapper.locator(AEM_GRID);
+    }
     const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length).toBe(2);
@@ -181,8 +187,10 @@ test.describe('GridContainer — Column Layouts', () => {
     const col2 = parseFloat(parts[1]);
     const total = col1 + col2;
     const pct1 = (col1 / total) * 100;
-    expect(pct1, `First column should be ~75%, got ${pct1.toFixed(1)}%`).toBeGreaterThanOrEqual(70);
+    expect(pct1, `3:1 first column should be ~75%, got ${pct1.toFixed(1)}%`).toBeGreaterThanOrEqual(70);
     expect(pct1).toBeLessThanOrEqual(80);
+    // Clean up
+    await page.locator('.ga-grid--ratio-3-1').first().evaluate(el => el.classList.remove('ga-grid--ratio-3-1'));
   });
 
   test('[GC-013] @regression 2col 2:3 grid has first column ~40% and second ~60%', async ({ page }) => {
@@ -201,11 +209,16 @@ test.describe('GridContainer — Column Layouts', () => {
     expect(pct1).toBeLessThanOrEqual(45);
   });
 
-  test('[GC-014] @regression 2col 3:2 grid has first column ~60% and second ~40%', async ({ page }) => {
+  test('[GC-014] @regression 2col 3:2 CSS grid-template-columns defines 60%/40% split', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new GridContainerPage(page);
     await pom.navigate(BASE());
-    const grid = page.locator(`.ga-grid--2col.ga-grid--ratio-3-2 ${AEM_GRID}`).first();
-    if (await grid.count() === 0) { test.skip(); return; }
+    let grid = page.locator(`.ga-grid--2col.ga-grid--ratio-3-2 ${AEM_GRID}`).first();
+    if (await grid.count() === 0) {
+      const wrapper = page.locator('.ga-grid--2col').first();
+      await wrapper.evaluate(el => el.classList.add('ga-grid--ratio-3-2'));
+      grid = wrapper.locator(AEM_GRID);
+    }
     const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length).toBe(2);
@@ -215,6 +228,11 @@ test.describe('GridContainer — Column Layouts', () => {
     const pct1 = (col1 / total) * 100;
     expect(pct1, `3:2 first column should be ~60%, got ${pct1.toFixed(1)}%`).toBeGreaterThanOrEqual(55);
     expect(pct1).toBeLessThanOrEqual(65);
+    // Clean up
+    const ratioEl = page.locator('.ga-grid--ratio-3-2').first();
+    if (await ratioEl.count() > 0) {
+      await ratioEl.evaluate(el => el.classList.remove('ga-grid--ratio-3-2'));
+    }
   });
 
   test('[GC-015] @regression 3col grid has three equal column tracks (~33% each)', async ({ page }) => {
