@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T05:20:35.214Z",
+  "lastUpdated": "2026-04-17T06:06:13.697Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -804,6 +804,30 @@
       },
       "totalTests": 4,
       "lastUpdated": "2026-04-17T03:21:42.698Z"
+    },
+    "nested-content-carousel": {
+      "component": "nested-content-carousel",
+      "categories": {
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "nested-content-carousel.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "nested-content-carousel.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 4,
+      "lastUpdated": "2026-04-17T06:06:13.696Z"
     }
   }
 }

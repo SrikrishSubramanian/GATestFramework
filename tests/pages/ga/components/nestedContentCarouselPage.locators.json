@@ -1,0 +1,319 @@
+{
+  "component": "nested-content-carousel",
+  "generatedAt": "2026-04-17T06:05:39.969Z",
+  "source": "dom",
+  "entries": {
+    "a_LearnMore": {
+      "name": "a_LearnMore",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".nested-carousel-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'nested-carousel-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "PauseCarousel": {
+      "name": "PauseCarousel",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__toggle",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Pause carousel']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-nested-content-carousel__toggle')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "swiperWrapper_851ccdb1b2fe7312": {
+      "name": "swiperWrapper_851ccdb1b2fe7312",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "swiper-wrapper-851ccdb1b2fe7312",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel-cards.swiper-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-nested-content-carousel-cards')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el1_2": {
+      "name": "el1_2",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel-card.swiper-slide.swiper-slide-visible.swiper-slide-active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "group[name='1 / 2']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-nested-content-carousel-card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el2_2": {
+      "name": "el2_2",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel-card.swiper-slide.swiper-slide-next",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "group[name='2 / 2']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-nested-content-carousel-card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__swiper.swiper.swiper-fade.swiper-initialized.swiper-horizontal.swiper-watch-progress.swiper-backface-hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__swiper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_7": {
+      "name": "div_7",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_LearnMore": {
+      "name": "div_LearnMore",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".button.cmp-nested-content-carousel__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_10": {
+      "name": "span_10",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".nested-carousel-button__icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'nested-carousel-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_LearnMore": {
+      "name": "span_LearnMore",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".nested-carousel-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'nested-carousel-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__controls",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__controls')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__counter",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__counter')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_01": {
+      "name": "span_01",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__current",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-nested-content-carousel__current')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_02": {
+      "name": "span_02",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__total",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-nested-content-carousel__total')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Slide_1Of_2": {
+      "name": "span_Slide_1Of_2",
+      "component": "nested-content-carousel",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".sr-only.cmp-nested-content-carousel__sr-counter",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'sr-only')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Slide 1 of 2",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

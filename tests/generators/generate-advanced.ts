@@ -60,6 +60,7 @@ const AVAILABLE_COMPONENTS = [
   { name: 'content-trail', rootSelector: '.cmp-content-trail' },
   { name: 'headline-block', rootSelector: '.ga-headline-block' },
   { name: 'grid-container', rootSelector: '.cmp-grid-container' },
+  { name: 'nested-content-carousel', rootSelector: '.cmp-nested-content-carousel' },
 ];
 
 function getTargetComponents() {

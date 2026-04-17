@@ -77,6 +77,11 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     name: 'navigation',
     rootSelector: '.cmp-navigation',
   },
+  {
+    name: 'nested-content-carousel',
+    rootSelector: '.cmp-nested-content-carousel',
+    styleGuideUrl: '/content/global-atlantic/style-guide/components/hero-fifty-fifty.html',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
