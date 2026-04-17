@@ -397,6 +397,18 @@ export const KNOWN_VARIANTS: Record<string, {
     },
     innerSelector: '.ga-headline-block',
   },
+  'grid-container': {
+    variants: ['2col', '3col', '4col'],
+    themes: ['default'],
+    backgroundStrategy: 'section',
+    availableBackgrounds: ['white', 'slate', 'granite'],
+    variantClasses: {
+      '2col': '.ga-grid--2col',
+      '3col': '.ga-grid--3col',
+      '4col': '.ga-grid--4col',
+    },
+    innerSelector: '.cmp-grid-container',
+  },
 };
 
 function toPascalCase(str: string): string {

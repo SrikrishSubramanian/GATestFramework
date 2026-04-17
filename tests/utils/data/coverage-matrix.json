@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T02:57:53.287Z",
+  "lastUpdated": "2026-04-17T03:21:42.698Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -745,6 +745,48 @@
       },
       "totalTests": 4,
       "lastUpdated": "2026-04-17T02:57:53.287Z"
+    },
+    "grid-container": {
+      "component": "grid-container",
+      "categories": {
+        "interaction": {
+          "category": "interaction",
+          "testCount": 7,
+          "specFile": "grid-container.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 12,
+          "specFile": "grid-container.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "grid-container.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "grid-container.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 4,
+      "lastUpdated": "2026-04-17T03:21:42.698Z"
     }
   }
 }
