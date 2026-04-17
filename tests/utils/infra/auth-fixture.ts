@@ -249,12 +249,27 @@ async function loginViaAdobeIMS(page: Page, email: string, password: string, tim
     }
   }
 
-  // Step 4: Wait for password page and fill password (exclude hidden autofill inputs).
+  // Step 4: Race the password field against an already-authenticated redirect.
+  // If Adobe IMS / Microsoft has a valid SSO session, the page lands on AEM
+  // directly after email submission — no password prompt is shown. In that
+  // case, skip the password + submit steps.
   const passwordField = page.locator(
     'input[name="password"]:not([aria-hidden="true"]), input[type="password"]:not([aria-hidden="true"]):not([tabindex="-1"]), #PasswordPage-PasswordField, #i0118'
   );
   const passwordTimeout = page.url().includes('/fido/') ? 180000 : timeout;
-  await passwordField.waitFor({ state: 'visible', timeout: passwordTimeout });
+  const ssoAlreadyAuthenticated = page.waitForURL(
+    (url) => /\/(aem\/start|sites\.html|welcome|projects\.html)/.test(url.toString()),
+    { timeout: passwordTimeout }
+  ).then(() => 'sso').catch(() => null);
+  const passwordPrompt = passwordField.waitFor({ state: 'visible', timeout: passwordTimeout })
+    .then(() => 'password').catch(() => null);
+
+  const winner = await Promise.race([ssoAlreadyAuthenticated, passwordPrompt]);
+  if (winner === 'sso') {
+    console.log('[auth] SSO session active — skipped password prompt');
+    return;
+  }
+
   await passwordField.fill(password);
 
   // Step 5: Submit password
