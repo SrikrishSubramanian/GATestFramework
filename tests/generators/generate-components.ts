@@ -86,6 +86,10 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     name: 'image-with-nested-content',
     rootSelector: '.cmp-image-with-nested-content',
   },
+  {
+    name: 'tabs',
+    rootSelector: '.cmp-tabs',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');

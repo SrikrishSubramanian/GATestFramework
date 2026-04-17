@@ -1,0 +1,893 @@
+{
+  "component": "tabs",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/tabs.html?wcmmode=disabled",
+  "scannedAt": "2026-04-17T09:07:03.136Z",
+  "rootSelector": ".cmp-tabs",
+  "elements": [
+    {
+      "name": "h2_0",
+      "tag": "h2",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet consequat adipscing.",
+      "classes": [
+        "ga-headline-block__title",
+        "headline-h2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 95,
+        "y": 679,
+        "width": 1150,
+        "height": 101
+      }
+    },
+    {
+      "name": "h2_Test_3",
+      "tag": "h2",
+      "text": "Test 3",
+      "classes": [
+        "ga-headline-block__title",
+        "headline-h2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h2_Test_4",
+      "tag": "h2",
+      "text": "Test 4",
+      "classes": [
+        "ga-headline-block__title",
+        "headline-h2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h2_Test_5",
+      "tag": "h2",
+      "text": "Test 5",
+      "classes": [
+        "ga-headline-block__title",
+        "headline-h2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h2_Test_6",
+      "tag": "h2",
+      "text": "Test 6",
+      "classes": [
+        "ga-headline-block__title",
+        "headline-h2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ol_5",
+      "tag": "ol",
+      "text": "Defer your taxes\n            \n                \n                Grow your money\n            \n        ",
+      "classes": [
+        "cmp-tabs__tablist"
+      ],
+      "attributes": {
+        "role": "tablist",
+        "aria-multiselectable": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 93,
+        "y": 498,
+        "width": 1154,
+        "height": 54
+      }
+    },
+    {
+      "name": "li_DeferYourTaxes",
+      "tag": "li",
+      "text": "Defer your taxes",
+      "classes": [
+        "cmp-tabs__tab",
+        "cmp-tabs__tab--active"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "true"
+      },
+      "testId": null,
+      "id": "headline-block-2308fada47-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 97,
+        "y": 502,
+        "width": 147,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_GrowYourMoney",
+      "tag": "li",
+      "text": "Grow your money",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "headline-block-0f17881bfa-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 260,
+        "y": 502,
+        "width": 150,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_ProvideIncomeOpportunities",
+      "tag": "li",
+      "text": "Provide income opportunities",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "headline-block-e4a7e0874b-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 426,
+        "y": 502,
+        "width": 225,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_PrepareForYourLongtermCare",
+      "tag": "li",
+      "text": "Prepare for your long-term care needs",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "headline-block-21426baa55-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 668,
+        "y": 502,
+        "width": 231,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_LeaveYourLegacy",
+      "tag": "li",
+      "text": "Leave your legacy",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "headline-block-b70d6e0cc4-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 915,
+        "y": 502,
+        "width": 154,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_LoremIpsumDolor",
+      "tag": "li",
+      "text": "Lorem ipsum dolor",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "headline-block-35351ea611-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1085,
+        "y": 502,
+        "width": 158,
+        "height": 46
+      }
+    },
+    {
+      "name": "headlineBlock_2308fada47",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolo",
+      "classes": [
+        "cmp-tabs__tabpanel",
+        "cmp-tabs__tabpanel--active"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "aria-expanded": "false",
+        "data-title": "Defer your taxes",
+        "data-cmp-data-layer": "{\"headline-block-2308fada47\":{\"@type\":\"ga/components/content/headline-block\",\"dc:title\":\"Defer your taxes\"}}"
+      },
+      "testId": null,
+      "id": "headline-block-2308fada47",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 93,
+        "y": 600,
+        "width": 1154,
+        "height": 314
+      }
+    },
+    {
+      "name": "headlineBlock_0f17881bfa",
+      "tag": "div",
+      "text": "HB2\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet co",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "aria-expanded": "false",
+        "data-title": "Grow your money",
+        "data-cmp-data-layer": "{\"headline-block-0f17881bfa\":{\"@type\":\"ga/components/content/headline-block\",\"dc:title\":\"Grow your money\"}}",
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": "headline-block-0f17881bfa",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "headlineBlockE4a7e0874b",
+      "tag": "div",
+      "text": "Test 3\n    \n\n    \n        Test 3\n    \n\n    \n      Test 3",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "aria-expanded": "false",
+        "data-title": "Provide income opportunities",
+        "data-cmp-data-layer": "{\"headline-block-e4a7e0874b\":{\"@type\":\"ga/components/content/headline-block\",\"dc:title\":\"Provide income opportunities\"}}",
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": "headline-block-e4a7e0874b",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "headlineBlock_21426baa55",
+      "tag": "div",
+      "text": "Test 4\n    \n\n    \n        Test 4\n    \n\n    \n      Test 4",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "aria-expanded": "false",
+        "data-title": "Prepare for your long-term care needs",
+        "data-cmp-data-layer": "{\"headline-block-21426baa55\":{\"@type\":\"ga/components/content/headline-block\",\"dc:title\":\"Prepare for your long-term care needs\"}}",
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": "headline-block-21426baa55",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "headlineBlockB70d6e0cc4",
+      "tag": "div",
+      "text": "Test 5\n    \n\n    \n        Test 5\n    \n\n    \n      Test 5",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "aria-expanded": "false",
+        "data-title": "Leave your legacy",
+        "data-cmp-data-layer": "{\"headline-block-b70d6e0cc4\":{\"@type\":\"ga/components/content/headline-block\",\"dc:title\":\"Leave your legacy\"}}",
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": "headline-block-b70d6e0cc4",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "headlineBlock_35351ea611",
+      "tag": "div",
+      "text": "Test 6\n    \n\n    \n        Test 6\n    \n\n    \n      Test 6",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "aria-expanded": "false",
+        "data-title": "Lorem ipsum dolor",
+        "data-cmp-data-layer": "{\"headline-block-35351ea611\":{\"@type\":\"ga/components/content/headline-block\",\"dc:title\":\"Lorem ipsum dolor\"}}",
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": "headline-block-35351ea611",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-tabs__background-image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "Defer your taxes\n            \n                \n                Grow your money\n            \n        ",
+      "classes": [
+        "cmp-tabs__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 93,
+        "y": 498,
+        "width": 1154,
+        "height": 416
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "Defer your taxes\n            \n                \n                Grow your money\n            \n        ",
+      "classes": [
+        "cmp-tabs__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 93,
+        "y": 498,
+        "width": 1154,
+        "height": 54
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolo",
+      "classes": [
+        "cmp-tabs__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 93,
+        "y": 552,
+        "width": 1154,
+        "height": 362
+      }
+    },
+    {
+      "name": "div_OptionalEyebrow",
+      "tag": "div",
+      "text": "Optional eyebrow",
+      "classes": [
+        "ga-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 95,
+        "y": 648,
+        "width": 1150,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscin",
+      "classes": [
+        "ga-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 95,
+        "y": 792,
+        "width": 1150,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "ga-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 95,
+        "y": 866,
+        "width": 1150,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_HB2",
+      "tag": "div",
+      "text": "HB2",
+      "classes": [
+        "ga-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_3",
+      "tag": "div",
+      "text": "Test 3",
+      "classes": [
+        "ga-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_3_27",
+      "tag": "div",
+      "text": "Test 3",
+      "classes": [
+        "ga-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_4",
+      "tag": "div",
+      "text": "Test 4",
+      "classes": [
+        "ga-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_4_29",
+      "tag": "div",
+      "text": "Test 4",
+      "classes": [
+        "ga-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_5",
+      "tag": "div",
+      "text": "Test 5",
+      "classes": [
+        "ga-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_5_31",
+      "tag": "div",
+      "text": "Test 5",
+      "classes": [
+        "ga-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_6",
+      "tag": "div",
+      "text": "Test 6",
+      "classes": [
+        "ga-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_6_33",
+      "tag": "div",
+      "text": "Test 6",
+      "classes": [
+        "ga-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "ga-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Tabs",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

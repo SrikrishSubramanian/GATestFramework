@@ -1,0 +1,796 @@
+{
+  "component": "tabs",
+  "generatedAt": "2026-04-17T09:07:03.143Z",
+  "source": "dom",
+  "entries": {
+    "h2_0": {
+      "name": "h2_0",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__title.headline-h2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "h2_Test_3": {
+      "name": "h2_Test_3",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__title.headline-h2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 3",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Test_4": {
+      "name": "h2_Test_4",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__title.headline-h2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 4",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Test_5": {
+      "name": "h2_Test_5",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__title.headline-h2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 5",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Test_6": {
+      "name": "h2_Test_6",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__title.headline-h2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ol_5": {
+      "name": "ol_5",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tablist",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tablist",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ol[contains(@class,'cmp-tabs__tablist')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_DeferYourTaxes": {
+      "name": "li_DeferYourTaxes",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-2308fada47-tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tab.cmp-tabs__tab--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-tabs__tab')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Defer your taxes",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_GrowYourMoney": {
+      "name": "li_GrowYourMoney",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-0f17881bfa-tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-tabs__tab')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Grow your money",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_ProvideIncomeOpportunities": {
+      "name": "li_ProvideIncomeOpportunities",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-e4a7e0874b-tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-tabs__tab')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Provide income opportunities",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_PrepareForYourLongtermCare": {
+      "name": "li_PrepareForYourLongtermCare",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-21426baa55-tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-tabs__tab')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Prepare for your long-term care needs",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_LeaveYourLegacy": {
+      "name": "li_LeaveYourLegacy",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-b70d6e0cc4-tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-tabs__tab')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Leave your legacy",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_LoremIpsumDolor": {
+      "name": "li_LoremIpsumDolor",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-35351ea611-tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-tabs__tab')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "headlineBlock_2308fada47": {
+      "name": "headlineBlock_2308fada47",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-2308fada47",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tabpanel.cmp-tabs__tabpanel--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "headlineBlock_0f17881bfa": {
+      "name": "headlineBlock_0f17881bfa",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-0f17881bfa",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tabpanel",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "headlineBlockE4a7e0874b": {
+      "name": "headlineBlockE4a7e0874b",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-e4a7e0874b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tabpanel",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 3\n    \n\n    \n        Test 3\n    \n\n    \n      Test 3",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "headlineBlock_21426baa55": {
+      "name": "headlineBlock_21426baa55",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-21426baa55",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tabpanel",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 4\n    \n\n    \n        Test 4\n    \n\n    \n      Test 4",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "headlineBlockB70d6e0cc4": {
+      "name": "headlineBlockB70d6e0cc4",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-b70d6e0cc4",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tabpanel",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 5\n    \n\n    \n        Test 5\n    \n\n    \n      Test 5",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "headlineBlock_35351ea611": {
+      "name": "headlineBlock_35351ea611",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "headline-block-35351ea611",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-tabs__tabpanel",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 6\n    \n\n    \n        Test 6\n    \n\n    \n      Test 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-tabs__background-image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__background-image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_19": {
+      "name": "div_19",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-tabs__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-tabs__left",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-tabs__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-tabs__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_OptionalEyebrow": {
+      "name": "div_OptionalEyebrow",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional eyebrow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_23": {
+      "name": "div_23",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__descriptor.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_24": {
+      "name": "div_24",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__cta-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_HB2": {
+      "name": "div_HB2",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "HB2",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Test_3": {
+      "name": "div_Test_3",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 3",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Test_3_27": {
+      "name": "div_Test_3_27",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__descriptor.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 3",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Test_4": {
+      "name": "div_Test_4",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 4",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Test_4_29": {
+      "name": "div_Test_4_29",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__descriptor.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 4",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Test_5": {
+      "name": "div_Test_5",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 5",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Test_5_31": {
+      "name": "div_Test_5_31",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__descriptor.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 5",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Test_6": {
+      "name": "div_Test_6",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Test_6_33": {
+      "name": "div_Test_6_33",
+      "component": "tabs",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__descriptor.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Test 6",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}
