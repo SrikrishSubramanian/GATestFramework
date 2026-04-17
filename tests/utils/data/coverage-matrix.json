@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T03:21:42.698Z",
+  "lastUpdated": "2026-04-17T05:20:35.214Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -551,11 +551,10 @@
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 30,
-          "specFile": "navigation.author.spec.ts",
+          "testCount": 4,
+          "specFile": "navigation.images.spec.ts",
           "tags": [
-            "@a11y",
-            "@mobile"
+            "@regression"
           ]
         },
         "accessibility": {
@@ -566,10 +565,28 @@
             "@a11y",
             "@mobile"
           ]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 6,
+          "specFile": "navigation.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "navigation.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         }
       },
-      "totalTests": 210,
-      "lastUpdated": "2026-03-17T09:25:48.385Z"
+      "totalTests": 4,
+      "lastUpdated": "2026-04-17T05:20:35.214Z"
     },
     "rate-table": {
       "component": "rate-table",

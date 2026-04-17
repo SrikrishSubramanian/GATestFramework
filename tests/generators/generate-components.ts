@@ -73,6 +73,10 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     name: 'grid-container',
     rootSelector: '.cmp-grid-container',
   },
+  {
+    name: 'navigation',
+    rootSelector: '.cmp-navigation',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
