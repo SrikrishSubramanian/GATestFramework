@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T09:07:39.777Z",
+  "lastUpdated": "2026-04-17T09:15:58.403Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -894,6 +894,39 @@
       },
       "totalTests": 4,
       "lastUpdated": "2026-04-17T09:07:39.777Z"
+    },
+    "promo-banner": {
+      "component": "promo-banner",
+      "categories": {
+        "interaction": {
+          "category": "interaction",
+          "testCount": 5,
+          "specFile": "promo-banner.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "promo-banner.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "promo-banner.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 4,
+      "lastUpdated": "2026-04-17T09:15:58.403Z"
     }
   }
 }

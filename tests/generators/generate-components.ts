@@ -90,6 +90,10 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     name: 'tabs',
     rootSelector: '.cmp-tabs',
   },
+  {
+    name: 'promo-banner',
+    rootSelector: '.cmp-promo-banner',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');

@@ -63,6 +63,7 @@ const AVAILABLE_COMPONENTS = [
   { name: 'nested-content-carousel', rootSelector: '.cmp-nested-content-carousel' },
   { name: 'image-with-nested-content', rootSelector: '.cmp-image-with-nested-content' },
   { name: 'tabs', rootSelector: '.cmp-tabs' },
+  { name: 'promo-banner', rootSelector: '.cmp-promo-banner' },
 ];
 
 function getTargetComponents() {
