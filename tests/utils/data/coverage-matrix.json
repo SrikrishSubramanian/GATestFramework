@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T17:04:56.181Z",
+  "lastUpdated": "2026-04-17T02:57:53.287Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -703,6 +703,48 @@
       },
       "totalTests": 10,
       "lastUpdated": "2026-04-16T15:49:29.436Z"
+    },
+    "headline-block": {
+      "component": "headline-block",
+      "categories": {
+        "interaction": {
+          "category": "interaction",
+          "testCount": 8,
+          "specFile": "headline-block.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 12,
+          "specFile": "headline-block.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "headline-block.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "headline-block.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 4,
+      "lastUpdated": "2026-04-17T02:57:53.287Z"
     }
   }
 }

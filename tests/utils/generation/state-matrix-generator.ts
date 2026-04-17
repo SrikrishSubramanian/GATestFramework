@@ -386,6 +386,17 @@ export const KNOWN_VARIANTS: Record<string, {
     },
     innerSelector: '.cmp-content-trail',
   },
+  'headline-block': {
+    variants: ['left-alignment', 'center-alignment'],
+    themes: ['default'],
+    backgroundStrategy: 'section',
+    availableBackgrounds: ['white', 'slate', 'granite', 'azul'],
+    variantClasses: {
+      'left-alignment': '.ga-headline-block',
+      'center-alignment': '.cmp-section--center .ga-headline-block',
+    },
+    innerSelector: '.ga-headline-block',
+  },
 };
 
 function toPascalCase(str: string): string {

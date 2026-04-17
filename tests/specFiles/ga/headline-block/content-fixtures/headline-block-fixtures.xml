@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Headline Block Content Fixtures
+  Base: copied from kkr-aem style guide (ui.content.ga/.../style-guide/components/headline-block/.content.xml)
+  Additions marked with [Added] comments for traceability.
+
+  Style guide covers: alignment (left/center) × background (white/slate/granite/azul) = 8 variations
+  All use h2 heading, eyebrow + title + descriptor + 2 CTAs.
+
+  Missing scenarios added:
+  [Added] GAAM-757: Padding-top-off and padding-bottom-off variations
+  [Added] GAAM-344: Title-only (no eyebrow, no descriptor, no CTAs)
+  [Added] GAAM-344: Single CTA (primary only, no secondary)
+  [Added] GAAM-344: Different heading levels (h1, h3, h4)
+  [Added] GAAM-344: Headline block without eyebrow
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Headline Block style guide page with additional test fixtures."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Headline Block"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+                <!-- ====== EXISTING STYLE GUIDE CONTENT (8 variations) ====== -->
+
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Left aligned, White background&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet consequat adipscing."
+                            type="h2">
+                            <buttonprimary
+                                cq:styleIds="[primary-filled]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/button"
+                                icon="Arrow-Right"
+                                isTrackingEnabled="false"
+                                label="Optional CTA"
+                                linkTarget="_self"
+                                path="#"/>
+                            <buttonsecondary
+                                cq:styleIds="[secondary-outline]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/button"
+                                icon="Arrow-Right"
+                                isTrackingEnabled="false"
+                                label="Link Label"
+                                linkTarget="_self"
+                                path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section>
+
+                <separator jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <text_center_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Center aligned, White background&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_center_white
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-center-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet consequat adipscing."
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Optional CTA" linkTarget="_self" path="#"/>
+                            <buttonsecondary cq:styleIds="[secondary-outline]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Link Label" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_center_white>
+
+                <separator_2 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <text_left_slate
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Left aligned, Slate background&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_left_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit.&lt;/p>&#xd;&#xa;"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Lorem ipsum dolor sit amet consequat adipscing."
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Optional CTA" linkTarget="_self" path="#"/>
+                            <buttonsecondary cq:styleIds="[secondary-outline]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Link Label" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_left_slate>
+
+                <separator_3 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <text_center_slate
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Center aligned, Slate background&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_center_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-center-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit.&lt;/p>&#xd;&#xa;"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Lorem ipsum dolor sit amet consequat adipscing."
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Optional CTA" linkTarget="_self" path="#"/>
+                            <buttonsecondary cq:styleIds="[secondary-outline]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Link Label" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_center_slate>
+
+                <separator_4 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <text_left_granite
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Left aligned, Granite background&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_left_granite
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit.&lt;/p>&#xd;&#xa;"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Lorem ipsum dolor sit amet consequat adipscing."
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled,dark-theme]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Optional CTA" linkTarget="_self" path="#"/>
+                            <buttonsecondary cq:styleIds="[secondary-outline,dark-theme]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Link Label" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_left_granite>
+
+                <separator_5 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <text_center_granite
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Center aligned, Granite background&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_center_granite
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-center-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit.&lt;/p>&#xd;&#xa;"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Lorem ipsum dolor sit amet consequat adipscing."
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled,dark-theme]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Optional CTA" linkTarget="_self" path="#"/>
+                            <buttonsecondary cq:styleIds="[secondary-outline,dark-theme]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Link Label" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_center_granite>
+
+                <separator_6 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <text_left_azul
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Left aligned, Azul background&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_left_azul
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit.&lt;/p>&#xd;&#xa;"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Lorem ipsum dolor sit amet consequat adipscing."
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled,dark-theme]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Optional CTA" linkTarget="_self" path="#"/>
+                            <buttonsecondary cq:styleIds="[secondary-outline,dark-theme]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Link Label" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_left_azul>
+
+                <separator_7 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <text_center_azul
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Center aligned, Azul background&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_center_azul
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-center-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit.&lt;/p>&#xd;&#xa;"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Lorem ipsum dolor sit amet consequat adipscing."
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled,dark-theme]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Optional CTA" linkTarget="_self" path="#"/>
+                            <buttonsecondary cq:styleIds="[secondary-outline,dark-theme]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Link Label" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_center_azul>
+
+                <!-- ====== ADDED: GAAM-757 Padding Variations ====== -->
+
+                <separator_8 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <!-- [Added] GAAM-757: Remove Top Padding -->
+                <text_padding_top_off
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Remove Top Padding&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_padding_top_off
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment,ga-headline-block--padding-top-off]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>This variation has top padding removed.&lt;/p>"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Headline with no top padding"
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="CTA Button" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_padding_top_off>
+
+                <separator_9 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <!-- [Added] GAAM-757: Remove Bottom Padding -->
+                <text_padding_bottom_off
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Remove Bottom Padding&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_padding_bottom_off
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment,ga-headline-block--padding-bottom-off]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>This variation has bottom padding removed.&lt;/p>"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Headline with no bottom padding"
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="CTA Button" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_padding_bottom_off>
+
+                <separator_10 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <!-- [Added] GAAM-757: Both paddings removed -->
+                <text_padding_both_off
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Both Paddings Removed&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_padding_both_off
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment,ga-headline-block--padding-top-off,ga-headline-block--padding-bottom-off]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>This variation has both top and bottom padding removed.&lt;/p>"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Headline with no vertical padding"
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="CTA Button" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_padding_both_off>
+
+                <!-- ====== ADDED: GAAM-344 Partial Content Variations ====== -->
+
+                <separator_11 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <!-- [Added] GAAM-344: Title only (no eyebrow, no descriptor, no CTAs) -->
+                <text_title_only
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Title Only (minimal)&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_title_only
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            textIsRich="[true,true]"
+                            title="Standalone Title Without Supporting Content"
+                            type="h2"/>
+                    </section-par>
+                </section_title_only>
+
+                <separator_12 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <!-- [Added] GAAM-344: Single CTA (primary only) -->
+                <text_single_cta
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Single CTA&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_single_cta
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>This variation has only one CTA button.&lt;/p>"
+                            eyebrow="Eye brow"
+                            textIsRich="[true,true]"
+                            title="Headline With Single Call to Action"
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Primary CTA Only" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_single_cta>
+
+                <separator_13 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <!-- [Added] GAAM-344: Different heading levels -->
+                <text_heading_levels
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - Different Heading Levels (H1, H3, H4)&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_heading_h1
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            eyebrow="H1 Heading Level"
+                            textIsRich="[true,true]"
+                            title="This is an H1 Heading"
+                            type="h1"/>
+                    </section-par>
+                </section_heading_h1>
+                <section_heading_h3
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            eyebrow="H3 Heading Level"
+                            textIsRich="[true,true]"
+                            title="This is an H3 Heading"
+                            type="h3"/>
+                    </section-par>
+                </section_heading_h3>
+                <section_heading_h4
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            eyebrow="H4 Heading Level"
+                            textIsRich="[true,true]"
+                            title="This is an H4 Heading"
+                            type="h4"/>
+                    </section-par>
+                </section_heading_h4>
+
+                <separator_14 jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/separator"/>
+
+                <!-- [Added] GAAM-344: No eyebrow variation -->
+                <text_no_eyebrow
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3>Headline Block - No Eyebrow&lt;/h3>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_no_eyebrow
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <headline_block
+                            cq:styleIds="[headline-block-left-alignment]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/headline-block"
+                            descriptor="&lt;p>This variation has no eyebrow text. The title should start at the top.&lt;/p>"
+                            textIsRich="[true,true]"
+                            title="Headline Without Eyebrow Text"
+                            type="h2">
+                            <buttonprimary cq:styleIds="[primary-filled]" jcr:primaryType="nt:unstructured" sling:resourceType="ga/components/content/button" icon="Arrow-Right" isTrackingEnabled="false" label="Learn More" linkTarget="_self" path="#"/>
+                        </headline_block>
+                    </section-par>
+                </section_no_eyebrow>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

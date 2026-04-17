@@ -58,6 +58,7 @@ const AVAILABLE_COMPONENTS = [
   { name: 'spacer', rootSelector: '.cmp-spacer' },
   { name: 'text', rootSelector: '.cmp-text' },
   { name: 'content-trail', rootSelector: '.cmp-content-trail' },
+  { name: 'headline-block', rootSelector: '.ga-headline-block' },
 ];
 
 function getTargetComponents() {

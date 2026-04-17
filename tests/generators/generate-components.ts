@@ -65,6 +65,10 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     name: 'content-trail',
     rootSelector: '.cmp-content-trail',
   },
+  {
+    name: 'headline-block',
+    rootSelector: '.ga-headline-block',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
