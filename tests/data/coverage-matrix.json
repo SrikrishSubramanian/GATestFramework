@@ -599,5 +599,24 @@
     ],
     "generatedAt": "2026-04-17T09:15:29.568Z",
     "source": "dom"
+  },
+  "image": {
+    "pomClass": "ImagePage",
+    "pomPath": "../pages/ga/components/imagePage.ts",
+    "sidecarPath": "../pages/ga/components/imagePage.locators.json",
+    "specPath": "../specFiles/ga/image/image.author.spec.ts",
+    "elementCount": 6,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-04-17T10:49:56.634Z",
+    "source": "dom"
   }
 }

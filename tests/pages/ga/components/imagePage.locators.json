@@ -1,0 +1,108 @@
+{
+  "component": "image",
+  "generatedAt": "2026-04-17T10:49:56.615Z",
+  "source": "dom",
+  "entries": {
+    "ImageInWhiteBackground": {
+      "name": "ImageInWhiteBackground",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Image in white background']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-image__link')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_ImageInWhiteBackg": {
+      "name": "img_ImageInWhiteBackg",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_2": {
+      "name": "figure_2",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_3": {
+      "name": "picture_3",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figcaption_4": {
+      "name": "figcaption_4",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figcaption[contains(@class,'cmp-image__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_5": {
+      "name": "figure_5",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

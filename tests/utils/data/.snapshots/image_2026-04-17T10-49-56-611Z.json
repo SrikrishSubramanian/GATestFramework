@@ -1,0 +1,165 @@
+{
+  "component": "image",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/image.html?wcmmode=disabled",
+  "scannedAt": "2026-04-17T10:49:56.609Z",
+  "rootSelector": ".cmp-image",
+  "elements": [
+    {
+      "name": "ImageInWhiteBackground",
+      "tag": "a",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__link"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Image in white background",
+        "data-cmp-hook-image": "link",
+        "data-link-location": "image-a0c4fe3c63"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": "Image in white background",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 103,
+        "y": 818,
+        "width": 1134,
+        "height": 699
+      }
+    },
+    {
+      "name": "img_ImageInWhiteBackg",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758_c/section-par/image.coreimg.png/1566335124618/background-image.png",
+        "width": "944",
+        "height": "532",
+        "itemprop": "contentUrl",
+        "alt": "Image in white background",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758_c/section-par/image.coreimg{.width}.png/1566335124618/background-image.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 103,
+        "y": 818,
+        "width": 1134,
+        "height": 639
+      }
+    },
+    {
+      "name": "figure_2",
+      "tag": "figure",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 103,
+        "y": 818,
+        "width": 1134,
+        "height": 699
+      }
+    },
+    {
+      "name": "picture_3",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 103,
+        "y": 818,
+        "width": 1134,
+        "height": 639
+      }
+    },
+    {
+      "name": "figcaption_4",
+      "tag": "figcaption",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 103,
+        "y": 1457,
+        "width": 1134,
+        "height": 60
+      }
+    },
+    {
+      "name": "figure_5",
+      "tag": "figure",
+      "text": "",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 30,
+        "y": 5907,
+        "width": 407,
+        "height": 41
+      }
+    }
+  ],
+  "pageTitle": "Image",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}
