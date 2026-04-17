@@ -698,3 +698,32 @@ test.describe('Accordion — Console & Resources', () => {
     }
   });
 });
+
+// ─── GAAM-611: Dialog Structure After Header Tab Removal ─────────────────────
+test.describe('Accordion — GAAM-611: Header Tab Removed from Dialog', () => {
+  test('[ACRD-056] @author @regression Accordion dialog has no Header tab', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/accordion/_cq_dialog.infinity.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok()).toBe(true);
+    const dialog = JSON.stringify(await response.json());
+    // Header tab fields (eyebrow, headline RTE, path) should not be present
+    expect(dialog).not.toContain('"header"');
+    expect(dialog).not.toContain('"eyebrow"');
+  });
+
+  test('[ACRD-057] @author @regression Accordion dialog retains Items tab', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/accordion/_cq_dialog.infinity.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok()).toBe(true);
+    const dialog = JSON.stringify(await response.json());
+    expect(dialog).toContain('items');
+  });
+
+  test('[ACRD-058] @author @regression Accordion dialog retains Properties tab', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/accordion/_cq_dialog.infinity.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok()).toBe(true);
+    const dialog = JSON.stringify(await response.json());
+    expect(dialog).toContain('properties');
+  });
+});

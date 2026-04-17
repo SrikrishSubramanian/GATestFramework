@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T15:49:29.436Z",
+  "lastUpdated": "2026-04-16T17:04:56.181Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -338,11 +338,10 @@
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 28,
-          "specFile": "accordion.author.spec.ts",
+          "testCount": 4,
+          "specFile": "accordion.images.spec.ts",
           "tags": [
-            "@a11y",
-            "@mobile"
+            "@regression"
           ]
         },
         "accessibility": {
@@ -353,10 +352,28 @@
             "@a11y",
             "@mobile"
           ]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 4,
+          "specFile": "accordion.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "accordion.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         }
       },
-      "totalTests": 196,
-      "lastUpdated": "2026-03-17T06:19:56.850Z"
+      "totalTests": 4,
+      "lastUpdated": "2026-04-16T17:04:56.181Z"
     },
     "fifty-fifty-hero": {
       "component": "fifty-fifty-hero",
