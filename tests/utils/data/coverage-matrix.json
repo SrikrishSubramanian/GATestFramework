@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T11:43:30.014Z",
+  "lastUpdated": "2026-04-28T16:42:33.865Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -993,6 +993,85 @@
       },
       "totalTests": 4,
       "lastUpdated": "2026-04-17T11:43:30.013Z"
+    },
+    "login": {
+      "component": "login",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        },
+        "aem-dialog": {
+          "category": "aem-dialog",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
+        }
+      },
+      "totalTests": 176,
+      "lastUpdated": "2026-04-28T16:42:33.861Z"
     }
   }
 }
