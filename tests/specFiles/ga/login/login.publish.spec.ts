@@ -107,7 +107,7 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
   test('[LGN-011] @Functional Password Masking Toggle', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const pwdInput = pom.passwordInput;
+    const pwdInput = pom.getPasswordInput();
     const inputType = await pwdInput.getAttribute('type');
     expect(['password', 'text']).toContain(inputType);
   });
@@ -125,27 +125,27 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
   test('[LGN-013] @negative @regression Empty Validation: Both Fields', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const submitBtn = pom.loginButton;
-    const usernameInput = pom.usernameInput;
-    const passwordInput = pom.passwordInput;
-    await expect(usernameInput).toBeEmpty();
-    await expect(passwordInput).toBeEmpty();
+    const submitBtn = pom.getLoginButton();
+    const usernameInput = pom.getUsernameInput();
+    const passwordInput = pom.getPasswordInput();
+    expect(await usernameInput.inputValue()).toBe('');
+    expect(await passwordInput.inputValue()).toBe('');
   });
 
   test('[LGN-014] @negative @regression Empty Validation: Username Only', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const usernameInput = pom.usernameInput;
-    const passwordInput = pom.passwordInput;
+    const usernameInput = pom.getUsernameInput();
+    const passwordInput = pom.getPasswordInput();
     await passwordInput.fill('TestPassword123');
-    await expect(usernameInput).toBeEmpty();
+    expect(await usernameInput.inputValue()).toBe('');
   });
 
   test('[LGN-015] @Functional Data Preservation on Validation', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const usernameInput = pom.usernameInput;
-    const passwordInput = pom.passwordInput;
+    const usernameInput = pom.getUsernameInput();
+    const passwordInput = pom.getPasswordInput();
     await usernameInput.fill('admin@example.com');
     const inputValue = await usernameInput.inputValue();
     expect(inputValue).toBe('admin@example.com');
@@ -154,9 +154,9 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
   test('[LGN-016] @A11y Error Message Association', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const errorMsg = pom.errorMessage;
+    const errorMsg = pom.getErrorMessage();
     if (await errorMsg.count() > 0) {
-      const ariaDescribedBy = await pom.usernameInput.getAttribute('aria-describedby');
+      const ariaDescribedBy = await pom.getUsernameInput().getAttribute('aria-describedby');
       if (ariaDescribedBy) {
         const msgId = await errorMsg.first().getAttribute('id');
         expect(msgId).toBeTruthy();
@@ -167,7 +167,7 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
   test('[LGN-017] @A11y Error Message Screen Reader Trigger', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const role = await pom.errorMessage.first().getAttribute('role');
+    const role = await pom.getErrorMessage().first().getAttribute('role');
     expect(['alert', 'status', 'log']).toContain(role);
   });
 
@@ -270,7 +270,7 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
   test('[LGN-027] @A11y Focus Indicators', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const button = pom.loginButton;
+    const button = pom.getLoginButton();
     await button.focus();
     const outline = await button.evaluate(el => getComputedStyle(el).outline);
     expect(outline).not.toBe('none');
@@ -351,71 +351,71 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
   test('[LGN-047] @positive @smoke Valid username field accepts standard email format', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('user@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('user@example.com');
   });
 
   test('[LGN-048] @positive @regression Valid username with subdomain email format', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('admin.user@mail.example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('admin.user@mail.example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('admin.user@mail.example.com');
   });
 
   test('[LGN-049] @positive @regression Valid username with plus addressing', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user+tag@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('user+tag@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('user+tag@example.com');
   });
 
   test('[LGN-050] @positive @regression Password accepts alphanumeric characters', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('Password123');
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill('Password123');
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe('Password123');
   });
 
   test('[LGN-051] @positive @regression Password accepts special characters', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('P@ssw0rd!#$%');
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill('P@ssw0rd!#$%');
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe('P@ssw0rd!#$%');
   });
 
   test('[LGN-052] @positive @regression Password accepts spaces', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('Pass word 123');
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill('Pass word 123');
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe('Pass word 123');
   });
 
   test('[LGN-053] @positive @regression Username field is masked by default', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const inputType = await pom.usernameInput.getAttribute('type');
+    const inputType = await pom.getUsernameInput().getAttribute('type');
     expect(inputType).toBe('text');
   });
 
   test('[LGN-054] @positive @regression Password field is masked by default', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const inputType = await pom.passwordInput.getAttribute('type');
+    const inputType = await pom.getPasswordInput().getAttribute('type');
     expect(inputType).toBe('password');
   });
 
   test('[LGN-055] @positive @regression Form submission with Enter key in password field', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('testuser');
-    await pom.passwordInput.fill('testpass');
-    await pom.passwordInput.press('Enter');
+    await pom.getUsernameInput().fill('testuser');
+    await pom.getPasswordInput().fill('testpass');
+    await pom.getPasswordInput().press('Enter');
     // Form should submit (button click triggered)
     await page.waitForTimeout(500);
   });
@@ -440,16 +440,16 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const testEmail = 'test@example.com';
-    await pom.usernameInput.fill(testEmail);
-    await pom.passwordInput.fill('password');
-    const emailValue = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill(testEmail);
+    await pom.getPasswordInput().fill('password');
+    const emailValue = await pom.getUsernameInput().inputValue();
     expect(emailValue).toBe(testEmail);
   });
 
   test('[LGN-059] @positive @regression Tab key navigates through form fields', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.focus();
+    await pom.getUsernameInput().focus();
     await page.keyboard.press('Tab');
     const focusedElement = await page.evaluate(() => document.activeElement?.id);
     expect(focusedElement).toBeTruthy();
@@ -458,7 +458,7 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
   test('[LGN-060] @positive @regression Shift+Tab navigates backwards through form fields', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.loginButton.focus();
+    await pom.getLoginButton().focus();
     await page.keyboard.press('Shift+Tab');
     // Focus should move to previous element
     await page.waitForTimeout(200);
@@ -489,8 +489,8 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
   test('[LGN-061] @negative @regression Empty username and password rejection', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const usernameValue = await pom.usernameInput.inputValue();
-    const passwordValue = await pom.passwordInput.inputValue();
+    const usernameValue = await pom.getUsernameInput().inputValue();
+    const passwordValue = await pom.getPasswordInput().inputValue();
     expect(usernameValue).toBe('');
     expect(passwordValue).toBe('');
   });
@@ -498,64 +498,64 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
   test('[LGN-062] @negative @regression Empty username validation error', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('password');
-    const usernameValue = await pom.usernameInput.inputValue();
+    await pom.getPasswordInput().fill('password');
+    const usernameValue = await pom.getUsernameInput().inputValue();
     expect(usernameValue).toBe('');
   });
 
   test('[LGN-063] @negative @regression Empty password validation error', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@example.com');
-    const passwordValue = await pom.passwordInput.inputValue();
+    await pom.getUsernameInput().fill('user@example.com');
+    const passwordValue = await pom.getPasswordInput().inputValue();
     expect(passwordValue).toBe('');
   });
 
   test('[LGN-064] @negative @regression Invalid email format: missing @symbol', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('userexample.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('userexample.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('userexample.com');
   });
 
   test('[LGN-065] @negative @regression Invalid email format: missing domain extension', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@example');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('user@example');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('user@example');
   });
 
   test('[LGN-066] @negative @regression Invalid email format: double @symbol', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('user@@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('user@@example.com');
   });
 
   test('[LGN-067] @negative @regression Email with leading space character', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill(' user@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill(' user@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe(' user@example.com');
   });
 
   test('[LGN-068] @negative @regression Email with trailing space character', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@example.com ');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('user@example.com ');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('user@example.com ');
   });
 
   test('[LGN-069] @negative @regression Email with internal space character', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user name@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('user name@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('user name@example.com');
   });
 
@@ -563,8 +563,8 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const sqlInjection = "' OR '1'='1";
-    await pom.passwordInput.fill(sqlInjection);
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill(sqlInjection);
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe(sqlInjection);
   });
 
@@ -572,8 +572,8 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const sqlInjection = "admin'--";
-    await pom.usernameInput.fill(sqlInjection);
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill(sqlInjection);
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe(sqlInjection);
   });
 
@@ -581,8 +581,8 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const xssPayload = '<script>alert("xss")</script>';
-    await pom.passwordInput.fill(xssPayload);
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill(xssPayload);
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe(xssPayload);
   });
 
@@ -590,25 +590,25 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const xssPayload = '"><svg/onload=alert(1)>';
-    await pom.usernameInput.fill(xssPayload);
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill(xssPayload);
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe(xssPayload);
   });
 
   test('[LGN-074] @negative @regression Non-existent user email rejection', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('nonexistent@invalid.local');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('nonexistent@invalid.local');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('nonexistent@invalid.local');
   });
 
   test('[LGN-075] @negative @regression Incorrect password attempt tracking', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@example.com');
-    await pom.passwordInput.fill('wrongpassword');
-    const value = await pom.passwordInput.inputValue();
+    await pom.getUsernameInput().fill('user@example.com');
+    await pom.getPasswordInput().fill('wrongpassword');
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe('wrongpassword');
   });
 
@@ -616,7 +616,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const initialUrl = page.url();
-    await pom.usernameInput.fill('invalid');
+    await pom.getUsernameInput().fill('invalid');
     await page.waitForTimeout(1000);
     const currentUrl = page.url();
     expect(currentUrl).toBe(initialUrl);
@@ -625,7 +625,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
   test('[LGN-077] @negative @regression Password field input value is not exposed in page source', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('SecretPassword123');
+    await pom.getPasswordInput().fill('SecretPassword123');
     const pageContent = await page.content();
     expect(pageContent).not.toContain('SecretPassword123');
   });
@@ -635,7 +635,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
     page.on('console', msg => consoleLogs.push(msg.text()));
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('SecretPassword123');
+    await pom.getPasswordInput().fill('SecretPassword123');
     const hasPassword = consoleLogs.some(log => log.includes('SecretPassword123'));
     expect(hasPassword).toBe(false);
   });
@@ -646,8 +646,8 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const longEmail = 'a'.repeat(64) + '@' + 'b'.repeat(63) + '.' + 'c'.repeat(62);
-    await pom.usernameInput.fill(longEmail);
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill(longEmail);
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBeTruthy();
   });
 
@@ -655,56 +655,56 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const longPassword = 'P'.repeat(128) + '@1';
-    await pom.passwordInput.fill(longPassword);
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill(longPassword);
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBeTruthy();
   });
 
   test('[LGN-081] @edge @regression Minimum length username (single character)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('a');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('a');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('a');
   });
 
   test('[LGN-082] @edge @regression Minimum length password (single character)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('x');
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill('x');
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe('x');
   });
 
   test('[LGN-083] @edge @regression Field with only spaces (username)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('     ');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('     ');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('     ');
   });
 
   test('[LGN-084] @edge @regression Field with only spaces (password)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('     ');
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill('     ');
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe('     ');
   });
 
   test('[LGN-085] @edge @regression Field with only special characters (username)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('!@#$%^&*()');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('!@#$%^&*()');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('!@#$%^&*()');
   });
 
   test('[LGN-086] @edge @regression Field with only special characters (password)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('!@#$%^&*()_+-=[]{}|;:,.<>?');
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill('!@#$%^&*()_+-=[]{}|;:,.<>?');
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe('!@#$%^&*()_+-=[]{}|;:,.<>?');
   });
 
@@ -716,7 +716,7 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
       const el = document.querySelector('#username') as HTMLInputElement;
       if (el) el.value = data;
     }, [testData]);
-    const value = await pom.usernameInput.inputValue();
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe(testData);
   });
 
@@ -728,7 +728,7 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
       const el = document.querySelector('#password') as HTMLInputElement;
       if (el) el.value = data;
     }, [testData]);
-    const value = await pom.passwordInput.inputValue();
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe(testData);
   });
 
@@ -736,22 +736,22 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     for (let i = 0; i < 10; i++) {
-      await pom.usernameInput.focus();
-      await pom.passwordInput.focus();
-      await pom.usernameInput.focus();
+      await pom.getUsernameInput().focus();
+      await pom.getPasswordInput().focus();
+      await pom.getUsernameInput().focus();
     }
-    await expect(pom.usernameInput).toBeFocused();
+    await expect(pom.getUsernameInput()).toBeFocused();
   });
 
   test('[LGN-090] @edge @regression Rapid consecutive form submission attempts', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@example.com');
-    await pom.passwordInput.fill('password');
+    await pom.getUsernameInput().fill('user@example.com');
+    await pom.getPasswordInput().fill('password');
     for (let i = 0; i < 3; i++) {
-      const isDisabled = await pom.loginButton.isDisabled();
+      const isDisabled = await pom.getLoginButton().isDisabled();
       if (!isDisabled) {
-        await pom.loginButton.click();
+        await pom.getLoginButton().click();
       }
     }
   });
@@ -768,8 +768,8 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const unicodeEmail = '用户@example.com';
-    await pom.usernameInput.fill(unicodeEmail);
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill(unicodeEmail);
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe(unicodeEmail);
   });
 
@@ -777,8 +777,8 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const unicodePass = 'パスワード123';
-    await pom.passwordInput.fill(unicodePass);
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill(unicodePass);
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe(unicodePass);
   });
 
@@ -786,8 +786,8 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const emojiEmail = 'user😀@example.com';
-    await pom.usernameInput.fill(emojiEmail);
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill(emojiEmail);
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe(emojiEmail);
   });
 
@@ -795,37 +795,37 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const emojiPass = 'Pass123😀🔒';
-    await pom.passwordInput.fill(emojiPass);
-    const value = await pom.passwordInput.inputValue();
+    await pom.getPasswordInput().fill(emojiPass);
+    const value = await pom.getPasswordInput().inputValue();
     expect(value).toBe(emojiPass);
   });
 
   test('[LGN-096] @edge @regression Multiple @ symbols in email field', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@domain@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('user@domain@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('user@domain@example.com');
   });
 
   test('[LGN-097] @edge @regression Password visibility toggle state persistence', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('TestPassword');
-    const initialType = await pom.passwordInput.getAttribute('type');
+    await pom.getPasswordInput().fill('TestPassword');
+    const initialType = await pom.getPasswordInput().getAttribute('type');
     expect(initialType).toBe('password');
   });
 
   test('[LGN-098] @edge @regression Form reset functionality (if present)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('test@example.com');
-    await pom.passwordInput.fill('password123');
+    await pom.getUsernameInput().fill('test@example.com');
+    await pom.getPasswordInput().fill('password123');
     const resetBtn = page.locator('button[type="reset"]').first();
     if (await resetBtn.count() > 0) {
       await resetBtn.click();
-      const usernameValue = await pom.usernameInput.inputValue();
-      const passwordValue = await pom.passwordInput.inputValue();
+      const usernameValue = await pom.getUsernameInput().inputValue();
+      const passwordValue = await pom.getPasswordInput().inputValue();
       expect(usernameValue).toBe('');
       expect(passwordValue).toBe('');
     }
@@ -834,8 +834,8 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
   test('[LGN-099] @edge @regression Field value cleared on logout (session management)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('user@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('user@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBeTruthy();
   });
 
@@ -843,8 +843,8 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const longDomain = 'user@' + 'subdomain.'.repeat(10) + 'example.com';
-    await pom.usernameInput.fill(longDomain);
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill(longDomain);
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBeTruthy();
   });
 });
@@ -895,16 +895,16 @@ test.describe('Login — Responsive & Adaptive Design', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await expect(pom.usernameInput).toBeVisible();
-    await expect(pom.passwordInput).toBeVisible();
-    await expect(pom.loginButton).toBeVisible();
+    await expect(pom.getUsernameInput()).toBeVisible();
+    await expect(pom.getPasswordInput()).toBeVisible();
+    await expect(pom.getLoginButton()).toBeVisible();
   });
 
   test('[LGN-104] @mobile @regression Mobile: No horizontal scrolling on input focus', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.focus();
+    await pom.getUsernameInput().focus();
     const hasHorizontalScroll = await page.evaluate(() => {
       return document.documentElement.scrollWidth > window.innerWidth;
     });
@@ -935,10 +935,10 @@ test.describe('Login — Performance & Data Integrity', () => {
   test('[LGN-106] @perf @regression Form submission response time < 3 seconds', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('test@example.com');
-    await pom.passwordInput.fill('password');
+    await pom.getUsernameInput().fill('test@example.com');
+    await pom.getPasswordInput().fill('password');
     const startTime = Date.now();
-    await pom.loginButton.click();
+    await pom.getLoginButton().click();
     await page.waitForTimeout(100);
     const responseTime = Date.now() - startTime;
     expect(responseTime).toBeGreaterThanOrEqual(0);
@@ -949,9 +949,9 @@ test.describe('Login — Performance & Data Integrity', () => {
     await pom.navigate(BASE());
     const testEmail = 'test@example.com';
     const startTime = Date.now();
-    await pom.usernameInput.fill(testEmail);
+    await pom.getUsernameInput().fill(testEmail);
     const fillTime = Date.now() - startTime;
-    const value = await pom.usernameInput.inputValue();
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe(testEmail);
     expect(fillTime).toBeLessThan(1000);
   });
@@ -959,7 +959,7 @@ test.describe('Login — Performance & Data Integrity', () => {
   test('[LGN-108] @regression Password data not stored in visible variables or cookies', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.passwordInput.fill('SecretPassword123');
+    await pom.getPasswordInput().fill('SecretPassword123');
     const cookies = await page.context().cookies();
     const cookieString = JSON.stringify(cookies);
     expect(cookieString).not.toContain('SecretPassword123');
@@ -973,23 +973,23 @@ test.describe('Login — Performance & Data Integrity', () => {
     });
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('test@example.com');
-    await pom.passwordInput.fill('SecretPassword123');
+    await pom.getUsernameInput().fill('test@example.com');
+    await pom.getPasswordInput().fill('SecretPassword123');
     // Don't actually submit to avoid authentication attempts
   });
 
   test('[LGN-110] @regression Form data cleared after logout (simulated)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('test@example.com');
-    await pom.passwordInput.fill('password');
+    await pom.getUsernameInput().fill('test@example.com');
+    await pom.getPasswordInput().fill('password');
     // Simulate form reset
     await page.evaluate(() => {
       const form = document.querySelector('form') as HTMLFormElement;
       if (form) form.reset();
     });
-    const usernameValue = await pom.usernameInput.inputValue();
-    const passwordValue = await pom.passwordInput.inputValue();
+    const usernameValue = await pom.getUsernameInput().inputValue();
+    const passwordValue = await pom.getPasswordInput().inputValue();
     expect(usernameValue).toBe('');
     expect(passwordValue).toBe('');
   });
@@ -1010,11 +1010,11 @@ test.describe('Login — Performance & Data Integrity', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     await Promise.all([
-      pom.usernameInput.fill('test@example.com'),
-      pom.passwordInput.fill('password')
+      pom.getUsernameInput().fill('test@example.com'),
+      pom.getPasswordInput().fill('password')
     ]);
-    const usernameValue = await pom.usernameInput.inputValue();
-    const passwordValue = await pom.passwordInput.inputValue();
+    const usernameValue = await pom.getUsernameInput().inputValue();
+    const passwordValue = await pom.getPasswordInput().inputValue();
     expect(usernameValue).toBe('test@example.com');
     expect(passwordValue).toBe('password');
   });
@@ -1142,7 +1142,7 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
   test('[LGN-118] @a11y @wcag22 Error messages have sufficient color contrast', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const errorMsg = pom.errorMessage;
+    const errorMsg = pom.getErrorMessage();
     if (await errorMsg.count() > 0) {
       const color = await errorMsg.first().evaluate(el => getComputedStyle(el).color);
       expect(color).toBeTruthy();
@@ -1152,7 +1152,7 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
   test('[LGN-119] @a11y @wcag22 Keyboard navigation with Tab key works correctly', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.focus();
+    await pom.getUsernameInput().focus();
     await page.keyboard.press('Tab');
     const focusedId = await page.evaluate(() => (document.activeElement as HTMLElement)?.id);
     expect(focusedId).toBeTruthy();
@@ -1161,7 +1161,7 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
   test('[LGN-120] @a11y @wcag22 Keyboard navigation with Shift+Tab works correctly', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.loginButton.focus();
+    await pom.getLoginButton().focus();
     await page.keyboard.press('Shift+Tab');
     // Focus should move to previous element
     const focusedElement = await page.evaluate(() => (document.activeElement as HTMLElement)?.tagName);
@@ -1193,7 +1193,7 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
   test('[LGN-123] @a11y @wcag22 Focus visible indicator present on all interactive elements', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const button = pom.loginButton;
+    const button = pom.getLoginButton();
     await button.focus();
     const outline = await button.evaluate(el => {
       const style = getComputedStyle(el);
@@ -1205,7 +1205,7 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
   test('[LGN-124] @a11y @wcag22 Error announcements use role="alert" for screen readers', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const errorMsg = pom.errorMessage;
+    const errorMsg = pom.getErrorMessage();
     if (await errorMsg.count() > 0) {
       const role = await errorMsg.first().getAttribute('role');
       expect(['alert', 'status', 'log']).toContain(role);
@@ -1215,7 +1215,7 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
   test('[LGN-125] @a11y @wcag22 No keyboard traps - can tab out of any field', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.focus();
+    await pom.getUsernameInput().focus();
     for (let i = 0; i < 10; i++) {
       await page.keyboard.press('Tab');
     }
@@ -1226,14 +1226,14 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
   test('[LGN-126] @a11y @wcag22 Password field autocomplete attribute set correctly', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const autocomplete = await pom.passwordInput.getAttribute('autocomplete');
+    const autocomplete = await pom.getPasswordInput().getAttribute('autocomplete');
     expect(['password', 'current-password', 'new-password', 'off']).toContain(autocomplete);
   });
 
   test('[LGN-127] @a11y @wcag22 Username field autocomplete attribute set to email', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const autocomplete = await pom.usernameInput.getAttribute('autocomplete');
+    const autocomplete = await pom.getUsernameInput().getAttribute('autocomplete');
     expect(autocomplete).toBeTruthy();
   });
 
@@ -1254,8 +1254,8 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
   test('[LGN-129] @a11y @wcag22 Login button has descriptive text', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const buttonText = await pom.loginButton.textContent();
-    const ariaLabel = await pom.loginButton.getAttribute('aria-label');
+    const buttonText = await pom.getLoginButton().textContent();
+    const ariaLabel = await pom.getLoginButton().getAttribute('aria-label');
     expect(buttonText || ariaLabel).toBeTruthy();
   });
 
@@ -1263,8 +1263,8 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const initialUrl = page.url();
-    await pom.usernameInput.fill('test@example.com');
-    await pom.passwordInput.fill('password');
+    await pom.getUsernameInput().fill('test@example.com');
+    await pom.getPasswordInput().fill('password');
     // Don't submit to avoid actual auth attempt
     const currentUrl = page.url();
     expect(currentUrl).toBe(initialUrl);
@@ -1275,16 +1275,16 @@ test.describe('Login — Browser Autofill & Password Manager', () => {
   test('[LGN-131] @regression Autofill credential detection via autocomplete attributes', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const usernameAutocomplete = await pom.usernameInput.getAttribute('autocomplete');
-    const passwordAutocomplete = await pom.passwordInput.getAttribute('autocomplete');
+    const usernameAutocomplete = await pom.getUsernameInput().getAttribute('autocomplete');
+    const passwordAutocomplete = await pom.getPasswordInput().getAttribute('autocomplete');
     expect(usernameAutocomplete || passwordAutocomplete).toBeTruthy();
   });
 
   test('[LGN-132] @regression Password manager compatible field naming', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const usernameName = await pom.usernameInput.getAttribute('name');
-    const passwordName = await pom.passwordInput.getAttribute('name');
+    const usernameName = await pom.getUsernameInput().getAttribute('name');
+    const passwordName = await pom.getPasswordInput().getAttribute('name');
     expect(usernameName || passwordName).toBeTruthy();
   });
 
@@ -1304,15 +1304,15 @@ test.describe('Login — Cross-Browser Compatibility', () => {
   test('[LGN-134] @regression Form works across major browsers (Chromium)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('test@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().fill('test@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('test@example.com');
   });
 
   test('[LGN-135] @regression Input masking consistent across browsers', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const inputType = await pom.passwordInput.getAttribute('type');
+    const inputType = await pom.getPasswordInput().getAttribute('type');
     expect(inputType).toBe('password');
   });
 
@@ -1344,7 +1344,7 @@ test.describe('Login — Navigation & Session Flow', () => {
     await page.goBack().catch(() => {});
     await page.goForward();
     // Form should still be functional
-    await expect(pom.usernameInput).toBeVisible();
+    await expect(pom.getUsernameInput()).toBeVisible();
   });
 
   test('[LGN-139] @regression Direct URL access to login page', async ({ page }) => {
@@ -1382,8 +1382,8 @@ test.describe('Login — Mobile-Specific Interactions', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.focus();
-    const submitButton = pom.loginButton;
+    await pom.getUsernameInput().focus();
+    const submitButton = pom.getLoginButton();
     const isVisible = await submitButton.isVisible();
     expect(isVisible).toBe(true);
   });
@@ -1416,19 +1416,19 @@ test.describe('Login — Error Recovery & Retries', () => {
     await pom.navigate(BASE());
     // Offline simulation would require more complex setup
     // Verify form is still interactive
-    await expect(pom.usernameInput).toBeEnabled();
-    await expect(pom.passwordInput).toBeEnabled();
+    await expect(pom.getUsernameInput()).toBeEnabled();
+    await expect(pom.getPasswordInput()).toBeEnabled();
   });
 
   test('[LGN-146] @regression User can retry after failed submission', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await pom.usernameInput.fill('test@example.com');
-    await pom.passwordInput.fill('password');
+    await pom.getUsernameInput().fill('test@example.com');
+    await pom.getPasswordInput().fill('password');
     // Clear and retry
-    await pom.usernameInput.clear();
-    await pom.usernameInput.fill('retry@example.com');
-    const value = await pom.usernameInput.inputValue();
+    await pom.getUsernameInput().clear();
+    await pom.getUsernameInput().fill('retry@example.com');
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe('retry@example.com');
   });
 
@@ -1436,9 +1436,9 @@ test.describe('Login — Error Recovery & Retries', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const testEmail = 'user@example.com';
-    await pom.usernameInput.fill(testEmail);
+    await pom.getUsernameInput().fill(testEmail);
     // Simulate error - field should retain value
-    const value = await pom.usernameInput.inputValue();
+    const value = await pom.getUsernameInput().inputValue();
     expect(value).toBe(testEmail);
   });
 });
