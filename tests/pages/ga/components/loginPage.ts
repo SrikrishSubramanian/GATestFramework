@@ -1,7 +1,4 @@
 import { Page, Locator } from '@playwright/test';
-import { getLocator } from '../../../src/utils/locator-utils';
-import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
-import locators from './loginPage.locators.json';
 
 /**
  * Page Object Model for the Login component (including MFA support - GAAM-601)
@@ -14,166 +11,121 @@ import locators from './loginPage.locators.json';
  * - Recovery options
  */
 export class LoginPage {
-  readonly page: Page;
-  readonly componentRoot: Locator;
+  constructor(private page: Page) {}
 
-  // Standard login form
-  readonly usernameInput: Locator;
-  readonly passwordInput: Locator;
-  readonly loginButton: Locator;
-
-  // MFA form elements
-  readonly mfaPrompt: Locator;
-  readonly mfaCodeInput: Locator;
-  readonly mfaSubmitButton: Locator;
-  readonly backupCodeOption: Locator;
-  readonly backupCodeInput: Locator;
-  readonly mfaTimeoutMessage: Locator;
-  readonly recoveryOption: Locator;
-  readonly errorMessage: Locator;
-
-  constructor(page: Page) {
-    this.page = page;
-
-    // Root selector for login component
-    this.componentRoot = getLocator(page, '.cmp-login', locators);
-
-    // Standard login form locators
-    this.usernameInput = getLocator(page, '#username', locators);
-    this.passwordInput = getLocator(page, '#password', locators);
-    this.loginButton = getLocator(page, '[type="submit"]', locators);
-
-    // MFA form locators
-    this.mfaPrompt = getLocator(page, '[data-testid="mfa-prompt"]', locators);
-    this.mfaCodeInput = getLocator(page, '[data-testid="mfa-code-input"]', locators);
-    this.mfaSubmitButton = getLocator(page, '[data-testid="mfa-submit"]', locators);
-    this.backupCodeOption = getLocator(page, '[data-testid="backup-code-option"]', locators);
-    this.backupCodeInput = getLocator(page, '[data-testid="backup-code-input"]', locators);
-    this.mfaTimeoutMessage = getLocator(page, '[data-testid="mfa-timeout"]', locators);
-    this.recoveryOption = getLocator(page, '[data-testid="recovery-option"]', locators);
-    this.errorMessage = getLocator(page, '[role="alert"]', locators);
+  getComponentRoot(): Locator {
+    return this.page.locator('.cmp-login').first();
   }
 
-  /**
-   * Navigate to the login page
-   */
-  async navigate(styleGuide: boolean = false): Promise<void> {
-    if (styleGuide) {
-      const url = resolveComponentUrl('login');
-      await this.page.goto(url, { waitUntil: 'domcontentloaded' });
-    } else {
-      // Direct AEM author login URL
-      await this.page.goto('/libs/granite/core/content/login.html', { waitUntil: 'domcontentloaded' });
-    }
+  getUsernameInput(): Locator {
+    return this.page.locator('input[type="email"], input[type="text"][name*="user" i], #username').first();
   }
 
-  /**
-   * Perform standard login (username + password)
-   */
+  getPasswordInput(): Locator {
+    return this.page.locator('input[type="password"], #password').first();
+  }
+
+  getLoginButton(): Locator {
+    return this.page.locator('button[type="submit"], button:has-text("Login"), button:has-text("Sign In"), button:has-text("Continue")').first();
+  }
+
+  getMFAPrompt(): Locator {
+    return this.page.locator('[data-testid="mfa-prompt"], .mfa-prompt, .mfa-container').first();
+  }
+
+  getMFACodeInput(): Locator {
+    return this.page.locator('[data-testid="mfa-code-input"], input[aria-label*="code" i]').first();
+  }
+
+  getMFASubmitButton(): Locator {
+    return this.page.locator('[data-testid="mfa-submit"], button:has-text("Verify"), button:has-text("Submit")').first();
+  }
+
+  getBackupCodeOption(): Locator {
+    return this.page.locator('[data-testid="backup-code-option"], button:has-text("Backup"), a:has-text("Backup")').first();
+  }
+
+  getBackupCodeInput(): Locator {
+    return this.page.locator('[data-testid="backup-code-input"]').first();
+  }
+
+  getMFATimeoutMessage(): Locator {
+    return this.page.locator('[data-testid="mfa-timeout"], .mfa-timeout').first();
+  }
+
+  getRecoveryOption(): Locator {
+    return this.page.locator('[data-testid="recovery-option"], button:has-text("Recovery")').first();
+  }
+
+  getErrorMessage(): Locator {
+    return this.page.locator('[role="alert"], .error-message, .form-error').first();
+  }
+
+  async navigate(baseUrl: string): Promise<void> {
+    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    await this.page.waitForLoadState('networkidle');
+  }
+
   async login(username: string, password: string): Promise<void> {
-    await this.usernameInput.fill(username);
-    await this.passwordInput.fill(password);
-    await this.loginButton.click();
+    await this.getUsernameInput().fill(username);
+    await this.getPasswordInput().fill(password);
+    await this.getLoginButton().click();
     await this.page.waitForLoadState('networkidle');
   }
 
-  /**
-   * Enter MFA code (TOTP or SMS OTP)
-   */
   async enterMFACode(code: string): Promise<void> {
-    await this.mfaCodeInput.fill(code);
-    await this.mfaCodeInput.evaluate((el: HTMLInputElement) => {
-      // Mask characters after input
-      el.type = 'password';
-    });
+    await this.getMFACodeInput().fill(code);
   }
 
-  /**
-   * Submit MFA code
-   */
   async submitMFACode(): Promise<void> {
-    await this.mfaSubmitButton.click();
+    await this.getMFASubmitButton().click();
     await this.page.waitForLoadState('networkidle');
   }
 
-  /**
-   * Complete MFA flow (enter and submit code)
-   */
   async completeMFAFlow(code: string): Promise<void> {
     await this.enterMFACode(code);
     await this.submitMFACode();
   }
 
-  /**
-   * Switch to backup code entry mode
-   */
   async useBackupCode(): Promise<void> {
-    await this.backupCodeOption.click();
-    await this.backupCodeInput.waitFor({ state: 'visible' });
+    await this.getBackupCodeOption().click();
+    await this.getBackupCodeInput().waitFor({ state: 'visible' });
   }
 
-  /**
-   * Enter backup code
-   */
   async enterBackupCode(code: string): Promise<void> {
-    await this.backupCodeInput.fill(code);
+    await this.getBackupCodeInput().fill(code);
   }
 
-  /**
-   * Access recovery options
-   */
   async accessRecoveryOptions(): Promise<void> {
-    await this.recoveryOption.click();
+    await this.getRecoveryOption().click();
   }
 
-  /**
-   * Check if MFA prompt is visible
-   */
   async isMFAPromptVisible(): Promise<boolean> {
-    return this.mfaPrompt.isVisible();
+    return this.getMFAPrompt().isVisible();
   }
 
-  /**
-   * Get MFA timeout message text
-   */
-  async getMFATimeoutMessage(): Promise<string | null> {
-    return this.mfaTimeoutMessage.textContent();
+  async getMFATimeoutText(): Promise<string | null> {
+    return this.getMFATimeoutMessage().textContent();
   }
 
-  /**
-   * Get error message text
-   */
-  async getErrorMessage(): Promise<string | null> {
-    return this.errorMessage.textContent();
+  async getErrorMessageText(): Promise<string | null> {
+    return this.getErrorMessage().textContent();
   }
 
-  /**
-   * Verify login success (redirect check)
-   */
   async isLoginSuccessful(): Promise<boolean> {
-    // Check if we're no longer on login page
     const url = this.page.url();
     return !url.includes('login.html');
   }
 
-  /**
-   * Wait for MFA prompt to appear
-   */
   async waitForMFAPrompt(): Promise<void> {
-    await this.mfaPrompt.waitFor({ state: 'visible', timeout: 10000 });
+    await this.getMFAPrompt().waitFor({ state: 'visible', timeout: 10000 });
   }
 
-  /**
-   * Check component root visibility
-   */
   async isVisible(): Promise<boolean> {
-    return this.componentRoot.isVisible();
+    return this.getComponentRoot().isVisible();
   }
 
-  /**
-   * Get login button state (disabled/enabled)
-   */
   async isLoginButtonDisabled(): Promise<boolean> {
-    return this.loginButton.isDisabled();
+    return this.getLoginButton().isDisabled();
   }
 }
