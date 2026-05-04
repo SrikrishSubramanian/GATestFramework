@@ -33,10 +33,16 @@
           "testCount": 5,
           "specFile": "form-options.images.spec.ts",
           "tags": ["@regression"]
+        },
+        "edge-cases": {
+          "category": "edge-cases",
+          "testCount": 20,
+          "specFile": "form-options.edge-cases.spec.ts",
+          "tags": ["@edge", "@regression"]
         }
       },
-      "totalTests": 42,
-      "lastUpdated": "2026-05-04T23:13:00.000Z"
+      "totalTests": 62,
+      "lastUpdated": "2026-05-05T00:30:00.000Z"
     },
     "section": {
       "component": "section",
@@ -965,10 +971,16 @@
           "testCount": 149,
           "specFile": "login.publish.spec.ts",
           "tags": []
+        },
+        "edge-cases": {
+          "category": "edge-cases",
+          "testCount": 20,
+          "specFile": "login.edge-cases.spec.ts",
+          "tags": ["@edge", "@regression"]
         }
       },
-      "totalTests": 188,
-      "lastUpdated": "2026-05-04T23:13:00.000Z"
+      "totalTests": 208,
+      "lastUpdated": "2026-05-05T00:30:00.000Z"
     },
     "footer": {
       "component": "footer",
@@ -1002,10 +1014,16 @@
           "testCount": 6,
           "specFile": "footer.images.spec.ts",
           "tags": ["@regression"]
+        },
+        "edge-cases": {
+          "category": "edge-cases",
+          "testCount": 20,
+          "specFile": "footer.edge-cases.spec.ts",
+          "tags": ["@edge", "@regression"]
         }
       },
-      "totalTests": 30,
-      "lastUpdated": "2026-05-04T23:13:00.000Z"
+      "totalTests": 50,
+      "lastUpdated": "2026-05-05T00:30:00.000Z"
     },
     "form-text": {
       "component": "form-text",
