@@ -1,0 +1,272 @@
+{
+  "_description": "Multi-strategy locators for the Login component (GAAM-601 MFA support)",
+  "_generated": "2026-04-28",
+  ".cmp-login": {
+    "css": [
+      {
+        "selector": ".cmp-login",
+        "confidence": 0.95,
+        "description": "Login component root"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//div[@class='cmp-login']",
+        "confidence": 0.9,
+        "description": "Login component root via xpath"
+      }
+    ]
+  },
+  "#username": {
+    "css": [
+      {
+        "selector": "#username",
+        "confidence": 0.98,
+        "description": "Username input field"
+      },
+      {
+        "selector": "input[name='username']",
+        "confidence": 0.9,
+        "description": "Username input by name attribute"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//input[@id='username']",
+        "confidence": 0.95,
+        "description": "Username input via XPath ID"
+      }
+    ],
+    "role": [
+      {
+        "selector": "textbox",
+        "confidence": 0.7,
+        "description": "Username as textbox role"
+      }
+    ]
+  },
+  "#password": {
+    "css": [
+      {
+        "selector": "#password",
+        "confidence": 0.98,
+        "description": "Password input field"
+      },
+      {
+        "selector": "input[type='password']",
+        "confidence": 0.88,
+        "description": "Password input by type attribute"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//input[@id='password']",
+        "confidence": 0.95,
+        "description": "Password input via XPath ID"
+      }
+    ],
+    "role": [
+      {
+        "selector": "textbox",
+        "confidence": 0.65,
+        "description": "Password as textbox role"
+      }
+    ]
+  },
+  "[type='submit']": {
+    "css": [
+      {
+        "selector": "[type='submit']",
+        "confidence": 0.95,
+        "description": "Login submit button"
+      },
+      {
+        "selector": "button[type='submit']",
+        "confidence": 0.92,
+        "description": "Submit button by type"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//button[@type='submit']",
+        "confidence": 0.9,
+        "description": "Submit button via XPath"
+      }
+    ],
+    "role": [
+      {
+        "selector": "button",
+        "confidence": 0.7,
+        "description": "Submit as button role"
+      }
+    ]
+  },
+  "[data-testid='mfa-prompt']": {
+    "css": [
+      {
+        "selector": "[data-testid='mfa-prompt']",
+        "confidence": 0.98,
+        "description": "MFA prompt modal"
+      },
+      {
+        "selector": ".mfa-modal",
+        "confidence": 0.85,
+        "description": "MFA modal by class"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//div[@data-testid='mfa-prompt']",
+        "confidence": 0.95,
+        "description": "MFA prompt via XPath"
+      }
+    ]
+  },
+  "[data-testid='mfa-code-input']": {
+    "css": [
+      {
+        "selector": "[data-testid='mfa-code-input']",
+        "confidence": 0.98,
+        "description": "MFA code input field"
+      },
+      {
+        "selector": "input[autocomplete='one-time-code']",
+        "confidence": 0.92,
+        "description": "MFA code input by autocomplete"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//input[@data-testid='mfa-code-input']",
+        "confidence": 0.95,
+        "description": "MFA code input via XPath"
+      }
+    ]
+  },
+  "[data-testid='mfa-submit']": {
+    "css": [
+      {
+        "selector": "[data-testid='mfa-submit']",
+        "confidence": 0.98,
+        "description": "MFA submit button"
+      },
+      {
+        "selector": "button:has-text('Verify')",
+        "confidence": 0.8,
+        "description": "MFA submit by text"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//button[@data-testid='mfa-submit']",
+        "confidence": 0.95,
+        "description": "MFA submit via XPath"
+      }
+    ]
+  },
+  "[data-testid='backup-code-option']": {
+    "css": [
+      {
+        "selector": "[data-testid='backup-code-option']",
+        "confidence": 0.98,
+        "description": "Backup code option link"
+      },
+      {
+        "selector": "a:has-text('Use backup code')",
+        "confidence": 0.85,
+        "description": "Backup code option by text"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//a[@data-testid='backup-code-option']",
+        "confidence": 0.95,
+        "description": "Backup code option via XPath"
+      }
+    ]
+  },
+  "[data-testid='backup-code-input']": {
+    "css": [
+      {
+        "selector": "[data-testid='backup-code-input']",
+        "confidence": 0.98,
+        "description": "Backup code input field"
+      },
+      {
+        "selector": "input[type='text'][placeholder*='backup']",
+        "confidence": 0.85,
+        "description": "Backup code input by placeholder"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//input[@data-testid='backup-code-input']",
+        "confidence": 0.95,
+        "description": "Backup code input via XPath"
+      }
+    ]
+  },
+  "[data-testid='mfa-timeout']": {
+    "css": [
+      {
+        "selector": "[data-testid='mfa-timeout']",
+        "confidence": 0.98,
+        "description": "MFA timeout message"
+      },
+      {
+        "selector": ".mfa-timeout-message",
+        "confidence": 0.85,
+        "description": "MFA timeout by class"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//div[@data-testid='mfa-timeout']",
+        "confidence": 0.95,
+        "description": "MFA timeout via XPath"
+      }
+    ]
+  },
+  "[data-testid='recovery-option']": {
+    "css": [
+      {
+        "selector": "[data-testid='recovery-option']",
+        "confidence": 0.98,
+        "description": "Account recovery option"
+      },
+      {
+        "selector": "a:has-text('recovery')",
+        "confidence": 0.75,
+        "description": "Recovery option by text"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//a[@data-testid='recovery-option']",
+        "confidence": 0.95,
+        "description": "Recovery option via XPath"
+      }
+    ]
+  },
+  "[role='alert']": {
+    "css": [
+      {
+        "selector": "[role='alert']",
+        "confidence": 0.95,
+        "description": "Error alert message"
+      },
+      {
+        "selector": ".error-message",
+        "confidence": 0.8,
+        "description": "Error message by class"
+      }
+    ],
+    "xpath": [
+      {
+        "selector": "//*[@role='alert']",
+        "confidence": 0.9,
+        "description": "Error alert via XPath"
+      }
+    ]
+  }
+}
