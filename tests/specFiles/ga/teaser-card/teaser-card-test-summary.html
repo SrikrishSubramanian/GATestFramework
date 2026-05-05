@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaser Card — Test Summary</title>
+<style>
+  :root {
+    --ga-blue: #003865;
+    --ga-mid: #005ea6;
+    --ga-light: #e8f1f9;
+    --smoke: #e5f7ee;
+    --regression: #e8f1f9;
+    --a11y: #fff7e6;
+    --interaction: #f5e8ff;
+    --matrix: #e8fff0;
+    --visual: #fff0e8;
+    --mobile: #e8f9ff;
+    --negative: #ffeaea;
+    --author: #f0f0f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; color: #1a1a2e; background: #f8f9fa; }
+  header { background: var(--ga-blue); color: white; padding: 24px 32px; }
+  header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  header p { opacity: 0.8; font-size: 13px; }
+  .meta { background: white; padding: 20px 32px; border-bottom: 1px solid #dee2e6; display: flex; flex-wrap: wrap; gap: 24px; }
+  .meta-item { display: flex; flex-direction: column; gap: 3px; }
+  .meta-item .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #6c757d; }
+  .meta-item .value { font-weight: 600; color: var(--ga-blue); }
+  .stats { background: var(--ga-blue); color: white; padding: 16px 32px; display: flex; gap: 32px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 28px; font-weight: 800; }
+  .stat .lbl { font-size: 11px; text-transform: uppercase; opacity: 0.75; margin-top: 2px; }
+  main { max-width: 1200px; margin: 24px auto; padding: 0 16px; }
+  .section { background: white; border: 1px solid #dee2e6; border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+  .section-header { background: #f1f3f5; padding: 14px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+  .section-header:hover { background: #e9ecef; }
+  .section-title { font-weight: 600; font-size: 14px; color: var(--ga-blue); }
+  .section-count { font-size: 12px; color: #6c757d; background: #dee2e6; padding: 2px 8px; border-radius: 12px; }
+  .section-body { display: none; }
+  .section-body.open { display: block; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #f8f9fa; padding: 8px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; color: #6c757d; border-bottom: 2px solid #dee2e6; }
+  td { padding: 10px 16px; border-bottom: 1px solid #f1f3f5; vertical-align: top; font-size: 13px; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8f9fa; }
+  .id { font-family: monospace; font-weight: 700; color: var(--ga-mid); white-space: nowrap; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag { font-size: 11px; padding: 2px 7px; border-radius: 3px; font-weight: 600; white-space: nowrap; }
+  .tag.smoke { background: var(--smoke); color: #1a7a3f; }
+  .tag.regression { background: var(--regression); color: #1a4a7a; }
+  .tag.a11y { background: var(--a11y); color: #7a5a00; }
+  .tag.wcag22 { background: #fff7e6; color: #7a5a00; }
+  .tag.interaction { background: var(--interaction); color: #5a1a7a; }
+  .tag.matrix { background: var(--matrix); color: #1a7a3f; }
+  .tag.visual { background: var(--visual); color: #7a3a1a; }
+  .tag.mobile { background: var(--mobile); color: #1a5a7a; }
+  .tag.negative { background: var(--negative); color: #7a1a1a; }
+  .tag.author { background: var(--author); color: #444; }
+  .viewport { color: #6c757d; font-size: 12px; white-space: nowrap; }
+  .spec-badge { display: inline-block; font-size: 11px; background: #e9ecef; padding: 2px 8px; border-radius: 4px; font-family: monospace; }
+  .files-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; padding: 20px; }
+  .file-card { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 12px 16px; }
+  .file-card .name { font-family: monospace; font-size: 12px; font-weight: 600; color: var(--ga-blue); margin-bottom: 4px; }
+  .file-card .desc { font-size: 12px; color: #6c757d; }
+  a { color: var(--ga-mid); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Teaser Card — Test Summary</h1>
+  <p>GAAM-488 (Epic) · GAAM-524 · GAAM-657 · GAAM-658 · GAAM-659 · GAAM-959</p>
+</header>
+
+<div class="meta">
+  <div class="meta-item">
+    <span class="label">Component</span>
+    <span class="value">teaser-card</span>
+  </div>
+  <div class="meta-item">
+    <span class="label">Jira Epic</span>
+    <span class="value">GAAM-488</span>
+  </div>
+  <div class="meta-item">
+    <span class="label">Child Tickets</span>
+    <span class="value">GAAM-524, GAAM-657, GAAM-658, GAAM-659, GAAM-959</span>
+  </div>
+  <div class="meta-item">
+    <span class="label">Root Selector</span>
+    <span class="value">.cmp-teaser-card</span>
+  </div>
+  <div class="meta-item">
+    <span class="label">Style Guide URL</span>
+    <span class="value">/content/global-atlantic/style-guide/components/teaser-card.html</span>
+  </div>
+  <div class="meta-item">
+    <span class="label">Generated</span>
+    <span class="value">2026-05-04</span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num">93</div><div class="lbl">Total Tests</div></div>
+  <div class="stat"><div class="num">9</div><div class="lbl">Sections</div></div>
+  <div class="stat"><div class="num">5</div><div class="lbl">Spec Files</div></div>
+  <div class="stat"><div class="num">4</div><div class="lbl">Tag Types</div></div>
+</div>
+
+<main>
+
+<!-- Spec Files -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">📁 Generated Spec Files</span>
+    <span class="section-count">5 files</span>
+  </div>
+  <div class="section-body open">
+    <div class="files-grid">
+      <div class="file-card"><div class="name">teaser-card.author.spec.ts</div><div class="desc">Core structure, color/image variants, CTA, accessibility, AEM dialog (51 tests)</div></div>
+      <div class="file-card"><div class="name">teaser-card.interaction.spec.ts</div><div class="desc">Hover states (standard + enhanced), keyboard nav, left/right layout (22 tests)</div></div>
+      <div class="file-card"><div class="name">teaser-card.matrix.spec.ts</div><div class="desc">Combinatorial: position × color × image-style × viewport (16 scenarios)</div></div>
+      <div class="file-card"><div class="name">teaser-card.visual.spec.ts</div><div class="desc">Visual regression baselines: desktop, mobile, tablet, color variants (6 tests)</div></div>
+      <div class="file-card"><div class="name">teaser-card.images.spec.ts</div><div class="desc">Broken images, missing alt, oversized, CLS dimensions (4 tests)</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Core Structure -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — Core Structure</span>
+    <span class="section-count">10 tests</span>
+  </div>
+  <div class="section-body open">
+    <table>
+      <thead><tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td class="id">TC-001</td><td>At least one .cmp-teaser-card renders on style guide page</td><td class="viewport">any</td><td class="tags"><span class="tag smoke">@smoke</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-002</td><td>Card title (.cmp-teaser-card__title) is present and visible</td><td class="viewport">any</td><td class="tags"><span class="tag smoke">@smoke</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-003</td><td>Title uses a semantic heading element (h2–h6)</td><td class="viewport">any</td><td class="tags"><span class="tag smoke">@smoke</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-004</td><td>.cmp-teaser-card root has no inline style attributes</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-005</td><td>.cmp-teaser-card__content is present inside every card</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-006</td><td>Cards stretch to fill full width of their grid column</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-007</td><td>No &lt;script&gt; tags inside .cmp-teaser-card markup</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-008</td><td>No HTL comments appear in published HTML</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-009</td><td>Multiple teaser cards can render on the same page</td><td class="viewport">any</td><td class="tags"><span class="tag smoke">@smoke</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-010</td><td>Component root uses BEM .cmp-teaser-card class (not .ga-teaser-card)</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Color Variants -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — Color Variants</span>
+    <span class="section-count">6 tests</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead><tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td class="id">TC-011</td><td>Border variant: no background fill (transparent)</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-012</td><td>White variant: white background (rgb 255,255,255)</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-013</td><td>Slate variant: non-transparent, non-white background</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-014</td><td>Border variant renders with a visible border</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-015</td><td>Text color is not white on white/border variants</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-016</td><td>All three color modifier classes render distinct backgrounds</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Image Variants -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — Image Variants</span>
+    <span class="section-count">6 tests</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead><tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td class="id">TC-017</td><td>Circle image: image-wrapper has border-radius 50%</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-018</td><td>Rectangle image: not circular (no 50% border-radius)</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-019</td><td>Image-top position: image renders above content vertically</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-020</td><td>Image-left position: flex-direction is row on desktop</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-021</td><td>Image-right position: flex-direction is row on desktop</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-022</td><td>No-image variant: title/content renders without image slot</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CTA & Clickability -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — CTA &amp; Card Clickability</span>
+    <span class="section-count">4 tests</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead><tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td class="id">TC-023</td><td>When CTA authored, .cmp-teaser-card__link is present with valid href</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-024</td><td>When CTA authored, cursor is pointer anywhere within card</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-025</td><td>No CTA authored: card not wrapped in a link</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-026</td><td>CTA link element is an &lt;a&gt; tag</td><td class="viewport">any</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Accessibility -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — Accessibility (WCAG 2.2 AA)</span>
+    <span class="section-count">6 tests</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead><tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td class="id">TC-039</td><td>All card images have alt attributes</td><td class="viewport">any</td><td class="tags"><span class="tag a11y">@a11y</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-040</td><td>Clickable card has aria-label or accessible text on link</td><td class="viewport">any</td><td class="tags"><span class="tag a11y">@a11y</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-041</td><td>CTA has minimum 24×24px touch target (WCAG 2.2 SC 2.5.8)</td><td class="viewport">390px</td><td class="tags"><span class="tag a11y">@a11y</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-042</td><td>Card links are keyboard focusable</td><td class="viewport">1440px</td><td class="tags"><span class="tag a11y">@a11y</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-043</td><td>Focus indicator visible on card link (box-shadow or outline)</td><td class="viewport">1440px</td><td class="tags"><span class="tag a11y">@a11y</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-044</td><td>axe-core WCAG 2.2 AA scan passes on .cmp-teaser-card</td><td class="viewport">any</td><td class="tags"><span class="tag a11y">@a11y</span><span class="tag wcag22">@wcag22</span><span class="tag regression">@regression</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Interaction Spec -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — Hover &amp; Keyboard Interactions</span>
+    <span class="section-count">22 tests · teaser-card.interaction.spec.ts</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead><tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td class="id">TC-INT-001</td><td>Hovering a CTA card changes cursor to pointer</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-002</td><td>Standard hover: card has CSS transition for animation</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-003</td><td>CTA transitions to hover state when card is hovered</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-004</td><td>Non-CTA card: no pointer cursor on hover</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-005</td><td>Card bounding box does not change on hover (no layout shift)</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-006</td><td>Enhanced hover: image expands on card hover</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-007</td><td>Enhanced hover: 30% black overlay appears on hover</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-008</td><td>Enhanced hover: title text transitions to white</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-009</td><td>Enhanced hover: image-wrapper has CSS transition</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-010</td><td>Enhanced hover not on left/right position variants</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-011</td><td>CTA card link reachable via keyboard Tab</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-012</td><td>Focus indicator visible when card link is focused</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-013</td><td>Focused card link not hidden behind sticky header</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-014</td><td>All CTA links are sequentially keyboard-reachable</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-015</td><td>Focus state does not cause card height shift</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-016</td><td>Non-CTA card: background unchanged on hover</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-017</td><td>Non-CTA card: cursor stays default</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-018</td><td>Hover states do not apply at mobile breakpoint</td><td class="viewport">390px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span><span class="tag mobile">@mobile</span></td></tr>
+        <tr><td class="id">TC-INT-019</td><td>Left-position: image is left of content at desktop</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-020</td><td>Right-position: image is right of content at desktop</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-INT-021</td><td>Rectangle Left: stacks vertically on mobile</td><td class="viewport">390px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span><span class="tag mobile">@mobile</span></td></tr>
+        <tr><td class="id">TC-INT-022</td><td>Circle Left: retains side-by-side layout on mobile</td><td class="viewport">390px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span><span class="tag mobile">@mobile</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Matrix Spec -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — State Matrix</span>
+    <span class="section-count">16 scenarios · teaser-card.matrix.spec.ts</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead><tr><th>Scenario</th><th>Combination</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td colspan="4" style="padding:8px 16px;background:#f8f9fa;font-weight:600;font-size:12px;">Position × Color × Viewport (18 scenarios)</td></tr>
+        <tr><td class="id">—</td><td>[desktop] top-position + border-color: card renders visibly</td><td class="viewport">1440px</td><td class="tags"><span class="tag matrix">@matrix</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">—</td><td>[desktop] top-position + white-color; [desktop] top-position + slate-color; etc. (all 18 combinations)</td><td class="viewport">1440px / 390px</td><td class="tags"><span class="tag matrix">@matrix</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td colspan="4" style="padding:8px 16px;background:#f8f9fa;font-weight:600;font-size:12px;">Position × Image Style (6 scenarios)</td></tr>
+        <tr><td class="id">—</td><td>[desktop] top-position + circle-image: image-wrapper has 50% border-radius</td><td class="viewport">1440px</td><td class="tags"><span class="tag matrix">@matrix</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td colspan="4" style="padding:8px 16px;background:#f8f9fa;font-weight:600;font-size:12px;">Enhanced Hover Validity (3 scenarios)</td></tr>
+        <tr><td class="id">—</td><td>Enhanced hover ON + Circle + Top: all active together</td><td class="viewport">1440px</td><td class="tags"><span class="tag matrix">@matrix</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">—</td><td>Enhanced hover must not be active on left/right cards</td><td class="viewport">1440px</td><td class="tags"><span class="tag matrix">@matrix</span><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">—</td><td>Enhanced hover must not be active on rectangle cards</td><td class="viewport">1440px</td><td class="tags"><span class="tag matrix">@matrix</span><span class="tag regression">@regression</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</main>
+
+<script>
+function toggle(header) {
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
+}
+</script>
+</body>
+</html>

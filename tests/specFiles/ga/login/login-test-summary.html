@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Component — Test Summary</title>
+<style>
+  :root {
+    --brand-blue: #003366;
+    --brand-teal: #006B8F;
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --border: #dde2ea;
+    --text: #1a202c;
+    --muted: #6b7280;
+    --tag-smoke: #d1fae5; --tag-smoke-t: #065f46;
+    --tag-regression: #dbeafe; --tag-regression-t: #1e40af;
+    --tag-a11y: #ede9fe; --tag-a11y-t: #5b21b6;
+    --tag-visual: #fef3c7; --tag-visual-t: #92400e;
+    --tag-interaction: #fce7f3; --tag-interaction-t: #9d174d;
+    --tag-matrix: #e0f2fe; --tag-matrix-t: #0c4a6e;
+    --tag-mobile: #f0fdf4; --tag-mobile-t: #166534;
+    --tag-author: #fff7ed; --tag-author-t: #9a3412;
+    --tag-wcag22: #f5f3ff; --tag-wcag22-t: #4c1d95;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+  header { background: var(--brand-blue); color: white; padding: 24px 32px; }
+  header h1 { font-size: 1.5rem; font-weight: 700; }
+  header p { font-size: 0.875rem; opacity: 0.8; margin-top: 4px; }
+  .meta { display: flex; gap: 16px; flex-wrap: wrap; padding: 16px 32px; background: var(--brand-teal); color: white; font-size: 0.8rem; }
+  .meta span { opacity: 0.9; }
+  .meta a { color: #90cdf4; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; padding: 20px 32px; }
+  .stat { background: var(--surface); border-radius: 8px; padding: 16px; border: 1px solid var(--border); text-align: center; }
+  .stat .num { font-size: 2rem; font-weight: 700; color: var(--brand-blue); }
+  .stat .lbl { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+  main { padding: 0 32px 40px; }
+  details { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+  summary { padding: 14px 18px; cursor: pointer; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: '▶'; font-size: 0.7rem; color: var(--muted); transition: transform 0.2s; }
+  details[open] summary::before { transform: rotate(90deg); }
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+  .count { margin-left: auto; background: var(--bg); border-radius: 12px; padding: 2px 10px; font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { text-align: left; padding: 8px 12px; background: var(--bg); color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .tid { font-family: monospace; font-weight: 600; color: var(--brand-teal); white-space: nowrap; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag-smoke { background: var(--tag-smoke); color: var(--tag-smoke-t); }
+  .tag-regression { background: var(--tag-regression); color: var(--tag-regression-t); }
+  .tag-a11y { background: var(--tag-a11y); color: var(--tag-a11y-t); }
+  .tag-visual { background: var(--tag-visual); color: var(--tag-visual-t); }
+  .tag-interaction { background: var(--tag-interaction); color: var(--tag-interaction-t); }
+  .tag-matrix { background: var(--tag-matrix); color: var(--tag-matrix-t); }
+  .tag-mobile { background: var(--tag-mobile); color: var(--tag-mobile-t); }
+  .tag-author { background: var(--tag-author); color: var(--tag-author-t); }
+  .tag-wcag22 { background: var(--tag-wcag22); color: var(--tag-wcag22-t); }
+  .spec-file { font-family: monospace; font-size: 0.78rem; color: var(--muted); padding: 12px 18px 6px; border-top: 1px dashed var(--border); }
+  footer { text-align: center; padding: 16px; font-size: 0.78rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Login Component — Test Summary</h1>
+  <p>GAAM-601 · CMS: Login Component (New) · Generated 2026-04-28</p>
+</header>
+
+<div class="meta">
+  <span>📋 Jira: <strong>GAAM-601</strong></span>
+  <span>📦 Component: <strong>login</strong></span>
+  <span>🎯 BEM root: <strong>.cmp-login</strong></span>
+  <span>📁 Spec dir: <strong>tests/specFiles/ga/login/</strong></span>
+  <span>🗂 POM: <strong>tests/pages/ga/components/loginPage.ts</strong></span>
+  <span>🎨 Figma: <a href="https://www.figma.com/file/C7DwRfnSXu89s42cug1QyS?node-id=23383:8409">Login Hero</a> · <a href="https://www.figma.com/file/AxgsjmlcJgQku4UdjEAN3W?node-id=1206:4414">Approved XD</a></span>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num">89</div><div class="lbl">Total Tests</div></div>
+  <div class="stat"><div class="num">5</div><div class="lbl">Spec Files</div></div>
+  <div class="stat"><div class="num">39</div><div class="lbl">Author Tests</div></div>
+  <div class="stat"><div class="num">20</div><div class="lbl">Interaction</div></div>
+  <div class="stat"><div class="num">21</div><div class="lbl">Matrix</div></div>
+  <div class="stat"><div class="num">7</div><div class="lbl">Visual</div></div>
+  <div class="stat"><div class="num">7</div><div class="lbl">Image</div></div>
+  <div class="stat"><div class="num">8</div><div class="lbl">Fixture States</div></div>
+</div>
+
+<main>
+
+<!-- ── login.author.spec.ts ── -->
+
+<p class="spec-file">📄 login.author.spec.ts</p>
+
+<details open>
+  <summary>Core Structure <span class="count">6 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-001</td><td>Login component root is visible</td><td>Root <code>.cmp-login</code> renders and is not display:none</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-002</td><td>Login hero section is visible</td><td><code>.cmp-login__hero</code> element renders</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-003</td><td>Login form element exists</td><td><code>.cmp-login__form</code> is present and visible</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-004</td><td>Component uses BEM root class .cmp-login</td><td>Root element has exactly the <code>.cmp-login</code> BEM class</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-005</td><td>No inline styles on root</td><td>Root element has no <code>style</code> attribute (AEM dev convention)</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-006</td><td>No &lt;script&gt; tags in markup</td><td>Component DOM contains no inline script elements</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Form Fields <span class="count">7 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-007</td><td>Username input is visible and enabled</td><td>Username field renders and is not disabled</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-008</td><td>Password input is of type="password"</td><td>Password field type attribute is "password" (masked by default)</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-009</td><td>Username input has associated &lt;label&gt;</td><td>Label element associated via for/id or aria-label</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-010</td><td>Password input has associated &lt;label&gt;</td><td>Label element associated via for/id or aria-label</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-011</td><td>Submit button is visible and enabled</td><td>Submit button renders and is clickable</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-012</td><td>"Forgot Username" link is visible</td><td>Forgot Username link renders</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-013</td><td>"Forgot Password" link is visible</td><td>Forgot Password link renders</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Password Toggle <span class="count">4 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-014</td><td>Password toggle button is visible</td><td>Eye icon toggle button renders in password field</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-015</td><td>Password toggle button has accessible name</td><td>Toggle has aria-label or title</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-016</td><td>Clicking toggle changes input type to text</td><td>Password revealed after clicking eye icon</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-017</td><td>Clicking toggle again reverts type to password</td><td>Password re-masked on second click</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Forgot Links / Modals <span class="count">5 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-018</td><td>Clicking "Forgot Username" opens modal</td><td>Modal becomes visible after link click</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-019</td><td>Forgot-username modal has a close button</td><td>Close button present inside modal</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-020</td><td>Clicking close button dismisses modal</td><td>Modal hides after close click</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-021</td><td>Clicking "Forgot Password" opens modal</td><td>Modal becomes visible after link click</td><td class="tags"><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-022</td><td>Forgot-password modal has a close button</td><td>Close button present inside modal</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Validation &amp; Alert Banner <span class="count">5 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-023</td><td>Submitting empty form shows validation feedback</td><td>Required field errors or invalid state class appears on submit</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-024</td><td>Alert banner has aria-live attribute</td><td>Error container announced to screen readers</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-025</td><td>Alert banner is not visible on initial load</td><td>No error shown before user interaction</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-026</td><td>Password field shows error state after invalid submit</td><td>Error class added to password field on validation failure</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-027</td><td>Assistance text is visible and contains phone number</td><td>"(833) ASK-GA4U" text present and visible</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Responsive <span class="count">4 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-028</td><td>Login form visible on mobile (390px)</td><td>Form renders at 390px viewport</td><td class="tags"><span class="badge tag-regression">@regression</span><span class="badge tag-mobile">@mobile</span></td></tr>
+    <tr><td class="tid">LGN-029</td><td>Login hero visible on mobile</td><td>Hero section renders at 390px viewport</td><td class="tags"><span class="badge tag-regression">@regression</span><span class="badge tag-mobile">@mobile</span></td></tr>
+    <tr><td class="tid">LGN-030</td><td>Login form visible on tablet (768px)</td><td>Form renders at 768px viewport</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-031</td><td>Login form visible on desktop (1440px)</td><td>Form renders at 1440px viewport</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>ARIA &amp; Accessibility <span class="count">5 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-032</td><td>Form is a &lt;form&gt; element or has role="form"</td><td>Semantic form element present</td><td class="tags"><span class="badge tag-a11y">@a11y</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-033</td><td>All inputs have accessible names</td><td>Every input has label, aria-label or aria-labelledby</td><td class="tags"><span class="badge tag-a11y">@a11y</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-034</td><td>Password toggle button has aria-label</td><td>Screen readers can identify the toggle purpose</td><td class="tags"><span class="badge tag-a11y">@a11y</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-035</td><td>Modal has role="dialog" and aria-modal="true"</td><td>Modal announced correctly to screen readers</td><td class="tags"><span class="badge tag-a11y">@a11y</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-036</td><td>Login component passes axe-core WCAG 2.2 scan</td><td>Zero axe violations on component</td><td class="tags"><span class="badge tag-a11y">@a11y</span><span class="badge tag-wcag22">@wcag22</span><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>AEM Dialog / GA Overlay <span class="count">3 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-037</td><td>GA overlay has sling:resourceSuperType</td><td>GET /apps/ga/components/content/login.1.json returns 200 with resourceSuperType</td><td class="tags"><span class="badge tag-author">@author</span><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-038</td><td>GA overlay has componentGroup "GA Base"</td><td>Component visible in GA component browser</td><td class="tags"><span class="badge tag-author">@author</span><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-039</td><td>GA dialog has helpPath configured</td><td>Authors have help link in toolbar</td><td class="tags"><span class="badge tag-author">@author</span><span class="badge tag-smoke">@smoke</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<!-- ── login.interaction.spec.ts ── -->
+
+<p class="spec-file">📄 login.interaction.spec.ts</p>
+
+<details>
+  <summary>Password Toggle Interaction <span class="count">5 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-I-001</td><td>Password is masked by default</td><td>input type="password" on load</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-002</td><td>Clicking toggle reveals password</td><td>type changes to "text" after click</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-003</td><td>Second toggle click re-masks password</td><td>type returns to "password" on second click</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-004</td><td>Toggle aria-label/aria-pressed changes on activation</td><td>ARIA state updates to reflect current visibility state</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-005</td><td>Toggle is keyboard-accessible (Enter key)</td><td>Enter key on focused toggle reveals password</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Modal Open/Close <span class="count">7 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-I-006</td><td>Forgot-username modal is hidden on page load</td><td>Modal not visible before user interaction</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-007</td><td>Clicking "Forgot Username" shows modal</td><td>Modal becomes visible after link click</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-008</td><td>Close button dismisses forgot-username modal</td><td>Modal hides after close click</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-009</td><td>Escape key closes forgot-username modal</td><td>Keyboard dismiss works</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-010</td><td>Forgot-password modal is hidden on page load</td><td>Modal not visible before user interaction</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-011</td><td>Clicking "Forgot Password" shows modal</td><td>Modal becomes visible after link click</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-012</td><td>Close button dismisses forgot-password modal</td><td>Modal hides after close click</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Form Focus &amp; Keyboard Navigation <span class="count">5 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-I-013</td><td>Username input receives focus</td><td>Can programmatically focus username field</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-014</td><td>Password input receives focus after Tab</td><td>Tab from username moves focus to password</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-015</td><td>Submit button reachable via Tab</td><td>Submit button can receive keyboard focus</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-016</td><td>Focus indicator visible on username input</td><td>box-shadow or outline not "none" on focus</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-017</td><td>Focus indicator visible on password input</td><td>box-shadow or outline not "none" on focus</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Form State <span class="count">3 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-I-018</td><td>Submit button has CSS transition</td><td>Animated state change (not instant)</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-019</td><td>Username input border changes on focus</td><td>Visual feedback on focus</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-I-020</td><td>Typing in username reflects value</td><td>Input binds value correctly</td><td class="tags"><span class="badge tag-interaction">@interaction</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<!-- ── login.matrix.spec.ts ── -->
+
+<p class="spec-file">📄 login.matrix.spec.ts</p>
+
+<details>
+  <summary>Viewport Matrix <span class="count">9 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-M-001</td><td>Login form visible</td><td>390px mobile</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-002</td><td>Login form visible</td><td>768px tablet</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-003</td><td>Login form visible</td><td>1440px desktop</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-004</td><td>Username input visible</td><td>390px</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-005</td><td>Username input visible</td><td>768px</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-006</td><td>Username input visible</td><td>1440px</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-007</td><td>Submit button visible</td><td>390px</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-008</td><td>Submit button visible</td><td>768px</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-009</td><td>Submit button visible</td><td>1440px</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<details>
+  <summary>Background Variants + Combined <span class="count">12 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-M-010</td><td>Renders on white section</td><td>Component visible inside white background section</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-011</td><td>Renders on slate section</td><td>Component visible inside slate background section</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-012</td><td>Renders on granite section</td><td>Dark bg is non-transparent; component visible</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-013</td><td>Renders on azul section</td><td>Component visible inside azul background section</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-014</td><td>Mobile × white</td><td>Form visible at 390px on white section</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-015</td><td>Mobile × granite</td><td>Form visible at 390px on dark section</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-016</td><td>Desktop × granite</td><td>Form visible at 1440px on dark section</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-017</td><td>Desktop × azul</td><td>Form visible at 1440px on azul section</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-018</td><td>Password masked across 3 viewports</td><td>Loop: type="password" at all viewports</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-019</td><td>Password revealed across 3 viewports</td><td>Loop: type="text" after toggle at all viewports</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-020</td><td>Submit enabled across 3 viewports</td><td>Loop: submit enabled at all viewports</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-M-021</td><td>Forgot links visible across 3 viewports</td><td>Loop: both forgot links visible at all viewports</td><td class="tags"><span class="badge tag-matrix">@matrix</span><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+<!-- ── login.visual.spec.ts ── -->
+
+<p class="spec-file">📄 login.visual.spec.ts</p>
+
+<details>
+  <summary>Visual Regression <span class="count">7 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>Baseline file</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-V-001</td><td>Desktop full component</td><td>login-desktop.png</td><td class="tags"><span class="badge tag-visual">@visual</span></td></tr>
+    <tr><td class="tid">LGN-V-002</td><td>Mobile full component</td><td>login-mobile.png</td><td class="tags"><span class="badge tag-visual">@visual</span></td></tr>
+    <tr><td class="tid">LGN-V-003</td><td>Tablet full component</td><td>login-tablet.png</td><td class="tags"><span class="badge tag-visual">@visual</span></td></tr>
+    <tr><td class="tid">LGN-V-004</td><td>Hero section at desktop</td><td>login-hero-desktop.png</td><td class="tags"><span class="badge tag-visual">@visual</span></td></tr>
+    <tr><td class="tid">LGN-V-005</td><td>Form section at desktop</td><td>login-form-desktop.png</td><td class="tags"><span class="badge tag-visual">@visual</span></td></tr>
+    <tr><td class="tid">LGN-V-006</td><td>Password field masked</td><td>login-password-masked.png</td><td class="tags"><span class="badge tag-visual">@visual</span></td></tr>
+    <tr><td class="tid">LGN-V-007</td><td>Password field revealed</td><td>login-password-revealed.png</td><td class="tags"><span class="badge tag-visual">@visual</span></td></tr>
+  </table>
+</details>
+
+<!-- ── login.images.spec.ts ── -->
+
+<p class="spec-file">📄 login.images.spec.ts</p>
+
+<details>
+  <summary>Image Health <span class="count">7 tests</span></summary>
+  <table>
+    <tr><th>ID</th><th>Scenario</th><th>What it checks</th><th>Tags</th></tr>
+    <tr><td class="tid">LGN-IMG-001</td><td>Hero image has alt attribute</td><td>alt not null (WCAG 1.1.1)</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-IMG-002</td><td>Hero image is not broken</td><td>naturalWidth &gt; 0</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-IMG-003</td><td>All images have alt attributes</td><td>Every img in component has alt</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-IMG-004</td><td>No images are oversized (&gt;500KB)</td><td>Response content-length check on DAM images</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-IMG-005</td><td>Hero image has explicit width/height</td><td>Prevents CLS — width or height attr present</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-IMG-006</td><td>Toggle icon SVG has aria-hidden or title</td><td>Screen reader accessibility for eye icon</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+    <tr><td class="tid">LGN-IMG-007</td><td>No broken image requests on page load</td><td>All image responses return 2xx</td><td class="tags"><span class="badge tag-regression">@regression</span></td></tr>
+  </table>
+</details>
+
+</main>
+<footer>Auto-generated from GAAM-601 · 2026-04-28 · Global Atlantic AEM Automation</footer>
+</body>
+</html>

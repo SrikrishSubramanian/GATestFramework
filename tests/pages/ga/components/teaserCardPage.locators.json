@@ -1,0 +1,63 @@
+{
+  "component": "teaser-card",
+  "generatedAt": "2026-05-04T00:00:00.000Z",
+  "source": "jira",
+  "entries": {
+    "cardRoot": {
+      "name": "cardRoot",
+      "component": "teaser-card",
+      "strategies": [
+        { "type": "css", "value": ".cmp-teaser-card", "confidence": 0.9 },
+        { "type": "xpath", "value": "//*[contains(@class,'cmp-teaser-card')]", "confidence": 0.6 }
+      ]
+    },
+    "cardImage": {
+      "name": "cardImage",
+      "component": "teaser-card",
+      "strategies": [
+        { "type": "css", "value": ".cmp-teaser-card__image", "confidence": 0.85 },
+        { "type": "xpath", "value": "//img[contains(@class,'cmp-teaser-card__image')]", "confidence": 0.6 }
+      ]
+    },
+    "cardEyebrow": {
+      "name": "cardEyebrow",
+      "component": "teaser-card",
+      "strategies": [
+        { "type": "css", "value": ".cmp-teaser-card__eyebrow", "confidence": 0.85 },
+        { "type": "xpath", "value": "//*[contains(@class,'cmp-teaser-card__eyebrow')]", "confidence": 0.6 }
+      ]
+    },
+    "cardTitle": {
+      "name": "cardTitle",
+      "component": "teaser-card",
+      "strategies": [
+        { "type": "css", "value": ".cmp-teaser-card__title", "confidence": 0.9 },
+        { "type": "xpath", "value": "//*[contains(@class,'cmp-teaser-card__title')]", "confidence": 0.6 }
+      ]
+    },
+    "cardDescriptor": {
+      "name": "cardDescriptor",
+      "component": "teaser-card",
+      "strategies": [
+        { "type": "css", "value": ".cmp-teaser-card__descriptor", "confidence": 0.85 },
+        { "type": "xpath", "value": "//*[contains(@class,'cmp-teaser-card__descriptor')]", "confidence": 0.6 }
+      ]
+    },
+    "cardLink": {
+      "name": "cardLink",
+      "component": "teaser-card",
+      "strategies": [
+        { "type": "css", "value": ".cmp-teaser-card__link", "confidence": 0.85 },
+        { "type": "xpath", "value": "//a[contains(@class,'cmp-teaser-card__link')]", "confidence": 0.65 }
+      ]
+    },
+    "cardContent": {
+      "name": "cardContent",
+      "component": "teaser-card",
+      "strategies": [
+        { "type": "css", "value": ".cmp-teaser-card__content", "confidence": 0.85 },
+        { "type": "xpath", "value": "//*[contains(@class,'cmp-teaser-card__content')]", "confidence": 0.6 }
+      ]
+    }
+  }
+}

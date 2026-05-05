@@ -17,3 +17,7 @@ tests/data/baselines/
 tests/environments/.env.*.credentials
 .playwright-session/
 .auth-state.json
+
+# Playwright
+node_modules/
+/playwright/.auth/
