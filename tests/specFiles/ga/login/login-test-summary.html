@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Login — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>login.author.spec.ts, login.publish.spec.ts</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">68</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">16</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">2</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">10</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — CSV Test Cases</h2>
+        <span class="section-count">8</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-001</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC1</td>
+              <td class="viewport">Mobile</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC1</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-002</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC2</td>
+              <td class="viewport">Mobile</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC2</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-003</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC3</td>
+              <td class="viewport">Mobile</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC3</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-004</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC4</td>
+              <td class="viewport">Mobile</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC4</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-005</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC5</td>
+              <td class="viewport">Mobile</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC5</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-006</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC6</td>
+              <td class="viewport">Mobile</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC6</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-007</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC7</td>
+              <td class="viewport">Mobile</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC7</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-008</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC8</td>
+              <td class="viewport">Mobile</td>
+              <td>Login Page - Multi-Factor Authentication (MFA) Support — AC8</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Happy Path</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-009</td>
+              <td>Login renders correctly</td>
+              
+              <td>Login renders correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-010</td>
+              <td>Login interactive elements are functional</td>
+              
+              <td>Login interactive elements are functional</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Negative &amp; Boundary</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-011</td>
+              <td>Login handles empty content gracefully</td>
+              
+              <td>Login handles empty content gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-012</td>
+              <td>Login handles missing images</td>
+              
+              <td>Login handles missing images</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Responsive</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-013</td>
+              <td>Login adapts to mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Login adapts to mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-014</td>
+              <td>Login adapts to tablet viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Login adapts to tablet viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Console &amp; Resources</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-015</td>
+              <td>Login produces no JS errors</td>
+              
+              <td>Login produces no JS errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Broken Images</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-016</td>
+              <td>Login all images load successfully</td>
+              
+              <td>Login all images load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-017</td>
+              <td>Login all images have alt attributes</td>
+              
+              <td>Login all images have alt attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Accessibility</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-018</td>
+              <td>Login passes axe-core scan</td>
+              
+              <td>Login passes axe-core scan</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-019</td>
+              <td>Login interactive elements meet 24px target size</td>
+              
+              <td>Login interactive elements meet 24px target size</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-020</td>
+              <td>Login focus is not obscured by sticky elements</td>
+              
+              <td>Login focus is not obscured by sticky elements</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — AEM Dialog Configuration</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-021</td>
+              <td>Login dialog has helpPath configured</td>
+              
+              <td>Login dialog has helpPath configured</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-022</td>
+              <td>Login helpPath points to correct component details page</td>
+              
+              <td>Login helpPath points to correct component details page</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — CSV Test Cases</h2>
+        <span class="section-count">32</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-001</td>
+              <td>Verify Desktop Layout Structure</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify Desktop Layout Structure</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-002</td>
+              <td>Background Color Validation</td>
+              <td class="viewport">Desktop</td>
+              <td>Background Color Validation</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-003</td>
+              <td>Left Panel Content Order (Desktop)</td>
+              <td class="viewport">Desktop</td>
+              <td>Left Panel Content Order (Desktop)</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-004</td>
+              <td>Key Point List - Max Items</td>
+              <td class="viewport">Desktop</td>
+              <td>Key Point List - Max Items</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-005</td>
+              <td>Key Point List - Empty State</td>
+              <td class="viewport">Desktop</td>
+              <td>Key Point List - Empty State</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">Functional</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-006</td>
+              <td>Subheadline &amp; Fine Print Suppression</td>
+              <td class="viewport">Desktop</td>
+              <td>Subheadline &amp; Fine Print Suppression</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">Functional</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-007</td>
+              <td>Decorative SVG Pattern (Desktop)</td>
+              <td class="viewport">Desktop</td>
+              <td>Decorative SVG Pattern (Desktop)</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-008</td>
+              <td>Login Card Visuals</td>
+              <td class="viewport">Desktop</td>
+              <td>Login Card Visuals</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-009</td>
+              <td>Form Card Content Centering</td>
+              <td class="viewport">Desktop</td>
+              <td>Form Card Content Centering</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-010</td>
+              <td>AEM Dialog Data Integration</td>
+              <td class="viewport">Desktop</td>
+              <td>AEM Dialog Data Integration</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">Functional</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-011</td>
+              <td>Password Masking Toggle</td>
+              <td class="viewport">Desktop</td>
+              <td>Password Masking Toggle</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">Functional</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-012</td>
+              <td>Toggle Button ARIA Update</td>
+              <td class="viewport">Desktop</td>
+              <td>Toggle Button ARIA Update</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-013</td>
+              <td>Empty Validation: Both Fields</td>
+              <td class="viewport">Desktop</td>
+              <td>Empty Validation: Both Fields</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-014</td>
+              <td>Empty Validation: Username Only</td>
+              <td class="viewport">Desktop</td>
+              <td>Empty Validation: Username Only</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-015</td>
+              <td>Data Preservation on Validation</td>
+              <td class="viewport">Desktop</td>
+              <td>Data Preservation on Validation</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">Functional</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-016</td>
+              <td>Error Message Association</td>
+              <td class="viewport">Desktop</td>
+              <td>Error Message Association</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-017</td>
+              <td>Error Message Screen Reader Trigger</td>
+              <td class="viewport">Desktop</td>
+              <td>Error Message Screen Reader Trigger</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-018</td>
+              <td>Mobile: Single Column Layout</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile: Single Column Layout</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-019</td>
+              <td>Mobile: Heading Repositioning</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile: Heading Repositioning</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-020</td>
+              <td>Mobile: Key Point List Hidden</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile: Key Point List Hidden</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">Functional</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-021</td>
+              <td>Mobile: Fine Print Position</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile: Fine Print Position</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-022</td>
+              <td>Mobile: Footer Reordering</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile: Footer Reordering</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-023</td>
+              <td>Mobile: Decorative SVG Hidden</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile: Decorative SVG Hidden</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-024</td>
+              <td>Semantic HTML: Headings</td>
+              <td class="viewport">Desktop</td>
+              <td>Semantic HTML: Headings</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-025</td>
+              <td>Input Labels</td>
+              <td class="viewport">Desktop</td>
+              <td>Input Labels</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-026</td>
+              <td>Required Fields ARIA</td>
+              <td class="viewport">Desktop</td>
+              <td>Required Fields ARIA</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-027</td>
+              <td>Focus Indicators</td>
+              <td class="viewport">Desktop</td>
+              <td>Focus Indicators</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-028</td>
+              <td>Touch Target Size</td>
+              <td class="viewport">Desktop</td>
+              <td>Touch Target Size</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-029</td>
+              <td>Tab Order Logic (Desktop)</td>
+              <td class="viewport">Desktop</td>
+              <td>Tab Order Logic (Desktop)</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-030</td>
+              <td>Tab Order Logic (Mobile)</td>
+              <td class="viewport">Mobile</td>
+              <td>Tab Order Logic (Mobile)</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">A11y</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-031</td>
+              <td>Template Availability</td>
+              <td class="viewport">Desktop</td>
+              <td>Template Availability</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">Functional</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-032</td>
+              <td>Phone Number Wrapping</td>
+              <td class="viewport">Desktop</td>
+              <td>Phone Number Wrapping</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">UI</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Happy Path</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-033</td>
+              <td>Login renders correctly</td>
+              
+              <td>Login renders correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-034</td>
+              <td>Login interactive elements are functional</td>
+              
+              <td>Login interactive elements are functional</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Negative &amp; Boundary</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-035</td>
+              <td>Login handles empty content gracefully</td>
+              
+              <td>Login handles empty content gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-036</td>
+              <td>Login handles missing images</td>
+              
+              <td>Login handles missing images</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Responsive</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-037</td>
+              <td>Login adapts to mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Login adapts to mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-038</td>
+              <td>Login adapts to tablet viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Login adapts to tablet viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Console &amp; Resources</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-039</td>
+              <td>Login produces no JS errors</td>
+              
+              <td>Login produces no JS errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Broken Images</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-040</td>
+              <td>Login all images load successfully</td>
+              
+              <td>Login all images load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-041</td>
+              <td>Login all images have alt attributes</td>
+              
+              <td>Login all images have alt attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Accessibility</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-042</td>
+              <td>Login passes axe-core scan</td>
+              
+              <td>Login passes axe-core scan</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-043</td>
+              <td>Login interactive elements meet 24px target size</td>
+              
+              <td>Login interactive elements meet 24px target size</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-044</td>
+              <td>Login focus is not obscured by sticky elements</td>
+              
+              <td>Login focus is not obscured by sticky elements</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — AEM Dialog Configuration</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LGN-045</td>
+              <td>Login dialog has helpPath configured</td>
+              
+              <td>Login dialog has helpPath configured</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LGN-046</td>
+              <td>Login helpPath points to correct component details page</td>
+              
+              <td>Login helpPath points to correct component details page</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>login.author.spec.ts</code>, <code>login.publish.spec.ts</code>
+    &mdash; login &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "ticket_key": "GAAM-601",
+  "title": "Login Page - Multi-Factor Authentication (MFA) Support",
+  "status": "In Progress",
+  "priority": "High",
+  "assignee": "QA Team",
+  "user_stories": [
+    "As a content admin, I want to authenticate with multi-factor authentication (MFA) when logging into the AEM author instance, so that my account is more secure",
+    "As a QA engineer, I want to verify MFA flow works across different authentication methods (OTP, TOTP, SMS)"
+  ],
+  "acceptance_criteria": [
+    "Given a user with MFA enabled, when entering valid credentials, the system should prompt for a second factor (OTP, TOTP, or SMS)",
+    "Given the MFA prompt is displayed, the user should be able to enter the MFA code in a dedicated input field",
+    "Given a valid MFA code is entered, the user should be logged in successfully",
+    "Given an invalid MFA code is entered, an error message should be displayed and the user should remain on the MFA prompt",
+    "Given the MFA timeout is exceeded (5 minutes), the user should be redirected to the login page",
+    "Given the user selects 'Use backup code', an alternative input field should be displayed",
+    "Given a valid backup code is entered, the user should be logged in successfully",
+    "Given the user clicks 'Can\\'t access your authenticator', a recovery option should be displayed"
+  ],
+  "technical_requirements": [
+    "MFA component should be rendered as a modal overlay over the login page",
+    "Support TOTP (Time-based One-Time Password) standard",
+    "Support SMS-based OTP delivery",
+    "MFA input should mask characters after input (security)",
+    "Implement 5-minute timeout for MFA session",
+    "Store MFA device fingerprint for remembering device for 30 days",
+    "Integrate with Adobe IMS API for MFA validation"
+  ],
+  "non_functional_requirements": [
+    "Must meet WCAG 2.2 AA accessibility requirements for form inputs and error messages",
+    "Should work across all responsive breakpoints (mobile, tablet, desktop)",
+    "MFA flow must complete within 3 seconds (validation + response)",
+    "Must support light and dark theme variants",
+    "Must support browser autofill for OTP codes (HTML5 autocomplete=one-time-code)"
+  ],
+  "dependencies": [
+    "GAAM-600 (Login page base component)"
+  ],
+  "references": [
+    "https://www.figma.com/file/mfa-design/login-mfa-flow",
+    "https://adobe.io/products/marketing-cloud/experience-manager"
+  ],
+  "raw_description": "Add Multi-Factor Authentication (MFA) support to the GA login page. Users with MFA enabled should be prompted for a second authentication factor after entering their credentials. The MFA flow should support TOTP, SMS OTP, and backup codes.\n\nDesign: https://www.figma.com/file/mfa-design/login-mfa-flow\n\nKey features:\n- TOTP and SMS OTP support\n- Backup code option\n- Device remembering (30 days)\n- 5-minute MFA session timeout\n- Modal overlay on login page\n- Full accessibility (WCAG 2.2 AA)\n- Light/dark theme support"
+}

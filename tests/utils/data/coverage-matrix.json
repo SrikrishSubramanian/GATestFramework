@@ -1,75 +1,48 @@
 {
-  "lastUpdated": "2026-04-17T11:43:30.014Z",
+  "lastUpdated": "2026-04-28T19:26:46.833Z",
   "components": {
     "form-options": {
       "component": "form-options",
       "categories": {
-        "csv": {
-          "category": "csv",
-          "testCount": 37,
-          "specFile": "form-options.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
-        },
         "happy-path": {
           "category": "happy-path",
-          "testCount": 37,
+          "testCount": 25,
           "specFile": "form-options.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": ["@a11y", "@mobile"]
         },
-        "negative": {
-          "category": "negative",
-          "testCount": 37,
-          "specFile": "form-options.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "form-options.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
         },
-        "responsive": {
-          "category": "responsive",
-          "testCount": 37,
-          "specFile": "form-options.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+        "interaction": {
+          "category": "interaction",
+          "testCount": 6,
+          "specFile": "form-options.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
         },
-        "console-errors": {
-          "category": "console-errors",
-          "testCount": 37,
-          "specFile": "form-options.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 1,
+          "specFile": "form-options.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 37,
-          "specFile": "form-options.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "testCount": 5,
+          "specFile": "form-options.images.spec.ts",
+          "tags": ["@regression"]
         },
-        "accessibility": {
-          "category": "accessibility",
-          "testCount": 37,
-          "specFile": "form-options.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+        "edge-cases": {
+          "category": "edge-cases",
+          "testCount": 20,
+          "specFile": "form-options.edge-cases.spec.ts",
+          "tags": ["@edge", "@regression"]
         }
       },
-      "totalTests": 259,
-      "lastUpdated": "2026-03-16T07:02:39.651Z"
+      "totalTests": 62,
+      "lastUpdated": "2026-05-05T00:30:00.000Z"
     },
     "section": {
       "component": "section",
@@ -144,72 +117,76 @@
     "text": {
       "component": "text",
       "categories": {
-        "csv": {
-          "category": "csv",
-          "testCount": 51,
-          "specFile": "text.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
-        },
         "happy-path": {
           "category": "happy-path",
-          "testCount": 51,
+          "testCount": 19,
           "specFile": "text.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": ["@a11y", "@mobile"]
         },
-        "negative": {
-          "category": "negative",
-          "testCount": 51,
-          "specFile": "text.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "text.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
         },
-        "responsive": {
-          "category": "responsive",
-          "testCount": 51,
-          "specFile": "text.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+        "interaction": {
+          "category": "interaction",
+          "testCount": 5,
+          "specFile": "text.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
         },
-        "console-errors": {
-          "category": "console-errors",
-          "testCount": 51,
-          "specFile": "text.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 1,
+          "specFile": "text.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 51,
-          "specFile": "text.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
-        },
-        "accessibility": {
-          "category": "accessibility",
-          "testCount": 51,
-          "specFile": "text.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "testCount": 5,
+          "specFile": "text.images.spec.ts",
+          "tags": ["@regression"]
         }
       },
-      "totalTests": 357,
-      "lastUpdated": "2026-03-16T14:31:12.756Z"
+      "totalTests": 35,
+      "lastUpdated": "2026-05-04T23:13:00.000Z"
+    },
+    "spacer": {
+      "component": "spacer",
+      "categories": {
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 22,
+          "specFile": "spacer.author.spec.ts",
+          "tags": ["@a11y", "@mobile"]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "spacer.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 5,
+          "specFile": "spacer.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 1,
+          "specFile": "spacer.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 5,
+          "specFile": "spacer.images.spec.ts",
+          "tags": ["@regression"]
+        }
+      },
+      "totalTests": 38,
+      "lastUpdated": "2026-05-04T23:13:00.000Z"
     },
     "statistic": {
       "component": "statistic",
@@ -441,65 +418,39 @@
     "hero-fifty-fifty": {
       "component": "hero-fifty-fifty",
       "categories": {
-        "csv": {
-          "category": "csv",
-          "testCount": 57,
-          "specFile": "hero-fifty-fifty.author.spec.ts",
-          "tags": [
-            "@a11y"
-          ]
-        },
         "happy-path": {
           "category": "happy-path",
-          "testCount": 57,
+          "testCount": 45,
           "specFile": "hero-fifty-fifty.author.spec.ts",
-          "tags": [
-            "@a11y"
-          ]
+          "tags": ["@a11y"]
         },
-        "negative": {
-          "category": "negative",
-          "testCount": 57,
-          "specFile": "hero-fifty-fifty.author.spec.ts",
-          "tags": [
-            "@a11y"
-          ]
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "hero-fifty-fifty.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
         },
-        "responsive": {
-          "category": "responsive",
-          "testCount": 57,
-          "specFile": "hero-fifty-fifty.author.spec.ts",
-          "tags": [
-            "@a11y"
-          ]
+        "interaction": {
+          "category": "interaction",
+          "testCount": 5,
+          "specFile": "hero-fifty-fifty.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
         },
-        "console-errors": {
-          "category": "console-errors",
-          "testCount": 57,
-          "specFile": "hero-fifty-fifty.author.spec.ts",
-          "tags": [
-            "@a11y"
-          ]
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 1,
+          "specFile": "hero-fifty-fifty.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 57,
-          "specFile": "hero-fifty-fifty.author.spec.ts",
-          "tags": [
-            "@a11y"
-          ]
-        },
-        "accessibility": {
-          "category": "accessibility",
-          "testCount": 57,
-          "specFile": "hero-fifty-fifty.author.spec.ts",
-          "tags": [
-            "@a11y"
-          ]
+          "testCount": 5,
+          "specFile": "hero-fifty-fifty.images.spec.ts",
+          "tags": ["@regression"]
         }
       },
-      "totalTests": 399,
-      "lastUpdated": "2026-03-17T07:22:03.091Z"
+      "totalTests": 61,
+      "lastUpdated": "2026-05-04T23:13:00.000Z"
     },
     "navigation": {
       "component": "navigation",
@@ -591,51 +542,39 @@
     "rate-table": {
       "component": "rate-table",
       "categories": {
-        "csv": {
-          "category": "csv",
-          "testCount": 14,
-          "specFile": "rate-table.author.spec.ts",
-          "tags": []
-        },
         "happy-path": {
           "category": "happy-path",
-          "testCount": 14,
+          "testCount": 27,
           "specFile": "rate-table.author.spec.ts",
-          "tags": []
+          "tags": ["@a11y", "@mobile"]
         },
-        "negative": {
-          "category": "negative",
-          "testCount": 14,
-          "specFile": "rate-table.author.spec.ts",
-          "tags": []
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "rate-table.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
         },
-        "responsive": {
-          "category": "responsive",
-          "testCount": 14,
-          "specFile": "rate-table.author.spec.ts",
-          "tags": []
+        "interaction": {
+          "category": "interaction",
+          "testCount": 5,
+          "specFile": "rate-table.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
         },
-        "console-errors": {
-          "category": "console-errors",
-          "testCount": 14,
-          "specFile": "rate-table.author.spec.ts",
-          "tags": []
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 1,
+          "specFile": "rate-table.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 14,
-          "specFile": "rate-table.author.spec.ts",
-          "tags": []
-        },
-        "accessibility": {
-          "category": "accessibility",
-          "testCount": 14,
-          "specFile": "rate-table.author.spec.ts",
-          "tags": []
+          "testCount": 5,
+          "specFile": "rate-table.images.spec.ts",
+          "tags": ["@regression"]
         }
       },
-      "totalTests": 98,
-      "lastUpdated": "2026-03-18T10:40:14.544Z"
+      "totalTests": 43,
+      "lastUpdated": "2026-05-04T23:13:00.000Z"
     },
     "content-trail": {
       "component": "content-trail",
@@ -993,6 +932,172 @@
       },
       "totalTests": 4,
       "lastUpdated": "2026-04-17T11:43:30.013Z"
+    },
+    "login": {
+      "component": "login",
+      "categories": {
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 22,
+          "specFile": "login.author.spec.ts",
+          "tags": ["@a11y", "@mobile"]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "login.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 6,
+          "specFile": "login.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 1,
+          "specFile": "login.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 5,
+          "specFile": "login.images.spec.ts",
+          "tags": ["@regression"]
+        },
+        "comprehensive": {
+          "category": "comprehensive",
+          "testCount": 149,
+          "specFile": "login.publish.spec.ts",
+          "tags": []
+        },
+        "edge-cases": {
+          "category": "edge-cases",
+          "testCount": 20,
+          "specFile": "login.edge-cases.spec.ts",
+          "tags": ["@edge", "@regression"]
+        }
+      },
+      "totalTests": 208,
+      "lastUpdated": "2026-05-05T00:30:00.000Z"
+    },
+    "footer": {
+      "component": "footer",
+      "categories": {
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 12,
+          "specFile": "footer.author.spec.ts",
+          "tags": ["@a11y", "@mobile"]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "footer.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 6,
+          "specFile": "footer.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 1,
+          "specFile": "footer.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 6,
+          "specFile": "footer.images.spec.ts",
+          "tags": ["@regression"]
+        },
+        "edge-cases": {
+          "category": "edge-cases",
+          "testCount": 20,
+          "specFile": "footer.edge-cases.spec.ts",
+          "tags": ["@edge", "@regression"]
+        }
+      },
+      "totalTests": 50,
+      "lastUpdated": "2026-05-05T00:30:00.000Z"
+    },
+    "form-text": {
+      "component": "form-text",
+      "categories": {
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 10,
+          "specFile": "form-text.author.spec.ts",
+          "tags": ["@a11y", "@mobile"]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "form-text.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 6,
+          "specFile": "form-text.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 1,
+          "specFile": "form-text.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 5,
+          "specFile": "form-text.images.spec.ts",
+          "tags": ["@regression"]
+        }
+      },
+      "totalTests": 27,
+      "lastUpdated": "2026-05-05T00:00:00.000Z"
+    },
+    "accordion-tabs-feature": {
+      "component": "accordion-tabs-feature",
+      "categories": {
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 41,
+          "specFile": "accordion-tabs-feature.author.spec.ts",
+          "tags": ["@a11y"]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 29,
+          "specFile": "accordion-tabs-feature.interaction.spec.ts",
+          "tags": ["@interaction", "@regression"]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 34,
+          "specFile": "accordion-tabs-feature.matrix.spec.ts",
+          "tags": ["@matrix", "@regression"]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 5,
+          "specFile": "accordion-tabs-feature.visual.spec.ts",
+          "tags": ["@visual", "@regression"]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 5,
+          "specFile": "accordion-tabs-feature.images.spec.ts",
+          "tags": ["@regression"]
+        }
+      },
+      "totalTests": 114,
+      "lastUpdated": "2026-05-05T00:00:00.000Z"
     }
   }
 }

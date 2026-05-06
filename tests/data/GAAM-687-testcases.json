@@ -1,0 +1,512 @@
+﻿[
+    {
+        "Expected":  "Expected Result",
+        "ID":  "TC_ID",
+        "PreCondition":  "Pre-Condition",
+        "Type":  "Test Type",
+        "TestData":  "Test Data",
+        "Steps":  "Test Steps",
+        "Scenario":  "Test Scenario",
+        "Status":  "Status"
+    },
+    {
+        "Expected":  "Component renders with split layout (desktop)",
+        "ID":  "TC_001",
+        "PreCondition":  "Login page exists",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Load login page",
+        "Scenario":  "Verify login component renders on page",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Background should be Slate color",
+        "ID":  "TC_002",
+        "PreCondition":  "Page loaded",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect background",
+        "Scenario":  "Verify Slate background applied",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Card background should be white",
+        "ID":  "TC_003",
+        "PreCondition":  "Page loaded",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect card",
+        "Scenario":  "Verify login card background is white",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "SVG visible and aria-hidden",
+        "ID":  "TC_004",
+        "PreCondition":  "Desktop view",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect left panel",
+        "Scenario":  "Verify decorative SVG present on desktop",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "SVG should not render",
+        "ID":  "TC_005",
+        "PreCondition":  "Mobile viewport",
+        "Type":  "Responsive",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify decorative SVG hidden on mobile",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "H1 → subheadline → key points → fine print",
+        "ID":  "TC_006",
+        "PreCondition":  "Desktop view",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect content order",
+        "Scenario":  "Verify left panel content order",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "List visible only if items exist",
+        "ID":  "TC_007",
+        "PreCondition":  "Key points configured",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify key points list renders only when authored",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Only 4 items rendered",
+        "ID":  "TC_008",
+        "PreCondition":  "Key points authored",
+        "Type":  "Edge",
+        "TestData":  "N/A",
+        "Steps":  "1. Add \u003e4 items",
+        "Scenario":  "Verify max 4 key points allowed",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Subheadline not displayed",
+        "ID":  "TC_009",
+        "PreCondition":  "No subheadline",
+        "Type":  "Negative",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify subheadline suppressed if not authored",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Fine print not displayed",
+        "ID":  "TC_010",
+        "PreCondition":  "No fine print",
+        "Type":  "Negative",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify fine print suppressed if not authored",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "H2 → fields → CTA → footer",
+        "ID":  "TC_011",
+        "PreCondition":  "Page loaded",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect card",
+        "Scenario":  "Verify login card structure",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Label, required indicator, input, forgot link present",
+        "ID":  "TC_012",
+        "PreCondition":  "Page loaded",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect username field",
+        "Scenario":  "Verify username field structure",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Label, required indicator, input, toggle, forgot link present",
+        "ID":  "TC_013",
+        "PreCondition":  "Page loaded",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect password field",
+        "Scenario":  "Verify password field structure",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Input masked",
+        "ID":  "TC_014",
+        "PreCondition":  "Page loaded",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Enter password",
+        "Scenario":  "Verify password masked by default",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Password visibility toggles",
+        "ID":  "TC_015",
+        "PreCondition":  "Page loaded",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Click toggle",
+        "Scenario":  "Verify show/hide password toggle",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Label changes to Show/Hide password",
+        "ID":  "TC_016",
+        "PreCondition":  "Toggle present",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Click toggle",
+        "Scenario":  "Verify toggle aria-label updates",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Button visible and enabled",
+        "ID":  "TC_017",
+        "PreCondition":  "Page loaded",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect CTA",
+        "Scenario":  "Verify Continue button visible and clickable",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "No hardcoded strings",
+        "ID":  "TC_018",
+        "PreCondition":  "Content authored",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect labels",
+        "Scenario":  "Verify form copy sourced from AEM",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Error shown below username",
+        "ID":  "TC_019",
+        "PreCondition":  "Username empty",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Click Continue",
+        "Scenario":  "Verify empty validation for username",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Error shown below password",
+        "ID":  "TC_020",
+        "PreCondition":  "Password empty",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Click Continue",
+        "Scenario":  "Verify empty validation for password",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Errors shown for both fields",
+        "ID":  "TC_021",
+        "PreCondition":  "Both empty",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Click Continue",
+        "Scenario":  "Verify validation when both fields empty",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Red border + error text displayed",
+        "ID":  "TC_022",
+        "PreCondition":  "Validation triggered",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect fields",
+        "Scenario":  "Verify error styling applied",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Value not cleared",
+        "ID":  "TC_023",
+        "PreCondition":  "Field filled",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Submit form",
+        "Scenario":  "Verify populated field retains value",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Button remains clickable",
+        "ID":  "TC_024",
+        "PreCondition":  "Validation triggered",
+        "Type":  "Functional",
+        "TestData":  "N/A",
+        "Steps":  "1. Click Continue",
+        "Scenario":  "Verify Continue button remains enabled after validation",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "No alert banner displayed",
+        "ID":  "TC_025",
+        "PreCondition":  "Validation triggered",
+        "Type":  "Negative",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect UI",
+        "Scenario":  "Verify no alert banner in empty validation state",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Errors announced immediately",
+        "ID":  "TC_026",
+        "PreCondition":  "Screen reader enabled",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Trigger validation",
+        "Scenario":  "Verify error messages announced to screen readers",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Uses form, label, input correctly",
+        "ID":  "TC_027",
+        "PreCondition":  "Page loaded",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect DOM",
+        "Scenario":  "Verify form semantic structure",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "aria-required=\"true\" present",
+        "ID":  "TC_028",
+        "PreCondition":  "Fields present",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect inputs",
+        "Scenario":  "Verify aria-required attributes",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Error linked to input",
+        "ID":  "TC_029",
+        "PreCondition":  "Error present",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect DOM",
+        "Scenario":  "Verify aria-describedby for errors",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Focus indicators visible",
+        "ID":  "TC_030",
+        "PreCondition":  "Keyboard navigation",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Tab through elements",
+        "Scenario":  "Verify focus states visible",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Order follows logical flow",
+        "ID":  "TC_031",
+        "PreCondition":  "Page loaded",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Tab through",
+        "Scenario":  "Verify logical tab order",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Descriptive names provided",
+        "ID":  "TC_032",
+        "PreCondition":  "Links present",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect links",
+        "Scenario":  "Verify link accessibility names",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "aria-hidden=\"true\" applied",
+        "ID":  "TC_033",
+        "PreCondition":  "Key points visible",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect icons",
+        "Scenario":  "Verify checkmark icons aria-hidden",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Ratio ≥ 4.5:1",
+        "ID":  "TC_034",
+        "PreCondition":  "Contrast tool",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Measure",
+        "Scenario":  "Verify contrast for all text",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Min 24x24px size",
+        "ID":  "TC_035",
+        "PreCondition":  "Page loaded",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect clickable elements",
+        "Scenario":  "Verify target size for interactive elements",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Two-column layout",
+        "ID":  "TC_036",
+        "PreCondition":  "Desktop viewport",
+        "Type":  "Responsive",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify desktop layout split view",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Single column layout",
+        "ID":  "TC_037",
+        "PreCondition":  "Mobile viewport",
+        "Type":  "Responsive",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify mobile layout single column",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Key points not visible",
+        "ID":  "TC_038",
+        "PreCondition":  "Mobile viewport",
+        "Type":  "Responsive",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify key points hidden on mobile",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Text above form card",
+        "ID":  "TC_039",
+        "PreCondition":  "Mobile viewport",
+        "Type":  "Responsive",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect layout",
+        "Scenario":  "Verify heading/subheadline above form on mobile",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Fine print below form",
+        "ID":  "TC_040",
+        "PreCondition":  "Mobile viewport",
+        "Type":  "Responsive",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect layout",
+        "Scenario":  "Verify fine print below form on mobile",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Register link above assistance text",
+        "ID":  "TC_041",
+        "PreCondition":  "Mobile viewport",
+        "Type":  "Responsive",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect footer",
+        "Scenario":  "Verify footer section order on mobile",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Wraps correctly",
+        "ID":  "TC_042",
+        "PreCondition":  "Mobile viewport",
+        "Type":  "Responsive",
+        "TestData":  "N/A",
+        "Steps":  "1. Inspect assistance text",
+        "Scenario":  "Verify phone number wraps on mobile",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Component not rendered",
+        "ID":  "TC_043",
+        "PreCondition":  "Rate Admin page",
+        "Type":  "Negative",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify no component on Rate Admin template",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "All variations shown",
+        "ID":  "TC_044",
+        "PreCondition":  "Style guide available",
+        "Type":  "UI",
+        "TestData":  "N/A",
+        "Steps":  "1. Open page",
+        "Scenario":  "Verify style guide page exists",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "Guide accessible and accurate",
+        "ID":  "TC_045",
+        "PreCondition":  "Docs available",
+        "Type":  "Documentation",
+        "TestData":  "N/A",
+        "Steps":  "1. Open guide",
+        "Scenario":  "Verify authoring guide exists",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "No JS/CSS errors",
+        "ID":  "TC_046",
+        "PreCondition":  "Dev tools open",
+        "Type":  "Technical",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify no console errors",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "No critical/major issues",
+        "ID":  "TC_047",
+        "PreCondition":  "Level Access tool",
+        "Type":  "Accessibility",
+        "TestData":  "N/A",
+        "Steps":  "1. Run scan",
+        "Scenario":  "Verify accessibility scan passes",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "UI handles overflow properly",
+        "ID":  "TC_048",
+        "PreCondition":  "Long text entered",
+        "Type":  "Edge",
+        "TestData":  "N/A",
+        "Steps":  "1. Enter long input",
+        "Scenario":  "Verify behavior with long input text",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "State remains stable",
+        "ID":  "TC_049",
+        "PreCondition":  "User interaction",
+        "Type":  "Edge",
+        "TestData":  "N/A",
+        "Steps":  "1. Click toggle repeatedly",
+        "Scenario":  "Verify rapid toggle of password visibility",
+        "Status":  "Pass"
+    },
+    {
+        "Expected":  "UI renders correctly without gaps",
+        "ID":  "TC_050",
+        "PreCondition":  "No optional content",
+        "Type":  "Edge",
+        "TestData":  "N/A",
+        "Steps":  "1. Load page",
+        "Scenario":  "Verify form rendering without optional fields",
+        "Status":  "Pass"
+    }
+]
