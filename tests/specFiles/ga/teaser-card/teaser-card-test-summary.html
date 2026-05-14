@@ -72,7 +72,7 @@
 
 <header>
   <h1>Teaser Card — Test Summary</h1>
-  <p>GAAM-488 (Epic) · GAAM-524 · GAAM-657 · GAAM-658 · GAAM-659 · GAAM-959</p>
+  <p>GAAM-488 (Epic) · GAAM-524 · GAAM-657 · GAAM-658 · GAAM-659 · GAAM-959 · GAAM-1051</p>
 </header>
 
 <div class="meta">
@@ -86,7 +86,7 @@
   </div>
   <div class="meta-item">
     <span class="label">Child Tickets</span>
-    <span class="value">GAAM-524, GAAM-657, GAAM-658, GAAM-659, GAAM-959</span>
+    <span class="value">GAAM-524, GAAM-657, GAAM-658, GAAM-659, GAAM-959, GAAM-1051</span>
   </div>
   <div class="meta-item">
     <span class="label">Root Selector</span>
@@ -103,8 +103,8 @@
 </div>
 
 <div class="stats">
-  <div class="stat"><div class="num">93</div><div class="lbl">Total Tests</div></div>
-  <div class="stat"><div class="num">9</div><div class="lbl">Sections</div></div>
+  <div class="stat"><div class="num">102</div><div class="lbl">Total Tests</div></div>
+  <div class="stat"><div class="num">11</div><div class="lbl">Sections</div></div>
   <div class="stat"><div class="num">5</div><div class="lbl">Spec Files</div></div>
   <div class="stat"><div class="num">4</div><div class="lbl">Tag Types</div></div>
 </div>
@@ -119,7 +119,7 @@
   </div>
   <div class="section-body open">
     <div class="files-grid">
-      <div class="file-card"><div class="name">teaser-card.author.spec.ts</div><div class="desc">Core structure, color/image variants, CTA, accessibility, AEM dialog (51 tests)</div></div>
+      <div class="file-card"><div class="name">teaser-card.author.spec.ts</div><div class="desc">Core structure, color/image variants, CTA, accessibility, AEM dialog, standard/enhanced hover (60 tests — updated GAAM-659/GAAM-1051)</div></div>
       <div class="file-card"><div class="name">teaser-card.interaction.spec.ts</div><div class="desc">Hover states (standard + enhanced), keyboard nav, left/right layout (22 tests)</div></div>
       <div class="file-card"><div class="name">teaser-card.matrix.spec.ts</div><div class="desc">Combinatorial: position × color × image-style × viewport (16 scenarios)</div></div>
       <div class="file-card"><div class="name">teaser-card.visual.spec.ts</div><div class="desc">Visual regression baselines: desktop, mobile, tablet, color variants (6 tests)</div></div>
@@ -267,6 +267,45 @@
         <tr><td class="id">TC-INT-020</td><td>Right-position: image is right of content at desktop</td><td class="viewport">1440px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span></td></tr>
         <tr><td class="id">TC-INT-021</td><td>Rectangle Left: stacks vertically on mobile</td><td class="viewport">390px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span><span class="tag mobile">@mobile</span></td></tr>
         <tr><td class="id">TC-INT-022</td><td>Circle Left: retains side-by-side layout on mobile</td><td class="viewport">390px</td><td class="tags"><span class="tag interaction">@interaction</span><span class="tag regression">@regression</span><span class="tag mobile">@mobile</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Standard Hover Behavior (GAAM-659 / GAAM-1051) -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — Standard Hover Behavior</span>
+    <span class="section-count">5 tests · GAAM-659 · GAAM-1051</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead><tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td class="id">TC-052</td><td>Card with CTA has CSS transition configured for hover ripple animation</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-053</td><td>Hover ripple/reveal animation uses a CSS pseudo-element (::before/::after) with transition</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-054</td><td>CTA element has CSS transition for simultaneous hover animation</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-055</td><td>[GAAM-1051 regression] Card without CTA does not show pointer cursor on hover</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-056</td><td>Hover animation styles suppressed via @media (hover: none) / (pointer: coarse) on touch devices</td><td class="viewport">390px</td><td class="tags"><span class="tag regression">@regression</span><span class="tag mobile">@mobile</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Enhanced Hover Extended (GAAM-659) -->
+<div class="section">
+  <div class="section-header" onclick="toggle(this)">
+    <span class="section-title">TeaserCard — Enhanced Hover Extended</span>
+    <span class="section-count">4 tests · GAAM-659</span>
+  </div>
+  <div class="section-body">
+    <table>
+      <thead><tr><th>ID</th><th>Scenario</th><th>Viewport</th><th>Tags</th></tr></thead>
+      <tbody>
+        <tr><td class="id">TC-057</td><td>Enhanced Hover: image wrapper is positioned (absolute/relative) to enable fill-card expansion</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-058</td><td>Enhanced Hover: dark overlay pseudo-element has semi-transparent black background (30% overlay)</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-059</td><td>Enhanced Hover: content area has CSS transition for text color animation (white on hover)</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
+        <tr><td class="id">TC-060</td><td>Enhanced Hover: at least one transition has non-zero duration (animation not instant)</td><td class="viewport">1440px</td><td class="tags"><span class="tag regression">@regression</span></td></tr>
       </tbody>
     </table>
   </div>

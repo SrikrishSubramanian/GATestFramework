@@ -1,0 +1,77 @@
+{
+  "component": "site-header",
+  "generatedFrom": "GAAM-394 dialog spec (live DOM scan pending XF deployment — GAAM-792)",
+  "entries": {
+    "root": {
+      "name": "root",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header", "confidence": 0.95 },
+        { "type": "xpath", "value": "//*[contains(@class,'cmp-site-header')]", "confidence": 0.8 }
+      ]
+    },
+    "logo": {
+      "name": "logo",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header__logo", "confidence": 0.9 },
+        { "type": "css", "value": ".cmp-site-header a img", "confidence": 0.7 },
+        { "type": "xpath", "value": "//img[contains(@class,'logo')]", "confidence": 0.6 }
+      ]
+    },
+    "topNav": {
+      "name": "topNav",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header__top-nav", "confidence": 0.9 },
+        { "type": "css", "value": ".cmp-site-header__top-navigation", "confidence": 0.8 },
+        { "type": "xpath", "value": "//*[contains(@class,'site-header__top')]", "confidence": 0.7 }
+      ]
+    },
+    "mainNav": {
+      "name": "mainNav",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header__main-nav", "confidence": 0.9 },
+        { "type": "css", "value": ".cmp-site-header__navigation", "confidence": 0.8 },
+        { "type": "xpath", "value": "//*[contains(@class,'site-header__main')]", "confidence": 0.7 }
+      ]
+    },
+    "loginTrigger": {
+      "name": "loginTrigger",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header__login-trigger", "confidence": 0.9 },
+        { "type": "css", "value": ".cmp-site-header__login button", "confidence": 0.8 },
+        { "type": "role", "value": "button[name*='login' i]", "confidence": 0.7 }
+      ]
+    },
+    "searchTrigger": {
+      "name": "searchTrigger",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header__search-trigger", "confidence": 0.9 },
+        { "type": "css", "value": ".cmp-site-header__search button", "confidence": 0.8 },
+        { "type": "role", "value": "button[aria-label*='search' i]", "confidence": 0.7 }
+      ]
+    },
+    "roleSelector": {
+      "name": "roleSelector",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header__role-selector", "confidence": 0.9 },
+        { "type": "css", "value": ".cmp-role-selector", "confidence": 0.8 },
+        { "type": "xpath", "value": "//*[contains(@class,'role-selector')]", "confidence": 0.7 }
+      ]
+    },
+    "navCta": {
+      "name": "navCta",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header__nav-cta", "confidence": 0.9 },
+        { "type": "css", "value": ".cmp-site-header__cta", "confidence": 0.8 },
+        { "type": "xpath", "value": "//*[contains(@class,'site-header') and contains(@class,'cta')]", "confidence": 0.7 }
+      ]
+    },
+    "navPanel": {
+      "name": "navPanel",
+      "strategies": [
+        { "type": "css", "value": ".cmp-site-header__nav-panel", "confidence": 0.9 },
+        { "type": "css", "value": ".cmp-site-header__panel", "confidence": 0.8 },
+        { "type": "xpath", "value": "//*[contains(@class,'site-header__panel')]", "confidence": 0.7 }
+      ]
+    }
+  }
+}

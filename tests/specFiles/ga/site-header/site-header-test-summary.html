@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Header — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--granite); background: var(--slate); line-height: 1.6; }
+    .header { background: var(--azul); color: var(--white); padding: 32px 40px; }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item { background: rgba(255,255,255,0.15); border-radius: 6px; padding: 8px 14px; font-size: 13px; }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag { display: inline-block; background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; margin: 2px 4px 2px 0; }
+    .stats { display: flex; gap: 0; background: var(--white); border-bottom: 1px solid var(--border); }
+    .stat-box { flex: 1; text-align: center; padding: 18px 12px; border-right: 1px solid var(--border); }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section { background: var(--white); border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--border); overflow: hidden; }
+    .section-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: #F8F9FA; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
+    .section-header:hover { background: #EEF0F2; }
+    .section-title { font-size: 15px; font-weight: 600; }
+    .section-count { font-size: 12px; color: #6C757D; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #6C757D; }
+    .section-body { display: none; }
+    .section-body.open { display: block; }
+    .test-row { display: grid; grid-template-columns: 100px 1fr 140px 160px; gap: 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+    .test-row:last-child { border-bottom: none; }
+    .test-row > div { padding: 10px 16px; }
+    .test-row:hover > div { background: #F8F9FA; }
+    .test-id { font-family: 'Consolas', 'Courier New', monospace; font-size: 12px; color: var(--azul); font-weight: 600; }
+    .test-title { color: var(--granite); }
+    .test-viewport { color: #6C757D; font-size: 12px; }
+    .test-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag { display: inline-block; padding: 2px 7px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+    .tag-smoke { background: #D4EDDA; color: #155724; }
+    .tag-regression { background: #D1ECF1; color: #0C5460; }
+    .tag-a11y { background: #FFF3CD; color: #856404; }
+    .tag-author { background: #E2D9F3; color: #432874; }
+    .tag-fixme { background: #F8D7DA; color: #721C24; }
+    .col-header { display: grid; grid-template-columns: 100px 1fr 140px 160px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; padding: 8px 16px; background: #F8F9FA; border-bottom: 1px solid var(--border); }
+    .note-box { background: #FFF3CD; border: 1px solid #FFEAA7; border-radius: 6px; padding: 12px 16px; margin: 0 20px 16px; font-size: 13px; color: #856404; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Site Header — Test Case Summary</h1>
+  <p>AEM dialog configuration and component registration tests for the Site Header component.</p>
+  <div class="meta-bar">
+    <div class="meta-item">
+      <strong>Jira Tickets</strong>
+      <span>
+        <span class="jira-tag">GAAM-394</span>
+        <span class="jira-tag">GAAM-4</span>
+      </span>
+    </div>
+    <div class="meta-item">
+      <strong>Dependencies</strong>
+      <span>GAAM-397 (Desktop FE) · GAAM-393 (Mobile FE) · GAAM-792 (XF Setup) · GAAM-403 (Nav) · GAAM-389 (ImgNested) · GAAM-899 (Cookie)</span>
+    </div>
+    <div class="meta-item">
+      <strong>Spec File</strong>
+      <span>site-header.author.spec.ts</span>
+    </div>
+    <div class="meta-item">
+      <strong>Component</strong>
+      <span>.cmp-site-header · XF Template only</span>
+    </div>
+    <div class="meta-item">
+      <strong>Test Mode</strong>
+      <span>Author (REST API + AEM dialog)</span>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat-box"><div class="num">47</div><div class="label">Total Tests</div></div>
+  <div class="stat-box"><div class="num">7</div><div class="label">Sections</div></div>
+  <div class="stat-box"><div class="num">1</div><div class="label">Spec File</div></div>
+  <div class="stat-box"><div class="num">8</div><div class="label">@smoke</div></div>
+  <div class="stat-box"><div class="num">45</div><div class="label">@regression</div></div>
+  <div class="stat-box"><div class="num">2</div><div class="label">@fixme (UI)</div></div>
+</div>
+
+<div class="content">
+
+  <div class="note-box">
+    <strong>Note:</strong> GAAM-394 is a BE dialog story. All tests use the AEM REST API to inspect dialog configuration — no live page navigation required. Two tests (<code>SHDR-039</code>, <code>SHDR-044</code>) are marked <code>test.fixme</code> pending XF deployment (GAAM-792). FE rendering, interaction, and responsive tests are out of scope for this ticket (see GAAM-397 / GAAM-393).
+  </div>
+
+  <!-- Section 1: Registration -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">Component Registration (GAAM-394)</span>
+      <span><span class="section-count">6 tests</span> <span class="chevron">▼</span></span>
+    </div>
+    <div class="section-body open">
+      <div class="col-header"><div>ID</div><div>Scenario</div><div>Viewport</div><div>Tags</div></div>
+      <div class="test-row"><div class="test-id">SHDR-001</div><div class="test-title">GA overlay exists at correct Sling path</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-smoke">@smoke</span><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-002</div><div class="test-title">resourceSuperType delegates to kkr-aem-base site-header</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-003</div><div class="test-title">componentGroup is "GA Base"</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-004</div><div class="test-title">GA _cq_dialog overlay exists</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-smoke">@smoke</span><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-005</div><div class="test-title">Dialog has helpPath configured</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-smoke">@smoke</span><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-006</div><div class="test-title">Dialog helpPath points to correct component details page</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+    </div>
+  </div>
+
+  <!-- Section 2: Dialog Structure -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">Dialog Structure: 3-Tab Layout (GAAM-394)</span>
+      <span><span class="section-count">8 tests</span> <span class="chevron">▼</span></span>
+    </div>
+    <div class="section-body open">
+      <div class="col-header"><div>ID</div><div>Scenario</div><div>Viewport</div><div>Tags</div></div>
+      <div class="test-row"><div class="test-id">SHDR-007</div><div class="test-title">Dialog uses a tabbed layout (granite/ui tabs resource type)</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-008</div><div class="test-title">Tab 1 is titled "Top Navigation"</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-009</div><div class="test-title">Tab 2 is titled "Role Selector"</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-010</div><div class="test-title">Tab 3 is titled "Main Navigation"</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-011</div><div class="test-title">All 3 required tabs are present in the dialog</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-012</div><div class="test-title">Tab 1 contains a Logo Image DAM asset field</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-013</div><div class="test-title">Tab 1 contains Login Tray Sections multifield</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-014</div><div class="test-title">Tab 3 contains a panel container for Main Navigation panels</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+    </div>
+  </div>
+
+  <!-- Section 3: Required Fields -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">Required Field Configuration (GAAM-394)</span>
+      <span><span class="section-count">8 tests</span> <span class="chevron">▼</span></span>
+    </div>
+    <div class="section-body open">
+      <div class="col-header"><div>ID</div><div>Scenario</div><div>Viewport</div><div>Tags</div></div>
+      <div class="test-row"><div class="test-id">SHDR-015</div><div class="test-title">Logo Alt Text field is present in the dialog</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-016</div><div class="test-title">Logo Link path field is present in the dialog</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-017</div><div class="test-title">Top Nav Items multifield is present in the dialog</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-018</div><div class="test-title">Role Items multifield is present in the Role Selector tab</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-019</div><div class="test-title">Role Items multifield enforces max 5 entries (GAAM-308)</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-020</div><div class="test-title">Cookie Duration is a number field in the dialog</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-021</div><div class="test-title">Login Label field is present with default value "Login"</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-022</div><div class="test-title">Main Nav CTA Label and CTA URL fields are both present</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+    </div>
+  </div>
+
+  <!-- Section 4: Conditional Logic -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">Conditional Field Logic (GAAM-394)</span>
+      <span><span class="section-count">7 tests</span> <span class="chevron">▼</span></span>
+    </div>
+    <div class="section-body open">
+      <div class="col-header"><div>ID</div><div>Scenario</div><div>Viewport</div><div>Tags</div></div>
+      <div class="test-row"><div class="test-id">SHDR-023</div><div class="test-title">Top Nav Type dropdown drives conditional sub-field visibility</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-024</div><div class="test-title">Search Enabled toggle is present in Tab 1</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-025</div><div class="test-title">Search Page Path field exists for conditional rendering</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-026</div><div class="test-title">Authenticated Only toggle is present on panel dialog fields</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-027</div><div class="test-title">Additional Login Subheadline field is present</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-028</div><div class="test-title">Manage Account URL field is present (conditional on Manage Account Label)</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-029</div><div class="test-title">Post-Logout Redirect URL field is present</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+    </div>
+  </div>
+
+  <!-- Section 5: Multifield Constraints -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">Multifield Constraints (GAAM-394)</span>
+      <span><span class="section-count">5 tests</span> <span class="chevron">▼</span></span>
+    </div>
+    <div class="section-body open">
+      <div class="col-header"><div>ID</div><div>Scenario</div><div>Viewport</div><div>Tags</div></div>
+      <div class="test-row"><div class="test-id">SHDR-030</div><div class="test-title">Top Nav Items supports nested Secondary Nav Links multifield</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-031</div><div class="test-title">Login Tray Sections has nested Section Links multifield</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-032</div><div class="test-title">Role Items entries have Role Title and Role URL sub-fields</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-033</div><div class="test-title">Panels container exposes Navigation Items child reference (GAAM-403)</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-034</div><div class="test-title">Panels container exposes Image with Nested Content child reference (GAAM-389)</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+    </div>
+  </div>
+
+  <!-- Section 6: Author QA -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">Author QA Checklist (GAAM-394)</span>
+      <span><span class="section-count">7 tests</span> <span class="chevron">▼</span></span>
+    </div>
+    <div class="section-body open">
+      <div class="col-header"><div>ID</div><div>Scenario</div><div>Viewport</div><div>Tags</div></div>
+      <div class="test-row"><div class="test-id">SHDR-035</div><div class="test-title">Component is only available for GA (overlay exists under /apps/ga)</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-smoke">@smoke</span><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-036</div><div class="test-title">fieldDescription/helpText configured on at least one dialog field</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-037</div><div class="test-title">URL/path fields use AEM path picker (pathbrowser resource type)</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-038</div><div class="test-title">Cookie Duration global field is configured in the dialog</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-039</div><div class="test-title">Author documentation accessible via dialog help icon</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-author">@author</span><span class="tag tag-smoke">@smoke</span><span class="tag tag-fixme">fixme</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-040</div><div class="test-title">Component jcr:title is present for the component browser</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-smoke">@smoke</span><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-041</div><div class="test-title">All mandatory fields are marked required in dialog JSON</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+    </div>
+  </div>
+
+  <!-- Section 7: Convention Compliance -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span class="section-title">AEM Convention Compliance (GAAM-394)</span>
+      <span><span class="section-count">6 tests</span> <span class="chevron">▼</span></span>
+    </div>
+    <div class="section-body open">
+      <div class="col-header"><div>ID</div><div>Scenario</div><div>Viewport</div><div>Tags</div></div>
+      <div class="test-row"><div class="test-id">SHDR-042</div><div class="test-title">Component has cq:icon configured for the component browser</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-043</div><div class="test-title">Dialog sling:resourceType is the cq/gui authoring dialog</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-044</div><div class="test-title">Component is restricted to XF Template (GAAM-792)</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-author">@author</span><span class="tag tag-regression">@regression</span><span class="tag tag-fixme">fixme</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-045</div><div class="test-title">Dialog multifield rows use granite/ui multifield resource type</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-046</div><div class="test-title">External link auto-detection uses the internal domains generic list</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+      <div class="test-row"><div class="test-id">SHDR-047</div><div class="test-title">Panel CTA Label and Panel CTA URL fields are both present for paired validation</div><div class="test-viewport">All</div><div class="test-tags"><span class="tag tag-regression">@regression</span></div></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggle(header) {
+    const body = header.nextElementSibling;
+    const chevron = header.querySelector('.chevron');
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open', !isOpen);
+    chevron.style.transform = isOpen ? 'rotate(-90deg)' : '';
+  }
+</script>
+</body>
+</html>
