@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T19:26:46.833Z",
+  "lastUpdated": "2026-05-15T06:44:15.303Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -8,37 +8,54 @@
           "category": "happy-path",
           "testCount": 25,
           "specFile": "form-options.author.spec.ts",
-          "tags": ["@a11y", "@mobile"]
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "form-options.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 6,
           "specFile": "form-options.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 1,
           "specFile": "form-options.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 5,
           "specFile": "form-options.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         },
         "edge-cases": {
           "category": "edge-cases",
           "testCount": 20,
           "specFile": "form-options.edge-cases.spec.ts",
-          "tags": ["@edge", "@regression"]
+          "tags": [
+            "@edge",
+            "@regression"
+          ]
         }
       },
       "totalTests": 62,
@@ -121,31 +138,45 @@
           "category": "happy-path",
           "testCount": 19,
           "specFile": "text.author.spec.ts",
-          "tags": ["@a11y", "@mobile"]
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "text.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 5,
           "specFile": "text.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 1,
           "specFile": "text.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 5,
           "specFile": "text.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         }
       },
       "totalTests": 35,
@@ -158,31 +189,45 @@
           "category": "happy-path",
           "testCount": 22,
           "specFile": "spacer.author.spec.ts",
-          "tags": ["@a11y", "@mobile"]
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "spacer.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 5,
           "specFile": "spacer.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 1,
           "specFile": "spacer.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 5,
           "specFile": "spacer.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         }
       },
       "totalTests": 38,
@@ -422,31 +467,44 @@
           "category": "happy-path",
           "testCount": 45,
           "specFile": "hero-fifty-fifty.author.spec.ts",
-          "tags": ["@a11y"]
+          "tags": [
+            "@a11y"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "hero-fifty-fifty.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 5,
           "specFile": "hero-fifty-fifty.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 1,
           "specFile": "hero-fifty-fifty.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 5,
           "specFile": "hero-fifty-fifty.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         }
       },
       "totalTests": 61,
@@ -546,31 +604,45 @@
           "category": "happy-path",
           "testCount": 27,
           "specFile": "rate-table.author.spec.ts",
-          "tags": ["@a11y", "@mobile"]
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "rate-table.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 5,
           "specFile": "rate-table.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 1,
           "specFile": "rate-table.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 5,
           "specFile": "rate-table.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         }
       },
       "totalTests": 43,
@@ -940,31 +1012,45 @@
           "category": "happy-path",
           "testCount": 22,
           "specFile": "login.author.spec.ts",
-          "tags": ["@a11y", "@mobile"]
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "login.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 6,
           "specFile": "login.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 1,
           "specFile": "login.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 5,
           "specFile": "login.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         },
         "comprehensive": {
           "category": "comprehensive",
@@ -976,7 +1062,10 @@
           "category": "edge-cases",
           "testCount": 20,
           "specFile": "login.edge-cases.spec.ts",
-          "tags": ["@edge", "@regression"]
+          "tags": [
+            "@edge",
+            "@regression"
+          ]
         }
       },
       "totalTests": 208,
@@ -989,37 +1078,54 @@
           "category": "happy-path",
           "testCount": 12,
           "specFile": "footer.author.spec.ts",
-          "tags": ["@a11y", "@mobile"]
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "footer.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 6,
           "specFile": "footer.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 1,
           "specFile": "footer.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 6,
           "specFile": "footer.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         },
         "edge-cases": {
           "category": "edge-cases",
           "testCount": 20,
           "specFile": "footer.edge-cases.spec.ts",
-          "tags": ["@edge", "@regression"]
+          "tags": [
+            "@edge",
+            "@regression"
+          ]
         }
       },
       "totalTests": 50,
@@ -1032,31 +1138,45 @@
           "category": "happy-path",
           "testCount": 10,
           "specFile": "form-text.author.spec.ts",
-          "tags": ["@a11y", "@mobile"]
+          "tags": [
+            "@a11y",
+            "@mobile"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "form-text.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 6,
           "specFile": "form-text.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 1,
           "specFile": "form-text.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 5,
           "specFile": "form-text.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         }
       },
       "totalTests": 27,
@@ -1069,31 +1189,44 @@
           "category": "happy-path",
           "testCount": 41,
           "specFile": "accordion-tabs-feature.author.spec.ts",
-          "tags": ["@a11y"]
+          "tags": [
+            "@a11y"
+          ]
         },
         "interaction": {
           "category": "interaction",
           "testCount": 29,
           "specFile": "accordion-tabs-feature.interaction.spec.ts",
-          "tags": ["@interaction", "@regression"]
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
         },
         "state-matrix": {
           "category": "state-matrix",
           "testCount": 34,
           "specFile": "accordion-tabs-feature.matrix.spec.ts",
-          "tags": ["@matrix", "@regression"]
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
         },
         "visual": {
           "category": "visual",
           "testCount": 5,
           "specFile": "accordion-tabs-feature.visual.spec.ts",
-          "tags": ["@visual", "@regression"]
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
         },
         "broken-images": {
           "category": "broken-images",
           "testCount": 5,
           "specFile": "accordion-tabs-feature.images.spec.ts",
-          "tags": ["@regression"]
+          "tags": [
+            "@regression"
+          ]
         }
       },
       "totalTests": 114,
