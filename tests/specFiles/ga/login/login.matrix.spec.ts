@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+<<<<<<< HEAD
 import { LoginPage } from '../../../pages/ga/components/loginPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
@@ -25,10 +26,18 @@ const SECTION_SLATE = '.cmp-section--background-color-slate';
 const SECTION_GRANITE = '.cmp-section--background-color-granite';
 const SECTION_AZUL = '.cmp-section--background-color-azul';
 
+=======
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import ENV from '../../../utils/infra/env';
+
+const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
+>>>>>>> login_page
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 });
 
+<<<<<<< HEAD
 // ─── Viewport Matrix (LGN-M-001 – LGN-M-009) ─────────────────────────────────
 
 test.describe('Login — Viewport Matrix', () => {
@@ -282,4 +291,41 @@ test.describe('Login — Input State Matrix', () => {
       }
     }
   });
+=======
+test.describe('Login — State Matrix', () => {
+  const modes = ['signin', 'signup', 'mfa'];
+  const viewports = [
+    { name: 'mobile', width: 375, height: 667 },
+    { name: 'tablet', width: 768, height: 1024 },
+    { name: 'desktop', width: 1440, height: 900 }
+  ];
+
+  for (const mode of modes) {
+    for (const viewport of viewports) {
+      const testName = `[LOGIN-MATRIX-${mode}-${viewport.name}] @matrix @regression Login (${mode}, ${viewport.name})`;
+
+      test(testName, async ({ page }) => {
+        await page.setViewportSize({
+          width: viewport.width,
+          height: viewport.height
+        });
+
+        await loginToAEMAuthor(page);
+        await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`, { waitUntil: 'networkidle' });
+
+        const form = page.locator('form').first();
+        await expect(form).toBeVisible();
+
+        // Verify form adapts to viewport
+        const width = await form.evaluate(el => el.offsetWidth);
+        expect(width).toBeLessThanOrEqual(viewport.width);
+
+        // Check for errors
+        const errors: string[] = [];
+        page.on('pageerror', e => errors.push(e.message));
+        expect(errors).toEqual([]);
+      });
+    }
+  }
+>>>>>>> login_page
 });

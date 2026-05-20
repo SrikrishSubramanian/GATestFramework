@@ -76,7 +76,7 @@ export default defineConfig({
   // retries: process.env.CI ? 2 : 0,
   retries: 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html', { outputFolder: reportDir }],
@@ -124,10 +124,6 @@ export default defineConfig({
         ...devices['Desktop Firefox'],
         // deviceScaleFactor: undefined,
         // viewport: null,
-        launchOptions: {
-          slowMo: 1000,
-          // args: ["--start-maximized"]
-        },
       },
     },
 
@@ -137,11 +133,6 @@ export default defineConfig({
         ...devices['Desktop Safari'],
         // deviceScaleFactor: undefined,
         // viewport: null,
-        launchOptions: {
-          // args: ['--no-sandbox', '--disable-gpu'],
-          slowMo: 1000,
-        },
-        // // viewport: null,
       },
     },
     {
@@ -162,10 +153,6 @@ export default defineConfig({
       use: {
         ...devices['iPhone 13'],
         browserName: 'webkit',
-        launchOptions: {
-          // args: ['--no-sandbox', '--disable-gpu'],
-          slowMo: 1000,
-        },
       },
     },
 

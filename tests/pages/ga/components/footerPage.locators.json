@@ -1,0 +1,88 @@
+{
+  "entries": {
+    "root": {
+      "name": "root",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer", "confidence": 0.95 },
+        { "type": "xpath", "value": "//footer[@class='cmp-footer'] | //*[@class='cmp-footer']", "confidence": 0.85 }
+      ]
+    },
+    "footerTop": {
+      "name": "footerTop",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer__top", "confidence": 0.9 },
+        { "type": "xpath", "value": "//*[@class='cmp-footer__top']", "confidence": 0.8 }
+      ]
+    },
+    "footerMiddle": {
+      "name": "footerMiddle",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer__middle", "confidence": 0.9 },
+        { "type": "xpath", "value": "//*[@class='cmp-footer__middle']", "confidence": 0.8 }
+      ]
+    },
+    "footerBottom": {
+      "name": "footerBottom",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer__bottom", "confidence": 0.9 },
+        { "type": "xpath", "value": "//*[@class='cmp-footer__bottom']", "confidence": 0.8 }
+      ]
+    },
+    "navigation": {
+      "name": "navigation",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer nav", "confidence": 0.85 },
+        { "type": "xpath", "value": "//footer//nav | //*[@class='cmp-footer']//nav", "confidence": 0.75 }
+      ]
+    },
+    "socialLinks": {
+      "name": "socialLinks",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer__social a", "confidence": 0.85 },
+        { "type": "xpath", "value": "//*[contains(@class, 'social')]//a", "confidence": 0.75 }
+      ]
+    },
+    "copyright": {
+      "name": "copyright",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer__copyright", "confidence": 0.85 },
+        { "type": "text", "value": "©", "confidence": 0.7 }
+      ]
+    },
+    "disclosureButtons": {
+      "name": "disclosureButtons",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer button[aria-expanded]", "confidence": 0.9 },
+        { "type": "xpath", "value": "//button[@aria-expanded]", "confidence": 0.8 }
+      ]
+    },
+    "subscribeForm": {
+      "name": "subscribeForm",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer form", "confidence": 0.85 },
+        { "type": "xpath", "value": "//footer//form | //*[@class='cmp-footer']//form", "confidence": 0.75 }
+      ]
+    },
+    "subscribeInput": {
+      "name": "subscribeInput",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer input[type='email']", "confidence": 0.9 },
+        { "type": "xpath", "value": "//input[@type='email']", "confidence": 0.8 }
+      ]
+    },
+    "mobileMenuToggle": {
+      "name": "mobileMenuToggle",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer [class*='menu-toggle']", "confidence": 0.85 },
+        { "type": "xpath", "value": "//button[contains(@aria-label, 'menu')]", "confidence": 0.8 }
+      ]
+    },
+    "images": {
+      "name": "images",
+      "strategies": [
+        { "type": "css", "value": ".cmp-footer img", "confidence": 0.95 },
+        { "type": "xpath", "value": "//footer//img | //*[@class='cmp-footer']//img", "confidence": 0.9 }
+      ]
+    }
+  }
+}
