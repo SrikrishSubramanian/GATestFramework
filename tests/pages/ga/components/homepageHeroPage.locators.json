@@ -1,0 +1,15 @@
+{
+  "component": "homepage-hero",
+  "entries": {
+    "root": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-homepage-hero", "confidence": 0.95 }
+      ]
+    },
+    "image": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-homepage-hero__image", "confidence": 0.9 }
+      ]
+    }
+  }
+}

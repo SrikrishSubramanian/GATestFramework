@@ -1,0 +1,8 @@
+[0;34m[INFO][0m Starting KKR AEM Build, Deploy & Test Pipeline
+[0;34m[INFO][0m Time: Thu May 28 01:51:06 IST 2026
+
+[0;34m[INFO][0m ==========================================
+[0;34m[INFO][0m PHASE 1: Building AEM Package
+[0;34m[INFO][0m ==========================================
+[0;34m[INFO][0m Building Maven project with profile: autoInstallSinglePackage
+scripts/deploy-and-test.sh: line 61: mvn: command not found

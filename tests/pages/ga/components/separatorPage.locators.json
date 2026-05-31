@@ -1,0 +1,10 @@
+{
+  "component": "separator",
+  "entries": {
+    "root": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-separator", "confidence": 0.95 }
+      ]
+    }
+  }
+}

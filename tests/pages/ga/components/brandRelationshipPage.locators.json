@@ -1,0 +1,15 @@
+{
+  "component": "brand-relationship",
+  "entries": {
+    "root": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-brand-relationship", "confidence": 0.95 }
+      ]
+    },
+    "content": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-brand-relationship__content", "confidence": 0.9 }
+      ]
+    }
+  }
+}

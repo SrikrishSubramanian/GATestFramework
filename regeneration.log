@@ -1,0 +1,189 @@
+[globalSetup] Authenticating with AEM author...
+[auth] Auth state saved to .auth-state.json
+[globalSetup] Auth state saved — all workers will reuse this session
+
+Running 14 tests using 1 worker
+
+[1A[2K[1/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: button
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: button
+
+=== Scanning: button ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for button. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 403 Forbidden
+
+[1A[2K[2/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: feature-banner
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: feature-banner
+
+=== Scanning: feature-banner ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for feature-banner. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 403 Forbidden
+
+[1A[2K[3/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: statistic
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: statistic
+
+=== Scanning: statistic ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/statistic.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for statistic. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 403 Forbidden
+
+[1A[2K[4/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: form-options
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: form-options
+
+=== Scanning: form-options ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/form-options.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for form-options. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 403 Forbidden
+
+[1A[2K[5/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: content-trail
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: content-trail
+
+=== Scanning: content-trail ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/content-trail.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for content-trail. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 404 Resource at '/content/global-atlantic/style-guide/components/content-trail.html' not found: No resource found
+
+[1A[2K[6/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: headline-block
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: headline-block
+
+=== Scanning: headline-block ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/headline-block.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for headline-block. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 403 Forbidden
+
+[1A[2K[7/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: grid-container
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: grid-container
+
+=== Scanning: grid-container ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/grid-container.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for grid-container. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 404 Resource at '/content/global-atlantic/style-guide/components/grid-container.html' not found: No resource found
+
+[1A[2K[8/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: navigation
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: navigation
+
+=== Scanning: navigation ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/navigation.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for navigation. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 403 Forbidden
+
+[1A[2K[9/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: nested-content-carousel
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: nested-content-carousel
+
+=== Scanning: nested-content-carousel ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for nested-content-carousel. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 403 Forbidden
+
+[1A[2K[10/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: image-with-nested-content
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: image-with-nested-content
+
+=== Scanning: image-with-nested-content ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/image-with-nested-content.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for image-with-nested-content. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 404 Resource at '/content/global-atlantic/style-guide/components/image-with-nested-content.html' not found: No resource found
+
+[1A[2K[11/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: tabs
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: tabs
+
+=== Scanning: tabs ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/tabs.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for tabs. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 404 Resource at '/content/global-atlantic/style-guide/components/tabs.html' not found: No resource found
+
+[1A[2K[12/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: promo-banner
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: promo-banner
+
+=== Scanning: promo-banner ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/promo-banner.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for promo-banner. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 404 Resource at '/content/global-atlantic/style-guide/components/promo-banner.html' not found: No resource found
+
+[1A[2K[13/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: image
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: image
+
+=== Scanning: image ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/image.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for image. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 404 Resource at '/content/global-atlantic/style-guide/components/image.html' not found: No resource found
+
+[1A[2K[14/14] [chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: breadcrumb
+[1A[2K[chromium] › tests\generators\generate-components.ts:131:9 › Component Generation › Generate POM + spec for: breadcrumb
+
+=== Scanning: breadcrumb ===
+
+[1A[2KURL: http://localhost:4502/content/global-atlantic/style-guide/components/breadcrumb.html?wcmmode=disabled
+
+[1A[2KFound 0 elements
+
+[1A[2KWARNING: No elements found for breadcrumb. Check if the component exists on the style guide page.
+
+[1A[2KPage title: 404 Resource at '/content/global-atlantic/style-guide/components/breadcrumb.html' not found: No resource found
+
+[1A[2K  14 passed (14.5m)

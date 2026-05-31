@@ -17,3 +17,7 @@ tests/data/baselines/
 tests/environments/.env.*.credentials
 .playwright-session/
 .auth-state.json
+
+# AEM SDK (local dev only)
+GA_AEM_CODE/
+aem-sdk-*
