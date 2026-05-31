@@ -1,272 +1,280 @@
 {
-  "_description": "Multi-strategy locators for the Login component (GAAM-601 MFA support)",
-  "_generated": "2026-04-28",
-  ".cmp-login": {
-    "css": [
-      {
-        "selector": ".cmp-login",
-        "confidence": 0.95,
-        "description": "Login component root"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//div[@class='cmp-login']",
-        "confidence": 0.9,
-        "description": "Login component root via xpath"
-      }
-    ]
-  },
-  "#username": {
-    "css": [
-      {
-        "selector": "#username",
-        "confidence": 0.98,
-        "description": "Username input field"
-      },
-      {
-        "selector": "input[name='username']",
-        "confidence": 0.9,
-        "description": "Username input by name attribute"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//input[@id='username']",
-        "confidence": 0.95,
-        "description": "Username input via XPath ID"
-      }
-    ],
-    "role": [
-      {
-        "selector": "textbox",
-        "confidence": 0.7,
-        "description": "Username as textbox role"
-      }
-    ]
-  },
-  "#password": {
-    "css": [
-      {
-        "selector": "#password",
-        "confidence": 0.98,
-        "description": "Password input field"
-      },
-      {
-        "selector": "input[type='password']",
-        "confidence": 0.88,
-        "description": "Password input by type attribute"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//input[@id='password']",
-        "confidence": 0.95,
-        "description": "Password input via XPath ID"
-      }
-    ],
-    "role": [
-      {
-        "selector": "textbox",
-        "confidence": 0.65,
-        "description": "Password as textbox role"
-      }
-    ]
-  },
-  "[type='submit']": {
-    "css": [
-      {
-        "selector": "[type='submit']",
-        "confidence": 0.95,
-        "description": "Login submit button"
-      },
-      {
-        "selector": "button[type='submit']",
-        "confidence": 0.92,
-        "description": "Submit button by type"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//button[@type='submit']",
-        "confidence": 0.9,
-        "description": "Submit button via XPath"
-      }
-    ],
-    "role": [
-      {
-        "selector": "button",
-        "confidence": 0.7,
-        "description": "Submit as button role"
-      }
-    ]
-  },
-  "[data-testid='mfa-prompt']": {
-    "css": [
-      {
-        "selector": "[data-testid='mfa-prompt']",
-        "confidence": 0.98,
-        "description": "MFA prompt modal"
-      },
-      {
-        "selector": ".mfa-modal",
-        "confidence": 0.85,
-        "description": "MFA modal by class"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//div[@data-testid='mfa-prompt']",
-        "confidence": 0.95,
-        "description": "MFA prompt via XPath"
-      }
-    ]
-  },
-  "[data-testid='mfa-code-input']": {
-    "css": [
-      {
-        "selector": "[data-testid='mfa-code-input']",
-        "confidence": 0.98,
-        "description": "MFA code input field"
-      },
-      {
-        "selector": "input[autocomplete='one-time-code']",
-        "confidence": 0.92,
-        "description": "MFA code input by autocomplete"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//input[@data-testid='mfa-code-input']",
-        "confidence": 0.95,
-        "description": "MFA code input via XPath"
-      }
-    ]
-  },
-  "[data-testid='mfa-submit']": {
-    "css": [
-      {
-        "selector": "[data-testid='mfa-submit']",
-        "confidence": 0.98,
-        "description": "MFA submit button"
-      },
-      {
-        "selector": "button:has-text('Verify')",
-        "confidence": 0.8,
-        "description": "MFA submit by text"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//button[@data-testid='mfa-submit']",
-        "confidence": 0.95,
-        "description": "MFA submit via XPath"
-      }
-    ]
-  },
-  "[data-testid='backup-code-option']": {
-    "css": [
-      {
-        "selector": "[data-testid='backup-code-option']",
-        "confidence": 0.98,
-        "description": "Backup code option link"
-      },
-      {
-        "selector": "a:has-text('Use backup code')",
-        "confidence": 0.85,
-        "description": "Backup code option by text"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//a[@data-testid='backup-code-option']",
-        "confidence": 0.95,
-        "description": "Backup code option via XPath"
-      }
-    ]
-  },
-  "[data-testid='backup-code-input']": {
-    "css": [
-      {
-        "selector": "[data-testid='backup-code-input']",
-        "confidence": 0.98,
-        "description": "Backup code input field"
-      },
-      {
-        "selector": "input[type='text'][placeholder*='backup']",
-        "confidence": 0.85,
-        "description": "Backup code input by placeholder"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//input[@data-testid='backup-code-input']",
-        "confidence": 0.95,
-        "description": "Backup code input via XPath"
-      }
-    ]
-  },
-  "[data-testid='mfa-timeout']": {
-    "css": [
-      {
-        "selector": "[data-testid='mfa-timeout']",
-        "confidence": 0.98,
-        "description": "MFA timeout message"
-      },
-      {
-        "selector": ".mfa-timeout-message",
-        "confidence": 0.85,
-        "description": "MFA timeout by class"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//div[@data-testid='mfa-timeout']",
-        "confidence": 0.95,
-        "description": "MFA timeout via XPath"
-      }
-    ]
-  },
-  "[data-testid='recovery-option']": {
-    "css": [
-      {
-        "selector": "[data-testid='recovery-option']",
-        "confidence": 0.98,
-        "description": "Account recovery option"
-      },
-      {
-        "selector": "a:has-text('recovery')",
-        "confidence": 0.75,
-        "description": "Recovery option by text"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//a[@data-testid='recovery-option']",
-        "confidence": 0.95,
-        "description": "Recovery option via XPath"
-      }
-    ]
-  },
-  "[role='alert']": {
-    "css": [
-      {
-        "selector": "[role='alert']",
-        "confidence": 0.95,
-        "description": "Error alert message"
-      },
-      {
-        "selector": ".error-message",
-        "confidence": 0.8,
-        "description": "Error message by class"
-      }
-    ],
-    "xpath": [
-      {
-        "selector": "//*[@role='alert']",
-        "confidence": 0.9,
-        "description": "Error alert via XPath"
-      }
-    ]
+  "component": "login",
+  "generatedAt": "2026-04-28T00:00:00.000Z",
+  "source": "figma",
+  "entries": {
+    "loginForm": {
+      "name": "loginForm",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__form",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//form[contains(@class,'cmp-login__form')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "form",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "loginHero": {
+      "name": "loginHero",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__hero",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__hero')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "testid",
+          "value": "login-hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "usernameInput": {
+      "name": "usernameInput",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__username input",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//input[@name='username']",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "textbox[name=\"Username\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "passwordInput": {
+      "name": "passwordInput",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__password input[type='password']",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//input[@type='password']",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "textbox[name=\"Password\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "passwordToggle": {
+      "name": "passwordToggle",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__password-toggle",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-login__password-toggle')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "button[name=\"Show password\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "submitButton": {
+      "name": "submitButton",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__submit",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//button[@type='submit' and contains(@class,'cmp-login__submit')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "button[name=\"Sign In\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "forgotUsernameLink": {
+      "name": "forgotUsernameLink",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__forgot-username a",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__forgot-username')]//a",
+          "confidence": 0.65
+        },
+        {
+          "type": "text",
+          "value": "Forgot Username",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "forgotPasswordLink": {
+      "name": "forgotPasswordLink",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__forgot-password a",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__forgot-password')]//a",
+          "confidence": 0.65
+        },
+        {
+          "type": "text",
+          "value": "Forgot Password",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "alertBanner": {
+      "name": "alertBanner",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__alert",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__alert')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "assistanceText": {
+      "name": "assistanceText",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__assistance",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__assistance')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "text",
+          "value": "(833) ASK-GA4U",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "modalForgotUsername": {
+      "name": "modalForgotUsername",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__modal--forgot-username",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__modal--forgot-username')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "dialog[name=\"Forgot Username\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "modalForgotPassword": {
+      "name": "modalForgotPassword",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__modal--forgot-password",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__modal--forgot-password')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "dialog[name=\"Forgot Password\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "modalCloseButton": {
+      "name": "modalCloseButton",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__modal .cmp-login__modal-close",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__modal')]//button[contains(@class,'cmp-login__modal-close')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "button[name=\"Close\"]",
+          "confidence": 0.4
+        }
+      ]
+    }
   }
 }

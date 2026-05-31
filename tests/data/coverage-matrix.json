@@ -637,5 +637,29 @@
     ],
     "generatedAt": "2026-04-17T11:43:00.038Z",
     "source": "dom"
+  },
+  "teaser-card": {
+    "pomClass": "TeaserCardPage",
+    "pomPath": "../pages/ga/components/teaserCardPage.ts",
+    "sidecarPath": "../pages/ga/components/teaserCardPage.locators.json",
+    "specPath": "../specFiles/ga/teaser-card/teaser-card.author.spec.ts",
+    "elementCount": 7,
+    "testCount": 93,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog",
+      "interaction",
+      "state-matrix",
+      "visual"
+    ],
+    "jiraEpic": "GAAM-488",
+    "jiraStories": ["GAAM-524", "GAAM-657", "GAAM-658", "GAAM-659", "GAAM-959"],
+    "generatedAt": "2026-05-04T00:00:00.000Z",
+    "source": "jira"
   }
 }
