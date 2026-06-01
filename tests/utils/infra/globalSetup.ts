@@ -48,7 +48,7 @@ async function globalSetup(config: FullConfig) {
     }
 
     console.log('[globalSetup] Authenticating with AEM author...');
-    const browser = await chromium.launch();
+    const browser = await chromium.launch({ headless: false });
     const context = await browser.newContext({ ignoreHTTPSErrors: true });
     const page = await context.newPage();
 

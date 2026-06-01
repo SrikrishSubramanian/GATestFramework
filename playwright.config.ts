@@ -5,6 +5,10 @@ import fs from 'fs';
 import globalSetup from './tests/utils/infra/globalSetup';
 import { WaitForLoadStateOptions } from './src/setup/optional-parameter-types';
 import { AUTH_STORAGE_STATE } from './tests/utils/infra/globalSetup';
+import CustomExecutionReporter from './tests/utils/infra/custom-execution-reporter';
+import { HierarchicalTestReporter } from './tests/utils/infra/hierarchical-test-reporter';
+import SprintReportGenerator from './tests/utils/infra/sprint-report-generator';
+import CodeQualityReporter from './tests/utils/infra/code-quality-reporter';
 
 // Load environment variables early so they're available in all worker processes.
 // globalSetup runs in a separate process, so env vars set there don't reach test workers.
@@ -82,7 +86,6 @@ export default defineConfig({
     ['html', { outputFolder: reportDir }],
     ['line'],
     ['json', { outputFile: `${reportDir}/results.json` }],
-    ['./tests/utils/infra/test-run-reporter.ts'],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   globalSetup: "tests/utils/infra/globalSetup.ts",

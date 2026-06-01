@@ -2,6 +2,17 @@
   "_description": "Auto-generated test coverage matrix. Tracks which components have tests, across which categories, and how many. Updated by tests/generators/generate-components.ts and tests/generators/generate-advanced.ts orchestrators.",
   "_usage": "Read-only reference. Regenerated on each test generation run. Do not edit manually.",
   "lastUpdated": "2026-03-15T04:16:25.501Z",
+  "executionStats": {
+    "_note": "Updated by test-execution-tracker.ts during test runs. See tests/data/reports/ for detailed execution reports.",
+    "lastTestRun": "2026-05-31T10:30:00.000Z",
+    "totalTestsExecuted": 0,
+    "passedTests": 0,
+    "failedTests": 0,
+    "skippedTests": 0,
+    "passRate": "0%",
+    "averageTestDuration": 0,
+    "healthScore": 0
+  },
   "components": {
     "spacer": {
       "component": "spacer",
@@ -168,7 +179,7 @@
           ]
         }
       },
-      "totalTests": 7,
+      "totalTests": 317,
       "lastUpdated": "2026-03-11T13:07:26.951Z"
     },
     "feature-banner": {
@@ -210,7 +221,7 @@
           ]
         }
       },
-      "totalTests": 4,
+      "totalTests": 87,
       "lastUpdated": "2026-03-11T13:07:14.383Z"
     },
     "statistic": {
@@ -252,7 +263,7 @@
           ]
         }
       },
-      "totalTests": 4,
+      "totalTests": 51,
       "lastUpdated": "2026-03-11T13:07:25.961Z"
     },
     "text": {
@@ -346,7 +357,7 @@
     "sidecarPath": "../pages/ga/components/spacerPage.locators.json",
     "specPath": "../specFiles/ga/spacer/spacer.author.spec.ts",
     "elementCount": 8,
-    "testCount": 39,
+    "testCount": 0,
     "categories": [
       "csv",
       "happy-path",
@@ -365,7 +376,7 @@
     "sidecarPath": "../pages/ga/components/buttonPage.locators.json",
     "specPath": "../specFiles/ga/button/button.author.spec.ts",
     "elementCount": 17,
-    "testCount": 12,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -383,7 +394,7 @@
     "sidecarPath": "../pages/ga/components/featureBannerPage.locators.json",
     "specPath": "../specFiles/ga/feature-banner/feature-banner.author.spec.ts",
     "elementCount": 90,
-    "testCount": 12,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -401,7 +412,7 @@
     "sidecarPath": "../pages/ga/components/statisticPage.locators.json",
     "specPath": "../specFiles/ga/statistic/statistic.author.spec.ts",
     "elementCount": 24,
-    "testCount": 12,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -419,7 +430,7 @@
     "sidecarPath": "../pages/ga/components/formOptionsPage.locators.json",
     "specPath": "../specFiles/ga/form-options/form-options.author.spec.ts",
     "elementCount": 46,
-    "testCount": 12,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -437,7 +448,7 @@
     "sidecarPath": "../pages/ga/components/accordionTabsFeaturePage.locators.json",
     "specPath": "../specFiles/ga/accordion-tabs-feature/accordion-tabs-feature.author.spec.ts",
     "elementCount": 65,
-    "testCount": 12,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -455,7 +466,7 @@
     "sidecarPath": "../pages/ga/components/rateTablePage.locators.json",
     "specPath": "../specFiles/ga/rate-table/rate-table.author.spec.ts",
     "elementCount": 105,
-    "testCount": 12,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -473,7 +484,7 @@
     "sidecarPath": "../pages/ga/components/contentTrailPage.locators.json",
     "specPath": "../specFiles/ga/content-trail/content-trail.author.spec.ts",
     "elementCount": 13,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -492,7 +503,7 @@
     "sidecarPath": "../pages/ga/components/headlineBlockPage.locators.json",
     "specPath": "../specFiles/ga/headline-block/headline-block.author.spec.ts",
     "elementCount": 9,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -511,7 +522,7 @@
     "sidecarPath": "../pages/ga/components/gridContainerPage.locators.json",
     "specPath": "../specFiles/ga/grid-container/grid-container.author.spec.ts",
     "elementCount": 6,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -530,7 +541,7 @@
     "sidecarPath": "../pages/ga/components/nestedContentCarouselPage.locators.json",
     "specPath": "../specFiles/ga/nested-content-carousel/nested-content-carousel.author.spec.ts",
     "elementCount": 17,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -549,7 +560,7 @@
     "sidecarPath": "../pages/ga/components/imageWithNestedContentPage.locators.json",
     "specPath": "../specFiles/ga/image-with-nested-content/image-with-nested-content.author.spec.ts",
     "elementCount": 14,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -568,7 +579,7 @@
     "sidecarPath": "../pages/ga/components/tabsPage.locators.json",
     "specPath": "../specFiles/ga/tabs/tabs.author.spec.ts",
     "elementCount": 34,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -587,7 +598,7 @@
     "sidecarPath": "../pages/ga/components/promoBannerPage.locators.json",
     "specPath": "../specFiles/ga/promo-banner/promo-banner.author.spec.ts",
     "elementCount": 20,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -606,7 +617,7 @@
     "sidecarPath": "../pages/ga/components/imagePage.locators.json",
     "specPath": "../specFiles/ga/image/image.author.spec.ts",
     "elementCount": 6,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -625,7 +636,7 @@
     "sidecarPath": "../pages/ga/components/breadcrumbPage.locators.json",
     "specPath": "../specFiles/ga/breadcrumb/breadcrumb.author.spec.ts",
     "elementCount": 6,
-    "testCount": 14,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -644,7 +655,7 @@
     "sidecarPath": "../pages/ga/components/teaserCardPage.locators.json",
     "specPath": "../specFiles/ga/teaser-card/teaser-card.author.spec.ts",
     "elementCount": 7,
-    "testCount": 93,
+    "testCount": 0,
     "categories": [
       "happy-path",
       "negative",
@@ -658,7 +669,13 @@
       "visual"
     ],
     "jiraEpic": "GAAM-488",
-    "jiraStories": ["GAAM-524", "GAAM-657", "GAAM-658", "GAAM-659", "GAAM-959"],
+    "jiraStories": [
+      "GAAM-524",
+      "GAAM-657",
+      "GAAM-658",
+      "GAAM-659",
+      "GAAM-959"
+    ],
     "generatedAt": "2026-05-04T00:00:00.000Z",
     "source": "jira"
   }

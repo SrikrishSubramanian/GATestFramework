@@ -1,0 +1,28 @@
+{
+  "sprints": {
+    "sprint-1": {
+      "name": "Sprint 1",
+      "tickets": ["GAAM-48", "GAAM-69"],
+      "environment": "dev",
+      "components": ["page", "site-header"]
+    },
+    "sprint-2": {
+      "name": "Sprint 2",
+      "tickets": ["GAAM-393", "GAAM-394", "GAAM-397"],
+      "environment": "dev",
+      "components": ["page", "site-header"]
+    },
+    "sprint-11": {
+      "name": "Sprint 11",
+      "tickets": ["GAAM-1024", "GAAM-1068", "GAAM-1080", "GAAM-1091", "GAAM-1098"],
+      "environment": "dev",
+      "components": ["button", "text", "hero", "navigation", "footer"]
+    },
+    "sprint-16": {
+      "name": "Sprint 16",
+      "tickets": ["GAAM-1098", "GAAM-1091", "GAAM-1080", "GAAM-1068", "GAAM-1024", "GAAM-993", "GAAM-983", "GAAM-982", "GAAM-969", "GAAM-968", "GAAM-964", "GAAM-940", "GAAM-898", "GAAM-859", "GAAM-839", "GAAM-838", "GAAM-837", "GAAM-836", "GAAM-835", "GAAM-834", "GAAM-833", "GAAM-827", "GAAM-821", "GAAM-819", "GAAM-814", "GAAM-801", "GAAM-800", "GAAM-799", "GAAM-798", "GAAM-797", "GAAM-796", "GAAM-795", "GAAM-794", "GAAM-792", "GAAM-791", "GAAM-790", "GAAM-788", "GAAM-764", "GAAM-763", "GAAM-756", "GAAM-728", "GAAM-684", "GAAM-575", "GAAM-397", "GAAM-394", "GAAM-393", "GAAM-69", "GAAM-48"],
+      "environment": "dev",
+      "components": ["button", "text", "hero", "navigation", "footer", "site-header", "page"]
+    }
+  }
+}
