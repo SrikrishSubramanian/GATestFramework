@@ -1,0 +1,15 @@
+{
+  "component": "ratings-card",
+  "entries": {
+    "root": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-ratings-card", "confidence": 0.95 }
+      ]
+    },
+    "rating": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-ratings-card__rating", "confidence": 0.9 }
+      ]
+    }
+  }
+}

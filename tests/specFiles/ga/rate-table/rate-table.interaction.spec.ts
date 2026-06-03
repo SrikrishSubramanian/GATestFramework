@@ -6,7 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
-  await loginToAEMAuthor(page);
+  // Auth handled by globalSetup + storageState in config
 });
 
 test.describe('Rate Table — Interactions', () => {

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Accordion Tabs Feature style guide page demonstrating each policy style option: Accordion Variants (accordion, scroll) and Headline."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Accordion Tabs Feature"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+                <!-- Page Header -->
+                <text_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1 class=&quot;style-guide__page-headline&quot;>Accordion Tabs Feature&lt;/h1>&lt;div class=&quot;style-guide__page-description&quot;>Interactive accordion/scrolling tabs component with two-column layout. Style System policies: Accordion Variants (behavior-accordion, behavior-scroll), Headline (enable-Headline).&lt;/div>"
+                    textIsRich="true"/>
+
+                <!-- ============================================================
+                     1. behavior-accordion — Accordion Tabs
+                     ============================================================ -->
+                <text_accordion_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>1. Accordion Tabs (behavior-accordion)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_accordion
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_tabs_accordion
+                            cq:styleIds="[behavior-accordion]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion-tabs-feature">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Investment Strategy"
+                                tabTitle="Investment Strategy"
+                                description="&lt;p>Our investment approach focuses on long-term value creation through strategic partnerships and operational excellence.&lt;/p>"
+                                cta="Learn More"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-large.jpg"
+                                        alt="Investment Strategy illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item0>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Portfolio Management"
+                                tabTitle="Portfolio Management"
+                                description="&lt;p>We actively manage a diverse portfolio of companies across multiple sectors, providing strategic guidance and resources.&lt;/p>"
+                                cta="View Portfolio"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-small.jpg"
+                                        alt="Portfolio Management illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item1>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Risk Assessment"
+                                tabTitle="Risk Assessment"
+                                description="&lt;p>Our comprehensive risk management framework ensures sustainable growth while protecting stakeholder value.&lt;/p>"
+                                cta="Read More"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-large.jpg"
+                                        alt="Risk Assessment illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item2>
+                        </accordion_tabs_accordion>
+                    </section-par>
+                </section_accordion>
+
+                <spacer_1
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ============================================================
+                     2. behavior-scroll — Scrolling Tabs
+                     [Added] GAAM-561: Added style="scrolling-tabs" property to
+                     activate data-style attribute for scroll-driven CSS behavior
+                     ============================================================ -->
+                <text_scroll_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>2. Scrolling Tabs (behavior-scroll)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_scroll
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-561: style="scrolling-tabs" sets data-style attribute -->
+                        <accordion_tabs_scroll
+                            cq:styleIds="[behavior-scroll]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion-tabs-feature"
+                            style="scrolling-tabs">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Discover"
+                                tabTitle="Discover"
+                                description="&lt;p>Explore investment opportunities through comprehensive market research and analysis.&lt;/p>"
+                                cta="Start Exploring"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-large.jpg"
+                                        alt="Discover illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item0>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Evaluate"
+                                tabTitle="Evaluate"
+                                description="&lt;p>Assess potential investments using our proprietary evaluation framework and due diligence process.&lt;/p>"
+                                cta="Learn Process"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-small.jpg"
+                                        alt="Evaluate illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item1>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Execute"
+                                tabTitle="Execute"
+                                description="&lt;p>Complete transactions with precision and efficiency, ensuring optimal outcomes for all stakeholders.&lt;/p>"
+                                cta="View Success Stories"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-large.jpg"
+                                        alt="Execute illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item2>
+                        </accordion_tabs_scroll>
+                    </section-par>
+                </section_scroll>
+
+                <spacer_2
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ============================================================
+                     3. enable-Headline — Enable Headline
+                     ============================================================ -->
+                <text_headline_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>3. Enable Headline (enable-Headline)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_headline
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_tabs_headline
+                            cq:styleIds="[behavior-accordion,enable-Headline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion-tabs-feature"
+                            headline="Why Choose Us"
+                            subheadline="Discover the advantages of partnering with Global Atlantic for your financial future.">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Financial Strength"
+                                tabTitle="Financial Strength"
+                                description="&lt;p>Backed by KKR, we offer the stability and resources of a world-class investment firm.&lt;/p>"
+                                cta="Our Strength"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-large.jpg"
+                                        alt="Financial Strength illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item0>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Expert Team"
+                                tabTitle="Expert Team"
+                                description="&lt;p>Our team of seasoned professionals brings decades of combined experience in insurance and investment management.&lt;/p>"
+                                cta="Meet the Team"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-small.jpg"
+                                        alt="Expert Team illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item1>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Innovation Focus"
+                                tabTitle="Innovation Focus"
+                                description="&lt;p>We continuously innovate our products and services to deliver better outcomes for policyholders and partners.&lt;/p>"
+                                cta="Our Innovation"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-large.jpg"
+                                        alt="Innovation Focus illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item2>
+                        </accordion_tabs_headline>
+                    </section-par>
+                </section_headline>
+
+                <!-- [Added] GAAM-561: Dark background variants for complete test coverage -->
+                <spacer_3
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <text_dark_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>4. Accordion Tabs on Dark Background (Granite)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_granite
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <accordion_tabs_dark
+                            cq:styleIds="[behavior-accordion]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/accordion-tabs-feature">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Dark Theme Tab 1"
+                                tabTitle="Dark Theme Tab 1"
+                                description="&lt;p>Testing accordion tabs on granite background for dark mode color overrides.&lt;/p>"
+                                cta="Learn More"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-large.jpg"
+                                        alt="Dark theme tab illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item0>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab"
+                                cq:panelTitle="Dark Theme Tab 2"
+                                tabTitle="Dark Theme Tab 2"
+                                description="&lt;p>Second tab item verifying text color contrast on dark backgrounds.&lt;/p>"
+                                cta="Details"
+                                ctaUrl="/content/global-atlantic/style-guide">
+                                <accordion-tab-image-with-nested-content
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kkr-aem-base/components/content/image-with-nested-content">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/global-atlantic/style-guide/image-with-nested-content-small.jpg"
+                                        alt="Dark theme tab 2 illustration"/>
+                                </accordion-tab-image-with-nested-content>
+                            </item1>
+                        </accordion_tabs_dark>
+                    </section-par>
+                </section_granite>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

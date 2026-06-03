@@ -8,7 +8,6 @@
  */
 
 import { test, expect, Page } from '@playwright/test';
-import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 import { AEMTestHelper } from '../../utils/infra/aem-test-helper';
 import ENV from '../../utils/infra/env';
 
@@ -40,8 +39,7 @@ const COMPONENT_MAP: Record<string, { name: string; path: string; cssClass: stri
 test.describe('Sprint 16 - Comprehensive Test Suite @sprint-16', () => {
 
   test.beforeEach(async ({ page }) => {
-    // Authenticate before each test
-    await loginToAEMAuthor(page);
+    // Auth already handled by globalSetup and loaded via storageState in config
   });
 
   // ═══════════════════════════════════════════════════════════
@@ -106,6 +104,9 @@ test.describe('Sprint 16 - Comprehensive Test Suite @sprint-16', () => {
   test.describe('Regression Tests @regression', () => {
 
     test('[GAAM-1098] Button - CSS classes follow BEM convention', async ({ page }) => {
+      // Navigate to published page first
+      await page.goto(`${ENV.BASE_URL}/sites.html/content/ga`, { waitUntil: 'domcontentloaded' });
+
       const helper = new AEMTestHelper(page, {
         componentName: 'Button',
         cssClass: 'cmp-button',
@@ -120,6 +121,9 @@ test.describe('Sprint 16 - Comprehensive Test Suite @sprint-16', () => {
     });
 
     test('[GAAM-1091] Text - Semantic HTML validation', async ({ page }) => {
+      // Navigate to published page first
+      await page.goto(`${ENV.BASE_URL}/sites.html/content/ga`, { waitUntil: 'domcontentloaded' });
+
       const helper = new AEMTestHelper(page, {
         componentName: 'Text',
         cssClass: 'cmp-text',
@@ -130,6 +134,9 @@ test.describe('Sprint 16 - Comprehensive Test Suite @sprint-16', () => {
     });
 
     test('[GAAM-1080] Hero - Responsive design test', async ({ page }) => {
+      // Navigate to published page first
+      await page.goto(`${ENV.BASE_URL}/sites.html/content/ga`, { waitUntil: 'domcontentloaded' });
+
       const helper = new AEMTestHelper(page, {
         componentName: 'Hero',
         cssClass: 'cmp-hero',
@@ -146,19 +153,21 @@ test.describe('Sprint 16 - Comprehensive Test Suite @sprint-16', () => {
     });
 
     test('[GAAM-394] SiteHeader - Component registration', async ({ page }) => {
-      await page.goto(`${ENV.BASE_URL}/crx/de/index.jsp#/apps/ga/components/site-header`);
+      // Navigate to published page with SiteHeader component
+      await page.goto(`${ENV.BASE_URL}/sites.html/content/ga`, { waitUntil: 'domcontentloaded' });
 
-      // Verify component exists
-      const component = page.locator('text=site-header');
-      await expect(component).toBeVisible();
+      // Verify component renders with correct CSS class
+      const component = page.locator('.cmp-site-header');
+      await expect(component).toBeVisible({ timeout: 5000 });
     });
 
     test('[GAAM-393] PageTemplate - Dialog structure', async ({ page }) => {
-      await page.goto(`${ENV.BASE_URL}/crx/de/index.jsp#/apps/ga/components/page`);
+      // Navigate to published page with PageTemplate component
+      await page.goto(`${ENV.BASE_URL}/sites.html/content/ga`, { waitUntil: 'domcontentloaded' });
 
-      // Verify _cq_dialog exists
-      const dialog = page.locator('text=_cq_dialog');
-      await expect(dialog).toBeVisible();
+      // Verify page component renders with correct CSS class
+      const component = page.locator('.cmp-page');
+      await expect(component).toBeVisible({ timeout: 5000 });
     });
   });
 

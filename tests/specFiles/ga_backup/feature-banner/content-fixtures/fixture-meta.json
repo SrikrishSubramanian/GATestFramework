@@ -1,0 +1,12 @@
+{
+  "component": "feature-banner",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/feature-banner/.content.xml",
+  "sourceHash": "70a58a880f3fdfcb9373964e02e0419d",
+  "generatedAt": "2026-03-15",
+  "tickets": [],
+  "additions": [
+    "Azul background variant via section wrapper with dark-theme buttons",
+    "Video-only section grouping video graphicType instances",
+    "Mobile image swap test with distinct desktop/mobile image paths"
+  ]
+}

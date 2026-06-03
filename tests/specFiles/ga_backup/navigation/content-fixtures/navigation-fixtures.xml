@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Navigation component content fixture for GAAM-396 (Mobile Reskin).
+
+    Base: Copied from kkr-aem style guide at
+    ui.content.ga/.../style-guide/components/navigation/.content.xml
+
+    The existing style guide already covers all required GAAM-396 test scenarios:
+      - Single List on dark (granite) and light (white) backgrounds
+      - Grouped Navigation (accordion on mobile) on granite, azul, and white backgrounds
+      - Vertical Orientation on dark (granite) background
+
+    Additions marked with [Added] GAAM-396 comments below:
+      - Single List on slate background (responsive edge case: light bg variant)
+      - Vertical Orientation on light (white) background (completeness)
+      - Manual navigation mode instance (for testing manual link authoring)
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Navigation component style guide page."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Navigation"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+                <text_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1 class=&amp;quot;style-guide__page-headline&amp;quot;>Navigation&lt;/h1>&lt;div class=&amp;quot;style-guide__page-description&amp;quot;>Single list and grouped navigation with mobile accordion behavior.&lt;/div>"
+                    textIsRich="true"/>
+
+                <text_single_dark_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Single List — Dark Background (Granite)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_single_dark
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <navigation
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Single list navigation"
+                            structureDepth="{Long}1"
+                            navigationRoot="/content/global-atlantic"/>
+                    </section-par>
+                </section_single_dark>
+
+                <spacer_1
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <text_single_light_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Single List — Light Background (White)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_single_light
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <navigation
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Single list navigation light"
+                            structureDepth="{Long}1"
+                            navigationRoot="/content/global-atlantic"/>
+                    </section-par>
+                </section_single_light>
+
+                <spacer_2
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-396: Single List on slate background (additional light bg variant) -->
+                <text_single_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Single List — Light Background (Slate)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_single_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <navigation
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Single list navigation slate"
+                            structureDepth="{Long}1"
+                            navigationRoot="/content/global-atlantic"/>
+                    </section-par>
+                </section_single_slate>
+
+                <spacer_2b
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <text_grouped_dark_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Grouped Navigation — Dark Background (Granite)&lt;/h3>&lt;div class=&amp;quot;style-guide__page-description&amp;quot;>On mobile, headings become accordion triggers with +/- icons. Only one section open at a time.&lt;/div>"
+                    textIsRich="true"/>
+                <section_grouped_dark
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <navigation
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Grouped navigation"
+                            structureDepth="{Long}2"
+                            navigationRoot="/content/global-atlantic"/>
+                    </section-par>
+                </section_grouped_dark>
+
+                <spacer_3
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <text_grouped_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Grouped Navigation — Dark Background (Azul)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_grouped_azul
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <navigation
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Grouped navigation azul"
+                            structureDepth="{Long}2"
+                            navigationRoot="/content/global-atlantic"/>
+                    </section-par>
+                </section_grouped_azul>
+
+                <spacer_4
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <text_grouped_light_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Grouped Navigation — Light Background (White)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_grouped_light
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <navigation
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Grouped navigation light"
+                            structureDepth="{Long}2"
+                            navigationRoot="/content/global-atlantic"/>
+                    </section-par>
+                </section_grouped_light>
+
+                <spacer_5
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <text_vertical_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Vertical Orientation — Dark Background (Granite)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_vertical
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <navigation
+                            cq:styleIds="[ga-nav--vertical]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Vertical navigation"
+                            structureDepth="{Long}1"
+                            navigationRoot="/content/global-atlantic"/>
+                    </section-par>
+                </section_vertical>
+
+                <spacer_6
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-396: Vertical Orientation on light background (completeness) -->
+                <text_vertical_light_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Vertical Orientation — Light Background (White)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_vertical_light
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-396: vertical nav on white bg for light-mode testing -->
+                        <navigation
+                            cq:styleIds="[ga-nav--vertical]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Vertical navigation light"
+                            structureDepth="{Long}1"
+                            navigationRoot="/content/global-atlantic"/>
+                    </section-par>
+                </section_vertical_light>
+
+                <spacer_7
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-396: Manual navigation authoring mode for manual link testing -->
+                <text_manual_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&amp;quot;style-guide__headline&amp;quot;>Manual Navigation — Dark Background (Granite)&lt;/h3>&lt;div class=&amp;quot;style-guide__page-description&amp;quot;>Manual mode with explicitly authored links.&lt;/div>"
+                    textIsRich="true"/>
+                <section_manual
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-396: manual authoring mode navigation -->
+                        <navigation
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/navigation"
+                            accessibilityLabel="Manual navigation"
+                            navigationAuthoring="manual"
+                            navigationLinks="[{&amp;quot;label&amp;quot;:&amp;quot;About Us&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/content/global-atlantic&amp;quot;},{&amp;quot;label&amp;quot;:&amp;quot;Products&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/content/global-atlantic&amp;quot;},{&amp;quot;label&amp;quot;:&amp;quot;Resources&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;/content/global-atlantic&amp;quot;}]"/>
+                    </section-par>
+                </section_manual>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

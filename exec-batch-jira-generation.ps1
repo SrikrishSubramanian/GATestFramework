@@ -68,10 +68,8 @@ foreach ($ticket in $allTickets) {
     Write-Host "[$index/$totalTickets] $ticket" -ForegroundColor Cyan
 
     try {
-        $env:env = "dev"
-        $env:JIRA_TICKET = $ticket
-
-        npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium 2>&1 | Out-Null
+        # Explicitly pass env=dev to Playwright command
+        & cmd /c "set env=dev && set JIRA_TICKET=$ticket && npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium" 2>&1 | Out-Null
 
         $successCount++
         Write-Host "[$index/$totalTickets] OK - $ticket" -ForegroundColor Green

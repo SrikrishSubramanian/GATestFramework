@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Feature Banner — Test Fixtures"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+                <text_one
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1>Feature Banner&lt;/h1>&#xd;&#xa;&lt;p>The Feature Banner component displays an image/video spanning the full width of the page and gives a content overview with the option to add a Nested Content card.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_two
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Default Variation: Page-Width, Image-Left Aligned and White Background&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_one
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="image">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        isDecorative="false"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail
+                            cq:styleIds="[content-trail-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="Alt text"
+                            contentType="link"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/ga/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_one>
+                <spacer_one
+                    cq:styleIds="[size-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_three
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Page-Width, Video-Left Aligned and White Background&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_two
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="video"
+                    videoId="6365778310112"
+                    videoLoopEnd="10"
+                    videoLoopStart="0">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="test"
+                        fileReference="/content/dam/ga/style-guide/feature-banner-2.png"
+                        isDecorative="true"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <statistic_copy
+                            cq:styleIds="[stat-align-left,stat-theme-slate]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/statistic"
+                            description="&lt;p>in transactions since 2014, as of Oct 1, 2020&lt;/p>&#xd;&#xa;"
+                            statisticValue="&lt;p>&lt;span class=&quot;statistic-lrg&quot;>$100M&lt;/span>&lt;/p>&#xd;&#xa;"
+                            textIsRich="[true,true]"/>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_two>
+                <spacer_two
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_four
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Page-Width, Image-Left Aligned and Slate Background&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_three
+                    cq:styleIds="[feature-banner-slate-bg]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="image">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        isDecorative="false"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail
+                            cq:styleIds="[content-trail-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="Alt text"
+                            contentType="link"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/ga/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_three>
+                <spacer_three
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_five
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Page-Width, Image-Right Aligned and Granite Background&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_four
+                    cq:styleIds="[feature-banner-granite-bg,feature-banner-image-right]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="image">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        isDecorative="false"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail
+                            cq:styleIds="[content-trail-background-dark-color,content-trail-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="Alt text"
+                            contentType="link"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/ga/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled,dark-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline,dark-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_four>
+                <spacer_four
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_six
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: right;&quot;>&lt;b>Page-Width, Video-Right Aligned and White Background&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_five
+                    cq:styleIds="[feature-banner-image-right]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="video"
+                    videoId="6365778310112"
+                    videoLoopEnd="10"
+                    videoLoopStart="0">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="test"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail
+                            cq:styleIds="[content-trail-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="Alt text"
+                            contentType="link"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/ga/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_five>
+                <spacer_five
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_seven
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: right;&quot;>&lt;b>Page-Width, Image-Right Aligned and White Background&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_six
+                    cq:styleIds="[feature-banner-image-right]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="image">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        isDecorative="false"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail
+                            cq:styleIds="[content-trail-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="Alt text"
+                            contentType="link"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/ga/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_six>
+                <spacer_six
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_eight
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: right;&quot;>&lt;b>Grid-Width, Image-Left Aligned and White Background&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_seven
+                    cq:styleIds="[feature-banner-grid-width]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="image">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        isDecorative="false"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail
+                            cq:styleIds="[content-trail-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="Alt text"
+                            contentType="link"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/ga/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_seven>
+                <spacer_seven
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_nine
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>&lt;b>Page-Width, Video-Right Aligned and Slate Background&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_eight
+                    cq:styleIds="[feature-banner-image-right,feature-banner-grid-width,feature-banner-slate-bg]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="video"
+                    videoId="6365778310112"
+                    videoLoopEnd="15"
+                    videoLoopStart="0">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="test"
+                        fileReference="/content/dam/ga/style-guide/feature-banner-2.png"
+                        isDecorative="true"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail
+                            cq:styleIds="[content-trail-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="Alt text"
+                            contentType="link"
+                            eyebrow="Come grow with us"
+                            headline="We're looking for passionate, success-focused individuals to collaborate with"
+                            linkDestination="/content/ga/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_eight>
+                <spacer_eight
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_ten
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p style=&quot;text-align: left;&quot;>We can have more variations with statistics tiles and content trail components by changing backgrounds and size of those components.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <spacer_nine
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ============================================================
+                     [Added] FIXTURE ADDITIONS — not present in the style guide
+                     ============================================================ -->
+
+                <!-- [Added] AZUL BACKGROUND VARIANT
+                     feature-banner has no azul cq:styleId in the style system
+                     (policies only register white-bg, slate-bg, granite-bg).
+                     The correct pattern is to place the banner inside a Section
+                     component that carries the background-azul styleId, which
+                     applies cmp-section--background-color-azul on the wrapper.
+                     Buttons use dark-theme because azul is a dark background. -->
+                <text_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Page-Width, Image-Left Aligned — Azul Section Background (fixture)&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <section_azul_bg
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <feature_banner_azul
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/feature-banner"
+                            graphicType="image">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                alt="Feature Banner — Azul background"
+                                fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                                isDecorative="true"/>
+                            <mobileImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                isDecorative="false"/>
+                            <feature-banner-par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid">
+                                <content_trail
+                                    cq:styleIds="[content-trail-background-dark-color,content-trail-large]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="ga/components/content/content-trail"
+                                    altText="Alt text"
+                                    contentType="link"
+                                    eyebrow="Come grow with us"
+                                    headline="We're looking for passionate, success-focused individuals to collaborate with"
+                                    linkDestination="/content/ga/style-guide"
+                                    linkTarget="_self">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kkr-aem-base/components/content/image"
+                                        fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                                </content_trail>
+                            </feature-banner-par>
+                            <headlineBlock
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/headline-block"
+                                descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                                eyebrow="Optional eyebrow"
+                                textIsRich="[true,true]"
+                                title="Lorem ipsum dolor sit amet consectetur."
+                                type="h2">
+                                <buttonprimary
+                                    cq:styleIds="[primary-filled,dark-theme]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="ga/components/content/button"
+                                    icon="Arrow-Right"
+                                    isTrackingEnabled="false"
+                                    label="Optional CTA"
+                                    linkTarget="_self"
+                                    path="/content/ga/style-guide"/>
+                                <buttonsecondary
+                                    cq:styleIds="[secondary-outline,dark-theme]"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="ga/components/content/button"
+                                    icon="Arrow-Right"
+                                    isTrackingEnabled="false"
+                                    label="Optional CTA"
+                                    linkTarget="_self"
+                                    path="/content/ga/style-guide"/>
+                            </headlineBlock>
+                        </feature_banner_azul>
+                    </section-par>
+                </section_azul_bg>
+                <spacer_azul
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] VIDEO-ONLY SECTION
+                     Groups all graphicType="video" instances for easier test
+                     targeting. Contains one video banner on white background
+                     (left-aligned) and one on granite background (right-aligned).
+                     Tests can select [data-fixture-group="video-section"] or
+                     target these nodes by their node names directly. -->
+                <text_video_section_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Video Variants — Grouped for Test Targeting (fixture)&lt;/h3>"
+                    textIsRich="true"/>
+                <text_video_white_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Video — White Background, Left Aligned&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_video_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="video"
+                    videoId="6365778310112"
+                    videoLoopEnd="10"
+                    videoLoopStart="0">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner Video — White"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner Video Mobile — White"
+                        fileReference="/content/dam/ga/style-guide/feature-banner-2.png"
+                        isDecorative="true"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <statistic_video_white
+                            cq:styleIds="[stat-align-left,stat-theme-slate]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/statistic"
+                            description="&lt;p>in transactions since 2014, as of Oct 1, 2020&lt;/p>&#xd;&#xa;"
+                            statisticValue="&lt;p>&lt;span class=&quot;statistic-lrg&quot;>$100M&lt;/span>&lt;/p>&#xd;&#xa;"
+                            textIsRich="[true,true]"/>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_video_white>
+                <spacer_video_mid
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+                <text_video_granite_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Video — Granite Background, Right Aligned&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_video_granite
+                    cq:styleIds="[feature-banner-granite-bg,feature-banner-image-right]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="video"
+                    videoId="6365778310112"
+                    videoLoopEnd="10"
+                    videoLoopStart="0">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner Video — Granite"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="true"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner Video Mobile — Granite"
+                        fileReference="/content/dam/ga/style-guide/feature-banner-2.png"
+                        isDecorative="true"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <statistic_video_granite
+                            cq:styleIds="[stat-align-left,stat-theme-azul]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/statistic"
+                            description="&lt;p>in transactions since 2014, as of Oct 1, 2020&lt;/p>&#xd;&#xa;"
+                            statisticValue="&lt;p>&lt;span class=&quot;statistic-lrg&quot;>$100M&lt;/span>&lt;/p>&#xd;&#xa;"
+                            textIsRich="[true,true]"/>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit amet.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Optional eyebrow"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled,dark-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline,dark-theme]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_video_granite>
+                <spacer_video_end
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] MOBILE IMAGE SWAP TEST
+                     This instance uses a distinctly different desktop image
+                     (feature-banner.png — wide landscape crop) vs mobile image
+                     (feature-banner-mobile-portrait.png — portrait crop).
+                     Tests should verify that at viewports below the tablet
+                     breakpoint (@bp_tablet_min) the __mobile-image element is
+                     visible and the desktop image is hidden, and vice versa at
+                     desktop widths. The isDecorative flags are intentionally
+                     set to false on both to allow alt-text assertions. -->
+                <text_mobile_swap_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;p>&lt;b>Mobile Image Swap Test — Desktop vs Mobile Distinct Images (fixture)&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <feature_banner_mobile_swap
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/feature-banner"
+                    graphicType="image">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner — desktop image (landscape)"
+                        fileReference="/content/dam/ga/style-guide/feature-banner.png"
+                        isDecorative="false"/>
+                    <mobileImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        alt="Feature Banner — mobile image (portrait)"
+                        fileReference="/content/dam/ga/style-guide/feature-banner-mobile-portrait.png"
+                        isDecorative="false"/>
+                    <feature-banner-par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <content_trail_swap
+                            cq:styleIds="[content-trail-large]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/content-trail"
+                            altText="Alt text"
+                            contentType="link"
+                            eyebrow="Responsive image swap"
+                            headline="Desktop shows landscape; mobile shows portrait crop"
+                            linkDestination="/content/ga/style-guide"
+                            linkTarget="_self">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kkr-aem-base/components/content/image"
+                                fileReference="/content/dam/ga/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg"/>
+                        </content_trail_swap>
+                    </feature-banner-par>
+                    <headlineBlock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="ga/components/content/headline-block"
+                        descriptor="&lt;p>Desktop shows /content/dam/ga/style-guide/feature-banner.png; mobile shows /content/dam/ga/style-guide/feature-banner-mobile-portrait.png.&lt;/p>&#xd;&#xa;"
+                        eyebrow="Mobile image swap test"
+                        textIsRich="[true,true]"
+                        title="Lorem ipsum dolor sit amet consectetur."
+                        type="h2">
+                        <buttonprimary
+                            cq:styleIds="[primary-filled]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                        <buttonsecondary
+                            cq:styleIds="[secondary-outline]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/button"
+                            icon="Arrow-Right"
+                            isTrackingEnabled="false"
+                            label="Optional CTA"
+                            linkTarget="_self"
+                            path="/content/ga/style-guide"/>
+                    </headlineBlock>
+                </feature_banner_mobile_swap>
+                <spacer_end
+                    cq:styleIds="[size-xlarge]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

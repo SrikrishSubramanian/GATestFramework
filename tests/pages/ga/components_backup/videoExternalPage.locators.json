@@ -1,0 +1,15 @@
+{
+  "component": "video-external",
+  "entries": {
+    "root": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-video-external", "confidence": 0.95 }
+      ]
+    },
+    "container": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-video-external__container", "confidence": 0.9 }
+      ]
+    }
+  }
+}

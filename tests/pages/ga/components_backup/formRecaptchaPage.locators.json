@@ -1,0 +1,15 @@
+{
+  "component": "form-recaptcha",
+  "entries": {
+    "root": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-form-recaptcha", "confidence": 0.95 }
+      ]
+    },
+    "container": {
+      "strategies": [
+        { "type": "css", "value": ".g-recaptcha", "confidence": 0.9 }
+      ]
+    }
+  }
+}

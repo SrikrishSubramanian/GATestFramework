@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Login Component Content Fixtures
+  Source: Style guide base + additions for GAAM-601 (CMS: Login Component New)
+  Developer review required before merging into kkr-aem.
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="cq:Page">
+
+  <jcr:content
+    jcr:primaryType="cq:PageContent"
+    jcr:title="Login Component Test Fixtures"
+    sling:resourceType="global-atlantic/components/page/content">
+
+    <root
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="wcm/foundation/components/responsivegrid">
+
+      <!-- ============================================================
+           1. DEFAULT LOGIN — Standard white background
+           ============================================================ -->
+      <login_default
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="ga/components/content/login"
+        heroImagePath="/content/dam/global-atlantic/login/login-hero.jpg"
+        heroImageAlt="Login hero background"
+        formTitle="Sign In"
+        usernameLabel="Username"
+        passwordLabel="Password"
+        submitLabel="Sign In"
+        forgotUsernameLabel="Forgot Username?"
+        forgotPasswordLabel="Forgot Password?"
+        assistanceText="For additional assistance, call (833) ASK-GA4U or (833) 275-4248"
+        errorMessageInvalid="The username or password you entered is incorrect. Please try again."
+        errorMessageRequired="Please enter your username and password." />
+
+      <!-- ============================================================
+           2. [Added GAAM-601] FORGOT USERNAME MODAL STATE
+           Tests: LGN-018, LGN-019, LGN-020, LGN-I-006, LGN-I-007, LGN-I-008
+           ============================================================ -->
+      <login_forgot_username
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="ga/components/content/login"
+        heroImagePath="/content/dam/global-atlantic/login/login-hero.jpg"
+        heroImageAlt="Login hero background"
+        formTitle="Sign In"
+        showForgotUsernameModal="{Boolean}true"
+        forgotUsernameModalTitle="Forgot Username"
+        forgotUsernameModalBody="Please enter your registered email address and we will send your username."
+        forgotUsernameEmailLabel="Email Address"
+        forgotUsernameSubmitLabel="Submit"
+        forgotUsernameSuccessMessage="Your username has been sent to your email address." />
+
+      <!-- ============================================================
+           3. [Added GAAM-601] FORGOT PASSWORD MODAL STATE
+           Tests: LGN-021, LGN-022, LGN-I-010, LGN-I-011, LGN-I-012
+           ============================================================ -->
+      <login_forgot_password
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="ga/components/content/login"
+        heroImagePath="/content/dam/global-atlantic/login/login-hero.jpg"
+        heroImageAlt="Login hero background"
+        formTitle="Sign In"
+        showForgotPasswordModal="{Boolean}true"
+        forgotPasswordModalTitle="Forgot Password"
+        forgotPasswordModalBody="Please enter your username and we will send a link to reset your password."
+        forgotPasswordUsernameLabel="Username"
+        forgotPasswordSubmitLabel="Submit"
+        forgotPasswordSuccessMessage="A password reset link has been sent to your registered email address." />
+
+      <!-- ============================================================
+           4. [Added GAAM-601] VALIDATION ERROR STATE
+           Tests: LGN-023, LGN-024, LGN-025, LGN-026
+           ============================================================ -->
+      <login_validation_error
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="ga/components/content/login"
+        heroImagePath="/content/dam/global-atlantic/login/login-hero.jpg"
+        heroImageAlt="Login hero background"
+        formTitle="Sign In"
+        showAlertBanner="{Boolean}true"
+        alertBannerMessage="The username or password you entered is incorrect. Please try again."
+        alertBannerType="error" />
+
+      <!-- ============================================================
+           5. [Added GAAM-601] WHITE BACKGROUND SECTION
+           Tests: LGN-M-010, LGN-M-014
+           ============================================================ -->
+      <section_white
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="ga/components/content/section"
+        backgroundColorClass="cmp-section--background-color-white">
+        <parsys jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/parsys">
+          <login_in_white
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ga/components/content/login"
+            heroImagePath="/content/dam/global-atlantic/login/login-hero.jpg"
+            heroImageAlt="Login hero on white background"
+            formTitle="Sign In" />
+        </parsys>
+      </section_white>
+
+      <!-- ============================================================
+           6. [Added GAAM-601] GRANITE (DARK) BACKGROUND SECTION
+           Tests: LGN-M-012, LGN-M-015, LGN-M-016
+           ============================================================ -->
+      <section_granite
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="ga/components/content/section"
+        backgroundColorClass="cmp-section--background-color-granite">
+        <parsys jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/parsys">
+          <login_in_granite
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ga/components/content/login"
+            heroImagePath="/content/dam/global-atlantic/login/login-hero.jpg"
+            heroImageAlt="Login hero on granite background"
+            formTitle="Sign In" />
+        </parsys>
+      </section_granite>
+
+      <!-- ============================================================
+           7. [Added GAAM-601] AZUL BACKGROUND SECTION
+           Tests: LGN-M-013, LGN-M-017
+           ============================================================ -->
+      <section_azul
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="ga/components/content/section"
+        backgroundColorClass="cmp-section--background-color-azul">
+        <parsys jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/parsys">
+          <login_in_azul
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ga/components/content/login"
+            heroImagePath="/content/dam/global-atlantic/login/login-hero.jpg"
+            heroImageAlt="Login hero on azul background"
+            formTitle="Sign In" />
+        </parsys>
+      </section_azul>
+
+      <!-- ============================================================
+           8. [Added GAAM-601] SLATE BACKGROUND SECTION
+           Tests: LGN-M-011
+           ============================================================ -->
+      <section_slate
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="ga/components/content/section"
+        backgroundColorClass="cmp-section--background-color-slate">
+        <parsys jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/parsys">
+          <login_in_slate
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ga/components/content/login"
+            heroImagePath="/content/dam/global-atlantic/login/login-hero.jpg"
+            heroImageAlt="Login hero on slate background"
+            formTitle="Sign In" />
+        </parsys>
+      </section_slate>
+
+    </root>
+  </jcr:content>
+</jcr:root>

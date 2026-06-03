@@ -1,0 +1,280 @@
+{
+  "component": "login",
+  "generatedAt": "2026-04-28T00:00:00.000Z",
+  "source": "figma",
+  "entries": {
+    "loginForm": {
+      "name": "loginForm",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__form",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//form[contains(@class,'cmp-login__form')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "form",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "loginHero": {
+      "name": "loginHero",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__hero",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__hero')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "testid",
+          "value": "login-hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "usernameInput": {
+      "name": "usernameInput",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__username input",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//input[@name='username']",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "textbox[name=\"Username\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "passwordInput": {
+      "name": "passwordInput",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__password input[type='password']",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//input[@type='password']",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "textbox[name=\"Password\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "passwordToggle": {
+      "name": "passwordToggle",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__password-toggle",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-login__password-toggle')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "button[name=\"Show password\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "submitButton": {
+      "name": "submitButton",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__submit",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//button[@type='submit' and contains(@class,'cmp-login__submit')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "button[name=\"Sign In\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "forgotUsernameLink": {
+      "name": "forgotUsernameLink",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__forgot-username a",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__forgot-username')]//a",
+          "confidence": 0.65
+        },
+        {
+          "type": "text",
+          "value": "Forgot Username",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "forgotPasswordLink": {
+      "name": "forgotPasswordLink",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__forgot-password a",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__forgot-password')]//a",
+          "confidence": 0.65
+        },
+        {
+          "type": "text",
+          "value": "Forgot Password",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "alertBanner": {
+      "name": "alertBanner",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__alert",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__alert')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "assistanceText": {
+      "name": "assistanceText",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__assistance",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__assistance')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "text",
+          "value": "(833) ASK-GA4U",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "modalForgotUsername": {
+      "name": "modalForgotUsername",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__modal--forgot-username",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__modal--forgot-username')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "dialog[name=\"Forgot Username\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "modalForgotPassword": {
+      "name": "modalForgotPassword",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__modal--forgot-password",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__modal--forgot-password')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "dialog[name=\"Forgot Password\"]",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "modalCloseButton": {
+      "name": "modalCloseButton",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__modal .cmp-login__modal-close",
+          "confidence": 0.85
+        },
+        {
+          "type": "xpath",
+          "value": "//*[contains(@class,'cmp-login__modal')]//button[contains(@class,'cmp-login__modal-close')]",
+          "confidence": 0.65
+        },
+        {
+          "type": "role",
+          "value": "button[name=\"Close\"]",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

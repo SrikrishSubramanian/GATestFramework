@@ -1,0 +1,196 @@
+{
+  "component": "headline-block",
+  "generatedAt": "2026-04-17T02:57:15.381Z",
+  "source": "dom",
+  "entries": {
+    "a_Optional_CTA": {
+      "name": "a_Optional_CTA",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-d773e2966f",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Link_Label": {
+      "name": "a_Link_Label",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-fdf3e4782f",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Link Label",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_2": {
+      "name": "h2_2",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__title.headline-h2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_EyeBrow": {
+      "name": "div_EyeBrow",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Eye brow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_4": {
+      "name": "div_4",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__descriptor.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".ga-headline-block__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'ga-headline-block__cta-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_6": {
+      "name": "i_6",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Optional_CTA": {
+      "name": "span_Optional_CTA",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Link_Label": {
+      "name": "span_Link_Label",
+      "component": "headline-block",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Link Label",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

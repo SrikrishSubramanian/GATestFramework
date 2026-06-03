@@ -1,0 +1,230 @@
+{
+  "component": "content-trail",
+  "generatedAt": "2026-04-16T14:19:16.290Z",
+  "source": "dom",
+  "entries": {
+    "a_0": {
+      "name": "a_0",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__container.cmp-content-trail__video",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "a_1": {
+      "name": "a_1",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__container.cmp-content-trail__written",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "a_2": {
+      "name": "a_2",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__container.cmp-content-trail__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Close": {
+      "name": "Close",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ComeGrowWithUs": {
+      "name": "div_ComeGrowWithUs",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Come grow with us",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "svg_8": {
+      "name": "svg_8",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__eyebrow-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//svg[contains(@class,'cmp-content-trail__eyebrow-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_9": {
+      "name": "p_9",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-content-trail__headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_10": {
+      "name": "div_10",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__video-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__video-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "dialog_11": {
+      "name": "dialog_11",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-content-trail__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-video-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-video-container')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

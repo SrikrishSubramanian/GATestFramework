@@ -1,0 +1,15 @@
+{
+  "component": "section",
+  "entries": {
+    "root": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-section", "confidence": 0.95 }
+      ]
+    },
+    "content": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-section__content", "confidence": 0.9 }
+      ]
+    }
+  }
+}

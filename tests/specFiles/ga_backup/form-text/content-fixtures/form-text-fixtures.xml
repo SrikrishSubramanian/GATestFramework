@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Form Text — Test Fixtures
+    Based on: kkr-aem/ui.content.ga/.../style-guide/components/form/form-text/.content.xml
+    Additions: Filled state and Required+Helper (non-error) instances added to each section
+    Deploy path: /content/global-atlantic/test-fixtures/form-text
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Form Text and Text Area — test fixtures with all states for GAAM-504 automation."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Form Text &amp; Text Area — Test Fixtures"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+                <text_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1 class=&quot;style-guide__page-headline&quot;>Form Text &amp;amp; Text Area — Test Fixtures&lt;/h1>&lt;div class=&quot;style-guide__page-description&quot;>Copy of style guide page with additional Filled and Required+Helper states for test automation (GAAM-504).&lt;/div>"
+                    textIsRich="true"/>
+
+                <!-- ================================================================
+                     TEXT FIELD — LIGHT MODE (WHITE)
+                     Original: Default, Error, Disabled
+                     Added: Filled, Required+Helper (non-error)
+                     ================================================================ -->
+                <text_light_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Text Field — Light Mode (White Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_light_text
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_light
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <!-- [Original] Default -->
+                            <form_text_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Default state helper text"
+                                name="default-text"
+                                placeholder="Placeholder text"
+                                title="Default Label"
+                                type="text"/>
+                            <spacer_01
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Filled (pre-populated value) -->
+                            <form_text_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Filled state — border changes via :not(:placeholder-shown)"
+                                name="filled-text"
+                                placeholder="Enter your full name"
+                                title="Filled Label"
+                                type="text"
+                                value="John Doe"/>
+                            <spacer_01_filled
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Required + Helper (non-error, not submitted) -->
+                            <form_text_req_helper
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="We will never share your email with third parties"
+                                name="req-helper-text"
+                                placeholder="Enter your email"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                title="Required + Helper"
+                                type="text"/>
+                            <spacer_01_req
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Original] Error -->
+                            <form_text_error
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Submit to trigger error state"
+                                name="error-text"
+                                placeholder="Error state text"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                title="Error Label"
+                                type="text"/>
+                            <spacer_01a
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Original] Disabled -->
+                            <form_text_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                name="disabled-text"
+                                placeholder="Disabled text"
+                                readOnly="{Boolean}true"
+                                title="Disabled Label"
+                                type="text"/>
+                            <spacer_01b
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_submit
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-text-light"
+                                type="submit"/>
+                        </form_container_light>
+                    </section-par>
+                </section_light_text>
+                <spacer_1
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     TEXT FIELD — LIGHT MODE (SLATE)
+                     ================================================================ -->
+                <text_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Text Field — Light Mode (Slate Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_slate_text
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <form_text_slate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Default state helper text"
+                                name="slate-text"
+                                placeholder="Placeholder text"
+                                title="Default Label"
+                                type="text"/>
+                            <spacer_02s
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Filled -->
+                            <form_text_slate_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Filled state on slate"
+                                name="slate-filled-text"
+                                placeholder="Enter your email"
+                                title="Filled Label"
+                                type="text"
+                                value="jane.doe@example.com"/>
+                            <spacer_02_filled
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Required + Helper -->
+                            <form_text_slate_req_helper
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="US numbers only, including area code"
+                                name="slate-req-helper"
+                                placeholder="Enter your phone"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                title="Required + Helper"
+                                type="text"/>
+                            <spacer_02_req
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_slate_error
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Submit to trigger error state"
+                                name="slate-error-text"
+                                placeholder="Error state text"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                title="Error Label"
+                                type="text"/>
+                            <spacer_02a
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_slate_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                name="slate-disabled"
+                                placeholder="Disabled text"
+                                readOnly="{Boolean}true"
+                                title="Disabled Label"
+                                type="text"/>
+                            <spacer_02b
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_slate_submit
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-text-slate"
+                                type="submit"/>
+                        </form_container_slate>
+                    </section-par>
+                </section_slate_text>
+                <spacer_2
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     TEXT FIELD — DARK MODE (GRANITE)
+                     ================================================================ -->
+                <text_granite_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Text Field — Dark Mode (Granite Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_granite_text
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_granite
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <form_text_granite
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Default state helper text"
+                                name="granite-text"
+                                placeholder="Placeholder text"
+                                title="Default Label"
+                                type="text"/>
+                            <spacer_03
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Filled -->
+                            <form_text_granite_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Filled state on granite"
+                                name="granite-filled-text"
+                                placeholder="Enter company name"
+                                title="Filled Label"
+                                type="text"
+                                value="Global Atlantic Financial Group"/>
+                            <spacer_03_filled
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Required + Helper -->
+                            <form_text_granite_req_helper
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="We will never share your email"
+                                name="granite-req-helper"
+                                placeholder="Enter your email"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                title="Required + Helper"
+                                type="text"/>
+                            <spacer_03_req
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_granite_error
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Submit to trigger error state"
+                                name="granite-error-text"
+                                placeholder="Error state text"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                title="Error Label"
+                                type="text"/>
+                            <spacer_03a
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_granite_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                name="granite-disabled"
+                                placeholder="Disabled text"
+                                readOnly="{Boolean}true"
+                                title="Disabled Label"
+                                type="text"/>
+                            <spacer_03b
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_granite_submit
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-text-granite"
+                                type="submit"/>
+                        </form_container_granite>
+                    </section-par>
+                </section_granite_text>
+                <spacer_3
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     TEXT FIELD — DARK MODE (AZUL)
+                     ================================================================ -->
+                <text_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Text Field — Dark Mode (Azul Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_azul_text
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_azul
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <form_text_azul
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Default state helper text"
+                                name="azul-text"
+                                placeholder="Placeholder text"
+                                title="Default Label"
+                                type="text"/>
+                            <spacer_04a
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Filled -->
+                            <form_text_azul_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Filled state on azul"
+                                name="azul-filled-text"
+                                placeholder="Enter your phone number"
+                                title="Filled Label"
+                                type="text"
+                                value="(555) 123-4567"/>
+                            <spacer_04_filled
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Required + Helper -->
+                            <form_text_azul_req_helper
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="We will never share your email"
+                                name="azul-req-helper"
+                                placeholder="Enter your email"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                title="Required + Helper"
+                                type="text"/>
+                            <spacer_04_req
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_azul_error
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Submit to trigger error state"
+                                name="azul-error-text"
+                                placeholder="Error state text"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                title="Error Label"
+                                type="text"/>
+                            <spacer_04b
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_azul_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                name="azul-disabled"
+                                placeholder="Disabled text"
+                                readOnly="{Boolean}true"
+                                title="Disabled Label"
+                                type="text"/>
+                            <spacer_04c
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_text_azul_submit
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-text-azul"
+                                type="submit"/>
+                        </form_container_azul>
+                    </section-par>
+                </section_azul_text>
+                <spacer_4
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     TEXT AREA — LIGHT MODE (WHITE)
+                     Original: Default+Counter, Error, Disabled
+                     Added: Filled+Counter
+                     ================================================================ -->
+                <text_textarea_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Text Area — Light Mode (White Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_light_textarea
+                    cq:styleIds="[background-white]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_light_textarea
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <form_textarea_default
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Default state helper text"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="default-textarea"
+                                placeholder="Enter your message..."
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Default Label"
+                                type="textarea"/>
+                            <spacer_05
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Filled + Counter -->
+                            <form_textarea_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Filled state — counter shows current length"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="filled-textarea"
+                                placeholder="Enter your message..."
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Filled with Counter"
+                                type="textarea"
+                                value="This is pre-filled text area content that demonstrates the filled state styling with an active character counter."/>
+                            <spacer_05_filled
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_error
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Submit to trigger error state"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="error-textarea"
+                                placeholder="Error state text area"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Error Label"
+                                type="textarea"/>
+                            <spacer_05a
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                name="disabled-textarea"
+                                placeholder="Disabled text area"
+                                readOnly="{Boolean}true"
+                                rows="{Long}4"
+                                title="Disabled Text Area"
+                                type="textarea"/>
+                            <spacer_05b
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_submit
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-textarea-light"
+                                type="submit"/>
+                        </form_container_light_textarea>
+                    </section-par>
+                </section_light_textarea>
+                <spacer_5
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     TEXT AREA — LIGHT MODE (SLATE)
+                     ================================================================ -->
+                <text_textarea_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Text Area — Light Mode (Slate Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_slate_textarea
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_slate_textarea
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <form_textarea_slate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Default state helper text"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="slate-textarea"
+                                placeholder="Enter your message..."
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Default Label"
+                                type="textarea"/>
+                            <spacer_06s
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Filled + Counter -->
+                            <form_textarea_slate_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Filled state on slate"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="slate-filled-textarea"
+                                placeholder="Enter your message..."
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Filled with Counter"
+                                type="textarea"
+                                value="Pre-filled content for slate background testing."/>
+                            <spacer_06_filled
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_slate_error
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Submit to trigger error state"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="slate-error-textarea"
+                                placeholder="Error state text area"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Error Label"
+                                type="textarea"/>
+                            <spacer_06a
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_slate_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                name="slate-disabled-textarea"
+                                placeholder="Disabled text area"
+                                readOnly="{Boolean}true"
+                                rows="{Long}4"
+                                title="Disabled Text Area"
+                                type="textarea"/>
+                            <spacer_06b
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_slate_submit
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-textarea-slate"
+                                type="submit"/>
+                        </form_container_slate_textarea>
+                    </section-par>
+                </section_slate_textarea>
+                <spacer_5s
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     TEXT AREA — DARK MODE (GRANITE)
+                     ================================================================ -->
+                <text_textarea_dark_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Text Area — Dark Mode (Granite Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_granite_textarea
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_granite_textarea
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <form_textarea_granite
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Default state helper text"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="granite-textarea"
+                                placeholder="Enter your message..."
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Default Label"
+                                type="textarea"/>
+                            <spacer_07g
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Filled + Counter -->
+                            <form_textarea_granite_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Filled state on granite"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="granite-filled-textarea"
+                                placeholder="Enter your message..."
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Filled with Counter"
+                                type="textarea"
+                                value="Pre-filled content for granite dark mode testing."/>
+                            <spacer_07_filled
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_granite_error
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Submit to trigger error state"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="granite-error-textarea"
+                                placeholder="Error state text area"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Error Label"
+                                type="textarea"/>
+                            <spacer_07a
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_granite_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                name="granite-disabled-textarea"
+                                placeholder="Disabled text area"
+                                readOnly="{Boolean}true"
+                                rows="{Long}4"
+                                title="Disabled Text Area"
+                                type="textarea"/>
+                            <spacer_07b
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_granite_submit
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-textarea-granite"
+                                type="submit"/>
+                        </form_container_granite_textarea>
+                    </section-par>
+                </section_granite_textarea>
+                <spacer_6
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ================================================================
+                     TEXT AREA — DARK MODE (AZUL)
+                     ================================================================ -->
+                <text_textarea_azul_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Text Area — Dark Mode (Azul Background)&lt;/h3>"
+                    textIsRich="true"/>
+                <section_azul_textarea
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <form_container_azul_textarea
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/form/container"
+                            actionType="foundation/components/form/actions/mail"
+                            from="noreply@globalatlantic.com"
+                            mailto="test-demo-email@globalatlantic.com"
+                            subject="Form Submission">
+                            <form_textarea_azul
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Default state helper text"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="azul-textarea"
+                                placeholder="Enter your message..."
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Default Label"
+                                type="textarea"/>
+                            <spacer_08a
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <!-- [Added] Filled + Counter -->
+                            <form_textarea_azul_filled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Filled state on azul"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="azul-filled-textarea"
+                                placeholder="Enter your message..."
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Filled with Counter"
+                                type="textarea"
+                                value="Pre-filled content for azul dark mode testing."/>
+                            <spacer_08_filled
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_azul_error
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                helpMessage="Submit to trigger error state"
+                                maxLength="{Long}240"
+                                maxLengthErrorMessage="Maximum character limit exceeded"
+                                name="azul-error-textarea"
+                                placeholder="Error state text area"
+                                required="{Boolean}true"
+                                requiredMessage="This field is required"
+                                rows="{Long}4"
+                                showCharacterLimit="{Boolean}true"
+                                title="Error Label"
+                                type="textarea"/>
+                            <spacer_08b
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_azul_disabled
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/form/text"
+                                name="azul-disabled-textarea"
+                                placeholder="Disabled text area"
+                                readOnly="{Boolean}true"
+                                rows="{Long}4"
+                                title="Disabled Text Area"
+                                type="textarea"/>
+                            <spacer_08c
+                                cq:styleIds="[size-small]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="ga/components/content/spacer"/>
+                            <form_textarea_azul_submit
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Submit"
+                                sling:resourceType="ga/components/form/button"
+                                name="submit-textarea-azul"
+                                type="submit"/>
+                        </form_container_azul_textarea>
+                    </section-par>
+                </section_azul_textarea>
+                <spacer_6a
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

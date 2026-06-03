@@ -1,12 +1,11 @@
 import { test, expect } from '@playwright/test';
 import { RateTablePage } from '../../../pages/ga/components/rateTablePage';
 import ENV from '../../../utils/infra/env';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
-  await loginToAEMAuthor(page);
+  // Auth handled by globalSetup + storageState in config
 });
 
 test.describe('Rate Table — State Matrix (Variants × Themes × Backgrounds)', () => {

@@ -1,0 +1,392 @@
+{
+  "component": "promo-banner",
+  "generatedAt": "2026-04-17T09:15:29.540Z",
+  "source": "dom",
+  "entries": {
+    "Learn_More": {
+      "name": "Learn_More",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Learn More']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "GetIn_Touch": {
+      "name": "GetIn_Touch",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Get in Touch']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Get in Touch",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h4_Lorem_Ipsum_Dolor_Sit_Amet": {
+      "name": "h4_Lorem_Ipsum_Dolor_Sit_Amet",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h4[contains(@class,'cmp-promo-banner__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem Ipsum Dolor Sit Amet",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h4_4": {
+      "name": "h4_4",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h4[contains(@class,'cmp-promo-banner__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_7": {
+      "name": "div_7",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__links",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__links')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__links-cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__links-cta')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Learn_More": {
+      "name": "span_Learn_More",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_11": {
+      "name": "span_11",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_GetIn_Touch": {
+      "name": "div_GetIn_Touch",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__links",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__links')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Get in Touch",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__links-social",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__links-social')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_GetIn_Touch_16": {
+      "name": "div_GetIn_Touch_16",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__links-cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__links-cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Get in Touch",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_GetIn_Touch": {
+      "name": "span_GetIn_Touch",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Get in Touch",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Lorem_Ipsum_Dolor_Sit_Amet": {
+      "name": "div_Lorem_Ipsum_Dolor_Sit_Amet",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem Ipsum Dolor Sit Amet",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Lorem_Ipsum_Dolor_Sit_Amet_19": {
+      "name": "div_Lorem_Ipsum_Dolor_Sit_Amet_19",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem Ipsum Dolor Sit Amet",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Learn_More": {
+      "name": "div_Learn_More",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__links",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__links')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Learn_More_21": {
+      "name": "div_Learn_More_21",
+      "component": "promo-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-promo-banner__links-cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-promo-banner__links-cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn More",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2137 @@
+{
+  "component": "rate-table",
+  "generatedAt": "2026-03-18T11:47:30.456Z",
+  "source": "dom",
+  "entries": {
+    "h2_Rate_Table_Fixed_Index_Annuiti": {
+      "name": "h2_Rate_Table_Fixed_Index_Annuiti",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-rate-table__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Fixed Index Annuities",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Rate_Table_Fixed_AnnuitiesV1": {
+      "name": "h2_Rate_Table_Fixed_AnnuitiesV1",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-rate-table__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Fixed Annuities v1",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Rate_Table_Fixed_AnnuitiesV2": {
+      "name": "h2_Rate_Table_Fixed_AnnuitiesV2",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-rate-table__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Fixed Annuities v2",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Rate_Table_Index_Linked_Annuit": {
+      "name": "h2_Rate_Table_Index_Linked_Annuit",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-rate-table__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Index Linked Annuities",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Rate_Table_Income_Annuity": {
+      "name": "h2_Rate_Table_Income_Annuity",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-rate-table__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Income Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Rate_Table_Fixed_Index_Annuiti": {
+      "name": "div_Rate_Table_Fixed_Index_Annuiti",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-table__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Fixed Index Annuities",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-table__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "table_7": {
+      "name": "table_7",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__table",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//table[contains(@class,'cmp-rate-table__table')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "thead_8": {
+      "name": "thead_8",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__thead",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//thead[contains(@class,'cmp-rate-table__thead')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "tr_9": {
+      "name": "tr_9",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__row.cmp-rate-table__row--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tr[contains(@class,'cmp-rate-table__row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "th_Product": {
+      "name": "th_Product",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Term": {
+      "name": "th_Term",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Term",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Cap_Rate": {
+      "name": "th_Cap_Rate",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Cap Rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Participation_Rate": {
+      "name": "th_Participation_Rate",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Participation Rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Spread": {
+      "name": "th_Spread",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spread",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Effective_Date": {
+      "name": "th_Effective_Date",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Effective Date",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "tbody_16": {
+      "name": "tbody_16",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__tbody",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tbody[contains(@class,'cmp-rate-table__tbody')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "tr_17": {
+      "name": "tr_17",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tr[contains(@class,'cmp-rate-table__row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "td_ForeAccumulation_II": {
+      "name": "td_ForeAccumulation_II",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeAccumulation II",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1_Year": {
+      "name": "td_1_Year",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "1 Year",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_950": {
+      "name": "td_950",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "9.50%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_100": {
+      "name": "td_100",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "100%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_NA": {
+      "name": "td_NA",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "N/A",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_03012026": {
+      "name": "td_03012026",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "03/01/2026",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_2_Year": {
+      "name": "td_2_Year",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "2 Year",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1025": {
+      "name": "td_1025",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "10.25%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "tr_26": {
+      "name": "tr_26",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tr[contains(@class,'cmp-rate-table__row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "td_ForeIncome_II": {
+      "name": "td_ForeIncome_II",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeIncome II",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_875": {
+      "name": "td_875",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "8.75%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_900": {
+      "name": "td_900",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "9.00%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_105": {
+      "name": "td_105",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "105%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "tr_31": {
+      "name": "tr_31",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tr[contains(@class,'cmp-rate-table__row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "td_Income_150_SE": {
+      "name": "td_Income_150_SE",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Income 150+ SE",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_750": {
+      "name": "td_750",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "7.50%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_200": {
+      "name": "td_200",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "2.00%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_800": {
+      "name": "td_800",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "8.00%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_250": {
+      "name": "td_250",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "2.50%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Rate_Table_Fixed_AnnuitiesV1": {
+      "name": "div_Rate_Table_Fixed_AnnuitiesV1",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-table__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Fixed Annuities v1",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Guaranteed_Rate": {
+      "name": "th_Guaranteed_Rate",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Guaranteed Rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Current_Rate": {
+      "name": "th_Current_Rate",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Current Rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "tbody_40": {
+      "name": "tbody_40",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__tbody",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tbody[contains(@class,'cmp-rate-table__tbody')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "tr_41": {
+      "name": "tr_41",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tr[contains(@class,'cmp-rate-table__row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "td_ForeCare": {
+      "name": "td_ForeCare",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCare",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_3_Year": {
+      "name": "td_3_Year",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "3 Year",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_300": {
+      "name": "td_300",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "3.00%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_525": {
+      "name": "td_525",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "5.25%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_5_Year": {
+      "name": "td_5_Year",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "5 Year",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_325": {
+      "name": "td_325",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "3.25%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_550": {
+      "name": "td_550",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "5.50%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_7_Year": {
+      "name": "td_7_Year",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "7 Year",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_350": {
+      "name": "td_350",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "3.50%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_575": {
+      "name": "td_575",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "5.75%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "tr_52": {
+      "name": "tr_52",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tr[contains(@class,'cmp-rate-table__row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "td_SecureFore": {
+      "name": "td_SecureFore",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SecureFore",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_275": {
+      "name": "td_275",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "2.75%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_490": {
+      "name": "td_490",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4.90%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_515": {
+      "name": "td_515",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "5.15%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Rate_Table_Fixed_AnnuitiesV2": {
+      "name": "div_Rate_Table_Fixed_AnnuitiesV2",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-table__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Fixed Annuities v2",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Base_Rate": {
+      "name": "th_Base_Rate",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Base Rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Bonus_Rate": {
+      "name": "th_Bonus_Rate",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Bonus Rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Total_Rate": {
+      "name": "th_Total_Rate",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Total Rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_450": {
+      "name": "td_450",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4.50%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_075": {
+      "name": "td_075",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "0.75%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_475": {
+      "name": "td_475",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4.75%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_415": {
+      "name": "td_415",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4.15%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_440": {
+      "name": "td_440",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4.40%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Rate_Table_Index_Linked_Annuit": {
+      "name": "div_Rate_Table_Index_Linked_Annuit",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-table__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Index Linked Annuities",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Index": {
+      "name": "th_Index",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Index",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Buffer": {
+      "name": "th_Buffer",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Buffer",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "tbody_69": {
+      "name": "tbody_69",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__tbody",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tbody[contains(@class,'cmp-rate-table__tbody')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "tr_70": {
+      "name": "tr_70",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tr[contains(@class,'cmp-rate-table__row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "td_ForeStructured_Growth_II": {
+      "name": "td_ForeStructured_Growth_II",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeStructured Growth II",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_SP_500": {
+      "name": "td_SP_500",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "S&P 500",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_10": {
+      "name": "td_10",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "10%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1500": {
+      "name": "td_1500",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "15.00%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_15": {
+      "name": "td_15",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "15%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1250": {
+      "name": "td_1250",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "12.50%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_4500": {
+      "name": "td_4500",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "45.00%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_Russell_2000": {
+      "name": "td_Russell_2000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Russell 2000",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1800": {
+      "name": "td_1800",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "18.00%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_MSCI_EAFE": {
+      "name": "td_MSCI_EAFE",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "MSCI EAFE",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1650": {
+      "name": "td_1650",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "16.50%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Rate_Table_Income_Annuity": {
+      "name": "div_Rate_Table_Income_Annuity",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-table__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Table - Income Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Premium": {
+      "name": "th_Premium",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Premium",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Payout_Start": {
+      "name": "th_Payout_Start",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Payout Start",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Monthly_Income": {
+      "name": "th_Monthly_Income",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Monthly Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "th_Annual_Income": {
+      "name": "th_Annual_Income",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell.cmp-rate-table__cell--header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//th[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Annual Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "tbody_87": {
+      "name": "tbody_87",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__tbody",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tbody[contains(@class,'cmp-rate-table__tbody')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "tr_88": {
+      "name": "tr_88",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//tr[contains(@class,'cmp-rate-table__row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "td_ForeCertain": {
+      "name": "td_ForeCertain",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCertain",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_100000": {
+      "name": "td_100000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$100,000",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_Immediate": {
+      "name": "td_Immediate",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Immediate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_52500": {
+      "name": "td_52500",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$525.00",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_630000": {
+      "name": "td_630000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$6,300.00",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1_Year_Deferred": {
+      "name": "td_1_Year_Deferred",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "1 Year Deferred",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_55500": {
+      "name": "td_55500",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$555.00",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_666000": {
+      "name": "td_666000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$6,660.00",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_250000": {
+      "name": "td_250000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$250,000",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_131250": {
+      "name": "td_131250",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$1,312.50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1575000": {
+      "name": "td_1575000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$15,750.00",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_138750": {
+      "name": "td_138750",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$1,387.50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_1665000": {
+      "name": "td_1665000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$16,650.00",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_500000": {
+      "name": "td_500000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$500,000",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_262500": {
+      "name": "td_262500",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$2,625.00",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "td_3150000": {
+      "name": "td_3150000",
+      "component": "rate-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-table__cell",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//td[contains(@class,'cmp-rate-table__cell')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$31,500.00",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

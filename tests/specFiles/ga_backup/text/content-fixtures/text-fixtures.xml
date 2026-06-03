@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [Added] GAAM-523: RTE Table content fixture for Text component -->
+<!-- Covers: all cell types, icon placement, dividers, caption, 2–5 columns, light/dark mode -->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Text component RTE Table style guide fixture for GAAM-523."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Text — RTE Tables (GAAM-523)"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+                <!-- Page heading -->
+                <text_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1 class=&quot;style-guide__page-headline&quot;&gt;Text — RTE Tables&lt;/h1&gt;&lt;div class=&quot;style-guide__page-description&quot;&gt;All RTE table cell types, icon placement, column dividers, caption/title, column-count extremes, and dark-mode inversions. Added for GAAM-523.&lt;/div&gt;"
+                    textIsRich="true"/>
+
+                <!-- ═══════════════════════════════════════════════
+                     LIGHT MODE — White section (no background)
+                     ═══════════════════════════════════════════════ -->
+
+                <!-- [Added] GAAM-523: Light mode section label -->
+                <text_light_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h2 class=&quot;style-guide__headline&quot;&gt;Light Mode (White Background)&lt;/h2&gt;"
+                    textIsRich="true"/>
+
+                <!-- ─────────────────────────────────────
+                     Table 1: All cell types + caption + dividers (3 columns, white bg)
+                     ───────────────────────────────────── -->
+                <!-- [Added] GAAM-523: Label for table 1 -->
+                <text_table1_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;&gt;All Cell Types — With Caption &amp;amp; Column Dividers (3 Columns, White)&lt;/h3&gt;"
+                    textIsRich="true"/>
+
+                <!-- [Added] GAAM-523: White section wrapping table 1 -->
+                <section_light_table1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-523: Table 1 — all cell types, caption, dividers -->
+                        <text_table1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            textIsRich="true"
+                            text="&lt;table class=&quot;table-dividers&quot;&gt;&lt;caption&gt;Quarterly Financial Summary&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Category&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Q3 2024&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Q4 2024&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-subheader&quot;&gt;Revenue&lt;/td&gt;&lt;td&gt;$1.2M&lt;/td&gt;&lt;td&gt;$1.5M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Operating Expenses&lt;/td&gt;&lt;td&gt;$0.8M&lt;/td&gt;&lt;td&gt;$0.9M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;Net Income&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$0.4M&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$0.6M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-blank&quot;&gt;Footnote A&lt;/td&gt;&lt;td class=&quot;table-cell-blank&quot;&gt;See filing&lt;/td&gt;&lt;td class=&quot;table-cell-blank-stripe&quot;&gt;See filing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;Total Assets&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;$4.8M&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;$5.1M&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;"/>
+                    </section-par>
+                </section_light_table1>
+
+                <spacer_1
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ─────────────────────────────────────
+                     Table 2: Icon placement — no caption, no dividers (3 columns, white bg)
+                     ───────────────────────────────────── -->
+                <!-- [Added] GAAM-523: Label for table 2 -->
+                <text_table2_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;&gt;Icon Placement (icon-left &amp;amp; icon-right) — No Caption, No Dividers (3 Columns, White)&lt;/h3&gt;"
+                    textIsRich="true"/>
+
+                <!-- [Added] GAAM-523: White section wrapping table 2 -->
+                <section_light_table2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-523: Table 2 — icon placement (icon-left / icon-right) -->
+                        <text_table2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            textIsRich="true"
+                            text="&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Fund&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Rate&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;icon-left&quot;&gt;Growth Fund&lt;/td&gt;&lt;td&gt;4.75%&lt;/td&gt;&lt;td class=&quot;icon-right&quot;&gt;Active&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-stripe icon-left&quot;&gt;Balanced Fund&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;3.50%&lt;/td&gt;&lt;td class=&quot;table-cell-stripe icon-right&quot;&gt;Active&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;icon-left&quot;&gt;Income Fund&lt;/td&gt;&lt;td&gt;2.80%&lt;/td&gt;&lt;td class=&quot;icon-right&quot;&gt;Closed&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;"/>
+                    </section-par>
+                </section_light_table2>
+
+                <spacer_2
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ─────────────────────────────────────
+                     Table 3: Max columns (5 cols) — caption + dividers (white bg)
+                     ───────────────────────────────────── -->
+                <!-- [Added] GAAM-523: Label for table 3 -->
+                <text_table3_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;&gt;Max Columns Test — 5 Columns With Caption &amp;amp; Dividers (White)&lt;/h3&gt;"
+                    textIsRich="true"/>
+
+                <!-- [Added] GAAM-523: White section wrapping table 3 -->
+                <section_light_table3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-523: Table 3 — 5 columns, caption, dividers -->
+                        <text_table3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            textIsRich="true"
+                            text="&lt;table class=&quot;table-dividers&quot;&gt;&lt;caption&gt;Annual Performance by Region&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Region&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Q1&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Q2&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Q3&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Q4&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-subheader&quot;&gt;North America&lt;/td&gt;&lt;td&gt;$2.1M&lt;/td&gt;&lt;td&gt;$2.4M&lt;/td&gt;&lt;td&gt;$2.7M&lt;/td&gt;&lt;td&gt;$3.0M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;Europe&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$1.3M&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$1.5M&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$1.6M&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$1.8M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Asia Pacific&lt;/td&gt;&lt;td&gt;$0.9M&lt;/td&gt;&lt;td&gt;$1.1M&lt;/td&gt;&lt;td&gt;$1.2M&lt;/td&gt;&lt;td&gt;$1.4M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;Total&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;$4.3M&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;$5.0M&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;$5.5M&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;$6.2M&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;"/>
+                    </section-par>
+                </section_light_table3>
+
+                <spacer_3
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ─────────────────────────────────────
+                     Table 4: Min columns (2 cols) — no caption, no dividers (white bg)
+                     ───────────────────────────────────── -->
+                <!-- [Added] GAAM-523: Label for table 4 -->
+                <text_table4_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;&gt;Min Columns Test — 2 Columns Without Dividers (White)&lt;/h3&gt;"
+                    textIsRich="true"/>
+
+                <!-- [Added] GAAM-523: White section wrapping table 4 -->
+                <section_light_table4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-523: Table 4 — 2 columns, no caption, no dividers -->
+                        <text_table4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            textIsRich="true"
+                            text="&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Metric&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Value&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-subheader&quot;&gt;Assets Under Management&lt;/td&gt;&lt;td class=&quot;table-cell-subheader&quot;&gt;AUM (USD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Fixed Annuities&lt;/td&gt;&lt;td&gt;$48.6B&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;Variable Annuities&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$12.3B&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Life Insurance&lt;/td&gt;&lt;td&gt;$7.9B&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-blank&quot;&gt;* Subject to regulatory review&lt;/td&gt;&lt;td class=&quot;table-cell-blank&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;"/>
+                    </section-par>
+                </section_light_table4>
+
+                <spacer_4
+                    cq:styleIds="[size-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ═══════════════════════════════════════════════
+                     DARK MODE — Granite section (background-granite)
+                     ═══════════════════════════════════════════════ -->
+
+                <!-- [Added] GAAM-523: Dark mode section label -->
+                <text_dark_granite_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h2 class=&quot;style-guide__headline&quot;&gt;Dark Mode (Granite Background)&lt;/h2&gt;"
+                    textIsRich="true"/>
+
+                <!-- ─────────────────────────────────────
+                     Table 5: All cell types — caption + dividers (granite bg / dark mode)
+                     ───────────────────────────────────── -->
+                <!-- [Added] GAAM-523: Label for table 5 -->
+                <text_table5_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;&gt;All Cell Types — With Caption &amp;amp; Column Dividers (3 Columns, Granite / Dark Mode)&lt;/h3&gt;"
+                    textIsRich="true"/>
+
+                <!-- [Added] GAAM-523: Granite section wrapping table 5 (dark mode auto-applies) -->
+                <section_granite_table5
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-523: Table 5 — all cell types, caption, dividers, dark mode -->
+                        <text_table5
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            textIsRich="true"
+                            text="&lt;table class=&quot;table-dividers&quot;&gt;&lt;caption&gt;Quarterly Financial Summary&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Category&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Q3 2024&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Q4 2024&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-subheader&quot;&gt;Revenue&lt;/td&gt;&lt;td&gt;$1.2M&lt;/td&gt;&lt;td&gt;$1.5M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Operating Expenses&lt;/td&gt;&lt;td&gt;$0.8M&lt;/td&gt;&lt;td&gt;$0.9M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;Net Income&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$0.4M&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;$0.6M&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-blank&quot;&gt;Footnote A&lt;/td&gt;&lt;td class=&quot;table-cell-blank&quot;&gt;See filing&lt;/td&gt;&lt;td class=&quot;table-cell-blank-stripe&quot;&gt;See filing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;Total Assets&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;$4.8M&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;$5.1M&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;"/>
+                    </section-par>
+                </section_granite_table5>
+
+                <spacer_5
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ─────────────────────────────────────
+                     Table 6: Icon placement (granite bg / dark mode)
+                     ───────────────────────────────────── -->
+                <!-- [Added] GAAM-523: Label for table 6 -->
+                <text_table6_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;&gt;Icon Placement (icon-left &amp;amp; icon-right) — Granite / Dark Mode&lt;/h3&gt;"
+                    textIsRich="true"/>
+
+                <!-- [Added] GAAM-523: Granite section wrapping table 6 (dark mode icon placement) -->
+                <section_granite_table6
+                    cq:styleIds="[background-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-523: Table 6 — icon placement in dark mode (granite) -->
+                        <text_table6
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            textIsRich="true"
+                            text="&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Fund&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Rate&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;icon-left&quot;&gt;Growth Fund&lt;/td&gt;&lt;td&gt;4.75%&lt;/td&gt;&lt;td class=&quot;icon-right&quot;&gt;Active&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-stripe icon-left&quot;&gt;Balanced Fund&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;3.50%&lt;/td&gt;&lt;td class=&quot;table-cell-stripe icon-right&quot;&gt;Active&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;icon-left&quot;&gt;Income Fund&lt;/td&gt;&lt;td&gt;2.80%&lt;/td&gt;&lt;td class=&quot;icon-right&quot;&gt;Closed&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;"/>
+                    </section-par>
+                </section_granite_table6>
+
+                <spacer_6
+                    cq:styleIds="[size-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- ═══════════════════════════════════════════════
+                     DARK MODE — Azul section (background-azul)
+                     ═══════════════════════════════════════════════ -->
+
+                <!-- [Added] GAAM-523: Dark mode azul section label -->
+                <text_dark_azul_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h2 class=&quot;style-guide__headline&quot;&gt;Dark Mode (Azul Background)&lt;/h2&gt;"
+                    textIsRich="true"/>
+
+                <!-- ─────────────────────────────────────
+                     Table 7: All cell types — caption + dividers (azul bg / dark mode)
+                     ───────────────────────────────────── -->
+                <!-- [Added] GAAM-523: Label for table 7 -->
+                <text_table7_label
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;&gt;All Cell Types — With Caption &amp;amp; Column Dividers (3 Columns, Azul / Dark Mode)&lt;/h3&gt;"
+                    textIsRich="true"/>
+
+                <!-- [Added] GAAM-523: Azul section wrapping table 7 (dark mode auto-applies) -->
+                <section_azul_table7
+                    cq:styleIds="[background-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <!-- [Added] GAAM-523: Table 7 — all cell types, caption, dividers, azul dark mode -->
+                        <text_table7
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/text"
+                            textIsRich="true"
+                            text="&lt;table class=&quot;table-dividers&quot;&gt;&lt;caption&gt;Portfolio Allocation Overview&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Asset Class&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;Allocation&lt;/th&gt;&lt;th class=&quot;table-cell-header&quot; scope=&quot;col&quot;&gt;YTD Return&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-subheader&quot;&gt;Fixed Income&lt;/td&gt;&lt;td&gt;45%&lt;/td&gt;&lt;td&gt;+3.2%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Equities&lt;/td&gt;&lt;td&gt;30%&lt;/td&gt;&lt;td&gt;+8.7%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;Real Assets&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;15%&lt;/td&gt;&lt;td class=&quot;table-cell-stripe&quot;&gt;+5.1%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-blank&quot;&gt;Cash &amp;amp; Equivalents&lt;/td&gt;&lt;td class=&quot;table-cell-blank&quot;&gt;10%&lt;/td&gt;&lt;td class=&quot;table-cell-blank-stripe&quot;&gt;+0.4%&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;Blended Portfolio&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;100%&lt;/td&gt;&lt;td class=&quot;table-cell-highlight&quot;&gt;+5.2%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;"/>
+                    </section-par>
+                </section_azul_table7>
+
+                <spacer_end
+                    cq:styleIds="[size-large]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

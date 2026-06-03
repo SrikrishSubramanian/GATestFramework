@@ -1,0 +1,625 @@
+{
+  "component": "hero-fifty-fifty",
+  "generatedAt": "2026-03-17T07:22:03.075Z",
+  "source": "dom",
+  "entries": {
+    "a_Style_Guide": {
+      "name": "a_Style_Guide",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Component_Library": {
+      "name": "a_Component_Library",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_2": {
+      "name": "h1_2",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__headline.cmp-hero-fifty-fifty__headline--h1",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-hero-fifty-fifty__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Securing Your Financial Future With Confidence",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_Invest_In_What_Matters_Most": {
+      "name": "h1_Invest_In_What_Matters_Most",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__headline.cmp-hero-fifty-fifty__headline--h1-xl",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-hero-fifty-fifty__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Invest In What Matters Most",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_Global_Atlantic_At_A_Glance": {
+      "name": "h1_Global_Atlantic_At_A_Glance",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__headline.cmp-hero-fifty-fifty__headline--h1",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-hero-fifty-fifty__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Atlantic At A Glance",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_Building_ForeIncome_II_For_Tom": {
+      "name": "h1_Building_ForeIncome_II_For_Tom",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__headline.cmp-hero-fifty-fifty__headline--h1",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-hero-fifty-fifty__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Building ForeIncome II For Tomorrow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "nav_6": {
+      "name": "nav_6",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "breadcrumb-b9ed866281",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//nav[contains(@class,'cmp-breadcrumb')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ol_7": {
+      "name": "ol_7",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ol[contains(@class,'cmp-breadcrumb__list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__left",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__breadcrumb')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_Style_Guide": {
+      "name": "li_Style_Guide",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Component_Library": {
+      "name": "li_Component_Library",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Hero_5050": {
+      "name": "li_Hero_5050",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item.cmp-breadcrumb__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Hero 50/50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__text-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__text-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__eyebrow-headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_Retirement_Solutions": {
+      "name": "p_Retirement_Solutions",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-hero-fifty-fifty__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Retirement Solutions",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_17": {
+      "name": "div_17",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__description.cmp-hero-fifty-fifty__description--medium",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__buttons",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__buttons')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_19": {
+      "name": "div_19",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__secondary-slot",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__secondary-slot')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Invest_In_What_Matters_Most": {
+      "name": "div_Invest_In_What_Matters_Most",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Invest In What Matters Most",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Invest_In_What_Matters_Most_23": {
+      "name": "div_Invest_In_What_Matters_Most_23",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__text-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__text-content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Invest In What Matters Most",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Invest_In_What_Matters_Most_24": {
+      "name": "div_Invest_In_What_Matters_Most_24",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__eyebrow-headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Invest In What Matters Most",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Global_Atlantic_At_A_Glance": {
+      "name": "div_Global_Atlantic_At_A_Glance",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Atlantic At A Glance",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Global_Atlantic_At_A_Glance_26": {
+      "name": "div_Global_Atlantic_At_A_Glance_26",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__text-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__text-content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Atlantic At A Glance",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Global_Atlantic_At_A_Glance_27": {
+      "name": "div_Global_Atlantic_At_A_Glance_27",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__eyebrow-headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Atlantic At A Glance",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_28": {
+      "name": "div_28",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_29": {
+      "name": "div_29",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__text-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__text-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_30": {
+      "name": "div_30",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__eyebrow-headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_Investment_Management": {
+      "name": "p_Investment_Management",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-hero-fifty-fifty__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Investment Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_32": {
+      "name": "div_32",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__description.cmp-hero-fifty-fifty__description--large",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__description')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

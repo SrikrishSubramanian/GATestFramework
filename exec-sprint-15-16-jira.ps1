@@ -1,7 +1,6 @@
 #Requires -Version 5.0
-# Sprint 15 & 16 Batch Generation (User-Provided Tickets)
+# Sprint 15 & 16 Batch Generation
 
-# Deduplicated list of Sprint 15 & 16 tickets (removed duplicates)
 $sprint1516Tickets = @(
     'GAAM-1098','GAAM-1091','GAAM-1080','GAAM-1068','GAAM-1024','GAAM-993','GAAM-983','GAAM-982','GAAM-969','GAAM-968',
     'GAAM-964','GAAM-940','GAAM-898','GAAM-859','GAAM-839','GAAM-838','GAAM-837','GAAM-836','GAAM-835','GAAM-834',
@@ -14,45 +13,33 @@ $sprint1516Tickets = @(
     'GAAM-922','GAAM-924','GAAM-925','GAAM-927','GAAM-928','GAAM-930','GAAM-959','GAAM-965','GAAM-935'
 )
 
-# Remove duplicates and sort
 $uniqueTickets = $sprint1516Tickets | Sort-Object -Unique
 $totalTickets = $uniqueTickets.Count
 $startTime = Get-Date
 
 Write-Host ""
-Write-Host "╔════════════════════════════════════════════════════════╗"
-Write-Host "║   SPRINT 15 & 16 JIRA GENERATION                       ║"
-Write-Host "║   Total: $totalTickets tickets (deduplicated)                   ║"
-Write-Host "╚════════════════════════════════════════════════════════╝"
-Write-Host ""
-Write-Host "Starting: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -ForegroundColor Cyan
+Write-Host "SPRINT 15 & 16 JIRA GENERATION"
+Write-Host "Total: $totalTickets tickets (deduplicated)"
+Write-Host "Starting: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 Write-Host ""
 
 $successCount = 0
 $failureCount = 0
-$successTickets = @()
-$failedTickets = @()
 
-# Process sequentially for stability
 foreach ($ticket in $uniqueTickets) {
     $index = $uniqueTickets.IndexOf($ticket) + 1
-    Write-Host "[$index/$totalTickets] Generating $ticket..." -ForegroundColor Cyan
+    Write-Host "[$index/$totalTickets] $ticket"
 
     try {
-        $env:env = "dev"
-        $env:JIRA_TICKET = $ticket
-
-        # Run Jira generator
-        & npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium 2>&1 | Out-Null
+        # Explicitly pass env=dev to Playwright command (DEV ONLY - NOT LOCAL)
+        & cmd /c "set env=dev && set JIRA_TICKET=$ticket && npx playwright test generate-from-jira --config playwright.generators.config.ts --project chromium" 2>&1 | Out-Null
 
         $successCount++
-        $successTickets += $ticket
-        Write-Host "[$index/$totalTickets] ✓ $ticket" -ForegroundColor Green
+        Write-Host "[$index/$totalTickets] OK - $ticket"
     }
     catch {
         $failureCount++
-        $failedTickets += $ticket
-        Write-Host "[$index/$totalTickets] ✗ $ticket - Error" -ForegroundColor Red
+        Write-Host "[$index/$totalTickets] FAIL - $ticket"
     }
 
     Start-Sleep -Milliseconds 500
@@ -61,40 +48,7 @@ foreach ($ticket in $uniqueTickets) {
 $duration = (Get-Date) - $startTime
 
 Write-Host ""
-Write-Host "════════════════════════════════════════════════════════"
-Write-Host "SPRINT 15 & 16 GENERATION COMPLETE" -ForegroundColor Green
-Write-Host "════════════════════════════════════════════════════════"
-Write-Host ""
-Write-Host "RESULTS:" -ForegroundColor Yellow
-Write-Host "  ✓ Generated: $successCount tests" -ForegroundColor Green
-Write-Host "  ✗ Failed: $failureCount tickets" -ForegroundColor Red
-Write-Host "  ⏱ Duration: $([math]::Round($duration.TotalMinutes, 1)) minutes" -ForegroundColor Cyan
-Write-Host "  Speed: $([math]::Round($totalTickets / $duration.TotalMinutes, 1)) tickets/min" -ForegroundColor Cyan
-Write-Host ""
-
-Write-Host "GENERATED FILES:" -ForegroundColor Green
-Write-Host "  • Spec files: tests/specFiles/ga/*/*.spec.ts" -ForegroundColor White
-Write-Host "  • POMs: tests/pages/ga/components/*Page.ts" -ForegroundColor White
-Write-Host "  • Locators: tests/pages/ga/components/*.locators.json" -ForegroundColor White
-Write-Host "  • Summaries: tests/specFiles/ga/**/*-test-summary.html" -ForegroundColor White
-Write-Host ""
-
-if ($failedTickets.Count -gt 0) {
-    Write-Host "FAILED TICKETS (retry needed):" -ForegroundColor Yellow
-    $failedTickets | ForEach-Object {
-        Write-Host "  • $_" -ForegroundColor Red
-    }
-    Write-Host ""
-}
-
-Write-Host "NEXT STEPS:" -ForegroundColor Cyan
-Write-Host "  1. Verify count: ls tests/specFiles/ga/*/**.spec.ts | wc -l" -ForegroundColor White
-Write-Host "  2. Run tests: env=dev npx playwright test tests/specFiles/ga/ --grep @smoke" -ForegroundColor White
-Write-Host "  3. Check reports: start playwright-report/index.html" -ForegroundColor White
-Write-Host ""
-
-Write-Host "Sprint 1-14 Progress:" -ForegroundColor Yellow
-Write-Host "  Task ID: bg7a0jy0y (running in parallel)" -ForegroundColor Cyan
-Write-Host ""
-
-exit 0
+Write-Host "SPRINT 15 & 16 COMPLETE"
+Write-Host "Success: $successCount | Failed: $failureCount"
+Write-Host "Duration: $([math]::Round($duration.TotalMinutes, 1)) minutes"
+Write-Host "Completed: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"

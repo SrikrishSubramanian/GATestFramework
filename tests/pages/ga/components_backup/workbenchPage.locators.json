@@ -1,0 +1,15 @@
+{
+  "component": "workbench",
+  "entries": {
+    "root": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-workbench", "confidence": 0.95 }
+      ]
+    },
+    "content": {
+      "strategies": [
+        { "type": "css", "value": ".cmp-workbench__content", "confidence": 0.9 }
+      ]
+    }
+  }
+}

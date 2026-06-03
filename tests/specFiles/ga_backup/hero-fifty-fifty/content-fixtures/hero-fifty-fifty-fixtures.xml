@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [Added] GAAM-519 — Hero 50/50 test fixture page.
+     This is a NEW component that does not yet exist in kkr-aem.
+     All nodes here are fixture-only; no style-guide base is being extended.
+     A developer must review and merge this into kkr-aem once the component is built.
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+   xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+   jcr:primaryType="cq:Page">
+   <jcr:content
+       cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+       jcr:description="Hero 50/50 test fixture page covering all GAAM-519 acceptance-criteria variations."
+       jcr:primaryType="cq:PageContent"
+       jcr:title="Hero 50/50 — Test Fixtures"
+       sling:resourceType="ga/components/structure/page/basepage">
+       <root jcr:primaryType="nt:unstructured">
+           <main-par
+               jcr:primaryType="nt:unstructured"
+               sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+               <!-- ============================================================ -->
+               <!-- Page header                                                   -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 page header -->
+               <text_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h1 class=&quot;style-guide__page-headline&quot;>Hero 50/50&lt;/h1>&lt;div class=&quot;style-guide__page-description&quot;>Full-width two-column hero component. Left column: granite background with Breadcrumb (optional), Eyebrow, Headline (h1), Description, and up to 2 CTAs. Right column: Image (top) with optional secondary slot (Nested Carousel, Statistic, or Content Trail). Columns stack vertically on mobile; breadcrumb is hidden on mobile.&lt;/div>"
+                   textIsRich="true"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 1: Full variant                   -->
+               <!-- All fields authored: Breadcrumb + Eyebrow + Headline +        -->
+               <!-- Description + 2 CTAs + Image + Statistic secondary slot       -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 1 label -->
+               <text_full_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 1 — Full: All fields + Statistic secondary slot&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 1 component -->
+               <hero_fifty_fifty_full
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}true"
+                   breadcrumbItems="[Home,About Us,Leadership]"
+                   eyebrow="Industry Insights"
+                   headline="&lt;p>Building Stronger &lt;span class=&quot;cmp-hero-fifty-fifty__headline--granite&quot;>Futures Together&lt;/span>&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>Global Atlantic partners with financial professionals to provide retirement and life insurance solutions that help their clients achieve long-term financial security and peace of mind.&lt;/p>"
+                   descriptionSize="paragraph-large"
+                   textIsRich="[true,true,true]">
+                   <!-- Left column CTAs -->
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Explore Solutions"
+                       linkURL="/content/global-atlantic/en/solutions.html"/>
+                   <cta_secondary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[secondary-outline,auto-theme]"
+                       linkText="Learn More"
+                       linkURL="/content/global-atlantic/en/about.html"/>
+                   <!-- Right column: Image -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Two financial professionals reviewing investment strategies"
+                       isDecorative="{Boolean}false"/>
+                   <!-- Right column: Secondary slot — Statistic -->
+                   <secondary_slot
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/statistic"
+                       cq:styleIds="[stat-theme-azul]"
+                       statisticValue="$150B+"
+                       description="Assets under management"/>
+               </hero_fifty_fifty_full>
+
+               <!-- [Added] GAAM-519 spacer after fixture 1 -->
+               <spacer_1
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 2: Minimal — Headline only         -->
+               <!-- No eyebrow, no description, no CTAs, no breadcrumb            -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 2 label -->
+               <text_minimal_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 2 — Minimal: Headline only (no eyebrow, no description, no CTAs)&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 2 component -->
+               <hero_fifty_fifty_minimal
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Retirement Solutions That Work for You&lt;/p>"
+                   headlineSize="h1"
+                   textIsRich="[true]">
+                   <!-- Right column: Image only (no secondary slot) -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Retirement planning illustration"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_minimal>
+
+               <!-- [Added] GAAM-519 spacer after fixture 2 -->
+               <spacer_2
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 3: Headline + Description + 1 CTA -->
+               <!-- No eyebrow, no breadcrumb                                     -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 3 label -->
+               <text_desc_cta_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 3 — Headline + Description + 1 CTA (no eyebrow)&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 3 component -->
+               <hero_fifty_fifty_desc_cta
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Protecting What Matters Most&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>Our life insurance products provide comprehensive coverage and financial peace of mind for you and your loved ones.&lt;/p>"
+                   descriptionSize="paragraph-medium"
+                   textIsRich="[true,true]">
+                   <!-- Single CTA -->
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Get a Quote"
+                       linkURL="/content/global-atlantic/en/insurance/quote.html"/>
+                   <!-- Right column: Image only -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Family protected by insurance coverage"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_desc_cta>
+
+               <!-- [Added] GAAM-519 spacer after fixture 3 -->
+               <spacer_3
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 4: Headline + 1 CTA               -->
+               <!-- No eyebrow, no description, no breadcrumb                     -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 4 label -->
+               <text_headline_cta_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 4 — Headline + 1 CTA (no eyebrow, no description)&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 4 component -->
+               <hero_fifty_fifty_headline_cta
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Your Trusted Partner in Financial Planning&lt;/p>"
+                   headlineSize="h1"
+                   textIsRich="[true]">
+                   <!-- Single CTA -->
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Contact Us"
+                       linkURL="/content/global-atlantic/en/contact.html"/>
+                   <!-- Right column: Image only -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Financial advisor meeting with client"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_headline_cta>
+
+               <!-- [Added] GAAM-519 spacer after fixture 4 -->
+               <spacer_4
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 5a: Granite 50% color override    -->
+               <!-- Inline color on beginning of headline text                    -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 5a label -->
+               <text_color_begin_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 5a — Granite 50% color override on beginning of headline&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 5a component — granite span on first word(s) -->
+               <hero_fifty_fifty_color_begin
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>&lt;span class=&quot;cmp-hero-fifty-fifty__headline--granite&quot;>Tailored Solutions&lt;/span> for Every Stage of Life&lt;/p>"
+                   headlineSize="h1"
+                   textIsRich="[true]">
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Life stages illustration"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_color_begin>
+
+               <!-- [Added] GAAM-519 spacer after fixture 5a -->
+               <spacer_5a
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 5b: Granite 50% color override    -->
+               <!-- Inline color on middle of headline text                       -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 5b label -->
+               <text_color_middle_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 5b — Granite 50% color override on middle of headline&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 5b component — granite span in middle -->
+               <hero_fifty_fifty_color_middle
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Building &lt;span class=&quot;cmp-hero-fifty-fifty__headline--granite&quot;>Financial Confidence&lt;/span> Together&lt;/p>"
+                   headlineSize="h1"
+                   textIsRich="[true]">
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Colleagues collaborating in an office"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_color_middle>
+
+               <!-- [Added] GAAM-519 spacer after fixture 5b -->
+               <spacer_5b
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 5c: Granite 50% color override    -->
+               <!-- Inline color on end of headline text                          -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 5c label -->
+               <text_color_end_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 5c — Granite 50% color override on end of headline&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 5c component — granite span on last word(s) -->
+               <hero_fifty_fifty_color_end
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Retirement Planning Made &lt;span class=&quot;cmp-hero-fifty-fifty__headline--granite&quot;>Simple and Smart&lt;/span>&lt;/p>"
+                   headlineSize="h1"
+                   textIsRich="[true]">
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Retiree reviewing financial plan"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_color_end>
+
+               <!-- [Added] GAAM-519 spacer after fixture 5c -->
+               <spacer_5c
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 6a: H1 XL headline size           -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 6a label -->
+               <text_h1xl_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 6a — Headline size: H1 XL&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 6a component — H1 XL size variant -->
+               <hero_fifty_fifty_h1xl
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Securing Your Financial Future&lt;/p>"
+                   headlineSize="h1-xl"
+                   description="&lt;p>With decades of experience, Global Atlantic delivers annuity and life insurance solutions built for the long term.&lt;/p>"
+                   descriptionSize="paragraph-large"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="View Products"
+                       linkURL="/content/global-atlantic/en/products.html"/>
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Financial growth chart"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_h1xl>
+
+               <!-- [Added] GAAM-519 spacer after fixture 6a -->
+               <spacer_6a
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 6b: H1 (standard) headline size   -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 6b label -->
+               <text_h1_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 6b — Headline size: H1 (standard)&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 6b component — standard H1 size variant -->
+               <hero_fifty_fifty_h1
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Securing Your Financial Future&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>With decades of experience, Global Atlantic delivers annuity and life insurance solutions built for the long term.&lt;/p>"
+                   descriptionSize="paragraph-large"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="View Products"
+                       linkURL="/content/global-atlantic/en/products.html"/>
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Financial growth chart"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_h1>
+
+               <!-- [Added] GAAM-519 spacer after fixture 6b -->
+               <spacer_6b
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 7a: Paragraph Medium description  -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 7a label -->
+               <text_para_medium_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 7a — Description size: Paragraph Medium&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 7a component — Paragraph Medium description -->
+               <hero_fifty_fifty_para_medium
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Innovative Insurance Solutions&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>Our fixed and indexed annuity products are designed to provide reliable income streams and long-term growth potential.&lt;/p>"
+                   descriptionSize="paragraph-medium"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Explore Annuities"
+                       linkURL="/content/global-atlantic/en/annuities.html"/>
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Annuity product overview"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_para_medium>
+
+               <!-- [Added] GAAM-519 spacer after fixture 7a -->
+               <spacer_7a
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 7b: Paragraph Large description   -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 7b label -->
+               <text_para_large_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 7b — Description size: Paragraph Large&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 7b component — Paragraph Large description -->
+               <hero_fifty_fifty_para_large
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Innovative Insurance Solutions&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>Our fixed and indexed annuity products are designed to provide reliable income streams and long-term growth potential.&lt;/p>"
+                   descriptionSize="paragraph-large"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Explore Annuities"
+                       linkURL="/content/global-atlantic/en/annuities.html"/>
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Annuity product overview"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_para_large>
+
+               <!-- [Added] GAAM-519 spacer after fixture 7b -->
+               <spacer_7b
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 8a: Secondary slot — Nested Carousel -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 8a label -->
+               <text_carousel_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 8a — Secondary slot: Nested Carousel&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 8a component — Nested Carousel in secondary slot -->
+               <hero_fifty_fifty_carousel
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Stories of Impact and Growth&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>Hear from the people and partners who rely on Global Atlantic every day.&lt;/p>"
+                   descriptionSize="paragraph-medium"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Read Stories"
+                       linkURL="/content/global-atlantic/en/stories.html"/>
+                   <!-- Right column: Image -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Customer testimonial hero"
+                       isDecorative="{Boolean}false"/>
+                   <!-- Right column: Secondary slot — Nested Carousel -->
+                   <secondary_slot
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image-with-nested-content">
+                       <carousel
+                           jcr:primaryType="nt:unstructured"
+                           sling:resourceType="ga/components/content/carousel"
+                           autoplay="{Boolean}false">
+                           <item_0
+                               jcr:primaryType="nt:unstructured"
+                               sling:resourceType="ga/components/content/carousel/carousel-item"
+                               heading="Trusted by Thousands"
+                               body="&lt;p>Over 2 million policyholders trust Global Atlantic for their retirement security.&lt;/p>"/>
+                           <item_1
+                               jcr:primaryType="nt:unstructured"
+                               sling:resourceType="ga/components/content/carousel/carousel-item"
+                               heading="Award-Winning Service"
+                               body="&lt;p>Consistently rated among the top insurance providers for customer satisfaction.&lt;/p>"/>
+                       </carousel>
+                   </secondary_slot>
+               </hero_fifty_fifty_carousel>
+
+               <!-- [Added] GAAM-519 spacer after fixture 8a -->
+               <spacer_8a
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 8b: Secondary slot — Statistic    -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 8b label -->
+               <text_statistic_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 8b — Secondary slot: Statistic&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 8b component — Statistic in secondary slot -->
+               <hero_fifty_fifty_statistic
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Proven Performance Over Decades&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>A track record built on disciplined risk management and deep expertise.&lt;/p>"
+                   descriptionSize="paragraph-medium"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Our Performance"
+                       linkURL="/content/global-atlantic/en/performance.html"/>
+                   <!-- Right column: Image -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Performance metrics dashboard"
+                       isDecorative="{Boolean}false"/>
+                   <!-- Right column: Secondary slot — Statistic -->
+                   <secondary_slot
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/statistic"
+                       cq:styleIds="[stat-theme-azul]"
+                       statisticValue="$150B+"
+                       description="Assets under management"/>
+               </hero_fifty_fifty_statistic>
+
+               <!-- [Added] GAAM-519 spacer after fixture 8b -->
+               <spacer_8b
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 8c: Secondary slot — Content Trail -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 8c label -->
+               <text_trail_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 8c — Secondary slot: Content Trail&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 8c component — Content Trail in secondary slot -->
+               <hero_fifty_fifty_content_trail
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Navigate Your Financial Journey&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>Discover the resources and guidance you need to make confident financial decisions.&lt;/p>"
+                   descriptionSize="paragraph-medium"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Start Learning"
+                       linkURL="/content/global-atlantic/en/resources.html"/>
+                   <!-- Right column: Image -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Journey roadmap graphic"
+                       isDecorative="{Boolean}false"/>
+                   <!-- Right column: Secondary slot — Content Trail -->
+                   <secondary_slot
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/content-trail"
+                       cq:styleIds="[content-trail-background-dark-color]"
+                       trailHeadline="Resources"
+                       trailLinks="[/content/global-atlantic/en/resources/annuities.html,/content/global-atlantic/en/resources/life-insurance.html]"
+                       trailLinkLabels="[Fixed Annuities,Life Insurance 101]"/>
+               </hero_fifty_fifty_content_trail>
+
+               <!-- [Added] GAAM-519 spacer after fixture 8c -->
+               <spacer_8c
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 8d: No secondary slot             -->
+               <!-- Image only in right column                                    -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 8d label -->
+               <text_image_only_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 8d — Secondary slot: None (Image only in right column)&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 8d component — no secondary slot, image only -->
+               <hero_fifty_fifty_image_only
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>A Legacy of Financial Strength&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>Since 2004, Global Atlantic has been building innovative insurance solutions backed by strong capital and disciplined risk management.&lt;/p>"
+                   descriptionSize="paragraph-medium"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="Our History"
+                       linkURL="/content/global-atlantic/en/about/history.html"/>
+                   <!-- Right column: Image only — no secondary_slot child node -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       fileReference="/content/dam/ga/style-guide/hero-fifty-fifty/hero-image.jpg"
+                       alt="Global Atlantic headquarters"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_image_only>
+
+               <!-- [Added] GAAM-519 spacer after fixture 8d -->
+               <spacer_8d
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 — Fixture 9: Missing / empty image          -->
+               <!-- Right column has no fileReference — tests placeholder/fallback -->
+               <!-- ============================================================ -->
+               <!-- [Added] GAAM-519 fixture 9 label -->
+               <text_no_image_header
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/text"
+                   text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixture 9 — Missing image (no fileReference authored)&lt;/h3>"
+                   textIsRich="true"/>
+               <!-- [Added] GAAM-519 fixture 9 component — image node present but no fileReference -->
+               <hero_fifty_fifty_no_image
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/hero-fifty-fifty"
+                   breadcrumbEnabled="{Boolean}false"
+                   headline="&lt;p>Placeholder State — Image Not Authored&lt;/p>"
+                   headlineSize="h1"
+                   description="&lt;p>This fixture verifies the component renders gracefully when no image has been selected by the author.&lt;/p>"
+                   descriptionSize="paragraph-medium"
+                   textIsRich="[true,true]">
+                   <cta_primary
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/button"
+                       cq:styleIds="[primary-filled,auto-theme]"
+                       linkText="View Placeholder"
+                       linkURL="/content/global-atlantic/en/placeholder.html"/>
+                   <!-- Image node is present but fileReference is intentionally omitted -->
+                   <image
+                       jcr:primaryType="nt:unstructured"
+                       sling:resourceType="ga/components/content/image"
+                       isDecorative="{Boolean}false"/>
+               </hero_fifty_fifty_no_image>
+
+               <!-- [Added] GAAM-519 spacer after fixture 9 -->
+               <spacer_9
+                   cq:styleIds="[size-medium]"
+                   jcr:primaryType="nt:unstructured"
+                   sling:resourceType="ga/components/content/spacer"/>
+
+           </main-par>
+       </root>
+   </jcr:content>
+</jcr:root>

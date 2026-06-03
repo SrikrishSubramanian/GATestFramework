@@ -1,0 +1,118 @@
+{
+  "component": "grid-container",
+  "generatedAt": "2026-04-17T03:21:07.522Z",
+  "source": "dom",
+  "entries": {
+    "div_0": {
+      "name": "div_0",
+      "component": "grid-container",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-grid-container__items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-grid-container__items')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_1": {
+      "name": "div_1",
+      "component": "grid-container",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-grid-container__items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-grid-container__items')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Column 1 — 25% width\n\n\n    \n\n\n\n\n    Column 2 — 75% width",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_2": {
+      "name": "div_2",
+      "component": "grid-container",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-grid-container__items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-grid-container__items')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Column 1 — 40% width\n\n\n    \n\n\n\n\n    Column 2 — 60% width",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_3": {
+      "name": "div_3",
+      "component": "grid-container",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-grid-container__items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-grid-container__items')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_4": {
+      "name": "div_4",
+      "component": "grid-container",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-grid-container__items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-grid-container__items')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Column 1\n\n\n    \n\n\n\n\n    Column 2\n\n\n    \n\n\n\n\n    Column 3",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "grid-container",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-grid-container__items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-grid-container__items')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

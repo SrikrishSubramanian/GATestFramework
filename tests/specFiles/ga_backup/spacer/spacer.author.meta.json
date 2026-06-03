@@ -1,0 +1,7 @@
+{
+  "testName": "CMS FE: Spacer (Desktop and Mobile)",
+  "jiraId": "GAAM-379",
+  "testedUrl": "https://author-p101514-e1845752.adobeaemcloud.com/ui#/aem/editor.html/content/ga/style-guide/components/spacer.html",
+  "figmaLink": "https://www.figma.com/file/C7DwRfnSXu89s42cug1QyS?type=design&node-id=6285%3A11657&mode=dev",
+  "component": "spacer"
+}

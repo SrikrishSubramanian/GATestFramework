@@ -1,0 +1,12 @@
+{
+  "component": "form-text",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/form/form-text/.content.xml",
+  "sourceHash": "e06bd39370993ca3a4e308444c775e77",
+  "generatedAt": "2026-03-15",
+  "tickets": ["GAAM-504"],
+  "additions": [
+    "Filled state (pre-populated value) on all 4 backgrounds for Text Field",
+    "Required + Helper text (non-error) on all 4 backgrounds for Text Field",
+    "Filled + Counter state on all 4 backgrounds for Text Area"
+  ]
+}

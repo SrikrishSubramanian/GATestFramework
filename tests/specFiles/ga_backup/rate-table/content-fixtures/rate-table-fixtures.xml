@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Rate Table style guide page."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Rate Table"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+                <!-- [Added] GAAM-558 Rate Table component style guide page header -->
+                <text_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1 class=&quot;style-guide__page-headline&quot;>Rate Table&lt;/h1>&lt;div class=&quot;style-guide__page-description&quot;>Dynamic rate table component supporting five table variation types: Fixed Index Annuities, Fixed Annuities v1, Fixed Annuities v2, Index Linked Annuities, and Income Annuity.&lt;/div>"
+                    textIsRich="true"/>
+
+                <!-- [Added] GAAM-558 Fixed Index Annuities - White Background -->
+                <text_fixed_index_annuities_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixed Index Annuities — White Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_fixed_index_annuities_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_fixed_index_annuities
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="fixed-index-annuities"/>
+                    </section-par>
+                </section_fixed_index_annuities_white>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_1
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Fixed Annuities v1 - White Background -->
+                <text_fixed_annuities_v1_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixed Annuities v1 — White Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_fixed_annuities_v1_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_fixed_annuities_v1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="fixed-annuities-v1"/>
+                    </section-par>
+                </section_fixed_annuities_v1_white>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_2
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Fixed Annuities v2 - White Background -->
+                <text_fixed_annuities_v2_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixed Annuities v2 — White Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_fixed_annuities_v2_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_fixed_annuities_v2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="fixed-annuities-v2"/>
+                    </section-par>
+                </section_fixed_annuities_v2_white>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_3
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Index Linked Annuities - White Background -->
+                <text_index_linked_annuities_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Index Linked Annuities — White Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_index_linked_annuities_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_index_linked_annuities
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="index-linked-annuities"/>
+                    </section-par>
+                </section_index_linked_annuities_white>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_4
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Income Annuity - White Background -->
+                <text_income_annuity_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Income Annuity — White Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_income_annuity_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_income_annuity
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="income-annuity"/>
+                    </section-par>
+                </section_income_annuity_white>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_5
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Empty State - White Background (No Variation Selected) -->
+                <text_empty_state_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Empty State (No Variation) — White Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_empty_state_white
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_empty
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"/>
+                    </section-par>
+                </section_empty_state_white>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_6
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Fixed Index Annuities - Slate Background -->
+                <text_fixed_index_annuities_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixed Index Annuities — Slate Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_fixed_index_annuities_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_fixed_index_annuities_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="fixed-index-annuities"/>
+                    </section-par>
+                </section_fixed_index_annuities_slate>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_7
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Fixed Annuities v1 - Slate Background -->
+                <text_fixed_annuities_v1_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixed Annuities v1 — Slate Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_fixed_annuities_v1_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_fixed_annuities_v1_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="fixed-annuities-v1"/>
+                    </section-par>
+                </section_fixed_annuities_v1_slate>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_8
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Fixed Annuities v2 - Slate Background -->
+                <text_fixed_annuities_v2_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Fixed Annuities v2 — Slate Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_fixed_annuities_v2_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_fixed_annuities_v2_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="fixed-annuities-v2"/>
+                    </section-par>
+                </section_fixed_annuities_v2_slate>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_9
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Index Linked Annuities - Slate Background -->
+                <text_index_linked_annuities_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Index Linked Annuities — Slate Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_index_linked_annuities_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_index_linked_annuities_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="index-linked-annuities"/>
+                    </section-par>
+                </section_index_linked_annuities_slate>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_10
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Income Annuity - Slate Background -->
+                <text_income_annuity_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Income Annuity — Slate Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_income_annuity_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_income_annuity_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"
+                            tableVariation="income-annuity"/>
+                    </section-par>
+                </section_income_annuity_slate>
+
+                <!-- [Added] GAAM-558 Spacer -->
+                <spacer_11
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- [Added] GAAM-558 Empty State - Slate Background (No Variation Selected) -->
+                <text_empty_state_slate_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h3 class=&quot;style-guide__headline&quot;>Empty State (No Variation) — Slate Background&lt;/h3>"
+                    textIsRich="true"/>
+                <section_empty_state_slate
+                    cq:styleIds="[background-slate]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/section">
+                    <section-par jcr:primaryType="nt:unstructured">
+                        <rate_table_empty_slate
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="ga/components/content/rate-table"/>
+                    </section-par>
+                </section_empty_state_slate>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

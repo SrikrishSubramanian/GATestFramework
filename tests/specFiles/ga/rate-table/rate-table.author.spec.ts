@@ -16,7 +16,7 @@ const BASE = () => process.env.AEM_AUTHOR_URL || 'http://localhost:4502';
 const STYLE_GUIDE_PATH = '/content/global-atlantic/style-guide/components/rate-table.html';
 
 test.beforeEach(async ({ page }) => {
-  await loginToAEMAuthor(page);
+  // Auth handled by globalSetup + storageState in config
 });
 
 // ── GAAM-558 Acceptance Criteria ─────────────────────────────────────────────

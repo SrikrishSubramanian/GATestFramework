@@ -284,10 +284,10 @@ export class AEMTestHelper {
       const start = Date.now();
       try {
         await this.page.setViewportSize({ width: viewport.width, height: 900 });
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState('domcontentloaded');
 
         const component = await this.getComponentRoot();
-        const isVisible = await component.first().isVisible();
+        const isVisible = await component.first().isVisible({ timeout: 5000 });
 
         results.push({
           passed: isVisible,
