@@ -93,13 +93,13 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video: process.env.CI ? 'retain-on-failure' : 'off',
     // launchOptions: {
     //   slowMo: 1000,
     //   args: ["--start-fullscreen"],
     // },
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: process.env.CI ? 'on-first-retry' : 'off',
     ignoreHTTPSErrors: true,
 
     /* Reuse auth state from globalSetup — eliminates per-test login overhead */
