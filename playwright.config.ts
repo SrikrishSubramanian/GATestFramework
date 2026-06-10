@@ -70,7 +70,9 @@ const viewportProjects = viewports.flatMap(viewport => {
 export default defineConfig({
 
   // timeout: 120_000,
-  timeout: 5 * 60 * 1000,
+  // Reduced from 5min to 30sec for faster failure when AEM unavailable
+  // CI can override if needed with --timeout flag
+  timeout: process.env.CI ? 5 * 60 * 1000 : 30 * 1000,
   testDir: './tests/specFiles',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -79,8 +81,13 @@ export default defineConfig({
   /* Retry on CI only */
   // retries: process.env.CI ? 2 : 0,
   retries: 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : 4,
+  /* Worker configuration
+     Local: Use fewer workers when running all 5 browser projects to avoid memory overhead
+     - Single browser: 4 workers
+     - All 5 browsers: 2 workers (parallelization handles the rest)
+     CI: 1 worker per project (mobile/desktop run separately)
+  */
+  workers: process.env.CI ? 1 : 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html', { outputFolder: reportDir }],
