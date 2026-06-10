@@ -21,3 +21,10 @@ tests/environments/.env.*.credentials
 # Playwright
 node_modules/
 /playwright/.auth/
+
+# Generated analysis & utility scripts
+SPRINT_*.md
+SPRINT_*.json
+analyze-tests-by-sprint.js
+fetch-jira-sprints.js
+fetch_jira_data.py
