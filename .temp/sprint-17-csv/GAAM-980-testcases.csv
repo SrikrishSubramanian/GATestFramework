@@ -1,0 +1,350 @@
+TC_ID,Test Type,Test Scenario,Pre-Condition,Test Steps,Test Data,Expected Result,Status
+TC_001,Positive,Verify component renders correctly,User is logged in,"• Navigate to component page
+• Wait for page to load
+• Verify component is visible
+• Verify no console errors",Valid component URL,Component displays correctly,
+TC_002,Positive,Verify all required fields display,User is logged in,"• Check header bar displays
+• Verify all required labels visible
+• Check all input fields present
+• Verify buttons and interactive elements",Page with complete data,All required fields display correctly,
+TC_003,Positive,Verify styling matches Figma design,User is logged in,"• Open Figma design reference
+• Compare colors (purple header)
+• Check spacing and padding
+• Verify typography matches",Figma design URL,UI matches design exactly,
+TC_004,Positive,Verify interactive elements work,User is logged in,"• Click on path links
+• Verify navigation works
+• Check button interactions
+• Verify no JavaScript errors",User input on interactive elements,All interactions work as expected,
+TC_005,Positive,Verify content hierarchy,User is logged in,"• Verify header is prominent
+• Check path hierarchy
+• Verify bullet points indentation
+• Check statistical block formatting",Standard component display,Content hierarchy is clear,
+TC_006,Positive,Verify form submission and data persistence,User is logged in,"• Fill all required form fields
+• Submit the form
+• Verify success message
+• Check data is persisted",Valid form data,Form submits successfully,
+TC_007,Positive,Verify responsive behavior,User is logged in,"• Test on multiple viewports
+• Verify layout adapts correctly
+• Check no horizontal scrolling
+• Verify content readable",Multiple viewport sizes,Layout responsive; Content readable,
+TC_008,Negative,Verify handling of empty inputs,User is logged in,"• Pass null/undefined path name
+• Pass empty description
+• Pass empty bullet list
+• Verify graceful degradation","null, undefined, empty strings",Component handles gracefully,
+TC_009,Negative,Verify XSS/HTML injection prevention,User is logged in,"• Input HTML tags in path name
+• Input script tags in description
+• Input malicious content
+• Check content is escaped","<script>alert(""XSS"")</script>, <img src=x onerror=alert(1)>",Content is escaped and safe,
+TC_010,Negative,Verify handling of very long text,User is logged in,"• Enter path name 200+ characters
+• Enter description 500+ characters
+• Verify no layout break
+• Check text truncation",200-500+ character strings,Layout remains intact,
+TC_011,Negative,Verify special characters handling,User is logged in,"• Use special chars: !@#$%^&*()
+• Use Unicode characters
+• Use emoji
+• Verify correct rendering","!@#$%^&*(), Unicode, emoji",Characters display correctly,
+TC_012,Negative,Verify handling of missing optional fields,User is logged in,"• Omit path description
+• Remove optional elements
+• Remove bullet points
+• Verify component still works",Missing optional fields,Component functions without optional fields,
+TC_013,Negative,Verify large dataset handling,User is logged in,"• Load 100+ bullet points
+• Load 50+ path levels
+• Check performance
+• Verify no memory leaks",Large arrays of data,Component handles large data,
+TC_014,Negative,Verify invalid format handling,User is logged in,"• Submit invalid data formats
+• Test with malformed JSON
+• Test with incorrect data types
+• Verify error handling","Invalid formats, malformed data",Errors handled gracefully,
+TC_015,Edge Case,Verify single character inputs,User is logged in,"• Enter single char path name
+• Enter single char description
+• Verify rendering
+• Check spacing",Single character strings,Renders correctly,
+TC_016,Edge Case,Verify Unicode and international characters,User is logged in,"• Input Chinese characters
+• Input Arabic text
+• Input RTL languages
+• Verify layout handles correctly","Chinese, Arabic, Unicode text",International text displays correctly,
+TC_017,Edge Case,Verify whitespace handling,User is logged in,"• Input leading/trailing spaces
+• Input multiple spaces between words
+• Input tabs and line breaks
+• Verify trimming works","Spaces around text, multiple spaces",Whitespace handled correctly,
+TC_018,Edge Case,Verify mixed optional and required fields,User is logged in,"• Combine all field variations
+• Mix required + some optional
+• Mix required + all optional
+• Verify flexibility",Various field combinations,All combinations work,
+TC_019,Edge Case,Verify numerical boundary values,User is logged in,"• Test min array size (0 items)
+• Test max practical array size
+• Test negative numbers
+• Verify handling","0, -1, 999999",Handles boundary values,
+TC_020,Edge Case,Verify case sensitivity,User is logged in,"• Input uppercase path names
+• Input lowercase names
+• Input mixed case
+• Verify consistent handling","PATH, path, Path",Case handled appropriately,
+TC_021,Edge Case,Verify concurrent user handling,User is logged in,"• Open form in multiple tabs
+• Edit same record simultaneously
+• Submit changes
+• Verify conflict handling",Concurrent user sessions,Concurrent edits handled,
+TC_022,Accessibility,Verify WCAG 2.2 semantic HTML structure,User is logged in,"• Inspect HTML elements
+• Verify heading hierarchy (h1-h6)
+• Check list markup
+• Verify semantic tags used",HTML inspection tools (DevTools),Semantic HTML structure correct,
+TC_023,Accessibility,Verify color contrast compliance (4.5:1 WCAG AA),User is logged in,"• Use color contrast checker
+• Test purple header vs text
+• Test all text colors
+• Verify >= 4.5:1 ratio","Contrast checking tool, Color palette",All contrasts >= 4.5:1,
+TC_024,Accessibility,Verify screen reader compatibility,User is logged in,"• Test with NVDA/JAWS
+• Verify text alternatives
+• Check aria-labels
+• Verify reading order",Screen reader software (NVDA),Content readable via screen reader,
+TC_025,Accessibility,Verify keyboard navigation (Tab order),User is logged in,"• Navigate using Tab key only
+• Verify logical tab order
+• Check focus indicators
+• Test all interactive elements",Keyboard (Tab/Shift+Tab),Fully keyboard navigable,
+TC_026,Accessibility,Verify 200% zoom readability,User is logged in,"• Zoom page to 200%
+• Verify no content cut off
+• Check text remains readable
+• Verify layout flows",Browser zoom at 200%,Content readable at 200% zoom,
+TC_027,Accessibility,Verify no critical accessibility violations,User is logged in,"• Run Level Access scan
+• Check for WCAG violations
+• Verify no errors
+• Document any warnings",Level Access scan tool,No critical issues found,
+TC_028,Accessibility,Verify mobile touch target sizes (44x44px),User is logged in,"• Test on actual mobile device
+• Check all clickable areas
+• Verify each >= 44x44px
+• Check spacing between targets",WCAG 2.5.5: 44x44px minimum,Touch targets meet WCAG minimum,
+TC_029,Responsive,Verify mobile small (320px),User is logged in,"• Set viewport 320x568
+• Verify single-column layout
+• Verify full-width
+• Check readable text",320x568px (Mobile small),Displays correctly on 320px,
+TC_030,Responsive,Verify mobile large (414px),User is logged in,"• Set viewport 414x896
+• Verify single column layout
+• Verify spacing adequate
+• Check readable",414x896px (Mobile large),Displays correctly on 414px,
+TC_031,Responsive,Verify tablet portrait (768px),User is logged in,"• Set viewport 768x1024
+• Verify optimized layout
+• Check element spacing
+• Verify readable",768x1024px (Tablet Portrait),Tablet layout correct,
+TC_032,Responsive,Verify tablet landscape (1024px),User is logged in,"• Set viewport 1024x768
+• Verify horizontal layout
+• Check spacing correct
+• Verify readable",1024x768px (Tablet Landscape),Tablet landscape displays correctly,
+TC_033,Responsive,Verify desktop standard (1366px),User is logged in,"• Set viewport 1366x768
+• Verify layout optimized
+• Verify spacing
+• Check readable",1366x768px (Desktop),Desktop standard displays correctly,
+TC_034,Responsive,Verify desktop large (1920px),User is logged in,"• Set viewport 1920x1080
+• Verify two-column layout
+• Check statistics LEFT, bullets RIGHT
+• Verify optimal spacing",1920x1080px (Desktop large),Large desktop displays correctly,
+TC_035,Responsive,Verify ultra wide (2560px) - 4K,User is logged in,"• Set viewport 2560x1440
+• Verify layout correct
+• Verify not too stretched
+• Verify readable",2560x1440px (Ultra wide 4K),Ultra wide displays correctly,
+TC_036,Responsive,Verify layout transition points,User is logged in,"• Test 768px to 1024px transition
+• Test 1024px to 1920px transition
+• Verify smooth breakpoints
+• Check no layout jump",Incremental viewport changes,Smooth transitions at breakpoints,
+TC_037,Responsive,Verify full-width content display,User is logged in,"• Verify component uses full width
+• Check padding consistency
+• Verify margins appropriate
+• Check not stretched",Various screen sizes,Full-width display correct,
+TC_038,Cross-Browser,Verify Chrome desktop rendering,User is logged in,"• Open in Chrome latest
+• Verify all elements display
+• Check styling correct
+• Verify no console errors",Chrome browser (desktop),Renders correctly in Chrome,
+TC_039,Cross-Browser,Verify Firefox desktop rendering,User is logged in,"• Open in Firefox latest
+• Verify styling consistent
+• Check layout correct
+• Verify functionality",Firefox browser (desktop),Renders correctly in Firefox,
+TC_040,Cross-Browser,Verify Safari desktop rendering,User is logged in,"• Open in Safari latest
+• Check -webkit prefixes
+• Verify styling correct
+• Check all features work",Safari browser (desktop),Renders correctly in Safari,
+TC_041,Cross-Browser,Verify Edge desktop rendering,User is logged in,"• Open in Edge latest
+• Verify compatibility
+• Check styling
+• Test functionality",Microsoft Edge browser,Renders correctly in Edge,
+TC_042,Cross-Browser,Verify Safari mobile rendering,User is logged in,"• Test on iPhone Safari
+• Verify responsive layout
+• Check touch interactions
+• Verify performance",iPhone Safari mobile,Works correctly on Safari mobile,
+TC_043,Cross-Browser,Verify Chrome mobile rendering,User is logged in,"• Test on Chrome mobile
+• Verify responsive behavior
+• Check touch targets
+• Verify no zoom needed",Chrome mobile browser,Works correctly on Chrome mobile,
+TC_044,Cross-Browser,Verify consistent behavior across browsers,User is logged in,"• Compare rendering across browsers
+• Check for browser-specific issues
+• Verify consistent user experience
+• Document differences",Multiple browser versions,Behavior consistent across browsers,
+TC_045,UI,Verify purple header bar styling,User is logged in,"• Check header background color
+• Verify hex #6B46C1 or equivalent
+• Check padding/spacing
+• Verify text color white",Purple header (#6B46C1),Header styled correctly,
+TC_046,UI,Verify typography and font sizes,User is logged in,"• Check title font size
+• Verify body text size
+• Check line spacing
+• Verify font family consistent",Figma design specs,Typography matches spec,
+TC_047,UI,Verify spacing and padding consistency,User is logged in,"• Measure margins between elements
+• Check padding inside containers
+• Verify whitespace balance
+• Compare with Figma",Spacing measurements,Spacing matches design,
+TC_048,UI,Verify bullet point formatting,User is logged in,"• Check bullet symbol
+• Verify indentation
+• Check line height
+• Verify alignment",Bullet list component,Bullet formatting correct,
+TC_049,UI,Verify statistical block display,User is logged in,"• Check number display
+• Verify label text
+• Check icon display
+• Verify alignment in layout",Statistics block data,Statistics display correctly,
+TC_050,UI,Verify borders and dividers,User is logged in,"• Check for dividers between sections
+• Verify border colors
+• Check border width
+• Verify alignment",Component layout,Borders display correctly,
+TC_051,UI,Verify visual hierarchy,User is logged in,"• Check title prominence
+• Verify emphasis on key elements
+• Check visual weight
+• Verify focus areas clear",Visual design review,Hierarchy is clear,
+TC_052,Performance,Verify page load time performance,User is logged in,"• Load component page
+• Measure load time
+• Check network requests
+• Verify < 3 second load","Network throttling (3G, 4G)",Page loads < 3 seconds,
+TC_053,Performance,Verify large dataset performance,User is logged in,"• Load 1000+ records
+• Check rendering performance
+• Verify no lag
+• Check memory usage",Large dataset (1000+ items),Handles large data efficiently,
+TC_054,Performance,Verify image optimization,User is logged in,"• Check image sizes
+• Verify responsive images
+• Check lazy loading
+• Verify format optimization",Image files and assets,Images optimized and responsive,
+TC_055,Integration,Verify API integration,API endpoint available,"• Call API endpoint
+• Verify response format
+• Check data transformation
+• Verify UI updates","API endpoint, request data",API integration works correctly,
+TC_056,Integration,Verify database persistence,Database connection active,"• Submit form data
+• Verify database entry
+• Retrieve data
+• Verify data integrity","Form data, database connection",Data persisted correctly in database,
+TC_057,Integration,Verify third-party service integration,Third-party services configured,"• Call third-party API
+• Verify integration working
+• Check error handling
+• Verify data sync",Third-party service credentials,Third-party services integrated correctly,
+TC_058,Security,Verify SQL injection prevention,User is logged in,"• Input SQL injection strings
+• Test with quotes and semicolons
+• Verify parameterized queries
+• Check no database errors exposed",'; DROP TABLE--; SELECT * FROM;,SQL injection prevented,
+TC_059,Security,Verify CSRF attack prevention,User is logged in,"• Check CSRF tokens present
+• Verify token validation
+• Test cross-origin requests
+• Check same-site cookies",CSRF token verification,CSRF tokens validated,
+TC_060,Security,Verify secure authentication,User authentication configured,"• Test password hashing
+• Verify SSL/TLS usage
+• Check no credentials in logs
+• Verify secure session handling",User credentials,Credentials secure,
+TC_061,Security,Verify data encryption,Encryption configured,"• Verify sensitive data encrypted
+• Check encryption algorithm
+• Test key management
+• Verify no plaintext storage",Sensitive data (PII),Data encrypted at rest and in transit,
+TC_062,Boundary Value,Verify minimum numeric value (0),Numeric field exists,"• Enter minimum value (0)
+• Verify input accepted
+• Check processing correct
+• Verify no errors",0,Minimum values handled correctly,
+TC_063,Boundary Value,Verify maximum numeric value,Numeric field exists,"• Enter maximum value
+• Verify input accepted
+• Check processing correct
+• Verify overflow prevention","999999, 2147483647",Maximum values handled correctly,
+TC_064,Boundary Value,Verify zero value in calculations,Numeric field exists,"• Enter zero
+• Verify accepted
+• Check calculations
+• Verify no division errors",0,Zero handled appropriately,
+TC_065,Boundary Value,Verify negative number handling,Numeric field exists,"• Enter negative values
+• Verify accepted or rejected per spec
+• Check processing
+• Verify correct handling","-1, -100, -999",Negative numbers handled per spec,
+TC_066,Boundary Value,Verify decimal precision,Numeric field exists,"• Enter decimal values
+• Verify precision maintained
+• Check rounding
+• Verify calculations accurate","0.1, 3.14159, 99.99",Decimals handled with correct precision,
+TC_067,Boundary Value,Verify very large numbers,Numeric field exists,"• Enter very large numbers
+• Verify no overflow
+• Check scientific notation
+• Verify calculations","999999999999, 1e10",Large numbers handled without overflow,
+TC_068,Boundary Value,Verify leading zeros in numbers,Numeric field exists,"• Enter numbers with leading zeros
+• Verify trimmed correctly
+• Check stored value
+• Verify display","007, 0123",Leading zeros handled correctly,
+TC_069,Boundary Value,Verify scientific notation,Numeric field exists,"• Enter scientific notation
+• Verify parsed correctly
+• Check converted to number
+• Verify calculations","1e5, 1.5e-3",Scientific notation handled correctly,
+TC_070,Boundary Value,Verify empty string handling,String field exists,"• Submit empty string
+• Verify validation
+• Check error message
+• Verify required field handling","""""",Empty strings handled with validation,
+TC_071,Boundary Value,Verify single character string,String field exists,"• Enter single character
+• Verify accepted
+• Check storage
+• Verify display correct","a, 1, !",Single characters handled correctly,
+TC_072,Boundary Value,Verify maximum string length,String field with max length exists,"• Enter string at max length
+• Verify truncation or error
+• Check database limit
+• Verify validation","255 chars, 1000 chars, 5000 chars",String length limits enforced,
+TC_073,Boundary Value,Verify whitespace-only string,String field exists,"• Enter spaces only
+• Verify trimming
+• Check validation
+• Verify handling","   , 		, 
+",Whitespace-only strings trimmed or rejected,
+TC_074,Boundary Value,Verify Unicode and special characters,String field exists,"• Enter Unicode characters
+• Enter emoji
+• Enter mixed encodings
+• Verify stored correctly","??, ?????, ??",Unicode and UTF-8 handled correctly,
+TC_075,Boundary Value,Verify minimum date value,Date field exists,"• Enter minimum date
+• Verify accepted
+• Check format
+• Verify processing","1900-01-01, 1970-01-01",Minimum dates handled correctly,
+TC_076,Boundary Value,Verify maximum date value,Date field exists,"• Enter maximum date
+• Verify accepted
+• Check processing
+• Verify no overflow","2099-12-31, 9999-12-31",Maximum dates handled correctly,
+TC_077,Boundary Value,Verify leap year handling,Date field exists,"• Enter leap year date (Feb 29)
+• Test 2000 (leap), 1900 (non-leap)
+• Verify validation
+• Check calculations","2000-02-29, 1900-02-29, 2024-02-29",Leap year dates validated correctly,
+TC_078,Boundary Value,Verify invalid date format,Date field exists,"• Enter invalid dates
+• Test wrong format
+• Verify error message
+• Check validation","32-13-2024, 13/32/2024",Invalid dates rejected with validation,
+TC_079,Boundary Value,Verify empty array handling,Array field exists,"• Submit empty array
+• Verify handling
+• Check display
+• Verify no errors",[],Empty arrays handled correctly,
+TC_080,Boundary Value,Verify single item array,Array field exists,"• Submit array with one item
+• Verify accepted
+• Check processing
+• Verify display","[1], [""item""]",Single-item arrays handled correctly,
+TC_081,Boundary Value,Verify maximum array size,Array field exists,"• Submit very large array
+• Check memory impact
+• Verify performance
+• Check limits enforced","1000+ items, 10000+ items",Array size limits enforced,
+TC_082,Boundary Value,Verify null value handling,Field allows null,"• Submit null value
+• Verify accepted
+• Check storage
+• Verify retrieval",null,Null values handled correctly,
+TC_083,Boundary Value,Verify undefined value handling,Field defined,"• Submit undefined value
+• Verify handling
+• Check default value
+• Verify error handling","undefined, missing field",Undefined values handled with defaults,
+,,,,,,,
+,,,,,,,
+TEST CASE SUMMARY,,,,,,,
+,,,,,,,
+Total Test Cases,83,,,,,,
+Positive Test Cases,7,,,,,,
+Negative Test Cases,7,,,,,,
+Edge Case Test Cases,7,,,,,,
+Accessibility Test Cases,7,,,,,,
+Responsive Test Cases,9,,,,,,
+Cross-Browser Test Cases,7,,,,,,
+UI Test Cases,7,,,,,,
+Security Test Cases,4,,,,,,
+Performance Test Cases,3,,,,,,
+Integration Test Cases,3,,,,,,
+Boundary Value Test Cases,22,,,,,,

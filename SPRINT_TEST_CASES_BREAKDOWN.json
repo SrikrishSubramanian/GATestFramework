@@ -1,0 +1,409 @@
+{
+  "sprint_1": {
+    "name": "Sprint 1",
+    "tickets": [
+      "GAAM-48",
+      "GAAM-69"
+    ],
+    "components": [
+      "page",
+      "site-header"
+    ],
+    "testFiles": [
+      {
+        "path": "site-header\\site-header.author.spec.ts",
+        "component": "site-header",
+        "type": "author"
+      }
+    ],
+    "statistics": {
+      "testFileCount": 1,
+      "testTypes": {
+        "author": 1
+      },
+      "totalTickets": 2,
+      "totalComponents": 2
+    }
+  },
+  "sprint_2": {
+    "name": "Sprint 2",
+    "tickets": [
+      "GAAM-393",
+      "GAAM-394",
+      "GAAM-397"
+    ],
+    "components": [
+      "page",
+      "site-header"
+    ],
+    "testFiles": [
+      {
+        "path": "site-header\\site-header.author.spec.ts",
+        "component": "site-header",
+        "type": "author"
+      }
+    ],
+    "statistics": {
+      "testFileCount": 1,
+      "testTypes": {
+        "author": 1
+      },
+      "totalTickets": 3,
+      "totalComponents": 2
+    }
+  },
+  "sprint_11": {
+    "name": "Sprint 11",
+    "tickets": [
+      "GAAM-1024",
+      "GAAM-1068",
+      "GAAM-1080",
+      "GAAM-1091",
+      "GAAM-1098"
+    ],
+    "components": [
+      "button",
+      "text",
+      "hero",
+      "navigation",
+      "footer"
+    ],
+    "testFiles": [
+      {
+        "path": "button\\button.author.spec.ts",
+        "component": "button",
+        "type": "author"
+      },
+      {
+        "path": "button\\button.figma-validation.spec.ts",
+        "component": "button",
+        "type": "visual"
+      },
+      {
+        "path": "button\\button.images.spec.ts",
+        "component": "button",
+        "type": "images"
+      },
+      {
+        "path": "button\\button.interaction.spec.ts",
+        "component": "button",
+        "type": "interaction"
+      },
+      {
+        "path": "button\\button.matrix.spec.ts",
+        "component": "button",
+        "type": "matrix"
+      },
+      {
+        "path": "button\\button.visual.spec.ts",
+        "component": "button",
+        "type": "visual"
+      },
+      {
+        "path": "button\\dom-probe.spec.ts",
+        "component": "button",
+        "type": "regression"
+      },
+      {
+        "path": "footer\\footer.author.spec.ts",
+        "component": "footer",
+        "type": "author"
+      },
+      {
+        "path": "footer\\footer.edge-cases.spec.ts",
+        "component": "footer",
+        "type": "regression"
+      },
+      {
+        "path": "footer\\footer.images.spec.ts",
+        "component": "footer",
+        "type": "images"
+      },
+      {
+        "path": "footer\\footer.interaction.spec.ts",
+        "component": "footer",
+        "type": "interaction"
+      },
+      {
+        "path": "footer\\footer.matrix.spec.ts",
+        "component": "footer",
+        "type": "matrix"
+      },
+      {
+        "path": "footer\\footer.visual.spec.ts",
+        "component": "footer",
+        "type": "visual"
+      },
+      {
+        "path": "navigation\\navigation.author.spec.ts",
+        "component": "navigation",
+        "type": "author"
+      },
+      {
+        "path": "navigation\\navigation.images.spec.ts",
+        "component": "navigation",
+        "type": "images"
+      },
+      {
+        "path": "navigation\\navigation.interaction.spec.ts",
+        "component": "navigation",
+        "type": "interaction"
+      },
+      {
+        "path": "navigation\\navigation.matrix.spec.ts",
+        "component": "navigation",
+        "type": "matrix"
+      },
+      {
+        "path": "navigation\\navigation.visual.spec.ts",
+        "component": "navigation",
+        "type": "visual"
+      },
+      {
+        "path": "text\\text.author.spec.ts",
+        "component": "text",
+        "type": "author"
+      },
+      {
+        "path": "text\\text.images.spec.ts",
+        "component": "text",
+        "type": "images"
+      },
+      {
+        "path": "text\\text.interaction.spec.ts",
+        "component": "text",
+        "type": "interaction"
+      },
+      {
+        "path": "text\\text.matrix.spec.ts",
+        "component": "text",
+        "type": "matrix"
+      },
+      {
+        "path": "text\\text.sprint13-padding.spec.ts",
+        "component": "text",
+        "type": "regression"
+      },
+      {
+        "path": "text\\text.visual.spec.ts",
+        "component": "text",
+        "type": "visual"
+      }
+    ],
+    "statistics": {
+      "testFileCount": 24,
+      "testTypes": {
+        "author": 4,
+        "visual": 5,
+        "images": 4,
+        "interaction": 4,
+        "matrix": 4,
+        "regression": 3
+      },
+      "totalTickets": 5,
+      "totalComponents": 5
+    }
+  },
+  "sprint_16": {
+    "name": "Sprint 16",
+    "tickets": [
+      "GAAM-1098",
+      "GAAM-1091",
+      "GAAM-1080",
+      "GAAM-1068",
+      "GAAM-1024",
+      "GAAM-993",
+      "GAAM-983",
+      "GAAM-982",
+      "GAAM-969",
+      "GAAM-968",
+      "GAAM-964",
+      "GAAM-940",
+      "GAAM-898",
+      "GAAM-859",
+      "GAAM-839",
+      "GAAM-838",
+      "GAAM-837",
+      "GAAM-836",
+      "GAAM-835",
+      "GAAM-834",
+      "GAAM-833",
+      "GAAM-827",
+      "GAAM-821",
+      "GAAM-819",
+      "GAAM-814",
+      "GAAM-801",
+      "GAAM-800",
+      "GAAM-799",
+      "GAAM-798",
+      "GAAM-797",
+      "GAAM-796",
+      "GAAM-795",
+      "GAAM-794",
+      "GAAM-792",
+      "GAAM-791",
+      "GAAM-790",
+      "GAAM-788",
+      "GAAM-764",
+      "GAAM-763",
+      "GAAM-756",
+      "GAAM-728",
+      "GAAM-684",
+      "GAAM-575",
+      "GAAM-397",
+      "GAAM-394",
+      "GAAM-393",
+      "GAAM-69",
+      "GAAM-48"
+    ],
+    "components": [
+      "button",
+      "text",
+      "hero",
+      "navigation",
+      "footer",
+      "site-header",
+      "page"
+    ],
+    "testFiles": [
+      {
+        "path": "button\\button.author.spec.ts",
+        "component": "button",
+        "type": "author"
+      },
+      {
+        "path": "button\\button.figma-validation.spec.ts",
+        "component": "button",
+        "type": "visual"
+      },
+      {
+        "path": "button\\button.images.spec.ts",
+        "component": "button",
+        "type": "images"
+      },
+      {
+        "path": "button\\button.interaction.spec.ts",
+        "component": "button",
+        "type": "interaction"
+      },
+      {
+        "path": "button\\button.matrix.spec.ts",
+        "component": "button",
+        "type": "matrix"
+      },
+      {
+        "path": "button\\button.visual.spec.ts",
+        "component": "button",
+        "type": "visual"
+      },
+      {
+        "path": "button\\dom-probe.spec.ts",
+        "component": "button",
+        "type": "regression"
+      },
+      {
+        "path": "footer\\footer.author.spec.ts",
+        "component": "footer",
+        "type": "author"
+      },
+      {
+        "path": "footer\\footer.edge-cases.spec.ts",
+        "component": "footer",
+        "type": "regression"
+      },
+      {
+        "path": "footer\\footer.images.spec.ts",
+        "component": "footer",
+        "type": "images"
+      },
+      {
+        "path": "footer\\footer.interaction.spec.ts",
+        "component": "footer",
+        "type": "interaction"
+      },
+      {
+        "path": "footer\\footer.matrix.spec.ts",
+        "component": "footer",
+        "type": "matrix"
+      },
+      {
+        "path": "footer\\footer.visual.spec.ts",
+        "component": "footer",
+        "type": "visual"
+      },
+      {
+        "path": "navigation\\navigation.author.spec.ts",
+        "component": "navigation",
+        "type": "author"
+      },
+      {
+        "path": "navigation\\navigation.images.spec.ts",
+        "component": "navigation",
+        "type": "images"
+      },
+      {
+        "path": "navigation\\navigation.interaction.spec.ts",
+        "component": "navigation",
+        "type": "interaction"
+      },
+      {
+        "path": "navigation\\navigation.matrix.spec.ts",
+        "component": "navigation",
+        "type": "matrix"
+      },
+      {
+        "path": "navigation\\navigation.visual.spec.ts",
+        "component": "navigation",
+        "type": "visual"
+      },
+      {
+        "path": "site-header\\site-header.author.spec.ts",
+        "component": "site-header",
+        "type": "author"
+      },
+      {
+        "path": "text\\text.author.spec.ts",
+        "component": "text",
+        "type": "author"
+      },
+      {
+        "path": "text\\text.images.spec.ts",
+        "component": "text",
+        "type": "images"
+      },
+      {
+        "path": "text\\text.interaction.spec.ts",
+        "component": "text",
+        "type": "interaction"
+      },
+      {
+        "path": "text\\text.matrix.spec.ts",
+        "component": "text",
+        "type": "matrix"
+      },
+      {
+        "path": "text\\text.sprint13-padding.spec.ts",
+        "component": "text",
+        "type": "regression"
+      },
+      {
+        "path": "text\\text.visual.spec.ts",
+        "component": "text",
+        "type": "visual"
+      }
+    ],
+    "statistics": {
+      "testFileCount": 25,
+      "testTypes": {
+        "author": 5,
+        "visual": 5,
+        "images": 4,
+        "interaction": 4,
+        "matrix": 4,
+        "regression": 3
+      },
+      "totalTickets": 48,
+      "totalComponents": 7
+    }
+  }
+}

@@ -70,9 +70,9 @@ const viewportProjects = viewports.flatMap(viewport => {
 export default defineConfig({
 
   // timeout: 120_000,
-  // Reduced from 5min to 30sec for faster failure when AEM unavailable
-  // CI can override if needed with --timeout flag
-  timeout: process.env.CI ? 5 * 60 * 1000 : 30 * 1000,
+  // Local: 2 minutes (allow for slow auth/network)
+  // CI: 5 minutes (longer for CI environment overhead)
+  timeout: process.env.CI ? 5 * 60 * 1000 : 2 * 60 * 1000,
   testDir: './tests/specFiles',
   /* Run tests in files in parallel */
   fullyParallel: true,

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-15T06:44:15.303Z",
+  "lastUpdated": "2026-06-17T15:26:42.160Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -66,82 +66,64 @@
       "categories": {
         "csv": {
           "category": "csv",
-          "testCount": 37,
+          "testCount": 15,
           "specFile": "section.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
         },
         "happy-path": {
           "category": "happy-path",
-          "testCount": 37,
+          "testCount": 15,
           "specFile": "section.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
         },
         "negative": {
           "category": "negative",
-          "testCount": 37,
+          "testCount": 15,
           "specFile": "section.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
         },
         "responsive": {
           "category": "responsive",
-          "testCount": 37,
+          "testCount": 15,
           "specFile": "section.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
         },
         "console-errors": {
           "category": "console-errors",
-          "testCount": 37,
+          "testCount": 15,
           "specFile": "section.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 37,
+          "testCount": 15,
           "specFile": "section.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
         },
         "accessibility": {
           "category": "accessibility",
-          "testCount": 37,
+          "testCount": 15,
           "specFile": "section.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
+        },
+        "aem-dialog": {
+          "category": "aem-dialog",
+          "testCount": 15,
+          "specFile": "section.author.spec.ts",
+          "tags": []
         }
       },
-      "totalTests": 259,
-      "lastUpdated": "2026-03-16T07:02:02.087Z"
+      "totalTests": 120,
+      "lastUpdated": "2026-06-17T15:24:08.859Z"
     },
     "text": {
       "component": "text",
       "categories": {
         "happy-path": {
           "category": "happy-path",
-          "testCount": 19,
+          "testCount": 15,
           "specFile": "text.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
         },
         "visual": {
           "category": "visual",
@@ -172,15 +154,49 @@
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 5,
-          "specFile": "text.images.spec.ts",
-          "tags": [
-            "@regression"
-          ]
+          "testCount": 15,
+          "specFile": "text.author.spec.ts",
+          "tags": []
+        },
+        "csv": {
+          "category": "csv",
+          "testCount": 15,
+          "specFile": "text.author.spec.ts",
+          "tags": []
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 15,
+          "specFile": "text.author.spec.ts",
+          "tags": []
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 15,
+          "specFile": "text.author.spec.ts",
+          "tags": []
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 15,
+          "specFile": "text.author.spec.ts",
+          "tags": []
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 15,
+          "specFile": "text.author.spec.ts",
+          "tags": []
+        },
+        "aem-dialog": {
+          "category": "aem-dialog",
+          "testCount": 15,
+          "specFile": "text.author.spec.ts",
+          "tags": []
         }
       },
-      "totalTests": 35,
-      "lastUpdated": "2026-05-04T23:13:00.000Z"
+      "totalTests": 120,
+      "lastUpdated": "2026-06-17T15:26:35.153Z"
     },
     "spacer": {
       "component": "spacer",
@@ -1010,12 +1026,9 @@
       "categories": {
         "happy-path": {
           "category": "happy-path",
-          "testCount": 22,
+          "testCount": 15,
           "specFile": "login.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
+          "tags": []
         },
         "visual": {
           "category": "visual",
@@ -1046,11 +1059,9 @@
         },
         "broken-images": {
           "category": "broken-images",
-          "testCount": 5,
-          "specFile": "login.images.spec.ts",
-          "tags": [
-            "@regression"
-          ]
+          "testCount": 15,
+          "specFile": "login.author.spec.ts",
+          "tags": []
         },
         "comprehensive": {
           "category": "comprehensive",
@@ -1066,10 +1077,46 @@
             "@edge",
             "@regression"
           ]
+        },
+        "csv": {
+          "category": "csv",
+          "testCount": 15,
+          "specFile": "login.author.spec.ts",
+          "tags": []
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 15,
+          "specFile": "login.author.spec.ts",
+          "tags": []
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 15,
+          "specFile": "login.author.spec.ts",
+          "tags": []
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 15,
+          "specFile": "login.author.spec.ts",
+          "tags": []
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 15,
+          "specFile": "login.author.spec.ts",
+          "tags": []
+        },
+        "aem-dialog": {
+          "category": "aem-dialog",
+          "testCount": 15,
+          "specFile": "login.author.spec.ts",
+          "tags": []
         }
       },
-      "totalTests": 208,
-      "lastUpdated": "2026-05-05T00:30:00.000Z"
+      "totalTests": 120,
+      "lastUpdated": "2026-06-17T15:22:12.605Z"
     },
     "footer": {
       "component": "footer",
@@ -1231,6 +1278,116 @@
       },
       "totalTests": 114,
       "lastUpdated": "2026-05-05T00:00:00.000Z"
+    },
+    "general": {
+      "component": "general",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 16,
+          "specFile": "general.author.spec.ts",
+          "tags": []
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 16,
+          "specFile": "general.author.spec.ts",
+          "tags": []
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 16,
+          "specFile": "general.author.spec.ts",
+          "tags": []
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 16,
+          "specFile": "general.author.spec.ts",
+          "tags": []
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 16,
+          "specFile": "general.author.spec.ts",
+          "tags": []
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 16,
+          "specFile": "general.author.spec.ts",
+          "tags": []
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 16,
+          "specFile": "general.author.spec.ts",
+          "tags": []
+        },
+        "aem-dialog": {
+          "category": "aem-dialog",
+          "testCount": 16,
+          "specFile": "general.author.spec.ts",
+          "tags": []
+        }
+      },
+      "totalTests": 128,
+      "lastUpdated": "2026-06-17T15:25:40.168Z"
+    },
+    "button": {
+      "component": "button",
+      "categories": {
+        "csv": {
+          "category": "csv",
+          "testCount": 15,
+          "specFile": "button.author.spec.ts",
+          "tags": []
+        },
+        "happy-path": {
+          "category": "happy-path",
+          "testCount": 15,
+          "specFile": "button.author.spec.ts",
+          "tags": []
+        },
+        "negative": {
+          "category": "negative",
+          "testCount": 15,
+          "specFile": "button.author.spec.ts",
+          "tags": []
+        },
+        "responsive": {
+          "category": "responsive",
+          "testCount": 15,
+          "specFile": "button.author.spec.ts",
+          "tags": []
+        },
+        "console-errors": {
+          "category": "console-errors",
+          "testCount": 15,
+          "specFile": "button.author.spec.ts",
+          "tags": []
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 15,
+          "specFile": "button.author.spec.ts",
+          "tags": []
+        },
+        "accessibility": {
+          "category": "accessibility",
+          "testCount": 15,
+          "specFile": "button.author.spec.ts",
+          "tags": []
+        },
+        "aem-dialog": {
+          "category": "aem-dialog",
+          "testCount": 15,
+          "specFile": "button.author.spec.ts",
+          "tags": []
+        }
+      },
+      "totalTests": 120,
+      "lastUpdated": "2026-06-17T15:26:42.157Z"
     }
   }
 }

@@ -136,23 +136,22 @@
     <h1>Text — Test Summary</h1>
     
     <div class="meta-bar">
-      <div class="meta-item"><strong>Spec Files</strong>text.author.spec.ts</div>
-      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span></div>
+      <div class="meta-item"><strong>Spec Files</strong>text.author.spec.ts, text.images.spec.ts, text.interaction.spec.ts, text.matrix.spec.ts, text.sprint13-padding.spec.ts, text.visual.spec.ts</div>
     </div>
   </div>
 
   <div class="stats">
-    <div class="stat-box"><div class="num">19</div><div class="label">Total Tests</div></div>
-    <div class="stat-box"><div class="num">9</div><div class="label">Sections</div></div>
-    <div class="stat-box"><div class="num">1</div><div class="label">Spec Files</div></div>
-    <div class="stat-box"><div class="num">5</div><div class="label">Tag Types</div></div>
+    <div class="stat-box"><div class="num">50</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">12</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">5</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">10</div><div class="label">Tag Types</div></div>
   </div>
 
   <div class="content">
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Text — Happy Path</h2>
+        <h2>Text — CSV Test Cases</h2>
         <span class="section-count">1</span>
         <span class="chevron">&#9660;</span>
       </div>
@@ -169,10 +168,10 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">TEXT-040</td>
-              <td>Text renders correctly</td>
+              <td class="test-id">TEXT-001</td>
+              <td>CMS FE: Homepage Hero Role Card Click Action — AC1</td>
               
-              <td>Text renders correctly</td>
+              <td>CMS FE: Homepage Hero Role Card Click Action — AC1</td>
               <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
@@ -182,8 +181,8 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Text — Heading Rendering</h2>
-        <span class="section-count">3</span>
+        <h2>Text — Happy Path</h2>
+        <span class="section-count">2</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -199,157 +198,18 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">TEXT-052</td>
-              <td>Style guide renders H1 through H6 heading levels</td>
+              <td class="test-id">TEXT-002</td>
+              <td>Text renders correctly</td>
               
-              <td>Style guide renders H1 through H6 heading levels</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+              <td>Text renders correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">TEXT-053</td>
-              <td>Heading sizes decrease from H1 to H6</td>
+              <td class="test-id">TEXT-003</td>
+              <td>Text interactive elements are functional</td>
               
-              <td>Heading sizes decrease from H1 to H6</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">TEXT-054</td>
-              <td>Headings use semantic HTML tags (not styled divs)</td>
-              
-              <td>Headings use semantic HTML tags (not styled divs)</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Text — Rich Text Formatting</h2>
-        <span class="section-count">3</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">TEXT-055</td>
-              <td>Body text paragraphs render with &lt;p&gt; tags</td>
-              
-              <td>Body text paragraphs render with &lt;p&gt; tags</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">TEXT-056</td>
-              <td>Lists render as &lt;ul&gt; or &lt;ol&gt; with &lt;li&gt; children</td>
-              
-              <td>Lists render as &lt;ul&gt; or &lt;ol&gt; with &lt;li&gt; children</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">TEXT-057</td>
-              <td>Links in text have href attributes</td>
-              
-              <td>Links in text have href attributes</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Text — Color Variants</h2>
-        <span class="section-count">3</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">TEXT-058</td>
-              <td>White text variant applies light color</td>
-              
-              <td>White text variant applies light color</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">TEXT-059</td>
-              <td>Text on granite background is readable (light-colored)</td>
-              
-              <td>Text on granite background is readable (light-colored)</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">TEXT-060</td>
-              <td>Text on azul background is readable (light-colored)</td>
-              
-              <td>Text on azul background is readable (light-colored)</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Text — BEM Structure</h2>
-        <span class="section-count">3</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">TEXT-061</td>
-              <td>Component root uses .cmp-text class</td>
-              
-              <td>Component root uses .cmp-text class</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">TEXT-062</td>
-              <td>No inline styles on text elements</td>
-              
-              <td>No inline styles on text elements</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">TEXT-063</td>
-              <td>No HTL comments in published text HTML</td>
-              
-              <td>No HTL comments in published text HTML</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>Text interactive elements are functional</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
         </table>
@@ -359,7 +219,7 @@
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
         <h2>Text — Negative &amp; Boundary</h2>
-        <span class="section-count">1</span>
+        <span class="section-count">2</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -375,11 +235,55 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">TEXT-043</td>
+              <td class="test-id">TEXT-004</td>
+              <td>Text handles empty content gracefully</td>
+              
+              <td>Text handles empty content gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-005</td>
               <td>Text handles missing images</td>
               
               <td>Text handles missing images</td>
               <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Text — Responsive</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">TEXT-006</td>
+              <td>Text adapts to mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Text adapts to mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-007</td>
+              <td>Text adapts to tablet viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Text adapts to tablet viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
         </table>
@@ -405,7 +309,7 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">TEXT-046</td>
+              <td class="test-id">TEXT-008</td>
               <td>Text produces no JS errors</td>
               
               <td>Text produces no JS errors</td>
@@ -419,7 +323,7 @@
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
         <h2>Text — Broken Images</h2>
-        <span class="section-count">1</span>
+        <span class="section-count">2</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -435,7 +339,14 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">TEXT-048</td>
+              <td class="test-id">TEXT-009</td>
+              <td>Text all images load successfully</td>
+              
+              <td>Text all images load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-010</td>
               <td>Text all images have alt attributes</td>
               
               <td>Text all images have alt attributes</td>
@@ -465,21 +376,21 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">TEXT-049</td>
+              <td class="test-id">TEXT-011</td>
               <td>Text passes axe-core scan</td>
               
               <td>Text passes axe-core scan</td>
               <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">TEXT-050</td>
+              <td class="test-id">TEXT-012</td>
               <td>Text interactive elements meet 24px target size</td>
               
               <td>Text interactive elements meet 24px target size</td>
               <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">TEXT-051</td>
+              <td class="test-id">TEXT-013</td>
               <td>Text focus is not obscured by sticky elements</td>
               
               <td>Text focus is not obscured by sticky elements</td>
@@ -490,10 +401,384 @@
       </div>
     </div>
 
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Text — AEM Dialog Configuration</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">TEXT-014</td>
+              <td>Text dialog has helpPath configured</td>
+              
+              <td>Text dialog has helpPath configured</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-015</td>
+              <td>Text helpPath points to correct component details page</td>
+              
+              <td>Text helpPath points to correct component details page</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Text — Images &amp; Media</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">TEXT-IMAGE-001</td>
+              <td>Text embedded images load</td>
+              
+              <td>Text embedded images load</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-IMAGE-002</td>
+              <td>Text images have alt text</td>
+              
+              <td>Text images have alt text</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-IMAGE-003</td>
+              <td>Text image sizing is responsive</td>
+              
+              <td>Text image sizing is responsive</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-IMAGE-004</td>
+              <td>Text figure elements are semantic</td>
+              
+              <td>Text figure elements are semantic</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-IMAGE-005</td>
+              <td>Text icons are visible</td>
+              
+              <td>Text icons are visible</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Text — Interactions</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">TEXT-INTERACTION-001</td>
+              <td>Text links are clickable</td>
+              
+              <td>Text links are clickable</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-INTERACTION-002</td>
+              <td>Text content is selectable</td>
+              
+              <td>Text content is selectable</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-INTERACTION-003</td>
+              <td>Text keyboard navigation</td>
+              
+              <td>Text keyboard navigation</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-INTERACTION-004</td>
+              <td>Text code blocks display</td>
+              
+              <td>Text code blocks display</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-INTERACTION-005</td>
+              <td>Text tables render correctly</td>
+              
+              <td>Text tables render correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Text Component - Sprint 13 Padding Specifications (GAAM-675)</h2>
+        <span class="section-count">20</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GAAM-675-001</td>
+              <td>Verify text component has default padding applied</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component has default padding applied</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-002</td>
+              <td>Verify padding is consistent across all text elements</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify padding is consistent across all text elements</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-003</td>
+              <td>Verify padding on mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Verify padding on mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-004</td>
+              <td>Verify padding on tablet viewport</td>
+              <td class="viewport">Tablet</td>
+              <td>Verify padding on tablet viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-005</td>
+              <td>Verify padding maintains readability</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify padding maintains readability</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-006</td>
+              <td>Verify padding does not cause horizontal scroll</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify padding does not cause horizontal scroll</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-007</td>
+              <td>Verify padding respects layout constraints</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify padding respects layout constraints</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-008</td>
+              <td>Verify paragraph spacing includes padding</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify paragraph spacing includes padding</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-009</td>
+              <td>Verify padding with different text sizes</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify padding with different text sizes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-010</td>
+              <td>Verify list padding within text component</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify list padding within text component</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-011</td>
+              <td>Verify text component padding consistency across breakpoints</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding consistency across breakpoints</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-012</td>
+              <td>Verify text component padding with empty content</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding with empty content</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-013</td>
+              <td>Verify text component padding with rich content</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding with rich content</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-014</td>
+              <td>Verify nested element padding inheritance</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify nested element padding inheritance</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-015</td>
+              <td>Verify text component padding with links</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding with links</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-016</td>
+              <td>Verify text component padding with blockquotes</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding with blockquotes</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-017</td>
+              <td>Verify text component padding with code blocks</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding with code blocks</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-018</td>
+              <td>Verify text component padding consistent with design system</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding consistent with design system</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-019</td>
+              <td>Verify text component padding with long form content</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding with long form content</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-675-020</td>
+              <td>Verify text component padding does not hide content</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify text component padding does not hide content</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Text — Visual Regression</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">TEXT-VISUAL-001</td>
+              <td>Text content is readable</td>
+              
+              <td>Text content is readable</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-VISUAL-002</td>
+              <td>Text color contrast is adequate</td>
+              
+              <td>Text color contrast is adequate</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-VISUAL-003</td>
+              <td>Text formatting is preserved</td>
+              
+              <td>Text formatting is preserved</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-VISUAL-004</td>
+              <td>Text line height is appropriate</td>
+              
+              <td>Text line height is appropriate</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">TEXT-VISUAL-005</td>
+              <td>Text lists display correctly</td>
+              
+              <td>Text lists display correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
   </div>
 
   <div class="footer">
-    Generated from <code>text.author.spec.ts</code>
+    Generated from <code>text.author.spec.ts</code>, <code>text.images.spec.ts</code>, <code>text.interaction.spec.ts</code>, <code>text.sprint13-padding.spec.ts</code>, <code>text.visual.spec.ts</code>
     &mdash; text &mdash; Global Atlantic Test Framework
   </div>
 

@@ -1,0 +1,30 @@
+[globalSetup] Authenticating with AEM author...
+[globalSetup] AEM auth failed: TimeoutError: locator.fill: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#username')[22m
+. Tests will login individually.
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] [chromium] › tests\generators\generate-from-jira.ts:175:7 › Jira/Figma Test Generation › Generate tests from Jira requirements
+[1A[2K[chromium] › tests\generators\generate-from-jira.ts:175:7 › Jira/Figma Test Generation › Generate tests from Jira requirements
+
+=== Fetching Jira ticket: GAAM-1267,GAAM-1265,GAAM-1252,GAAM-1245,GAAM-1244,GAAM-1217,GAAM-1192,GAAM-1179,GAAM-1174,GAAM-1172,GAAM-1155,GAAM-1145,GAAM-1138,GAAM-1101,GAAM-1089,GAAM-1084,GAAM-1082,GAAM-1073,GAAM-1063,GAAM-1062,GAAM-1021,GAAM-989,GAAM-978,GAAM-903,GAAM-747,GAAM-450,GAAM-278,GAAM-170 ===
+
+[1A[2K  1) [chromium] › tests\generators\generate-from-jira.ts:175:7 › Jira/Figma Test Generation › Generate tests from Jira requirements 
+
+    TypeError: Cannot read properties of undefined (reading 'description')
+
+      379 |
+      380 |   const f = data.fields;
+    > 381 |   const desc = f.description || '';
+          |                  ^
+      382 |
+      383 |   // Extract acceptance criteria from description
+      384 |   const acMatches = desc.match(/(?:acceptance criteria|ac)[:\s]*\n([\s\S]*?)(?:\n\n|\n(?=[A-Z#*])|\z)/i);
+        at fetchFromJiraApi (C:\Users\PuneethAM\Development_automation\GATestFramework-main\tests\generators\generate-from-jira.ts:381:18)
+        at C:\Users\PuneethAM\Development_automation\GATestFramework-main\tests\generators\generate-from-jira.ts:191:19
+
+
+[1A[2K  1 failed
+    [chromium] › tests\generators\generate-from-jira.ts:175:7 › Jira/Figma Test Generation › Generate tests from Jira requirements 
