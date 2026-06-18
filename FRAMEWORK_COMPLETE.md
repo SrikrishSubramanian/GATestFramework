@@ -344,6 +344,50 @@ test.describe('Component Name', () => {
 
 ---
 
+## Code Reuse Optimization (In Progress)
+
+**See:** [`CODE_REUSE_OPTIMIZATION.md`](./CODE_REUSE_OPTIMIZATION.md) for complete optimization guide.
+
+### Current Status
+- ✅ **Automated first pass complete** — 11 hardcoded URLs fixed, 84 getComputedStyle patterns marked with TODO
+- ⏳ **Manual optimization needed** — 1,072 getComputedStyle patterns, 1,858 raw page.* method calls
+- 📋 **Quick reference available** — See CODE_REUSE_OPTIMIZATION.md for pattern replacements
+
+### What Needs to Be Done
+
+| Pattern | Count | Replacement | Guide |
+|---------|-------|-------------|-------|
+| `getComputedStyle()` evaluations | 1,072+ | Use `assertLayout`, `assertSpacing`, etc. from component-assertions | [Pattern 1](./CODE_REUSE_OPTIMIZATION.md#pattern-1-replace-getcomputedstyle-with-component-assertions) |
+| `page.click()` calls | 500+ | Use `clickElement()` from action-utils | [Pattern 2](./CODE_REUSE_OPTIMIZATION.md#pattern-2-replace-pageclick-with-clickelement) |
+| `page.fill()` calls | 400+ | Use `fill()` or `fillAndEnter()` from action-utils | [Pattern 3](./CODE_REUSE_OPTIMIZATION.md#pattern-3-replace-pagefill-with-fill-or-fillandenter) |
+| `.innerText()` / `.textContent()` | 200+ | Use `getTextOfElement()` from element-utils | [Pattern 4](./CODE_REUSE_OPTIMIZATION.md#pattern-4-replace-pagelocatorinnertext-with-gettextofelement) |
+| `.getAttribute()` calls | 150+ | Use `getAttributeOfElement()` from element-utils | [Pattern 5](./CODE_REUSE_OPTIMIZATION.md#pattern-5-replace-pagegetattribute-with-getattributeofelement) |
+| Hardcoded URLs | 11 | ✅ **FIXED** — Use `resolveComponentUrl()` | [Pattern 7](./CODE_REUSE_OPTIMIZATION.md#pattern-7-replace-hardcoded-urls-with-resolvecomponenturl) |
+
+### How to Proceed
+
+1. **Read the guide:** Open `CODE_REUSE_OPTIMIZATION.md` for complete before/after examples
+2. **Pick a spec:** Start with a single spec file (e.g., `button.author.spec.ts`)
+3. **Apply patterns:** Use the quick reference table to identify what to replace
+4. **Verify:** Run TypeScript check and the specific spec with `npx playwright test`
+5. **Commit:** Create a PR with your optimizations
+
+### Example Optimization
+
+**Before (Manual style checking):**
+```typescript
+const bgColor = await btn.evaluate(el => getComputedStyle(el).backgroundColor);
+expect(bgColor).toBe('rgb(0, 0, 0)');
+```
+
+**After (Using utilities):**
+```typescript
+import { assertBackground } from '../../../utils/infra/component-assertions';
+await assertBackground(btn, 'rgb(0, 0, 0)');
+```
+
+---
+
 ## Key Statistics
 
 | Metric | Value |
@@ -380,10 +424,10 @@ ff96b8f refactor: Complete comprehensive spec refactoring - all 162 specs update
 ## Files Created/Updated
 
 ### New Documentation
+- ✅ `FRAMEWORK_COMPLETE.md` — Complete restructuring summary (all-in-one)
+- ✅ `CODE_REUSE_OPTIMIZATION.md` — Pattern replacements guide for ongoing code reuse optimization
 - ✅ `FRAMEWORK_STRUCTURE_GUIDE.md` — Complete utility layer documentation
 - ✅ `SPEC_REFACTORING_TEMPLATE.md` — Before/after patterns
-- ✅ `RESTRUCTURING_STATUS.md` — Detailed progress tracking
-- ✅ `FRAMEWORK_COMPLETE.md` — This comprehensive summary (all-in-one)
 
 ### Refactoring Scripts
 - ✅ `scripts/fix-specs.js` — Automated spec refactoring
@@ -424,19 +468,36 @@ ls -la tests/specFiles/ga/accordion/
 
 ---
 
-## Next Steps (Optional)
+## Next Steps
 
-### Phase 4: Advanced Code Reuse (Optional, lower priority)
-1. Centralize hardcoded CSS selectors into POM getters
-2. Replace raw `page.evaluate()` style checks with `component-assertions.ts`
-3. Create `component-urls.ts` helper for URL centralization
-4. Extract business logic from POMs into test fixtures
+### Phase 4: Code Reuse Optimization (NOW — High Priority) ✨
 
-### Phase 5: Code Quality (Optional)
+**Complete guide:** See [`CODE_REUSE_OPTIMIZATION.md`](./CODE_REUSE_OPTIMIZATION.md)
+
+The framework structure is clean, but actual code reuse is only ~20% optimized. The next phase focuses on replacing manual code patterns with reusable utilities across all 162 specs.
+
+**Target metrics:**
+- 🎯 Replace 1,072+ `getComputedStyle()` patterns with component-assertions
+- 🎯 Replace 1,858+ raw `page.*` method calls with action-utils/locator-utils/element-utils
+- 🎯 Ensure 100% code reuse compliance across all specs
+
+**How to contribute:**
+1. Pick a spec file (e.g., `button.author.spec.ts`)
+2. Follow patterns in `CODE_REUSE_OPTIMIZATION.md`
+3. Replace manual code with utilities
+4. Run: `npx playwright test tests/specFiles/ga/button/button.author.spec.ts --project chromium`
+5. Commit with message: `refactor: Apply code reuse optimization to button.author.spec.ts`
+
+**Tools to help:**
+- Automated script: `node scripts/optimize-code-reuse.js` (handles URLs and marks getComputedStyle)
+- Manual checklist: See [Manual Optimization Checklist](./CODE_REUSE_OPTIMIZATION.md#manual-optimization-checklist) in CODE_REUSE_OPTIMIZATION.md
+
+### Phase 5: Advanced Code Quality (Optional, lower priority)
 1. Add custom accessibility checks beyond @axe-core/playwright
 2. Implement visual regression baselines for all specs
 3. Create comprehensive test data generator utilities
 4. Add API mocking for all external API calls
+5. Extract business logic from POMs into test fixtures
 
 ---
 
