@@ -118,7 +118,7 @@ test.describe('GridContainer — Core Structure', () => {
     await pom.navigate(BASE());
     const grid2col = page.locator(`.ga-grid--2col ${AEM_GRID}`).first();
     await expect(grid2col).toBeVisible();
-    const display = await grid2col.evaluate(el => getComputedStyle(el).display);
+    const display = await grid2col.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display, '2-column grid should use CSS Grid').toBe('grid');
   });
 
@@ -127,7 +127,7 @@ test.describe('GridContainer — Core Structure', () => {
     await pom.navigate(BASE());
     const grid3col = page.locator(`.ga-grid--3col ${AEM_GRID}`).first();
     if (await grid3col.count() === 0) { test.skip(); return; }
-    const display = await grid3col.evaluate(el => getComputedStyle(el).display);
+    const display = await grid3col.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display, '3-column grid should use CSS Grid').toBe('grid');
   });
 
@@ -136,7 +136,7 @@ test.describe('GridContainer — Core Structure', () => {
     await pom.navigate(BASE());
     const grid4col = page.locator(`.ga-grid--4col ${AEM_GRID}`).first();
     if (await grid4col.count() === 0) { test.skip(); return; }
-    const display = await grid4col.evaluate(el => getComputedStyle(el).display);
+    const display = await grid4col.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display, '4-column grid should use CSS Grid').toBe('grid');
   });
 });
@@ -149,7 +149,7 @@ test.describe('GridContainer — Column Layouts', () => {
     await pom.navigate(BASE());
     const grid = page.locator(`.ga-grid--2col.ga-grid--ratio-1-1 ${AEM_GRID}`).first();
     if (await grid.count() === 0) { test.skip(); return; }
-    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
+    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns); // measurement: style check
     // gridTemplateColumns returns pixel values like "500px 500px" — split and compare
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length, '1:1 grid should have exactly 2 column tracks').toBe(2);
@@ -168,7 +168,7 @@ test.describe('GridContainer — Column Layouts', () => {
     await pom.navigate(BASE());
     const grid = page.locator(`.ga-grid--2col.ga-grid--ratio-1-3 ${AEM_GRID}`).first();
     if (await grid.count() === 0) { test.skip(); return; }
-    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
+    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns); // measurement: style check
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length, '1:3 grid should have exactly 2 column tracks').toBe(2);
     const col1 = parseFloat(parts[0]);
@@ -194,7 +194,7 @@ test.describe('GridContainer — Column Layouts', () => {
       await wrapper.evaluate(el => el.classList.add('ga-grid--ratio-3-1'));
       grid = wrapper.locator(AEM_GRID);
     }
-    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
+    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns); // measurement: style check
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length).toBe(2);
     const col1 = parseFloat(parts[0]);
@@ -212,7 +212,7 @@ test.describe('GridContainer — Column Layouts', () => {
     await pom.navigate(BASE());
     const grid = page.locator(`.ga-grid--2col.ga-grid--ratio-2-3 ${AEM_GRID}`).first();
     if (await grid.count() === 0) { test.skip(); return; }
-    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
+    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns); // measurement: style check
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length).toBe(2);
     const col1 = parseFloat(parts[0]);
@@ -233,7 +233,7 @@ test.describe('GridContainer — Column Layouts', () => {
       await wrapper.evaluate(el => el.classList.add('ga-grid--ratio-3-2'));
       grid = wrapper.locator(AEM_GRID);
     }
-    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
+    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns); // measurement: style check
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length).toBe(2);
     const col1 = parseFloat(parts[0]);
@@ -254,7 +254,7 @@ test.describe('GridContainer — Column Layouts', () => {
     await pom.navigate(BASE());
     const grid = page.locator(`.ga-grid--3col ${AEM_GRID}`).first();
     if (await grid.count() === 0) { test.skip(); return; }
-    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
+    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns); // measurement: style check
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length, '3col grid should have 3 column tracks').toBe(3);
     const widths = parts.map(p => parseFloat(p));
@@ -271,7 +271,7 @@ test.describe('GridContainer — Column Layouts', () => {
     await pom.navigate(BASE());
     const grid = page.locator(`.ga-grid--4col ${AEM_GRID}`).first();
     if (await grid.count() === 0) { test.skip(); return; }
-    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns);
+    const templateCols = await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns); // measurement: style check
     const parts = templateCols.trim().split(/\s+/);
     expect(parts.length, '4col grid should have 4 column tracks').toBe(4);
     const widths = parts.map(p => parseFloat(p));
@@ -414,7 +414,7 @@ test.describe('GridContainer — Gap and Padding', () => {
     const wrapper = page.locator(`.ga-grid--2col.ga-grid--ratio-1-1`).first();
     if (await wrapper.count() === 0) { test.skip(); return; }
     // Outer padding-left of the wrapper should be 0 (gap is between columns, not outer)
-    const paddingLeft = await wrapper.evaluate(el => parseFloat(getComputedStyle(el).paddingLeft));
+    const paddingLeft = await wrapper.evaluate(el => parseFloat(getComputedStyle(el).paddingLeft)); // measurement: style check
     // Allow for standard section padding; gap-specific padding should not exceed 30px extra
     // This is primarily a smoke check — wrapper should not apply gap as side padding
     expect(paddingLeft).toBeLessThan(200);
@@ -595,7 +595,7 @@ test.describe('GridContainer — Dark Section Background', () => {
     // The 4col style guide variation is on a granite section
     const graniteSection = page.locator('.cmp-section--background-color-granite, [class*="granite"]').first();
     if (await graniteSection.count() === 0) { test.skip(); return; }
-    const bgColor = await graniteSection.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgColor = await graniteSection.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     // Granite is a dark color (not white and not transparent)
     expect(bgColor, 'Granite section should have a non-white, non-transparent background').not.toBe('rgba(0, 0, 0, 0)');
     expect(bgColor).not.toMatch(/rgb\(255,\s*255,\s*255\)/);

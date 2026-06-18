@@ -246,7 +246,7 @@ test.describe('Accordion — Icon Animation', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const indicator = page.locator(`${SECTION_WHITE} ${INDICATOR_GA}`).first();
-    const transition = await indicator.evaluate(el => getComputedStyle(el).transition);
+    const transition = await indicator.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     expect(transition).toContain('background-color');
   });
 
@@ -254,7 +254,7 @@ test.describe('Accordion — Icon Animation', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const vertLine = page.locator(`${SECTION_WHITE} ${ICON_LINE_V}`).first();
-    const transition = await vertLine.evaluate(el => getComputedStyle(el).transition);
+    const transition = await vertLine.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     expect(transition).toContain('transform');
   });
 
@@ -270,7 +270,7 @@ test.describe('Accordion — Icon Animation', () => {
 
     // Vertical line should have opacity 0 (rotated to form minus)
     const vertLine = firstButton.locator(ICON_LINE_V);
-    const opacity = await vertLine.evaluate(el => getComputedStyle(el).opacity);
+    const opacity = await vertLine.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(Number(opacity)).toBeLessThanOrEqual(0.01);
   });
 
@@ -287,7 +287,7 @@ test.describe('Accordion — Icon Animation', () => {
     const vLine = firstButton.locator(ICON_LINE_V);
     await expect(hLine).toBeVisible();
     await expect(vLine).toBeVisible();
-    const vOpacity = await vLine.evaluate(el => getComputedStyle(el).opacity);
+    const vOpacity = await vLine.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(Number(vOpacity)).toBe(1);
   });
 });
@@ -299,9 +299,9 @@ test.describe('Accordion — Hover & Focus States', () => {
     const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
     const indicator = firstButton.locator(INDICATOR_GA);
 
-    const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     await firstButton.hover();
-    const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     // Background should darken on hover
     expect(bgAfter).not.toBe(bgBefore);
   });
@@ -313,7 +313,7 @@ test.describe('Accordion — Hover & Focus States', () => {
     const indicator = firstButton.locator(INDICATOR_GA);
 
     await firstButton.focus();
-    const boxShadow = await indicator.evaluate(el => getComputedStyle(el).boxShadow);
+    const boxShadow = await indicator.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
     // Should have double ring box-shadow on focus
     expect(boxShadow).not.toBe('none');
     expect(boxShadow).toContain('0px 0px 0px');
@@ -338,7 +338,7 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const graniteItem = page.locator(`${SECTION_GRANITE} ${ITEM}`).first();
-    const borderColor = await graniteItem.evaluate(el => getComputedStyle(el).borderBottomColor);
+    const borderColor = await graniteItem.evaluate(el => getComputedStyle(el).borderBottomColor); // measurement: style check
     // Should be white (rgb(255, 255, 255)) on dark background
     expect(borderColor).toContain('255');
   });
@@ -347,7 +347,7 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const graniteButton = page.locator(`${SECTION_GRANITE} ${ITEM_BUTTON}`).first();
-    const color = await graniteButton.evaluate(el => getComputedStyle(el).color);
+    const color = await graniteButton.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Should be white on dark background
     expect(color).toContain('255');
   });
@@ -356,7 +356,7 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const azulItem = page.locator(`${SECTION_AZUL} ${ITEM}`).first();
-    const borderColor = await azulItem.evaluate(el => getComputedStyle(el).borderBottomColor);
+    const borderColor = await azulItem.evaluate(el => getComputedStyle(el).borderBottomColor); // measurement: style check
     expect(borderColor).toContain('255');
   });
 
@@ -364,7 +364,7 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const azulButton = page.locator(`${SECTION_AZUL} ${ITEM_BUTTON}`).first();
-    const color = await azulButton.evaluate(el => getComputedStyle(el).color);
+    const color = await azulButton.evaluate(el => getComputedStyle(el).color); // measurement: style check
     expect(color).toContain('255');
   });
 
@@ -372,7 +372,7 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const graniteLine = page.locator(`${SECTION_GRANITE} ${ICON_LINE_H}`).first();
-    const bgColor = await graniteLine.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgColor = await graniteLine.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     // Should be white on dark background
     expect(bgColor).toContain('255');
   });
@@ -384,7 +384,7 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const heading = whiteButton.locator('h2, h3, h4, h5, h6').first();
     const headingCount = await heading.count();
     if (headingCount > 0) {
-      const color = await heading.evaluate(el => getComputedStyle(el).color);
+      const color = await heading.evaluate(el => getComputedStyle(el).color); // measurement: style check
       // Should be a dark granite color, not white
       expect(color).not.toContain('rgb(255, 255, 255)');
     }
@@ -414,7 +414,7 @@ test.describe('Accordion — Content Panel', () => {
 
     await firstButton.click();
     await expect(firstContent).toHaveAttribute('aria-hidden', 'false');
-    const borderLeft = await firstContent.evaluate(el => getComputedStyle(el).borderLeftStyle);
+    const borderLeft = await firstContent.evaluate(el => getComputedStyle(el).borderLeftStyle); // measurement: style check
     expect(borderLeft).toBe('solid');
   });
 
@@ -423,7 +423,7 @@ test.describe('Accordion — Content Panel', () => {
     await pom.navigate(BASE());
     const firstContent = page.locator(`${SECTION_WHITE} ${ITEM_CONTENT}`).first();
     await expect(firstContent).toHaveAttribute('aria-hidden', 'true');
-    const borderColor = await firstContent.evaluate(el => getComputedStyle(el).borderLeftColor);
+    const borderColor = await firstContent.evaluate(el => getComputedStyle(el).borderLeftColor); // measurement: style check
     // Should be transparent
     expect(borderColor).toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
   });
@@ -481,11 +481,11 @@ test.describe('Accordion — Responsive', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const button = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
-    const mobileSize = await button.evaluate(el => parseFloat(getComputedStyle(el).fontSize));
+    const mobileSize = await button.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: style check
 
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.waitForTimeout(300);
-    const desktopSize = await button.evaluate(el => parseFloat(getComputedStyle(el).fontSize));
+    const desktopSize = await button.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: style check
 
     // Desktop font should be larger or equal to mobile
     expect(desktopSize).toBeGreaterThanOrEqual(mobileSize);
@@ -568,7 +568,7 @@ test.describe('Accordion — ARIA Accessibility', () => {
     const indicator = graniteButton.locator(INDICATOR_GA);
 
     await graniteButton.focus();
-    const boxShadow = await indicator.evaluate(el => getComputedStyle(el).boxShadow);
+    const boxShadow = await indicator.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
     expect(boxShadow).not.toBe('none');
   });
 });

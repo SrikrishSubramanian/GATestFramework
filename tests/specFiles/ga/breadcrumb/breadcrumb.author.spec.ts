@@ -40,7 +40,7 @@ test.describe('Breadcrumb — Core Structure', () => {
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
     await expect(root).toBeVisible();
-    const display = await root.evaluate(el => getComputedStyle(el).display);
+    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display).not.toBe('none');
   });
 
@@ -143,7 +143,7 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const color = await link.evaluate(el => getComputedStyle(el).color);
+    const color = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // gray-80 is a dark color: all RGB channels should be relatively low
     const match = color.match(/\d+/g);
     if (match) {
@@ -159,7 +159,7 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const maxWidth = await link.evaluate(el => getComputedStyle(el).maxWidth);
+    const maxWidth = await link.evaluate(el => getComputedStyle(el).maxWidth); // measurement: style check
     expect(maxWidth).toBe('220px');
   });
 
@@ -169,7 +169,7 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const textOverflow = await link.evaluate(el => getComputedStyle(el).textOverflow);
+    const textOverflow = await link.evaluate(el => getComputedStyle(el).textOverflow); // measurement: style check
     expect(textOverflow).toBe('ellipsis');
   });
 
@@ -179,7 +179,7 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const overflow = await link.evaluate(el => getComputedStyle(el).overflow);
+    const overflow = await link.evaluate(el => getComputedStyle(el).overflow); // measurement: style check
     expect(overflow).toBe('hidden');
   });
 
@@ -189,7 +189,7 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const transition = await link.evaluate(el => getComputedStyle(el).transition);
+    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     // Should contain 'color' and a duration (0.2s)
     expect(transition).toContain('color');
     expect(transition).toMatch(/0\.2s/);
@@ -205,9 +205,9 @@ test.describe('Breadcrumb — Hover & Focus', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const colorBefore = await link.evaluate(el => getComputedStyle(el).color);
+    const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     await link.hover();
-    const colorAfter = await link.evaluate(el => getComputedStyle(el).color);
+    const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Hover should change the color
     expect(colorAfter).not.toBe(colorBefore);
   });
@@ -234,7 +234,7 @@ test.describe('Breadcrumb — Hover & Focus', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius);
+    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: style check
     expect(borderRadius).toBe('4px');
   });
 
@@ -244,7 +244,7 @@ test.describe('Breadcrumb — Hover & Focus', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const transition = await link.evaluate(el => getComputedStyle(el).transition);
+    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     expect(transition).toContain('0.2s');
   });
 });
@@ -268,7 +268,7 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       test.skip();
       return;
     }
-    const color = await link.evaluate(el => getComputedStyle(el).color);
+    const color = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // White = rgb(255, 255, 255) or very close
     const match = color.match(/\d+/g);
     if (match) {
@@ -295,7 +295,7 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       test.skip();
       return;
     }
-    const color = await active.evaluate(el => getComputedStyle(el).color);
+    const color = await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // helper-dark is a muted/off-white — not pure white and not fully dark
     const match = color.match(/\d+/g);
     if (match) {
@@ -322,7 +322,7 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       return;
     }
     await link.focus();
-    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow);
+    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
     // Dark mode focus ring must have a box-shadow (double ring)
     expect(boxShadow).not.toBe('none');
     expect(boxShadow.length).toBeGreaterThan(0);
@@ -341,7 +341,7 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       return;
     }
     await lightLink.focus();
-    const lightBoxShadow = await lightLink.evaluate(el => getComputedStyle(el).boxShadow);
+    const lightBoxShadow = await lightLink.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
 
     // Dark mode box-shadow
     const darkSection = page.locator(SECTION_GRANITE).first();
@@ -357,7 +357,7 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       return;
     }
     await darkLink.focus();
-    const darkBoxShadow = await darkLink.evaluate(el => getComputedStyle(el).boxShadow);
+    const darkBoxShadow = await darkLink.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
 
     // The two focus rings should differ (different color tokens)
     expect(darkBoxShadow).not.toBe(lightBoxShadow);
@@ -380,12 +380,12 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       return;
     }
     // Dark mode hover uses opacity:0.7 (not color change) per LESS
-    const colorBefore = await link.evaluate(el => getComputedStyle(el).color);
+    const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Verify link is white on dark bg
     expect(colorBefore).toMatch(/rgb\(255,\s*255,\s*255\)/);
     await link.hover();
     // After hover, check opacity changed or color has alpha
-    const opacityAfter = await link.evaluate(el => getComputedStyle(el).opacity);
+    const opacityAfter = await link.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(parseFloat(opacityAfter)).toBeLessThan(1);
   });
 });
@@ -398,7 +398,7 @@ test.describe('Breadcrumb — Mobile Hidden', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display);
+    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display).toBe('none');
   });
 
@@ -407,7 +407,7 @@ test.describe('Breadcrumb — Mobile Hidden', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display);
+    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display).toBe('block');
   });
 
@@ -416,7 +416,7 @@ test.describe('Breadcrumb — Mobile Hidden', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display);
+    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display).toBe('none');
   });
 });
@@ -430,7 +430,7 @@ test.describe('Breadcrumb — GAAM-700 Current Page Font Color', () => {
     await pom.navigate(BASE());
     const active = page.locator(BC_ACTIVE).first();
     await expect(active).toBeVisible();
-    const color = await active.evaluate(el => getComputedStyle(el).color);
+    const color = await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // granite-60 is a muted dark — not white, not pure black, midrange dark
     const match = color.match(/\d+/g);
     expect(match).not.toBeNull();
@@ -459,7 +459,7 @@ test.describe('Breadcrumb — GAAM-700 Current Page Font Color', () => {
       test.skip();
       return;
     }
-    const color = await active.evaluate(el => getComputedStyle(el).color);
+    const color = await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
     const match = color.match(/\d+/g);
     expect(match).not.toBeNull();
     if (match) {
@@ -475,11 +475,11 @@ test.describe('Breadcrumb — GAAM-700 Current Page Font Color', () => {
     await pom.navigate(BASE());
     const active = page.locator(BC_ACTIVE).first();
     await expect(active).toBeVisible();
-    const color = await active.evaluate(el => getComputedStyle(el).color);
+    const color = await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Must not be transparent / rgba(0,0,0,0)
     expect(color).not.toMatch(/rgba\(0,\s*0,\s*0,\s*0\)/);
     expect(color).not.toBe('transparent');
-    const opacity = await active.evaluate(el => getComputedStyle(el).opacity);
+    const opacity = await active.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(parseFloat(opacity)).toBeGreaterThan(0);
   });
 });

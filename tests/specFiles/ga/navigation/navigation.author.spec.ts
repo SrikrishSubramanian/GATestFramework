@@ -59,7 +59,7 @@ test.describe('Navigation — Mobile Single List (GAAM-396)', () => {
 
     // At mobile, the top-level group should stack vertically (flex-direction: column)
     const group = nav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('column');
   });
 
@@ -77,7 +77,7 @@ test.describe('Navigation — Mobile Single List (GAAM-396)', () => {
     }
 
     const group = vertNav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('column');
   });
 
@@ -159,7 +159,7 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
     }
 
     // Check for + indicator (pseudo-element content or SVG)
-    const afterContent = await trigger.evaluate(el => getComputedStyle(el, '::after').content);
+    const afterContent = await trigger.evaluate(el => getComputedStyle(el, '::after').content); // measurement: style check
     // + icon should be present when collapsed
     expect(afterContent).toBeTruthy();
   });
@@ -180,7 +180,7 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
     await expect(trigger).toHaveClass(/cmp-navigation__item--expanded/);
 
     // Check for - indicator in expanded state
-    const afterContent = await trigger.evaluate(el => getComputedStyle(el, '::after').content);
+    const afterContent = await trigger.evaluate(el => getComputedStyle(el, '::after').content); // measurement: style check
     expect(afterContent).toBeTruthy();
   });
 
@@ -222,7 +222,7 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
     const childGroup = trigger.locator(':scope > .cmp-navigation__group');
 
     // Initially collapsed — child links should be hidden
-    const initialDisplay = await childGroup.evaluate(el => getComputedStyle(el).display);
+    const initialDisplay = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(initialDisplay).toBe('none');
 
     // Click to expand
@@ -230,14 +230,14 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
     await page.waitForTimeout(300);
 
     // Child links should now be visible
-    const expandedDisplay = await childGroup.evaluate(el => getComputedStyle(el).display);
+    const expandedDisplay = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(expandedDisplay).not.toBe('none');
 
     // Click again to collapse
     await trigger.locator(':scope > .cmp-navigation__item-link').click();
     await page.waitForTimeout(300);
 
-    const collapsedDisplay = await childGroup.evaluate(el => getComputedStyle(el).display);
+    const collapsedDisplay = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(collapsedDisplay).toBe('none');
   });
 
@@ -299,12 +299,12 @@ test.describe('Navigation — General Delivery (GAAM-396)', () => {
     // Target level-1 child links (not headings which use helper-dark)
     const childLink = graniteNav.locator(`${SEL.itemLevel1} ${SEL.itemLink}`).first();
     if (await childLink.count() > 0) {
-      const linkColor = await childLink.evaluate(el => getComputedStyle(el).color);
+      const linkColor = await childLink.evaluate(el => getComputedStyle(el).color); // measurement: style check
       expect(linkColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
     } else {
       // Single-list nav — all links should be white on dark bg
       const anyLink = graniteNav.locator(SEL.itemLink).first();
-      const color = await anyLink.evaluate(el => getComputedStyle(el).color);
+      const color = await anyLink.evaluate(el => getComputedStyle(el).color); // measurement: style check
       const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
       expect(match).toBeTruthy();
       const avg = (parseInt(match![1]) + parseInt(match![2]) + parseInt(match![3])) / 3;
@@ -348,7 +348,7 @@ test.describe('Navigation — General Delivery (GAAM-396)', () => {
     // On desktop, horizontal nav should be flex row (not column)
     const nav = page.locator(SEL.root).first();
     const group = nav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('row');
   });
 });
@@ -511,7 +511,7 @@ test.describe('Navigation — Convention Compliance (GAAM-396)', () => {
 
     // Links should have transition property for smooth state changes
     const link = page.locator(`${SEL.root} ${SEL.itemLink}`).first();
-    const transition = await link.evaluate(el => getComputedStyle(el).transition);
+    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     // LESS defines: color 0.2s ease
     expect(transition).toContain('color');
   });
@@ -520,10 +520,7 @@ test.describe('Navigation — Convention Compliance (GAAM-396)', () => {
 // ─── Console & Resources ──────────────────────────────────────────────────────
 
 test.describe('Navigation — Console & Resources', () => {
-  test('[NVGT-029] @regression Navigation produces no JS errors', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new NavigationPage(page);
+  test('[NVGT-029] @regression Navigation produces no JS errors', async ({ page }) => {const pom = new NavigationPage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     const errors = capture.getErrors().filter(e =>
@@ -535,10 +532,7 @@ test.describe('Navigation — Console & Resources', () => {
   });
 
   test('[NVGT-030] @regression Navigation mobile accordion produces no JS errors', async ({ page }) => {
-    await page.setViewportSize(MOBILE);
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new NavigationPage(page);
+    await page.setViewportSize(MOBILE);const pom = new NavigationPage(page);
     await pom.navigate(BASE());
 
     // Interact with accordion — click direct child links of level-0 items
@@ -568,7 +562,7 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const nav = page.locator(`${SEL.sectionWhite} ${SEL.root}`).first();
     if (await nav.count() === 0) { test.skip(); return; }
     const group = nav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('row');
     // Verify links are side-by-side (same Y coordinate)
     const items = group.locator(`> ${SEL.itemLevel0}`);
@@ -587,7 +581,7 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const vertNav = page.locator(`${SEL.verticalMod} ${SEL.root}`).first();
     if (await vertNav.count() === 0) { test.skip(); return; }
     const group = vertNav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('column');
   });
 
@@ -597,7 +591,7 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     await pom.navigate(BASE());
     const link = page.locator(`${SEL.sectionWhite} ${SEL.itemLink}`).first();
     if (await link.count() === 0) { test.skip(); return; }
-    const fontSize = await link.evaluate(el => getComputedStyle(el).fontSize);
+    const fontSize = await link.evaluate(el => getComputedStyle(el).fontSize); // measurement: style check
     expect(fontSize).toBe('14px');
   });
 
@@ -609,10 +603,10 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const link = page.locator(`${SEL.sectionWhite} ${SEL.itemLevel1} ${SEL.itemLink}, ${SEL.sectionWhite} ${SEL.root}:not(:has(${SEL.itemLevel1})) ${SEL.itemLink}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
-    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     await link.hover();
-    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor);
-    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius);
+    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
+    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: style check
     expect(bgAfter).not.toBe(bgBefore);
     expect(parseFloat(borderRadius)).toBeGreaterThanOrEqual(20);
   });
@@ -622,7 +616,7 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const pom = new NavigationPage(page);
     await pom.navigate(BASE());
     const link = page.locator(`${SEL.root} ${SEL.itemLink}`).first();
-    const transition = await link.evaluate(el => getComputedStyle(el).transition);
+    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     expect(transition).toContain('color');
   });
 });
@@ -635,7 +629,7 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     const groupedNav = page.locator(SEL.root).filter({ has: page.locator(SEL.itemLevel1) }).first();
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const group = groupedNav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('row');
     // Headings should be in the same row
     const headings = group.locator(`> ${SEL.itemLevel0}`);
@@ -655,7 +649,7 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     // Level-0 items with children have pointer-events: none on their link
     const headingLink = groupedNav.locator(`${SEL.itemLevel0}:has(> ${SEL.group}) > ${SEL.itemLink}`).first();
-    const pointerEvents = await headingLink.evaluate(el => getComputedStyle(el).pointerEvents);
+    const pointerEvents = await headingLink.evaluate(el => getComputedStyle(el).pointerEvents); // measurement: style check
     expect(pointerEvents).toBe('none');
   });
 
@@ -666,7 +660,7 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     const groupedNav = page.locator(SEL.root).filter({ has: page.locator(SEL.itemLevel1) }).first();
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const headingLink = groupedNav.locator(`${SEL.itemLevel0}:has(> ${SEL.group}) > ${SEL.itemLink}`).first();
-    const fontWeight = await headingLink.evaluate(el => getComputedStyle(el).fontWeight);
+    const fontWeight = await headingLink.evaluate(el => getComputedStyle(el).fontWeight); // measurement: style check
     // 600 = semibold
     expect(parseInt(fontWeight)).toBeGreaterThanOrEqual(600);
   });
@@ -678,7 +672,7 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     const groupedNav = page.locator(SEL.root).filter({ has: page.locator(SEL.itemLevel1) }).first();
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const childGroup = groupedNav.locator(`${SEL.itemLevel0} > ${SEL.group}`).first();
-    const flexDir = await childGroup.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await childGroup.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('column');
   });
 });
@@ -713,7 +707,7 @@ test.describe('Navigation — L1 Label Without Path (GAAM-612)', () => {
     const headingLinks = groupedNav.locator(`${SEL.itemLevel0}:has(> ${SEL.group}) > ${SEL.itemLink}`);
     const count = await headingLinks.count();
     for (let i = 0; i < count; i++) {
-      const pe = await headingLinks.nth(i).evaluate(el => getComputedStyle(el).pointerEvents);
+      const pe = await headingLinks.nth(i).evaluate(el => getComputedStyle(el).pointerEvents); // measurement: style check
       expect(pe).toBe('none');
     }
   });
@@ -727,7 +721,7 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     await pom.navigate(BASE());
     const link = page.locator(`${SEL.sectionWhite} ${SEL.itemLink}`).first();
     if (await link.count() === 0) { test.skip(); return; }
-    const color = await link.evaluate(el => getComputedStyle(el).color);
+    const color = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Should be dark (granite) — NOT white
     expect(color).not.toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
@@ -740,7 +734,7 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     const singleLink = page.locator(`${SEL.sectionGranite} ${SEL.root}:not(:has(${SEL.itemLevel1})) ${SEL.itemLink}`).first();
     const target = (await link.count() > 0) ? link : singleLink;
     if (await target.count() === 0) { test.skip(); return; }
-    const color = await target.evaluate(el => getComputedStyle(el).color);
+    const color = await target.evaluate(el => getComputedStyle(el).color); // measurement: style check
     expect(color).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -751,7 +745,7 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     const singleLink = page.locator(`${SEL.sectionAzul} ${SEL.root}:not(:has(${SEL.itemLevel1})) ${SEL.itemLink}`).first();
     const target = (await link.count() > 0) ? link : singleLink;
     if (await target.count() === 0) { test.skip(); return; }
-    const color = await target.evaluate(el => getComputedStyle(el).color);
+    const color = await target.evaluate(el => getComputedStyle(el).color); // measurement: style check
     expect(color).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -760,7 +754,7 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     await pom.navigate(BASE());
     const heading = page.locator(`${SEL.sectionGranite} ${SEL.itemLevel0}:has(> ${SEL.group}) > ${SEL.itemLink}`).first();
     if (await heading.count() === 0) { test.skip(); return; }
-    const color = await heading.evaluate(el => getComputedStyle(el).color);
+    const color = await heading.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Helper-dark is a muted/subdued color — NOT pure white
     expect(color).not.toMatch(/rgb\(255,\s*255,\s*255\)/);
     // But should be lighter than granite
@@ -779,7 +773,7 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     await link.focus();
     await page.keyboard.press('Tab');
     await page.keyboard.press('Shift+Tab');
-    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow);
+    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
     // Should have box-shadow for focus ring on dark bg (not just outline)
     expect(boxShadow).not.toBe('none');
   });
@@ -792,10 +786,10 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const trigger = groupedNav.locator(SEL.itemLevel0).first();
     const link = trigger.locator(':scope > .cmp-navigation__item-link');
-    const colorBefore = await link.evaluate(el => getComputedStyle(el).color);
+    const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     await link.click();
     await page.waitForTimeout(300);
-    const colorAfter = await link.evaluate(el => getComputedStyle(el).color);
+    const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Color should change when expanded (collapsed: full color, expanded: subdued)
     expect(colorAfter).not.toBe(colorBefore);
   });

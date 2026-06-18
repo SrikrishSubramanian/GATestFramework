@@ -145,7 +145,7 @@ test.describe('Button — Hover & Visual Interactions', () => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const btn = btnInSection(page, 'white', '.ga-button--primary');
-    const cursor = await btn.evaluate(el => getComputedStyle(el).cursor);
+    const cursor = await btn.evaluate(el => getComputedStyle(el).cursor); // measurement: style check
     expect(cursor).toBe('pointer');
   });
 
