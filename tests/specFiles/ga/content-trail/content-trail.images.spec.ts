@@ -1,7 +1,6 @@
 import { scanImages, attachImageScanResults } from '../../../utils/infra/image-scan-utils';
 import { test, expect } from '@playwright/test';
 import { ContentTrailPage } from '../../../pages/ga/components/contentTrailPage';
-import { scanImages, attachImageScanResults } from '../../../utils/infra/broken-image-detector';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -30,7 +29,6 @@ test.describe('ContentTrail — Image Health', () => {
   /*
    * Note: Content-trail uses AEM's adaptive image component which renders
    * <img alt="..."/> without a src attribute — the image is loaded via the
-   * AEM Core Image component's lazy-loading mechanism. The scanImages utility
    * reports these as "broken" (naturalWidth === 0) and "missing dimensions".
    * These are known false positives for this component.
    *
@@ -43,7 +41,6 @@ test.describe('ContentTrail — Image Health', () => {
   test('@regression All images have alt text', async ({ page }, testInfo) => {
     const pom = new ContentTrailPage(page);
     await pom.navigate(BASE());
-    const results = await scanImages(page, '.cmp-content-trail');
     await attachImageScanResults(testInfo, results);
     expect(results.missingAlt).toBe(0);
   });
@@ -51,7 +48,6 @@ test.describe('ContentTrail — Image Health', () => {
   test('@regression No oversized images (>500KB)', async ({ page }, testInfo) => {
     const pom = new ContentTrailPage(page);
     await pom.navigate(BASE());
-    const results = await scanImages(page, '.cmp-content-trail');
     await attachImageScanResults(testInfo, results);
     expect(results.oversized).toBe(0);
   });
