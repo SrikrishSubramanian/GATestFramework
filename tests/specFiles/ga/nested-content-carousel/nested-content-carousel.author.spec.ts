@@ -111,7 +111,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
       };
     });
     // Semibold = 600
-    expect(Number(styles.fontWeight)).toBeGreaterThanOrEqual(600);
+    expect(Number(styles.fontWeight)).toBeGreaterThanOrEqual(600); // TODO: Use assertTypography() for font checks
     // 2-line clamp
     expect(styles.webkitLineClamp).toBe('2');
     // Overflow hidden for ellipsis
@@ -180,8 +180,8 @@ test.describe('NestedContentCarousel — Core Structure', () => {
     // 1px height
     expect(styles.height).toBe('1px');
     // Gray — not white, not transparent
-    expect(styles.backgroundColor).not.toBe('rgba(0, 0, 0, 0)');
-    expect(styles.backgroundColor).not.toBe('rgb(255, 255, 255)');
+    expect(styles.backgroundColor).not.toBe('rgba(0, 0, 0, 0)'); // TODO: Use assertBackground() for color checks
+    expect(styles.backgroundColor).not.toBe('rgb(255, 255, 255)'); // TODO: Use assertBackground() for color checks
   });
 
   test('[NCC-009] @smoke @regression Controls section renders counter, progress bar, and toggle', async ({ page }) => {
@@ -495,8 +495,8 @@ test.describe('NestedContentCarousel — Counter Font Colors (GAAM-705)', () => 
       const cs = getComputedStyle(el);
       return { fontSize: cs.fontSize, fontWeight: cs.fontWeight };
     });
-    expect(styles.fontSize).toBe('12px');
-    expect(Number(styles.fontWeight)).toBeGreaterThanOrEqual(600);
+    expect(styles.fontSize).toBe('12px'); // TODO: Use assertTypography() for font checks
+    expect(Number(styles.fontWeight)).toBeGreaterThanOrEqual(600); // TODO: Use assertTypography() for font checks
   });
 
   test('[NCC-030] @regression Counter colors meet 4.5:1 contrast against white background', async ({ page }) => {

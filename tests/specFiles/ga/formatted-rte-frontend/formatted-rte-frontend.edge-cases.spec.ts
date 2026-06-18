@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -45,7 +46,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
     const nestedList = page.locator('ul ul, ol ol').first();
     if (await nestedList.count() > 0) {
       const marginLeft = await nestedList.evaluate(el => window.getComputedStyle(el).marginLeft); // measurement: use measurement-utils for cleaner code
-      expect(marginLeft).not.toBe('0px');
+      expect(marginLeft).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -58,7 +59,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     if (count > 1) {
       const margin = await paragraphs.first().evaluate(el => window.getComputedStyle(el).marginBottom); // measurement: use measurement-utils for cleaner code
-      expect(margin).not.toBe('0px');
+      expect(margin).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -303,7 +304,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const internalLink = page.locator('a[href^="/"]').first();
     if (await internalLink.count() > 0) {
-      await internalLink.hover();
+      await hover(internalLink);
     }
 
     expect(errors).toEqual([]);

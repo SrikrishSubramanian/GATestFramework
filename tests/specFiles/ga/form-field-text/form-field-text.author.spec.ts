@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -79,7 +80,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      await input.fill('test value');
+      await fill(input, 'test value');
       const value = await input.inputValue();
       expect(value).toBe('test value');
     }
@@ -91,7 +92,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const textarea = page.locator('textarea').first();
     if (await textarea.count() > 0) {
-      await textarea.fill('line 1\nline 2\nline 3');
+      await fill(textarea, 'line 1\nline 2\nline 3');
       const value = await textarea.inputValue();
       expect(value).toContain('\n');
     }
@@ -103,7 +104,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      await input.fill('test');
+      await fill(input, 'test');
       await input.clear();
       const value = await input.inputValue();
       expect(value).toBe('');
@@ -116,7 +117,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const textarea = page.locator('textarea').first();
     if (await textarea.count() > 0) {
-      await textarea.fill('test');
+      await fill(textarea, 'test');
       await textarea.clear();
       const value = await textarea.inputValue();
       expect(value).toBe('');
@@ -409,7 +410,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
       const padding = await input.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 

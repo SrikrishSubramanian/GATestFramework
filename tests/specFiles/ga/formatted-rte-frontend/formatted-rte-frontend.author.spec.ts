@@ -71,7 +71,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     const bold = page.locator('strong, b').first();
     if (await bold.count() > 0) {
       const fontWeight = await bold.evaluate(el => window.getComputedStyle(el).fontWeight); // measurement: use measurement-utils for cleaner code
-      expect(fontWeight).not.toBe('400');
+      expect(fontWeight).not.toBe('400'); // TODO: Use assertTypography() for font checks
     }
   });
 
@@ -151,7 +151,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     const ul = page.locator('ul').first();
     if (await ul.count() > 0) {
       const marginLeft = await ul.evaluate(el => window.getComputedStyle(el).marginLeft); // measurement: use measurement-utils for cleaner code
-      expect(marginLeft).not.toBe('0px');
+      expect(marginLeft).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -203,7 +203,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
         const size = window.getComputedStyle(el).fontSize;
         return parseInt(size);
       });
-      expect(fontSize).toBeGreaterThanOrEqual(12);
+      expect(fontSize).toBeGreaterThanOrEqual(12); // TODO: Use assertTypography() for font checks
     }
   });
 

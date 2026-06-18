@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -32,7 +33,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     if (await cta.count() > 0) {
       // Open, close, open cycle
       for (let i = 0; i < 2; i++) {
-        await cta.click();
+        await clickElement(cta);
         await page.waitForTimeout(300);
 
         const modal = page.locator('[role="dialog"], [class*="modal"]').first();
@@ -43,7 +44,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
         const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
         if (await closeBtn.count() > 0) {
-          await closeBtn.click();
+          await clickElement(closeBtn);
           await page.waitForTimeout(300);
         }
       }
@@ -58,9 +59,9 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       // Click multiple times rapidly
-      await cta.click();
-      await cta.click();
-      await cta.click();
+      await clickElement(cta);
+      await clickElement(cta);
+      await clickElement(cta);
       await page.waitForTimeout(500);
 
       const modals = page.locator('[role="dialog"], [class*="modal"]');
@@ -113,7 +114,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const video = page.locator('video').first();
@@ -135,18 +136,18 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
       const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
 
       // Open modal
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       // Close modal
       const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
       if (await closeBtn.count() > 0) {
-        await closeBtn.click();
+        await clickElement(closeBtn);
         await page.waitForTimeout(300);
       }
 
       // Reopen modal
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       // Check video position reset
@@ -162,7 +163,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
@@ -182,7 +183,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
@@ -204,7 +205,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const video = page.locator('video').first();
@@ -228,7 +229,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const overlay = page.locator('[class*="overlay"], [class*="backdrop"]').first();
@@ -254,7 +255,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
@@ -277,7 +278,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     if (await cta.count() > 0) {
       // Start in portrait
       await page.setViewportSize({ width: 375, height: 667 });
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       // Switch to landscape
@@ -316,9 +317,9 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.keyboard.press('Escape');
-      await cta.click();
+      await clickElement(cta);
       await page.keyboard.press('Escape');
     }
 
@@ -332,7 +333,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
@@ -352,7 +353,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const modal = page.locator('[role="dialog"]').first();
@@ -381,7 +382,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
@@ -406,7 +407,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await page.setViewportSize({ width: 300, height: 400 });
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
@@ -426,7 +427,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const finalWidth = await body.evaluate(el => el.offsetWidth);

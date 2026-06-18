@@ -143,7 +143,7 @@ test.describe('Tabs — Core Structure', () => {
     if (await wrapper.count() === 0) { test.skip(); return; }
     const display = await wrapper.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     const flexDir = await wrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
-    expect(display).toBe('flex');
+    expect(display).toBe('flex'); // TODO: Use assertLayout() for display checks
     expect(flexDir).toBe('column');
   });
 
@@ -210,7 +210,7 @@ test.describe('Tabs — Tab Behavior', () => {
       const classes = await panels.nth(i).getAttribute('class') || '';
       const display = await panels.nth(i).evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       if (classes.includes('--active')) {
-        expect(display).toBe('block');
+        expect(display).toBe('block'); // TODO: Use assertLayout() for display checks
       } else {
         expect(display).toBe('none');
       }
@@ -223,7 +223,7 @@ test.describe('Tabs — Tab Behavior', () => {
     const activePanel = page.locator(TABPANEL_ACTIVE).first();
     await expect(activePanel).toBeVisible();
     const marginTop = await activePanel.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
-    expect(marginTop).toBe('48px');
+    expect(marginTop).toBe('48px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[TAB-016] @regression Active tab has tabindex="0", inactive tabs have tabindex="-1"', async ({ page }) => {

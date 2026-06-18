@@ -3,6 +3,7 @@ import { FormOptionsPage } from '../../../pages/ga/components/formOptionsPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -31,7 +32,7 @@ test.describe('Form Options — Interactions', () => {
       const checkbox = checkboxes.first();
       const initialState = await checkbox.isChecked();
 
-      await checkbox.click();
+      await clickElement(checkbox);
       await page.waitForTimeout(100);
 
       const newState = await checkbox.isChecked();
@@ -49,12 +50,12 @@ test.describe('Form Options — Interactions', () => {
       const radio2 = radios.nth(1);
 
       // Select first radio
-      await radio1.click();
+      await clickElement(radio1);
       await page.waitForTimeout(100);
       expect(await radio1.isChecked()).toBeTruthy();
 
       // Select second radio (should deselect first)
-      await radio2.click();
+      await clickElement(radio2);
       await page.waitForTimeout(100);
       expect(await radio2.isChecked()).toBeTruthy();
       expect(await radio1.isChecked()).toBeFalsy();
@@ -100,7 +101,7 @@ test.describe('Form Options — Interactions', () => {
         const input = page.locator(`#${htmlFor}`);
 
         // Click label
-        await label.click();
+        await clickElement(label);
         await page.waitForTimeout(100);
 
         // Input should be focused or checked
@@ -120,7 +121,7 @@ test.describe('Form Options — Interactions', () => {
     if (await textareas.count() > 0) {
       const textarea = textareas.first();
 
-      await textarea.fill('test input');
+      await fill(textarea, 'test input');
       await page.waitForTimeout(100);
 
       const value = await textarea.inputValue();

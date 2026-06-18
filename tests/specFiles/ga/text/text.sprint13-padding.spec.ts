@@ -32,7 +32,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await textComponent.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -45,7 +45,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await textElements.evaluate(el =>
         window.getComputedStyle(el).paddingLeft
       );
-      expect(padding).toBeTruthy();
+      expect(padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -59,7 +59,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await textComponent.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -73,7 +73,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await textComponent.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -86,7 +86,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const lineHeight = await textElement.evaluate(el =>
         parseInt(window.getComputedStyle(el).lineHeight)
       );
-      expect(lineHeight).toBeGreaterThan(10);
+      expect(lineHeight).toBeGreaterThan(10); // TODO: Use assertTypography() for font checks
     }
   });
 
@@ -148,7 +148,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await heading.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).toBeTruthy();
+      expect(padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -164,7 +164,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await list.evaluate(el =>
         window.getComputedStyle(el).paddingLeft
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -185,7 +185,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         const padding = await textComponent.evaluate(el =>
           window.getComputedStyle(el).padding
         );
-        expect(padding).not.toBe('0px');
+        expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
       }
     }
   });
@@ -199,7 +199,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await emptyText.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).toBeTruthy();
+      expect(padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -215,7 +215,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await richText.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -231,7 +231,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         window.getComputedStyle(el).padding
       );
       // Inline elements don't have padding
-      expect(padding).toBeDefined();
+      expect(padding).toBeDefined(); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -257,7 +257,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await blockquote.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -270,7 +270,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const padding = await code.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).toBeTruthy();
+      expect(padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -294,10 +294,10 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       );
 
       // All paddings should be defined
-      expect(paddingLeft).toBeGreaterThanOrEqual(0);
-      expect(paddingRight).toBeGreaterThanOrEqual(0);
-      expect(paddingTop).toBeGreaterThanOrEqual(0);
-      expect(paddingBottom).toBeGreaterThanOrEqual(0);
+      expect(paddingLeft).toBeGreaterThanOrEqual(0); // TODO: Use assertSpacing() for padding/margin
+      expect(paddingRight).toBeGreaterThanOrEqual(0); // TODO: Use assertSpacing() for padding/margin
+      expect(paddingTop).toBeGreaterThanOrEqual(0); // TODO: Use assertSpacing() for padding/margin
+      expect(paddingBottom).toBeGreaterThanOrEqual(0); // TODO: Use assertSpacing() for padding/margin
     }
   });
 

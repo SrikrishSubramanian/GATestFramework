@@ -187,8 +187,8 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
       if (count === 0) continue;
       const pt = await block.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
       const pb = await block.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
-      expect(pt, `${bg} paddingTop`).toBe('32px');
-      expect(pb, `${bg} paddingBottom`).toBe('32px');
+      expect(pt, `${bg} paddingTop`).toBe('32px'); // TODO: Use assertSpacing() for padding/margin
+      expect(pb, `${bg} paddingBottom`).toBe('32px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 });

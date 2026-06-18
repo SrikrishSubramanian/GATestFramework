@@ -7,6 +7,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -418,14 +419,14 @@ test.describe('Navigation — Accessibility (GAAM-396)', () => {
     expect(isFocused).toBe(true);
 
     // Click to expand (accordion JS intercepts click at mobile breakpoint)
-    await triggerLink.click();
+    await clickElement(triggerLink);
     await page.waitForTimeout(300);
 
     // Parent item should be expanded
     await expect(parentItem).toHaveClass(/cmp-navigation__item--expanded/);
 
     // Click again to collapse
-    await triggerLink.click();
+    await clickElement(triggerLink);
     await page.waitForTimeout(300);
     const stillExpanded = await parentItem.evaluate(el =>
       el.classList.contains('cmp-navigation__item--expanded')
@@ -592,7 +593,7 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const link = page.locator(`${SEL.sectionWhite} ${SEL.itemLink}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     const fontSize = await link.evaluate(el => getComputedStyle(el).fontSize); // measurement: style check
-    expect(fontSize).toBe('14px');
+    expect(fontSize).toBe('14px'); // TODO: Use assertTypography() for font checks
   });
 
   test('[NVGT-034] @regression Desktop: link hover shows rounded background', async ({ page }) => {
@@ -604,7 +605,7 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
     const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
-    await link.hover();
+    await hover(link);
     const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: style check
     expect(bgAfter).not.toBe(bgBefore);
@@ -662,7 +663,7 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     const headingLink = groupedNav.locator(`${SEL.itemLevel0}:has(> ${SEL.group}) > ${SEL.itemLink}`).first();
     const fontWeight = await headingLink.evaluate(el => getComputedStyle(el).fontWeight); // measurement: style check
     // 600 = semibold
-    expect(parseInt(fontWeight)).toBeGreaterThanOrEqual(600);
+    expect(parseInt(fontWeight)).toBeGreaterThanOrEqual(600); // TODO: Use assertTypography() for font checks
   });
 
   test('[NVGT-039] @regression Desktop: child links display vertically under headings', async ({ page }) => {
@@ -787,7 +788,7 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     const trigger = groupedNav.locator(SEL.itemLevel0).first();
     const link = trigger.locator(':scope > .cmp-navigation__item-link');
     const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
-    await link.click();
+    await clickElement(link);
     await page.waitForTimeout(300);
     const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Color should change when expanded (collapsed: full color, expanded: subdued)

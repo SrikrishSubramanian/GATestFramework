@@ -417,7 +417,7 @@ test.describe('GridContainer — Gap and Padding', () => {
     const paddingLeft = await wrapper.evaluate(el => parseFloat(getComputedStyle(el).paddingLeft)); // measurement: style check
     // Allow for standard section padding; gap-specific padding should not exceed 30px extra
     // This is primarily a smoke check — wrapper should not apply gap as side padding
-    expect(paddingLeft).toBeLessThan(200);
+    expect(paddingLeft).toBeLessThan(200); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[GC-025] @regression 2col 2:3 grid on Slate has same gap as white-bg grids', async ({ page }) => {

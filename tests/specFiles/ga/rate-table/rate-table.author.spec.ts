@@ -1,6 +1,7 @@
 import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
 import {
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
   RateTablePage,
   RATE_TABLE_VARIATIONS,
   VARIATION_TITLES,
@@ -51,13 +52,13 @@ test.describe('RateTable — GAAM-558 Dialog Acceptance Criteria', () => {
     // Find the first rate-table overlay by its data-path attribute containing "rate-table"
     const overlay = page.locator('[data-path*="rate-table-fixed-index"]').first();
     await overlay.waitFor({ state: 'visible', timeout: 10000 });
-    await overlay.click();
+    await clickElement(overlay);
     await page.waitForTimeout(500);
 
     // After selecting, the floating toolbar appears. Click the configure (wrench) button.
     const configureButton = page.locator('#EditableToolbar button[data-action="CONFIGURE"], .cq-editable-action[data-action="CONFIGURE"], coral-icon[icon="wrench"]').first();
     await configureButton.waitFor({ state: 'visible', timeout: 5000 });
-    await configureButton.click();
+    await clickElement(configureButton);
 
     // Wait for dialog to appear
     await page.locator('coral-dialog[open]').waitFor({ state: 'visible', timeout: 10000 });

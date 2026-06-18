@@ -6,6 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -106,7 +107,7 @@ test.describe('PromoBanner — Core Structure', () => {
       const cs = getComputedStyle(el);
       return { display: cs.display, alignItems: cs.alignItems };
     });
-    expect(styles.display, 'Root should be flex on desktop').toBe('flex');
+    expect(styles.display, 'Root should be flex on desktop').toBe('flex'); // TODO: Use assertLayout() for display checks
     expect(styles.alignItems, 'Root flex align-items should be center on desktop').toBe('center');
   });
 
@@ -260,8 +261,8 @@ test.describe('PromoBanner — Padding', () => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
-    expect(padding.top, 'Desktop wrapper padding-top should be 64px').toBe('64px');
-    expect(padding.bottom, 'Desktop wrapper padding-bottom should be 64px').toBe('64px');
+    expect(padding.top, 'Desktop wrapper padding-top should be 64px').toBe('64px'); // TODO: Use assertSpacing() for padding/margin
+    expect(padding.bottom, 'Desktop wrapper padding-bottom should be 64px').toBe('64px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[PB-018] @regression mobile default has 48px top and bottom padding', async ({ page }) => {
@@ -276,8 +277,8 @@ test.describe('PromoBanner — Padding', () => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
-    expect(padding.top, 'Mobile wrapper padding-top should be 48px').toBe('48px');
-    expect(padding.bottom, 'Mobile wrapper padding-bottom should be 48px').toBe('48px');
+    expect(padding.top, 'Mobile wrapper padding-top should be 48px').toBe('48px'); // TODO: Use assertSpacing() for padding/margin
+    expect(padding.bottom, 'Mobile wrapper padding-bottom should be 48px').toBe('48px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[PB-019] @regression remove-top-padding modifier sets padding-top to 0', async ({ page }) => {
@@ -290,7 +291,7 @@ test.describe('PromoBanner — Padding', () => {
     // Inject the modifier class to test its effect
     await wrapper.evaluate(el => el.classList.add('cmp-promo-banner--remove-top-padding'));
     const paddingTop = await wrapper.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
-    expect(paddingTop, 'remove-top-padding modifier should set padding-top to 0px').toBe('0px');
+    expect(paddingTop, 'remove-top-padding modifier should set padding-top to 0px').toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[PB-020] @regression remove-bottom-padding modifier sets padding-bottom to 0', async ({ page }) => {
@@ -303,7 +304,7 @@ test.describe('PromoBanner — Padding', () => {
     // Inject the modifier class to test its effect
     await wrapper.evaluate(el => el.classList.add('cmp-promo-banner--remove-bottom-padding'));
     const paddingBottom = await wrapper.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
-    expect(paddingBottom, 'remove-bottom-padding modifier should set padding-bottom to 0px').toBe('0px');
+    expect(paddingBottom, 'remove-bottom-padding modifier should set padding-bottom to 0px').toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[PB-021] @regression both padding modifiers applied sets both top and bottom to 0', async ({ page }) => {
@@ -321,8 +322,8 @@ test.describe('PromoBanner — Padding', () => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
-    expect(padding.top, 'Both padding modifiers: padding-top should be 0px').toBe('0px');
-    expect(padding.bottom, 'Both padding modifiers: padding-bottom should be 0px').toBe('0px');
+    expect(padding.top, 'Both padding modifiers: padding-top should be 0px').toBe('0px'); // TODO: Use assertSpacing() for padding/margin
+    expect(padding.bottom, 'Both padding modifiers: padding-bottom should be 0px').toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[PB-022] @regression padding modifiers do not affect internal content spacing', async ({ page }) => {
@@ -336,7 +337,7 @@ test.describe('PromoBanner — Padding', () => {
     const rootPaddingBefore = await page.locator(PB).first().evaluate(el => getComputedStyle(el).padding); // measurement: use measurement-utils for cleaner code
     await wrapper.evaluate(el => el.classList.add('cmp-promo-banner--remove-top-padding'));
     const rootPaddingAfter = await page.locator(PB).first().evaluate(el => getComputedStyle(el).padding); // measurement: use measurement-utils for cleaner code
-    expect(rootPaddingAfter, 'Internal root padding must be unchanged by wrapper padding modifiers').toBe(rootPaddingBefore);
+    expect(rootPaddingAfter, 'Internal root padding must be unchanged by wrapper padding modifiers').toBe(rootPaddingBefore); // TODO: Use assertSpacing() for padding/margin
   });
 });
 
@@ -426,7 +427,7 @@ test.describe('PromoBanner — Desktop Layout', () => {
     if (count === 0) { test.skip(); return; }
     await expect(links).toBeVisible();
     const marginTop = await links.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
-    expect(marginTop, 'Links margin-top on desktop should be 0px (not 24px)').toBe('0px');
+    expect(marginTop, 'Links margin-top on desktop should be 0px (not 24px)').toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 });
 
@@ -444,7 +445,7 @@ test.describe('PromoBanner — Mobile Layout', () => {
     // On mobile, the component uses display:block (no flex), so content stacks naturally
     const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     // Should NOT be flex-row — acceptable values: block, flex+column
-    const isStacked = display === 'block' || display === 'flex';
+    const isStacked = display === 'block' || display === 'flex'; // TODO: Use assertLayout() for display checks
     expect(isStacked).toBe(true);
     if (display === 'flex') {
       const dir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
@@ -473,7 +474,7 @@ test.describe('PromoBanner — Mobile Layout', () => {
     if (count === 0) { test.skip(); return; }
     await expect(links).toBeVisible();
     const marginTop = await links.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
-    expect(marginTop, 'Links margin-top on mobile should be 24px').toBe('24px');
+    expect(marginTop, 'Links margin-top on mobile should be 24px').toBe('24px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[PB-031] @mobile @regression no horizontal overflow on mobile', async ({ page }) => {
@@ -677,7 +678,7 @@ test.describe('PromoBanner — Accessibility', () => {
     if (count === 0) { test.skip(); return; }
     const first = socialLinks.first();
     const bgBefore = await first.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    await first.hover();
+    await hover(first);
     const bgAfter = await first.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     // After hover the background should change (transition to white fill)
     // We verify either background changed or that white is now the background

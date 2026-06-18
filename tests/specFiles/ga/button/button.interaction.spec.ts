@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -168,7 +169,7 @@ test.describe('Button — Video Modal Interactions', () => {
     const videoBtn = page.locator('.cmp-button.cmp-button--video').first();
     const exists = await videoBtn.count();
     if (exists > 0) {
-      await videoBtn.click();
+      await clickElement(videoBtn);
       const modal = page.locator('.cmp-button__video-modal');
       await expect(modal).toBeVisible({ timeout: 5000 });
     }
@@ -180,11 +181,11 @@ test.describe('Button — Video Modal Interactions', () => {
     const videoBtn = page.locator('.cmp-button.cmp-button--video').first();
     const exists = await videoBtn.count();
     if (exists > 0) {
-      await videoBtn.click();
+      await clickElement(videoBtn);
       const modal = page.locator('.cmp-button__video-modal');
       await expect(modal).toBeVisible({ timeout: 5000 });
       const closeBtn = page.locator('.cmp-button__video-modal-close').first();
-      await closeBtn.click();
+      await clickElement(closeBtn);
       await expect(modal).not.toBeVisible({ timeout: 5000 });
     }
   });

@@ -432,7 +432,7 @@ test.describe('HeroFiftyFifty — CTAs (AC24–AC27)', () => {
     // Buttons should be in a flex row (inline)
     if (await buttonsContainer.count() > 0) {
       const display = await buttonsContainer.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-      expect(display).toBe('flex');
+      expect(display).toBe('flex'); // TODO: Use assertLayout() for display checks
     }
   });
 

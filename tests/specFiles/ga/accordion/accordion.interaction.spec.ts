@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -68,7 +69,7 @@ test.describe('Accordion — Keyboard Navigation', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'true');
     // Tab from button should go into the expanded content panel
     await page.keyboard.press('Tab');
@@ -85,13 +86,13 @@ test.describe('Accordion — Rapid Interaction', () => {
 
     // Rapidly toggle 5 times
     for (let i = 0; i < 5; i++) {
-      await firstButton.click();
+      await clickElement(firstButton);
     }
     // After odd number of clicks, should be expanded
     await expect(firstButton).toHaveAttribute('aria-expanded', 'true');
 
     // One more click to collapse
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'false');
   });
 
@@ -118,9 +119,9 @@ test.describe('Accordion — Cross-Background Behavior Consistency', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const btn = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
-    await btn.click();
+    await clickElement(btn);
     await expect(btn).toHaveAttribute('aria-expanded', 'true');
-    await btn.click();
+    await clickElement(btn);
     await expect(btn).toHaveAttribute('aria-expanded', 'false');
   });
 
@@ -128,7 +129,7 @@ test.describe('Accordion — Cross-Background Behavior Consistency', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const btn = page.locator(`${SECTION_GRANITE} ${ITEM_BUTTON}`).first();
-    await btn.click();
+    await clickElement(btn);
     await expect(btn).toHaveAttribute('aria-expanded', 'true');
     // Verify content panel becomes visible
     const content = page.locator(`${SECTION_GRANITE} ${ITEM_CONTENT}`).first();
@@ -139,7 +140,7 @@ test.describe('Accordion — Cross-Background Behavior Consistency', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const btn = page.locator(`${SECTION_AZUL} ${ITEM_BUTTON}`).first();
-    await btn.click();
+    await clickElement(btn);
     await expect(btn).toHaveAttribute('aria-expanded', 'true');
     const content = page.locator(`${SECTION_AZUL} ${ITEM_CONTENT}`).first();
     await expect(content).toHaveAttribute('aria-hidden', 'false');
@@ -167,7 +168,7 @@ test.describe('Accordion — Hover State on Dark Backgrounds', () => {
     const btn = page.locator(`${SECTION_GRANITE} ${ITEM_BUTTON}`).first();
     const indicator = btn.locator(INDICATOR_GA);
     const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    await btn.hover();
+    await hover(btn);
     const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });
@@ -178,7 +179,7 @@ test.describe('Accordion — Hover State on Dark Backgrounds', () => {
     const btn = page.locator(`${SECTION_AZUL} ${ITEM_BUTTON}`).first();
     const indicator = btn.locator(INDICATOR_GA);
     const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    await btn.hover();
+    await hover(btn);
     const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });

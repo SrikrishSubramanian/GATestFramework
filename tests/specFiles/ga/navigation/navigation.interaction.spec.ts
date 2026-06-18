@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -45,7 +46,7 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
     const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    await link.hover();
+    await hover(link);
     const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
     const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
@@ -60,7 +61,7 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
     const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    await link.hover();
+    await hover(link);
     const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });
@@ -127,7 +128,7 @@ test.describe('Navigation — Mobile Accordion Interactions (GAAM-396)', () => {
     const link = trigger.locator(`:scope > ${LINK}`);
     const collapsedContent = await link.evaluate(el => getComputedStyle(el, '::after').content); // measurement: use measurement-utils for cleaner code
     expect(collapsedContent).toContain('+');
-    await link.click();
+    await clickElement(link);
     await page.waitForTimeout(300);
     const expandedContent = await link.evaluate(el => getComputedStyle(el, '::after').content); // measurement: use measurement-utils for cleaner code
     expect(expandedContent).not.toContain('+');

@@ -60,7 +60,7 @@ test.describe('Spacer â€” Images & Media', () => {
     );
 
     // Should have valid display property
-    expect(['block', 'div', 'flex', 'grid', 'none']).toContain(display);
+    expect(['block', 'div', 'flex', 'grid', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
   });
 
   test('[SPACER-IMAGE-004] @regression Spacer border is not visible', async ({ page }) => {

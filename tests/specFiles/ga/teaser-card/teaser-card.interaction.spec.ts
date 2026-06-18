@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -47,7 +48,7 @@ test.describe('TeaserCard — Standard Hover', () => {
 
     const linkedCard = page.locator(`${TC}:has(${TC_LINK})`).first();
     if (await linkedCard.count() === 0) { test.skip(); return; }
-    await linkedCard.hover();
+    await hover(linkedCard);
     const cursor = await linkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Hovering a clickable card must show pointer cursor').toBe('pointer');
   });
@@ -77,7 +78,7 @@ test.describe('TeaserCard — Standard Hover', () => {
     const ctaLink = linkedCard.locator(TC_LINK).first();
     const colorBefore = await ctaLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
 
-    await linkedCard.hover();
+    await hover(linkedCard);
     await page.waitForTimeout(350);
 
     const colorAfter = await ctaLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
@@ -92,7 +93,7 @@ test.describe('TeaserCard — Standard Hover', () => {
 
     const nonLinkedCard = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
     if (await nonLinkedCard.count() === 0) { test.skip(); return; }
-    await nonLinkedCard.hover();
+    await hover(nonLinkedCard);
     const cursor = await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Non-CTA card must not show pointer cursor').not.toBe('pointer');
   });
@@ -106,7 +107,7 @@ test.describe('TeaserCard — Standard Hover', () => {
     if (await card.count() === 0) { test.skip(); return; }
 
     const boxBefore = await card.boundingBox();
-    await card.hover();
+    await hover(card);
     await page.waitForTimeout(350);
     const boxAfter = await card.boundingBox();
 
@@ -134,7 +135,7 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     if (await imgWrapper.count() === 0) { test.skip(); return; }
 
     const boxBefore = await imgWrapper.boundingBox();
-    await enhanced.hover();
+    await hover(enhanced);
     await page.waitForTimeout(500);
     const boxAfter = await imgWrapper.boundingBox();
 
@@ -151,7 +152,7 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     const enhanced = page.locator(TC_ENHANCED).first();
     if (await enhanced.count() === 0) { test.skip(); return; }
 
-    await enhanced.hover();
+    await hover(enhanced);
     await page.waitForTimeout(500);
     // An overlay element or pseudo-element should introduce a darkening effect
     // Check via the card's opacity or an overlay child
@@ -181,7 +182,7 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     if (await title.count() === 0) { test.skip(); return; }
 
     const colorBefore = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-    await enhanced.hover();
+    await hover(enhanced);
     await page.waitForTimeout(500);
     const colorAfter = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
 
@@ -327,7 +328,7 @@ test.describe('TeaserCard — No-hover Conditions', () => {
     if (await nonLinked.count() === 0) { test.skip(); return; }
 
     const bgBefore = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    await nonLinked.hover();
+    await hover(nonLinked);
     await page.waitForTimeout(350);
     const bgAfter = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgBefore, 'Non-CTA card background must not change on hover').toBe(bgAfter);
@@ -340,7 +341,7 @@ test.describe('TeaserCard — No-hover Conditions', () => {
 
     const nonLinked = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
     if (await nonLinked.count() === 0) { test.skip(); return; }
-    await nonLinked.hover();
+    await hover(nonLinked);
     const cursor = await nonLinked.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Non-CTA card must not show pointer cursor').not.toBe('pointer');
   });

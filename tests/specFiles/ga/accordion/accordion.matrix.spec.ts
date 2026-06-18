@@ -3,6 +3,7 @@ import { AccordionPage } from '../../../pages/ga/components/accordionPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -55,7 +56,7 @@ test.describe('Accordion — State Matrix', () => {
 
             switch (state) {
               case 'expanded':
-                await item.click();
+                await clickElement(item);
                 await page.waitForTimeout(200);
                 const expanded = await item.getAttribute('aria-expanded');
                 expect(expanded).toBe('true');

@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -38,7 +39,7 @@ test.describe('Rate Table — Interactions', () => {
 
       // If sortable, click and verify
       if (ariaSort !== null) {
-        await firstHeader.click();
+        await clickElement(firstHeader);
         await page.waitForTimeout(300); // Wait for sort animation
 
         // Verify table is still visible
@@ -60,7 +61,7 @@ test.describe('Rate Table — Interactions', () => {
       const initialState = await firstButton.getAttribute('aria-expanded');
 
       // Click to expand/collapse
-      await firstButton.click();
+      await clickElement(firstButton);
       await page.waitForTimeout(300);
 
       const newState = await firstButton.getAttribute('aria-expanded');
@@ -78,7 +79,7 @@ test.describe('Rate Table — Interactions', () => {
     );
 
     // Hover over row
-    await rows.hover();
+    await hover(rows);
     await page.waitForTimeout(200);
 
     const hoverBg = await rows.evaluate(el =>
@@ -116,7 +117,7 @@ test.describe('Rate Table — Interactions', () => {
       const firstInput = filterInputs.first();
 
       // Type in filter
-      await firstInput.fill('test');
+      await fill(firstInput, 'test');
       await page.waitForTimeout(300);
 
       // Verify table is still visible

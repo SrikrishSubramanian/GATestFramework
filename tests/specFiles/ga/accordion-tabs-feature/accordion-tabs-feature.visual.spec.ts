@@ -33,7 +33,7 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
     const display = await container.evaluate(el =>
       window.getComputedStyle(el).display
     );
-    expect(['block', 'flex', 'grid']).toContain(display);
+    expect(['block', 'flex', 'grid']).toContain(display); // TODO: Use assertLayout() for display checks
   });
 
   test('[ACCORDION-TABS-VISUAL-002] @visual Accordion/tabs headers are styled correctly', async ({ page }) => {
@@ -49,7 +49,7 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
       const fontSize = await header.evaluate(el =>
         parseInt(window.getComputedStyle(el).fontSize)
       );
-      expect(fontSize).toBeGreaterThan(10);
+      expect(fontSize).toBeGreaterThan(10); // TODO: Use assertTypography() for font checks
     }
   });
 
@@ -62,7 +62,7 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
       const padding = await content.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 

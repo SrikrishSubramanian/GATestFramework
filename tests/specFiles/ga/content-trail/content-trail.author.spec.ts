@@ -6,6 +6,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -142,11 +143,11 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     const videoContainer = page.locator('.cmp-content-trail__container.cmp-content-trail__video').first();
     await expect(videoContainer).toBeVisible();
     // LESS applies cursor:pointer on :hover only — verify it changes on hover
-    await videoContainer.hover();
+    await hover(videoContainer);
     const cursor = await videoContainer.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor).toBe('pointer');
     // Click and check modal dialog element exists in DOM
-    await videoContainer.click();
+    await clickElement(videoContainer);
     const modal = page.locator('.cmp-content-trail__modal');
     const modalCount = await modal.count();
     expect(modalCount).toBeGreaterThan(0);

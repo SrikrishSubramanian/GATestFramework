@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -114,7 +115,7 @@ test.describe('Marketo Forms Component (GAAM-533)', () => {
 
     const textInput = page.locator('input[type="text"]').first();
     if (await textInput.count() > 0) {
-      await textInput.fill('test value');
+      await fill(textInput, 'test value');
       const value = await textInput.inputValue();
       expect(value).toBe('test value');
     }
@@ -138,7 +139,7 @@ test.describe('Marketo Forms Component (GAAM-533)', () => {
 
     const radio = page.locator('input[type="radio"]').first();
     if (await radio.count() > 0) {
-      await radio.click();
+      await clickElement(radio);
       const isChecked = await radio.isChecked();
       expect(isChecked).toBe(true);
     }

@@ -18,6 +18,7 @@ import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -93,7 +94,7 @@ test('[BTN-FIGMA-002] Button hover color matches Figma', async ({ page }) => {
   const expectedHoverColor = figmaSpec.primary.hover.backgroundColor;
 
   // Simulate hover
-  await button.hover();
+  await hover(button);
   await page.waitForTimeout(300); // Wait for CSS transition
 
   const hoverColor = await button.evaluate(el =>
@@ -188,7 +189,7 @@ test('[BTN-FIGMA-006] Button font size matches Figma', async ({ page }) => {
   console.log(`   Figma spec: ${expectedSize}`);
   console.log(`   Component: ${fontSize}`);
 
-  expect(fontSize).toBe(expectedSize);
+  expect(fontSize).toBe(expectedSize); // TODO: Use assertTypography() for font checks
   console.log(`   ✅ MATCH`);
 });
 
@@ -206,7 +207,7 @@ test('[BTN-FIGMA-007] Button font weight matches Figma', async ({ page }) => {
   console.log(`   Figma spec: ${expectedWeight}`);
   console.log(`   Component: ${fontWeight}`);
 
-  expect(fontWeight).toBe(expectedWeight);
+  expect(fontWeight).toBe(expectedWeight); // TODO: Use assertTypography() for font checks
   console.log(`   ✅ MATCH`);
 });
 
@@ -256,9 +257,9 @@ test('[BTN-FIGMA-009] All Figma specs are defined', async () => {
   console.log(`   - Opacity: ${figmaSpec.primary.disabled.opacity}`);
 
   // Verify all specs are present
-  expect(figmaSpec.primary.default.backgroundColor).toBeDefined();
+  expect(figmaSpec.primary.default.backgroundColor).toBeDefined(); // TODO: Use assertBackground() for color checks
   expect(figmaSpec.primary.default.textColor).toBeDefined();
-  expect(figmaSpec.primary.hover.backgroundColor).toBeDefined();
+  expect(figmaSpec.primary.hover.backgroundColor).toBeDefined(); // TODO: Use assertBackground() for color checks
 
   console.log(`\n   ✅ ALL SPECS DEFINED`);
 });

@@ -6,6 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -371,7 +372,7 @@ test.describe('TeaserCard — CTA & Card Clickability', () => {
 
     const linkedCard = page.locator(`a${TC}`).first();
     if (await linkedCard.count() === 0) { test.skip(); return; }
-    await linkedCard.hover();
+    await hover(linkedCard);
     const cursor = await linkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Clickable card should show pointer cursor').toBe('pointer');
   });
@@ -825,7 +826,7 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
     const nonLinkedCard = page.locator(`div${TC}`).first();
     if (await nonLinkedCard.count() === 0) { test.skip(); return; }
 
-    await nonLinkedCard.hover();
+    await hover(nonLinkedCard);
     const cursor = await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     // GAAM-1051: hover state was incorrectly applied even with no CTA
     expect(cursor, '[GAAM-1051] Card without CTA must not show pointer cursor on hover').not.toBe('pointer');

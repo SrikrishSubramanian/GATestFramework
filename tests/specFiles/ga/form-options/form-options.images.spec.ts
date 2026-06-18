@@ -39,7 +39,7 @@ test.describe('Form Options — Images & Icons', () => {
 
       // Verify image is visible
       const display = await img.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-      expect(['block', 'inline', 'inline-block', 'none']).toContain(display);
+      expect(['block', 'inline', 'inline-block', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });
 
@@ -69,7 +69,7 @@ test.describe('Form Options — Images & Icons', () => {
     for (let i = 0; i < Math.min(svgCount, 3); i++) {
       const svg = svgs.nth(i);
       const display = await svg.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-      expect(['block', 'inline', 'inline-block', 'none']).toContain(display);
+      expect(['block', 'inline', 'inline-block', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });
 

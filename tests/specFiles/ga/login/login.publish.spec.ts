@@ -6,6 +6,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -147,7 +148,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await pom.navigate(BASE());
     const usernameInput = pom.getUsernameInput();
     const passwordInput = pom.getPasswordInput();
-    await passwordInput.fill('TestPassword123');
+    await fill(passwordInput, 'TestPassword123');
     expect(await usernameInput.inputValue()).toBe('');
   });
 
@@ -156,7 +157,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await pom.navigate(BASE());
     const usernameInput = pom.getUsernameInput();
     const passwordInput = pom.getPasswordInput();
-    await usernameInput.fill('admin@example.com');
+    await fill(usernameInput, 'admin@example.com');
     const inputValue = await usernameInput.inputValue();
     expect(inputValue).toBe('admin@example.com');
   });
@@ -833,7 +834,7 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     await pom.getPasswordInput().fill('password123');
     const resetBtn = page.locator('button[type="reset"]').first();
     if (await resetBtn.count() > 0) {
-      await resetBtn.click();
+      await clickElement(resetBtn);
       const usernameValue = await pom.getUsernameInput().inputValue();
       const passwordValue = await pom.getPasswordInput().inputValue();
       expect(usernameValue).toBe('');

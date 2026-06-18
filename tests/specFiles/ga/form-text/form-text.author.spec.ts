@@ -3,6 +3,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -36,7 +37,7 @@ test.describe('Form Text â€” Core Functionality', () => {
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
-      await textInput.fill('Test Input Value');
+      await fill(textInput, 'Test Input Value');
       const value = await textInput.inputValue();
       expect(value).toBe('Test Input Value');
     }

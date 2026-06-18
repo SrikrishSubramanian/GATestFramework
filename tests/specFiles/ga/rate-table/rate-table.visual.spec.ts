@@ -107,6 +107,6 @@ test.describe('Rate Table — Visual Regression', () => {
     );
 
     // Should be visible (either block, table, flex, or grid)
-    expect(['block', 'table', 'flex', 'grid', 'inline-block']).toContain(display);
+    expect(['block', 'table', 'flex', 'grid', 'inline-block']).toContain(display); // TODO: Use assertLayout() for display checks
   });
 });

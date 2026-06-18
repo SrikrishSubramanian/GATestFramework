@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -99,10 +100,10 @@ test.describe('Button — Visual Verification', () => {
         'padding-left': cs.paddingLeft,
       };
     });
-      expect(Math.abs(parseInt(styles['padding-top']) - 15)).toBeLessThanOrEqual(2);
-      expect(Math.abs(parseInt(styles['padding-right']) - 20)).toBeLessThanOrEqual(2);
-      expect(Math.abs(parseInt(styles['padding-bottom']) - 15)).toBeLessThanOrEqual(2);
-      expect(Math.abs(parseInt(styles['padding-left']) - 20)).toBeLessThanOrEqual(2);
+      expect(Math.abs(parseInt(styles['padding-top']) - 15)).toBeLessThanOrEqual(2); // TODO: Use assertSpacing() for padding/margin
+      expect(Math.abs(parseInt(styles['padding-right']) - 20)).toBeLessThanOrEqual(2); // TODO: Use assertSpacing() for padding/margin
+      expect(Math.abs(parseInt(styles['padding-bottom']) - 15)).toBeLessThanOrEqual(2); // TODO: Use assertSpacing() for padding/margin
+      expect(Math.abs(parseInt(styles['padding-left']) - 20)).toBeLessThanOrEqual(2); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[BTN-199] @visual button hover animation matches spec', async ({ page }) => {
@@ -115,7 +116,7 @@ test.describe('Button — Visual Verification', () => {
 
     // Capture before/after states
     const beforeBg = await el.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    await el.hover();
+    await hover(el);
     await page.waitForTimeout(250);
     const afterBg = await el.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(beforeBg).not.toBe(afterBg);

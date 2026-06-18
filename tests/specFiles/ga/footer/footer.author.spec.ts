@@ -5,6 +5,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -104,7 +105,7 @@ test.describe('Footer — Happy Path & Core Functionality', () => {
       const button = buttons.first();
       const initialState = await button.getAttribute('aria-expanded');
 
-      await button.click();
+      await clickElement(button);
       await page.waitForTimeout(200);
 
       const newState = await button.getAttribute('aria-expanded');
@@ -140,7 +141,7 @@ test.describe('Footer — Happy Path & Core Functionality', () => {
 
     // Footer should be visible even if some sections are empty
     const display = await root.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-    expect(['block', 'flex', 'grid', 'table']).toContain(display);
+    expect(['block', 'flex', 'grid', 'table']).toContain(display); // TODO: Use assertLayout() for display checks
   });
 
   test('[FTR-009] @regression Footer no JavaScript errors', async ({ page }) => {

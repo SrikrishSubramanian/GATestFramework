@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -38,7 +39,7 @@ test.describe('Headline Block — CTA Hover States', () => {
     const btn = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER} .cmp-button`).first();
     await btn.scrollIntoViewIfNeeded();
     const bgBefore = await btn.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    await btn.hover();
+    await hover(btn);
     const bgAfter = await btn.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });
@@ -50,7 +51,7 @@ test.describe('Headline Block — CTA Hover States', () => {
     await btn.scrollIntoViewIfNeeded();
     const bgBefore = await btn.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     const borderBefore = await btn.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
-    await btn.hover();
+    await hover(btn);
     const bgAfter = await btn.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     const borderAfter = await btn.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
     // At least one of background or border should change
@@ -67,7 +68,7 @@ test.describe('Headline Block — CTA Hover States', () => {
       const cs = getComputedStyle(el);
       return { bg: cs.backgroundColor, border: cs.borderColor, color: cs.color, boxShadow: cs.boxShadow };
     });
-    await btn.hover();
+    await hover(btn);
     const after = await btn.evaluate(el => {
       const cs = getComputedStyle(el);
       return { bg: cs.backgroundColor, border: cs.borderColor, color: cs.color, boxShadow: cs.boxShadow };
@@ -86,7 +87,7 @@ test.describe('Headline Block — CTA Hover States', () => {
       const cs = getComputedStyle(el);
       return { bg: cs.backgroundColor, border: cs.borderColor, color: cs.color, boxShadow: cs.boxShadow };
     });
-    await btn.hover();
+    await hover(btn);
     const after = await btn.evaluate(el => {
       const cs = getComputedStyle(el);
       return { bg: cs.backgroundColor, border: cs.borderColor, color: cs.color, boxShadow: cs.boxShadow };

@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -289,7 +290,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
       const fontSize = await select.evaluate(el =>
         window.getComputedStyle(el).fontSize
       );
-      expect(fontSize).toBeTruthy();
+      expect(fontSize).toBeTruthy(); // TODO: Use assertTypography() for font checks
     }
   });
 
@@ -360,7 +361,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      await select.click();
+      await clickElement(select);
       await select.selectOption(await select.locator('option').nth(1).getAttribute('value') || '');
       await select.focus();
       await select.blur();

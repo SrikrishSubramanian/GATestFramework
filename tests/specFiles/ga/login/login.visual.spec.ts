@@ -3,6 +3,7 @@ import { LoginPage } from '../../../pages/ga/components/loginPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -80,7 +81,7 @@ test.describe('Login - Visual Regression', () => {
     await pom.navigate(BASE());
     const pwd = page.locator(PASSWORD).first();
     if (await pwd.count() === 0) { test.skip(); return; }
-    await pwd.fill('TestPass123');
+    await fill(pwd, 'TestPass123');
     const form = page.locator(FORM).first();
     if (await form.count() === 0) { test.skip(); return; }
     await expect(form).toHaveScreenshot('login-password-masked.png', { maxDiffPixelRatio: 0.02 });
@@ -92,10 +93,10 @@ test.describe('Login - Visual Regression', () => {
     await pom.navigate(BASE());
     const pwd = page.locator(PASSWORD).first();
     if (await pwd.count() === 0) { test.skip(); return; }
-    await pwd.fill('TestPass123');
+    await fill(pwd, 'TestPass123');
     const toggle = page.locator(PASSWORD_TOGGLE).first();
     if (await toggle.count() === 0) { test.skip(); return; }
-    await toggle.click();
+    await clickElement(toggle);
     const form = page.locator(FORM).first();
     if (await form.count() === 0) { test.skip(); return; }
     await expect(form).toHaveScreenshot('login-password-revealed.png', { maxDiffPixelRatio: 0.02 });

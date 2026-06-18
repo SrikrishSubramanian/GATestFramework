@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -81,7 +82,7 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      await select.click();
+      await clickElement(select);
       const options = select.locator('option');
       expect(await options.count()).toBeGreaterThan(0);
     }
@@ -294,7 +295,7 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
       const padding = await select.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 

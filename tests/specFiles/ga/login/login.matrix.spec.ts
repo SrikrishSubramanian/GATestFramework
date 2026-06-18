@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -259,10 +260,10 @@ test.describe('Login â€” Input State Matrix', () => {
       await pom.navigate(BASE());
       const pwd = page.locator(PASSWORD).first();
       if (await pwd.count() === 0) continue;
-      await pwd.fill('TestPass123');
+      await fill(pwd, 'TestPass123');
       const toggle = page.locator(PASSWORD_TOGGLE).first();
       if (await toggle.count() === 0) continue;
-      await toggle.click();
+      await clickElement(toggle);
       const type = await pwd.getAttribute('type');
       expect(type, `Password should be revealed at ${vp.label}`).toBe('text');
     }

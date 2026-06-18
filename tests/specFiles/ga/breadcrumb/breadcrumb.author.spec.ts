@@ -6,6 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -128,9 +129,9 @@ test.describe('Breadcrumb — Core Structure', () => {
       const cs = getComputedStyle(el);
       return { fontSize: cs.fontSize, fontWeight: cs.fontWeight };
     });
-    expect(styles.fontSize).toBe('14px');
+    expect(styles.fontSize).toBe('14px'); // TODO: Use assertTypography() for font checks
     // semibold = 600
-    expect(parseInt(styles.fontWeight, 10)).toBeGreaterThanOrEqual(600);
+    expect(parseInt(styles.fontWeight, 10)).toBeGreaterThanOrEqual(600); // TODO: Use assertTypography() for font checks
   });
 });
 
@@ -206,7 +207,7 @@ test.describe('Breadcrumb — Hover & Focus', () => {
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
     const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
-    await link.hover();
+    await hover(link);
     const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Hover should change the color
     expect(colorAfter).not.toBe(colorBefore);
@@ -383,7 +384,7 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
     const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Verify link is white on dark bg
     expect(colorBefore).toMatch(/rgb\(255,\s*255,\s*255\)/);
-    await link.hover();
+    await hover(link);
     // After hover, check opacity changed or color has alpha
     const opacityAfter = await link.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(parseFloat(opacityAfter)).toBeLessThan(1);
@@ -408,7 +409,7 @@ test.describe('Breadcrumb — Mobile Hidden', () => {
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
     const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
-    expect(display).toBe('block');
+    expect(display).toBe('block'); // TODO: Use assertLayout() for display checks
   });
 
   test('[BC-025] @regression Breadcrumb is hidden at tablet (768px)', async ({ page }) => {

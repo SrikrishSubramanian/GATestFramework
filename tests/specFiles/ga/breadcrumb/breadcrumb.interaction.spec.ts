@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -37,7 +38,7 @@ test.describe('Breadcrumb — Hover Interactions', () => {
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
     const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-    await link.hover();
+    await hover(link);
     const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(colorAfter).not.toBe(colorBefore);
   });
@@ -60,7 +61,7 @@ test.describe('Breadcrumb — Hover Interactions', () => {
     }
     // Before hover: white (high channel values)
     const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-    await link.hover();
+    await hover(link);
     const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Dark hover uses opacity:0.7 (not color change) per LESS
     const opacityAfter = await link.evaluate(el => getComputedStyle(el).opacity); // measurement: use measurement-utils for cleaner code
@@ -75,7 +76,7 @@ test.describe('Breadcrumb — Hover Interactions', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    await link.hover();
+    await hover(link);
     const textDecoration = await link.evaluate(el => getComputedStyle(el).textDecoration); // measurement: use measurement-utils for cleaner code
     // Should not contain 'underline'
     expect(textDecoration).not.toContain('underline');
@@ -155,7 +156,7 @@ test.describe('Breadcrumb — Responsive Visibility', () => {
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
     const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-    expect(display).toBe('block');
+    expect(display).toBe('block'); // TODO: Use assertLayout() for display checks
   });
 
   test('[BC-INT-009] @interaction @regression Breadcrumb is hidden at 390px (mobile)', async ({ page }) => {
@@ -226,7 +227,7 @@ test.describe('Breadcrumb — Dark Mode Interaction', () => {
     const linkCount = await linkInside.count();
     expect(linkCount).toBe(0);
     // Hovering should not change cursor to pointer (no link present)
-    await active.hover();
+    await hover(active);
     const cursor = await active.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor).not.toBe('pointer');
   });

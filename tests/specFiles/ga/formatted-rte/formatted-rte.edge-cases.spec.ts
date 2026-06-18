@@ -36,7 +36,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
       const fontStyle = await mixedFormat.evaluate(el =>
         window.getComputedStyle(el).fontStyle
       );
-      expect(fontWeight).not.toBe('400');
+      expect(fontWeight).not.toBe('400'); // TODO: Use assertTypography() for font checks
       expect(fontStyle).toBe('italic');
     }
   });

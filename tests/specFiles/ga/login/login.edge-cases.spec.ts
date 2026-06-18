@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -107,7 +108,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
       const display = await loginComponent.evaluate(el =>
         window.getComputedStyle(el).display
       );
-      expect(['flex', 'grid']).toContain(display);
+      expect(['flex', 'grid']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });
 
@@ -157,10 +158,10 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
     const toggleButton = page.locator('button[class*="toggle"], [class*="show-password"], [aria-label*="password"]').first();
 
     if (await passwordField.count() > 0 && await toggleButton.count() > 0) {
-      await passwordField.fill('SecurePassword123');
+      await fill(passwordField, 'SecurePassword123');
 
       // Click toggle to show password
-      await toggleButton.click();
+      await clickElement(toggleButton);
       await page.waitForTimeout(100);
 
       const fieldType = await passwordField.getAttribute('type');
@@ -175,7 +176,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const submitButton = page.locator('button:has-text("Continue"), button[type="submit"], [class*="cta"] button').first();
     if (await submitButton.count() > 0) {
-      await submitButton.click();
+      await clickElement(submitButton);
 
       // Check for error message
       const errorMsg = page.locator('[role="alert"], [class*="error"], .error-message');
@@ -194,8 +195,8 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     if (await usernameField.count() > 0 && await submitButton.count() > 0) {
       // Fill username but leave password empty
-      await usernameField.fill('test@example.com');
-      await submitButton.click();
+      await fill(usernameField, 'test@example.com');
+      await clickElement(submitButton);
 
       // Check for validation
       const passwordField = page.locator('input[type="password"]').first();
@@ -212,7 +213,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const emailField = page.locator('input[type="email"]').first();
     if (await emailField.count() > 0) {
-      await emailField.fill('invalidemail');
+      await fill(emailField, 'invalidemail');
 
       const type = await emailField.getAttribute('type');
       expect(type).toBe('email');
@@ -226,7 +227,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const usernameField = page.locator('input[type="email"], input[name*="username"]').first();
     if (await usernameField.count() > 0) {
-      await usernameField.fill('test@example.com');
+      await fill(usernameField, 'test@example.com');
 
       // Navigate and return
       await page.goto(`${BASE()}/content/global-atlantic/style-guide/`);
@@ -248,8 +249,8 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
     const submitButton = page.locator('button:has-text("Continue"), button[type="submit"]').first();
 
     if (await usernameField.count() > 0 && await passwordField.count() > 0 && await submitButton.count() > 0) {
-      await usernameField.fill('test@example.com');
-      await passwordField.fill('Password123');
+      await fill(usernameField, 'test@example.com');
+      await fill(passwordField, 'Password123');
 
       // Verify form is ready for submission
       expect(await usernameField.inputValue()).toBe('test@example.com');

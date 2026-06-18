@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -214,7 +215,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
       for (let i = 0; i < 3; i++) {
-        await input.fill(`test${i}`);
+        await fill(input, 'test${i}');
         const value = await input.inputValue();
         expect(value).toBe(`test${i}`);
 
@@ -232,7 +233,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
     const textarea = page.locator('textarea').first();
     if (await textarea.count() > 0) {
       for (let i = 0; i < 3; i++) {
-        await textarea.fill(`line1\nline2${i}`);
+        await fill(textarea, 'line1\nline2${i}');
         const value = await textarea.inputValue();
         expect(value).toContain('line1');
 
@@ -250,7 +251,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      await input.fill('test value');
+      await fill(input, 'test value');
 
       await input.focus();
       await input.blur();
@@ -266,7 +267,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const textarea = page.locator('textarea').first();
     if (await textarea.count() > 0) {
-      await textarea.fill('test\nvalue');
+      await fill(textarea, 'test\nvalue');
 
       await textarea.focus();
       await textarea.blur();
@@ -290,7 +291,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
         });
       });
 
-      await input.fill('test');
+      await fill(input, 'test');
       const events = await page.evaluate(() => (window as any).inputEvents || 0);
 
       expect(events).toBeGreaterThanOrEqual(1);
@@ -310,7 +311,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
         });
       });
 
-      await input.fill('test');
+      await fill(input, 'test');
       await input.blur();
 
       const events = await page.evaluate(() => (window as any).changeEvents || 0);
@@ -353,7 +354,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      await input.fill('test text');
+      await fill(input, 'test text');
       await input.focus();
       await page.keyboard.press('Control+A');
 
@@ -369,7 +370,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      await input.fill('test text');
+      await fill(input, 'test text');
       const value = await input.inputValue();
 
       expect(value).toBe('test text');
@@ -383,7 +384,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const numberInput = page.locator('input[type="number"]').first();
     if (await numberInput.count() > 0) {
-      await numberInput.fill('abc');
+      await fill(numberInput, 'abc');
       const value = await numberInput.inputValue();
 
       // Number input should reject or clear non-numeric input
@@ -397,7 +398,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const numberInput = page.locator('input[type="number"]').first();
     if (await numberInput.count() > 0) {
-      await numberInput.fill('123');
+      await fill(numberInput, '123');
       const value = await numberInput.inputValue();
 
       expect(value).toBe('123');
@@ -414,7 +415,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      await input.fill('test');
+      await fill(input, 'test');
       await input.focus();
       await input.blur();
       await input.clear();

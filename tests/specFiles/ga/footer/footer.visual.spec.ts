@@ -43,7 +43,7 @@ test.describe('Footer — Visual Regression', () => {
     const display = await root.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
 
     // Footer should use flexbox or grid for alignment
-    expect(['flex', 'grid', 'block']).toContain(display);
+    expect(['flex', 'grid', 'block']).toContain(display); // TODO: Use assertLayout() for display checks
   });
 
   test('[FTR-VISUAL-003] @visual Footer links are styled consistently', async ({ page }) => {
@@ -98,6 +98,6 @@ test.describe('Footer — Visual Regression', () => {
     );
 
     // Footer should have some padding
-    expect(padding).not.toBe('0px');
+    expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 });

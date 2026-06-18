@@ -54,7 +54,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
       const fontWeight = await boldText.evaluate(el =>
         window.getComputedStyle(el).fontWeight
       );
-      expect(fontWeight).not.toBe('400');
+      expect(fontWeight).not.toBe('400'); // TODO: Use assertTypography() for font checks
     }
   });
 
@@ -252,7 +252,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
       const marginLeft = await blockquote.evaluate(el =>
         window.getComputedStyle(el).marginLeft
       );
-      expect(marginLeft).not.toBe('0px');
+      expect(marginLeft).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -389,7 +389,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
         const size = window.getComputedStyle(el).fontSize;
         return parseInt(size);
       });
-      expect(fontSize).toBeGreaterThanOrEqual(12);
+      expect(fontSize).toBeGreaterThanOrEqual(12); // TODO: Use assertTypography() for font checks
     }
   });
 
@@ -403,7 +403,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
         const lh = window.getComputedStyle(el).lineHeight;
         return parseInt(lh);
       });
-      expect(lineHeight).toBeGreaterThanOrEqual(16);
+      expect(lineHeight).toBeGreaterThanOrEqual(16); // TODO: Use assertTypography() for font checks
     }
   });
 

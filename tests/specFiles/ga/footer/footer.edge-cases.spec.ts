@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -183,7 +184,7 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
         parseInt(window.getComputedStyle(el).fontSize)
       );
       // Font size should be readable
-      expect(fontSize).toBeGreaterThan(10);
+      expect(fontSize).toBeGreaterThan(10); // TODO: Use assertTypography() for font checks
     }
   });
 
@@ -198,7 +199,7 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
       expect(['true', 'false']).toContain(initial);
 
       if (initial === 'false') {
-        await disclosure.click();
+        await clickElement(disclosure);
         await page.waitForTimeout(100);
         const expanded = await disclosure.getAttribute('aria-expanded');
         expect(expanded).toBe('true');
@@ -212,7 +213,7 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
 
     const disclosure = page.locator('[class*="disclosure"], details, [role="button"][aria-expanded="false"]').first();
     if (await disclosure.count() > 0) {
-      await disclosure.click();
+      await clickElement(disclosure);
 
       const content = disclosure.locator('[class*="content"], [role="region"]');
       if (await content.count() > 0) {

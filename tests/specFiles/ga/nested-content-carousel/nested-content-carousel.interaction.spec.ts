@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -125,7 +126,7 @@ test.afterEach(async ({ page }, testInfo) => {
     // Should not have is-paused initially
     await expect(toggle).not.toHaveClass(/is-paused/);
 
-    await toggle.click();
+    await clickElement(toggle);
 
     await expect(toggle).toHaveClass(/is-paused/);
   });
@@ -144,7 +145,7 @@ test.afterEach(async ({ page }, testInfo) => {
     // Initial state: playing
     await expect(toggle).toHaveAttribute('aria-label', 'Pause carousel');
 
-    await toggle.click();
+    await clickElement(toggle);
 
     await expect(toggle).toHaveAttribute('aria-label', 'Play carousel');
   });
@@ -161,11 +162,11 @@ test.afterEach(async ({ page }, testInfo) => {
     await toggle.waitFor({ state: 'visible', timeout: 10000 });
 
     // Pause
-    await toggle.click();
+    await clickElement(toggle);
     await expect(toggle).toHaveClass(/is-paused/);
 
     // Resume
-    await toggle.click();
+    await clickElement(toggle);
     await expect(toggle).not.toHaveClass(/is-paused/);
   });
 
@@ -184,7 +185,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await progressBar.waitFor({ state: 'visible', timeout: 10000 });
 
     // Pause the carousel
-    await toggle.click();
+    await clickElement(toggle);
     await expect(toggle).toHaveClass(/is-paused/);
 
     // Record width right after pausing
@@ -297,7 +298,7 @@ test.afterEach(async ({ page }, testInfo) => {
     });
 
     // Hover over the CTA link
-    await ctaLink.hover();
+    await hover(ctaLink);
     await page.waitForTimeout(400); // allow CSS transition to complete
 
     // Capture background color after hover
@@ -326,7 +327,7 @@ test.afterEach(async ({ page }, testInfo) => {
     });
 
     // Hover over the CTA link
-    await ctaLink.hover();
+    await hover(ctaLink);
     await page.waitForTimeout(400); // allow CSS transition to complete
 
     // Capture gap after hover

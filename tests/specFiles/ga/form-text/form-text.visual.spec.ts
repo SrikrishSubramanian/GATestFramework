@@ -45,7 +45,7 @@ test.describe('Form Text â€” Visual Regression', () => {
       const fontSize = await label.evaluate(el =>
         parseInt(window.getComputedStyle(el).fontSize)
       );
-      expect(fontSize).toBeGreaterThan(10);
+      expect(fontSize).toBeGreaterThan(10); // TODO: Use assertTypography() for font checks
     }
   });
 
@@ -58,7 +58,7 @@ test.describe('Form Text â€” Visual Regression', () => {
       const padding = await textInput.evaluate(el =>
         window.getComputedStyle(el).padding
       );
-      expect(padding).not.toBe('0px');
+      expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
   });
 
@@ -84,7 +84,7 @@ test.describe('Form Text â€” Visual Regression', () => {
       const display = await container.evaluate(el =>
         window.getComputedStyle(el).display
       );
-      expect(['block', 'flex', 'grid']).toContain(display);
+      expect(['block', 'flex', 'grid']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });
 });

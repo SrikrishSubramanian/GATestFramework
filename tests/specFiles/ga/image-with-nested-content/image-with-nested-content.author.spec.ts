@@ -209,7 +209,7 @@ test.describe('ImageWithNestedContent — Size Variants', () => {
     const fontSize = await statInstance.locator('.cmp-statistic__value p').first().evaluate(el =>
       getComputedStyle(el).fontSize
     );
-    expect(fontSize).toBe('40px');
+    expect(fontSize).toBe('40px'); // TODO: Use assertTypography() for font checks
     await statInstance.evaluate((el: HTMLElement, cls: string) => {
       el.parentElement?.classList.remove(cls);
     }, SMALL_CLASS);
@@ -345,7 +345,7 @@ test.describe('ImageWithNestedContent — Mobile', () => {
     await pom.navigate(BASE());
     const statValue = page.locator(`${IWNC} .cmp-statistic__value p`).first();
     const fontSize = await statValue.evaluate(el => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
-    expect(fontSize).toBe('40px');
+    expect(fontSize).toBe('40px'); // TODO: Use assertTypography() for font checks
   });
 
   test('[IWNC-025] @mobile @regression Statistic description width: 100% at mobile', async ({ page }) => {
@@ -383,7 +383,7 @@ test.describe('ImageWithNestedContent — Mobile', () => {
       const cs = getComputedStyle(el);
       return { left: cs.marginLeft, right: cs.marginRight };
     });
-    expect(margin.left).toBe(margin.right);
+    expect(margin.left).toBe(margin.right); // TODO: Use assertSpacing() for padding/margin
     await iwnc.evaluate((el: HTMLElement, cls: string) => el.parentElement?.classList.remove(cls), SMALL_CLASS);
   });
 

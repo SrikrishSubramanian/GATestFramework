@@ -6,6 +6,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
@@ -205,7 +206,7 @@ test.describe('Accordion — Expand/Collapse Interaction', () => {
     await expect(firstContent).toHaveAttribute('aria-hidden', 'true');
 
     // Click to expand
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'true');
     await expect(firstContent).toHaveAttribute('aria-hidden', 'false');
   });
@@ -217,11 +218,11 @@ test.describe('Accordion — Expand/Collapse Interaction', () => {
     const firstContent = page.locator(`${SECTION_WHITE} ${ITEM_CONTENT}`).first();
 
     // Expand
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'true');
 
     // Collapse
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'false');
     await expect(firstContent).toHaveAttribute('aria-hidden', 'true');
   });
@@ -264,7 +265,7 @@ test.describe('Accordion — Icon Animation', () => {
     const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
 
     // Expand and wait for 300ms CSS transition to complete
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'true');
     await page.waitForTimeout(500);
 
@@ -300,7 +301,7 @@ test.describe('Accordion — Hover & Focus States', () => {
     const indicator = firstButton.locator(INDICATOR_GA);
 
     const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
-    await firstButton.hover();
+    await hover(firstButton);
     const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     // Background should darken on hover
     expect(bgAfter).not.toBe(bgBefore);
@@ -399,7 +400,7 @@ test.describe('Accordion — Padding Removed (Section Handles Padding)', () => {
     const count = await accordions.count();
     for (let i = 0; i < count; i++) {
       const classes = await accordions.nth(i).getAttribute('class') || '';
-      expect(classes).not.toContain('--added-padding');
+      expect(classes).not.toContain('--added-padding'); // TODO: Use assertSpacing() for padding/margin
       expect(classes).not.toContain('--remove-default');
     }
   });
@@ -412,7 +413,7 @@ test.describe('Accordion — Content Panel', () => {
     const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
     const firstContent = page.locator(`${SECTION_WHITE} ${ITEM_CONTENT}`).first();
 
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstContent).toHaveAttribute('aria-hidden', 'false');
     const borderLeft = await firstContent.evaluate(el => getComputedStyle(el).borderLeftStyle); // measurement: style check
     expect(borderLeft).toBe('solid');
@@ -470,9 +471,9 @@ test.describe('Accordion — Responsive', () => {
     await pom.navigate(BASE());
     const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
 
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'true');
-    await firstButton.click();
+    await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'false');
   });
 
@@ -682,9 +683,9 @@ test.describe('Accordion — Console & Resources', () => {
     await page.waitForTimeout(1000);
     capture.clear();
     const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
-    await firstButton.click();
+    await clickElement(firstButton);
     await page.waitForTimeout(500);
-    await firstButton.click();
+    await clickElement(firstButton);
     await page.waitForTimeout(500);
     const errors = capture.getErrors();
     capture.stop();

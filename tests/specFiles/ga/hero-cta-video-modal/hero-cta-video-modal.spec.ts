@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -30,7 +31,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const ctaButton = page.locator('button[class*="cta"], a[class*="cta"], [class*="hero"] button').first();
     if (await ctaButton.count() > 0) {
-      await ctaButton.click();
+      await clickElement(ctaButton);
 
       // Wait for modal to appear
       const modal = page.locator('[class*="modal"], [role="dialog"], [class*="video"]');
@@ -49,7 +50,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
       const closeBtn = modal.locator('button[aria-label*="close"], button[class*="close"], [class*="close-button"]').first();
 
       if (await closeBtn.count() > 0) {
-        await closeBtn.click();
+        await clickElement(closeBtn);
         await page.waitForTimeout(300);
 
         // Modal should be hidden or removed
@@ -80,7 +81,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const ctaButton = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await ctaButton.count() > 0) {
-      await ctaButton.click();
+      await clickElement(ctaButton);
       await page.waitForTimeout(300);
 
       await page.keyboard.press('Escape');
@@ -101,7 +102,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     if (await videoElement.count() > 0) {
       const video = page.locator('video').first();
       if (await video.count() > 0) {
-        await video.click();
+        await clickElement(video);
         // Video should be interactive
         expect(await video.count()).toBeGreaterThan(0);
       }
@@ -166,7 +167,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const focused = await page.evaluate(() => document.activeElement?.tagName);
@@ -192,12 +193,12 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const closeBtn = page.locator('[class*="close-button"], button[aria-label*="close"]').first();
       if (await closeBtn.count() > 0) {
-        await closeBtn.click();
+        await clickElement(closeBtn);
         await page.waitForTimeout(300);
 
         // Focus should be managed
@@ -214,7 +215,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const body = page.locator('body');
@@ -233,12 +234,12 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const video = page.locator('video').first();
     if (await video.count() > 0) {
-      await video.click();
+      await clickElement(video);
       await page.waitForTimeout(500);
 
       const closeBtn = page.locator('[class*="close-button"], button[aria-label*="close"]').first();
       if (await closeBtn.count() > 0) {
-        await closeBtn.click();
+        await clickElement(closeBtn);
         await page.waitForTimeout(300);
 
         // Video should be paused or stopped
@@ -256,7 +257,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
@@ -274,7 +275,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
@@ -322,7 +323,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const backdrop = page.locator('[class*="backdrop"], [class*="overlay"]').first();
@@ -341,7 +342,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      await cta.click();
+      await clickElement(cta);
       await page.waitForTimeout(300);
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();

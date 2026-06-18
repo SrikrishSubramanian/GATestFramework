@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -74,7 +75,7 @@ test.describe('Form Text â€” Interactions', () => {
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
-      await textInput.fill('Selectable Text');
+      await fill(textInput, 'Selectable Text');
       await textInput.selectOption?.({ index: 0 } as any).catch(() => {});
       const value = await textInput.inputValue();
       expect(value).toBe('Selectable Text');
@@ -100,7 +101,7 @@ test.describe('Form Text â€” Interactions', () => {
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
-      await textInput.fill('Test');
+      await fill(textInput, 'Test');
       await textInput.press('Backspace');
       const value = await textInput.inputValue();
       expect(value).toBe('Tes');

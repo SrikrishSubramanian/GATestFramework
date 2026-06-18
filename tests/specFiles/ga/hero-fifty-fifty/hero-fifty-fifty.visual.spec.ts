@@ -74,7 +74,7 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
       window.getComputedStyle(el).padding
     );
 
-    expect(padding).not.toBe('0px');
+    expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[H5050-VISUAL-005] @visual Hero 50/50 call-to-action button is prominent', async ({ page }) => {

@@ -331,7 +331,7 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
     // Allow at most one display type across all grid instances
     expect(uniqueDisplayValues.length).toBeLessThanOrEqual(2); // grid + possible inline variants
     for (const val of displayValues) {
-      expect(['grid', 'flex', 'block']).toContain(val);
+      expect(['grid', 'flex', 'block']).toContain(val); // TODO: Use assertLayout() for display checks
     }
   });
 

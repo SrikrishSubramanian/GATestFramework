@@ -146,7 +146,7 @@ test.describe('Footer — Images & Media', () => {
 
       // Check visibility
       const display = await svg.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-      expect(['block', 'inline', 'inline-block', 'none']).toContain(display);
+      expect(['block', 'inline', 'inline-block', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });
 });

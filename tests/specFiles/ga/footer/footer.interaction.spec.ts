@@ -3,6 +3,7 @@ import { FooterPage } from '../../../pages/ga/components/footerPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -35,7 +36,7 @@ test.describe('Footer — Interactions', () => {
 
       if (href && href.startsWith('#')) {
         // Internal link - should navigate without leaving page
-        await link.click();
+        await clickElement(link);
         await page.waitForTimeout(200);
 
         // Page should still be accessible
@@ -56,7 +57,7 @@ test.describe('Footer — Interactions', () => {
       const button = buttons.first();
       const initial = await button.getAttribute('aria-expanded');
 
-      await button.click();
+      await clickElement(button);
       await page.waitForTimeout(200);
 
       const after = await button.getAttribute('aria-expanded');

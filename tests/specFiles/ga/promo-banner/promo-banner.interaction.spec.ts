@@ -6,6 +6,7 @@ import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -45,7 +46,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
     const bgBefore = await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor // measurement: use measurement-utils for cleaner code
     );
 
-    await link.hover();
+    await hover(link);
     await page.waitForTimeout(250); // allow transition to complete
 
     const bgAfter = await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor // measurement: use measurement-utils for cleaner code
@@ -122,7 +123,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
     const bgBefore = await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor); // measurement: use measurement-utils for cleaner code
 
-    await btn.hover();
+    await hover(btn);
     await page.waitForTimeout(250);
 
     const bgAfter = await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor); // measurement: use measurement-utils for cleaner code
@@ -257,7 +258,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
     if (layout.display === 'flex') {
       expect(layout.flexDirection).not.toBe('row');
     } else {
-      expect(layout.display).toBe('block');
+      expect(layout.display).toBe('block'); // TODO: Use assertLayout() for display checks
     }
   });
 

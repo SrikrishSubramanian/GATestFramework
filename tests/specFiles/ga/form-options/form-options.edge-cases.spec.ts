@@ -3,6 +3,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -64,7 +65,7 @@ test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
 
     const selectField = page.locator('select').first();
     if (await selectField.count() > 0) {
-      await selectField.click();
+      await clickElement(selectField);
       // Dropdown should be interactive
       expect(await selectField.count()).toBeGreaterThan(0);
     }
@@ -121,7 +122,7 @@ test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
 
       // Should not be clickable
       try {
-        await disabledCheckbox.click();
+        await clickElement(disabledCheckbox);
       } catch {
         // Expected to fail
       }

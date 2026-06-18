@@ -313,8 +313,8 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
     const paddingTop = await block.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
     const paddingBottom = await block.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
-    expect(paddingTop).toBe('48px');
-    expect(paddingBottom).toBe('48px');
+    expect(paddingTop).toBe('48px'); // TODO: Use assertSpacing() for padding/margin
+    expect(paddingBottom).toBe('48px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[HB-024] @regression @mobile Mobile: default padding is 32px top and bottom', async ({ page }) => {
@@ -324,8 +324,8 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
     const paddingTop = await block.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
     const paddingBottom = await block.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
-    expect(paddingTop).toBe('32px');
-    expect(paddingBottom).toBe('32px');
+    expect(paddingTop).toBe('32px'); // TODO: Use assertSpacing() for padding/margin
+    expect(paddingBottom).toBe('32px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[HB-025] @regression Padding-top-off class removes top padding only', async ({ page }) => {
@@ -341,8 +341,8 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     }
     const paddingTop = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
     const paddingBottom = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
-    expect(paddingTop).toBe('0px');
-    expect(paddingBottom).toBe('48px');
+    expect(paddingTop).toBe('0px'); // TODO: Use assertSpacing() for padding/margin
+    expect(paddingBottom).toBe('48px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[HB-026] @regression Padding-bottom-off class removes bottom padding only', async ({ page }) => {
@@ -357,8 +357,8 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     }
     const paddingTop = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
     const paddingBottom = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
-    expect(paddingTop).toBe('48px');
-    expect(paddingBottom).toBe('0px');
+    expect(paddingTop).toBe('48px'); // TODO: Use assertSpacing() for padding/margin
+    expect(paddingBottom).toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[HB-027] @regression Internal spacing unchanged when padding removed', async ({ page }) => {

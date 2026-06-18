@@ -42,7 +42,7 @@ test.describe('Spacer â€” Visual Regression', () => {
     const margin = await spacer.evaluate(el => window.getComputedStyle(el).margin); // measurement: use measurement-utils for cleaner code
     const padding = await spacer.evaluate(el => window.getComputedStyle(el).padding); // measurement: use measurement-utils for cleaner code
 
-    expect(margin || padding).toBeTruthy();
+    expect(margin || padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[SPACER-VISUAL-003] @visual Spacer does not affect horizontal layout', async ({ page }) => {

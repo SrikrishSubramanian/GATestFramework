@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -59,7 +60,7 @@ test.describe('Image — Hover Zoom Interaction', () => {
     const imgLocator = page.locator(`${IMG_LINK} ${IMG_IMAGE}`).first();
     const beforeTransform = await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
 
-    await linkedPicture.hover();
+    await hover(linkedPicture);
     await page.waitForTimeout(350); // allow 0.3s transition to complete
 
     const afterTransform = await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
@@ -98,7 +99,7 @@ test.describe('Image — Hover Zoom Interaction', () => {
       }, { rootSel: IMG_ROOT, linkSel: IMG_LINK, imgClass: 'cmp-image__image' });
     }
 
-    await nonLinkedPicture.hover();
+    await hover(nonLinkedPicture);
     await page.waitForTimeout(350);
 
     const transform = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
@@ -124,7 +125,7 @@ test.describe('Image — Hover Zoom Interaction', () => {
 
     // Hover and confirm the picture box dimensions do not change (clip in place)
     const boxBefore = await linkedPicture.boundingBox();
-    await linkedPicture.hover();
+    await hover(linkedPicture);
     await page.waitForTimeout(350);
     const boxAfter = await linkedPicture.boundingBox();
 

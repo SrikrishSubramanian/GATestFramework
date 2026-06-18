@@ -5,6 +5,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -55,7 +56,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     await expect(secondTab).not.toHaveClass(/cmp-tabs__tab--active/);
 
     // Click 2nd tab
-    await secondTab.click();
+    await clickElement(secondTab);
 
     await expect(secondTab).toHaveClass(/cmp-tabs__tab--active/);
     await expect(firstTab).not.toHaveClass(/cmp-tabs__tab--active/);
@@ -73,7 +74,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
 
     // Click the 3rd tab
     const thirdTab = tabs.nth(2);
-    await thirdTab.click();
+    await clickElement(thirdTab);
 
     // The 3rd panel should now be active
     const thirdPanel = panels.nth(2);
@@ -101,7 +102,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     await expect(firstTab).toHaveClass(/cmp-tabs__tab--active/);
 
     // Click the same active tab
-    await firstTab.click();
+    await clickElement(firstTab);
 
     // Should still be active
     await expect(firstTab).toHaveClass(/cmp-tabs__tab--active/);
@@ -170,7 +171,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     const secondTab = tabs.nth(1);
 
     // Ensure first tab is active and click to focus
-    await firstTab.click();
+    await clickElement(firstTab);
     await expect(firstTab).toHaveClass(/cmp-tabs__tab--active/);
 
     // Press ArrowRight — AEM tabs JS activates the next tab on arrow key
@@ -193,7 +194,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     const firstTab = tabs.nth(0);
 
     // Click 2nd tab first so we can navigate left
-    await secondTab.click();
+    await clickElement(secondTab);
     await expect(secondTab).toHaveClass(/cmp-tabs__tab--active/);
 
     // Press ArrowLeft — should move to 1st tab
@@ -249,7 +250,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     );
 
     // Hover over the inactive tab
-    await secondTab.hover();
+    await hover(secondTab);
 
     // Capture background-color after hover
     const bgAfter = await secondTab.evaluate((el) =>
@@ -278,7 +279,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     );
 
     // Hover the active tab
-    await firstTab.hover();
+    await hover(firstTab);
 
     // Background color should remain the same (granite fill is locked for active)
     const bgAfter = await firstTab.evaluate((el) =>
@@ -306,7 +307,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
 
     // Click 3rd tab
     const thirdTab = tabs.nth(2);
-    await thirdTab.click();
+    await clickElement(thirdTab);
 
     // 3rd tab should be active
     await expect(thirdTab).toHaveClass(/cmp-tabs__tab--active/);

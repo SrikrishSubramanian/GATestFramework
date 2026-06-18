@@ -6,6 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -89,7 +90,7 @@ test.describe('Image — Core Structure', () => {
     const width = await img.evaluate((el: Element) => getComputedStyle(el).width); // measurement: use measurement-utils for cleaner code
     const parentWidth = await img.evaluate((el: HTMLElement) => el.parentElement ? el.parentElement.getBoundingClientRect().width : 0);
 
-    expect(display).toBe('block');
+    expect(display).toBe('block'); // TODO: Use assertLayout() for display checks
     // width:100% resolves to the parent's pixel width
     const imgWidth = parseFloat(width);
     if (parentWidth > 0) {
@@ -226,7 +227,7 @@ test.describe('Image — Sizing Variants', () => {
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
     const display = await picture.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-    expect(display).toBe('block');
+    expect(display).toBe('block'); // TODO: Use assertLayout() for display checks
   });
 });
 
@@ -281,7 +282,7 @@ test.describe('Image — Padding Variants', () => {
     await wrapper.evaluate(el => el.classList.add('cmp-image--no-top-padding'));
     const inner = wrapper.locator('.cmp-image').first();
     const paddingTop = await inner.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
-    expect(paddingTop).toBe('0px');
+    expect(paddingTop).toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     await wrapper.evaluate(el => el.classList.remove('cmp-image--no-top-padding'));
   });
 
@@ -295,7 +296,7 @@ test.describe('Image — Padding Variants', () => {
     await wrapper.evaluate(el => el.classList.add('cmp-image--no-bottom-padding'));
     const inner = wrapper.locator('.cmp-image').first();
     const paddingBottom = await inner.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
-    expect(paddingBottom).toBe('0px');
+    expect(paddingBottom).toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
   test('[IMG-019] @regression .cmp-image--no-top-bottom-padding removes both top and bottom padding', async ({ page }) => {
@@ -362,7 +363,7 @@ test.describe('Image — Hover Zoom', () => {
       }, { linkSel: IMG_LINK, imgClass: 'cmp-image__image' });
     }
 
-    await linkedPicture.hover();
+    await hover(linkedPicture);
     const transform = await page.locator(`${IMG_LINK} ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
     // scale(1.15) resolves to a matrix — check it is not 'none' and not identity
     expect(transform).not.toBe('none');
@@ -397,7 +398,7 @@ test.describe('Image — Hover Zoom', () => {
       }, { rootSel: IMG_ROOT, linkSel: IMG_LINK, imgClass: 'cmp-image__image' });
     }
 
-    await nonLinkedPicture.hover();
+    await hover(nonLinkedPicture);
     const transform = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
     expect(transform === 'none' || transform === 'matrix(1, 0, 0, 1, 0, 0)').toBe(true);
 
@@ -460,7 +461,7 @@ test.describe('Image — Caption', () => {
     if (count === 0) { test.skip(); return; }
 
     const fontSize = await caption.evaluate((el: Element) => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
-    expect(fontSize).toBe('14px');
+    expect(fontSize).toBe('14px'); // TODO: Use assertTypography() for font checks
   });
 
   test('[IMG-026] @regression Caption font-size is 13px on mobile', async ({ page }) => {
@@ -473,7 +474,7 @@ test.describe('Image — Caption', () => {
     if (count === 0) { test.skip(); return; }
 
     const fontSize = await caption.evaluate((el: Element) => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
-    expect(fontSize).toBe('13px');
+    expect(fontSize).toBe('13px'); // TODO: Use assertTypography() for font checks
   });
 
   test('[IMG-027] @regression Caption color on light section is granite (not white)', async ({ page }) => {

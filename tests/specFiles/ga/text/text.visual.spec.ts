@@ -82,7 +82,7 @@ test.describe('Text â€” Visual Regression', () => {
       const lineHeight = await text.evaluate(el =>
         window.getComputedStyle(el).lineHeight
       );
-      expect(lineHeight).not.toBe('normal');
+      expect(lineHeight).not.toBe('normal'); // TODO: Use assertTypography() for font checks
     }
   });
 

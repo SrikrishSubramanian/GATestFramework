@@ -67,7 +67,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
     await expect(instance.locator(RIGHT)).toBeVisible();
     // Wrapper layout (flex or block) depends on whether component CSS is loaded
     const display = await instance.locator(WRAPPER).evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-    expect(['flex', 'block']).toContain(display);
+    expect(['flex', 'block']).toContain(display); // TODO: Use assertLayout() for display checks
   });
 
   test('[ATF-003] @regression Tab list uses semantic ordered list with role="tablist"', async ({ page }) => {

@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -54,10 +55,10 @@ test.describe('Login â€” Password Toggle Interaction', () => {
     await pom.navigate(BASE());
     const pwd = page.locator(PASSWORD).first();
     if (await pwd.count() === 0) { test.skip(); return; }
-    await pwd.fill('TestPass123');
+    await fill(pwd, 'TestPass123');
     const toggle = page.locator(PASSWORD_TOGGLE).first();
     if (await toggle.count() === 0) { test.skip(); return; }
-    await toggle.click();
+    await clickElement(toggle);
     const type = await pwd.getAttribute('type');
     expect(type).toBe('text');
   });
@@ -68,11 +69,11 @@ test.describe('Login â€” Password Toggle Interaction', () => {
     await pom.navigate(BASE());
     const pwd = page.locator(PASSWORD).first();
     if (await pwd.count() === 0) { test.skip(); return; }
-    await pwd.fill('TestPass123');
+    await fill(pwd, 'TestPass123');
     const toggle = page.locator(PASSWORD_TOGGLE).first();
     if (await toggle.count() === 0) { test.skip(); return; }
-    await toggle.click();
-    await toggle.click();
+    await clickElement(toggle);
+    await clickElement(toggle);
     const type = await pwd.getAttribute('type');
     expect(type).toBe('password');
   });
@@ -85,7 +86,7 @@ test.describe('Login â€” Password Toggle Interaction', () => {
     if (await toggle.count() === 0) { test.skip(); return; }
     const pressedBefore = await toggle.getAttribute('aria-pressed');
     const labelBefore = await toggle.getAttribute('aria-label');
-    await toggle.click();
+    await clickElement(toggle);
     const pressedAfter = await toggle.getAttribute('aria-pressed');
     const labelAfter = await toggle.getAttribute('aria-label');
     // Either aria-pressed toggles or aria-label changes
@@ -99,7 +100,7 @@ test.describe('Login â€” Password Toggle Interaction', () => {
     await pom.navigate(BASE());
     const pwd = page.locator(PASSWORD).first();
     if (await pwd.count() === 0) { test.skip(); return; }
-    await pwd.fill('TestPass123');
+    await fill(pwd, 'TestPass123');
     const toggle = page.locator(PASSWORD_TOGGLE).first();
     if (await toggle.count() === 0) { test.skip(); return; }
     await toggle.focus();
@@ -127,7 +128,7 @@ test.describe('Login â€” Modal Open/Close', () => {
     await pom.navigate(BASE());
     const link = page.locator(FORGOT_USERNAME).first();
     if (await link.count() === 0) { test.skip(); return; }
-    await link.click();
+    await clickElement(link);
     const modal = page.locator(MODAL).first();
     if (await modal.count() === 0) { test.skip(); return; }
     await expect(modal).toBeVisible();
@@ -139,13 +140,13 @@ test.describe('Login â€” Modal Open/Close', () => {
     await pom.navigate(BASE());
     const link = page.locator(FORGOT_USERNAME).first();
     if (await link.count() === 0) { test.skip(); return; }
-    await link.click();
+    await clickElement(link);
     const modal = page.locator(MODAL).first();
     if (await modal.count() === 0) { test.skip(); return; }
     await expect(modal).toBeVisible();
     const closeBtn = page.locator(MODAL_CLOSE).first();
     if (await closeBtn.count() === 0) { test.skip(); return; }
-    await closeBtn.click();
+    await clickElement(closeBtn);
     await expect(modal).not.toBeVisible();
   });
 
@@ -155,7 +156,7 @@ test.describe('Login â€” Modal Open/Close', () => {
     await pom.navigate(BASE());
     const link = page.locator(FORGOT_USERNAME).first();
     if (await link.count() === 0) { test.skip(); return; }
-    await link.click();
+    await clickElement(link);
     const modal = page.locator(MODAL).first();
     if (await modal.count() === 0) { test.skip(); return; }
     await expect(modal).toBeVisible();
@@ -178,7 +179,7 @@ test.describe('Login â€” Modal Open/Close', () => {
     await pom.navigate(BASE());
     const link = page.locator(FORGOT_PASSWORD).first();
     if (await link.count() === 0) { test.skip(); return; }
-    await link.click();
+    await clickElement(link);
     const modal = page.locator(MODAL).first();
     if (await modal.count() === 0) { test.skip(); return; }
     await expect(modal).toBeVisible();
@@ -190,13 +191,13 @@ test.describe('Login â€” Modal Open/Close', () => {
     await pom.navigate(BASE());
     const link = page.locator(FORGOT_PASSWORD).first();
     if (await link.count() === 0) { test.skip(); return; }
-    await link.click();
+    await clickElement(link);
     const modal = page.locator(MODAL).first();
     if (await modal.count() === 0) { test.skip(); return; }
     await expect(modal).toBeVisible();
     const closeBtn = page.locator(MODAL_CLOSE).first();
     if (await closeBtn.count() === 0) { test.skip(); return; }
-    await closeBtn.click();
+    await clickElement(closeBtn);
     await expect(modal).not.toBeVisible();
   });
 });
@@ -307,7 +308,7 @@ test.describe('Login â€” Form State', () => {
     await pom.navigate(BASE());
     const username = page.locator(USERNAME).first();
     if (await username.count() === 0) { test.skip(); return; }
-    await username.fill('testuser@example.com');
+    await fill(username, 'testuser@example.com');
     const value = await username.inputValue();
     expect(value).toBe('testuser@example.com');
   });
