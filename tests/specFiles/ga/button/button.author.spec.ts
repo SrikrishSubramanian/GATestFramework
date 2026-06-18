@@ -8,8 +8,21 @@ import AxeBuilder from '@axe-core/playwright';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
+let capture: ConsoleCapture;
+
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+  capture = new ConsoleCapture(page);
+  capture.start();
+});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
 test.describe('Button — CSV Test Cases', () => {

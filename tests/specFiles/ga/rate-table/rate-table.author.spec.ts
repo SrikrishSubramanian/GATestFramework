@@ -11,12 +11,24 @@ import {
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor, navigateToEditor, openComponentDialog, cancelDialog } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => process.env.AEM_AUTHOR_URL || 'http://localhost:4502';
 const STYLE_GUIDE_PATH = '/content/global-atlantic/style-guide/components/rate-table.html';
 
 test.beforeEach(async ({ page }) => {
   // Auth handled by globalSetup + storageState in config
+});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
 // ── GAAM-558 Acceptance Criteria ─────────────────────────────────────────────

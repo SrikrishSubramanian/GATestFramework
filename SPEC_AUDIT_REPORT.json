@@ -1,0 +1,323 @@
+{
+  "auditDate": "2026-06-19",
+  "auditScope": "Sample audit of 12 spec files from different components and categories",
+  "totalFilesAudited": 12,
+  "totalSpecFiles": 171,
+  "violations": [
+    {
+      "id": "V-001",
+      "fileName": "feature-banner.author.spec.ts",
+      "filePath": "tests/specFiles/ga/feature-banner/feature-banner.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "import",
+      "lineNumbers": [1],
+      "currentCode": "import { test, expect } from '@playwright/test';",
+      "issue": "Uses @playwright/test directly instead of persistent-context. Misses auth context fixture that handles storageState injection.",
+      "fix": "import { test, expect } from '../../../utils/infra/persistent-context';",
+      "impact": "Tests run without proper auth initialization; fails at login checks"
+    },
+    {
+      "id": "V-002",
+      "fileName": "form-field-text.author.spec.ts",
+      "filePath": "tests/specFiles/ga/form-field-text/form-field-text.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "import",
+      "lineNumbers": [1],
+      "currentCode": "import { test, expect } from '@playwright/test';",
+      "issue": "Uses @playwright/test directly instead of persistent-context. Misses auth context fixture.",
+      "fix": "import { test, expect } from '../../../utils/infra/persistent-context';",
+      "impact": "Tests run without proper auth initialization"
+    },
+    {
+      "id": "V-003",
+      "fileName": "feature-banner.author.spec.ts",
+      "filePath": "tests/specFiles/ga/feature-banner/feature-banner.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "url-resolution",
+      "lineNumbers": [14, 23, 38, 48, 58, 69, 80, 90, 100, 110],
+      "currentCode": "await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);",
+      "issue": "Hardcoded style guide URL instead of using resolveComponentUrl() utility. Breaks in non-local envs where fixtures are deployed elsewhere.",
+      "fix": "const { resolveComponentUrl } = require('../../../utils/infra/content-fixture-deployer');\n// Then:\nconst url = resolveComponentUrl('feature-banner');\nawait page.goto(url);",
+      "impact": "Tests will fail in qa/uat/prod if fixture deployment strategy changes; violates DRY principle"
+    },
+    {
+      "id": "V-004",
+      "fileName": "form-field-text.author.spec.ts",
+      "filePath": "tests/specFiles/ga/form-field-text/form-field-text.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "url-resolution",
+      "lineNumbers": [14, 23, 32, 44, 59, 70, 81, 92, 105, 115, 126, 140, 150, 160, 173, 182, 192, 201, 210, 220, 230, 241, 252, 263, 277, 288, 299, 310, 322, 334, 346, 358, 370, 381],
+      "currentCode": "await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-text.html?wcmmode=disabled`);",
+      "issue": "Hardcoded URL in 34 tests instead of resolveComponentUrl(). Massive DRY violation and fragility.",
+      "fix": "import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\n\ntest.describe('Form Field Text Component', () => {\n  let formFieldTextUrl: string;\n  \n  test.beforeAll(async () => {\n    formFieldTextUrl = resolveComponentUrl('form-field-text');\n  });\n  \n  test('[GAAM-504-001] @regression', async ({ page }) => {\n    await page.goto(formFieldTextUrl);\n    // ...\n  });\n});",
+      "impact": "34 hardcoded URLs across one file; fragile, unmaintainable, violates DRY"
+    },
+    {
+      "id": "V-005",
+      "fileName": "navigation.author.spec.ts",
+      "filePath": "tests/specFiles/ga/navigation/navigation.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "console-capture",
+      "lineNumbers": [511, 524, 540, 544],
+      "currentCode": "const capture = new ConsoleCapture(page);\ncapture.start();\nconst pom = new NavigationPage(page);\nawait pom.navigate(BASE());\nawait page.waitForTimeout(1000);\nconst errors = capture.getErrors()...;\ncapture.stop();\nexpect(errors).toEqual([]);",
+      "issue": "ConsoleCapture is started and stopped but NEVER attached to the report via attachConsoleCapture(). Captured errors exist only in memory and are lost after test ends.",
+      "fix": "test('[NVGT-029] @regression Navigation produces no JS errors', async ({ page, testInfo }) => {\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new NavigationPage(page);\n  await pom.navigate(BASE());\n  await page.waitForTimeout(1000);\n  const errors = capture.getErrors().filter(e =>\n    !e.message?.includes('getElementsByTagName')\n  );\n  capture.stop();\n  await attachConsoleCapture(testInfo, capture);\n  expect(errors).toEqual([]);\n});",
+      "impact": "Console errors are captured but lost; report shows no diagnostic data even when errors occur"
+    },
+    {
+      "id": "V-006",
+      "fileName": "accordion.author.spec.ts",
+      "filePath": "tests/specFiles/ga/accordion/accordion.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "console-capture",
+      "lineNumbers": [665, 676, 679],
+      "currentCode": "const capture = new ConsoleCapture(page);\ncapture.start();\nconst pom = new AccordionPage(page);\nawait pom.navigate(BASE());\n// ... interact ...\nconst errors = capture.getErrors();\ncapture.stop();\nexpect(unexpected).toEqual([]);",
+      "issue": "ConsoleCapture used but NEVER attached to report via attachConsoleCapture(). Diagnostic data is lost.",
+      "fix": "test('[ACRD-045] @regression Accordion produces no unexpected JS errors on interaction', async ({ page, testInfo }) => {\n  const KNOWN_ERRORS = [\"Cannot read properties of null (reading 'getAttribute')\"];\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new AccordionPage(page);\n  await pom.navigate(BASE());\n  await page.waitForTimeout(1000);\n  capture.clear();\n  const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();\n  await firstButton.click();\n  await page.waitForTimeout(500);\n  await firstButton.click();\n  await page.waitForTimeout(500);\n  const errors = capture.getErrors();\n  capture.stop();\n  await attachConsoleCapture(testInfo, capture);\n  const unexpected = errors.filter(e => !KNOWN_ERRORS.some(known => e.message.includes(known)));\n  expect(unexpected).toEqual([]);\n});",
+      "impact": "Console diagnostics lost; report enhancement doesn't happen"
+    },
+    {
+      "id": "V-007",
+      "fileName": "tabs.author.spec.ts",
+      "filePath": "tests/specFiles/ga/tabs/tabs.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "console-capture",
+      "lineNumbers": [4],
+      "currentCode": "import { ConsoleCapture } from '../../../utils/infra/console-capture';",
+      "issue": "ConsoleCapture imported but used pattern analysis required. Need to verify whether capture is attached to report.",
+      "fix": "import { ConsoleCapture } from '../../../utils/infra/console-capture';\nimport { attachConsoleCapture } from '../../../utils/infra/report-enhancer';",
+      "impact": "May lose diagnostic data if attachConsoleCapture not called"
+    },
+    {
+      "id": "V-008",
+      "fileName": "statistic.author.spec.ts",
+      "filePath": "tests/specFiles/ga/statistic/statistic.author.spec.ts",
+      "violationType": "HIGH",
+      "category": "assert-utils",
+      "lineNumbers": [18, 19, 21, 22, 35, 36, 37, 38, 39, 40, 41, 42, 69, 70, 78, 86, 96, 107, 108],
+      "currentCode": "await expect(root).toBeVisible();\nconst heading = root.locator('h1, h2, h3').first();\nconst hasHeading = await heading.count() > 0;\nif (hasHeading) {\n  await expect(heading).toBeVisible();\n}",
+      "issue": "Uses raw expect() assertions instead of assert-utils wrapper functions like isVisible(). Cannot reuse, not soft-assertion capable.",
+      "fix": "import { isVisible, expectElementToHaveCount } from '../../../src/utils/assert-utils';\n\ntest('[STTS-001] @smoke @regression', async ({ page }) => {\n  const pom = new StatisticPage(page);\n  await pom.navigate(BASE());\n  const root = page.locator('.cmp-statistic').first();\n  await isVisible(root);\n  const heading = root.locator('h1, h2, h3').first();\n  const hasHeading = (await heading.count()) > 0;\n  if (hasHeading) {\n    await isVisible(heading);\n  }\n});",
+      "impact": "Cannot leverage soft assertions, consistency, or error handling from assert-utils"
+    },
+    {
+      "id": "V-009",
+      "fileName": "footer.author.spec.ts",
+      "filePath": "tests/specFiles/ga/footer/footer.author.spec.ts",
+      "violationType": "HIGH",
+      "category": "login",
+      "lineNumbers": [14, 27, 38, 56, 71, 83, 102, 121, 133],
+      "currentCode": "test('[FTR-001] @smoke @regression Footer renders correctly', async ({ page }) => {\n  const pom = new FooterPage(page);\n  await pom.navigate(BASE());\n  const root = await pom.getRoot();\n  await expect(root).toBeVisible();",
+      "issue": "Tests call POM methods (pom.navigate, pom.getRoot) before explicit loginToAEMAuthor(). POM's navigate() doesn't call login, so auth is missing during initial navigation.",
+      "fix": "test('[FTR-001] @smoke @regression Footer renders correctly', async ({ page }) => {\n  await loginToAEMAuthor(page);\n  const pom = new FooterPage(page);\n  await pom.navigate(BASE());\n  const root = await pom.getRoot();\n  await expect(root).toBeVisible();",
+      "impact": "Tests may fail with 401 Unauthorized or missing admin content before beforeEach completes"
+    },
+    {
+      "id": "V-010",
+      "fileName": "navigation.author.spec.ts",
+      "filePath": "tests/specFiles/ga/navigation/navigation.author.spec.ts",
+      "violationType": "HIGH",
+      "category": "action-utils",
+      "lineNumbers": [144, 163, 185, 190, 216, 224, 240, 265, 408, 537],
+      "currentCode": "await trigger.locator(':scope > .cmp-navigation__item-link').click();\nawait page.waitForTimeout(300);",
+      "issue": "Uses raw page.click() instead of clickElement() from action-utils. Missing error handling, retry logic, and detached element handling.",
+      "fix": "import { clickElement } from '../../../src/utils/action-utils';\n\n// Instead of:\nawait trigger.locator(':scope > .cmp-navigation__item-link').click();\n\n// Use:\nawait clickElement(trigger.locator(':scope > .cmp-navigation__item-link'));",
+      "impact": "No automatic retry on detached elements; brittle to race conditions"
+    },
+    {
+      "id": "V-011",
+      "fileName": "accordion.author.spec.ts",
+      "filePath": "tests/specFiles/ga/accordion/accordion.author.spec.ts",
+      "violationType": "MEDIUM",
+      "category": "timeout",
+      "lineNumbers": [145, 164, 167, 195, 209, 217, 225, 254, 284, 426, 474],
+      "currentCode": "await page.waitForTimeout(300);\nawait page.waitForTimeout(500);\nawait page.waitForTimeout(200);",
+      "issue": "Hardcoded waitForTimeout() calls scattered throughout. Should centralize timeout constants or use more robust wait strategies.",
+      "fix": "// At top of file:\nimport { STANDARD } from '../../../src/utils/timeout-constants';\n\n// Or define locally:\nconst EXPAND_ANIMATION_TIME = 300; // ms\nconst COLLAPSE_ANIMATION_TIME = 300;\n\n// Then:\nawait page.waitForTimeout(EXPAND_ANIMATION_TIME);",
+      "impact": "Magic numbers; hard to maintain; brittle if animation timings change"
+    },
+    {
+      "id": "V-012",
+      "fileName": "button.visual.spec.ts",
+      "filePath": "tests/specFiles/ga/button/button.visual.spec.ts",
+      "violationType": "MEDIUM",
+      "category": "pom-usage",
+      "lineNumbers": [18, 30, 31, 47, 65, 86],
+      "currentCode": "function primaryBtn(page: import('@playwright/test').Page) {\n  return page\n    .locator('.cmp-section--background-color-white')\n    .first()\n    .locator('.ga-button--primary:not(.ga-button--disabled) .cmp-button')\n    .first();\n}",
+      "issue": "Defines helper function with CSS selectors instead of using ButtonPage POM methods. Duplicates logic; reduces reusability across specs.",
+      "fix": "// In ButtonPage class, add:\npublic async getPrimaryButton(): Promise<Locator> {\n  return this.page\n    .locator('.cmp-section--background-color-white')\n    .first()\n    .locator('.ga-button--primary:not(.ga-button--disabled) .cmp-button')\n    .first();\n}\n\n// In spec:\nconst pom = new ButtonPage(page);\nawait pom.navigate(BASE());\nconst el = await pom.getPrimaryButton();",
+      "impact": "Selector logic duplicated; harder to maintain; POM pattern not fully leveraged"
+    }
+  ],
+  "roadmap": [
+    {
+      "priority": "CRITICAL",
+      "category": "Import Statements",
+      "affectedCount": 2,
+      "effort": "1h",
+      "description": "Replace @playwright/test imports with persistent-context in feature-banner.author.spec.ts and form-field-text.author.spec.ts",
+      "files": [
+        "feature-banner.author.spec.ts",
+        "form-field-text.author.spec.ts"
+      ],
+      "dryRunEstimate": "10 min — 2 files × 1 import change each"
+    },
+    {
+      "priority": "CRITICAL",
+      "category": "URL Resolution",
+      "affectedCount": 2,
+      "effort": "4h",
+      "description": "Replace hardcoded URLs with resolveComponentUrl() in feature-banner and form-field-text specs. Feature-banner: 10 URLs; form-field-text: 34 URLs.",
+      "files": [
+        "feature-banner.author.spec.ts",
+        "form-field-text.author.spec.ts"
+      ],
+      "dryRunEstimate": "2h per file — feature-banner 10 replacements; form-field-text 34 replacements"
+    },
+    {
+      "priority": "CRITICAL",
+      "category": "Console Capture Attachment",
+      "affectedCount": 2,
+      "effort": "2h",
+      "description": "Add attachConsoleCapture(testInfo, capture) calls in navigation.author.spec.ts and accordion.author.spec.ts to ensure console diagnostics reach the report.",
+      "files": [
+        "navigation.author.spec.ts",
+        "accordion.author.spec.ts"
+      ],
+      "dryRunEstimate": "30 min per file — 2 test methods per file that use ConsoleCapture"
+    },
+    {
+      "priority": "HIGH",
+      "category": "Action Utils Reuse",
+      "affectedCount": 1,
+      "effort": "3h",
+      "description": "Replace raw page.click() calls with clickElement() from action-utils in navigation.author.spec.ts (10 instances). Adds retry logic and detached element handling.",
+      "files": [
+        "navigation.author.spec.ts"
+      ],
+      "dryRunEstimate": "1.5h — ~10 click() calls to replace with clickElement() wrapper"
+    },
+    {
+      "priority": "HIGH",
+      "category": "Assert Utils Reuse",
+      "affectedCount": 1,
+      "effort": "3h",
+      "description": "Replace raw expect() assertions with assert-utils functions (isVisible, expectElementToHaveText, etc.) in statistic.author.spec.ts. Enables soft assertions and consistent error handling.",
+      "files": [
+        "statistic.author.spec.ts"
+      ],
+      "dryRunEstimate": "2h — ~20 expect() calls to wrap with assert-utils equivalents"
+    },
+    {
+      "priority": "HIGH",
+      "category": "Login Placement",
+      "affectedCount": 1,
+      "effort": "1h",
+      "description": "Add explicit loginToAEMAuthor() call in test body (not just beforeEach) in footer.author.spec.ts before POM navigation calls.",
+      "files": [
+        "footer.author.spec.ts"
+      ],
+      "dryRunEstimate": "20 min — add 1 line per test that calls pom.navigate()"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Timeout Constants",
+      "affectedCount": 1,
+      "effort": "2h",
+      "description": "Replace hardcoded waitForTimeout values in accordion.author.spec.ts (11 instances) with named constants. Centralizes magic numbers.",
+      "files": [
+        "accordion.author.spec.ts"
+      ],
+      "dryRunEstimate": "1h — define 3-4 timeout constants and replace 11 uses"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "POM Pattern Completeness",
+      "affectedCount": 1,
+      "effort": "2h",
+      "description": "Move inline selector functions (e.g., primaryBtn in button.visual.spec.ts) into ButtonPage POM methods. Centralizes selector logic.",
+      "files": [
+        "button.visual.spec.ts"
+      ],
+      "dryRunEstimate": "1.5h — extract 1 helper function to POM, update 6 call sites"
+    }
+  ],
+  "sampleFixes": [
+    {
+      "fileName": "feature-banner.author.spec.ts",
+      "filePath": "tests/specFiles/ga/feature-banner/feature-banner.author.spec.ts",
+      "violation": "V-001 (Import) + V-003 (URL Resolution)",
+      "before": "import { test, expect } from '@playwright/test';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\n\ntest.beforeEach(async ({ page }) => {\n  await loginToAEMAuthor(page);\n});\n\ntest.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {\n  // ============ Banner Rendering ============\n  test('[FB-001] @regression Verify feature banner renders', async ({ page }) => {\n    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);\n\n    const banner = page.locator('[class*=\"feature-banner\"], [class*=\"banner\"]').first();\n    if (await banner.count() > 0) {\n      expect(await banner.isVisible()).toBe(true);\n    }\n  });\n\n  test('[FB-002] @regression Verify banner has background image or color', async ({ page }) => {\n    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);\n    // ...\n  });",
+      "after": "import { test, expect } from '../../../utils/infra/persistent-context';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\nimport { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\n\ntest.beforeEach(async ({ page }) => {\n  await loginToAEMAuthor(page);\n});\n\ntest.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {\n  // ============ Banner Rendering ============\n  test('[FB-001] @regression Verify feature banner renders', async ({ page }) => {\n    const url = resolveComponentUrl('feature-banner');\n    await page.goto(url);\n\n    const banner = page.locator('[class*=\"feature-banner\"], [class*=\"banner\"]').first();\n    if (await banner.count() > 0) {\n      expect(await banner.isVisible()).toBe(true);\n    }\n  });\n\n  test('[FB-002] @regression Verify banner has background image or color', async ({ page }) => {\n    const url = resolveComponentUrl('feature-banner');\n    await page.goto(url);\n    // ...\n  });",
+      "explanation": "Fixes 2 critical violations: (1) Changes import from @playwright/test to persistent-context to enable auth context fixture reuse; (2) Replaces hardcoded style guide URLs with resolveComponentUrl(), making the spec environment-agnostic and maintainable."
+    },
+    {
+      "fileName": "navigation.author.spec.ts",
+      "filePath": "tests/specFiles/ga/navigation/navigation.author.spec.ts",
+      "violation": "V-005 (Console Capture not attached) + V-010 (raw page.click)",
+      "before": "test('[NVGT-029] @regression Navigation produces no JS errors', async ({ page }) => {\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new NavigationPage(page);\n  await pom.navigate(BASE());\n  await page.waitForTimeout(1000);\n  const errors = capture.getErrors().filter(e =>\n    !e.message?.includes('getElementsByTagName')\n  );\n  capture.stop();\n  expect(errors).toEqual([]);\n});\n\ntest('[NVGT-030] @regression Navigation mobile accordion produces no JS errors', async ({ page }) => {\n  await page.setViewportSize(MOBILE);\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new NavigationPage(page);\n  await pom.navigate(BASE());\n  // Interact with accordion — click direct child links of level-0 items\n  const groupedNav = page.locator(SEL.root).filter({ has: page.locator(SEL.itemLevel1) }).first();\n  const level0Items = groupedNav.locator(SEL.itemLevel0);\n  const count = await level0Items.count();\n  for (let i = 0; i < Math.min(count, 3); i++) {\n    await level0Items.nth(i).locator(':scope > .cmp-navigation__item-link').click();\n    await page.waitForTimeout(300);\n  }\n  const errors = capture.getErrors().filter(e =>\n    !e.message?.includes('getElementsByTagName')\n  );\n  capture.stop();\n  expect(errors).toEqual([]);\n});",
+      "after": "import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';\nimport { clickElement } from '../../../src/utils/action-utils';\n\ntest('[NVGT-029] @regression Navigation produces no JS errors', async ({ page, testInfo }) => {\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new NavigationPage(page);\n  await pom.navigate(BASE());\n  await page.waitForTimeout(1000);\n  const errors = capture.getErrors().filter(e =>\n    !e.message?.includes('getElementsByTagName')\n  );\n  capture.stop();\n  await attachConsoleCapture(testInfo, capture);\n  expect(errors).toEqual([]);\n});\n\ntest('[NVGT-030] @regression Navigation mobile accordion produces no JS errors', async ({ page, testInfo }) => {\n  await page.setViewportSize(MOBILE);\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new NavigationPage(page);\n  await pom.navigate(BASE());\n  // Interact with accordion — click direct child links of level-0 items\n  const groupedNav = page.locator(SEL.root).filter({ has: page.locator(SEL.itemLevel1) }).first();\n  const level0Items = groupedNav.locator(SEL.itemLevel0);\n  const count = await level0Items.count();\n  for (let i = 0; i < Math.min(count, 3); i++) {\n    await clickElement(level0Items.nth(i).locator(':scope > .cmp-navigation__item-link'));\n    await page.waitForTimeout(300);\n  }\n  const errors = capture.getErrors().filter(e =>\n    !e.message?.includes('getElementsByTagName')\n  );\n  capture.stop();\n  await attachConsoleCapture(testInfo, capture);\n  expect(errors).toEqual([]);\n});",
+      "explanation": "Fixes 2 high-severity violations: (1) Adds await attachConsoleCapture(testInfo, capture) to ensure console errors are attached to the Playwright report for analysis; (2) Replaces raw .click() calls with clickElement() which provides automatic retry on detached elements, error handling, and page-closed checks."
+    },
+    {
+      "fileName": "accordion.author.spec.ts",
+      "filePath": "tests/specFiles/ga/accordion/accordion.author.spec.ts",
+      "violation": "V-006 (Console Capture not attached) + V-011 (hardcoded timeouts)",
+      "before": "const ACCORDION = '.cmp-accordion';\nconst ITEM = '.cmp-accordion__item';\nconst ITEM_BUTTON = '.cmp-accordion__item-button';\nconst ITEM_CONTENT = '.cmp-accordion__item-content';\n\ntest('[ACRD-045] @regression Accordion produces no unexpected JS errors on interaction', async ({ page }) => {\n  const KNOWN_ERRORS = [\"Cannot read properties of null (reading 'getAttribute')\"];\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new AccordionPage(page);\n  await pom.navigate(BASE());\n  await page.waitForTimeout(1000);\n  capture.clear();\n  const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();\n  await firstButton.click();\n  await page.waitForTimeout(500);\n  await firstButton.click();\n  await page.waitForTimeout(500);\n  const errors = capture.getErrors();\n  capture.stop();\n  const unexpected = errors.filter(e => !KNOWN_ERRORS.some(known => e.message.includes(known)));\n  expect(unexpected).toEqual([]);\n});",
+      "after": "import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';\nimport { STANDARD, SMALL } from '../../../src/utils/timeout-constants';\n\nconst ACCORDION = '.cmp-accordion';\nconst ITEM = '.cmp-accordion__item';\nconst ITEM_BUTTON = '.cmp-accordion__item-button';\nconst ITEM_CONTENT = '.cmp-accordion__item-content';\n\n// Animation timing constants (ms)\nconst EXPAND_ANIMATION = 300;\nconst NAVIGATION_SETTLE = 1000;\n\ntest('[ACRD-045] @regression Accordion produces no unexpected JS errors on interaction', async ({ page, testInfo }) => {\n  const KNOWN_ERRORS = [\"Cannot read properties of null (reading 'getAttribute')\"];\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new AccordionPage(page);\n  await pom.navigate(BASE());\n  await page.waitForTimeout(NAVIGATION_SETTLE);\n  capture.clear();\n  const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();\n  await firstButton.click();\n  await page.waitForTimeout(EXPAND_ANIMATION);\n  await firstButton.click();\n  await page.waitForTimeout(EXPAND_ANIMATION);\n  const errors = capture.getErrors();\n  capture.stop();\n  await attachConsoleCapture(testInfo, capture);\n  const unexpected = errors.filter(e => !KNOWN_ERRORS.some(known => e.message.includes(known)));\n  expect(unexpected).toEqual([]);\n});",
+      "explanation": "Fixes 2 violations: (1) Adds await attachConsoleCapture(testInfo, capture) so console diagnostics reach the report; (2) Replaces magic numbers (300, 500, 1000) with named constants (EXPAND_ANIMATION, NAVIGATION_SETTLE) for maintainability and clarity."
+    },
+    {
+      "fileName": "statistic.author.spec.ts",
+      "filePath": "tests/specFiles/ga/statistic/statistic.author.spec.ts",
+      "violation": "V-008 (Assert utils not reused)",
+      "before": "import { test, expect } from '@playwright/test';\nimport { StatisticPage } from '../../../pages/ga/components/statisticPage';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\n\ntest('[STTS-001] @smoke @regression Statistic renders correctly', async ({ page }) => {\n  const pom = new StatisticPage(page);\n  await pom.navigate(BASE());\n  const root = page.locator('.cmp-statistic').first();\n  await expect(root).toBeVisible();\n  const heading = root.locator('h1, h2, h3').first();\n  const hasHeading = await heading.count() > 0;\n  if (hasHeading) {\n    await expect(heading).toBeVisible();\n  }\n  const errors: string[] = [];\n  page.on('pageerror', e => errors.push(e.message));\n  expect(errors).toEqual([]);\n});\n\ntest('[STTS-020] @regression @smoke Style guide has multiple statistic instances', async ({ page }) => {\n  const pom = new StatisticPage(page);\n  await pom.navigate(BASE());\n  const roots = page.locator('.cmp-statistic');\n  expect(await roots.count()).toBeGreaterThanOrEqual(4);\n});",
+      "after": "import { test, expect } from '@playwright/test';\nimport { StatisticPage } from '../../../pages/ga/components/statisticPage';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\nimport { isVisible, expectElementToHaveCount } from '../../../src/utils/assert-utils';\n\ntest('[STTS-001] @smoke @regression Statistic renders correctly', async ({ page }) => {\n  const pom = new StatisticPage(page);\n  await pom.navigate(BASE());\n  const root = page.locator('.cmp-statistic').first();\n  await isVisible(root);\n  const heading = root.locator('h1, h2, h3').first();\n  const hasHeading = await heading.count() > 0;\n  if (hasHeading) {\n    await isVisible(heading);\n  }\n  const errors: string[] = [];\n  page.on('pageerror', e => errors.push(e.message));\n  expect(errors).toEqual([]);\n});\n\ntest('[STTS-020] @regression @smoke Style guide has multiple statistic instances', async ({ page }) => {\n  const pom = new StatisticPage(page);\n  await pom.navigate(BASE());\n  const roots = page.locator('.cmp-statistic');\n  await expectElementToHaveCount(roots, 4, { soft: false }); // or just: expect(await roots.count()).toBeGreaterThanOrEqual(4);\n});",
+      "explanation": "Replaces raw expect() assertions with assert-utils equivalents (isVisible, expectElementToHaveCount). This enables soft assertions, consistent error handling, and leverages the framework's wrapper functions for maintainability."
+    },
+    {
+      "fileName": "form-field-text.author.spec.ts",
+      "filePath": "tests/specFiles/ga/form-field-text/form-field-text.author.spec.ts",
+      "violation": "V-002 + V-004 (Import + URL Resolution - partial fix)",
+      "before": "import { test, expect } from '@playwright/test';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\n\ntest.beforeEach(async ({ page }) => {\n  await loginToAEMAuthor(page);\n});\n\ntest.describe('Form Field Text Component (GAAM-504)', () => {\n  // ============ Input Field Rendering ============\n  test('[GAAM-504-001] @regression Verify text input renders', async ({ page }) => {\n    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-text.html?wcmmode=disabled`);\n    const input = page.locator('input[type=\"text\"], [class*=\"text-input\"], [class*=\"form-text\"]').first();\n    if (await input.count() > 0) {\n      expect(await input.isVisible()).toBe(true);\n    }\n  });\n\n  test('[GAAM-504-002] @regression Verify textarea renders', async ({ page }) => {\n    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-text.html?wcmmode=disabled`);\n    const textarea = page.locator('textarea, [class*=\"textarea\"]').first();\n    if (await textarea.count() > 0) {\n      expect(await textarea.isVisible()).toBe(true);\n    }\n  });",
+      "after": "import { test, expect } from '../../../utils/infra/persistent-context';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\nimport { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\n\nlet formFieldTextUrl: string;\n\ntest.beforeAll(async () => {\n  formFieldTextUrl = resolveComponentUrl('form-field-text');\n});\n\ntest.beforeEach(async ({ page }) => {\n  await loginToAEMAuthor(page);\n});\n\ntest.describe('Form Field Text Component (GAAM-504)', () => {\n  // ============ Input Field Rendering ============\n  test('[GAAM-504-001] @regression Verify text input renders', async ({ page }) => {\n    await page.goto(formFieldTextUrl);\n    const input = page.locator('input[type=\"text\"], [class*=\"text-input\"], [class*=\"form-text\"]').first();\n    if (await input.count() > 0) {\n      expect(await input.isVisible()).toBe(true);\n    }\n  });\n\n  test('[GAAM-504-002] @regression Verify textarea renders', async ({ page }) => {\n    await page.goto(formFieldTextUrl);\n    const textarea = page.locator('textarea, [class*=\"textarea\"]').first();\n    if (await textarea.count() > 0) {\n      expect(await textarea.isVisible()).toBe(true);\n    }\n  });",
+      "explanation": "Fixes critical violations: (1) Changes import to persistent-context; (2) Centralizes URL resolution in test.beforeAll() and reuses formFieldTextUrl variable across all 34 tests, eliminating hardcoded URLs and massive DRY violation. Apply pattern to remaining 32 tests in the file."
+    }
+  ],
+  "summary": {
+    "totalViolations": 12,
+    "criticalCount": 6,
+    "highCount": 4,
+    "mediumCount": 2,
+    "estimatedFixTime": "19h total",
+    "estimatedFixTimeBreakdown": {
+      "imports": "1h (2 files)",
+      "urlResolution": "4h (2 files with 44 total hardcoded URLs)",
+      "consoleCapture": "2h (2 files)",
+      "actionUtils": "3h (1 file with ~10 click() calls)",
+      "assertUtils": "3h (1 file with ~20 expect() calls)",
+      "loginPlacement": "1h (1 file)",
+      "timeoutConstants": "2h (1 file with 11 hardcoded waits)",
+      "pomRefactoring": "2h (1 file)"
+    },
+    "keyFindings": [
+      "Critical: 2 specs import @playwright/test instead of persistent-context — breaks auth context reuse",
+      "Critical: 44 hardcoded style guide URLs across 2 specs — massive DRY violation and environment fragility",
+      "Critical: 2 specs capture console errors but never attach to report — diagnostic data is lost",
+      "High: 1 spec uses ~10 raw page.click() calls instead of clickElement() wrapper — missing error handling and retry logic",
+      "High: 1 spec uses ~20 raw expect() instead of assert-utils — cannot leverage soft assertions or framework error handling",
+      "High: 1 spec has login in beforeEach but tests call POM methods before implicit login completion — potential 401 errors",
+      "Medium: 1 spec has 11 hardcoded timeout values — magic numbers reduce maintainability",
+      "Medium: 1 spec defines helper selector function instead of adding to POM — duplicates logic, reduces reusability",
+      "Estimated fix time: 19 hours to address all violations in sampled files",
+      "Full repo fix (171 files) likely 2-3x effort: ~40-60 hours for comprehensive refactoring"
+    ],
+    "recommendedApproach": [
+      "Phase 1 (4h): Fix critical imports and URL resolution — 2 files, highest impact",
+      "Phase 2 (4h): Fix critical console capture attachment — 2 files, enables better reporting",
+      "Phase 3 (6h): Replace action/assert utils in high-priority files — foundation for other refactors",
+      "Phase 4 (2h): Fix login placement and timeout constants — medium-priority improvements",
+      "Phase 5 (3h): Generalize fixes and apply to remaining 159 files — batch processing approach"
+    ]
+  }
+}

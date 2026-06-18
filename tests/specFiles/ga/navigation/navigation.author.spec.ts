@@ -6,6 +6,8 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 
+let capture: ConsoleCapture;
+
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 // Mobile viewport (matches @ga-bp-mobile-max: 768px)
@@ -30,6 +32,15 @@ const SEL = {
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
 // ─── Mobile Single List ───────────────────────────────────────────────────────

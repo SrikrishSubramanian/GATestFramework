@@ -1,0 +1,253 @@
+{
+  "auditDate": "2026-06-19",
+  "totalFilesAudited": 12,
+  "violations": [
+    {
+      "fileName": "feature-banner.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\feature-banner\\feature-banner.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "import",
+      "lineNumbers": [1],
+      "currentCode": "import { test, expect } from '@playwright/test';",
+      "issue": "File imports @playwright/test directly instead of persistent-context. This bypasses auth handling and loses login state sharing across tests.",
+      "fix": "import { test, expect } from '../../../utils/infra/persistent-context';"
+    },
+    {
+      "fileName": "feature-banner.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\feature-banner\\feature-banner.author.spec.ts",
+      "violationType": "HIGH",
+      "category": "url-resolution",
+      "lineNumbers": [14, 23, 38, 48, 58, 69, 80, 90, 100, 110],
+      "currentCode": "await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);",
+      "issue": "Hardcoded URLs appear in 10+ tests instead of using resolveComponentUrl('feature-banner'). This is fragile to style-guide URL changes.",
+      "fix": "Use resolveComponentUrl('feature-banner') from content-fixture-deployer in POM.navigate() or create a BASE_URL constant in the spec file that calls resolveComponentUrl()."
+    },
+    {
+      "fileName": "form-field-text.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\form-field-text\\form-field-text.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "import",
+      "lineNumbers": [1],
+      "currentCode": "import { test, expect } from '@playwright/test';",
+      "issue": "File imports @playwright/test directly instead of persistent-context. This bypasses auth handling and loses login state sharing across tests.",
+      "fix": "import { test, expect } from '../../../utils/infra/persistent-context';"
+    },
+    {
+      "fileName": "form-field-text.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\form-field-text\\form-field-text.author.spec.ts",
+      "violationType": "HIGH",
+      "category": "url-resolution",
+      "lineNumbers": [14, 23, 32, 45, 59, 70, 81, 106, 116, 127, 138, 158, 174, 193, 202, 211, 221, 231, 242, 253, 264, 279, 290, 301, 312, 323, 335, 347, 359, 372, 382],
+      "currentCode": "await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-text.html?wcmmode=disabled`);",
+      "issue": "Hardcoded URLs appear in 31+ tests instead of using resolveComponentUrl('form-field-text'). High maintenance burden.",
+      "fix": "Create a POM class with navigate() using resolveComponentUrl() or add URL resolution helper in beforeEach or top-level test setup."
+    },
+    {
+      "fileName": "footer.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\footer\\footer.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "login",
+      "lineNumbers": [18, 31],
+      "currentCode": "const root = await pom.getRoot();\nawait expect(root).toBeVisible();",
+      "issue": "POM methods getRoot() and getFooterTop() are called before loginToAEMAuthor() guarantees completion in beforeEach (line 10). The test calls page.goto() in pom.navigate() which may race with auth cookies not yet available.",
+      "fix": "Ensure loginToAEMAuthor() awaits fully in beforeEach and verify auth state is set before any page.goto(). Consider adding explicit auth check in POM.navigate()."
+    },
+    {
+      "fileName": "navigation.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\navigation\\navigation.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "console-capture",
+      "lineNumbers": [510, 524],
+      "currentCode": "const capture = new ConsoleCapture(page);\ncapture.start();\nconst pom = new NavigationPage(page);\nawait pom.navigate(BASE());\nawait page.waitForTimeout(1000);\nconst errors = capture.getErrors().filter(...);\ncapture.stop();\nexpect(errors).toEqual([]);",
+      "issue": "ConsoleCapture is created and used but the errors array is never attached to the test report via attachConsoleCapture(). Console errors are captured but not visible in CI/test logs.",
+      "fix": "Add: attachConsoleCapture(errors) before expect() or within the test result annotation step."
+    },
+    {
+      "fileName": "accordion.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\accordion\\accordion.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "console-capture",
+      "lineNumbers": [665, 676],
+      "currentCode": "const capture = new ConsoleCapture(page);\ncapture.start();\nconst pom = new AccordionPage(page);\nawait pom.navigate(BASE());\n...\nconst errors = capture.getErrors();\ncapture.stop();\nconst unexpected = errors.filter(e => !KNOWN_ERRORS.some(known => e.message.includes(known)));\nexpect(unexpected).toEqual([]);",
+      "issue": "ConsoleCapture is captured but never attached to the test report. Filtered errors are asserted but not visible in CI/logs.",
+      "fix": "Add: attachConsoleCapture(unexpected) before or alongside expect() to make console output visible in the test report."
+    },
+    {
+      "fileName": "navigation.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\navigation\\navigation.author.spec.ts",
+      "violationType": "HIGH",
+      "category": "action-utils",
+      "lineNumbers": [144, 163, 216, 224, 240, 265, 408, 415],
+      "currentCode": "await trigger.locator(':scope > .cmp-navigation__item-link').click();",
+      "issue": "Raw page.click() / locator.click() used instead of wrapper from action-utils. No retry logic or error context for flaky clicks on mobile.",
+      "fix": "Import and use clickElement() from src/utils/action-utils for consistent click handling and retry logic."
+    },
+    {
+      "fileName": "statistic.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\statistic\\statistic.author.spec.ts",
+      "violationType": "HIGH",
+      "category": "assert-utils",
+      "lineNumbers": [62, 78, 86, 97, 108, 120, 130, 146, 157, 173],
+      "currentCode": "expect(await roots.count()).toBeGreaterThanOrEqual(4);",
+      "issue": "Raw expect() assertions used instead of assert-utils patterns. No custom error messages or assertion context for failed assertions.",
+      "fix": "Import and use assertion helpers from src/utils/assert-utils for better error reporting and consistency."
+    },
+    {
+      "fileName": "accordion.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\accordion\\accordion.author.spec.ts",
+      "violationType": "MEDIUM",
+      "category": "timeout",
+      "lineNumbers": [256, 265, 300, 316, 333, 427, 460, 462, 474, 537, 674],
+      "currentCode": "await page.waitForTimeout(300);\nawait page.waitForTimeout(500);",
+      "issue": "page.waitForTimeout() called 11+ times with hardcoded durations (200ms, 300ms, 500ms, 1000ms). Inconsistent pattern for waiting on animations/transitions.",
+      "fix": "Create a constant (TRANSITION_DELAY = 500) and use page.waitForLoadState() or locator-based waits instead: await locator.waitFor({ state: 'visible' })."
+    },
+    {
+      "fileName": "tabs.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\tabs\\tabs.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "login",
+      "lineNumbers": [21, 31, 38],
+      "currentCode": "test.beforeEach(async ({ page }) => {\n  await loginToAEMAuthor(page);\n});",
+      "issue": "loginToAEMAuthor() in beforeEach does not prevent early page.goto() calls if pom.navigate() is called synchronously. No guarantee auth is complete.",
+      "fix": "Ensure POM.navigate() checks and waits for auth state to be available before calling page.goto()."
+    },
+    {
+      "fileName": "teaser-card.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\teaser-card\\teaser-card.author.spec.ts",
+      "violationType": "CRITICAL",
+      "category": "login",
+      "lineNumbers": [51, 62],
+      "currentCode": "test.beforeEach(async ({ page }) => {\n  await loginToAEMAuthor(page);\n});",
+      "issue": "loginToAEMAuthor() in beforeEach does not prevent early page.goto() calls if pom.navigate() is called synchronously. No guarantee auth is complete.",
+      "fix": "Ensure POM.navigate() checks and waits for auth state to be available before calling page.goto()."
+    }
+  ],
+  "roadmap": [
+    {
+      "priority": "CRITICAL",
+      "category": "import",
+      "affectedCount": 2,
+      "effort": "1h",
+      "description": "Migrate feature-banner.author.spec.ts and form-field-text.author.spec.ts from @playwright/test to persistent-context",
+      "files": [
+        "feature-banner.author.spec.ts",
+        "form-field-text.author.spec.ts"
+      ]
+    },
+    {
+      "priority": "CRITICAL",
+      "category": "console-capture",
+      "affectedCount": 2,
+      "effort": "1h",
+      "description": "Add attachConsoleCapture() calls to navigation.author.spec.ts and accordion.author.spec.ts to attach captured errors to test reports",
+      "files": [
+        "navigation.author.spec.ts",
+        "accordion.author.spec.ts"
+      ]
+    },
+    {
+      "priority": "CRITICAL",
+      "category": "login",
+      "affectedCount": 3,
+      "effort": "2h",
+      "description": "Fix auth race conditions in footer.author.spec.ts, tabs.author.spec.ts, and teaser-card.author.spec.ts by ensuring POM.navigate() waits for auth state",
+      "files": [
+        "footer.author.spec.ts",
+        "tabs.author.spec.ts",
+        "teaser-card.author.spec.ts"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "url-resolution",
+      "affectedCount": 2,
+      "effort": "2h",
+      "description": "Replace 41+ hardcoded component URLs in feature-banner.author.spec.ts (10) and form-field-text.author.spec.ts (31) with resolveComponentUrl()",
+      "files": [
+        "feature-banner.author.spec.ts",
+        "form-field-text.author.spec.ts"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "action-utils",
+      "affectedCount": 1,
+      "effort": "1h",
+      "description": "Replace raw click() calls in navigation.author.spec.ts (8 instances) with clickElement() from action-utils",
+      "files": [
+        "navigation.author.spec.ts"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "assert-utils",
+      "affectedCount": 1,
+      "effort": "1h",
+      "description": "Replace raw expect() assertions in statistic.author.spec.ts (10+ instances) with assert-utils patterns",
+      "files": [
+        "statistic.author.spec.ts"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "timeout",
+      "affectedCount": 1,
+      "effort": "1h",
+      "description": "Replace 11+ page.waitForTimeout() calls in accordion.author.spec.ts with constants and locator-based waits",
+      "files": [
+        "accordion.author.spec.ts"
+      ]
+    }
+  ],
+  "sampleFixes": [
+    {
+      "fileName": "feature-banner.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\feature-banner\\feature-banner.author.spec.ts",
+      "violation": "CRITICAL: Imports @playwright/test instead of persistent-context",
+      "before": "import { test, expect } from '@playwright/test';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\n\ntest.beforeEach(async ({ page }) => {\n  await loginToAEMAuthor(page);\n});",
+      "after": "import { test, expect } from '../../../utils/infra/persistent-context';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\n\ntest.beforeEach(async ({ page }) => {\n  await loginToAEMAuthor(page);\n});",
+      "explanation": "persistent-context provides shared auth state across tests, ensuring login happens once per worker and cookies are reused. @playwright/test creates isolated contexts with no auth sharing."
+    },
+    {
+      "fileName": "navigation.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\navigation\\navigation.author.spec.ts",
+      "violation": "CRITICAL: ConsoleCapture is captured but never attached to test report (lines 511-545)",
+      "before": "test('[NVGT-029] @regression Navigation produces no JS errors', async ({ page }) => {\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new NavigationPage(page);\n  await pom.navigate(BASE());\n  await page.waitForTimeout(1000);\n  const errors = capture.getErrors().filter(e =>\n    !e.message?.includes('getElementsByTagName')\n  );\n  capture.stop();\n  expect(errors).toEqual([]);\n});",
+      "after": "test('[NVGT-029] @regression Navigation produces no JS errors', async ({ page }) => {\n  const capture = new ConsoleCapture(page);\n  capture.start();\n  const pom = new NavigationPage(page);\n  await pom.navigate(BASE());\n  await page.waitForTimeout(1000);\n  const errors = capture.getErrors().filter(e =>\n    !e.message?.includes('getElementsByTagName')\n  );\n  capture.stop();\n  attachConsoleCapture(errors);\n  expect(errors).toEqual([]);\n});",
+      "explanation": "attachConsoleCapture(errors) makes the console output visible in the test report and CI logs. Without it, errors are captured silently and not visible to developers debugging test failures."
+    },
+    {
+      "fileName": "accordion.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\accordion\\accordion.author.spec.ts",
+      "violation": "MEDIUM: page.waitForTimeout() hardcoded across 11+ lines instead of using constants",
+      "before": "await firstButton.click();\nawait expect(firstButton).toHaveAttribute('aria-expanded', 'true');\nawait page.waitForTimeout(500);\n\nconst vertLine = firstButton.locator(ICON_LINE_V);\nconst opacity = await vertLine.evaluate(el => getComputedStyle(el).opacity);\nexpect(Number(opacity)).toBeLessThanOrEqual(0.01);\n\ntest('[ACRD-020] @regression @interaction Collapsed item icon shows plus shape', async ({ page }) => {\n  const pom = new AccordionPage(page);\n  await pom.navigate(BASE());\n  const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();\n\n  await expect(firstButton).toHaveAttribute('aria-expanded', 'false');\n  await page.waitForTimeout(300);",
+      "after": "const TRANSITION_DELAY = 500; // CSS animation duration for accordion icon\nconst COLLAPSE_DELAY = 300;  // CSS animation duration for collapse\n\nawait firstButton.click();\nawait expect(firstButton).toHaveAttribute('aria-expanded', 'true');\nawait page.waitForTimeout(TRANSITION_DELAY);\n\nconst vertLine = firstButton.locator(ICON_LINE_V);\nconst opacity = await vertLine.evaluate(el => getComputedStyle(el).opacity);\nexpect(Number(opacity)).toBeLessThanOrEqual(0.01);\n\ntest('[ACRD-020] @regression @interaction Collapsed item icon shows plus shape', async ({ page }) => {\n  const pom = new AccordionPage(page);\n  await pom.navigate(BASE());\n  const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();\n\n  await expect(firstButton).toHaveAttribute('aria-expanded', 'false');\n  await page.waitForTimeout(COLLAPSE_DELAY);",
+      "explanation": "Named constants make timeout durations discoverable and editable in one place. If CSS transitions change, developers can update TRANSITION_DELAY once instead of hunting through 11+ lines. Also documents why each delay exists."
+    },
+    {
+      "fileName": "form-field-text.author.spec.ts",
+      "filePath": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\tests\\specFiles\\ga\\form-field-text\\form-field-text.author.spec.ts",
+      "violation": "HIGH: Hardcoded URLs in 31+ tests instead of using resolveComponentUrl()",
+      "before": "import { test, expect } from '@playwright/test';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\n\ntest('[GAAM-504-001] @regression Verify text input renders', async ({ page }) => {\n  await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-text.html?wcmmode=disabled`);",
+      "after": "import { test, expect } from '../../../utils/infra/persistent-context';\nimport ENV from '../../../utils/infra/env';\nimport { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';\nimport { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';\n\nconst BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';\nconst COMPONENT_URL = () => resolveComponentUrl('form-field-text');\n\ntest('[GAAM-504-001] @regression Verify text input renders', async ({ page }) => {\n  await page.goto(COMPONENT_URL());",
+      "explanation": "resolveComponentUrl() handles style-guide URL resolution dynamically. If the style-guide structure changes, tests still work. Hardcoded URLs break when the style-guide is reorganized (common during component development)."
+    }
+  ],
+  "summary": {
+    "totalViolations": 12,
+    "criticalCount": 6,
+    "highCount": 4,
+    "mediumCount": 1,
+    "lowCount": 0,
+    "estimatedFixTime": "9h total",
+    "keyFindings": [
+      "6 CRITICAL violations block proper test execution: 2 files using wrong import (auth lost), 2 files with unattached console capture (errors invisible), 3 files with auth race conditions (flaky tests)",
+      "41+ hardcoded component URLs in 2 files reduce maintainability; style-guide reorganization will break 31 tests in form-field-text.author.spec.ts alone",
+      "11+ page.waitForTimeout() calls in accordion.author.spec.ts lack documentation; hardcoded durations become stale when CSS transitions change",
+      "8 raw click() calls in navigation.author.spec.ts bypass retry logic; flaky mobile clicks will fail without action-utils wrapper",
+      "10+ raw expect() assertions in statistic.author.spec.ts lack custom error context; test failures are hard to debug without assertion-utils patterns",
+      "Consistent issue across footer, tabs, teaser-card: loginToAEMAuthor() in beforeEach does not prevent early page.goto() in POM; auth state is not guaranteed before navigation"
+    ]
+  }
+}
