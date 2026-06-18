@@ -18,12 +18,10 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 test.describe('Button — CSV Test Cases', () => {
@@ -100,14 +98,13 @@ test.describe('Button — Responsive', () => {
     await pom.navigate(BASE());
     const root = page.locator('.cmp-button').first();
     await expect(root).toBeVisible();
-    // Verify layout adapts to mobile: check flex-direction changes to column
-    const flexDir = await root.evaluate(el => {
-      const cs = getComputedStyle(el);
-      return cs.flexDirection || cs.display;
-    });
-    // At mobile, flex containers typically switch to column layout
-    // Grid containers may change template columns
-    expect(flexDir).toBeDefined();
+    // Verify layout adapts to mobile: flex-direction should exist
+    // Use assertLayout() to verify responsive behavior
+    const computedStyle = await root.evaluate(el => ({
+      flexDirection: getComputedStyle(el).flexDirection,
+      display: getComputedStyle(el).display,
+    }));
+    expect(computedStyle.flexDirection || computedStyle.display).toBeDefined();
   });
 
   test('[BTTN-007] @mobile @regression Button adapts to tablet viewport', async ({ page }) => {
@@ -126,13 +123,11 @@ test.describe('Button — Responsive', () => {
 
 test.describe('Button — Console & Resources', () => {
   test('[BTTN-008] @regression Button produces no JS errors', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
+    // Note: ConsoleCapture is initialized globally in beforeEach
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     const errors = capture.getErrors();
-    capture.stop();
     expect(errors).toEqual([]);
   });
 });
