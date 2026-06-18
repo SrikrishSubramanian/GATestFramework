@@ -1,7 +1,6 @@
 import { scanImages, attachImageScanResults } from '../../../utils/infra/image-scan-utils';
 import { test, expect } from '@playwright/test';
 import { TeaserCardPage } from '../../../pages/ga/components/teaserCardPage';
-import { scanImages, attachImageScanResults } from '../../../utils/infra/broken-image-detector';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
