@@ -1,8 +1,8 @@
 import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
-import {
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import {
   RateTablePage,
   RATE_TABLE_VARIATIONS,
   VARIATION_TITLES,
