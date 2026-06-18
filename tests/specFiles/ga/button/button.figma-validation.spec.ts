@@ -17,6 +17,7 @@
 import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 

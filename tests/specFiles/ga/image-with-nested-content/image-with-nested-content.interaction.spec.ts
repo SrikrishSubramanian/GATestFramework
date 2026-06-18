@@ -3,6 +3,7 @@ import { ImageWithNestedContentPage } from '../../../pages/ga/components/imageWi
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 

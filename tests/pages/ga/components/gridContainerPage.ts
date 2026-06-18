@@ -2,7 +2,7 @@ import { Page, Locator } from '@playwright/test';
 import { loadLocators, resolveLocator } from '../../../utils/infra/locator-registry';
 import path from 'path';
 
-const registry = loadLocators(path.join(__dirname, 'gridContainerPage.locators.json'));
+const registry = loadLocators(path.join(__dirname, '../../locators/gridContainerPage.locators.json'));
 
 export class GridContainerPage {
   constructor(private page: Page) {}

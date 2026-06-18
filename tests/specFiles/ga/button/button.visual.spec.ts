@@ -3,6 +3,7 @@ import { ButtonPage } from '../../../pages/ga/components/buttonPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -42,6 +43,7 @@ test.describe('Button — Visual Verification', () => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const el = primaryBtn(page);
+    await assertLayout(el, { display: 'inline-flex' });
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
@@ -59,6 +61,12 @@ test.describe('Button — Visual Verification', () => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const el = primaryBtn(page);
+    await assertTypography(el, {
+      fontFamily: 'graphie',
+      fontSize: '16px',
+      fontWeight: '700',
+      lineHeight: '16px',
+    });
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
@@ -78,6 +86,12 @@ test.describe('Button — Visual Verification', () => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const el = primaryBtn(page);
+    await assertSpacing(el, {
+      paddingTop: '15px',
+      paddingRight: '20px',
+      paddingBottom: '15px',
+      paddingLeft: '20px',
+    }, 2);
     const styles = await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {

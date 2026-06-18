@@ -4,7 +4,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import path from 'path';
 
-const registry = loadLocators(path.join(__dirname, 'textPage.locators.json'));
+const registry = loadLocators(path.join(__dirname, '../../locators/textPage.locators.json'));
 
 export class TextPage {
   constructor(private page: Page) {}
