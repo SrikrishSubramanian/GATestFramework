@@ -13,7 +13,7 @@ import * as path from 'path';
 import * as crypto from 'crypto';
 
 const KKR_AEM_ROOT = path.resolve(__dirname, '..', '..', '..', 'kkr-aem');
-const GA_SPECS_DIR = path.resolve(__dirname, '..', 'specFiles', 'ga');
+const GA_FIXTURES_DIR = path.resolve(__dirname, '..', 'data', 'content-fixtures');
 const SYNC_RESULTS_PATH = path.resolve(__dirname, '..', 'data', '.fixture-sync-results.json');
 
 export interface FixtureMeta {
@@ -53,16 +53,16 @@ function md5File(filePath: string): string {
 export function checkFixtureSync(): SyncReport {
   const results: SyncResult[] = [];
 
-  if (!fs.existsSync(GA_SPECS_DIR)) {
+  if (!fs.existsSync(GA_FIXTURES_DIR)) {
     return { checkedAt: new Date().toISOString(), kkrAemRoot: KKR_AEM_ROOT, results, hasWarnings: false };
   }
 
-  const componentDirs = fs.readdirSync(GA_SPECS_DIR, { withFileTypes: true })
+  const componentDirs = fs.readdirSync(GA_FIXTURES_DIR, { withFileTypes: true })
     .filter(d => d.isDirectory())
     .map(d => d.name);
 
   for (const comp of componentDirs) {
-    const metaPath = path.join(GA_SPECS_DIR, comp, 'content-fixtures', 'fixture-meta.json');
+    const metaPath = path.join(GA_FIXTURES_DIR, comp, 'fixture-meta.json');
 
     if (!fs.existsSync(metaPath)) {
       // No fixture for this component — skip silently

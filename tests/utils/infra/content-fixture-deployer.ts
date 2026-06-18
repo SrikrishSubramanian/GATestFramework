@@ -14,7 +14,7 @@ import { Page } from '@playwright/test';
 import ENV from './env';
 import { loginToAEMAuthor } from './auth-fixture';
 
-const GA_SPECS_DIR = path.resolve(__dirname, '..', 'specFiles', 'ga');
+const GA_FIXTURES_DIR = path.resolve(__dirname, '..', 'data', 'content-fixtures');
 
 /** Environments where fixtures are auto-deployed to AEM */
 const AUTO_DEPLOY_ENVS = ['local', 'dev'];
@@ -98,7 +98,7 @@ export function resolveComponentUrl(
  */
 function resolveStyleGuidePath(component: string): string {
   // Check fixture-meta.json for the source path to derive the style guide path
-  const metaPath = path.join(GA_SPECS_DIR, component, 'content-fixtures', 'fixture-meta.json');
+  const metaPath = path.join(GA_FIXTURES_DIR, component, 'fixture-meta.json');
   if (fs.existsSync(metaPath)) {
     try {
       const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'));
@@ -119,7 +119,7 @@ function resolveStyleGuidePath(component: string): string {
  * Check if a fixture XML exists for a component.
  */
 function fixtureExistsForComponent(component: string): boolean {
-  const fixturePath = path.join(GA_SPECS_DIR, component, 'content-fixtures', `${component}-fixtures.xml`);
+  const fixturePath = path.join(GA_FIXTURES_DIR, component, `${component}-fixtures.xml`);
   return fs.existsSync(fixturePath);
 }
 
@@ -130,7 +130,7 @@ function fixtureExistsForComponent(component: string): boolean {
  * by importing the JCR content XML.
  */
 export async function deployFixture(component: string, page: Page): Promise<DeployResult> {
-  const fixturePath = path.join(GA_SPECS_DIR, component, 'content-fixtures', `${component}-fixtures.xml`);
+  const fixturePath = path.join(GA_FIXTURES_DIR, component, `${component}-fixtures.xml`);
 
   if (!fs.existsSync(fixturePath)) {
     return {
@@ -238,9 +238,9 @@ export async function deployAllFixtures(page: Page): Promise<DeployResult[]> {
 
   const results: DeployResult[] = [];
 
-  if (!fs.existsSync(GA_SPECS_DIR)) return results;
+  if (!fs.existsSync(GA_FIXTURES_DIR)) return results;
 
-  const componentDirs = fs.readdirSync(GA_SPECS_DIR, { withFileTypes: true })
+  const componentDirs = fs.readdirSync(GA_FIXTURES_DIR, { withFileTypes: true })
     .filter(d => d.isDirectory())
     .map(d => d.name);
 

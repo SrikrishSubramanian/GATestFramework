@@ -1,15 +1,12 @@
 import { test, expect } from '@playwright/test';
 import { setupMocks, clearMocks, MockConfig } from '../../utils/infra/api-mock-helper';
 import ENV from '../../utils/infra/env';
+import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
   if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(`${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
+    await loginToAEMAuthor(page);
   }
 });
 

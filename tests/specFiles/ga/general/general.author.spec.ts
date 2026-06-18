@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { loginToAEMAuthor } from '../../../src/utils/auth-utils';
+import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 
 test.describe('general - GAAM-989', () => {
   test.beforeEach(async ({ page }) => {
