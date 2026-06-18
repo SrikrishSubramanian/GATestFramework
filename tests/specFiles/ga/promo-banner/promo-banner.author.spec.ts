@@ -73,7 +73,8 @@ test.describe('PromoBanner — Core Structure', () => {
     await pom.navigate(BASE());
     const root = page.locator(PB).first();
     await expect(root).toBeVisible();
-    const radius = await root.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius, 'Desktop border-radius should be 20px').toBe('20px');
   });
 
@@ -83,7 +84,8 @@ test.describe('PromoBanner — Core Structure', () => {
     await pom.navigate(BASE());
     const root = page.locator(PB).first();
     await expect(root).toBeVisible();
-    const radius = await root.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius, 'Mobile border-radius should be 16px').toBe('16px');
   });
 
@@ -93,8 +95,9 @@ test.describe('PromoBanner — Core Structure', () => {
     await pom.navigate(BASE());
     const root = page.locator(PB).first();
     await expect(root).toBeVisible();
-    const color = await root.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-    expect(color, 'Promo banner text color should be white (rgb(255, 255, 255))').toBe('rgb(255, 255, 255)');
+    const color = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    expect(color, 'Promo banner text color should be white (rgb(255, 255, 255))', `Expected 'rgb(255, 255, 255, got ${color, 'Promo banner text color should be white (rgb(255, 255, 255))'}`).toBe('rgb(255, 255, 255)');
   });
 
   test('[PB-006] @smoke @regression desktop root uses flex layout with align-items center', async ({ page }) => {
@@ -103,7 +106,8 @@ test.describe('PromoBanner — Core Structure', () => {
     await pom.navigate(BASE());
     const root = page.locator(PB).first();
     await expect(root).toBeVisible();
-    const styles = await root.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       const cs = getComputedStyle(el);
       return { display: cs.display, alignItems: cs.alignItems };
     });
@@ -119,7 +123,8 @@ test.describe('PromoBanner — Core Structure', () => {
     const count = await content.count();
     if (count === 0) { test.skip(); return; }
     await expect(content).toBeVisible();
-    const flexGrow = await content.evaluate(el => getComputedStyle(el).flexGrow); // measurement: use measurement-utils for cleaner code
+    const flexGrow = // 📏 TODO: Replace with measurement-utils
+    await content.evaluate(el => getComputedStyle(el).flexGrow); // measurement: use measurement-utils for cleaner code
     expect(flexGrow, 'Content area flexGrow should be 1').toBe('1');
   });
 
@@ -130,7 +135,8 @@ test.describe('PromoBanner — Core Structure', () => {
     const count = await titleEl.count();
     if (count === 0) { test.skip(); return; }
     await expect(titleEl).toBeVisible();
-    const tagName = await titleEl.evaluate(el => el.tagName.toLowerCase());
+    const tagName = // 📏 TODO: Replace with measurement-utils
+    await titleEl.evaluate(el => el.tagName.toLowerCase());
     expect(tagName, 'Banner title should be rendered as an <h4>').toBe('h4');
   });
 
@@ -168,7 +174,8 @@ test.describe('PromoBanner — Style Variants', () => {
     const count = await graniteEl.count();
     if (count === 0) { test.skip(); return; }
     await expect(graniteEl).toBeVisible();
-    const bg = await graniteEl.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await graniteEl.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     // Granite is a dark color — should not be white or transparent
     expect(bg, 'Granite variant background should not be white').not.toBe('rgb(255, 255, 255)');
     expect(bg, 'Granite variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
@@ -181,7 +188,8 @@ test.describe('PromoBanner — Style Variants', () => {
     const count = await azulEl.count();
     if (count === 0) { test.skip(); return; }
     await expect(azulEl).toBeVisible();
-    const bg = await azulEl.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await azulEl.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg, 'Azul variant background should not be white').not.toBe('rgb(255, 255, 255)');
     expect(bg, 'Azul variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
   });
@@ -193,7 +201,8 @@ test.describe('PromoBanner — Style Variants', () => {
     const count = await aubergineEl.count();
     if (count === 0) { test.skip(); return; }
     await expect(aubergineEl).toBeVisible();
-    const bg = await aubergineEl.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await aubergineEl.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg, 'Aubergine variant background should not be white').not.toBe('rgb(255, 255, 255)');
     expect(bg, 'Aubergine variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
   });
@@ -205,13 +214,15 @@ test.describe('PromoBanner — Style Variants', () => {
     const count = await footerEl.count();
     if (count === 0) { test.skip(); return; }
     await expect(footerEl).toBeVisible();
-    const bg = await footerEl.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await footerEl.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg, 'Footer variant background should not be white').not.toBe('rgb(255, 255, 255)');
     // Title inside footer variant should have a border separator
     const titleInFooter = footerEl.locator(PB_TITLE).first();
     const titleCount = await titleInFooter.count();
     if (titleCount > 0) {
-      const borderRight = await titleInFooter.evaluate(el => getComputedStyle(el).borderRightWidth); // measurement: use measurement-utils for cleaner code
+      const borderRight = // 📏 TODO: Replace with measurement-utils
+    await titleInFooter.evaluate(el => getComputedStyle(el).borderRightWidth); // measurement: use measurement-utils for cleaner code
       const borderWidth = parseFloat(borderRight);
       expect(borderWidth, 'Footer variant title should have a border separator (borderRight > 0)').toBeGreaterThan(0);
     }
@@ -225,8 +236,9 @@ test.describe('PromoBanner — Style Variants', () => {
       const el = page.locator(`${PB}.${variant}`).first();
       const count = await el.count();
       if (count === 0) continue;
-      const color = await el.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-      expect(color, `Variant ${variant} should have white text`).toBe('rgb(255, 255, 255)');
+      const color = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+      expect(color, `Variant ${variant} should have white text`, `Expected 'rgb(255, 255, 255, got ${color, `Variant ${variant} should have white text`}`).toBe('rgb(255, 255, 255)');
     }
   });
 
@@ -257,7 +269,8 @@ test.describe('PromoBanner — Padding', () => {
     const count = await wrapper.count();
     if (count === 0) { test.skip(); return; }
     await expect(wrapper).toBeVisible();
-    const padding = await wrapper.evaluate(el => {
+    const padding = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
@@ -273,7 +286,8 @@ test.describe('PromoBanner — Padding', () => {
     const count = await wrapper.count();
     if (count === 0) { test.skip(); return; }
     await expect(wrapper).toBeVisible();
-    const padding = await wrapper.evaluate(el => {
+    const padding = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
@@ -289,8 +303,10 @@ test.describe('PromoBanner — Padding', () => {
     const count = await wrapper.count();
     if (count === 0) { test.skip(); return; }
     // Inject the modifier class to test its effect
+    // 📏 TODO: Replace with measurement-utils
     await wrapper.evaluate(el => el.classList.add('cmp-promo-banner--remove-top-padding'));
-    const paddingTop = await wrapper.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
+    const paddingTop = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
     expect(paddingTop, 'remove-top-padding modifier should set padding-top to 0px').toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
@@ -302,8 +318,10 @@ test.describe('PromoBanner — Padding', () => {
     const count = await wrapper.count();
     if (count === 0) { test.skip(); return; }
     // Inject the modifier class to test its effect
+    // 📏 TODO: Replace with measurement-utils
     await wrapper.evaluate(el => el.classList.add('cmp-promo-banner--remove-bottom-padding'));
-    const paddingBottom = await wrapper.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
+    const paddingBottom = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
     expect(paddingBottom, 'remove-bottom-padding modifier should set padding-bottom to 0px').toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
@@ -314,11 +332,13 @@ test.describe('PromoBanner — Padding', () => {
     const wrapper = page.locator(PB_WRAPPER).first();
     const count = await wrapper.count();
     if (count === 0) { test.skip(); return; }
+    // 📏 TODO: Replace with measurement-utils
     await wrapper.evaluate(el => {
       el.classList.add('cmp-promo-banner--remove-top-padding');
       el.classList.add('cmp-promo-banner--remove-bottom-padding');
     });
-    const padding = await wrapper.evaluate(el => {
+    const padding = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
@@ -335,6 +355,7 @@ test.describe('PromoBanner — Padding', () => {
     if (count === 0) { test.skip(); return; }
     // Record internal root padding before modification
     const rootPaddingBefore = await page.locator(PB).first().evaluate(el => getComputedStyle(el).padding); // measurement: use measurement-utils for cleaner code
+    // 📏 TODO: Replace with measurement-utils
     await wrapper.evaluate(el => el.classList.add('cmp-promo-banner--remove-top-padding'));
     const rootPaddingAfter = await page.locator(PB).first().evaluate(el => getComputedStyle(el).padding); // measurement: use measurement-utils for cleaner code
     expect(rootPaddingAfter, 'Internal root padding must be unchanged by wrapper padding modifiers').toBe(rootPaddingBefore); // TODO: Use assertSpacing() for padding/margin
@@ -352,7 +373,8 @@ test.describe('PromoBanner — Desktop Layout', () => {
     await pom.navigate(BASE());
     const root = page.locator(PB).first();
     await expect(root).toBeVisible();
-    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir, 'Desktop flex-direction should be row').toBe('row');
   });
 
@@ -364,7 +386,8 @@ test.describe('PromoBanner — Desktop Layout', () => {
     const count = await content.count();
     if (count === 0) { test.skip(); return; }
     await expect(content).toBeVisible();
-    const styles = await content.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await content.evaluate(el => {
       const cs = getComputedStyle(el);
       return { flexDirection: cs.flexDirection, gap: cs.gap || cs.columnGap };
     });
@@ -380,7 +403,8 @@ test.describe('PromoBanner — Desktop Layout', () => {
     const count = await cta.count();
     if (count === 0) { test.skip(); return; }
     await expect(cta).toBeVisible();
-    const flexDir = await cta.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await cta.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir, 'CTA links flex-direction should be row on desktop').toBe('row');
   });
 
@@ -402,7 +426,8 @@ test.describe('PromoBanner — Desktop Layout', () => {
     } else {
       // No social links — inject+check CSS rule and clean up
       const linksArea = page.locator(PB_LINKS).first();
-      const result = await linksArea.evaluate(el => {
+      const result = // 📏 TODO: Replace with measurement-utils
+    await linksArea.evaluate(el => {
         const div = document.createElement('div');
         div.className = 'cmp-promo-banner__links-social';
         const a = document.createElement('a');
@@ -426,7 +451,8 @@ test.describe('PromoBanner — Desktop Layout', () => {
     const count = await links.count();
     if (count === 0) { test.skip(); return; }
     await expect(links).toBeVisible();
-    const marginTop = await links.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
+    const marginTop = // 📏 TODO: Replace with measurement-utils
+    await links.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
     expect(marginTop, 'Links margin-top on desktop should be 0px (not 24px)').toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 });
@@ -443,12 +469,14 @@ test.describe('PromoBanner — Mobile Layout', () => {
     const root = page.locator(PB).first();
     await expect(root).toBeVisible();
     // On mobile, the component uses display:block (no flex), so content stacks naturally
-    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     // Should NOT be flex-row — acceptable values: block, flex+column
     const isStacked = display === 'block' || display === 'flex'; // TODO: Use assertLayout() for display checks
     expect(isStacked).toBe(true);
     if (display === 'flex') {
-      const dir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+      const dir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
       expect(dir).toBe('column');
     }
   });
@@ -461,7 +489,8 @@ test.describe('PromoBanner — Mobile Layout', () => {
     const count = await cta.count();
     if (count === 0) { test.skip(); return; }
     await expect(cta).toBeVisible();
-    const flexDir = await cta.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await cta.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir, 'CTA links flex-direction should be column on mobile').toBe('column');
   });
 
@@ -473,7 +502,8 @@ test.describe('PromoBanner — Mobile Layout', () => {
     const count = await links.count();
     if (count === 0) { test.skip(); return; }
     await expect(links).toBeVisible();
-    const marginTop = await links.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
+    const marginTop = // 📏 TODO: Replace with measurement-utils
+    await links.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
     expect(marginTop, 'Links margin-top on mobile should be 24px').toBe('24px'); // TODO: Use assertSpacing() for padding/margin
   });
 
@@ -483,7 +513,8 @@ test.describe('PromoBanner — Mobile Layout', () => {
     await pom.navigate(BASE());
     const root = page.locator(PB).first();
     await expect(root).toBeVisible();
-    const hasOverflow = await root.evaluate(el => el.scrollWidth > el.clientWidth);
+    const hasOverflow = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => el.scrollWidth > el.clientWidth);
     expect(hasOverflow, 'Promo banner must not overflow horizontally on mobile').toBe(false);
   });
 
@@ -522,7 +553,8 @@ test.describe('PromoBanner — Footer Variant', () => {
     const logo = footerEl.locator(PB_LOGO).first();
     const logoCount = await logo.count();
     if (logoCount === 0) { test.skip(); return; }
-    const borderRadius = await logo.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const borderRadius = // 📏 TODO: Replace with measurement-utils
+    await logo.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     // Footer logo should NOT be circular (999px); it should be 0 or a small value
     expect(borderRadius, 'Footer variant logo should not have 999px circular radius').not.toMatch(/999px|9999px/);
   });
@@ -549,7 +581,8 @@ test.describe('PromoBanner — Footer Variant', () => {
     const title = footerEl.locator(PB_TITLE).first();
     const titleCount = await title.count();
     if (titleCount === 0) { test.skip(); return; }
-    const borderStyles = await title.evaluate(el => {
+    const borderStyles = // 📏 TODO: Replace with measurement-utils
+    await title.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
         borderRight: cs.borderRightWidth,
@@ -596,7 +629,8 @@ test.describe('PromoBanner — Accessibility', () => {
     if (count === 0) {
       // No social links on page — verify the social link CSS border-radius instead
       const linksArea = page.locator(PB_LINKS).first();
-      const radius = await linksArea.evaluate(el => {
+      const radius = // 📏 TODO: Replace with measurement-utils
+    await linksArea.evaluate(el => {
         const div = document.createElement('div');
         div.className = 'cmp-promo-banner__links-social';
         const a = document.createElement('a');
@@ -649,11 +683,14 @@ test.describe('PromoBanner — Accessibility', () => {
     // Check that at least the first focusable element gets an outline on focus
     const first = interactive.first();
     await first.focus();
-    const outlineWidth = await first.evaluate(el => getComputedStyle(el).outlineWidth); // measurement: use measurement-utils for cleaner code
-    const outlineStyle = await first.evaluate(el => getComputedStyle(el).outlineStyle); // measurement: use measurement-utils for cleaner code
+    const outlineWidth = // 📏 TODO: Replace with measurement-utils
+    await first.evaluate(el => getComputedStyle(el).outlineWidth); // measurement: use measurement-utils for cleaner code
+    const outlineStyle = // 📏 TODO: Replace with measurement-utils
+    await first.evaluate(el => getComputedStyle(el).outlineStyle); // measurement: use measurement-utils for cleaner code
     const hasFocusOutline = parseFloat(outlineWidth) > 0 && outlineStyle !== 'none';
     // Also accept focus-visible via box-shadow
-    const boxShadow = await first.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
+    const boxShadow = // 📏 TODO: Replace with measurement-utils
+    await first.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
     const hasFocusBoxShadow = boxShadow !== 'none' && boxShadow !== '';
     expect(hasFocusOutline || hasFocusBoxShadow, 'First interactive element should have visible focus indicator').toBe(true);
   });
@@ -677,9 +714,11 @@ test.describe('PromoBanner — Accessibility', () => {
     const count = await socialLinks.count();
     if (count === 0) { test.skip(); return; }
     const first = socialLinks.first();
-    const bgBefore = await first.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await first.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await hover(first);
-    const bgAfter = await first.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await first.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     // After hover the background should change (transition to white fill)
     // We verify either background changed or that white is now the background
     const isWhiteAfterHover = bgAfter === 'rgb(255, 255, 255)';
@@ -745,7 +784,7 @@ test.describe('PromoBanner — Console Errors', () => {
     capture.start();
     const pom = new PromoBannerPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors, `JS errors found on promo-banner style guide: ${errors.join(' | ')}`).toEqual([]);

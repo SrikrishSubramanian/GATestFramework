@@ -43,17 +43,20 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await expect(link).toBeVisible();
 
     // Capture pre-hover background
-    const bgBefore = await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor // measurement: use measurement-utils for cleaner code
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor // measurement: use measurement-utils for cleaner code
     );
 
     await hover(link);
-    await page.waitForTimeout(250); // allow transition to complete
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // allow transition to complete
 
-    const bgAfter = await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor // measurement: use measurement-utils for cleaner code
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor // measurement: use measurement-utils for cleaner code
     );
 
     // After hover the background should be white (rgb(255, 255, 255))
-    expect(bgAfter).toBe('rgb(255, 255, 255)');
+    expect(bgAfter, `Expected 'rgb(255, 255, 255, got ${bgAfter}`).toBe('rgb(255, 255, 255)');
     // And it should differ from the resting state
     expect(bgAfter).not.toBe(bgBefore);
   });
@@ -65,7 +68,8 @@ test.describe('PromoBanner — Interaction Tests', () => {
     if (await link.count() === 0) {
       // No social links on page — inject temp element to verify CSS rule
       const linksArea = page.locator('.cmp-promo-banner__links').first();
-      const color = await linksArea.evaluate(el => {
+      const color = // 📏 TODO: Replace with measurement-utils
+    await linksArea.evaluate(el => {
         const div = document.createElement('div');
         div.className = 'cmp-promo-banner__links-social';
         const a = document.createElement('a');
@@ -82,11 +86,12 @@ test.describe('PromoBanner — Interaction Tests', () => {
       return;
     }
     // The <i> inside the <a> has white color (LESS: .cmp-promo-banner__links-social i { color: white })
-    const iconColor = await link.evaluate(el => {
+    const iconColor = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => {
       const icon = el.querySelector('i');
       return icon ? getComputedStyle(icon).color : getComputedStyle(el).color;
     });
-    expect(iconColor).toBe('rgb(255, 255, 255)');
+    expect(iconColor, `Expected 'rgb(255, 255, 255, got ${iconColor}`).toBe('rgb(255, 255, 255)');
   });
 
   test('@interaction @regression PB-INT-003 social link CSS defines transition 0.18s', async ({ page }) => {
@@ -95,7 +100,8 @@ test.describe('PromoBanner — Interaction Tests', () => {
     const link = page.locator(PB_SOCIAL_LINK).first();
     if (await link.count() === 0) {
       const linksArea = page.locator('.cmp-promo-banner__links').first();
-      const transition = await linksArea.evaluate(el => {
+      const transition = // 📏 TODO: Replace with measurement-utils
+    await linksArea.evaluate(el => {
         const div = document.createElement('div');
         div.className = 'cmp-promo-banner__links-social';
         const a = document.createElement('a');
@@ -108,7 +114,8 @@ test.describe('PromoBanner — Interaction Tests', () => {
       expect(transition).toContain('0.18s');
       return;
     }
-    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition).toContain('0.18s');
   });
 
@@ -121,12 +128,14 @@ test.describe('PromoBanner — Interaction Tests', () => {
     const btn = page.locator(PB_CTA).first();
     await expect(btn).toBeVisible();
 
-    const bgBefore = await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor); // measurement: use measurement-utils for cleaner code
 
     await hover(btn);
-    await page.waitForTimeout(250);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const bgAfter = await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor); // measurement: use measurement-utils for cleaner code
 
     // Background must change on hover
     expect(bgAfter).not.toBe(bgBefore);
@@ -161,7 +170,8 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await page.keyboard.press('Tab');
     let focused = false;
     for (let i = 0; i < 30; i++) {
-      const activeTag = await page.evaluate(() => {
+      const activeTag = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         const el = document.activeElement;
         return el ? el.closest('.cmp-promo-banner__links-social a') !== null : false;
       });
@@ -179,7 +189,8 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await page.keyboard.press('Tab');
     let focused = false;
     for (let i = 0; i < 40; i++) {
-      const activeIsCta = await page.evaluate(() => {
+      const activeIsCta = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         const el = document.activeElement;
         return el ? el.closest('.cmp-promo-banner__links-cta .cmp-button') !== null : false;
       });
@@ -197,7 +208,8 @@ test.describe('PromoBanner — Interaction Tests', () => {
     if (await firstLink.count() === 0) {
       // No social links — verify CSS rule via injection
       const linksArea = page.locator('.cmp-promo-banner__links').first();
-      const outlineOffset = await linksArea.evaluate(el => {
+      const outlineOffset = // 📏 TODO: Replace with measurement-utils
+    await linksArea.evaluate(el => {
         const div = document.createElement('div');
         div.className = 'cmp-promo-banner__links-social';
         const a = document.createElement('a');
@@ -217,7 +229,8 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await page.keyboard.press('Tab');
     await page.keyboard.press('Shift+Tab');
 
-    const { outlineWidth, outlineColor, outlineOffset } = await firstLink.evaluate((el) => {
+    const { outlineWidth, outlineColor, outlineOffset } = // 📏 TODO: Replace with measurement-utils
+    await firstLink.evaluate((el) => {
       const s = getComputedStyle(el);
       return {
         outlineWidth:  s.outlineWidth,
@@ -275,7 +288,8 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
     // Mobile
     await page.setViewportSize({ width: 375, height: 812 });
-    await page.waitForTimeout(200); // allow layout reflow
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // allow layout reflow
 
     const mobileDir = await page.locator(ctaSelector).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.flexDirection // measurement: use measurement-utils for cleaner code
     );

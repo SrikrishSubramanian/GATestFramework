@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { StatisticPage } from '../../../pages/ga/components/statisticPage';
 import ENV from '../../../utils/infra/env';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -106,7 +107,8 @@ test.describe('Statistic — Alignment Variants', () => {
     await pom.navigate(BASE());
     const leftAligned = page.locator('.cmp-statistic--align-left').first();
     if (await leftAligned.count() === 0) { test.skip(); return; }
-    const textAlign = await leftAligned.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
+    const textAlign = // 📏 TODO: Replace with measurement-utils
+    await leftAligned.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(textAlign).toMatch(/left|start/);
   });
 
@@ -227,7 +229,8 @@ test.describe('Statistic — Responsive', () => {
     const root = page.locator('.cmp-statistic').first();
     await expect(root).toBeVisible();
     // Tablet should render without horizontal overflow
-    const overflow = await root.evaluate(el => {
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       return el.scrollWidth > el.clientWidth;
     });
     expect(overflow).toBe(false);
@@ -268,7 +271,8 @@ test.describe('Statistic — Accessibility', () => {
       const box = await focusable.nth(i).boundingBox();
       if (box) {
         expect(box.y).toBeGreaterThanOrEqual(0);
-        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
+        expect(box.y + box.height).toBeLessThanOrEqual(// 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => window.innerHeight));
       }
     }
   });

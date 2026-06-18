@@ -3,6 +3,7 @@ import { HeroFiftyFiftyPage } from '../../../pages/ga/components/heroFiftyFiftyP
 import ENV from '../../../utils/infra/env';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 import {
   assertColumnLayout, assertNoEmptyWrappers, assertImageFillsContainer,
   assertTagName, assertFocusIndicator, assertHidden, assertAlignment,
@@ -65,7 +66,8 @@ test.describe('HeroFiftyFifty — Layout (AC1–AC6)', () => {
     await expect(root).toBeVisible();
 
     // Should be a row layout with 2 children (left + right)
-    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('row');
 
     const left = root.locator(SEL.left);
@@ -81,7 +83,8 @@ test.describe('HeroFiftyFifty — Layout (AC1–AC6)', () => {
     await expect(left).toBeVisible();
 
     // Granite background should not be transparent
-    const bg = await left.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await left.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).not.toBe('rgba(0, 0, 0, 0)');
     expect(bg).not.toBe('rgb(255, 255, 255)');
   });
@@ -103,7 +106,8 @@ test.describe('HeroFiftyFifty — Layout (AC1–AC6)', () => {
     await pom.navigate(BASE());
     const root = page.locator(SEL.root).first();
 
-    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(['column', 'column-reverse']).toContain(flexDir);
   });
 
@@ -116,7 +120,8 @@ test.describe('HeroFiftyFifty — Layout (AC1–AC6)', () => {
     const breadcrumbWrap = page.locator(SEL.breadcrumbWrap).first();
     const count = await breadcrumbWrap.count();
     if (count > 0) {
-      const isHidden = await breadcrumbWrap.evaluate(el => {
+      const isHidden = // 📏 TODO: Replace with measurement-utils
+    await breadcrumbWrap.evaluate(el => {
         const cs = getComputedStyle(el);
         return cs.display === 'none' || cs.visibility === 'hidden';
       });
@@ -172,7 +177,8 @@ test.describe('HeroFiftyFifty — Breadcrumb (AC7–AC9)', () => {
     // Verify breadcrumb inside hero uses standard .cmp-breadcrumb BEM class
     const breadcrumb = page.locator(`${SEL.root} ${SEL.breadcrumb}`).first();
     if (await breadcrumb.count() > 0) {
-      const classes = await breadcrumb.evaluate(el => el.className);
+      const classes = // 📏 TODO: Replace with measurement-utils
+    await breadcrumb.evaluate(el => el.className);
       expect(classes).toContain('cmp-breadcrumb');
     }
   });
@@ -184,7 +190,8 @@ test.describe('HeroFiftyFifty — Breadcrumb (AC7–AC9)', () => {
     // On granite background, breadcrumb links should have light text
     const bcLink = page.locator(`${SEL.root} .cmp-breadcrumb__item-link`).first();
     if (await bcLink.count() > 0) {
-      const color = await bcLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+      const color = // 📏 TODO: Replace with measurement-utils
+    await bcLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       // Text on dark bg should be light (R > 150 typically)
       const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
       if (match) {
@@ -244,7 +251,8 @@ test.describe('HeroFiftyFifty — Eyebrow (AC10–AC12)', () => {
 
     const eyebrow = page.locator(SEL.eyebrow).first();
     if (await eyebrow.count() > 0) {
-      const color = await eyebrow.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+      const color = // 📏 TODO: Replace with measurement-utils
+    await eyebrow.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       // Text on granite should be light
       expect(color).not.toBe('rgb(0, 0, 0)');
     }
@@ -273,8 +281,10 @@ test.describe('HeroFiftyFifty — Headline (AC13–AC18)', () => {
     const h1Count = await h1.count();
     const h1xlCount = await h1xl.count();
     if (h1Count > 0 && h1xlCount > 0) {
-      const h1Size = await h1.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
-      const h1xlSize = await h1xl.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
+      const h1Size = // 📏 TODO: Replace with measurement-utils
+    await h1.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
+      const h1xlSize = // 📏 TODO: Replace with measurement-utils
+    await h1xl.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
       expect(h1xlSize).toBeGreaterThan(h1Size);
     }
   });
@@ -286,7 +296,8 @@ test.describe('HeroFiftyFifty — Headline (AC13–AC18)', () => {
     const graniteSpan = page.locator(SEL.headlineGranite).first();
     if (await graniteSpan.count() > 0) {
       await expect(graniteSpan).toBeVisible();
-      const color = await graniteSpan.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+      const color = // 📏 TODO: Replace with measurement-utils
+    await graniteSpan.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       // Granite 50% should differ from default white text
       expect(color).not.toBe('rgb(255, 255, 255)');
     }
@@ -407,8 +418,10 @@ test.describe('HeroFiftyFifty — Description (AC19–AC23)', () => {
     const large = page.locator(SEL.descLarge).first();
 
     if (await medium.count() > 0 && await large.count() > 0) {
-      const medSize = await medium.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
-      const lgSize = await large.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
+      const medSize = // 📏 TODO: Replace with measurement-utils
+    await medium.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
+      const lgSize = // 📏 TODO: Replace with measurement-utils
+    await large.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
       expect(lgSize).toBeGreaterThan(medSize);
     }
   });
@@ -431,7 +444,8 @@ test.describe('HeroFiftyFifty — CTAs (AC24–AC27)', () => {
 
     // Buttons should be in a flex row (inline)
     if (await buttonsContainer.count() > 0) {
-      const display = await buttonsContainer.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+      const display = // 📏 TODO: Replace with measurement-utils
+    await buttonsContainer.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       expect(display).toBe('flex'); // TODO: Use assertLayout() for display checks
     }
   });
@@ -442,7 +456,8 @@ test.describe('HeroFiftyFifty — CTAs (AC24–AC27)', () => {
 
     const btn = page.locator(`${SEL.root} .cmp-button`).first();
     if (await btn.count() > 0) {
-      const classes = await btn.evaluate(el => el.className);
+      const classes = // 📏 TODO: Replace with measurement-utils
+    await btn.evaluate(el => el.className);
       expect(classes).toContain('cmp-button');
     }
   });
@@ -456,7 +471,8 @@ test.describe('HeroFiftyFifty — CTAs (AC24–AC27)', () => {
     const buttons = minimalHero.locator(SEL.buttons);
     const count = await buttons.count();
     if (count > 0) {
-      const children = await buttons.evaluate(el => el.children.length);
+      const children = // 📏 TODO: Replace with measurement-utils
+    await buttons.evaluate(el => el.children.length);
       expect(children).toBe(0);
     }
   });
@@ -469,7 +485,8 @@ test.describe('HeroFiftyFifty — CTAs (AC24–AC27)', () => {
     const buttonsContainer = page.locator(SEL.buttons).first();
     if (await buttonsContainer.count() > 0) {
       // On mobile, buttons may stack vertically
-      const flexDir = await buttonsContainer.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+      const flexDir = // 📏 TODO: Replace with measurement-utils
+    await buttonsContainer.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
       expect(['row', 'column']).toContain(flexDir);
 
       // All buttons should still be visible and clickable
@@ -527,7 +544,8 @@ test.describe('HeroFiftyFifty — Layout Combinations (AC28–AC31)', () => {
 
     const content = page.locator(SEL.content).first();
     if (await content.count() > 0) {
-      const textAlign = await content.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
+      const textAlign = // 📏 TODO: Replace with measurement-utils
+    await content.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
       expect(['left', 'center', 'start']).toContain(textAlign);
     }
   });
@@ -568,7 +586,8 @@ test.describe('HeroFiftyFifty — Image (AC32–AC35)', () => {
 
     const img = page.locator(`${SEL.image} img`).first();
     if (await img.count() > 0) {
-      const objectFit = await img.evaluate(el => getComputedStyle(el).objectFit); // measurement: use measurement-utils for cleaner code
+      const objectFit = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate(el => getComputedStyle(el).objectFit); // measurement: use measurement-utils for cleaner code
       expect(['cover', 'contain']).toContain(objectFit);
     }
   });
@@ -656,7 +675,8 @@ test.describe('HeroFiftyFifty — Secondary Slot (AC36–AC39)', () => {
     // Statistic sub-component should use .cmp-statistic
     const statistic = page.locator(`${SEL.secondarySlot} .cmp-statistic`).first();
     if (await statistic.count() > 0) {
-      const classes = await statistic.evaluate(el => el.className);
+      const classes = // 📏 TODO: Replace with measurement-utils
+    await statistic.evaluate(el => el.className);
       expect(classes).toContain('cmp-statistic');
     }
   });
@@ -701,7 +721,7 @@ test.describe('HeroFiftyFifty — Console & Resources', () => {
     capture.start();
     const pom = new HeroFiftyFiftyPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);

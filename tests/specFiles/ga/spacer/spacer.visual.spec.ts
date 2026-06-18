@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -30,7 +31,8 @@ test.describe('Spacer â€” Visual Regression', () => {
     const spacer = page.locator('.cmp-spacer').first();
     await expect(spacer).toBeVisible();
 
-    const height = await spacer.evaluate(el => el.offsetHeight);
+    const height = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el => el.offsetHeight);
     expect(height).toBeGreaterThan(0);
   });
 
@@ -39,8 +41,10 @@ test.describe('Spacer â€” Visual Regression', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const margin = await spacer.evaluate(el => window.getComputedStyle(el).margin); // measurement: use measurement-utils for cleaner code
-    const padding = await spacer.evaluate(el => window.getComputedStyle(el).padding); // measurement: use measurement-utils for cleaner code
+    const margin = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el => window.getComputedStyle(el).margin); // measurement: use measurement-utils for cleaner code
+    const padding = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el => window.getComputedStyle(el).padding); // measurement: use measurement-utils for cleaner code
 
     expect(margin || padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
   });
@@ -50,10 +54,12 @@ test.describe('Spacer â€” Visual Regression', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const width = await spacer.evaluate(el => el.offsetWidth);
+    const width = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el => el.offsetWidth);
 
     // Spacer should typically be full width
-    const container = await spacer.evaluate(el => el.parentElement?.offsetWidth);
+    const container = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el => el.parentElement?.offsetWidth);
     expect(width).toBeLessThanOrEqual((container || 9999) + 1);
   });
 
@@ -79,7 +85,8 @@ test.describe('Spacer â€” Visual Regression', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const bg = await spacer.evaluate(el => window.getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el => window.getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
 
     // Should be transparent or inherit
     expect(['rgba(0, 0, 0, 0)', 'transparent']).toContain(bg);

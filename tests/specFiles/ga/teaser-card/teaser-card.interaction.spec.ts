@@ -49,7 +49,8 @@ test.describe('TeaserCard — Standard Hover', () => {
     const linkedCard = page.locator(`${TC}:has(${TC_LINK})`).first();
     if (await linkedCard.count() === 0) { test.skip(); return; }
     await hover(linkedCard);
-    const cursor = await linkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await linkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Hovering a clickable card must show pointer cursor').toBe('pointer');
   });
 
@@ -62,7 +63,8 @@ test.describe('TeaserCard — Standard Hover', () => {
     if (await linkedCard.count() === 0) { test.skip(); return; }
 
     // A CSS transition property must be present on the card to animate the hover
-    const transition = await linkedCard.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await linkedCard.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'CTA card must have a CSS transition for hover animation').not.toBe('all 0s ease 0s');
     expect(transition.length).toBeGreaterThan(0);
   });
@@ -76,12 +78,14 @@ test.describe('TeaserCard — Standard Hover', () => {
     if (await linkedCard.count() === 0) { test.skip(); return; }
 
     const ctaLink = linkedCard.locator(TC_LINK).first();
-    const colorBefore = await ctaLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const colorBefore = // 📏 TODO: Replace with measurement-utils
+    await ctaLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
 
     await hover(linkedCard);
-    await page.waitForTimeout(350);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const colorAfter = await ctaLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const colorAfter = // 📏 TODO: Replace with measurement-utils
+    await ctaLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Color should change on hover (CTA hover state activates)
     expect(colorAfter, 'CTA should change color when card is hovered').not.toBe(colorBefore);
   });
@@ -94,7 +98,8 @@ test.describe('TeaserCard — Standard Hover', () => {
     const nonLinkedCard = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
     if (await nonLinkedCard.count() === 0) { test.skip(); return; }
     await hover(nonLinkedCard);
-    const cursor = await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Non-CTA card must not show pointer cursor').not.toBe('pointer');
   });
 
@@ -108,7 +113,7 @@ test.describe('TeaserCard — Standard Hover', () => {
 
     const boxBefore = await card.boundingBox();
     await hover(card);
-    await page.waitForTimeout(350);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const boxAfter = await card.boundingBox();
 
     if (boxBefore && boxAfter) {
@@ -136,7 +141,7 @@ test.describe('TeaserCard — Enhanced Hover', () => {
 
     const boxBefore = await imgWrapper.boundingBox();
     await hover(enhanced);
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const boxAfter = await imgWrapper.boundingBox();
 
     if (boxBefore && boxAfter) {
@@ -153,10 +158,11 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     if (await enhanced.count() === 0) { test.skip(); return; }
 
     await hover(enhanced);
-    await page.waitForTimeout(500);
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // An overlay element or pseudo-element should introduce a darkening effect
     // Check via the card's opacity or an overlay child
-    const hasOverlay = await enhanced.evaluate(el => {
+    const hasOverlay = // 📏 TODO: Replace with measurement-utils
+    await enhanced.evaluate(el => {
       const overlays = Array.from(el.querySelectorAll('[class*="overlay"], [class*="backdrop"]'));
       if (overlays.length > 0) return true;
       const cs = getComputedStyle(el, '::before');
@@ -181,10 +187,12 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     const title = enhanced.locator(TC_TITLE).first();
     if (await title.count() === 0) { test.skip(); return; }
 
-    const colorBefore = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const colorBefore = // 📏 TODO: Replace with measurement-utils
+    await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     await hover(enhanced);
-    await page.waitForTimeout(500);
-    const colorAfter = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const colorAfter = // 📏 TODO: Replace with measurement-utils
+    await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
 
     expect(colorAfter, 'Enhanced hover: title should transition to white').not.toBe(colorBefore);
     const rgb = colorAfter.match(/\d+/g)?.map(Number) ?? [];
@@ -204,7 +212,8 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     const imgWrapper = enhanced.locator(TC_IMAGE_WRAPPER).first();
     if (await imgWrapper.count() === 0) { test.skip(); return; }
 
-    const transition = await imgWrapper.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await imgWrapper.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'Enhanced hover image wrapper must have a CSS transition').not.toBe('all 0s ease 0s');
   });
 
@@ -237,7 +246,8 @@ test.describe('TeaserCard — Keyboard Navigation', () => {
     let reached = false;
     for (let i = 0; i < 50; i++) {
       await page.keyboard.press('Tab');
-      const focused = await page.evaluate(() => document.activeElement?.className ?? '');
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.className ?? '');
       if (focused.includes('teaser-card__link')) {
         reached = true;
         break;
@@ -255,7 +265,8 @@ test.describe('TeaserCard — Keyboard Navigation', () => {
     if (await link.count() === 0) { test.skip(); return; }
 
     await link.focus();
-    const focusStyle = await link.evaluate(el => {
+    const focusStyle = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => {
       const cs = getComputedStyle(el);
       return { outline: cs.outlineStyle, outlineW: cs.outlineWidth, boxShadow: cs.boxShadow };
     });
@@ -290,7 +301,8 @@ test.describe('TeaserCard — Keyboard Navigation', () => {
     if (count === 0) { test.skip(); return; }
     for (let i = 0; i < count; i++) {
       await links.nth(i).focus();
-      const activeEl = await page.evaluate(() => document.activeElement?.className ?? '');
+      const activeEl = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.className ?? '');
       expect(activeEl, `Link[${i}] must be keyboard focusable`).toContain('teaser-card');
     }
   });
@@ -327,10 +339,12 @@ test.describe('TeaserCard — No-hover Conditions', () => {
     const nonLinked = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
     if (await nonLinked.count() === 0) { test.skip(); return; }
 
-    const bgBefore = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await hover(nonLinked);
-    await page.waitForTimeout(350);
-    const bgAfter = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgBefore, 'Non-CTA card background must not change on hover').toBe(bgAfter);
   });
 
@@ -342,7 +356,8 @@ test.describe('TeaserCard — No-hover Conditions', () => {
     const nonLinked = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
     if (await nonLinked.count() === 0) { test.skip(); return; }
     await hover(nonLinked);
-    const cursor = await nonLinked.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await nonLinked.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Non-CTA card must not show pointer cursor').not.toBe('pointer');
   });
 
@@ -355,7 +370,8 @@ test.describe('TeaserCard — No-hover Conditions', () => {
     if (await linkedCard.count() === 0) { test.skip(); return; }
 
     // On mobile the enhanced hover overlay must not be active at rest
-    const hasEnhancedHoverActive = await linkedCard.evaluate(el => {
+    const hasEnhancedHoverActive = // 📏 TODO: Replace with measurement-utils
+    await linkedCard.evaluate(el => {
       const imgWrapper = el.querySelector('[class*="image-wrapper"]');
       if (!imgWrapper) return false;
       const cs = getComputedStyle(imgWrapper);
@@ -418,7 +434,8 @@ test.describe('TeaserCard — Left/Right Position Layout', () => {
 
     let card = page.locator(`${TC_POS_LEFT}${TC_IMG_RECTANGLE}`).first();
     if (await card.count() === 0) {
-      await page.evaluate((sel) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((sel) => {
         const el = document.querySelector(sel);
         if (el) {
           el.classList.add('cmp-teaser-card--image-position-left', 'cmp-teaser-card--image-style-rectangle');
@@ -448,7 +465,8 @@ test.describe('TeaserCard — Left/Right Position Layout', () => {
     let card = page.locator(`${TC_POS_LEFT}${TC}.cmp-teaser-card--image-style-circle`).first();
     if (await card.count() === 0) { test.skip(); return; }
 
-    const flexDir = await card.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(['row', 'row-reverse'], 'Circle Left card should remain side-by-side on mobile').toContain(flexDir);
   });
 });

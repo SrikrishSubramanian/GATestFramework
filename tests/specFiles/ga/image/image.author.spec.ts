@@ -52,7 +52,8 @@ test.describe('Image — Core Structure', () => {
     await pom.navigate(BASE());
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const radius = await picture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await picture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('20px');
   });
 
@@ -62,7 +63,8 @@ test.describe('Image — Core Structure', () => {
     await pom.navigate(BASE());
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const radius = await picture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await picture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('12px');
   });
 
@@ -74,7 +76,8 @@ test.describe('Image — Core Structure', () => {
     // AEM adaptive images may not render in local DAM — inject if absent
     const imgCount = await page.locator(IMG_IMAGE).count();
     if (imgCount === 0) {
-      await page.evaluate((pictureSelector) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((pictureSelector) => {
         const picture = document.querySelector(pictureSelector);
         if (picture) {
           const img = document.createElement('img');
@@ -86,9 +89,12 @@ test.describe('Image — Core Structure', () => {
     }
 
     const img = page.locator(IMG_IMAGE).first();
-    const display = await img.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-    const width = await img.evaluate((el: Element) => getComputedStyle(el).width); // measurement: use measurement-utils for cleaner code
-    const parentWidth = await img.evaluate((el: HTMLElement) => el.parentElement ? el.parentElement.getBoundingClientRect().width : 0);
+    const display = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const width = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate((el: Element) => getComputedStyle(el).width); // measurement: use measurement-utils for cleaner code
+    const parentWidth = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate((el: HTMLElement) => el.parentElement ? el.parentElement.getBoundingClientRect().width : 0);
 
     expect(display).toBe('block'); // TODO: Use assertLayout() for display checks
     // width:100% resolves to the parent's pixel width
@@ -102,7 +108,8 @@ test.describe('Image — Core Structure', () => {
 
     // clean up injection
     if (imgCount === 0) {
-      await page.evaluate(() => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove());
       });
     }
@@ -164,7 +171,8 @@ test.describe('Image — Sizing Variants', () => {
     // The max-width is on the .image wrapper (parent of .cmp-image), not .cmp-image itself
     const wrapper = page.locator('.cmp-section .aem-Grid > .image:not(.cmp-image--full-width)').first();
     if (await wrapper.count() === 0) { test.skip(); return; }
-    const maxWidth = await wrapper.evaluate((el: Element) => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+    const maxWidth = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate((el: Element) => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('1134px');
   });
 
@@ -177,7 +185,8 @@ test.describe('Image — Sizing Variants', () => {
     const count = await fullWidth.count();
     if (count === 0) { test.skip(); return; }
 
-    const maxWidth = await fullWidth.evaluate((el: Element) => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+    const maxWidth = // 📏 TODO: Replace with measurement-utils
+    await fullWidth.evaluate((el: Element) => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     // 100% resolves to the viewport width at top-level
     expect(['100%', `${1440}px`].some(v => maxWidth === v) || parseFloat(maxWidth) >= 1400).toBe(true);
   });
@@ -191,7 +200,8 @@ test.describe('Image — Sizing Variants', () => {
     const count = await fullWidthPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await fullWidthPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await fullWidthPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('0px');
   });
 
@@ -204,7 +214,8 @@ test.describe('Image — Sizing Variants', () => {
     const count = await gridPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('20px');
   });
 
@@ -215,7 +226,8 @@ test.describe('Image — Sizing Variants', () => {
 
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const overflow = await picture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await picture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
     expect(overflow).toBe('hidden');
   });
 
@@ -226,7 +238,8 @@ test.describe('Image — Sizing Variants', () => {
 
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const display = await picture.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await picture.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(display).toBe('block'); // TODO: Use assertLayout() for display checks
   });
 });
@@ -245,7 +258,8 @@ test.describe('Image — Padding Variants', () => {
     const count = await gridImage.count();
     if (count === 0) { test.skip(); return; }
 
-    const styles = await gridImage.evaluate((el: Element) => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await gridImage.evaluate((el: Element) => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
@@ -262,7 +276,8 @@ test.describe('Image — Padding Variants', () => {
     const count = await gridImage.count();
     if (count === 0) { test.skip(); return; }
 
-    const styles = await gridImage.evaluate((el: Element) => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await gridImage.evaluate((el: Element) => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
@@ -279,10 +294,13 @@ test.describe('Image — Padding Variants', () => {
     // Find a wrapper inside a section, add the class, check inner .cmp-image padding
     const wrapper = page.locator('.cmp-section .aem-Grid > .image').first();
     if (await wrapper.count() === 0) { test.skip(); return; }
+    // 📏 TODO: Replace with measurement-utils
     await wrapper.evaluate(el => el.classList.add('cmp-image--no-top-padding'));
     const inner = wrapper.locator('.cmp-image').first();
-    const paddingTop = await inner.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
+    const paddingTop = // 📏 TODO: Replace with measurement-utils
+    await inner.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
     expect(paddingTop).toBe('0px'); // TODO: Use assertSpacing() for padding/margin
+    // 📏 TODO: Replace with measurement-utils
     await wrapper.evaluate(el => el.classList.remove('cmp-image--no-top-padding'));
   });
 
@@ -293,9 +311,11 @@ test.describe('Image — Padding Variants', () => {
 
     const wrapper = page.locator('.cmp-section .aem-Grid > .image').first();
     if (await wrapper.count() === 0) { test.skip(); return; }
+    // 📏 TODO: Replace with measurement-utils
     await wrapper.evaluate(el => el.classList.add('cmp-image--no-bottom-padding'));
     const inner = wrapper.locator('.cmp-image').first();
-    const paddingBottom = await inner.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
+    const paddingBottom = // 📏 TODO: Replace with measurement-utils
+    await inner.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
     expect(paddingBottom).toBe('0px'); // TODO: Use assertSpacing() for padding/margin
   });
 
@@ -307,14 +327,16 @@ test.describe('Image — Padding Variants', () => {
     let target = page.locator('.cmp-image--no-top-bottom-padding').first();
     let count = await target.count();
     if (count === 0) {
-      await page.evaluate((selector) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((selector) => {
         const el = document.querySelector(selector);
         if (el) el.classList.add('cmp-image--no-top-bottom-padding');
       }, IMG_ROOT);
       target = page.locator('.cmp-image--no-top-bottom-padding').first();
     }
 
-    const styles = await target.evaluate((el: Element) => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await target.evaluate((el: Element) => {
       const cs = getComputedStyle(el);
       return { top: cs.paddingTop, bottom: cs.paddingBottom };
     });
@@ -330,7 +352,8 @@ test.describe('Image — Padding Variants', () => {
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
     // Internal picture should not inherit padding removal — it should still fill its container
-    const width = await picture.evaluate((el: HTMLElement) => el.getBoundingClientRect().width);
+    const width = // 📏 TODO: Replace with measurement-utils
+    await picture.evaluate((el: HTMLElement) => el.getBoundingClientRect().width);
     expect(width).toBeGreaterThan(0);
   });
 });
@@ -352,7 +375,8 @@ test.describe('Image — Hover Zoom', () => {
     // Inject img if DAM is absent
     const imgCount = await page.locator(`${IMG_LINK} ${IMG_IMAGE}`).count();
     if (imgCount === 0) {
-      await page.evaluate(({ linkSel, imgClass }) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(({ linkSel, imgClass }) => {
         const picture = document.querySelector(`${linkSel} .cmp-image__picture`);
         if (picture) {
           const img = document.createElement('img');
@@ -370,7 +394,8 @@ test.describe('Image — Hover Zoom', () => {
     expect(transform).not.toContain('matrix(1, 0, 0, 1,');
 
     if (imgCount === 0) {
-      await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
     }
   });
 
@@ -386,7 +411,8 @@ test.describe('Image — Hover Zoom', () => {
 
     const imgCount = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).count();
     if (imgCount === 0) {
-      await page.evaluate(({ rootSel, linkSel, imgClass }) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(({ rootSel, linkSel, imgClass }) => {
         const nonLinkedRoot = Array.from(document.querySelectorAll(rootSel)).find(el => !el.querySelector(linkSel));
         const picture = nonLinkedRoot?.querySelector('.cmp-image__picture');
         if (picture) {
@@ -403,7 +429,8 @@ test.describe('Image — Hover Zoom', () => {
     expect(transform === 'none' || transform === 'matrix(1, 0, 0, 1, 0, 0)').toBe(true);
 
     if (imgCount === 0) {
-      await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
     }
   });
 
@@ -414,7 +441,8 @@ test.describe('Image — Hover Zoom', () => {
 
     const imgCount = await page.locator(IMG_IMAGE).count();
     if (imgCount === 0) {
-      await page.evaluate((sel) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((sel) => {
         const picture = document.querySelector(sel);
         if (picture) {
           const img = document.createElement('img');
@@ -430,7 +458,8 @@ test.describe('Image — Hover Zoom', () => {
     expect(transition).toContain('0.3s');
 
     if (imgCount === 0) {
-      await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
     }
   });
 
@@ -441,7 +470,8 @@ test.describe('Image — Hover Zoom', () => {
 
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const overflow = await picture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await picture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
     expect(overflow).toBe('hidden');
   });
 });
@@ -460,7 +490,8 @@ test.describe('Image — Caption', () => {
     const count = await caption.count();
     if (count === 0) { test.skip(); return; }
 
-    const fontSize = await caption.evaluate((el: Element) => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
+    const fontSize = // 📏 TODO: Replace with measurement-utils
+    await caption.evaluate((el: Element) => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
     expect(fontSize).toBe('14px'); // TODO: Use assertTypography() for font checks
   });
 
@@ -473,7 +504,8 @@ test.describe('Image — Caption', () => {
     const count = await caption.count();
     if (count === 0) { test.skip(); return; }
 
-    const fontSize = await caption.evaluate((el: Element) => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
+    const fontSize = // 📏 TODO: Replace with measurement-utils
+    await caption.evaluate((el: Element) => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
     expect(fontSize).toBe('13px'); // TODO: Use assertTypography() for font checks
   });
 
@@ -489,7 +521,8 @@ test.describe('Image — Caption', () => {
       // Use any caption not in a dark section
       const fallback = page.locator(IMG_TITLE).first();
       if (await fallback.count() === 0) { test.skip(); return; }
-      const color = await fallback.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+      const color = // 📏 TODO: Replace with measurement-utils
+    await fallback.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       // granite is a dark color; should not be pure white
       const rgb = color.match(/\d+/g)?.map(Number) ?? [];
       if (rgb.length >= 3) {
@@ -498,7 +531,8 @@ test.describe('Image — Caption', () => {
       }
       return;
     }
-    const color = await caption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await caption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const rgb = color.match(/\d+/g)?.map(Number) ?? [];
     if (rgb.length >= 3) {
       expect(rgb[0] > 240 && rgb[1] > 240 && rgb[2] > 240).toBe(false);
@@ -514,7 +548,8 @@ test.describe('Image — Caption', () => {
     const count = await darkCaption.count();
     if (count === 0) {
       // Inject dark class on a section containing a caption
-      await page.evaluate((sels) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((sels) => {
         const caption = document.querySelector(sels.titleSel);
         const section = caption?.closest('.cmp-section');
         if (section) section.classList.add('cmp-section--background-color-granite');
@@ -522,7 +557,8 @@ test.describe('Image — Caption', () => {
 
       const injectedCaption = page.locator(`${SECTION_GRANITE} ${IMG_TITLE}`).first();
       if (await injectedCaption.count() === 0) { test.skip(); return; }
-      const color = await injectedCaption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+      const color = // 📏 TODO: Replace with measurement-utils
+    await injectedCaption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       const rgb = color.match(/\d+/g)?.map(Number) ?? [];
       // slate is a light color — all channels should be high
       if (rgb.length >= 3) {
@@ -530,7 +566,8 @@ test.describe('Image — Caption', () => {
       }
       return;
     }
-    const color = await darkCaption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await darkCaption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const rgb = color.match(/\d+/g)?.map(Number) ?? [];
     if (rgb.length >= 3) {
       expect(rgb[0] + rgb[1] + rgb[2]).toBeGreaterThan(500);
@@ -551,13 +588,15 @@ test.describe('Image — Mobile', () => {
     let target = page.locator('.hide-image .cmp-image, .cmp-image.hide-image').first();
     let count = await target.count();
     if (count === 0) {
-      await page.evaluate((sel) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((sel) => {
         const el = document.querySelector(sel);
         if (el) el.classList.add('hide-image');
       }, IMG_ROOT);
       target = page.locator('.hide-image').first();
     }
-    const display = await target.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await target.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(display).toBe('none');
   });
 
@@ -583,7 +622,8 @@ test.describe('Image — Mobile', () => {
     const count = await caption.count();
     if (count === 0) { test.skip(); return; }
 
-    const overflow = await caption.evaluate((el: HTMLElement) => el.scrollWidth > el.clientWidth);
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await caption.evaluate((el: HTMLElement) => el.scrollWidth > el.clientWidth);
     expect(overflow).toBe(false);
   });
 
@@ -596,7 +636,8 @@ test.describe('Image — Mobile', () => {
     const count = await gridPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('12px');
   });
 });
@@ -705,7 +746,7 @@ test.describe('Image — Console', () => {
     capture.start();
     const pom = new ImagePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);

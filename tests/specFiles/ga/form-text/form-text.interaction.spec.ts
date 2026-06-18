@@ -5,6 +5,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -31,7 +32,8 @@ test.describe('Form Text â€” Interactions', () => {
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
       await textInput.focus();
-      const focused = await page.evaluate(() => document.activeElement?.tagName);
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).toBe('INPUT');
     }
   });
@@ -43,7 +45,8 @@ test.describe('Form Text â€” Interactions', () => {
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
       await textInput.focus();
-      const outline = await textInput.evaluate(el =>
+      const outline = // 📏 TODO: Replace with measurement-utils
+    await textInput.evaluate(el =>
         window.getComputedStyle(el).outline
       );
       expect(outline).not.toBe('none');
@@ -56,12 +59,14 @@ test.describe('Form Text â€” Interactions', () => {
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
-      const initialBg = await textInput.evaluate(el =>
+      const initialBg = // 📏 TODO: Replace with measurement-utils
+    await textInput.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
 
       await textInput.focus();
-      const focusBg = await textInput.evaluate(el =>
+      const focusBg = // 📏 TODO: Replace with measurement-utils
+    await textInput.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
 

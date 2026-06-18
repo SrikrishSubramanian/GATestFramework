@@ -7,6 +7,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
@@ -247,7 +248,8 @@ test.describe('Accordion — Icon Animation', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const indicator = page.locator(`${SECTION_WHITE} ${INDICATOR_GA}`).first();
-    const transition = await indicator.evaluate(el => getComputedStyle(el).transition); // measurement: style check
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     expect(transition).toContain('background-color');
   });
 
@@ -255,7 +257,8 @@ test.describe('Accordion — Icon Animation', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const vertLine = page.locator(`${SECTION_WHITE} ${ICON_LINE_V}`).first();
-    const transition = await vertLine.evaluate(el => getComputedStyle(el).transition); // measurement: style check
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await vertLine.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     expect(transition).toContain('transform');
   });
 
@@ -267,11 +270,11 @@ test.describe('Accordion — Icon Animation', () => {
     // Expand and wait for 300ms CSS transition to complete
     await clickElement(firstButton);
     await expect(firstButton).toHaveAttribute('aria-expanded', 'true');
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Vertical line should have opacity 0 (rotated to form minus)
     const vertLine = firstButton.locator(ICON_LINE_V);
-    const opacity = await vertLine.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
+    const opacity = // 📏 TODO: Replace with measurement-utils
+    await vertLine.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(Number(opacity)).toBeLessThanOrEqual(0.01);
   });
 
@@ -288,7 +291,8 @@ test.describe('Accordion — Icon Animation', () => {
     const vLine = firstButton.locator(ICON_LINE_V);
     await expect(hLine).toBeVisible();
     await expect(vLine).toBeVisible();
-    const vOpacity = await vLine.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
+    const vOpacity = // 📏 TODO: Replace with measurement-utils
+    await vLine.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(Number(vOpacity)).toBe(1);
   });
 });
@@ -300,9 +304,11 @@ test.describe('Accordion — Hover & Focus States', () => {
     const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
     const indicator = firstButton.locator(INDICATOR_GA);
 
-    const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     await hover(firstButton);
-    const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     // Background should darken on hover
     expect(bgAfter).not.toBe(bgBefore);
   });
@@ -314,7 +320,8 @@ test.describe('Accordion — Hover & Focus States', () => {
     const indicator = firstButton.locator(INDICATOR_GA);
 
     await firstButton.focus();
-    const boxShadow = await indicator.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
+    const boxShadow = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
     // Should have double ring box-shadow on focus
     expect(boxShadow).not.toBe('none');
     expect(boxShadow).toContain('0px 0px 0px');
@@ -339,7 +346,8 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const graniteItem = page.locator(`${SECTION_GRANITE} ${ITEM}`).first();
-    const borderColor = await graniteItem.evaluate(el => getComputedStyle(el).borderBottomColor); // measurement: style check
+    const borderColor = // 📏 TODO: Replace with measurement-utils
+    await graniteItem.evaluate(el => getComputedStyle(el).borderBottomColor); // measurement: style check
     // Should be white (rgb(255, 255, 255)) on dark background
     expect(borderColor).toContain('255');
   });
@@ -348,7 +356,8 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const graniteButton = page.locator(`${SECTION_GRANITE} ${ITEM_BUTTON}`).first();
-    const color = await graniteButton.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await graniteButton.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Should be white on dark background
     expect(color).toContain('255');
   });
@@ -357,7 +366,8 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const azulItem = page.locator(`${SECTION_AZUL} ${ITEM}`).first();
-    const borderColor = await azulItem.evaluate(el => getComputedStyle(el).borderBottomColor); // measurement: style check
+    const borderColor = // 📏 TODO: Replace with measurement-utils
+    await azulItem.evaluate(el => getComputedStyle(el).borderBottomColor); // measurement: style check
     expect(borderColor).toContain('255');
   });
 
@@ -365,7 +375,8 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const azulButton = page.locator(`${SECTION_AZUL} ${ITEM_BUTTON}`).first();
-    const color = await azulButton.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await azulButton.evaluate(el => getComputedStyle(el).color); // measurement: style check
     expect(color).toContain('255');
   });
 
@@ -373,7 +384,8 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const graniteLine = page.locator(`${SECTION_GRANITE} ${ICON_LINE_H}`).first();
-    const bgColor = await graniteLine.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
+    const bgColor = // 📏 TODO: Replace with measurement-utils
+    await graniteLine.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     // Should be white on dark background
     expect(bgColor).toContain('255');
   });
@@ -385,7 +397,8 @@ test.describe('Accordion — Dark Background Overrides', () => {
     const heading = whiteButton.locator('h2, h3, h4, h5, h6').first();
     const headingCount = await heading.count();
     if (headingCount > 0) {
-      const color = await heading.evaluate(el => getComputedStyle(el).color); // measurement: style check
+      const color = // 📏 TODO: Replace with measurement-utils
+    await heading.evaluate(el => getComputedStyle(el).color); // measurement: style check
       // Should be a dark granite color, not white
       expect(color).not.toContain('rgb(255, 255, 255)');
     }
@@ -415,7 +428,8 @@ test.describe('Accordion — Content Panel', () => {
 
     await clickElement(firstButton);
     await expect(firstContent).toHaveAttribute('aria-hidden', 'false');
-    const borderLeft = await firstContent.evaluate(el => getComputedStyle(el).borderLeftStyle); // measurement: style check
+    const borderLeft = // 📏 TODO: Replace with measurement-utils
+    await firstContent.evaluate(el => getComputedStyle(el).borderLeftStyle); // measurement: style check
     expect(borderLeft).toBe('solid');
   });
 
@@ -424,7 +438,8 @@ test.describe('Accordion — Content Panel', () => {
     await pom.navigate(BASE());
     const firstContent = page.locator(`${SECTION_WHITE} ${ITEM_CONTENT}`).first();
     await expect(firstContent).toHaveAttribute('aria-hidden', 'true');
-    const borderColor = await firstContent.evaluate(el => getComputedStyle(el).borderLeftColor); // measurement: style check
+    const borderColor = // 📏 TODO: Replace with measurement-utils
+    await firstContent.evaluate(el => getComputedStyle(el).borderLeftColor); // measurement: style check
     // Should be transparent
     expect(borderColor).toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
   });
@@ -438,7 +453,8 @@ test.describe('Accordion — Content Panel', () => {
     // Expand first two items (they have different content lengths)
     await whiteButtons.nth(0).click();
     await whiteButtons.nth(1).click();
-    await page.waitForTimeout(500); // Wait for expansion animation
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Wait for expansion animation
 
     const height0 = await whiteContents.nth(0).evaluate(el => el.scrollHeight);
     const height1 = await whiteContents.nth(1).evaluate(el => el.scrollHeight);
@@ -482,11 +498,13 @@ test.describe('Accordion — Responsive', () => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
     const button = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
-    const mobileSize = await button.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: style check
+    const mobileSize = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: style check
 
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.waitForTimeout(300);
-    const desktopSize = await button.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: style check
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const desktopSize = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: style check
 
     // Desktop font should be larger or equal to mobile
     expect(desktopSize).toBeGreaterThanOrEqual(mobileSize);
@@ -569,7 +587,8 @@ test.describe('Accordion — ARIA Accessibility', () => {
     const indicator = graniteButton.locator(INDICATOR_GA);
 
     await graniteButton.focus();
-    const boxShadow = await indicator.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
+    const boxShadow = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
     expect(boxShadow).not.toBe('none');
   });
 });
@@ -680,13 +699,13 @@ test.describe('Accordion — Console & Resources', () => {
     capture.start();
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     capture.clear();
     const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
     await clickElement(firstButton);
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     await clickElement(firstButton);
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     const unexpected = errors.filter(e => !KNOWN_ERRORS.some(known => e.message.includes(known)));

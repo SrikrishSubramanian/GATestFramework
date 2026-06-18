@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -35,7 +36,8 @@ test.describe('ImageWithNestedContent — Focus Interactions', () => {
     await pom.navigate(BASE());
     const instance = page.locator(IWNC).first();
     // Focus the content-trail link via JS (element may have 0 height so scrollIntoView may fail)
-    const focused = await instance.evaluate(el => {
+    const focused = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       const ct = el.querySelector('.cmp-content-trail__container') as HTMLElement;
       if (!ct) return false;
       ct.focus();
@@ -43,7 +45,8 @@ test.describe('ImageWithNestedContent — Focus Interactions', () => {
     });
     expect(focused).toBe(true);
     // After focus, inject <img> if missing and check outline CSS rule
-    const outlineOffset = await instance.evaluate(el => {
+    const outlineOffset = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       let img = el.querySelector('.cmp-image__image') as HTMLElement;
       let injected = false;
       if (!img) {
@@ -65,7 +68,8 @@ test.describe('ImageWithNestedContent — Focus Interactions', () => {
     await pom.navigate(BASE());
     // Verify the CSS rule defines outline-offset: 4px on .cmp-image__image
     const instance = page.locator(IWNC).first();
-    const offset = await instance.evaluate(el => {
+    const offset = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       const ct = el.querySelector('.cmp-content-trail__container') as HTMLElement;
       if (ct) ct.focus();
       let img = el.querySelector('.cmp-image__image') as HTMLElement;
@@ -100,11 +104,13 @@ test.describe('ImageWithNestedContent — Focus Interactions', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const instance = page.locator(IWNC).first();
+    // 📏 TODO: Replace with measurement-utils
     await instance.evaluate(el => {
       const ct = el.querySelector('.cmp-content-trail__container') as HTMLElement;
       if (ct) ct.focus();
     });
-    const outlineColor = await instance.evaluate(el => {
+    const outlineColor = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       let img = el.querySelector('.cmp-image__image') as HTMLElement;
       let injected = false;
       if (!img) {
@@ -140,10 +146,12 @@ test.describe('ImageWithNestedContent — Hover Interactions', () => {
     await pom.navigate(BASE());
     // Use evaluate for hover since element may have 0 height
     const instance = page.locator(IWNC).first();
-    const hasCT = await instance.evaluate(el => !!el.querySelector('.cmp-content-trail__container'));
+    const hasCT = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => !!el.querySelector('.cmp-content-trail__container'));
     expect(hasCT).toBe(true);
     // Verify the content-trail link element has CSS transition defined for hover
-    const transition = await instance.evaluate(el => {
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       const ct = el.querySelector('.cmp-content-trail__container') as HTMLElement;
       return ct ? getComputedStyle(ct).transition : '';
     });
@@ -154,7 +162,8 @@ test.describe('ImageWithNestedContent — Hover Interactions', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const statInstance = page.locator(IWNC).filter({ has: page.locator(STAT_ITEM) }).first();
-    const cursor = await statInstance.evaluate(el => {
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await statInstance.evaluate(el => {
       const stat = el.querySelector('.cmp-statistic__item') as HTMLElement;
       return stat ? getComputedStyle(stat).cursor : 'auto';
     });
@@ -170,11 +179,13 @@ test.describe('ImageWithNestedContent — Responsive', () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await pom.navigate(BASE());
     const overlay = page.locator(`${IWNC} ${CT_CONTAINER}, ${IWNC} ${STAT_ITEM}`).first();
-    const desktopPos = await overlay.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
+    const desktopPos = // 📏 TODO: Replace with measurement-utils
+    await overlay.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(desktopPos).toBe('absolute');
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.waitForTimeout(300);
-    const mobilePos = await overlay.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const mobilePos = // 📏 TODO: Replace with measurement-utils
+    await overlay.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(mobilePos).toBe('absolute');
   });
 
@@ -183,9 +194,12 @@ test.describe('ImageWithNestedContent — Responsive', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const iwnc = page.locator(IWNC).nth(1);
+    // 📏 TODO: Replace with measurement-utils
     await iwnc.evaluate((el, cls) => el.parentElement?.classList.add(cls), SMALL_CLASS);
-    const maxW = await iwnc.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+    const maxW = // 📏 TODO: Replace with measurement-utils
+    await iwnc.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxW).toBe('350px');
+    // 📏 TODO: Replace with measurement-utils
     await iwnc.evaluate((el, cls) => el.parentElement?.classList.remove(cls), SMALL_CLASS);
   });
 

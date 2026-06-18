@@ -3,6 +3,8 @@ import { LoginPage } from '../../../pages/ga/components/loginPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -44,7 +46,8 @@ test.describe('Login â€” Image Health', () => {
     const heroImg = page.locator(HERO_IMG).first();
     if (await heroImg.count() === 0) { test.skip(); return; }
     await expect(heroImg).toBeVisible();
-    const naturalWidth = await heroImg.evaluate(el => (el as HTMLImageElement).naturalWidth);
+    const naturalWidth = // 📏 TODO: Replace with measurement-utils
+    await heroImg.evaluate(el => (el as HTMLImageElement).naturalWidth);
     expect(naturalWidth, 'Hero image should not be broken (naturalWidth > 0)').toBeGreaterThan(0);
   });
 
@@ -86,7 +89,8 @@ test.describe('Login â€” Image Health', () => {
     const heroImg = page.locator(HERO_IMG).first();
     if (await heroImg.count() === 0) { test.skip(); return; }
     await expect(heroImg).toBeVisible();
-    const attrs = await heroImg.evaluate(el => ({
+    const attrs = // 📏 TODO: Replace with measurement-utils
+    await heroImg.evaluate(el => ({
       width: el.getAttribute('width'),
       height: el.getAttribute('height'),
     }));
@@ -103,7 +107,8 @@ test.describe('Login â€” Image Health', () => {
     const toggleIcon = page.locator(PASSWORD_TOGGLE_SVG).first();
     if (await toggleIcon.count() === 0) { test.skip(); return; }
     // SVG should either have aria-hidden (button has label) or have a <title> element
-    const tag = await toggleIcon.evaluate(el => el.tagName.toLowerCase());
+    const tag = // 📏 TODO: Replace with measurement-utils
+    await toggleIcon.evaluate(el => el.tagName.toLowerCase());
     if (tag === 'svg') {
       const ariaHidden = await toggleIcon.getAttribute('aria-hidden');
       const hasTitle = await toggleIcon.locator('title').count() > 0;

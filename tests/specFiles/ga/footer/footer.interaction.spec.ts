@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -37,9 +38,8 @@ test.describe('Footer — Interactions', () => {
       if (href && href.startsWith('#')) {
         // Internal link - should navigate without leaving page
         await clickElement(link);
-        await page.waitForTimeout(200);
-
-        // Page should still be accessible
+        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Page should still be accessible
         const root = await pom.getRoot();
         await expect(root).toBeVisible();
       }
@@ -58,7 +58,7 @@ test.describe('Footer — Interactions', () => {
       const initial = await button.getAttribute('aria-expanded');
 
       await clickElement(button);
-      await page.waitForTimeout(200);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const after = await button.getAttribute('aria-expanded');
       expect(initial).not.toBe(after);
@@ -116,9 +116,10 @@ test.describe('Footer — Interactions', () => {
 
     // Tab through footer elements
     await page.keyboard.press('Tab');
-    await page.waitForTimeout(100);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const focused = await page.evaluate(() => document.activeElement?.tagName);
+    const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
     expect(focused).toBeTruthy();
   });
 

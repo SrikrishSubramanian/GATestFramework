@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -45,7 +47,8 @@ test.describe('Text â€” Interactions', () => {
     await expect(text).toBeVisible();
 
     // Verify text can be selected
-    const userSelect = await text.evaluate(el =>
+    const userSelect = // 📏 TODO: Replace with measurement-utils
+    await text.evaluate(el =>
       window.getComputedStyle(el).userSelect
     );
     expect(userSelect).not.toBe('none');
@@ -60,7 +63,8 @@ test.describe('Text â€” Interactions', () => {
       const firstLink = links.first();
       await firstLink.focus();
 
-      const isFocused = await firstLink.evaluate(el =>
+      const isFocused = // 📏 TODO: Replace with measurement-utils
+    await firstLink.evaluate(el =>
         document.activeElement === el
       );
       expect(isFocused).toBeTruthy();

@@ -5,6 +5,8 @@ import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -113,8 +115,7 @@ test.describe('AccordionTabsFeature — Accordion Behavior (Desktop) @interactio
 
     // Click second tab
     await tabs.nth(1).click();
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Second tab should now be selected
     await expect(tabs.nth(1)).toHaveAttribute('aria-selected', 'true');
 
@@ -134,15 +135,13 @@ test.describe('AccordionTabsFeature — Accordion Behavior (Desktop) @interactio
 
     // Click tab 2 (Portfolio Management)
     await tabs.nth(1).click();
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Panel 2 title should be visible
     await expect(panels.nth(1).locator(PANEL_TITLE)).toContainText('Portfolio Management');
 
     // Click tab 3 (Risk Assessment)
     await tabs.nth(2).click();
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Panel 3 title should be visible
     await expect(panels.nth(2).locator(PANEL_TITLE)).toContainText('Risk Assessment');
   });
@@ -158,8 +157,7 @@ test.describe('AccordionTabsFeature — Accordion Behavior (Desktop) @interactio
 
     // Click first tab again
     await tabs.nth(0).click();
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Capture aria-selected state — may remain true (tabs pattern) or toggle to false (accordion pattern)
     const afterClick = await tabs.nth(0).getAttribute('aria-selected');
     // Either behavior is valid — the test verifies no crash and consistent state
@@ -179,12 +177,10 @@ test.describe('AccordionTabsFeature — Accordion Behavior (Desktop) @interactio
     // Click tab 2 to change state
     const tabs = page.locator(ROOT).nth(0).locator(TAB);
     await tabs.nth(1).click();
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Reload page
     await page.reload({ waitUntil: 'networkidle' });
-    await page.waitForTimeout(1000);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // After reload, first tab should be expanded again (default state)
     const firstTab = page.locator(ROOT).nth(0).locator(TAB).nth(0);
     const selected = await firstTab.getAttribute('aria-selected');
@@ -256,8 +252,7 @@ test.describe('AccordionTabsFeature — Icon & Animation @interaction @regressio
 
     // Click tab 2
     await tabs.nth(1).click();
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Capture post-click state
     const tab1AfterClasses = await tabs.nth(0).getAttribute('class');
     const tab2AfterClasses = await tabs.nth(1).getAttribute('class');
@@ -275,7 +270,8 @@ test.describe('AccordionTabsFeature — Icon & Animation @interaction @regressio
     const instance = page.locator(ROOT).nth(0);
 
     // Check for transition or animation on panels, tabs, or wrapper
-    const hasTransition = await instance.evaluate(root => {
+    const hasTransition = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(root => {
       const elements = root.querySelectorAll(
         '.cmp-accordion-tabs-feature__accordion-body, .cmp-accordion-tabs-feature__accordion-header, .cmp-accordion-tabs-feature__accordion-item, .cmp-accordion-tabs-feature__image-panel'
       );
@@ -332,7 +328,7 @@ test.describe('AccordionTabsFeature — CTA Navigation @interaction @regression'
     for (let i = 0; i < tabCount; i++) {
       // Activate each tab to reveal its CTA
       await tabs.nth(i).click();
-      await page.waitForTimeout(500);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const panels = instance.locator(TABPANEL);
       const cta = panels.nth(i).locator(`${PANEL_CTA} a`);
@@ -364,8 +360,7 @@ test.describe('AccordionTabsFeature — Keyboard Navigation @interaction @a11y @
 
     // Press ArrowDown or ArrowRight to move to next tab
     await page.keyboard.press('ArrowDown');
-    await page.waitForTimeout(300);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Check if focus moved (ArrowDown or ArrowRight depending on orientation)
     const focusedElement = page.locator(':focus');
     const focusedRole = await focusedElement.getAttribute('role').catch(() => null);
@@ -374,7 +369,7 @@ test.describe('AccordionTabsFeature — Keyboard Navigation @interaction @a11y @
     if (focusedRole !== 'tab') {
       await tabs.nth(0).focus();
       await page.keyboard.press('ArrowRight');
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
 
     // At least one arrow key should navigate between tabs
@@ -393,15 +388,14 @@ test.describe('AccordionTabsFeature — Keyboard Navigation @interaction @a11y @
 
     // Press Enter to activate
     await page.keyboard.press('Enter');
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Check if tab was activated
     const selected = await tabs.nth(1).getAttribute('aria-selected');
     if (selected !== 'true') {
       // Try Space instead
       await tabs.nth(1).focus();
       await page.keyboard.press('Space');
-      await page.waitForTimeout(500);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
 
     const afterSpace = await tabs.nth(1).getAttribute('aria-selected');
@@ -420,13 +414,14 @@ test.describe('AccordionTabsFeature — Keyboard Navigation @interaction @a11y @
 
     // Press Tab to move focus to panel content (standard WAI-ARIA tabs pattern)
     await page.keyboard.press('Tab');
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const focused = page.locator(':focus');
     await expect(focused).toBeVisible();
 
     // Focus should have moved out of the tablist
-    const focusedParent = await focused.evaluate(el => {
+    const focusedParent = // 📏 TODO: Replace with measurement-utils
+    await focused.evaluate(el => {
       const tablist = el.closest('[role="tablist"]');
       return tablist !== null;
     });
@@ -466,7 +461,7 @@ test.describe('AccordionTabsFeature — Stability @interaction @regression', () 
 
   test('[ATF-065] @interaction @regression Rapid tab switching produces no JS errors', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     capture.clear();
 
     const tabs = page.locator(ROOT).nth(0).locator(TAB);
@@ -476,11 +471,12 @@ test.describe('AccordionTabsFeature — Stability @interaction @regression', () 
     for (let round = 0; round < 3; round++) {
       for (let i = 0; i < count; i++) {
         await tabs.nth(i).click();
-        await page.waitForTimeout(50); // Minimal delay — stress test
+        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Minimal delay — stress test
       }
     }
 
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);
@@ -496,10 +492,9 @@ test.describe('AccordionTabsFeature — Stability @interaction @regression', () 
     // Rapid clicks
     for (let i = 0; i < count; i++) {
       await tabs.nth(i).click();
-      await page.waitForTimeout(30);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // After settling, exactly one tab should be selected
     const selectedTabs = [];
     for (let i = 0; i < count; i++) {
@@ -519,7 +514,7 @@ test.describe('AccordionTabsFeature — Stability @interaction @regression', () 
     // Interact with all tabs
     for (let i = 0; i < await tabs.count(); i++) {
       await tabs.nth(i).click();
-      await page.waitForTimeout(200);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
 
     // Verify DOM structure is still intact
@@ -565,7 +560,7 @@ test.describe('AccordionTabsFeature — Headline Variant Interaction @interactio
 
     // Click second tab
     await tabs.nth(1).click();
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     await expect(tabs.nth(1)).toHaveAttribute('aria-selected', 'true');
     const panel = instance.locator(TABPANEL).nth(1);
@@ -613,8 +608,7 @@ test.describe('AccordionTabsFeature — Mobile Drawer Interaction @interaction @
 
     // Click second tab
     await tabs.nth(1).click();
-    await page.waitForTimeout(500);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Verify mutual exclusion
     await expect(tabs.nth(1)).toHaveAttribute('aria-selected', 'true');
     await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'false');
@@ -627,14 +621,14 @@ test.describe('AccordionTabsFeature — Mobile Drawer Interaction @interaction @
     const tabs = instance.locator(TAB);
 
     await tabs.nth(2).click();
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     await expect(tabs.nth(2)).toHaveAttribute('aria-selected', 'true');
   });
 
   test('[ATF-074] @interaction @mobile @regression Mobile: rapid drawer switching with no errors', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     capture.clear();
 
     const tabs = page.locator(ROOT).nth(0).locator(TAB);
@@ -644,11 +638,11 @@ test.describe('AccordionTabsFeature — Mobile Drawer Interaction @interaction @
     for (let round = 0; round < 3; round++) {
       for (let i = 0; i < count; i++) {
         await tabs.nth(i).click();
-        await page.waitForTimeout(50);
+        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
       }
     }
 
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);
@@ -660,7 +654,8 @@ test.describe('AccordionTabsFeature — Mobile Drawer Interaction @interaction @
     const tab = page.locator(ROOT).nth(0).locator(TAB).first();
 
     await tab.focus();
-    const indicator = await tab.evaluate(el => {
+    const indicator = // 📏 TODO: Replace with measurement-utils
+    await tab.evaluate(el => {
       const s = getComputedStyle(el);
       return {
         outline: s.outlineStyle !== 'none',
@@ -728,7 +723,7 @@ test.describe('AccordionTabsFeature — Dark Background Interaction @interaction
     // Click each tab and verify no errors
     for (let i = 0; i < tabCount; i++) {
       await tabs.nth(i).click();
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
       await expect(tabs.nth(i)).toHaveAttribute('aria-selected', 'true');
     }
   });

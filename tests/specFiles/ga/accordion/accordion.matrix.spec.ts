@@ -4,6 +4,8 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -57,7 +59,7 @@ test.describe('Accordion — State Matrix', () => {
             switch (state) {
               case 'expanded':
                 await clickElement(item);
-                await page.waitForTimeout(200);
+                // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
                 const expanded = await item.getAttribute('aria-expanded');
                 expect(expanded).toBe('true');
                 break;

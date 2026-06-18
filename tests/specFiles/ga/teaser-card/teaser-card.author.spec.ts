@@ -180,7 +180,8 @@ test.describe('TeaserCard — Color Variants', () => {
     const card = page.locator(TC_COLOR_BORDER).first();
     if (await card.count() === 0) { test.skip(); return; }
     await expect(card).toBeVisible();
-    const bg = await card.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(['rgba(0, 0, 0, 0)', 'transparent'].some(v => bg === v) || bg.startsWith('rgba(0, 0, 0, 0)')).toBe(true);
   });
 
@@ -195,8 +196,9 @@ test.describe('TeaserCard — Color Variants', () => {
     // Background is applied to the inner .cmp-teaser-card, not the outer wrapper
     const inner = card.locator(TC).first();
     if (await inner.count() === 0) { test.skip(); return; }
-    const bg = await inner.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
-    expect(bg, 'White variant should have white background').toBe('rgb(255, 255, 255)');
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await inner.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    expect(bg, 'White variant should have white background', `Expected 'rgb(255, 255, 255, got ${bg, 'White variant should have white background'}`).toBe('rgb(255, 255, 255)');
   });
 
   test('[TC-013] @regression Slate variant card has non-transparent, non-white background', async ({ page }) => {
@@ -210,7 +212,8 @@ test.describe('TeaserCard — Color Variants', () => {
     // Background is applied to the inner .cmp-teaser-card, not the outer wrapper
     const inner = card.locator(TC).first();
     if (await inner.count() === 0) { test.skip(); return; }
-    const bg = await inner.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await inner.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg, 'Slate variant should not be white').not.toBe('rgb(255, 255, 255)');
     expect(bg, 'Slate variant should not be transparent').not.toContain('rgba(0, 0, 0, 0)');
   });
@@ -225,7 +228,8 @@ test.describe('TeaserCard — Color Variants', () => {
     // Border is applied to the inner .cmp-teaser-card element, not the outer wrapper
     const inner = card.locator(TC).first();
     if (await inner.count() === 0) { test.skip(); return; }
-    const border = await inner.evaluate(el => {
+    const border = // 📏 TODO: Replace with measurement-utils
+    await inner.evaluate(el => {
       const cs = getComputedStyle(el);
       return { width: cs.borderTopWidth, style: cs.borderTopStyle };
     });
@@ -241,7 +245,8 @@ test.describe('TeaserCard — Color Variants', () => {
     if (await card.count() === 0) { test.skip(); return; }
     const title = card.locator(TC_TITLE).first();
     if (await title.count() === 0) { test.skip(); return; }
-    const color = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const rgb = color.match(/\d+/g)?.map(Number) ?? [];
     if (rgb.length >= 3) {
       expect(rgb[0] + rgb[1] + rgb[2], 'Title text should not be white on light-background card').toBeLessThan(700);
@@ -275,7 +280,8 @@ test.describe('TeaserCard — Image Variants', () => {
 
     const wrapper = outer.locator(TC_IMAGE_WRAPPER).first();
     if (await wrapper.count() === 0) { test.skip(); return; }
-    const radius = await wrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius, 'Circle image style should have border-radius 50%').toBe('50%');
   });
 
@@ -289,7 +295,8 @@ test.describe('TeaserCard — Image Variants', () => {
 
     const wrapper = outer.locator(TC_IMAGE_WRAPPER).first();
     if (await wrapper.count() === 0) { test.skip(); return; }
-    const radius = await wrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius, 'Rectangle image style must not be circular (50%)').not.toBe('50%');
   });
 
@@ -373,7 +380,8 @@ test.describe('TeaserCard — CTA & Card Clickability', () => {
     const linkedCard = page.locator(`a${TC}`).first();
     if (await linkedCard.count() === 0) { test.skip(); return; }
     await hover(linkedCard);
-    const cursor = await linkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await linkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Clickable card should show pointer cursor').toBe('pointer');
   });
 
@@ -383,7 +391,8 @@ test.describe('TeaserCard — CTA & Card Clickability', () => {
     // Without CTA, the inner element is <div class="cmp-teaser-card">, not <a>
     const nonLinkedCard = page.locator(`div${TC}`).first();
     if (await nonLinkedCard.count() === 0) { test.skip(); return; }
-    const tag = await nonLinkedCard.evaluate(el => el.tagName.toLowerCase());
+    const tag = // 📏 TODO: Replace with measurement-utils
+    await nonLinkedCard.evaluate(el => el.tagName.toLowerCase());
     expect(tag, 'Non-CTA card must be a <div>, not wrapped in an <a>').toBe('div');
   });
 
@@ -431,7 +440,8 @@ test.describe('TeaserCard — Equal Height & Stretch', () => {
 
     const content = page.locator(TC_CONTENT).first();
     if (await content.count() === 0) { test.skip(); return; }
-    const align = await content.evaluate(el => getComputedStyle(el).alignItems); // measurement: use measurement-utils for cleaner code
+    const align = // 📏 TODO: Replace with measurement-utils
+    await content.evaluate(el => getComputedStyle(el).alignItems); // measurement: use measurement-utils for cleaner code
     expect(['flex-start', 'normal', 'start', ''], 'Content should be top-aligned').toContain(align);
   });
 
@@ -473,7 +483,8 @@ test.describe('TeaserCard — Equal Height & Stretch', () => {
     const outerBox = await outer.boundingBox();
     // Cards appear in multi-column grids; compare width to the card's own grid column, not the section.
     // Verify no horizontal overflow and a meaningful rendered width.
-    const noOverflow = await outer.evaluate(el => el.scrollWidth <= el.clientWidth + 2);
+    const noOverflow = // 📏 TODO: Replace with measurement-utils
+    await outer.evaluate(el => el.scrollWidth <= el.clientWidth + 2);
     expect(noOverflow, 'Card must not overflow its column horizontally').toBe(true);
     expect(outerBox!.width, 'Card should have a meaningful rendered width').toBeGreaterThan(100);
   });
@@ -523,7 +534,8 @@ test.describe('TeaserCard — Responsive / Mobile', () => {
     const card = page.locator(`${TC_POS_LEFT}${TC_IMG_RECTANGLE.replace(TC_OUTER, '')}, ${TC_POS_RIGHT}${TC_IMG_RECTANGLE.replace(TC_OUTER, '')}`).first();
     if (await card.count() === 0) { test.skip(); return; }
     const inner   = card.locator(TC).first();
-    const flexDir = await inner.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await inner.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(['column', 'column-reverse'], 'Rectangle Left/Right card should stack vertically on mobile').toContain(flexDir);
   });
 
@@ -533,7 +545,8 @@ test.describe('TeaserCard — Responsive / Mobile', () => {
     await pom.navigate(BASE());
     const title = page.locator(TC_TITLE).first();
     if (await title.count() === 0) { test.skip(); return; }
-    const overflow = await title.evaluate((el: HTMLElement) => el.scrollWidth > el.clientWidth);
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await title.evaluate((el: HTMLElement) => el.scrollWidth > el.clientWidth);
     expect(overflow, 'Title should wrap without overflow at 320px').toBe(false);
   });
 });
@@ -643,7 +656,8 @@ test.describe('TeaserCard — Accessibility', () => {
     const link = page.locator(`a${TC}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     await link.focus();
-    const isFocused = await link.evaluate(el => document.activeElement === el);
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => document.activeElement === el);
     expect(isFocused, 'Card link must be keyboard focusable').toBe(true);
   });
 
@@ -654,7 +668,8 @@ test.describe('TeaserCard — Accessibility', () => {
     const link = page.locator(`a${TC}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     await link.focus();
-    const focus = await link.evaluate(el => {
+    const focus = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => {
       const cs = getComputedStyle(el);
       return { boxShadow: cs.boxShadow, outlineStyle: cs.outlineStyle, outlineWidth: cs.outlineWidth };
     });
@@ -725,7 +740,7 @@ test.describe('TeaserCard — Console', () => {
     capture.start();
     const pom = new TeaserCardPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);
@@ -763,7 +778,8 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     const imgWrapper = outer.locator(TC_IMAGE_WRAPPER).first();
     if (await imgWrapper.count() === 0) { test.skip(); return; }
 
-    const transition = await imgWrapper.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await imgWrapper.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'Enhanced hover image wrapper must have a CSS transition').not.toBe('');
     expect(transition, 'Enhanced hover image wrapper must have a CSS transition').not.toBe('all 0s ease 0s');
   });
@@ -782,7 +798,8 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
     const linkedCard = page.locator(`a${TC}`).first();
     if (await linkedCard.count() === 0) { test.skip(); return; }
 
-    const transition = await linkedCard.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await linkedCard.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'Card with CTA must have a CSS transition for hover animation').not.toBe('');
     expect(transition, 'Card hover transition must not be instant (0s)').not.toBe('all 0s ease 0s');
   });
@@ -795,7 +812,8 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
     const linkedCard = page.locator(`a${TC}`).first();
     if (await linkedCard.count() === 0) { test.skip(); return; }
 
-    const pseudoTransitions = await linkedCard.evaluate(el => ({
+    const pseudoTransitions = // 📏 TODO: Replace with measurement-utils
+    await linkedCard.evaluate(el => ({
       beforeTransition: window.getComputedStyle(el, '::before').transition,
       afterTransition:  window.getComputedStyle(el, '::after').transition,
     }));
@@ -813,7 +831,8 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
     const ctaSpan = page.locator(TC_CTA).first();
     if (await ctaSpan.count() === 0) { test.skip(); return; }
 
-    const transition = await ctaSpan.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await ctaSpan.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'CTA span must have CSS transition for simultaneous card-hover animation').not.toBe('');
     expect(transition, 'CTA transition must not be instant (0s)').not.toBe('all 0s ease 0s');
   });
@@ -827,7 +846,8 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
     if (await nonLinkedCard.count() === 0) { test.skip(); return; }
 
     await hover(nonLinkedCard);
-    const cursor = await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     // GAAM-1051: hover state was incorrectly applied even with no CTA
     expect(cursor, '[GAAM-1051] Card without CTA must not show pointer cursor on hover').not.toBe('pointer');
   });
@@ -840,7 +860,8 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
     const linkedCard = page.locator(`a${TC}`).first();
     if (await linkedCard.count() === 0) { test.skip(); return; }
 
-    const hasHoverNoneQuery = await page.evaluate(() => {
+    const hasHoverNoneQuery = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       return Array.from(document.styleSheets).some(sheet => {
         try {
           return Array.from(sheet.cssRules).some((rule: any) =>
@@ -875,7 +896,8 @@ test.describe('TeaserCard — Enhanced Hover Extended', () => {
     const imgWrapper = outer.locator(TC_IMAGE_WRAPPER).first();
     if (await imgWrapper.count() === 0) { test.skip(); return; }
 
-    const position = await imgWrapper.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
+    const position = // 📏 TODO: Replace with measurement-utils
+    await imgWrapper.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(['absolute', 'relative', 'sticky'], 'Enhanced hover image wrapper must be positioned for fill-card effect').toContain(position);
   });
 
@@ -887,7 +909,8 @@ test.describe('TeaserCard — Enhanced Hover Extended', () => {
     const outer = page.locator(TC_ENHANCED).first();
     if (await outer.count() === 0) { test.skip(); return; }
 
-    const pseudoBgs = await outer.evaluate(el => {
+    const pseudoBgs = // 📏 TODO: Replace with measurement-utils
+    await outer.evaluate(el => {
       const targets = [el, el.querySelector('.cmp-teaser-card__image-wrapper')].filter(Boolean);
       return targets.flatMap(target => {
         const before = window.getComputedStyle(target as Element, '::before');
@@ -911,7 +934,8 @@ test.describe('TeaserCard — Enhanced Hover Extended', () => {
     const content = outer.locator(TC_CONTENT).first();
     if (await content.count() === 0) { test.skip(); return; }
 
-    const transition = await content.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await content.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'Enhanced hover content must have CSS transition for text color animation').not.toBe('');
     expect(transition, 'Enhanced hover content transition must not be instant (0s)').not.toBe('all 0s ease 0s');
   });
@@ -924,7 +948,8 @@ test.describe('TeaserCard — Enhanced Hover Extended', () => {
     const outer = page.locator(TC_ENHANCED).first();
     if (await outer.count() === 0) { test.skip(); return; }
 
-    const durations = await outer.evaluate(el => {
+    const durations = // 📏 TODO: Replace with measurement-utils
+    await outer.evaluate(el => {
       const wrapper = el.querySelector('.cmp-teaser-card__image-wrapper');
       const content = el.querySelector('.cmp-teaser-card__content-wrapper');
       const parseMs = (dur: string) => {

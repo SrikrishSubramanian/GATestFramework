@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -38,7 +39,8 @@ test.describe('Form Options — Images & Icons', () => {
       expect(src).toBeTruthy();
 
       // Verify image is visible
-      const display = await img.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+      const display = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       expect(['block', 'inline', 'inline-block', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });
@@ -68,7 +70,8 @@ test.describe('Form Options — Images & Icons', () => {
 
     for (let i = 0; i < Math.min(svgCount, 3); i++) {
       const svg = svgs.nth(i);
-      const display = await svg.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+      const display = // 📏 TODO: Replace with measurement-utils
+    await svg.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       expect(['block', 'inline', 'inline-block', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });
@@ -84,7 +87,8 @@ test.describe('Form Options — Images & Icons', () => {
       const label = checkboxLabels.nth(i);
 
       // Check if label has custom styling (pseudo-element or nested icon)
-      const hasContent = await label.evaluate(el => {
+      const hasContent = // 📏 TODO: Replace with measurement-utils
+    await label.evaluate(el => {
         const computed = window.getComputedStyle(el, ':before');
         return computed.content !== 'none';
       });
@@ -108,7 +112,8 @@ test.describe('Form Options — Images & Icons', () => {
       await expect(label).toBeVisible();
 
       // Check for custom styling
-      const hasCustomStyle = await label.evaluate(el => {
+      const hasCustomStyle = // 📏 TODO: Replace with measurement-utils
+    await label.evaluate(el => {
         const style = window.getComputedStyle(el);
         return style.position || style.backgroundColor !== 'rgba(0, 0, 0, 0)';
       });

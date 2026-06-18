@@ -4,6 +4,8 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -90,7 +92,8 @@ test.describe('Rate Table — Visual Regression', () => {
     const tbody = table.locator('tbody');
 
     // Check that border-collapse or spacing is applied
-    const borderCollapse = await table.evaluate(el =>
+    const borderCollapse = // 📏 TODO: Replace with measurement-utils
+    await table.evaluate(el =>
       window.getComputedStyle(el).borderCollapse
     );
     expect(['collapse', 'separate']).toContain(borderCollapse);
@@ -102,7 +105,8 @@ test.describe('Rate Table — Visual Regression', () => {
 
     // Check mobile-specific styles
     const table = page.locator('.cmp-rate-table').first();
-    const display = await table.evaluate(el =>
+    const display = // 📏 TODO: Replace with measurement-utils
+    await table.evaluate(el =>
       window.getComputedStyle(el).display
     );
 

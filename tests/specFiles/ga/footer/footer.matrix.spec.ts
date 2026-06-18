@@ -3,6 +3,9 @@ import { FooterPage } from '../../../pages/ga/components/footerPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -48,7 +51,8 @@ test.describe('Footer — State Matrix', () => {
           await expect(root).toBeVisible();
 
           // Verify footer width adapts to viewport
-          const width = await root.evaluate(el => el.offsetWidth);
+          const width = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => el.offsetWidth);
           expect(width).toBeLessThanOrEqual(viewport.width);
 
           // Verify no errors

@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -30,7 +32,8 @@ test.describe('Text â€” Visual Regression', () => {
     const root = page.locator('.cmp-text').first();
     await expect(root).toBeVisible();
 
-    const fontSize = await root.evaluate(el =>
+    const fontSize = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el =>
       window.getComputedStyle(el).fontSize
     );
     const size = parseInt(fontSize);
@@ -42,10 +45,12 @@ test.describe('Text â€” Visual Regression', () => {
     await page.goto(url);
 
     const root = page.locator('.cmp-text').first();
-    const color = await root.evaluate(el =>
+    const color = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el =>
       window.getComputedStyle(el).color
     );
-    const bg = await root.evaluate(el =>
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el =>
       window.getComputedStyle(el).backgroundColor
     );
 
@@ -79,7 +84,8 @@ test.describe('Text â€” Visual Regression', () => {
 
     const text = page.locator('.cmp-text p').first();
     if (await text.count() > 0) {
-      const lineHeight = await text.evaluate(el =>
+      const lineHeight = // 📏 TODO: Replace with measurement-utils
+    await text.evaluate(el =>
         window.getComputedStyle(el).lineHeight
       );
       expect(lineHeight).not.toBe('normal'); // TODO: Use assertTypography() for font checks

@@ -46,7 +46,8 @@ test.describe('Image — Hover Zoom Interaction', () => {
     // Capture transform before hover
     const imgCount = await page.locator(`${IMG_LINK} ${IMG_IMAGE}`).count();
     if (imgCount === 0) {
-      await page.evaluate(({ linkSel, imgClass }) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(({ linkSel, imgClass }) => {
         const picture = document.querySelector(`${linkSel} .cmp-image__picture`);
         if (picture) {
           const img = document.createElement('img');
@@ -58,12 +59,15 @@ test.describe('Image — Hover Zoom Interaction', () => {
     }
 
     const imgLocator = page.locator(`${IMG_LINK} ${IMG_IMAGE}`).first();
-    const beforeTransform = await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
+    const beforeTransform = // 📏 TODO: Replace with measurement-utils
+    await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
 
     await hover(linkedPicture);
-    await page.waitForTimeout(350); // allow 0.3s transition to complete
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // allow 0.3s transition to complete
 
-    const afterTransform = await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
+    const afterTransform = // 📏 TODO: Replace with measurement-utils
+    await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
 
     // After hover, transform should differ from the default identity matrix
     // or explicitly be the scale(1.15) matrix
@@ -71,7 +75,8 @@ test.describe('Image — Hover Zoom Interaction', () => {
     expect(afterTransform).not.toBe('matrix(1, 0, 0, 1, 0, 0)');
 
     if (imgCount === 0) {
-      await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
     }
   });
 
@@ -87,7 +92,8 @@ test.describe('Image — Hover Zoom Interaction', () => {
 
     const imgCount = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).count();
     if (imgCount === 0) {
-      await page.evaluate(({ rootSel, linkSel, imgClass }) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(({ rootSel, linkSel, imgClass }) => {
         const nonLinkedRoot = Array.from(document.querySelectorAll(rootSel)).find(el => !el.querySelector(linkSel));
         const picture = nonLinkedRoot?.querySelector('.cmp-image__picture');
         if (picture) {
@@ -100,13 +106,14 @@ test.describe('Image — Hover Zoom Interaction', () => {
     }
 
     await hover(nonLinkedPicture);
-    await page.waitForTimeout(350);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const transform = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
     expect(transform === 'none' || transform === 'matrix(1, 0, 0, 1, 0, 0)').toBe(true);
 
     if (imgCount === 0) {
-      await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
     }
   });
 
@@ -120,13 +127,14 @@ test.describe('Image — Hover Zoom Interaction', () => {
     if (count === 0) { test.skip(); return; }
 
     // Verify overflow:hidden is set (structural guarantee of clip behaviour)
-    const overflow = await linkedPicture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await linkedPicture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
     expect(overflow).toBe('hidden');
 
     // Hover and confirm the picture box dimensions do not change (clip in place)
     const boxBefore = await linkedPicture.boundingBox();
     await hover(linkedPicture);
-    await page.waitForTimeout(350);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const boxAfter = await linkedPicture.boundingBox();
 
     expect(boxAfter?.width).toBeCloseTo(boxBefore?.width ?? 0, 0);
@@ -140,7 +148,8 @@ test.describe('Image — Hover Zoom Interaction', () => {
 
     const imgCount = await page.locator(IMG_IMAGE).count();
     if (imgCount === 0) {
-      await page.evaluate((sel) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((sel) => {
         const picture = document.querySelector(sel);
         if (picture) {
           const img = document.createElement('img');
@@ -155,7 +164,8 @@ test.describe('Image — Hover Zoom Interaction', () => {
     expect(transition).toContain('0.3s');
 
     if (imgCount === 0) {
-      await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
     }
   });
 });
@@ -175,7 +185,8 @@ test.describe('Image — Keyboard Focus Interaction', () => {
     if (count === 0) { test.skip(); return; }
 
     await link.focus();
-    const isFocused = await link.evaluate((el: Element) => el === document.activeElement);
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate((el: Element) => el === document.activeElement);
     expect(isFocused).toBe(true);
   });
 
@@ -191,12 +202,14 @@ test.describe('Image — Keyboard Focus Interaction', () => {
     await link.focus();
 
     // A visible focus indicator means outline is not 'none' or has non-zero outline-width
-    const outline = await link.evaluate((el: Element) => {
+    const outline = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate((el: Element) => {
       const cs = getComputedStyle(el);
       return { style: cs.outlineStyle, width: cs.outlineWidth, color: cs.outlineColor };
     });
     const hasOutline = outline.style !== 'none' && parseFloat(outline.width) > 0;
-    const hasBoxShadow = await link.evaluate((el: Element) => {
+    const hasBoxShadow = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate((el: Element) => {
       const cs = getComputedStyle(el);
       return cs.boxShadow !== 'none' && cs.boxShadow !== '';
     });
@@ -216,7 +229,8 @@ test.describe('Image — Keyboard Focus Interaction', () => {
     let reached = false;
     for (let i = 0; i < 30; i++) {
       await page.keyboard.press('Tab');
-      const focused = await page.evaluate(() => document.activeElement?.className ?? '');
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.className ?? '');
       if (focused.includes('cmp-image__link')) {
         reached = true;
         break;
@@ -240,7 +254,8 @@ test.describe('Image — Responsive Interaction', () => {
     const count = await gridPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('20px');
   });
 
@@ -253,7 +268,8 @@ test.describe('Image — Responsive Interaction', () => {
     const count = await gridPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('12px');
   });
 
@@ -310,8 +326,10 @@ test.describe('Image — Caption Interaction', () => {
       return;
     }
 
-    const lightColor = await lightCaption.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-    const darkColor = await darkCaption.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const lightColor = // 📏 TODO: Replace with measurement-utils
+    await lightCaption.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const darkColor = // 📏 TODO: Replace with measurement-utils
+    await darkCaption.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(lightColor).not.toBe(darkColor);
   });
 });

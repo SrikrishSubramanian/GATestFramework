@@ -6,6 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -52,11 +53,13 @@ async function checkImgCss(page: import('@playwright/test').Page, iwncLocator: i
 // ── Helper: add --small class to wrapper, run check, remove ──
 async function withSmallClass(page: import('@playwright/test').Page, fn: () => Promise<void>) {
   const iwnc = page.locator(IWNC).nth(1); // 2nd instance is "small" in style guide
-  await iwnc.evaluate((el: HTMLElement, cls: string) => {
+  // 📏 TODO: Replace with measurement-utils
+    await iwnc.evaluate((el: HTMLElement, cls: string) => {
     el.parentElement?.classList.add(cls);
   }, SMALL_CLASS);
   await fn();
-  await iwnc.evaluate((el: HTMLElement, cls: string) => {
+  // 📏 TODO: Replace with measurement-utils
+    await iwnc.evaluate((el: HTMLElement, cls: string) => {
     el.parentElement?.classList.remove(cls);
   }, SMALL_CLASS);
 }
@@ -64,13 +67,15 @@ async function withSmallClass(page: import('@playwright/test').Page, fn: () => P
 // ── Helper: wrap instance in section class, run check, remove ──
 async function withSectionBg(page: import('@playwright/test').Page, idx: number, sectionClass: string, fn: (instance: import('@playwright/test').Locator) => Promise<void>) {
   const instance = page.locator(IWNC).nth(idx);
-  await instance.evaluate((el: HTMLElement, cls: string) => {
+  // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate((el: HTMLElement, cls: string) => {
     // Walk up to nearest aem-GridColumn parent and add the section class
     const gridCol = el.closest('.aem-GridColumn') || el.parentElement;
     if (gridCol) gridCol.classList.add(cls);
   }, sectionClass);
   await fn(instance);
-  await instance.evaluate((el: HTMLElement, cls: string) => {
+  // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate((el: HTMLElement, cls: string) => {
     const gridCol = el.closest('.aem-GridColumn') || el.parentElement;
     if (gridCol) gridCol.classList.remove(cls);
   }, sectionClass);
@@ -100,7 +105,8 @@ test.describe('ImageWithNestedContent — Core Structure', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const overlay = page.locator(`${IWNC} ${CT_CONTAINER}, ${IWNC} ${STAT_ITEM}`).first();
-    const pos = await overlay.evaluate((el: HTMLElement) => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
+    const pos = // 📏 TODO: Replace with measurement-utils
+    await overlay.evaluate((el: HTMLElement) => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(pos).toBe('absolute');
   });
 
@@ -174,7 +180,8 @@ test.describe('ImageWithNestedContent — Size Variants', () => {
     await pom.navigate(BASE());
     await withSmallClass(page, async () => {
       const iwnc = page.locator(IWNC).nth(1);
-      const maxW = await iwnc.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+      const maxW = // 📏 TODO: Replace with measurement-utils
+    await iwnc.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
       expect(maxW).toBe('350px');
     });
   });
@@ -184,7 +191,8 @@ test.describe('ImageWithNestedContent — Size Variants', () => {
     await pom.navigate(BASE());
     await withSmallClass(page, async () => {
       const iwnc = page.locator(IWNC).nth(1);
-      const maxH = await iwnc.evaluate(el => getComputedStyle(el).maxHeight); // measurement: use measurement-utils for cleaner code
+      const maxH = // 📏 TODO: Replace with measurement-utils
+    await iwnc.evaluate(el => getComputedStyle(el).maxHeight); // measurement: use measurement-utils for cleaner code
       expect(maxH).toBe('366px');
     });
   });
@@ -203,6 +211,7 @@ test.describe('ImageWithNestedContent — Size Variants', () => {
     await pom.navigate(BASE());
     // Use instance with statistic (index 2 or 3)
     const statInstance = page.locator(IWNC).filter({ has: page.locator(STAT_ITEM) }).first();
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate((el: HTMLElement, cls: string) => {
       el.parentElement?.classList.add(cls);
     }, SMALL_CLASS);
@@ -210,6 +219,7 @@ test.describe('ImageWithNestedContent — Size Variants', () => {
       getComputedStyle(el).fontSize
     );
     expect(fontSize).toBe('40px'); // TODO: Use assertTypography() for font checks
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate((el: HTMLElement, cls: string) => {
       el.parentElement?.classList.remove(cls);
     }, SMALL_CLASS);
@@ -223,7 +233,8 @@ test.describe('ImageWithNestedContent — Positioning', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const ct = page.locator(`${IWNC} ${CT_CONTAINER}`).first();
-    const styles = await ct.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await ct.evaluate(el => {
       const cs = getComputedStyle(el);
       return { bottom: cs.bottom, left: cs.left, right: cs.right };
     });
@@ -236,7 +247,8 @@ test.describe('ImageWithNestedContent — Positioning', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const stat = page.locator(`${IWNC} ${STAT_ITEM}`).first();
-    const styles = await stat.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await stat.evaluate(el => {
       const cs = getComputedStyle(el);
       return { bottom: cs.bottom, left: cs.left, right: cs.right };
     });
@@ -249,7 +261,8 @@ test.describe('ImageWithNestedContent — Positioning', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const overlay = page.locator(`${IWNC} ${CT_CONTAINER}, ${IWNC} ${STAT_ITEM}`).first();
-    const zIndex = await overlay.evaluate(el => getComputedStyle(el).zIndex); // measurement: use measurement-utils for cleaner code
+    const zIndex = // 📏 TODO: Replace with measurement-utils
+    await overlay.evaluate(el => getComputedStyle(el).zIndex); // measurement: use measurement-utils for cleaner code
     expect(zIndex === 'auto' || parseInt(zIndex) >= 0).toBe(true);
   });
 
@@ -283,7 +296,8 @@ test.describe('ImageWithNestedContent — Focus', () => {
     await ctLink.focus();
     // Check outline on .cmp-image__image (injected if needed) or on the wrapper
     const instance = page.locator(IWNC).first();
-    const outlineWidth = await instance.evaluate(el => {
+    const outlineWidth = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       // Try existing img first
       let img = el.querySelector('.cmp-image__image') as HTMLElement | null;
       if (img) return getComputedStyle(img).outlineWidth;
@@ -293,7 +307,8 @@ test.describe('ImageWithNestedContent — Focus', () => {
       return '0px';
     });
     // The :has() CSS selector may not fire without a real <img> — verify at least the focus lands
-    const isFocused = await page.evaluate(() =>
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() =>
       document.activeElement?.classList.contains('cmp-content-trail__container') ||
       document.activeElement?.classList.contains('cmp-content-trail__link')
     );
@@ -308,7 +323,8 @@ test.describe('ImageWithNestedContent — Focus', () => {
     const ctLink = instance.locator(CT_CONTAINER).first();
     await ctLink.scrollIntoViewIfNeeded();
     await ctLink.focus();
-    const offset = await instance.evaluate(el => {
+    const offset = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       let img = el.querySelector('.cmp-image__image') as HTMLElement | null;
       let injected = false;
       if (!img) {
@@ -331,7 +347,8 @@ test.describe('ImageWithNestedContent — Focus', () => {
     const focusable = page.locator(`${IWNC} a, ${IWNC} button`).first();
     await focusable.scrollIntoViewIfNeeded();
     await focusable.focus();
-    const isFocused = await focusable.evaluate(el => document.activeElement === el);
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await focusable.evaluate(el => document.activeElement === el);
     expect(isFocused).toBe(true);
   });
 });
@@ -344,7 +361,8 @@ test.describe('ImageWithNestedContent — Mobile', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const statValue = page.locator(`${IWNC} .cmp-statistic__value p`).first();
-    const fontSize = await statValue.evaluate(el => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
+    const fontSize = // 📏 TODO: Replace with measurement-utils
+    await statValue.evaluate(el => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
     expect(fontSize).toBe('40px'); // TODO: Use assertTypography() for font checks
   });
 
@@ -353,7 +371,8 @@ test.describe('ImageWithNestedContent — Mobile', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const desc = page.locator(`${IWNC} .cmp-statistic__description`).first();
-    const ratio = await desc.evaluate(el => {
+    const ratio = // 📏 TODO: Replace with measurement-utils
+    await desc.evaluate(el => {
       const parent = el.closest('.cmp-statistic__item') as HTMLElement;
       if (!parent) return 0;
       return el.getBoundingClientRect().width / parent.getBoundingClientRect().width;
@@ -378,12 +397,15 @@ test.describe('ImageWithNestedContent — Mobile', () => {
     await pom.navigate(BASE());
     // Apply --small class and verify centering
     const iwnc = page.locator(IWNC).nth(1);
+    // 📏 TODO: Replace with measurement-utils
     await iwnc.evaluate((el: HTMLElement, cls: string) => el.parentElement?.classList.add(cls), SMALL_CLASS);
-    const margin = await iwnc.evaluate(el => {
+    const margin = // 📏 TODO: Replace with measurement-utils
+    await iwnc.evaluate(el => {
       const cs = getComputedStyle(el);
       return { left: cs.marginLeft, right: cs.marginRight };
     });
     expect(margin.left).toBe(margin.right); // TODO: Use assertSpacing() for padding/margin
+    // 📏 TODO: Replace with measurement-utils
     await iwnc.evaluate((el: HTMLElement, cls: string) => el.parentElement?.classList.remove(cls), SMALL_CLASS);
   });
 
@@ -404,12 +426,14 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
     await pom.navigate(BASE());
     // Inject white section class on first CT instance
     const ctInstance = page.locator(IWNC).filter({ has: page.locator(CT_CONTAINER) }).first();
+    // 📏 TODO: Replace with measurement-utils
     await ctInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.add('cmp-section--background-color-white');
     });
     const bg = await ctInstance.locator(CT_CONTAINER).first().evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).toMatch(/rgb\(255,\s*255,\s*255\)/);
+    // 📏 TODO: Replace with measurement-utils
     await ctInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.remove('cmp-section--background-color-white');
@@ -420,12 +444,14 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const statInstance = page.locator(IWNC).filter({ has: page.locator(STAT_ITEM) }).first();
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.add('cmp-section--background-color-white');
     });
     const bg = await statInstance.locator(STAT_ITEM).first().evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).toMatch(/rgb\(255,\s*255,\s*255\)/);
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.remove('cmp-section--background-color-white');
@@ -436,6 +462,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const statInstance = page.locator(IWNC).filter({ has: page.locator(STAT_ITEM) }).first();
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.add('cmp-section--background-color-granite');
@@ -443,6 +470,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
     const bg = await statInstance.locator(STAT_ITEM).first().evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).not.toBe('rgba(0, 0, 0, 0)');
     expect(bg).not.toMatch(/rgb\(255,\s*255,\s*255\)/); // Not white on dark bg
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.remove('cmp-section--background-color-granite');
@@ -453,6 +481,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const statInstance = page.locator(IWNC).filter({ has: page.locator(STAT_ITEM) }).first();
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.add('cmp-section--background-color-azul');
@@ -461,6 +490,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
       getComputedStyle(el).color
     );
     expect(descColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.remove('cmp-section--background-color-azul');
@@ -471,6 +501,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const statInstance = page.locator(IWNC).filter({ has: page.locator(STAT_ITEM) }).first();
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.add('cmp-section--background-color-granite');
@@ -480,6 +511,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
     );
     // Granite value color should be ga-green — not default black
     expect(color).not.toBe('rgb(0, 0, 0)');
+    // 📏 TODO: Replace with measurement-utils
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.remove('cmp-section--background-color-granite');
@@ -534,7 +566,7 @@ test.describe('ImageWithNestedContent — Console Errors', () => {
     capture.start();
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     capture.stop();
     expect(capture.getErrors()).toEqual([]);
   });

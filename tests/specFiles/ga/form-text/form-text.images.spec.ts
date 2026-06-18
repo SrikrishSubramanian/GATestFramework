@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -55,7 +57,8 @@ test.describe('Form Text â€” Images & Media', () => {
 
     for (let i = 0; i < Math.min(count, 3); i++) {
       const el = bgElements.nth(i);
-      const bgImage = await el.evaluate(el =>
+      const bgImage = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el =>
         window.getComputedStyle(el).backgroundImage
       );
       if (bgImage !== 'none') {

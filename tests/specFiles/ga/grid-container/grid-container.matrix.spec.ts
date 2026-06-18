@@ -5,6 +5,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -56,7 +57,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
     const grid = page.locator('.ga-grid--2col .cmp-grid-container__items > .aem-Grid').first();
     await expect(grid).toBeVisible();
 
-    const { columns, gap } = await grid.evaluate((el: HTMLElement) => {
+    const { columns, gap } = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       const style = window.getComputedStyle(el);
       return {
         columns: style.gridTemplateColumns,
@@ -83,7 +85,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
     const grid = page.locator('.ga-grid--2col.ga-grid--ratio-1-3 .cmp-grid-container__items > .aem-Grid').first();
     await expect(grid).toBeVisible();
 
-    const columns = await grid.evaluate((el: HTMLElement) => {
+    const columns = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       return window.getComputedStyle(el).gridTemplateColumns;
     });
 
@@ -117,7 +120,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
     const grid = slateSection.locator('.ga-grid--2col.ga-grid--ratio-2-3 .cmp-grid-container__items > .aem-Grid').first();
     await expect(grid).toBeVisible();
 
-    const columns = await grid.evaluate((el: HTMLElement) => {
+    const columns = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       return window.getComputedStyle(el).gridTemplateColumns;
     });
 
@@ -139,7 +143,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
     expect(secondRatio).toBeLessThan(0.65);
 
     // Slate section must be present as ancestor
-    const slateBg = await slateSection.evaluate((el: HTMLElement) => {
+    const slateBg = // 📏 TODO: Replace with measurement-utils
+    await slateSection.evaluate((el: HTMLElement) => {
       return el.classList.contains('cmp-section--background-color-slate');
     });
     expect(slateBg).toBe(true);
@@ -153,7 +158,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
     const grid = page.locator('.ga-grid--gap-col .cmp-grid-container__items > .aem-Grid').first();
     await expect(grid).toBeVisible();
 
-    const gapPx = await grid.evaluate((el: HTMLElement) => {
+    const gapPx = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 2) return 0;
       const r0 = cols[0].getBoundingClientRect();
@@ -173,7 +179,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
     await expect(grid).toBeVisible();
 
     // Verify 3 columns are side-by-side at desktop
-    const layout = await grid.evaluate((el: HTMLElement) => {
+    const layout = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 3) return { count: cols.length, sideBySide: false };
       const r0 = cols[0].getBoundingClientRect();
@@ -202,7 +209,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
     const grid = graniteSection.locator('.cmp-grid-container__items > .aem-Grid').first();
     await expect(grid).toBeVisible();
 
-    const layout = await grid.evaluate((el: HTMLElement) => {
+    const layout = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 4) return { count: cols.length, sideBySide: false };
       const r0 = cols[0].getBoundingClientRect();
@@ -217,7 +225,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
 
     // On granite, text color should be white/light
     const wrapper = graniteSection.locator('.grid-container').first();
-    const textColor = await wrapper.evaluate((el: HTMLElement) => window.getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const textColor = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate((el: HTMLElement) => window.getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const match = textColor.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
     if (match) {
       expect(parseInt(match[1])).toBeGreaterThan(200);
@@ -232,7 +241,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
     const mobileGridEl = page.locator('.ga-grid--mobile-grid').first();
     await expect(mobileGridEl).toBeVisible();
 
-    const hasMobileGridClass = await mobileGridEl.evaluate((el: HTMLElement) => {
+    const hasMobileGridClass = // 📏 TODO: Replace with measurement-utils
+    await mobileGridEl.evaluate((el: HTMLElement) => {
       return el.classList.contains('ga-grid--mobile-grid');
     });
     expect(hasMobileGridClass).toBe(true);
@@ -253,7 +263,8 @@ test.describe('GridContainer — Desktop Matrix', () => {
       const el = page.locator(selector).first();
       await expect(el).toBeVisible();
 
-      const display = await el.evaluate((node: HTMLElement) => {
+      const display = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate((node: HTMLElement) => {
         return window.getComputedStyle(node).display;
       });
 
@@ -276,7 +287,8 @@ test.describe('GridContainer — Mobile Matrix', () => {
     await expect(grid).toBeVisible();
 
     // Mobile override uses display:flex;flex-direction:column — check columns stack
-    const stacked = await grid.evaluate((el: HTMLElement) => {
+    const stacked = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 2) return true;
       const r0 = cols[0].getBoundingClientRect();
@@ -294,7 +306,8 @@ test.describe('GridContainer — Mobile Matrix', () => {
     const grid = page.locator('.ga-grid--3col .cmp-grid-container__items > .aem-Grid').first();
     await expect(grid).toBeVisible();
 
-    const stacked = await grid.evaluate((el: HTMLElement) => {
+    const stacked = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 2) return true;
       const r0 = cols[0].getBoundingClientRect();
@@ -312,7 +325,8 @@ test.describe('GridContainer — Mobile Matrix', () => {
     const grid = page.locator('.ga-grid--4col .cmp-grid-container__items > .aem-Grid').first();
     await expect(grid).toBeVisible();
 
-    const stacked = await grid.evaluate((el: HTMLElement) => {
+    const stacked = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 2) return true;
       const r0 = cols[0].getBoundingClientRect();
@@ -330,7 +344,8 @@ test.describe('GridContainer — Mobile Matrix', () => {
     const grid = page.locator('.ga-grid--mobile-grid .cmp-grid-container__items > .aem-Grid').first();
     await expect(grid).toBeVisible();
 
-    const columns = await grid.evaluate((el: HTMLElement) => {
+    const columns = // 📏 TODO: Replace with measurement-utils
+    await grid.evaluate((el: HTMLElement) => {
       return window.getComputedStyle(el).gridTemplateColumns;
     });
 

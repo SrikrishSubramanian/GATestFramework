@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -51,7 +53,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const boldText = page.locator('strong, b, [style*="font-weight"]').first();
     if (await boldText.count() > 0) {
-      const fontWeight = await boldText.evaluate(el =>
+      const fontWeight = // 📏 TODO: Replace with measurement-utils
+    await boldText.evaluate(el =>
         window.getComputedStyle(el).fontWeight
       );
       expect(fontWeight).not.toBe('400'); // TODO: Use assertTypography() for font checks
@@ -64,7 +67,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const italicText = page.locator('em, i, [style*="font-style"]').first();
     if (await italicText.count() > 0) {
-      const fontStyle = await italicText.evaluate(el =>
+      const fontStyle = // 📏 TODO: Replace with measurement-utils
+    await italicText.evaluate(el =>
         window.getComputedStyle(el).fontStyle
       );
       expect(fontStyle).toBe('italic');
@@ -77,7 +81,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const underlineText = page.locator('u, [style*="text-decoration"]').first();
     if (await underlineText.count() > 0) {
-      const decoration = await underlineText.evaluate(el =>
+      const decoration = // 📏 TODO: Replace with measurement-utils
+    await underlineText.evaluate(el =>
         window.getComputedStyle(el).textDecoration
       );
       expect(decoration).toContain('underline');
@@ -165,7 +170,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const li = page.locator('li').first();
     if (await li.count() > 0) {
-      const listStyleType = await li.evaluate(el =>
+      const listStyleType = // 📏 TODO: Replace with measurement-utils
+    await li.evaluate(el =>
         window.getComputedStyle(el).listStyleType
       );
       expect(listStyleType).not.toBe('none');
@@ -236,7 +242,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const code = page.locator('code').first();
     if (await code.count() > 0) {
-      const fontFamily = await code.evaluate(el =>
+      const fontFamily = // 📏 TODO: Replace with measurement-utils
+    await code.evaluate(el =>
         window.getComputedStyle(el).fontFamily
       );
       expect(fontFamily).toContain('mono');
@@ -249,7 +256,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const blockquote = page.locator('blockquote').first();
     if (await blockquote.count() > 0) {
-      const marginLeft = await blockquote.evaluate(el =>
+      const marginLeft = // 📏 TODO: Replace with measurement-utils
+    await blockquote.evaluate(el =>
         window.getComputedStyle(el).marginLeft
       );
       expect(marginLeft).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -262,7 +270,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const pre = page.locator('pre').first();
     if (await pre.count() > 0) {
-      const whiteSpace = await pre.evaluate(el =>
+      const whiteSpace = // 📏 TODO: Replace with measurement-utils
+    await pre.evaluate(el =>
         window.getComputedStyle(el).whiteSpace
       );
       expect(whiteSpace).toBe('pre');
@@ -276,7 +285,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const coloredText = page.locator('[style*="color:"]').first();
     if (await coloredText.count() > 0) {
-      const color = await coloredText.evaluate(el =>
+      const color = // 📏 TODO: Replace with measurement-utils
+    await coloredText.evaluate(el =>
         window.getComputedStyle(el).color
       );
       expect(color).not.toBe('rgb(0, 0, 0)');
@@ -289,7 +299,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const highlightedText = page.locator('[style*="background-color:"]').first();
     if (await highlightedText.count() > 0) {
-      const bgColor = await highlightedText.evaluate(el =>
+      const bgColor = // 📏 TODO: Replace with measurement-utils
+    await highlightedText.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
       expect(bgColor).not.toBe('rgba(0, 0, 0, 0)');
@@ -314,7 +325,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const paragraph = page.locator('p').first();
     if (await paragraph.count() > 0) {
-      const textAlign = await paragraph.evaluate(el =>
+      const textAlign = // 📏 TODO: Replace with measurement-utils
+    await paragraph.evaluate(el =>
         window.getComputedStyle(el).textAlign
       );
       expect(['left', 'start']).toContain(textAlign);
@@ -349,7 +361,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
-      const width = await rte.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await rte.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
   });
@@ -361,7 +374,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
-      const width = await rte.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await rte.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
   });
@@ -373,7 +387,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
-      const width = await rte.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await rte.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(400);
     }
   });
@@ -385,7 +400,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const text = page.locator('p, li').first();
     if (await text.count() > 0) {
-      const fontSize = await text.evaluate(el => {
+      const fontSize = // 📏 TODO: Replace with measurement-utils
+    await text.evaluate(el => {
         const size = window.getComputedStyle(el).fontSize;
         return parseInt(size);
       });
@@ -399,7 +415,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const text = page.locator('p').first();
     if (await text.count() > 0) {
-      const lineHeight = await text.evaluate(el => {
+      const lineHeight = // 📏 TODO: Replace with measurement-utils
+    await text.evaluate(el => {
         const lh = window.getComputedStyle(el).lineHeight;
         return parseInt(lh);
       });
@@ -413,7 +430,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const text = page.locator('p').first();
     if (await text.count() > 0) {
-      const color = await text.evaluate(el =>
+      const color = // 📏 TODO: Replace with measurement-utils
+    await text.evaluate(el =>
         window.getComputedStyle(el).color
       );
       expect(color).not.toBe('rgba(0, 0, 0, 0)');

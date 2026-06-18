@@ -6,6 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -75,7 +76,8 @@ test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
     await pom.navigate(BASE());
     const tablist = page.locator(ROOT).nth(0).locator(TABLIST);
     await expect(tablist).toBeVisible();
-    const tag = await tablist.evaluate(el => el.tagName.toLowerCase());
+    const tag = // 📏 TODO: Replace with measurement-utils
+    await tablist.evaluate(el => el.tagName.toLowerCase());
     expect(tag).toBe('div');
     await expect(tablist).toHaveAttribute('role', 'tablist');
   });
@@ -104,13 +106,13 @@ test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
 
   test('[ATF-006] @regression Tabs are clickable without JS errors', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     capture.clear();
 
     const tabs = page.locator(ROOT).nth(0).locator(TAB);
     for (let i = 0; i < 3; i++) {
       await tabs.nth(i).click();
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
 
     const errors = capture.getErrors();
@@ -220,7 +222,7 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Desktop)', () =>
     await page.locator(ROOT).nth(1).evaluate(el => {
       el.setAttribute('data-style', 'scrolling-tabs');
     });
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     return page.locator(ROOT).nth(1);
   }
 
@@ -239,7 +241,8 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Desktop)', () =>
   test('[ATF-015] @smoke @regression Scrolling tabs right column uses sticky positioning', async ({ page }) => {
     const instance = await activateScrollingTabs(page);
     const right = instance.locator(RIGHT);
-    const position = await right.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
+    const position = // 📏 TODO: Replace with measurement-utils
+    await right.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     // Sticky requires component CSS — skip if not loaded
     if (position === 'static') { test.skip(); return; }
     expect(position).toBe('sticky');
@@ -248,16 +251,19 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Desktop)', () =>
   test('[ATF-016] @regression Scrolling tabs right column has top offset for sticky', async ({ page }) => {
     const instance = await activateScrollingTabs(page);
     const right = instance.locator(RIGHT);
-    const position = await right.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
+    const position = // 📏 TODO: Replace with measurement-utils
+    await right.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     if (position !== 'sticky') { test.skip(); return; }
-    const top = await right.evaluate(el => getComputedStyle(el).top); // measurement: use measurement-utils for cleaner code
+    const top = // 📏 TODO: Replace with measurement-utils
+    await right.evaluate(el => getComputedStyle(el).top); // measurement: use measurement-utils for cleaner code
     expect(top).toBe('64px');
   });
 
   test('[ATF-017] @regression Scrolling tabs left column has defined width', async ({ page }) => {
     const instance = await activateScrollingTabs(page);
     const left = instance.locator(LEFT);
-    const flex = await left.evaluate(el => getComputedStyle(el).flex); // measurement: use measurement-utils for cleaner code
+    const flex = // 📏 TODO: Replace with measurement-utils
+    await left.evaluate(el => getComputedStyle(el).flex); // measurement: use measurement-utils for cleaner code
     // Component CSS sets flex: 0 0 440px — skip if CSS not loaded
     if (flex === '0 1 auto') { test.skip(); return; }
     expect(flex).toContain('440');
@@ -312,7 +318,8 @@ test.describe('AccordionTabsFeature — Accordion Variant (Mobile)', () => {
     await pom.navigate(BASE());
     const instance = page.locator(ROOT).first();
     const right = instance.locator(RIGHT);
-    const display = await right.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await right.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     // Requires component CSS for responsive hiding — skip if not loaded
     if (display !== 'none') { test.skip(); return; }
     expect(display).toBe('none');
@@ -331,14 +338,14 @@ test.describe('AccordionTabsFeature — Accordion Variant (Mobile)', () => {
 
   test('[ATF-023] @mobile @regression Tab click does not cause errors on mobile', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     capture.clear();
 
     const tabs = page.locator(ROOT).first().locator(TAB);
     await tabs.nth(0).click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     await tabs.nth(1).click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const errors = capture.getErrors();
     capture.stop();
@@ -349,7 +356,8 @@ test.describe('AccordionTabsFeature — Accordion Variant (Mobile)', () => {
     const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     const instance = page.locator(ROOT).first();
-    const overflow = await instance.evaluate(el => el.scrollWidth > el.clientWidth);
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => el.scrollWidth > el.clientWidth);
     expect(overflow).toBe(false);
   });
 
@@ -359,7 +367,8 @@ test.describe('AccordionTabsFeature — Accordion Variant (Mobile)', () => {
     // Panel titles are in the right column which is hidden on mobile
     // Check tab text size instead
     const tab = page.locator(ROOT).first().locator(TAB).first();
-    const mobileSize = await tab.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
+    const mobileSize = // 📏 TODO: Replace with measurement-utils
+    await tab.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
     expect(mobileSize).toBeGreaterThan(0);
   });
 });
@@ -376,7 +385,7 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Mobile)', () => 
     await page.locator(ROOT).nth(1).evaluate(el => {
       el.setAttribute('data-style', 'scrolling-tabs');
     });
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     return page.locator(ROOT).nth(1);
   }
 
@@ -390,7 +399,8 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Mobile)', () => 
   test('[ATF-027] @mobile @regression Scrolling tabs right column hidden on mobile', async ({ page }) => {
     const instance = await activateScrollingTabsMobile(page);
     const right = instance.locator(RIGHT);
-    const display = await right.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await right.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     // Requires component CSS for responsive hiding — skip if not loaded
     if (display !== 'none') { test.skip(); return; }
     expect(display).toBe('none');
@@ -398,7 +408,8 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Mobile)', () => 
 
   test('[ATF-028] @mobile @regression Scrolling tabs mobile has no horizontal overflow', async ({ page }) => {
     const instance = await activateScrollingTabsMobile(page);
-    const overflow = await instance.evaluate(el => el.scrollWidth > el.clientWidth);
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => el.scrollWidth > el.clientWidth);
     expect(overflow).toBe(false);
   });
 
@@ -495,7 +506,8 @@ test.describe('AccordionTabsFeature — Accessibility', () => {
     // Panels may use tabindex or rely on focusable children for keyboard access
     // Verify at least the expanded panel is reachable
     const firstPanel = panels.first();
-    const focusable = await firstPanel.evaluate(el => {
+    const focusable = // 📏 TODO: Replace with measurement-utils
+    await firstPanel.evaluate(el => {
       const tabindex = el.getAttribute('tabindex');
       const hasFocusableChild = el.querySelector('a, button, [tabindex]') !== null;
       return tabindex !== null || hasFocusableChild;
@@ -518,7 +530,8 @@ test.describe('AccordionTabsFeature — Accessibility', () => {
     await pom.navigate(BASE());
     // Scope to first instance to get targeted results
     const firstRoot = page.locator(ROOT).first();
-    const id = await firstRoot.evaluate(el => {
+    const id = // 📏 TODO: Replace with measurement-utils
+    await firstRoot.evaluate(el => {
       if (!el.id) el.id = 'atf-axe-target';
       return el.id;
     });
@@ -541,7 +554,8 @@ test.describe('AccordionTabsFeature — Accessibility', () => {
     await pom.navigate(BASE());
     const tab = page.locator(`${ROOT} ${TAB}`).first();
     await tab.focus();
-    const outline = await tab.evaluate(el => {
+    const outline = // 📏 TODO: Replace with measurement-utils
+    await tab.evaluate(el => {
       const style = getComputedStyle(el);
       return {
         outlineStyle: style.outlineStyle,
@@ -558,16 +572,16 @@ test.describe('AccordionTabsFeature — Accessibility', () => {
 test.describe('AccordionTabsFeature — Console & Resources', () => {
   test('[ATF-041] @regression No unexpected JS errors on load and interaction', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     capture.clear();
 
     const tabs = page.locator(ROOT).first().locator(TAB);
     await tabs.nth(0).click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     await tabs.nth(1).click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     await tabs.nth(2).click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const errors = capture.getErrors();
     capture.stop();
@@ -619,12 +633,12 @@ test.describe('AccordionTabsFeature — Tablet Viewport', () => {
   test('[ATF-046] @regression Tablet tab interaction is error-free', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 1366 });const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     capture.clear();
 
     const tabs = page.locator(ROOT).first().locator(TAB);
     await tabs.nth(1).click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const errors = capture.getErrors();
     capture.stop();
@@ -705,7 +719,8 @@ test.describe('AccordionTabsFeature — Style System', () => {
     const missingRules: string[] = [];
 
     for (const cls of styleClasses) {
-      const hasRule = await page.evaluate((className) => {
+      const hasRule = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((className) => {
         try {
           for (const sheet of document.styleSheets) {
             try {

@@ -6,6 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -51,7 +52,8 @@ test.describe('Tabs — Core Structure', () => {
     await pom.navigate(BASE());
     const tablist = page.locator(TABLIST).first();
     await expect(tablist).toBeVisible();
-    const tagName = await tablist.evaluate(el => el.tagName.toLowerCase());
+    const tagName = // 📏 TODO: Replace with measurement-utils
+    await tablist.evaluate(el => el.tagName.toLowerCase());
     expect(tagName).toBe('ol');
   });
 
@@ -60,7 +62,8 @@ test.describe('Tabs — Core Structure', () => {
     await pom.navigate(BASE());
     const firstTab = page.locator(TAB).first();
     await expect(firstTab).toBeVisible();
-    const tagName = await firstTab.evaluate(el => el.tagName.toLowerCase());
+    const tagName = // 📏 TODO: Replace with measurement-utils
+    await firstTab.evaluate(el => el.tagName.toLowerCase());
     expect(tagName).toBe('li');
   });
 
@@ -69,7 +72,8 @@ test.describe('Tabs — Core Structure', () => {
     await pom.navigate(BASE());
     const tab = page.locator(TAB).first();
     await expect(tab).toBeVisible();
-    const radius = await tab.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await tab.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     // 999px resolves to a large pixel value (clamped to half the element size) or 999px literally
     const numericValue = parseFloat(radius);
     expect(numericValue).toBeGreaterThanOrEqual(19); // at minimum half of 38px height
@@ -88,10 +92,12 @@ test.describe('Tabs — Core Structure', () => {
     await pom.navigate(BASE());
     const activeTab = page.locator(TAB_ACTIVE).first();
     await expect(activeTab).toBeVisible();
-    const color = await activeTab.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await activeTab.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // White text: rgb(255, 255, 255)
-    expect(color).toBe('rgb(255, 255, 255)');
-    const bg = await activeTab.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    expect(color, `Expected 'rgb(255, 255, 255, got ${color}`).toBe('rgb(255, 255, 255)');
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await activeTab.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     // Should not be transparent — granite bg is a dark color
     expect(bg).not.toContain('rgba(0, 0, 0, 0)');
     expect(bg).not.toBe('transparent');
@@ -141,8 +147,10 @@ test.describe('Tabs — Core Structure', () => {
     await pom.navigate(BASE());
     const wrapper = page.locator('.cmp-tabs__wrapper').first();
     if (await wrapper.count() === 0) { test.skip(); return; }
-    const display = await wrapper.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
-    const flexDir = await wrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(display).toBe('flex'); // TODO: Use assertLayout() for display checks
     expect(flexDir).toBe('column');
   });
@@ -222,7 +230,8 @@ test.describe('Tabs — Tab Behavior', () => {
     await pom.navigate(BASE());
     const activePanel = page.locator(TABPANEL_ACTIVE).first();
     await expect(activePanel).toBeVisible();
-    const marginTop = await activePanel.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
+    const marginTop = // 📏 TODO: Replace with measurement-utils
+    await activePanel.evaluate(el => getComputedStyle(el).marginTop); // measurement: use measurement-utils for cleaner code
     expect(marginTop).toBe('48px'); // TODO: Use assertSpacing() for padding/margin
   });
 
@@ -253,7 +262,8 @@ test.describe('Tabs — Pill Styling', () => {
     await pom.navigate(BASE());
     const tab = page.locator(TAB).first();
     await expect(tab).toBeVisible();
-    const cursor = await tab.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await tab.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor).toBe('pointer');
   });
 
@@ -262,7 +272,8 @@ test.describe('Tabs — Pill Styling', () => {
     await pom.navigate(BASE());
     const tab = page.locator(TAB).first();
     await expect(tab).toBeVisible();
-    const transition = await tab.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await tab.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     // Should contain transition properties for bg/color
     expect(transition).not.toBe('');
     expect(transition).not.toBe('none 0s ease 0s');
@@ -283,7 +294,7 @@ test.describe('Tabs — Pill Styling', () => {
     if (inactiveIdx === -1) { test.skip(); return; }
     const bgBefore = await tabs.nth(inactiveIdx).evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await tabs.nth(inactiveIdx).hover();
-    await page.waitForTimeout(200);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const bgAfter = await tabs.nth(inactiveIdx).evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     // Background should change on hover; if transition is in progress both values may differ
     // Accept that it changed OR assert it is not fully transparent (azul 8%)
@@ -323,7 +334,8 @@ test.describe('Tabs — Pill Styling', () => {
     await pom.navigate(BASE());
     const tab = page.locator(TAB).first();
     await expect(tab).toBeVisible();
-    const fontFamily = await tab.evaluate(el => getComputedStyle(el).fontFamily); // measurement: use measurement-utils for cleaner code
+    const fontFamily = // 📏 TODO: Replace with measurement-utils
+    await tab.evaluate(el => getComputedStyle(el).fontFamily); // measurement: use measurement-utils for cleaner code
     // GA uses Graphie Bold for tab labels
     expect(fontFamily.toLowerCase()).toContain('graphie');
   });
@@ -339,7 +351,8 @@ test.describe('Tabs — Responsive', () => {
     await pom.navigate(BASE());
     const tablist = page.locator(TABLIST).first();
     await expect(tablist).toBeVisible();
-    const flexWrap = await tablist.evaluate(el => getComputedStyle(el).flexWrap); // measurement: use measurement-utils for cleaner code
+    const flexWrap = // 📏 TODO: Replace with measurement-utils
+    await tablist.evaluate(el => getComputedStyle(el).flexWrap); // measurement: use measurement-utils for cleaner code
     expect(flexWrap).toBe('wrap');
   });
 
@@ -349,7 +362,8 @@ test.describe('Tabs — Responsive', () => {
     await pom.navigate(BASE());
     const tablist = page.locator(TABLIST).first();
     await expect(tablist).toBeVisible();
-    const gap = await tablist.evaluate(el => getComputedStyle(el).gap); // measurement: use measurement-utils for cleaner code
+    const gap = // 📏 TODO: Replace with measurement-utils
+    await tablist.evaluate(el => getComputedStyle(el).gap); // measurement: use measurement-utils for cleaner code
     expect(gap).toBe('8px');
   });
 
@@ -384,7 +398,8 @@ test.describe('Tabs — Responsive', () => {
     await pom.navigate(BASE());
     const tabsInstance = page.locator(TABS).first();
     await expect(tabsInstance).toBeVisible();
-    const hasOverflow = await tabsInstance.evaluate(el => el.scrollWidth > el.clientWidth + 1);
+    const hasOverflow = // 📏 TODO: Replace with measurement-utils
+    await tabsInstance.evaluate(el => el.scrollWidth > el.clientWidth + 1);
     expect(hasOverflow).toBe(false);
   });
 
@@ -394,7 +409,8 @@ test.describe('Tabs — Responsive', () => {
     await pom.navigate(BASE());
     const tablist = page.locator(TABLIST).first();
     await expect(tablist).toBeVisible();
-    const justifyContent = await tablist.evaluate(el => getComputedStyle(el).justifyContent); // measurement: use measurement-utils for cleaner code
+    const justifyContent = // 📏 TODO: Replace with measurement-utils
+    await tablist.evaluate(el => getComputedStyle(el).justifyContent); // measurement: use measurement-utils for cleaner code
     // Center or flex-start both acceptable; verify it is not overflow-causing
     expect(['center', 'flex-start', 'normal', 'start']).toContain(justifyContent);
   });
@@ -417,7 +433,7 @@ test.describe('Tabs — Dark Mode', () => {
       const classes = await tabs.nth(i).getAttribute('class') || '';
       if (!classes.includes('--active')) {
         const color = await tabs.nth(i).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-        expect(color).toBe('rgb(255, 255, 255)');
+        expect(color, `Expected 'rgb(255, 255, 255, got ${color}`).toBe('rgb(255, 255, 255)');
         return;
       }
     }
@@ -433,10 +449,12 @@ test.describe('Tabs — Dark Mode', () => {
     if (await firstTabsInstance.count() === 0) { test.skip(); return; }
     const activeTab = firstTabsInstance.locator(TAB_ACTIVE).first();
     if (await activeTab.count() === 0) { test.skip(); return; }
-    const bg = await activeTab.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await activeTab.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     // Active tab on dark: white background
-    expect(bg).toBe('rgb(255, 255, 255)');
-    const color = await activeTab.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    expect(bg, `Expected 'rgb(255, 255, 255, got ${bg}`).toBe('rgb(255, 255, 255)');
+    const color = // 📏 TODO: Replace with measurement-utils
+    await activeTab.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Text should be dark (granite) — not white
     expect(color).not.toBe('rgb(255, 255, 255)');
   });
@@ -454,7 +472,7 @@ test.describe('Tabs — Dark Mode', () => {
       const classes = await tabs.nth(i).getAttribute('class') || '';
       if (!classes.includes('--active')) {
         const color = await tabs.nth(i).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-        expect(color).toBe('rgb(255, 255, 255)');
+        expect(color, `Expected 'rgb(255, 255, 255, got ${color}`).toBe('rgb(255, 255, 255)');
         return;
       }
     }
@@ -470,9 +488,10 @@ test.describe('Tabs — Dark Mode', () => {
     if (await firstTabsInstance.count() === 0) { test.skip(); return; }
     const tab = firstTabsInstance.locator(TAB).first();
     await tab.focus();
-    const outlineColor = await tab.evaluate(el => getComputedStyle(el).outlineColor); // measurement: use measurement-utils for cleaner code
+    const outlineColor = // 📏 TODO: Replace with measurement-utils
+    await tab.evaluate(el => getComputedStyle(el).outlineColor); // measurement: use measurement-utils for cleaner code
     // On dark backgrounds GA uses white focus ring
-    expect(outlineColor).toBe('rgb(255, 255, 255)');
+    expect(outlineColor, `Expected 'rgb(255, 255, 255, got ${outlineColor}`).toBe('rgb(255, 255, 255)');
   });
 
   test('[TAB-033] @regression Tablist pill background on dark section is semi-transparent', async ({ page }) => {
@@ -483,7 +502,8 @@ test.describe('Tabs — Dark Mode', () => {
     const firstTabsInstance = graniteSection.locator(TABS).first();
     if (await firstTabsInstance.count() === 0) { test.skip(); return; }
     const tablist = firstTabsInstance.locator(TABLIST).first();
-    const bg = await tablist.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await tablist.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     // On dark sections tablist bg is rgba semi-transparent (not solid white or transparent)
     expect(bg).toMatch(/rgba/);
     expect(bg).not.toBe('rgba(0, 0, 0, 0)');
@@ -498,9 +518,10 @@ test.describe('Tabs — Dark Mode', () => {
     const firstTabsInstance = slateSection.locator(TABS).first();
     if (await firstTabsInstance.count() === 0) { test.skip(); return; }
     const tablist = firstTabsInstance.locator(TABLIST).first();
-    const bg = await tablist.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await tablist.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     // Slate is a light section; tablist bg is white
-    expect(bg).toBe('rgb(255, 255, 255)');
+    expect(bg, `Expected 'rgb(255, 255, 255, got ${bg}`).toBe('rgb(255, 255, 255)');
   });
 });
 
@@ -568,7 +589,8 @@ test.describe('Tabs — ARIA Accessibility', () => {
     await expect(firstTab).toBeVisible();
     // Focus the first tab via Tab navigation
     await firstTab.focus();
-    const focusedTagName = await page.evaluate(() => {
+    const focusedTagName = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       const el = document.activeElement;
       return el ? el.tagName.toLowerCase() : '';
     });
@@ -630,9 +652,9 @@ test.describe('Tabs — Console', () => {
     const tabCount = await tabs.count();
     for (let i = 1; i < Math.min(tabCount, 3); i++) {
       await tabs.nth(i).click();
-      await page.waitForTimeout(200);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);

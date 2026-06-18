@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -57,7 +58,8 @@ test.describe('TeaserCard — State Matrix: Position × Color × Viewport', () =
           let card = page.locator(selector).first();
           if (await card.count() === 0) {
             // Inject variant classes on first available card
-            await page.evaluate(({ root, posClass, colClass }) => {
+            // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(({ root, posClass, colClass }) => {
               const el = document.querySelector(root);
               if (el) {
                 el.classList.add(posClass, colClass);
@@ -93,7 +95,8 @@ test.describe('TeaserCard — State Matrix: Position × Image Style', () => {
         const selector = `${TC}.${positionClass(position)}.${styleClass(style)}`;
         let card = page.locator(selector).first();
         if (await card.count() === 0) {
-          await page.evaluate(({ root, posClass, styleClass }) => {
+          // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(({ root, posClass, styleClass }) => {
             const el = document.querySelector(root);
             if (el) el.classList.add(posClass, styleClass);
           }, { root: TC, posClass: positionClass(position), styleClass: styleClass(style) });
@@ -108,10 +111,12 @@ test.describe('TeaserCard — State Matrix: Position × Image Style', () => {
           await expect(imgWrapper).toBeVisible();
 
           if (style === 'circle') {
-            const radius = await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+            const radius = // 📏 TODO: Replace with measurement-utils
+    await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
             expect(radius, `Circle image wrapper must have 50% border-radius`).toBe('50%');
           } else {
-            const radius = await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+            const radius = // 📏 TODO: Replace with measurement-utils
+    await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
             expect(radius, `Rectangle image wrapper must not be circular`).not.toBe('50%');
           }
         }
@@ -134,7 +139,8 @@ test.describe('TeaserCard — State Matrix: Color × Mobile', () => {
       const selector = `${TC}.${colorClass(color)}`;
       let card = page.locator(selector).first();
       if (await card.count() === 0) {
-        await page.evaluate(({ root, colClass }) => {
+        // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(({ root, colClass }) => {
           const el = document.querySelector(root);
           if (el) el.classList.add(colClass);
         }, { root: TC, colClass: colorClass(color) });
@@ -143,7 +149,8 @@ test.describe('TeaserCard — State Matrix: Color × Mobile', () => {
       if (await card.count() === 0) { test.skip(); return; }
       await expect(card).toBeVisible();
 
-      const overflow = await card.evaluate(el => el.scrollWidth > el.clientWidth + 2);
+      const overflow = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate(el => el.scrollWidth > el.clientWidth + 2);
       expect(overflow, `${color} card must not overflow on mobile`).toBe(false);
     });
   }
@@ -161,7 +168,8 @@ test.describe('TeaserCard — State Matrix: Enhanced Hover Applicability', () =>
 
     let card = page.locator(`${TC}.cmp-teaser-card--enhanced-hover`).first();
     if (await card.count() === 0) {
-      await page.evaluate((root) => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((root) => {
         const el = document.querySelector(root);
         if (el) el.classList.add(
           'cmp-teaser-card--enhanced-hover',
@@ -175,8 +183,10 @@ test.describe('TeaserCard — State Matrix: Enhanced Hover Applicability', () =>
     await expect(card).toBeVisible();
 
     // Must have circle + top
-    const hasCircle = await card.evaluate(el => el.classList.contains('cmp-teaser-card--image-style-circle'));
-    const hasTop = await card.evaluate(el =>
+    const hasCircle = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate(el => el.classList.contains('cmp-teaser-card--image-style-circle'));
+    const hasTop = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate(el =>
       !el.classList.contains('cmp-teaser-card--image-position-left') &&
       !el.classList.contains('cmp-teaser-card--image-position-right')
     );

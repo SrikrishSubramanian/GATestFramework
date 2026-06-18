@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -40,7 +42,8 @@ test.describe('Spacer â€” Images & Media', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const bgImage = await spacer.evaluate(el =>
+    const bgImage = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el =>
       window.getComputedStyle(el).backgroundImage
     );
 
@@ -55,7 +58,8 @@ test.describe('Spacer â€” Images & Media', () => {
     const spacer = page.locator('.cmp-spacer').first();
     await expect(spacer).toBeVisible();
 
-    const display = await spacer.evaluate(el =>
+    const display = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el =>
       window.getComputedStyle(el).display
     );
 
@@ -68,7 +72,8 @@ test.describe('Spacer â€” Images & Media', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const borderStyle = await spacer.evaluate(el =>
+    const borderStyle = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el =>
       window.getComputedStyle(el).borderStyle
     );
 
@@ -81,7 +86,8 @@ test.describe('Spacer â€” Images & Media', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const outline = await spacer.evaluate(el =>
+    const outline = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el =>
       window.getComputedStyle(el).outline
     );
 

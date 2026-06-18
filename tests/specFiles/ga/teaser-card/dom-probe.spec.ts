@@ -3,6 +3,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { DomProbe } from '../../../utils/infra/dom-probe';
 import ENV from '../../../utils/infra/env';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -21,7 +22,8 @@ test('probe teaser-card style guide DOM', async ({ page }) => {
   uniqueClasses.forEach(c => console.log(' ', c));
 
   // 2. Is the inner .cmp-teaser-card ever a <div> (no-CTA variant)?
-  const innerTags = await page.evaluate(() => {
+  const innerTags = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
     const els = document.querySelectorAll('.cmp-teaser-card');
     const tags: string[] = [];
     els.forEach(el => {
@@ -39,7 +41,8 @@ test.afterEach(async ({ page }, testInfo) => {
   console.log('\n=== .cmp-teaser-card tag types ===', innerTags);
 
   // 3. All unique child BEM element class names
-  const children = await page.evaluate(() => {
+  const children = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
     const results: string[] = [];
     document.querySelectorAll('[class*="cmp-teaser-card__"]').forEach(el => {
       const cls = el.getAttribute('class') ?? '';
@@ -52,7 +55,8 @@ test.afterEach(async ({ page }, testInfo) => {
   children.forEach(c => console.log(' ', c));
 
   // 4. Title element tag
-  const titleTags = await page.evaluate(() => {
+  const titleTags = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
     const tags: string[] = [];
     document.querySelectorAll('.cmp-teaser-card__title').forEach(el => {
       if (!tags.includes(el.tagName)) tags.push(el.tagName);

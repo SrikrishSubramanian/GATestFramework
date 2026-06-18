@@ -60,7 +60,8 @@ test.describe('Accordion — Keyboard Navigation', () => {
     const firstId = await buttons.first().getAttribute('id');
 
     await page.keyboard.press('Tab');
-    const focusedId = await page.evaluate(() => document.activeElement?.id);
+    const focusedId = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.id);
     // Focus should have moved away from the first button
     expect(focusedId).not.toBe(firstId);
   });
@@ -155,7 +156,8 @@ test.describe('Accordion — Cross-Background Behavior Consistency', () => {
       const indicator = btn.locator(INDICATOR_GA);
       // Verify indicator exists and has transition
       await expect(indicator).toBeVisible();
-      const transition = await indicator.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+      const transition = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
       expect(transition).toContain('background-color');
     }
   });
@@ -167,9 +169,11 @@ test.describe('Accordion — Hover State on Dark Backgrounds', () => {
     await pom.navigate(BASE());
     const btn = page.locator(`${SECTION_GRANITE} ${ITEM_BUTTON}`).first();
     const indicator = btn.locator(INDICATOR_GA);
-    const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await hover(btn);
-    const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });
 
@@ -178,9 +182,11 @@ test.describe('Accordion — Hover State on Dark Backgrounds', () => {
     await pom.navigate(BASE());
     const btn = page.locator(`${SECTION_AZUL} ${ITEM_BUTTON}`).first();
     const indicator = btn.locator(INDICATOR_GA);
-    const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await hover(btn);
-    const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await indicator.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });
 });

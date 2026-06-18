@@ -7,6 +7,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -41,7 +42,8 @@ test.describe('Breadcrumb — Core Structure', () => {
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
     await expect(root).toBeVisible();
-    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
+    const display = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display).not.toBe('none');
   });
 
@@ -51,7 +53,8 @@ test.describe('Breadcrumb — Core Structure', () => {
     await pom.navigate(BASE());
     const list = page.locator(BC_LIST).first();
     await expect(list).toBeVisible();
-    const tag = await list.evaluate(el => el.tagName.toLowerCase());
+    const tag = // 📏 TODO: Replace with measurement-utils
+    await list.evaluate(el => el.tagName.toLowerCase());
     expect(tag).toBe('ol');
   });
 
@@ -111,7 +114,8 @@ test.describe('Breadcrumb — Core Structure', () => {
     expect(count).toBeGreaterThanOrEqual(2);
     // Confirm ::before content is set (not 'none') on a non-first item
     const secondItem = items.nth(1);
-    const beforeContent = await secondItem.evaluate(el => {
+    const beforeContent = // 📏 TODO: Replace with measurement-utils
+    await secondItem.evaluate(el => {
       return getComputedStyle(el, '::before').content;
     });
     // SVG data-URI or url() string — should not be 'none' or empty
@@ -125,7 +129,8 @@ test.describe('Breadcrumb — Core Structure', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const styles = await link.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => {
       const cs = getComputedStyle(el);
       return { fontSize: cs.fontSize, fontWeight: cs.fontWeight };
     });
@@ -144,7 +149,8 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const color = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // gray-80 is a dark color: all RGB channels should be relatively low
     const match = color.match(/\d+/g);
     if (match) {
@@ -160,7 +166,8 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const maxWidth = await link.evaluate(el => getComputedStyle(el).maxWidth); // measurement: style check
+    const maxWidth = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).maxWidth); // measurement: style check
     expect(maxWidth).toBe('220px');
   });
 
@@ -170,7 +177,8 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const textOverflow = await link.evaluate(el => getComputedStyle(el).textOverflow); // measurement: style check
+    const textOverflow = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).textOverflow); // measurement: style check
     expect(textOverflow).toBe('ellipsis');
   });
 
@@ -180,7 +188,8 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const overflow = await link.evaluate(el => getComputedStyle(el).overflow); // measurement: style check
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).overflow); // measurement: style check
     expect(overflow).toBe('hidden');
   });
 
@@ -190,7 +199,8 @@ test.describe('Breadcrumb — Link Styling', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     // Should contain 'color' and a duration (0.2s)
     expect(transition).toContain('color');
     expect(transition).toMatch(/0\.2s/);
@@ -206,9 +216,11 @@ test.describe('Breadcrumb — Hover & Focus', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const colorBefore = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     await hover(link);
-    const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const colorAfter = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Hover should change the color
     expect(colorAfter).not.toBe(colorBefore);
   });
@@ -220,7 +232,8 @@ test.describe('Breadcrumb — Hover & Focus', () => {
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
     await link.focus();
-    const focusStyles = await link.evaluate(el => {
+    const focusStyles = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => {
       const cs = getComputedStyle(el);
       return { boxShadow: cs.boxShadow, outline: cs.outline };
     });
@@ -235,7 +248,8 @@ test.describe('Breadcrumb — Hover & Focus', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: style check
+    const borderRadius = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: style check
     expect(borderRadius).toBe('4px');
   });
 
@@ -245,7 +259,8 @@ test.describe('Breadcrumb — Hover & Focus', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     expect(transition).toContain('0.2s');
   });
 });
@@ -269,7 +284,8 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       test.skip();
       return;
     }
-    const color = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // White = rgb(255, 255, 255) or very close
     const match = color.match(/\d+/g);
     if (match) {
@@ -296,7 +312,8 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       test.skip();
       return;
     }
-    const color = await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // helper-dark is a muted/off-white — not pure white and not fully dark
     const match = color.match(/\d+/g);
     if (match) {
@@ -323,7 +340,8 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       return;
     }
     await link.focus();
-    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
+    const boxShadow = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
     // Dark mode focus ring must have a box-shadow (double ring)
     expect(boxShadow).not.toBe('none');
     expect(boxShadow.length).toBeGreaterThan(0);
@@ -342,7 +360,8 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       return;
     }
     await lightLink.focus();
-    const lightBoxShadow = await lightLink.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
+    const lightBoxShadow = // 📏 TODO: Replace with measurement-utils
+    await lightLink.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
 
     // Dark mode box-shadow
     const darkSection = page.locator(SECTION_GRANITE).first();
@@ -358,7 +377,8 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       return;
     }
     await darkLink.focus();
-    const darkBoxShadow = await darkLink.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
+    const darkBoxShadow = // 📏 TODO: Replace with measurement-utils
+    await darkLink.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
 
     // The two focus rings should differ (different color tokens)
     expect(darkBoxShadow).not.toBe(lightBoxShadow);
@@ -381,12 +401,14 @@ test.describe('Breadcrumb — Dark Mode (granite section)', () => {
       return;
     }
     // Dark mode hover uses opacity:0.7 (not color change) per LESS
-    const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const colorBefore = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Verify link is white on dark bg
     expect(colorBefore).toMatch(/rgb\(255,\s*255,\s*255\)/);
     await hover(link);
     // After hover, check opacity changed or color has alpha
-    const opacityAfter = await link.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
+    const opacityAfter = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(parseFloat(opacityAfter)).toBeLessThan(1);
   });
 });
@@ -399,7 +421,8 @@ test.describe('Breadcrumb — Mobile Hidden', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
+    const display = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display).toBe('none');
   });
 
@@ -408,7 +431,8 @@ test.describe('Breadcrumb — Mobile Hidden', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
+    const display = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display).toBe('block'); // TODO: Use assertLayout() for display checks
   });
 
@@ -417,7 +441,8 @@ test.describe('Breadcrumb — Mobile Hidden', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
+    const display = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(display).toBe('none');
   });
 });
@@ -431,7 +456,8 @@ test.describe('Breadcrumb — GAAM-700 Current Page Font Color', () => {
     await pom.navigate(BASE());
     const active = page.locator(BC_ACTIVE).first();
     await expect(active).toBeVisible();
-    const color = await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // granite-60 is a muted dark — not white, not pure black, midrange dark
     const match = color.match(/\d+/g);
     expect(match).not.toBeNull();
@@ -460,7 +486,8 @@ test.describe('Breadcrumb — GAAM-700 Current Page Font Color', () => {
       test.skip();
       return;
     }
-    const color = await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
     const match = color.match(/\d+/g);
     expect(match).not.toBeNull();
     if (match) {
@@ -476,11 +503,13 @@ test.describe('Breadcrumb — GAAM-700 Current Page Font Color', () => {
     await pom.navigate(BASE());
     const active = page.locator(BC_ACTIVE).first();
     await expect(active).toBeVisible();
-    const color = await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await active.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Must not be transparent / rgba(0,0,0,0)
     expect(color).not.toMatch(/rgba\(0,\s*0,\s*0,\s*0\)/);
     expect(color).not.toBe('transparent');
-    const opacity = await active.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
+    const opacity = // 📏 TODO: Replace with measurement-utils
+    await active.evaluate(el => getComputedStyle(el).opacity); // measurement: style check
     expect(parseFloat(opacity)).toBeGreaterThan(0);
   });
 });
@@ -540,7 +569,8 @@ test.describe('Breadcrumb — ARIA Accessibility', () => {
     const active = page.locator(BC_ACTIVE).first();
     await expect(active).toBeVisible();
     // aria-current="page" may be on the li or on a span/text inside it
-    const ariaCurrent = await active.evaluate(el => {
+    const ariaCurrent = // 📏 TODO: Replace with measurement-utils
+    await active.evaluate(el => {
       if (el.getAttribute('aria-current') === 'page') return true;
       // Check children
       const child = el.querySelector('[aria-current="page"]');

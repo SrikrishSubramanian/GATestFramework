@@ -5,6 +5,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -55,7 +56,7 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
 
     // Shrink to mobile
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const firstColMobile = await desktopColumns.nth(0).boundingBox();
     const secondColMobile = await desktopColumns.nth(1).boundingBox();
@@ -93,7 +94,7 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
 
     // Shrink to mobile
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const col0Mobile = await columns.nth(0).boundingBox();
     const col1Mobile = await columns.nth(1).boundingBox();
@@ -139,7 +140,7 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
 
     // Shrink to mobile
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const mobileBoxes: Array<{ x: number; y: number; width: number; height: number }> = [];
     for (let i = 0; i < 4; i++) {
@@ -219,7 +220,8 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
     const innerGrid = mobileGrid.locator('.cmp-grid-container__items > .aem-Grid');
 
     // Read computed column-gap on the AEM grid element
-    const columnGap = await innerGrid.evaluate((el) => {
+    const columnGap = // 📏 TODO: Replace with measurement-utils
+    await innerGrid.evaluate((el) => {
       return window.getComputedStyle(el).columnGap;
     });
 
@@ -244,14 +246,16 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
     const innerStandardGrid = standardGrid.locator('.cmp-grid-container__items > .aem-Grid');
 
     // Measure actual gap by distance between columns
-    const gapColGapPx = await innerGapGrid.evaluate(el => {
+    const gapColGapPx = // 📏 TODO: Replace with measurement-utils
+    await innerGapGrid.evaluate(el => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 2) return 0;
       const r0 = cols[0].getBoundingClientRect();
       const r1 = cols[1].getBoundingClientRect();
       return r1.left - r0.right;
     });
-    const standardGapPx = await innerStandardGrid.evaluate(el => {
+    const standardGapPx = // 📏 TODO: Replace with measurement-utils
+    await innerStandardGrid.evaluate(el => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 2) return 0;
       const r0 = cols[0].getBoundingClientRect();
@@ -271,7 +275,8 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
     if (await gapColGrid.count() === 0) { test.skip(true, 'No gap-col variant on style guide'); return; }
     const innerGapGrid = gapColGrid.locator('.cmp-grid-container__items > .aem-Grid');
 
-    const desktopGap = await innerGapGrid.evaluate(el => {
+    const desktopGap = // 📏 TODO: Replace with measurement-utils
+    await innerGapGrid.evaluate(el => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 2) return 0;
       const r0 = cols[0].getBoundingClientRect();
@@ -280,10 +285,10 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
     });
 
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.waitForTimeout(300);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // On mobile, columns stack — measure vertical gap instead
-    const mobileGap = await innerGapGrid.evaluate(el => {
+    const mobileGap = // 📏 TODO: Replace with measurement-utils
+    await innerGapGrid.evaluate(el => {
       const cols = el.querySelectorAll(':scope > .aem-GridColumn');
       if (cols.length < 2) return 0;
       const r0 = cols[0].getBoundingClientRect();
@@ -393,7 +398,8 @@ test.describe('GridContainer — Deep Interaction Tests', () => {
     expect(colCount).toBeGreaterThanOrEqual(2);
 
     // Verify align-items on the grid container is stretch (default) or explicitly set
-    const alignItems = await innerGrid.evaluate((el) => {
+    const alignItems = // 📏 TODO: Replace with measurement-utils
+    await innerGrid.evaluate((el) => {
       return window.getComputedStyle(el).alignItems;
     });
 

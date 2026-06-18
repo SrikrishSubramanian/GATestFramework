@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -71,7 +72,7 @@ test.describe('AccordionTabsFeature — Edge: Optional Content @matrix @regressi
 
       for (let t = 0; t < tabCount; t++) {
         await tabs.nth(t).click();
-        await page.waitForTimeout(300);
+        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
         const panel = panels.nth(t);
         const ctaCount = await panel.locator(PANEL_CTA).count();
@@ -102,9 +103,8 @@ test.describe('AccordionTabsFeature — Edge: Optional Content @matrix @regressi
 
     for (let i = 0; i < count; i++) {
       await tabs.nth(i).click();
-      await page.waitForTimeout(500);
-
-      // Title h3 exists in DOM but is CSS-hidden; tab text serves as visible title
+      // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Title h3 exists in DOM but is CSS-hidden; tab text serves as visible title
       const title = panels.nth(i).locator(PANEL_TITLE);
       const titleCount = await title.count();
       // Verify title exists in DOM even if hidden
@@ -126,7 +126,7 @@ test.describe('AccordionTabsFeature — Edge: Optional Content @matrix @regressi
 
     for (let i = 0; i < count; i++) {
       await tabs.nth(i).click();
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const desc = panels.nth(i).locator(PANEL_DESCRIPTION);
       const descCount = await desc.count();
@@ -149,7 +149,7 @@ test.describe('AccordionTabsFeature — Edge: Optional Content @matrix @regressi
     for (let i = 0; i < count; i++) {
       const tabText = (await tabs.nth(i).textContent())?.trim();
       await tabs.nth(i).click();
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
       const panelTitle = (await panels.nth(i).locator(PANEL_TITLE).textContent())?.trim();
       expect(panelTitle, `Tab ${i} text should match panel title`).toBe(tabText);
     }
@@ -176,14 +176,14 @@ test.describe('AccordionTabsFeature — Edge: Scalability @matrix @regression', 
     }
     // Click tab 1 (inactive) and verify it becomes active
     await tabs.nth(1).click();
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const sel1 = await tabs.nth(1).getAttribute('aria-selected');
     const exp1 = await tabs.nth(1).getAttribute('aria-expanded');
     expect(sel1 === 'true' || exp1 === 'true', 'Tab 1 should activate on click').toBe(true);
 
     // Click tab 2 and verify
     await tabs.nth(2).click();
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const sel2 = await tabs.nth(2).getAttribute('aria-selected');
     const exp2 = await tabs.nth(2).getAttribute('aria-expanded');
     expect(sel2 === 'true' || exp2 === 'true', 'Tab 2 should activate on click').toBe(true);
@@ -195,7 +195,8 @@ test.describe('AccordionTabsFeature — Edge: Scalability @matrix @regression', 
     const instance = page.locator(ROOT).nth(0);
     const left = instance.locator(LEFT);
 
-    const overflow = await left.evaluate(el => ({
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await left.evaluate(el => ({
       scrollOverflowX: el.scrollWidth > el.clientWidth,
       scrollOverflowY: el.scrollHeight > el.clientHeight,
       overflowStyle: getComputedStyle(el).overflow,
@@ -350,7 +351,8 @@ test.describe('AccordionTabsFeature — Viewport Matrix @matrix @regression', ()
       expect(box!.height).toBeGreaterThan(0);
 
       // Check overflow — tablet (768px) may have minor overflow from two-column layout
-      const overflow = await instance.evaluate(el => el.scrollWidth - el.clientWidth);
+      const overflow = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => el.scrollWidth - el.clientWidth);
       if (overflow > 5) {
         console.warn(`${vp.name}: horizontal overflow of ${overflow}px`);
       }
@@ -366,7 +368,7 @@ test.describe('AccordionTabsFeature — Viewport Matrix @matrix @regression', ()
 
       // Click second tab to verify interactivity
       await tabs.nth(1).click();
-      await page.waitForTimeout(500);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
       const selected = await tabs.nth(1).getAttribute('aria-selected');
       const expanded = await tabs.nth(1).getAttribute('aria-expanded');
       expect(selected === 'true' || expanded === 'true',
@@ -486,7 +488,8 @@ test.describe('AccordionTabsFeature — Dark Background Matrix @matrix @regressi
     const desc = darkInstance.locator(PANEL_DESCRIPTION).first();
     if (await desc.count() === 0) { test.skip(); return; }
 
-    const color = await desc.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await desc.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
     if (!match) { test.skip(); return; }
     const [, r, g, b] = match.map(Number);
@@ -561,7 +564,8 @@ test.describe('AccordionTabsFeature — Performance @matrix @regression', () => 
     await pom.navigate(BASE());
 
     // Measure CLS via PerformanceObserver
-    const cls = await page.evaluate(() => {
+    const cls = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       return new Promise<number>(resolve => {
         let clsValue = 0;
         const observer = new PerformanceObserver(list => {
@@ -599,7 +603,7 @@ test.describe('AccordionTabsFeature — Performance @matrix @regression', () => 
 
     const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(2000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     expect(oversizedImages, `Oversized images: ${oversizedImages.join(', ')}`).toEqual([]);
   });
@@ -612,7 +616,8 @@ test.describe('AccordionTabsFeature — Performance @matrix @regression', () => 
 
     for (let i = 0; i < count; i++) {
       const img = images.nth(i);
-      const hasExplicit = await img.evaluate(el => {
+      const hasExplicit = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate(el => {
         const width = el.getAttribute('width') || el.style.width;
         const height = el.getAttribute('height') || el.style.height;
         return !!(width && height);
@@ -636,7 +641,7 @@ test.describe('AccordionTabsFeature — Performance @matrix @regression', () => 
 
     const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(2000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     expect(failedResources, `Failed GA resources: ${failedResources.join(', ')}`).toEqual([]);
   });

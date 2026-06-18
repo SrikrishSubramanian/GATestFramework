@@ -19,6 +19,7 @@ import * as fs from 'fs';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -66,7 +67,8 @@ test('[BTN-FIGMA-001] Primary button color matches Figma', async ({ page }) => {
   const button = page.locator('.button.primary').first();
   const expectedColor = figmaSpec.primary.default.backgroundColor;
 
-  const bgColor = await button.evaluate(el =>
+  const bgColor = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
     getComputedStyle(el).backgroundColor
   );
 
@@ -95,9 +97,11 @@ test('[BTN-FIGMA-002] Button hover color matches Figma', async ({ page }) => {
 
   // Simulate hover
   await hover(button);
-  await page.waitForTimeout(300); // Wait for CSS transition
+  // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Wait for CSS transition
 
-  const hoverColor = await button.evaluate(el =>
+  const hoverColor = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
     getComputedStyle(el).backgroundColor
   );
 
@@ -117,7 +121,8 @@ test('[BTN-FIGMA-003] Button text color matches Figma', async ({ page }) => {
   const button = page.locator('.button.primary').first();
   const expectedTextColor = figmaSpec.primary.default.textColor;
 
-  const textColor = await button.evaluate(el =>
+  const textColor = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
     getComputedStyle(el).color
   );
 
@@ -141,7 +146,8 @@ test('[BTN-FIGMA-004] Button height matches Figma', async ({ page }) => {
   const button = page.locator('.button.primary').first();
   const expectedHeight = figmaSpec.primary.default.height;
 
-  const height = await button.evaluate(el =>
+  const height = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
     getComputedStyle(el).height
   );
 
@@ -159,7 +165,8 @@ test('[BTN-FIGMA-005] Button border radius matches Figma', async ({ page }) => {
   const button = page.locator('.button.primary').first();
   const expectedRadius = figmaSpec.primary.default.borderRadius;
 
-  const radius = await button.evaluate(el =>
+  const radius = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
     getComputedStyle(el).borderRadius
   );
 
@@ -181,7 +188,8 @@ test('[BTN-FIGMA-006] Button font size matches Figma', async ({ page }) => {
   const button = page.locator('.button.primary').first();
   const expectedSize = figmaSpec.primary.default.fontSize;
 
-  const fontSize = await button.evaluate(el =>
+  const fontSize = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
     getComputedStyle(el).fontSize
   );
 
@@ -199,7 +207,8 @@ test('[BTN-FIGMA-007] Button font weight matches Figma', async ({ page }) => {
   const button = page.locator('.button.primary').first();
   const expectedWeight = figmaSpec.primary.default.fontWeight;
 
-  const fontWeight = await button.evaluate(el =>
+  const fontWeight = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
     getComputedStyle(el).fontWeight
   );
 

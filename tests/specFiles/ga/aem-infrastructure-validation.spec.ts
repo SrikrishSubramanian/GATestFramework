@@ -17,6 +17,7 @@ import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -220,7 +221,8 @@ test.describe('Style System â€” CSS Class Existence', () => {
     const missingClasses: string[] = [];
 
     for (const mapping of STYLE_MAPPINGS) {
-      const found = await page.evaluate((cssClass) => {
+      const found = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((cssClass) => {
         const sheets = Array.from(document.styleSheets);
         for (const sheet of sheets) {
           try {
@@ -263,7 +265,8 @@ test.describe('Style System â€” CSS Class Existence', () => {
     for (const bg of backgrounds) {
       const section = page.locator(bg.selector).first();
       if (await section.count() === 0) continue;
-      const bgColor = await section.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+      const bgColor = // 📏 TODO: Replace with measurement-utils
+    await section.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
       // Should not be transparent or white on dark backgrounds
       expect(bgColor).not.toBe('rgba(0, 0, 0, 0)');
       expect(bgColor).not.toBe('rgb(255, 255, 255)');
@@ -356,7 +359,8 @@ test.describe('Clientlib Loading â€” GA Stylesheets and Scripts', () => {
     await page.waitForLoadState('networkidle');
 
     // Check for ga.site clientlib proxy CSS (AEM serves via /etc.clientlibs/ proxy)
-    const cssLinks = await page.evaluate(() => {
+    const cssLinks = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       const links = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
       return links.map(l => (l as HTMLLinkElement).href);
     });
@@ -414,7 +418,8 @@ test.describe('Clientlib Loading â€” GA Stylesheets and Scripts', () => {
     await page.waitForLoadState('networkidle');
 
     // Count CSS rules that reference GA component selectors
-    const gaRuleCount = await page.evaluate(() => {
+    const gaRuleCount = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       let count = 0;
       const gaPatterns = ['.cmp-', '.ga-', '.cmp-section--', '.cmp-button', '.cmp-text'];
       const sheets = Array.from(document.styleSheets);
@@ -445,7 +450,8 @@ test.describe('Clientlib Loading â€” GA Stylesheets and Scripts', () => {
     await page.waitForLoadState('networkidle');
 
     // Find the GA clientlib stylesheet and check its size
-    const cssInfo = await page.evaluate(() => {
+    const cssInfo = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       const links = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
       for (const link of links) {
         const href = (link as HTMLLinkElement).href;

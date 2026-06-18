@@ -3,6 +3,9 @@ import { FormOptionsPage } from '../../../pages/ga/components/formOptionsPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -47,8 +50,10 @@ test.describe('Form Options — Visual Regression', () => {
         await expect(checkbox).toBeVisible();
 
         // Check computed size
-        const width = await checkbox.evaluate(el => el.offsetWidth);
-        const height = await checkbox.evaluate(el => el.offsetHeight);
+        const width = // 📏 TODO: Replace with measurement-utils
+    await checkbox.evaluate(el => el.offsetWidth);
+        const height = // 📏 TODO: Replace with measurement-utils
+    await checkbox.evaluate(el => el.offsetHeight);
         expect(width).toBeGreaterThan(0);
         expect(height).toBeGreaterThan(0);
       }
@@ -68,7 +73,8 @@ test.describe('Form Options — Visual Regression', () => {
         await expect(radio).toBeVisible();
 
         // Check computed size
-        const width = await radio.evaluate(el => el.offsetWidth);
+        const width = // 📏 TODO: Replace with measurement-utils
+    await radio.evaluate(el => el.offsetWidth);
         expect(width).toBeGreaterThan(0);
       }
     }

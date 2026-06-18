@@ -5,6 +5,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -59,14 +60,16 @@ test.describe('Hero Fifty-Fifty â€” Interactions', () => {
     const button = page.locator('.cmp-hero-fifty-fifty button, .cmp-hero-fifty-fifty a[class*="button"]').first();
 
     if (await button.count() > 0) {
-      const initialBg = await button.evaluate(el =>
+      const initialBg = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
 
       await hover(button);
-      await page.waitForTimeout(200);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-      const hoverBg = await button.evaluate(el =>
+      const hoverBg = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
 
@@ -82,7 +85,8 @@ test.describe('Hero Fifty-Fifty â€” Interactions', () => {
     await hero.focus();
 
     await page.keyboard.press('Tab');
-    const focused = await page.evaluate(() => document.activeElement?.tagName);
+    const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
     expect(focused).toBeTruthy();
   });
 
@@ -94,7 +98,8 @@ test.describe('Hero Fifty-Fifty â€” Interactions', () => {
     await expect(hero).toBeVisible();
 
     // Verify layout is responsive
-    const width = await hero.evaluate(el => el.offsetWidth);
+    const width = // 📏 TODO: Replace with measurement-utils
+    await hero.evaluate(el => el.offsetWidth);
     expect(width).toBeGreaterThan(0);
   });
 });

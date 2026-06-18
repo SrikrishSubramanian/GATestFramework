@@ -5,6 +5,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -180,10 +181,12 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
     const select = page.locator('select').first();
     if (await select.count() > 0) {
       await select.focus();
-      const initialFocus = await page.evaluate(() => document.activeElement?.tagName);
+      const initialFocus = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
 
       await page.keyboard.press('Tab');
-      const afterTabFocus = await page.evaluate(() => document.activeElement?.tagName);
+      const afterTabFocus = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
 
       expect([initialFocus, afterTabFocus]).toBeTruthy();
     }
@@ -217,7 +220,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
 
     const disabledSelect = page.locator('select[disabled]').first();
     if (await disabledSelect.count() > 0) {
-      const isDisabled = await disabledSelect.evaluate((el: HTMLSelectElement) => el.disabled);
+      const isDisabled = // 📏 TODO: Replace with measurement-utils
+    await disabledSelect.evaluate((el: HTMLSelectElement) => el.disabled);
       expect(isDisabled).toBe(true);
     }
   });
@@ -230,7 +234,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const width = await select.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
   });
@@ -242,7 +247,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const width = await select.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
   });
@@ -254,7 +260,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const width = await select.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(200);
     }
   });
@@ -266,7 +273,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const border = await select.evaluate(el =>
+      const border = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el =>
         window.getComputedStyle(el).border
       );
       expect(border).toBeTruthy();
@@ -279,7 +287,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const color = await select.evaluate(el =>
+      const color = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el =>
         window.getComputedStyle(el).color
       );
       expect(color).not.toBe('rgba(0, 0, 0, 0)');
@@ -292,7 +301,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const padding = await select.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -403,7 +413,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
     const select = page.locator('select').first();
     if (await select.count() > 0) {
       await select.focus();
-      const focused = await page.evaluate(() => document.activeElement?.tagName);
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).toBe('SELECT');
     }
   });
@@ -415,7 +426,8 @@ test.describe('Form Field Dropdown Component (GAAM-507)', () => {
     const select = page.locator('select').first();
     if (await select.count() > 0) {
       await select.focus();
-      const outline = await select.evaluate(el =>
+      const outline = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el =>
         window.getComputedStyle(el).outline
       );
       expect(outline).toBeTruthy();

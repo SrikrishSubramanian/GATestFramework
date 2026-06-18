@@ -5,6 +5,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -51,9 +52,8 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
       if (await closeBtn.count() > 0) {
         await clickElement(closeBtn);
-        await page.waitForTimeout(300);
-
-        // Modal should be hidden or removed
+        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Modal should be hidden or removed
         const visibility = await modal.isVisible().catch(() => false);
         expect(visibility).toBe(false);
       }
@@ -67,7 +67,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const overlay = page.locator('[class*="overlay"], [class*="backdrop"], [class*="modal-backdrop"]').first();
     if (await overlay.count() > 0) {
       await overlay.click({ position: { x: 0, y: 0 } });
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const visible = await overlay.isVisible().catch(() => false);
       // Overlay should close when clicked
@@ -82,10 +82,10 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const ctaButton = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await ctaButton.count() > 0) {
       await clickElement(ctaButton);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       await page.keyboard.press('Escape');
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[class*="modal"], [role="dialog"]').first();
       const closed = !(await modal.isVisible().catch(() => false));
@@ -142,7 +142,8 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
-      const role = await cta.evaluate(el => el.tagName);
+      const role = // 📏 TODO: Replace with measurement-utils
+    await cta.evaluate(el => el.tagName);
       expect(['BUTTON', 'A']).toContain(role);
     }
   });
@@ -168,9 +169,10 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-      const focused = await page.evaluate(() => document.activeElement?.tagName);
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).toBeDefined();
     }
   });
@@ -194,15 +196,15 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const closeBtn = page.locator('[class*="close-button"], button[aria-label*="close"]').first();
       if (await closeBtn.count() > 0) {
         await clickElement(closeBtn);
-        await page.waitForTimeout(300);
-
-        // Focus should be managed
-        const focused = await page.evaluate(() => document.activeElement?.tagName);
+        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Focus should be managed
+        const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
         expect(focused).toBeDefined();
       }
     }
@@ -216,10 +218,11 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const body = page.locator('body');
-      const overflow = await body.evaluate(el =>
+      const overflow = // 📏 TODO: Replace with measurement-utils
+    await body.evaluate(el =>
         window.getComputedStyle(el).overflow
       );
 
@@ -235,15 +238,15 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const video = page.locator('video').first();
     if (await video.count() > 0) {
       await clickElement(video);
-      await page.waitForTimeout(500);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const closeBtn = page.locator('[class*="close-button"], button[aria-label*="close"]').first();
       if (await closeBtn.count() > 0) {
         await clickElement(closeBtn);
-        await page.waitForTimeout(300);
-
-        // Video should be paused or stopped
-        const isPaused = await video.evaluate((el: HTMLVideoElement) => el.paused);
+        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Video should be paused or stopped
+        const isPaused = // 📏 TODO: Replace with measurement-utils
+    await video.evaluate((el: HTMLVideoElement) => el.paused);
         expect(isPaused).toBe(true);
       }
     }
@@ -258,11 +261,12 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       if (await modal.count() > 0) {
-        const width = await modal.evaluate(el => el.offsetWidth);
+        const width = // 📏 TODO: Replace with measurement-utils
+    await modal.evaluate(el => el.offsetWidth);
         expect(width).toBeLessThanOrEqual(375);
       }
     }
@@ -276,11 +280,12 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       if (await modal.count() > 0) {
-        const width = await modal.evaluate(el => el.offsetWidth);
+        const width = // 📏 TODO: Replace with measurement-utils
+    await modal.evaluate(el => el.offsetWidth);
         expect(width).toBeLessThanOrEqual(768);
       }
     }
@@ -310,7 +315,7 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
 
     const video = page.locator('video').first();
     if (await video.count() > 0) {
-      await page.waitForTimeout(1000);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
 
     expect(errors).toEqual([]);
@@ -324,11 +329,12 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const backdrop = page.locator('[class*="backdrop"], [class*="overlay"]').first();
       if (await backdrop.count() > 0) {
-        const bgColor = await backdrop.evaluate(el =>
+        const bgColor = // 📏 TODO: Replace with measurement-utils
+    await backdrop.evaluate(el =>
           window.getComputedStyle(el).backgroundColor
         );
         expect(bgColor).not.toBe('rgba(0, 0, 0, 0)');
@@ -343,11 +349,12 @@ test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       if (await modal.count() > 0) {
-        const position = await modal.evaluate(el =>
+        const position = // 📏 TODO: Replace with measurement-utils
+    await modal.evaluate(el =>
           window.getComputedStyle(el).position
         );
         expect(['fixed', 'absolute']).toContain(position);

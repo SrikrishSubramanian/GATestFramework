@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -38,7 +39,8 @@ test.describe('Footer — Images & Media', () => {
       expect(src).toBeTruthy();
 
       // Verify image is not broken
-      const naturalWidth = await img.evaluate(el => (el as HTMLImageElement).naturalWidth);
+      const naturalWidth = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate(el => (el as HTMLImageElement).naturalWidth);
       if (naturalWidth === 0) {
         // Image failed to load - this is okay to report but not fail
         console.warn(`Image ${src} failed to load`);
@@ -74,8 +76,10 @@ test.describe('Footer — Images & Media', () => {
         const img = images.nth(i);
 
         // Check for dimensions
-        const width = await img.evaluate(el => el.offsetWidth);
-        const height = await img.evaluate(el => el.offsetHeight);
+        const width = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate(el => el.offsetWidth);
+        const height = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate(el => el.offsetHeight);
 
         // Logo should have reasonable dimensions
         if (width > 0 && height > 0) {
@@ -145,7 +149,8 @@ test.describe('Footer — Images & Media', () => {
       }
 
       // Check visibility
-      const display = await svg.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+      const display = // 📏 TODO: Replace with measurement-utils
+    await svg.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       expect(['block', 'inline', 'inline-block', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });

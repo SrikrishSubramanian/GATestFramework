@@ -5,6 +5,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -162,14 +163,16 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
     const select = page.locator('select').first();
     if (await select.count() > 0) {
       let focusCount = 0;
-      await page.evaluate(() => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         (document.querySelector('select') as any)?.addEventListener('focus', () => {
           (window as any).focusCount = ((window as any).focusCount || 0) + 1;
         });
       });
 
       await select.focus();
-      const count = await page.evaluate(() => (window as any).focusCount || 0);
+      const count = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => (window as any).focusCount || 0);
 
       expect(count).toBeGreaterThanOrEqual(0);
     }
@@ -184,7 +187,8 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
       await select.focus();
       await select.blur();
 
-      const focused = await page.evaluate(() => document.activeElement?.tagName);
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).not.toBe('SELECT');
     }
   });
@@ -220,7 +224,8 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
 
     const disabledSelect = page.locator('select[disabled]').first();
     if (await disabledSelect.count() > 0) {
-      const isDisabled = await disabledSelect.evaluate((el: HTMLSelectElement) => el.disabled);
+      const isDisabled = // 📏 TODO: Replace with measurement-utils
+    await disabledSelect.evaluate((el: HTMLSelectElement) => el.disabled);
       expect(isDisabled).toBe(true);
     }
   });
@@ -274,7 +279,8 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const bgColor = await select.evaluate(el =>
+      const bgColor = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
       expect(bgColor).toBeTruthy();
@@ -287,7 +293,8 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const fontSize = await select.evaluate(el =>
+      const fontSize = // 📏 TODO: Replace with measurement-utils
+    await select.evaluate(el =>
         window.getComputedStyle(el).fontSize
       );
       expect(fontSize).toBeTruthy(); // TODO: Use assertTypography() for font checks
@@ -336,7 +343,8 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
     if (await select.count() > 0) {
       const options = select.locator('option');
       if (await options.count() > 1) {
-        await page.evaluate(() => {
+        // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
           (window as any).changeCount = 0;
           document.querySelector('select')?.addEventListener('change', () => {
             (window as any).changeCount = ((window as any).changeCount || 0) + 1;
@@ -344,7 +352,8 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
         });
 
         await select.selectOption(await options.nth(1).getAttribute('value') || '');
-        const changes = await page.evaluate(() => (window as any).changeCount || 0);
+        const changes = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => (window as any).changeCount || 0);
 
         expect(changes).toBeGreaterThanOrEqual(1);
       }
@@ -382,7 +391,8 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
         const selectedValue = await options.nth(1).getAttribute('value') || '';
         await select.selectOption(selectedValue);
 
-        await page.evaluate(() => window.scrollBy(0, 500));
+        // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => window.scrollBy(0, 500));
         const valueAfterScroll = await select.inputValue();
 
         expect(valueAfterScroll).toBe(selectedValue);

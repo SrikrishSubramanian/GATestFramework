@@ -106,7 +106,7 @@ test.describe('Footer — Happy Path & Core Functionality', () => {
       const initialState = await button.getAttribute('aria-expanded');
 
       await clickElement(button);
-      await page.waitForTimeout(200);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const newState = await button.getAttribute('aria-expanded');
       expect(newState).not.toBeNull();
@@ -140,7 +140,8 @@ test.describe('Footer — Happy Path & Core Functionality', () => {
     await expect(root).toBeVisible();
 
     // Footer should be visible even if some sections are empty
-    const display = await root.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(['block', 'flex', 'grid', 'table']).toContain(display); // TODO: Use assertLayout() for display checks
   });
 
@@ -182,7 +183,8 @@ test.describe('Footer — Responsive Design', () => {
     await expect(root).toBeVisible();
 
     // Footer should stack vertically on mobile
-    const width = await root.evaluate(el => el.offsetWidth);
+    const width = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => el.offsetWidth);
     expect(width).toBeLessThanOrEqual(375);
   });
 
@@ -197,7 +199,7 @@ test.describe('Footer — Responsive Design', () => {
 
     if (toggleCount > 0) {
       await toggle.first().click();
-      await page.waitForTimeout(200);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const nav = await pom.getNavigation();
       await expect(nav.first()).toBeVisible();

@@ -5,6 +5,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -105,7 +106,8 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
-      const display = await loginComponent.evaluate(el =>
+      const display = // 📏 TODO: Replace with measurement-utils
+    await loginComponent.evaluate(el =>
         window.getComputedStyle(el).display
       );
       expect(['flex', 'grid']).toContain(display); // TODO: Use assertLayout() for display checks
@@ -119,7 +121,8 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
-      const width = await loginComponent.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await loginComponent.evaluate(el => el.offsetWidth);
       // Should be responsive and fit viewport
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -162,7 +165,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
       // Click toggle to show password
       await clickElement(toggleButton);
-      await page.waitForTimeout(100);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const fieldType = await passwordField.getAttribute('type');
       expect(['text', 'password']).toContain(fieldType);
@@ -328,7 +331,8 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
-      const bgColor = await loginComponent.evaluate(el =>
+      const bgColor = // 📏 TODO: Replace with measurement-utils
+    await loginComponent.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
 

@@ -12,6 +12,8 @@ import { AEMTestHelper } from '../../utils/infra/aem-test-helper';
 import ENV from '../../utils/infra/env';
 import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
+import { clickElement, fill, hover, doubleClick } from '../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../utils/infra/component-assertions';
 
 // Sprint 16 GAAM Tickets (50 total)
 const SPRINT_16_TICKETS = [
@@ -163,7 +165,7 @@ test.afterEach(async ({ page }, testInfo) => {
       ];
 
       const results = await helper.verifyResponsiveDesign(viewports);
-      results.forEach(r => expect(r.passed).toBe(true));
+      results.forEach(r => expect(r.passed, `Expected true, got ${r.passed}`).toBe(true));
     });
 
     test('[GAAM-394] SiteHeader - Component registration', async ({ page }) => {
@@ -201,7 +203,8 @@ test.afterEach(async ({ page }, testInfo) => {
       await page.keyboard.press('Tab');
 
       // Verify button has focus
-      const focused = await page.evaluate(() => {
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         return document.activeElement?.tagName.toLowerCase();
       });
 

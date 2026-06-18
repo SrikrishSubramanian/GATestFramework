@@ -43,7 +43,8 @@ test.describe('Button — Visual Verification', () => {
     await pom.navigate(BASE());
     const el = primaryBtn(page);
     await assertLayout(el, { display: 'inline-flex' });
-    const styles = await el.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
         'background-color': cs.backgroundColor,
@@ -51,9 +52,9 @@ test.describe('Button — Visual Verification', () => {
         'border-color': cs.borderColor,
       };
     });
-      expect(styles['background-color']).toBe('rgb(21, 65, 151)');
-      expect(styles['color']).toBe('rgb(255, 255, 255)');
-      expect(styles['border-color']).toBe('rgb(255, 255, 255)');
+      expect(styles['background-color'], `Expected 'rgb(21, 65, 151, got ${styles['background-color']}`).toBe('rgb(21, 65, 151)');
+      expect(styles['color'], `Expected 'rgb(255, 255, 255, got ${styles['color']}`).toBe('rgb(255, 255, 255)');
+      expect(styles['border-color'], `Expected 'rgb(255, 255, 255, got ${styles['border-color']}`).toBe('rgb(255, 255, 255)');
   });
 
   test('[BTN-197] @visual button typography matches Figma spec', async ({ page }) => {
@@ -66,7 +67,8 @@ test.describe('Button — Visual Verification', () => {
       fontWeight: '700',
       lineHeight: '16px',
     });
-    const styles = await el.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
         'font-family': cs.fontFamily,
@@ -91,7 +93,8 @@ test.describe('Button — Visual Verification', () => {
       paddingBottom: '15px',
       paddingLeft: '20px',
     }, 2);
-    const styles = await el.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el => {
       const cs = getComputedStyle(el);
       return {
         'padding-top': cs.paddingTop,
@@ -110,15 +113,18 @@ test.describe('Button — Visual Verification', () => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const el = primaryBtn(page);
-    const transition = await el.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition).toContain('background');
     expect(transition).toContain('0.18s');
 
     // Capture before/after states
-    const beforeBg = await el.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const beforeBg = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await hover(el);
-    await page.waitForTimeout(250);
-    const afterBg = await el.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const afterBg = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(beforeBg).not.toBe(afterBg);
   });
 

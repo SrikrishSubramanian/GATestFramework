@@ -5,6 +5,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -284,7 +285,8 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      await page.evaluate(() => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         (window as any).inputEvents = 0;
         document.querySelector('input[type="text"]')?.addEventListener('input', () => {
           (window as any).inputEvents = ((window as any).inputEvents || 0) + 1;
@@ -292,7 +294,8 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
       });
 
       await fill(input, 'test');
-      const events = await page.evaluate(() => (window as any).inputEvents || 0);
+      const events = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => (window as any).inputEvents || 0);
 
       expect(events).toBeGreaterThanOrEqual(1);
     }
@@ -304,7 +307,8 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      await page.evaluate(() => {
+      // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         (window as any).changeEvents = 0;
         document.querySelector('input[type="text"]')?.addEventListener('change', () => {
           (window as any).changeEvents = ((window as any).changeEvents || 0) + 1;
@@ -314,7 +318,8 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
       await fill(input, 'test');
       await input.blur();
 
-      const events = await page.evaluate(() => (window as any).changeEvents || 0);
+      const events = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => (window as any).changeEvents || 0);
       expect(events).toBeGreaterThanOrEqual(0);
     }
   });
@@ -326,7 +331,8 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const disabledInput = page.locator('input[type="text"][disabled]').first();
     if (await disabledInput.count() > 0) {
-      const opacity = await disabledInput.evaluate(el =>
+      const opacity = // 📏 TODO: Replace with measurement-utils
+    await disabledInput.evaluate(el =>
         window.getComputedStyle(el).opacity
       );
       // Disabled inputs often have reduced opacity
@@ -340,7 +346,8 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const readonlyInput = page.locator('input[type="text"][readonly]').first();
     if (await readonlyInput.count() > 0) {
-      const bgColor = await readonlyInput.evaluate(el =>
+      const bgColor = // 📏 TODO: Replace with measurement-utils
+    await readonlyInput.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
       expect(bgColor).toBeDefined();

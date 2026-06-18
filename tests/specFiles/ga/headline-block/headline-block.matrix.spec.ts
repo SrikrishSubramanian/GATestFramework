@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -63,7 +64,8 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await expect(block).toBeVisible();
     const eyeAlign = await block.locator(EYEBROW).evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(['left', 'start']).toContain(eyeAlign);
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+    const maxWidth = // 📏 TODO: Replace with measurement-utils
+    await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('1032px');
   });
 
@@ -75,7 +77,8 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await expect(block).toBeVisible();
     const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(titleAlign).toBe('center');
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+    const maxWidth = // 📏 TODO: Replace with measurement-utils
+    await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('1150px');
   });
 
@@ -153,7 +156,8 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
     await expect(block).toBeVisible();
     // No max-width on mobile
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+    const maxWidth = // 📏 TODO: Replace with measurement-utils
+    await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('none');
   });
 
@@ -172,7 +176,8 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const ctaWrapper = page.locator(`${SECTION_AZUL} ${HB} .ga-headline-block__cta-wrapper`).first();
-    const flexDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('column');
   });
 
@@ -185,8 +190,10 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
       const block = page.locator(`${bg} ${HB}`).first();
       const count = await block.count();
       if (count === 0) continue;
-      const pt = await block.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
-      const pb = await block.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
+      const pt = // 📏 TODO: Replace with measurement-utils
+    await block.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
+      const pb = // 📏 TODO: Replace with measurement-utils
+    await block.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
       expect(pt, `${bg} paddingTop`).toBe('32px'); // TODO: Use assertSpacing() for padding/margin
       expect(pb, `${bg} paddingBottom`).toBe('32px'); // TODO: Use assertSpacing() for padding/margin
     }

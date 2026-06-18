@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -40,10 +42,12 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
-      const bgImage = await banner.evaluate(el =>
+      const bgImage = // 📏 TODO: Replace with measurement-utils
+    await banner.evaluate(el =>
         window.getComputedStyle(el).backgroundImage
       );
-      const bgColor = await banner.evaluate(el =>
+      const bgColor = // 📏 TODO: Replace with measurement-utils
+    await banner.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
       expect(bgImage || bgColor).toBeTruthy();
@@ -78,7 +82,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
-      const width = await banner.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await banner.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
   });
@@ -90,7 +95,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
-      const width = await banner.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await banner.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
   });
@@ -102,7 +108,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
-      const width = await banner.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await banner.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(400);
     }
   });
@@ -135,7 +142,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const text = page.locator('[class*="feature-banner"] p').first();
     if (await text.count() > 0) {
-      const color = await text.evaluate(el =>
+      const color = // 📏 TODO: Replace with measurement-utils
+    await text.evaluate(el =>
         window.getComputedStyle(el).color
       );
       expect(color).not.toBe('rgba(0, 0, 0, 0)');

@@ -45,11 +45,14 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     const link = page.locator(`${SECTION_WHITE} ${ITEM_L1} ${LINK}, ${SECTION_WHITE} ${NAV}:not(:has(${ITEM_L1})) ${LINK}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
-    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await hover(link);
-    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
-    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const borderRadius = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(parseFloat(borderRadius)).toBeGreaterThanOrEqual(20);
   });
 
@@ -60,9 +63,11 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     const link = page.locator(`${SECTION_GRANITE} ${ITEM_L1} ${LINK}, ${SECTION_GRANITE} ${NAV}:not(:has(${ITEM_L1})) ${LINK}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
-    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await hover(link);
-    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });
 
@@ -75,7 +80,8 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     await link.focus();
     await page.keyboard.press('Tab');
     await page.keyboard.press('Shift+Tab');
-    const hasIndicator = await link.evaluate(el => {
+    const hasIndicator = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => {
       const cs = getComputedStyle(el);
       const bgChanged = cs.backgroundColor !== 'rgba(0, 0, 0, 0)';
       const outlineW = parseFloat(cs.outlineWidth) || 0;
@@ -94,7 +100,8 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     await link.focus();
     await page.keyboard.press('Tab');
     await page.keyboard.press('Shift+Tab');
-    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
+    const boxShadow = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
     expect(boxShadow).not.toBe('none');
   });
 });
@@ -110,11 +117,13 @@ test.describe('Navigation — Mobile Accordion Interactions (GAAM-396)', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const trigger = groupedNav.locator(ITEM_L0).first();
     const childGroup = trigger.locator(`:scope > ${GROUP}`);
-    const displayBefore = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const displayBefore = // 📏 TODO: Replace with measurement-utils
+    await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(displayBefore).toBe('none');
     await trigger.locator(`:scope > ${LINK}`).click();
-    await page.waitForTimeout(400);
-    const displayAfter = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const displayAfter = // 📏 TODO: Replace with measurement-utils
+    await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(displayAfter).not.toBe('none');
   });
 
@@ -126,11 +135,13 @@ test.describe('Navigation — Mobile Accordion Interactions (GAAM-396)', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const trigger = groupedNav.locator(ITEM_L0).first();
     const link = trigger.locator(`:scope > ${LINK}`);
-    const collapsedContent = await link.evaluate(el => getComputedStyle(el, '::after').content); // measurement: use measurement-utils for cleaner code
+    const collapsedContent = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el, '::after').content); // measurement: use measurement-utils for cleaner code
     expect(collapsedContent).toContain('+');
     await clickElement(link);
-    await page.waitForTimeout(300);
-    const expandedContent = await link.evaluate(el => getComputedStyle(el, '::after').content); // measurement: use measurement-utils for cleaner code
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const expandedContent = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el, '::after').content); // measurement: use measurement-utils for cleaner code
     expect(expandedContent).not.toContain('+');
   });
 
@@ -144,10 +155,10 @@ test.describe('Navigation — Mobile Accordion Interactions (GAAM-396)', () => {
     const count = await triggers.count();
     test.skip(count < 2, 'Need at least 2 accordion sections');
     await triggers.nth(0).locator(`:scope > ${LINK}`).click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     expect(await triggers.nth(0).evaluate(el => el.classList.contains('cmp-navigation__item--expanded'))).toBe(true);
     await triggers.nth(1).locator(`:scope > ${LINK}`).click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     expect(await triggers.nth(1).evaluate(el => el.classList.contains('cmp-navigation__item--expanded'))).toBe(true);
     expect(await triggers.nth(0).evaluate(el => el.classList.contains('cmp-navigation__item--expanded'))).toBe(false);
   });
@@ -159,7 +170,8 @@ test.describe('Navigation — Mobile Accordion Interactions (GAAM-396)', () => {
     const groupedNav = page.locator(NAV).filter({ has: page.locator(ITEM_L1) }).first();
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const link = groupedNav.locator(`${ITEM_L0} > ${LINK}`).first();
-    const afterStyles = await link.evaluate(el => {
+    const afterStyles = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => {
       const cs = getComputedStyle(el, '::after');
       return { width: cs.width, height: cs.height, borderRadius: cs.borderRadius };
     });
@@ -184,7 +196,8 @@ test.describe('Navigation — Keyboard Navigation', () => {
     await links.first().focus();
     const firstText = await links.first().textContent();
     await page.keyboard.press('Tab');
-    const focusedText = await page.evaluate(() => document.activeElement?.textContent?.trim());
+    const focusedText = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.textContent?.trim());
     expect(focusedText).not.toBe(firstText?.trim());
   });
 
@@ -198,8 +211,9 @@ test.describe('Navigation — Keyboard Navigation', () => {
     const link = trigger.locator(`:scope > ${LINK}`);
     await link.focus();
     await page.keyboard.press('Enter');
-    await page.waitForTimeout(400);
-    const expanded = await trigger.evaluate(el => el.classList.contains('cmp-navigation__item--expanded'));
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const expanded = // 📏 TODO: Replace with measurement-utils
+    await trigger.evaluate(el => el.classList.contains('cmp-navigation__item--expanded'));
     expect(expanded).toBe(true);
   });
 });
@@ -214,10 +228,12 @@ test.describe('Navigation — Responsive Transition', () => {
     const nav = page.locator(`${SECTION_WHITE} ${NAV}`).first();
     if (await nav.count() === 0) { test.skip(); return; }
     const group = nav.locator(`> ${GROUP}`);
-    expect(await group.evaluate(el => getComputedStyle(el).flexDirection)).toBe('row'); // measurement: use measurement-utils for cleaner code
+    expect(// 📏 TODO: Replace with measurement-utils
+    await group.evaluate(el => getComputedStyle(el).flexDirection)).toBe('row'); // measurement: use measurement-utils for cleaner code
     await page.setViewportSize(MOBILE);
-    await page.waitForTimeout(300);
-    expect(await group.evaluate(el => getComputedStyle(el).flexDirection)).toBe('column'); // measurement: use measurement-utils for cleaner code
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    expect(// 📏 TODO: Replace with measurement-utils
+    await group.evaluate(el => getComputedStyle(el).flexDirection)).toBe('column'); // measurement: use measurement-utils for cleaner code
   });
 
   test('[NVGT-INT-012] @interaction @mobile @regression Accordion dividers between sections', async ({ page }) => {
@@ -228,7 +244,8 @@ test.describe('Navigation — Responsive Transition', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const secondItem = groupedNav.locator(ITEM_L0).nth(1);
     if (await secondItem.count() === 0) { test.skip(); return; }
-    const hasBorder = await secondItem.evaluate(el => {
+    const hasBorder = // 📏 TODO: Replace with measurement-utils
+    await secondItem.evaluate(el => {
       const before = getComputedStyle(el, '::before');
       return before.borderTopWidth !== '0px' && before.content !== 'none';
     });

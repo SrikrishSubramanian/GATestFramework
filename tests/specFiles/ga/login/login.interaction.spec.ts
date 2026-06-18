@@ -212,7 +212,8 @@ test.describe('Login â€” Form Focus & Keyboard Navigation', () => {
     const username = page.locator(USERNAME).first();
     if (await username.count() === 0) { test.skip(); return; }
     await username.focus();
-    const isFocused = await username.evaluate(el => document.activeElement === el);
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await username.evaluate(el => document.activeElement === el);
     expect(isFocused).toBe(true);
   });
 
@@ -226,7 +227,8 @@ test.describe('Login â€” Form Focus & Keyboard Navigation', () => {
     await page.keyboard.press('Tab');
     const pwd = page.locator(PASSWORD).first();
     if (await pwd.count() === 0) { test.skip(); return; }
-    const isFocused = await pwd.evaluate(el => document.activeElement === el);
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await pwd.evaluate(el => document.activeElement === el);
     expect(isFocused).toBe(true);
   });
 
@@ -237,7 +239,8 @@ test.describe('Login â€” Form Focus & Keyboard Navigation', () => {
     const submit = page.locator(SUBMIT).first();
     if (await submit.count() === 0) { test.skip(); return; }
     await submit.focus();
-    const isFocused = await submit.evaluate(el => document.activeElement === el);
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await submit.evaluate(el => document.activeElement === el);
     expect(isFocused).toBe(true);
   });
 
@@ -248,7 +251,8 @@ test.describe('Login â€” Form Focus & Keyboard Navigation', () => {
     const username = page.locator(USERNAME).first();
     if (await username.count() === 0) { test.skip(); return; }
     await username.focus();
-    const styles = await username.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await username.evaluate(el => {
       const cs = getComputedStyle(el);
       return { boxShadow: cs.boxShadow, outline: cs.outline, outlineWidth: cs.outlineWidth };
     });
@@ -263,7 +267,8 @@ test.describe('Login â€” Form Focus & Keyboard Navigation', () => {
     const pwd = page.locator(PASSWORD).first();
     if (await pwd.count() === 0) { test.skip(); return; }
     await pwd.focus();
-    const styles = await pwd.evaluate(el => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await pwd.evaluate(el => {
       const cs = getComputedStyle(el);
       return { boxShadow: cs.boxShadow, outline: cs.outline, outlineWidth: cs.outlineWidth };
     });
@@ -282,7 +287,8 @@ test.describe('Login â€” Form State', () => {
     const submit = page.locator(SUBMIT).first();
     if (await submit.count() === 0) { test.skip(); return; }
     await expect(submit).toBeVisible();
-    const transition = await submit.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await submit.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'Submit button should have CSS transition for animated state change').not.toBe('');
     expect(transition).not.toBe('none');
   });
@@ -293,11 +299,14 @@ test.describe('Login â€” Form State', () => {
     await pom.navigate(BASE());
     const username = page.locator(USERNAME).first();
     if (await username.count() === 0) { test.skip(); return; }
-    const borderBefore = await username.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
+    const borderBefore = // 📏 TODO: Replace with measurement-utils
+    await username.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
     await username.focus();
-    const borderAfter = await username.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
+    const borderAfter = // 📏 TODO: Replace with measurement-utils
+    await username.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
     // Border color or box-shadow should change on focus
-    const boxShadow = await username.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
+    const boxShadow = // 📏 TODO: Replace with measurement-utils
+    await username.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
     const changed = borderBefore !== borderAfter || boxShadow !== 'none';
     expect(changed, 'Username input should show visual change on focus').toBe(true);
   });

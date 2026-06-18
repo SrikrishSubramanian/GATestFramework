@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -61,8 +63,10 @@ test.describe('Hero Fifty-Fifty â€” Images & Media', () => {
     const image = hero.locator('img').first();
 
     if (await image.count() > 0) {
-      const width = await image.evaluate(el => el.offsetWidth);
-      const maxWidth = await image.evaluate(el =>
+      const width = // 📏 TODO: Replace with measurement-utils
+    await image.evaluate(el => el.offsetWidth);
+      const maxWidth = // 📏 TODO: Replace with measurement-utils
+    await image.evaluate(el =>
         window.getComputedStyle(el).maxWidth
       );
 
@@ -79,8 +83,10 @@ test.describe('Hero Fifty-Fifty â€” Images & Media', () => {
     const image = hero.locator('img').first();
 
     if (await image.count() > 0) {
-      const width = await image.evaluate(el => (el as HTMLImageElement).naturalWidth);
-      const height = await image.evaluate(el => (el as HTMLImageElement).naturalHeight);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await image.evaluate(el => (el as HTMLImageElement).naturalWidth);
+      const height = // 📏 TODO: Replace with measurement-utils
+    await image.evaluate(el => (el as HTMLImageElement).naturalHeight);
 
       if (width > 0 && height > 0) {
         const ratio = width / height;
@@ -99,7 +105,8 @@ test.describe('Hero Fifty-Fifty â€” Images & Media', () => {
 
     for (let i = 0; i < Math.min(count, 3); i++) {
       const el = bgElements.nth(i);
-      const bgImage = await el.evaluate(el =>
+      const bgImage = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el =>
         window.getComputedStyle(el).backgroundImage
       );
 

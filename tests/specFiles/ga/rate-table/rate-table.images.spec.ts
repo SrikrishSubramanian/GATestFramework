@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -38,7 +39,8 @@ test.describe('Rate Table — Image & Media Validation', () => {
       expect(src).toBeTruthy();
 
       // Verify image is visible (or intentionally hidden)
-      const display = await img.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+      const display = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       expect(['block', 'inline', 'inline-block', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
     }
   });
@@ -98,7 +100,8 @@ test.describe('Rate Table — Image & Media Validation', () => {
       // Verify icons are visible or intentionally hidden
       for (let i = 0; i < Math.min(iconCount, 3); i++) {
         const icon = icons.nth(i);
-        const display = await icon.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+        const display = // 📏 TODO: Replace with measurement-utils
+    await icon.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
         expect(['block', 'inline', 'inline-block', 'none']).toContain(display); // TODO: Use assertLayout() for display checks
       }
     }
@@ -115,7 +118,8 @@ test.describe('Rate Table — Image & Media Validation', () => {
       // Verify background images have URLs
       for (let i = 0; i < Math.min(count, 3); i++) {
         const el = elementsWithBg.nth(i);
-        const bgImage = await el.evaluate(el =>
+        const bgImage = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el =>
           window.getComputedStyle(el).backgroundImage
         );
 

@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -30,10 +32,12 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const mixedFormat = page.locator('strong em, b i, em strong, i b').first();
     if (await mixedFormat.count() > 0) {
-      const fontWeight = await mixedFormat.evaluate(el =>
+      const fontWeight = // 📏 TODO: Replace with measurement-utils
+    await mixedFormat.evaluate(el =>
         window.getComputedStyle(el).fontWeight
       );
-      const fontStyle = await mixedFormat.evaluate(el =>
+      const fontStyle = // 📏 TODO: Replace with measurement-utils
+    await mixedFormat.evaluate(el =>
         window.getComputedStyle(el).fontStyle
       );
       expect(fontWeight).not.toBe('400'); // TODO: Use assertTypography() for font checks
@@ -120,7 +124,8 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
     if (await li.count() > 0) {
       // List items should be in valid list context
       const parent = li.locator('..');
-      const tag = await parent.evaluate(el => el.tagName);
+      const tag = // 📏 TODO: Replace with measurement-utils
+    await parent.evaluate(el => el.tagName);
       expect(['UL', 'OL']).toContain(tag);
     }
   });
@@ -134,7 +139,8 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
     if (await paragraph.count() > 0) {
       const text = await paragraph.textContent();
       if (text && text.length > 500) {
-        const height = await paragraph.evaluate(el => el.offsetHeight);
+        const height = // 📏 TODO: Replace with measurement-utils
+    await paragraph.evaluate(el => el.offsetHeight);
         // Long text should wrap and have height
         expect(height).toBeGreaterThan(0);
       }
@@ -204,7 +210,8 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const pre = page.locator('pre').first();
     if (await pre.count() > 0) {
-      const whiteSpace = await pre.evaluate(el =>
+      const whiteSpace = // 📏 TODO: Replace with measurement-utils
+    await pre.evaluate(el =>
         window.getComputedStyle(el).whiteSpace
       );
       expect(whiteSpace).toBe('pre');
@@ -255,8 +262,10 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const paragraph = page.locator('p').first();
     if (await paragraph.count() > 0) {
-      const width = await paragraph.evaluate(el => el.offsetWidth);
-      const height = await paragraph.evaluate(el => el.offsetHeight);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await paragraph.evaluate(el => el.offsetWidth);
+      const height = // 📏 TODO: Replace with measurement-utils
+    await paragraph.evaluate(el => el.offsetHeight);
 
       // Text should wrap to fit viewport
       expect(width).toBeLessThanOrEqual(375);
@@ -271,7 +280,8 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const ul = page.locator('ul').first();
     if (await ul.count() > 0) {
-      const width = await ul.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await ul.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
   });
@@ -283,7 +293,8 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const coloredText = page.locator('[style*="color"]').first();
     if (await coloredText.count() > 0) {
-      const color = await coloredText.evaluate(el =>
+      const color = // 📏 TODO: Replace with measurement-utils
+    await coloredText.evaluate(el =>
         window.getComputedStyle(el).color
       );
       expect(color).toBeTruthy();
@@ -296,7 +307,8 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const highlighted = page.locator('[style*="background"]').first();
     if (await highlighted.count() > 0) {
-      const bgColor = await highlighted.evaluate(el =>
+      const bgColor = // 📏 TODO: Replace with measurement-utils
+    await highlighted.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
       expect(bgColor).toBeTruthy();
@@ -336,7 +348,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
     await page.goto(url);
 
     // Allow some time for any async content loading
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     expect(errors).toEqual([]);
   });

@@ -177,7 +177,8 @@ test.describe('Marketo Forms Component (GAAM-533)', () => {
 
     const form = page.locator('form').first();
     if (await form.count() > 0) {
-      const width = await form.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await form.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
   });
@@ -189,7 +190,8 @@ test.describe('Marketo Forms Component (GAAM-533)', () => {
 
     const form = page.locator('form').first();
     if (await form.count() > 0) {
-      const width = await form.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await form.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
   });
@@ -201,7 +203,8 @@ test.describe('Marketo Forms Component (GAAM-533)', () => {
 
     const form = page.locator('form').first();
     if (await form.count() > 0) {
-      const width = await form.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await form.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(300);
     }
   });
@@ -213,7 +216,8 @@ test.describe('Marketo Forms Component (GAAM-533)', () => {
     const input = page.locator('input').first();
     if (await input.count() > 0) {
       await input.focus();
-      const outline = await input.evaluate(el => window.getComputedStyle(el).outline); // measurement: use measurement-utils for cleaner code
+      const outline = // 📏 TODO: Replace with measurement-utils
+    await input.evaluate(el => window.getComputedStyle(el).outline); // measurement: use measurement-utils for cleaner code
       expect(outline).toBeTruthy();
     }
   });

@@ -6,6 +6,8 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -99,7 +101,8 @@ test.describe('Text — Responsive', () => {
     const root = page.locator('.cmp-text').first();
     await expect(root).toBeVisible();
     // Verify layout adapts to mobile: check flex-direction changes to column
-    const flexDir = await root.evaluate(el => {
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       const cs = getComputedStyle(el);
       return cs.flexDirection || cs.display;
     });
@@ -115,7 +118,8 @@ test.describe('Text — Responsive', () => {
     const root = page.locator('.cmp-text').first();
     await expect(root).toBeVisible();
     // Tablet should render without horizontal overflow
-    const overflow = await root.evaluate(el => {
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       return el.scrollWidth > el.clientWidth;
     });
     expect(overflow).toBe(false);
@@ -128,7 +132,7 @@ test.describe('Text — Console & Resources', () => {
     capture.start();
     const pom = new TextPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);
@@ -143,7 +147,8 @@ test.describe('Text — Broken Images', () => {
     const count = await images.count();
     for (let i = 0; i < count; i++) {
       const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      const naturalWidth = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
       expect(naturalWidth).toBeGreaterThan(0);
     }
   });
@@ -194,7 +199,8 @@ test.describe('Text — Accessibility', () => {
       const box = await focusable.nth(i).boundingBox();
       if (box) {
         expect(box.y).toBeGreaterThanOrEqual(0);
-        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
+        expect(box.y + box.height).toBeLessThanOrEqual(// 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => window.innerHeight));
       }
     }
   });

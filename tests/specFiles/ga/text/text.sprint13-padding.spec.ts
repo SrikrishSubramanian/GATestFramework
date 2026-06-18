@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -29,7 +31,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
-      const padding = await textComponent.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -42,7 +45,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const textElements = page.locator('.cmp-text p, [class*="text"] p').first();
     if (await textElements.count() > 0) {
-      const padding = await textElements.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await textElements.evaluate(el =>
         window.getComputedStyle(el).paddingLeft
       );
       expect(padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
@@ -56,7 +60,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
-      const padding = await textComponent.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -70,7 +75,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
-      const padding = await textComponent.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -83,7 +89,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const textElement = page.locator('.cmp-text p, [class*="text"] p').first();
     if (await textElement.count() > 0) {
-      const lineHeight = await textElement.evaluate(el =>
+      const lineHeight = // 📏 TODO: Replace with measurement-utils
+    await textElement.evaluate(el =>
         parseInt(window.getComputedStyle(el).lineHeight)
       );
       expect(lineHeight).toBeGreaterThan(10); // TODO: Use assertTypography() for font checks
@@ -96,7 +103,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
-      const width = await textComponent.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(1440);
     }
   });
@@ -109,8 +117,10 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
 
     if (await container.count() > 0 && await textComponent.count() > 0) {
-      const containerWidth = await container.evaluate(el => el.offsetWidth);
-      const textWidth = await textComponent.evaluate(el => el.offsetWidth);
+      const containerWidth = // 📏 TODO: Replace with measurement-utils
+    await container.evaluate(el => el.offsetWidth);
+      const textWidth = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el => el.offsetWidth);
 
       expect(textWidth).toBeLessThanOrEqual(containerWidth);
     }
@@ -145,7 +155,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     for (let i = 0; i < Math.min(count, 3); i++) {
       const heading = headings.nth(i);
-      const padding = await heading.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await heading.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
@@ -161,7 +172,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     for (let i = 0; i < Math.min(count, 2); i++) {
       const list = lists.nth(i);
-      const padding = await list.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await list.evaluate(el =>
         window.getComputedStyle(el).paddingLeft
       );
       expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -182,7 +194,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
       const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
       if (await textComponent.count() > 0) {
-        const padding = await textComponent.evaluate(el =>
+        const padding = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el =>
           window.getComputedStyle(el).padding
         );
         expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -196,7 +209,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const emptyText = page.locator('.cmp-text:empty, [class*="text-component"]:empty').first();
     if (await emptyText.count() > 0) {
-      const padding = await emptyText.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await emptyText.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
@@ -212,7 +226,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
       const children = await richText.locator('*').count();
       expect(children).toBeGreaterThan(0);
 
-      const padding = await richText.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await richText.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -227,7 +242,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
     const em = page.locator('.cmp-text em, [class*="text"] em').first();
 
     if (await strong.count() > 0) {
-      const padding = await strong.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await strong.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       // Inline elements don't have padding
@@ -241,7 +257,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const link = page.locator('.cmp-text a, [class*="text"] a').first();
     if (await link.count() > 0) {
-      const color = await link.evaluate(el =>
+      const color = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el =>
         window.getComputedStyle(el).color
       );
       expect(color).toBeTruthy();
@@ -254,7 +271,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const blockquote = page.locator('.cmp-text blockquote, [class*="text"] blockquote').first();
     if (await blockquote.count() > 0) {
-      const padding = await blockquote.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await blockquote.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
@@ -267,7 +285,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const code = page.locator('.cmp-text code, .cmp-text pre, [class*="text"] code, [class*="text"] pre').first();
     if (await code.count() > 0) {
-      const padding = await code.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await code.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).toBeTruthy(); // TODO: Use assertSpacing() for padding/margin
@@ -280,16 +299,20 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
-      const paddingLeft = await textComponent.evaluate(el =>
+      const paddingLeft = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el =>
         parseInt(window.getComputedStyle(el).paddingLeft)
       );
-      const paddingRight = await textComponent.evaluate(el =>
+      const paddingRight = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el =>
         parseInt(window.getComputedStyle(el).paddingRight)
       );
-      const paddingTop = await textComponent.evaluate(el =>
+      const paddingTop = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el =>
         parseInt(window.getComputedStyle(el).paddingTop)
       );
-      const paddingBottom = await textComponent.evaluate(el =>
+      const paddingBottom = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el =>
         parseInt(window.getComputedStyle(el).paddingBottom)
       );
 
@@ -307,7 +330,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
-      const height = await textComponent.evaluate(el => el.offsetHeight);
+      const height = // 📏 TODO: Replace with measurement-utils
+    await textComponent.evaluate(el => el.offsetHeight);
       expect(height).toBeGreaterThan(50);
     }
   });

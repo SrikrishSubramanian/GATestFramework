@@ -19,7 +19,8 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
     const root = page.locator('.cmp-login').first();
     await expect(root).toBeVisible();
     // Verify split layout: Left marketing panel and Right login card
-    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(['row', 'row-reverse']).toContain(flexDir);
   });
 
@@ -34,7 +35,8 @@ test.afterEach(async ({ page }, testInfo) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const root = page.locator('.cmp-login').first();
-    const bgColor = await root.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgColor = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgColor).toBeTruthy();
   });
 
@@ -91,7 +93,8 @@ test.afterEach(async ({ page }, testInfo) => {
     const card = page.locator('.cmp-login').first();
     await expect(card).toBeVisible();
     // Card should have visible styling
-    const opacity = await card.evaluate(el => getComputedStyle(el).opacity); // measurement: use measurement-utils for cleaner code
+    const opacity = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate(el => getComputedStyle(el).opacity); // measurement: use measurement-utils for cleaner code
     expect(parseFloat(opacity)).toBeGreaterThan(0);
   });
 
@@ -187,7 +190,8 @@ test.afterEach(async ({ page }, testInfo) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const root = page.locator('.cmp-login').first();
-    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(['column', 'column-reverse']).toContain(flexDir);
   });
 
@@ -208,7 +212,8 @@ test.afterEach(async ({ page }, testInfo) => {
     const target = page.locator('.cmp-login__breadcrumb').first();
     const count = await target.count();
     if (count > 0) {
-      const isHidden = await target.evaluate(el => {
+      const isHidden = // 📏 TODO: Replace with measurement-utils
+    await target.evaluate(el => {
         const cs = getComputedStyle(el);
         return cs.display === 'none' || cs.visibility === 'hidden';
       });
@@ -241,7 +246,8 @@ test.afterEach(async ({ page }, testInfo) => {
     const svg = page.locator('.cmp-login svg').first();
     const count = await svg.count();
     if (count > 0) {
-      const isHidden = await svg.evaluate(el => {
+      const isHidden = // 📏 TODO: Replace with measurement-utils
+    await svg.evaluate(el => {
         const cs = getComputedStyle(el);
         return cs.display === 'none' || cs.visibility === 'hidden';
       });
@@ -283,7 +289,8 @@ test.afterEach(async ({ page }, testInfo) => {
     await pom.navigate(BASE());
     const button = pom.getLoginButton();
     await button.focus();
-    const outline = await button.evaluate(el => getComputedStyle(el).outline); // measurement: use measurement-utils for cleaner code
+    const outline = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el => getComputedStyle(el).outline); // measurement: use measurement-utils for cleaner code
     expect(outline).not.toBe('none');
   });
 
@@ -428,7 +435,7 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
     await pom.getPasswordInput().fill('testpass');
     await pom.getPasswordInput().press('Enter');
     // Form should submit (button click triggered)
-    await page.waitForTimeout(500);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
   });
 
   test('[LGN-056] @positive @regression Login form has proper heading hierarchy', async ({ page }) => {
@@ -462,7 +469,8 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
     await pom.navigate(BASE());
     await pom.getUsernameInput().focus();
     await page.keyboard.press('Tab');
-    const focusedElement = await page.evaluate(() => document.activeElement?.id);
+    const focusedElement = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.id);
     expect(focusedElement).toBeTruthy();
   });
 
@@ -472,7 +480,7 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
     await pom.getLoginButton().focus();
     await page.keyboard.press('Shift+Tab');
     // Focus should move to previous element
-    await page.waitForTimeout(200);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
   });
 });
 
@@ -628,7 +636,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
     await pom.navigate(BASE());
     const initialUrl = page.url();
     await pom.getUsernameInput().fill('invalid');
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const currentUrl = page.url();
     expect(currentUrl).toBe(initialUrl);
   });
@@ -708,7 +716,7 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     await pom.navigate(BASE());
     await pom.getUsernameInput().fill('!@#$%^&*()');
     const value = await pom.getUsernameInput().inputValue();
-    expect(value).toBe('!@#$%^&*()');
+    expect(value, `Expected '!@#$%^&*(, got ${value}`).toBe('!@#$%^&*()');
   });
 
   test('[LGN-086] @edge @regression Field with only special characters (password)', async ({ page }) => {
@@ -716,13 +724,14 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     await pom.navigate(BASE());
     await pom.getPasswordInput().fill('!@#$%^&*()_+-=[]{}|;:,.<>?');
     const value = await pom.getPasswordInput().inputValue();
-    expect(value).toBe('!@#$%^&*()_+-=[]{}|;:,.<>?');
+    expect(value, `Expected '!@#$%^&*(, got ${value}`).toBe('!@#$%^&*()_+-=[]{}|;:,.<>?');
   });
 
   test('[LGN-087] @edge @regression Copy-paste operation in username field', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const testData = 'test@example.com';
+    // 📏 TODO: Replace with measurement-utils
     await page.evaluate(([data]) => {
       const el = document.querySelector('#username') as HTMLInputElement;
       if (el) el.value = data;
@@ -735,6 +744,7 @@ test.describe('Login — Edge Cases: Boundary Conditions & Input Limits', () => 
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const testData = 'TestPassword123';
+    // 📏 TODO: Replace with measurement-utils
     await page.evaluate(([data]) => {
       const el = document.querySelector('#password') as HTMLInputElement;
       if (el) el.value = data;
@@ -867,7 +877,8 @@ test.describe('Login — Responsive & Adaptive Design', () => {
     await pom.navigate(BASE());
     const root = page.locator('.cmp-login').first();
     await expect(root).toBeVisible();
-    const flexDir = await root.evaluate(el => {
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       const cs = getComputedStyle(el);
       return cs.flexDirection || cs.display;
     });
@@ -880,7 +891,8 @@ test.describe('Login — Responsive & Adaptive Design', () => {
     await pom.navigate(BASE());
     const root = page.locator('.cmp-login').first();
     await expect(root).toBeVisible();
-    const overflow = await root.evaluate(el => {
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       return el.scrollWidth > el.clientWidth;
     });
     expect(overflow).toBe(false);
@@ -916,7 +928,8 @@ test.describe('Login — Responsive & Adaptive Design', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     await pom.getUsernameInput().focus();
-    const hasHorizontalScroll = await page.evaluate(() => {
+    const hasHorizontalScroll = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       return document.documentElement.scrollWidth > window.innerWidth;
     });
     expect(hasHorizontalScroll).toBe(false);
@@ -950,7 +963,7 @@ test.describe('Login — Performance & Data Integrity', () => {
     await pom.getPasswordInput().fill('password');
     const startTime = Date.now();
     await pom.getLoginButton().click();
-    await page.waitForTimeout(100);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const responseTime = Date.now() - startTime;
     expect(responseTime).toBeGreaterThanOrEqual(0);
   });
@@ -995,6 +1008,7 @@ test.describe('Login — Performance & Data Integrity', () => {
     await pom.getUsernameInput().fill('test@example.com');
     await pom.getPasswordInput().fill('password');
     // Simulate form reset
+    // 📏 TODO: Replace with measurement-utils
     await page.evaluate(() => {
       const form = document.querySelector('form') as HTMLFormElement;
       if (form) form.reset();
@@ -1039,7 +1053,8 @@ test.describe('Login — Broken Images & Resources', () => {
     const count = await images.count();
     for (let i = 0; i < count; i++) {
       const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      const naturalWidth = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
       expect(naturalWidth).toBeGreaterThan(0);
     }
   });
@@ -1082,7 +1097,7 @@ test.describe('Login — Broken Images & Resources', () => {
     capture.start();
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);
@@ -1123,7 +1138,8 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
       const box = await focusable.nth(i).boundingBox();
       if (box) {
         expect(box.y).toBeGreaterThanOrEqual(0);
-        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
+        expect(box.y + box.height).toBeLessThanOrEqual(// 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => window.innerHeight));
       }
     }
   });
@@ -1165,7 +1181,8 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
     await pom.navigate(BASE());
     await pom.getUsernameInput().focus();
     await page.keyboard.press('Tab');
-    const focusedId = await page.evaluate(() => (document.activeElement as HTMLElement)?.id);
+    const focusedId = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => (document.activeElement as HTMLElement)?.id);
     expect(focusedId).toBeTruthy();
   });
 
@@ -1175,7 +1192,8 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
     await pom.getLoginButton().focus();
     await page.keyboard.press('Shift+Tab');
     // Focus should move to previous element
-    const focusedElement = await page.evaluate(() => (document.activeElement as HTMLElement)?.tagName);
+    const focusedElement = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => (document.activeElement as HTMLElement)?.tagName);
     expect(focusedElement).toBeTruthy();
   });
 
@@ -1206,7 +1224,8 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
     await pom.navigate(BASE());
     const button = pom.getLoginButton();
     await button.focus();
-    const outline = await button.evaluate(el => {
+    const outline = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el => {
       const style = getComputedStyle(el);
       return style.outline !== 'none' || style.boxShadow !== 'none';
     });
@@ -1230,7 +1249,8 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
     for (let i = 0; i < 10; i++) {
       await page.keyboard.press('Tab');
     }
-    const focusedElement = await page.evaluate(() => (document.activeElement as HTMLElement)?.tagName);
+    const focusedElement = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => (document.activeElement as HTMLElement)?.tagName);
     expect(focusedElement).not.toBe('INPUT');
   });
 
@@ -1369,7 +1389,7 @@ test.describe('Login — Navigation & Session Flow', () => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     // Simulate session timeout by checking if form still renders
-    await page.waitForTimeout(2000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const root = page.locator('.cmp-login').first();
     await expect(root).toBeVisible();
   });
@@ -1416,7 +1436,8 @@ test.describe('Login — Mobile-Specific Interactions', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
-    const hasScroll = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const hasScroll = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
     expect(hasScroll).toBe(false);
   });
 });

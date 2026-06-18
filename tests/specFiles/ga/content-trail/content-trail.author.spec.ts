@@ -40,7 +40,8 @@ test.describe('ContentTrail — GAAM-328: Reskin Acceptance Criteria', () => {
     // Default (transparent with border)
     const defaultVariant = page.locator('.cmp-content-trail__container').first();
     await expect(defaultVariant).toBeVisible();
-    const border = await defaultVariant.evaluate(el => getComputedStyle(el).borderStyle); // measurement: use measurement-utils for cleaner code
+    const border = // 📏 TODO: Replace with measurement-utils
+    await defaultVariant.evaluate(el => getComputedStyle(el).borderStyle); // measurement: use measurement-utils for cleaner code
     expect(border).not.toBe('none');
     // Light mode (white bg without border)
     const lightSection = page.locator('.cmp-section--background-light-color .cmp-content-trail__container').first();
@@ -70,7 +71,8 @@ test.describe('ContentTrail — GAAM-328: Reskin Acceptance Criteria', () => {
     for (const type of types) {
       const imageEl = page.locator(`.cmp-content-trail__${type} .cmp-content-trail__image`).first();
       if (await imageEl.count() > 0) {
-        const afterBg = await imageEl.evaluate(el => {
+        const afterBg = // 📏 TODO: Replace with measurement-utils
+    await imageEl.evaluate(el => {
           return getComputedStyle(el, '::after').backgroundImage;
         });
         expect(afterBg, `${type} icon should have background-image`).not.toBe('none');
@@ -83,7 +85,8 @@ test.describe('ContentTrail — GAAM-328: Reskin Acceptance Criteria', () => {
     await pom.navigate(BASE());
     const img = page.locator('.cmp-content-trail__image img').first();
     await expect(img).toBeVisible();
-    const radius = await img.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
+    const radius = // 📏 TODO: Replace with measurement-utils
+    await img.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('50%');
   });
 });
@@ -95,7 +98,8 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     const container = page.locator('.cmp-content-trail__container').first();
     await expect(container).toBeVisible();
     // Check the ::before pseudo has clip-path with circle at 100% 0
-    const clipPath = await container.evaluate(el => {
+    const clipPath = // 📏 TODO: Replace with measurement-utils
+    await container.evaluate(el => {
       return getComputedStyle(el, '::before').clipPath;
     });
     expect(clipPath).toContain('circle');
@@ -108,7 +112,8 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     const container = page.locator('.cmp-content-trail__container').first();
     await expect(container).toBeVisible();
     // Check ::before transition property
-    const transition = await container.evaluate(el => {
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await container.evaluate(el => {
       return getComputedStyle(el, '::before').transition;
     });
     expect(transition).toContain('clip-path');
@@ -144,7 +149,8 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     await expect(videoContainer).toBeVisible();
     // LESS applies cursor:pointer on :hover only — verify it changes on hover
     await hover(videoContainer);
-    const cursor = await videoContainer.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await videoContainer.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor).toBe('pointer');
     // Click and check modal dialog element exists in DOM
     await clickElement(videoContainer);
@@ -176,7 +182,8 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     // Content trail in dark context (granite section)
     const darkEyebrow = page.locator('.cmp-section--background-color-granite .cmp-content-trail__eyebrow').first();
     if (await darkEyebrow.count() > 0) {
-      const color = await darkEyebrow.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+      const color = // 📏 TODO: Replace with measurement-utils
+    await darkEyebrow.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       // White text: rgb values should be high (> 200)
       const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
       if (match) {
@@ -194,7 +201,8 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     // The LESS uses .cmp-section--large as a CSS class on the wrapper when content-trail-large styleId is applied.
     const largeImg = page.locator('.cmp-section--large .cmp-content-trail__image').first();
     if (await largeImg.count() > 0) {
-      const height = await largeImg.evaluate(el => parseInt(getComputedStyle(el).height)); // measurement: use measurement-utils for cleaner code
+      const height = // 📏 TODO: Replace with measurement-utils
+    await largeImg.evaluate(el => parseInt(getComputedStyle(el).height)); // measurement: use measurement-utils for cleaner code
       expect(height).toBeGreaterThanOrEqual(78); // 80px on desktop per LESS
     } else {
       // Fallback: find any content-trail image that is 80px tall (large variant)
@@ -279,7 +287,8 @@ test.describe('ContentTrail — Responsive', () => {
     const root = page.locator('.cmp-content-trail').first();
     await expect(root).toBeVisible();
     // Verify layout adapts to mobile: check flex-direction changes to column
-    const flexDir = await root.evaluate(el => {
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       const cs = getComputedStyle(el);
       return cs.flexDirection || cs.display;
     });
@@ -295,7 +304,8 @@ test.describe('ContentTrail — Responsive', () => {
     const root = page.locator('.cmp-content-trail').first();
     await expect(root).toBeVisible();
     // Tablet should render without horizontal overflow
-    const overflow = await root.evaluate(el => {
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       return el.scrollWidth > el.clientWidth;
     });
     expect(overflow).toBe(false);
@@ -308,7 +318,7 @@ test.describe('ContentTrail — Console & Resources', () => {
     capture.start();
     const pom = new ContentTrailPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);
@@ -383,7 +393,8 @@ test.describe('ContentTrail — Accessibility', () => {
       // Focus target should be within the visible viewport (with tolerance for AEM toolbars)
       expect(box.y).toBeGreaterThanOrEqual(-50); // allow minor overlap with sticky header
       expect(box.y + box.height).toBeLessThanOrEqual(
-        await page.evaluate(() => window.innerHeight) + 50
+        // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => window.innerHeight) + 50
       );
     }
   });

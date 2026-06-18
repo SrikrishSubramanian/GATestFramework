@@ -5,6 +5,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -108,7 +109,8 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
-      const width = await footer.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await footer.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
   });
@@ -120,7 +122,8 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
-      const width = await footer.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await footer.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
   });
@@ -132,7 +135,8 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
-      const width = await footer.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await footer.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(0);
     }
   });
@@ -180,7 +184,8 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
-      const fontSize = await footer.evaluate(el =>
+      const fontSize = // 📏 TODO: Replace with measurement-utils
+    await footer.evaluate(el =>
         parseInt(window.getComputedStyle(el).fontSize)
       );
       // Font size should be readable
@@ -200,7 +205,7 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
 
       if (initial === 'false') {
         await clickElement(disclosure);
-        await page.waitForTimeout(100);
+        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
         const expanded = await disclosure.getAttribute('aria-expanded');
         expect(expanded).toBe('true');
       }
@@ -296,10 +301,12 @@ test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () =
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
-      const bgColor = await footer.evaluate(el =>
+      const bgColor = // 📏 TODO: Replace with measurement-utils
+    await footer.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
-      const textColor = await footer.evaluate(el =>
+      const textColor = // 📏 TODO: Replace with measurement-utils
+    await footer.evaluate(el =>
         window.getComputedStyle(el).color
       );
 

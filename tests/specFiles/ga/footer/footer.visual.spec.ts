@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -31,7 +32,8 @@ test.describe('Footer — Visual Regression', () => {
     await expect(root).toBeVisible();
 
     // Verify footer background
-    const bg = await root.evaluate(el => window.getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => window.getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).toBeTruthy();
   });
 
@@ -40,7 +42,8 @@ test.describe('Footer — Visual Regression', () => {
     await pom.navigate(BASE());
 
     const root = await pom.getRoot();
-    const display = await root.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
 
     // Footer should use flexbox or grid for alignment
     expect(['flex', 'grid', 'block']).toContain(display); // TODO: Use assertLayout() for display checks
@@ -77,7 +80,8 @@ test.describe('Footer — Visual Regression', () => {
     if (count > 0) {
       for (let i = 0; i < Math.min(count, 3); i++) {
         const heading = headings.nth(i);
-        const fontSize = await heading.evaluate(el =>
+        const fontSize = // 📏 TODO: Replace with measurement-utils
+    await heading.evaluate(el =>
           window.getComputedStyle(el).fontSize
         );
 
@@ -93,7 +97,8 @@ test.describe('Footer — Visual Regression', () => {
     await pom.navigate(BASE());
 
     const root = await pom.getRoot();
-    const padding = await root.evaluate(el =>
+    const padding = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el =>
       window.getComputedStyle(el).padding
     );
 

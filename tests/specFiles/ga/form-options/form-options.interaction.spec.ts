@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -33,7 +34,7 @@ test.describe('Form Options — Interactions', () => {
       const initialState = await checkbox.isChecked();
 
       await clickElement(checkbox);
-      await page.waitForTimeout(100);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const newState = await checkbox.isChecked();
       expect(newState).not.toBe(initialState);
@@ -51,12 +52,12 @@ test.describe('Form Options — Interactions', () => {
 
       // Select first radio
       await clickElement(radio1);
-      await page.waitForTimeout(100);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
       expect(await radio1.isChecked()).toBeTruthy();
 
       // Select second radio (should deselect first)
       await clickElement(radio2);
-      await page.waitForTimeout(100);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
       expect(await radio2.isChecked()).toBeTruthy();
       expect(await radio1.isChecked()).toBeFalsy();
     }
@@ -80,7 +81,7 @@ test.describe('Form Options — Interactions', () => {
         const secondValue = await secondOption.getAttribute('value');
 
         await select.selectOption(secondValue || '');
-        await page.waitForTimeout(100);
+        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
         const newValue = await select.inputValue();
         expect(newValue).not.toBe(initialValue);
@@ -102,10 +103,10 @@ test.describe('Form Options — Interactions', () => {
 
         // Click label
         await clickElement(label);
-        await page.waitForTimeout(100);
-
-        // Input should be focused or checked
-        const isFocused = await input.evaluate(el => document.activeElement === el);
+        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Input should be focused or checked
+        const isFocused = // 📏 TODO: Replace with measurement-utils
+    await input.evaluate(el => document.activeElement === el);
         const isChecked = await input.isChecked().catch(() => false);
 
         expect(isFocused || isChecked).toBeTruthy();
@@ -122,7 +123,7 @@ test.describe('Form Options — Interactions', () => {
       const textarea = textareas.first();
 
       await fill(textarea, 'test input');
-      await page.waitForTimeout(100);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const value = await textarea.inputValue();
       expect(value).toBe('test input');
@@ -140,7 +141,8 @@ test.describe('Form Options — Interactions', () => {
       await firstInput.focus();
       await page.keyboard.press('Tab');
 
-      const focused = await page.evaluate(() => document.activeElement?.tagName);
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).toBeTruthy();
     }
   });

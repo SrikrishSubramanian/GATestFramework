@@ -4,6 +4,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -224,7 +225,8 @@ test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
     const checkbox = page.locator('input[type="checkbox"]').first();
     if (await checkbox.count() > 0) {
       await checkbox.focus();
-      const focused = await page.evaluate(() => document.activeElement?.tagName);
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).toBe('INPUT');
     }
   });
@@ -239,7 +241,7 @@ test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
       const initialState = await checkbox.isChecked();
 
       await page.keyboard.press('Space');
-      await page.waitForTimeout(100);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const newState = await checkbox.isChecked();
       expect(newState).not.toBe(initialState);
@@ -255,7 +257,8 @@ test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
       await firstInput.focus();
       await page.keyboard.press('Tab');
 
-      const focused = await page.evaluate(() => document.activeElement?.getAttribute('class'));
+      const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.getAttribute('class'));
       expect(focused).toBeDefined();
     }
   });

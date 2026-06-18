@@ -3,6 +3,9 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -41,7 +44,8 @@ test.describe('Hero Fifty-Fifty â€” State Matrix', () => {
         const hero = page.locator('.cmp-hero-fifty-fifty').first();
         await expect(hero).toBeVisible();
 
-        const width = await hero.evaluate(el => el.offsetWidth);
+        const width = // 📏 TODO: Replace with measurement-utils
+    await hero.evaluate(el => el.offsetWidth);
         expect(width).toBeLessThanOrEqual(viewport.width);
 
         const errors: string[] = [];

@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -30,7 +32,8 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
     const container = page.locator('[class*="accordion"], [class*="tabs"], .cmp-accordion-tabs').first();
     await expect(container).toBeVisible();
 
-    const display = await container.evaluate(el =>
+    const display = // 📏 TODO: Replace with measurement-utils
+    await container.evaluate(el =>
       window.getComputedStyle(el).display
     );
     expect(['block', 'flex', 'grid']).toContain(display); // TODO: Use assertLayout() for display checks
@@ -46,7 +49,8 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
 
     if (count > 0) {
       const header = headers.first();
-      const fontSize = await header.evaluate(el =>
+      const fontSize = // 📏 TODO: Replace with measurement-utils
+    await header.evaluate(el =>
         parseInt(window.getComputedStyle(el).fontSize)
       );
       expect(fontSize).toBeGreaterThan(10); // TODO: Use assertTypography() for font checks
@@ -59,7 +63,8 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
 
     const content = page.locator('[class*="accordion"] [class*="content"], [class*="tabs"] [class*="panel"], [class*="tabpanel"]').first();
     if (await content.count() > 0) {
-      const padding = await content.evaluate(el =>
+      const padding = // 📏 TODO: Replace with measurement-utils
+    await content.evaluate(el =>
         window.getComputedStyle(el).padding
       );
       expect(padding).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin

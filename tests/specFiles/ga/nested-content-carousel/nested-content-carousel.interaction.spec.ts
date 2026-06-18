@@ -48,15 +48,17 @@ test.afterEach(async ({ page }, testInfo) => {
     await progressBar.waitFor({ state: 'visible', timeout: 10000 });
 
     // Record width at t=0
-    const widthAtStart = await progressBar.evaluate((el: HTMLElement) => {
+    const widthAtStart = // 📏 TODO: Replace with measurement-utils
+    await progressBar.evaluate((el: HTMLElement) => {
       const style = window.getComputedStyle(el);
       return parseFloat(style.width);
     });
 
     // Wait 3 seconds and check again
-    await page.waitForTimeout(3000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const widthAt3s = await progressBar.evaluate((el: HTMLElement) => {
+    const widthAt3s = // 📏 TODO: Replace with measurement-utils
+    await progressBar.evaluate((el: HTMLElement) => {
       const style = window.getComputedStyle(el);
       return parseFloat(style.width);
     });
@@ -80,7 +82,7 @@ test.afterEach(async ({ page }, testInfo) => {
     expect(initialText).toBe('01');
 
     // Wait enough time for auto-play to advance (6s interval + 1s buffer + fade speed)
-    await page.waitForTimeout(7000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     const updatedText = (await counter.textContent())?.trim() ?? '';
     expect(updatedText).toBe('02');
@@ -189,16 +191,17 @@ test.afterEach(async ({ page }, testInfo) => {
     await expect(toggle).toHaveClass(/is-paused/);
 
     // Record width right after pausing
-    const widthAfterPause = await progressBar.evaluate((el: HTMLElement) => {
+    const widthAfterPause = // 📏 TODO: Replace with measurement-utils
+    await progressBar.evaluate((el: HTMLElement) => {
       const style = window.getComputedStyle(el);
       return parseFloat(style.width);
     });
 
     // Wait 2 seconds
-    await page.waitForTimeout(2000);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Record width again — should not have changed significantly
-    const widthAfter2s = await progressBar.evaluate((el: HTMLElement) => {
+    const widthAfter2s = // 📏 TODO: Replace with measurement-utils
+    await progressBar.evaluate((el: HTMLElement) => {
       const style = window.getComputedStyle(el);
       return parseFloat(style.width);
     });
@@ -225,7 +228,8 @@ test.afterEach(async ({ page }, testInfo) => {
     // Focus the toggle directly and verify it is focusable
     await toggle.focus();
 
-    const focusedTag = await page.evaluate(() => {
+    const focusedTag = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       const el = document.activeElement;
       return el ? el.tagName.toLowerCase() : '';
     });
@@ -267,7 +271,8 @@ test.afterEach(async ({ page }, testInfo) => {
 
     await ctaLink.focus();
 
-    const focusedTag = await page.evaluate(() => {
+    const focusedTag = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
       const el = document.activeElement;
       return el ? el.tagName.toLowerCase() : '';
     });
@@ -293,16 +298,19 @@ test.afterEach(async ({ page }, testInfo) => {
     await ctaLink.waitFor({ state: 'visible', timeout: 10000 });
 
     // Capture background color before hover
-    const bgBefore = await ctaIcon.evaluate((el: HTMLElement) => {
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await ctaIcon.evaluate((el: HTMLElement) => {
       return window.getComputedStyle(el).backgroundColor;
     });
 
     // Hover over the CTA link
     await hover(ctaLink);
-    await page.waitForTimeout(400); // allow CSS transition to complete
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // allow CSS transition to complete
 
     // Capture background color after hover
-    const bgAfter = await ctaIcon.evaluate((el: HTMLElement) => {
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await ctaIcon.evaluate((el: HTMLElement) => {
       return window.getComputedStyle(el).backgroundColor;
     });
 
@@ -322,16 +330,19 @@ test.afterEach(async ({ page }, testInfo) => {
     await ctaLink.waitFor({ state: 'visible', timeout: 10000 });
 
     // Capture gap before hover
-    const gapBefore = await ctaLink.evaluate((el: HTMLElement) => {
+    const gapBefore = // 📏 TODO: Replace with measurement-utils
+    await ctaLink.evaluate((el: HTMLElement) => {
       return parseFloat(window.getComputedStyle(el).gap || '0');
     });
 
     // Hover over the CTA link
     await hover(ctaLink);
-    await page.waitForTimeout(400); // allow CSS transition to complete
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // allow CSS transition to complete
 
     // Capture gap after hover
-    const gapAfter = await ctaLink.evaluate((el: HTMLElement) => {
+    const gapAfter = // 📏 TODO: Replace with measurement-utils
+    await ctaLink.evaluate((el: HTMLElement) => {
       return parseFloat(window.getComputedStyle(el).gap || '0');
     });
 

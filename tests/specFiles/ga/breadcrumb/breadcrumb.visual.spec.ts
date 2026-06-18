@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -51,7 +52,8 @@ test.describe('Breadcrumb — Visual Regression', () => {
     await pom.navigate(BASE());
     const el = page.locator('.cmp-breadcrumb').first();
     // At 1024px breadcrumb may be visible (depends on desktop breakpoint)
-    const display = await el.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const display = // 📏 TODO: Replace with measurement-utils
+    await el.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     if (display === 'none') {
       // Component hidden at this breakpoint — verify that's correct
       expect(display).toBe('none');

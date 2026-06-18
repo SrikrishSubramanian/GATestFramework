@@ -221,7 +221,8 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     await expect(firstTab).toBeFocused();
 
     // Verify outline style is applied — AEM tabs uses 2px solid azul outline on :focus-visible
-    const outlineWidth = await firstTab.evaluate((el) => {
+    const outlineWidth = // 📏 TODO: Replace with measurement-utils
+    await firstTab.evaluate((el) => {
       return window.getComputedStyle(el, ':focus-visible').outlineWidth ||
              window.getComputedStyle(el).outlineWidth;
     });
@@ -245,7 +246,8 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     await expect(secondTab).not.toHaveClass(/cmp-tabs__tab--active/);
 
     // Capture background-color before hover
-    const bgBefore = await secondTab.evaluate((el) =>
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await secondTab.evaluate((el) =>
       window.getComputedStyle(el).backgroundColor
     );
 
@@ -253,7 +255,8 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     await hover(secondTab);
 
     // Capture background-color after hover
-    const bgAfter = await secondTab.evaluate((el) =>
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await secondTab.evaluate((el) =>
       window.getComputedStyle(el).backgroundColor
     );
 
@@ -274,7 +277,8 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     await expect(firstTab).toHaveClass(/cmp-tabs__tab--active/);
 
     // Capture background-color of active tab before hover
-    const bgBefore = await firstTab.evaluate((el) =>
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await firstTab.evaluate((el) =>
       window.getComputedStyle(el).backgroundColor
     );
 
@@ -282,7 +286,8 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     await hover(firstTab);
 
     // Background color should remain the same (granite fill is locked for active)
-    const bgAfter = await firstTab.evaluate((el) =>
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await firstTab.evaluate((el) =>
       window.getComputedStyle(el).backgroundColor
     );
 

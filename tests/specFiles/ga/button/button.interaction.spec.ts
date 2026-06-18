@@ -5,6 +5,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -102,7 +103,8 @@ test.describe('Button — Keyboard & Accessibility Interactions', () => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const btn = btnInSection(page, 'white', '.ga-button--primary');
-    const tagName = await btn.evaluate(el => el.tagName.toLowerCase());
+    const tagName = // 📏 TODO: Replace with measurement-utils
+    await btn.evaluate(el => el.tagName.toLowerCase());
     expect(['a', 'button']).toContain(tagName);
     const text = await btn.textContent();
     expect(text?.trim().length).toBeGreaterThan(0);
@@ -146,7 +148,8 @@ test.describe('Button — Hover & Visual Interactions', () => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const btn = btnInSection(page, 'white', '.ga-button--primary');
-    const cursor = await btn.evaluate(el => getComputedStyle(el).cursor); // measurement: style check
+    const cursor = // 📏 TODO: Replace with measurement-utils
+    await btn.evaluate(el => getComputedStyle(el).cursor); // measurement: style check
     expect(cursor).toBe('pointer');
   });
 

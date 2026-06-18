@@ -5,6 +5,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -40,7 +41,8 @@ test.describe('Rate Table — Interactions', () => {
       // If sortable, click and verify
       if (ariaSort !== null) {
         await clickElement(firstHeader);
-        await page.waitForTimeout(300); // Wait for sort animation
+        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Wait for sort animation
 
         // Verify table is still visible
         await expect(table).toBeVisible();
@@ -62,7 +64,7 @@ test.describe('Rate Table — Interactions', () => {
 
       // Click to expand/collapse
       await clickElement(firstButton);
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const newState = await firstButton.getAttribute('aria-expanded');
       expect(newState).not.toBe(initialState);
@@ -74,15 +76,17 @@ test.describe('Rate Table — Interactions', () => {
     await pom.navigate(BASE());
 
     const rows = page.locator('.cmp-rate-table table tbody tr').first();
-    const initialBg = await rows.evaluate(el =>
+    const initialBg = // 📏 TODO: Replace with measurement-utils
+    await rows.evaluate(el =>
       window.getComputedStyle(el).backgroundColor
     );
 
     // Hover over row
     await hover(rows);
-    await page.waitForTimeout(200);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const hoverBg = await rows.evaluate(el =>
+    const hoverBg = // 📏 TODO: Replace with measurement-utils
+    await rows.evaluate(el =>
       window.getComputedStyle(el).backgroundColor
     );
 
@@ -99,10 +103,10 @@ test.describe('Rate Table — Interactions', () => {
 
     // Try keyboard navigation
     await page.keyboard.press('Tab');
-    await page.waitForTimeout(100);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Verify focus moved
-    const focusedElement = await page.evaluate(() => document.activeElement?.tagName);
+    const focusedElement = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.tagName);
     expect(focusedElement).toBeTruthy();
   });
 
@@ -118,9 +122,8 @@ test.describe('Rate Table — Interactions', () => {
 
       // Type in filter
       await fill(firstInput, 'test');
-      await page.waitForTimeout(300);
-
-      // Verify table is still visible
+      // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+    // Verify table is still visible
       const table = page.locator('.cmp-rate-table table').first();
       await expect(table).toBeVisible();
     }

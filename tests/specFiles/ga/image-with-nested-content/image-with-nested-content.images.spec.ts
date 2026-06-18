@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -49,7 +50,8 @@ test.describe('ImageWithNestedContent — Image Health', () => {
     await pom.navigate(BASE());
     // Verify the CSS rule exists by injecting an <img> and checking
     const instance = page.locator('.cmp-image-with-nested-content').first();
-    const objectFit = await instance.evaluate(el => {
+    const objectFit = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       let img = el.querySelector('.cmp-image__image') as HTMLElement;
       let injected = false;
       if (!img) {
@@ -72,7 +74,8 @@ test.describe('ImageWithNestedContent — Image Health', () => {
     await pom.navigate(BASE());
     // The LESS sets border-radius on the image — verify the radius CSS exists
     const instance = page.locator('.cmp-image-with-nested-content').first();
-    const borderRadius = await instance.evaluate(el => {
+    const borderRadius = // 📏 TODO: Replace with measurement-utils
+    await instance.evaluate(el => {
       let img = el.querySelector('.cmp-image__image') as HTMLElement;
       let injected = false;
       if (!img) {

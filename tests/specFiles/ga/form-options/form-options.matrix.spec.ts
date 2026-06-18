@@ -3,6 +3,8 @@ import { FormOptionsPage } from '../../../pages/ga/components/formOptionsPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -50,8 +52,9 @@ test.describe('Form Options — State Matrix', () => {
             switch (state) {
               case 'focused':
                 await element.focus();
-                await page.waitForTimeout(100);
-                const focused = await element.evaluate(el =>
+                // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+                const focused = // 📏 TODO: Replace with measurement-utils
+    await element.evaluate(el =>
                   document.activeElement === el
                 );
                 expect(focused).toBeTruthy();

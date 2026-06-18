@@ -167,7 +167,8 @@ test.describe('Login â€” Background Color Variants', () => {
     if (await loginInSection.count() === 0) { test.skip(); return; }
     await expect(loginInSection).toBeVisible();
     // On dark background, verify background is non-transparent
-    const bg = await section.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bg = // 📏 TODO: Replace with measurement-utils
+    await section.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).not.toMatch(/rgba\(0,\s*0,\s*0,\s*0\)/);
   });
 

@@ -14,6 +14,8 @@ import { test, expect } from '@playwright/test';
 import ENV from '../../utils/infra/env';
 import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
+import { clickElement, fill, hover, doubleClick } from '../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -68,9 +70,10 @@ test.describe('Performance — Cumulative Layout Shift (CLS)', () => {
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
       await page.waitForLoadState('networkidle');
       // Wait for any late layout shifts (fonts, lazy images, JS injection)
-      await page.waitForTimeout(2000);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-      const cls = await page.evaluate(() => {
+      const cls = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         return new Promise<number>((resolve) => {
           let clsValue = 0;
           const observer = new PerformanceObserver((list) => {
@@ -107,7 +110,8 @@ test.describe('Performance — Largest Contentful Paint (LCP)', () => {
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
       await page.waitForLoadState('networkidle');
 
-      const lcp = await page.evaluate(() => {
+      const lcp = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         return new Promise<number>((resolve) => {
           const observer = new PerformanceObserver((list) => {
             const entries = list.getEntries();
@@ -183,7 +187,8 @@ test.describe('Link Integrity — Style Guide Pages', () => {
       await page.waitForLoadState('networkidle');
 
       // Extract all internal links (href starting with / or the base URL)
-      const links = await page.evaluate((baseUrl) => {
+      const links = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate((baseUrl) => {
         const anchors = Array.from(document.querySelectorAll('a[href]'));
         return anchors
           .map(a => (a as HTMLAnchorElement).href)
@@ -226,7 +231,8 @@ test.describe('DAM Asset Integrity — Image Sources', () => {
       await page.waitForLoadState('networkidle');
 
       // Check all <img> src attributes that point to DAM or internal paths
-      const imageResults = await page.evaluate(() => {
+      const imageResults = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         const images = Array.from(document.querySelectorAll('img[src]'));
         return images.map(img => {
           const el = img as HTMLImageElement;
@@ -255,7 +261,8 @@ test.describe('DAM Asset Integrity — Image Sources', () => {
       await page.waitForLoadState('networkidle');
 
       // Every <img> must have an alt attribute (empty alt="" is valid for decorative images)
-      const missingAlt = await page.evaluate(() => {
+      const missingAlt = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         const images = Array.from(document.querySelectorAll('img'));
         return images
           .filter(img => img.getAttribute('alt') === null)
@@ -468,7 +475,8 @@ test.describe('SEO — HTML Lang & Charset', () => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
       await page.waitForLoadState('networkidle');
 
-      const charset = await page.evaluate(() => {
+      const charset = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         const meta = document.querySelector('meta[charset]');
         return meta ? meta.getAttribute('charset') : null;
       });
@@ -497,7 +505,8 @@ test.describe('SEO — Heading Hierarchy', () => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
       await page.waitForLoadState('networkidle');
 
-      const headingLevels = await page.evaluate(() => {
+      const headingLevels = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => {
         const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
         return headings.map(h => parseInt(h.tagName.charAt(1), 10));
       });

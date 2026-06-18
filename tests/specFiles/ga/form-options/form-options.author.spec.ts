@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { FormOptionsPage } from '../../../pages/ga/components/formOptionsPage';
 import ENV from '../../../utils/infra/env';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -222,7 +223,8 @@ test.describe('FormOptions — Dark Background', () => {
     if (await graniteSection.count() === 0) { test.skip(); return; }
     const label = graniteSection.locator(`${ROOT} label`).first();
     if (await label.count() === 0) { test.skip(); return; }
-    const color = await label.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await label.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Text on dark background should be light
     expect(color).toContain('255');
   });
@@ -234,7 +236,8 @@ test.describe('FormOptions — Dark Background', () => {
     if (await azulSection.count() === 0) { test.skip(); return; }
     const label = azulSection.locator(`${ROOT} label`).first();
     if (await label.count() === 0) { test.skip(); return; }
-    const color = await label.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await label.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(color).toContain('255');
   });
 });
@@ -279,7 +282,8 @@ test.describe('FormOptions — Responsive', () => {
     const root = page.locator('.cmp-form-options').first();
     await expect(root).toBeVisible();
     // Tablet should render without horizontal overflow
-    const overflow = await root.evaluate(el => {
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate(el => {
       return el.scrollWidth > el.clientWidth;
     });
     expect(overflow).toBe(false);
@@ -346,7 +350,8 @@ test.describe('FormOptions — Accessibility', () => {
       const box = await focusable.nth(i).boundingBox();
       if (box) {
         expect(box.y).toBeGreaterThanOrEqual(0);
-        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
+        expect(box.y + box.height).toBeLessThanOrEqual(// 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => window.innerHeight));
       }
     }
   });

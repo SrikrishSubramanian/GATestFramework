@@ -8,6 +8,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -60,7 +61,8 @@ test.describe('Navigation — Mobile Single List (GAAM-396)', () => {
 
     // At mobile, the top-level group should stack vertically (flex-direction: column)
     const group = nav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('column');
   });
 
@@ -78,7 +80,8 @@ test.describe('Navigation — Mobile Single List (GAAM-396)', () => {
     }
 
     const group = vertNav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('column');
   });
 
@@ -94,7 +97,8 @@ test.describe('Navigation — Mobile Single List (GAAM-396)', () => {
 
     // Tab to first link and verify it receives focus
     await links.first().focus();
-    const focused = await page.evaluate(() => document.activeElement?.classList.contains('cmp-navigation__item-link'));
+    const focused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() => document.activeElement?.classList.contains('cmp-navigation__item-link'));
     expect(focused).toBe(true);
   });
 });
@@ -126,7 +130,8 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
     const trigger = groupedNav.locator(SEL.itemLevel0).first();
 
     // Check for icon indicator — could be ::before/::after, SVG, or background-image
-    const hasIcon = await trigger.evaluate(el => {
+    const hasIcon = // 📏 TODO: Replace with measurement-utils
+    await trigger.evaluate(el => {
       const before = getComputedStyle(el, '::before');
       const after = getComputedStyle(el, '::after');
       const hasPseudo = (before.content !== 'none' && before.content !== '') ||
@@ -153,14 +158,16 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
     const trigger = groupedNav.locator(SEL.itemLevel0).first();
 
     // Ensure item is not expanded
-    const isExpanded = await trigger.evaluate(el => el.classList.contains('cmp-navigation__item--expanded'));
+    const isExpanded = // 📏 TODO: Replace with measurement-utils
+    await trigger.evaluate(el => el.classList.contains('cmp-navigation__item--expanded'));
     if (isExpanded) {
       await trigger.locator(':scope > .cmp-navigation__item-link').click();
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
 
     // Check for + indicator (pseudo-element content or SVG)
-    const afterContent = await trigger.evaluate(el => getComputedStyle(el, '::after').content); // measurement: style check
+    const afterContent = // 📏 TODO: Replace with measurement-utils
+    await trigger.evaluate(el => getComputedStyle(el, '::after').content); // measurement: style check
     // + icon should be present when collapsed
     expect(afterContent).toBeTruthy();
   });
@@ -175,13 +182,13 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
 
     // Click to expand
     await trigger.locator(':scope > .cmp-navigation__item-link').click();
-    await page.waitForTimeout(300);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Verify expanded class is added
     await expect(trigger).toHaveClass(/cmp-navigation__item--expanded/);
 
     // Check for - indicator in expanded state
-    const afterContent = await trigger.evaluate(el => getComputedStyle(el, '::after').content); // measurement: style check
+    const afterContent = // 📏 TODO: Replace with measurement-utils
+    await trigger.evaluate(el => getComputedStyle(el, '::after').content); // measurement: style check
     expect(afterContent).toBeTruthy();
   });
 
@@ -197,12 +204,12 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
 
     // Expand first section
     await triggers.nth(0).locator(':scope > .cmp-navigation__item-link').click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     await expect(triggers.nth(0)).toHaveClass(/cmp-navigation__item--expanded/);
 
     // Expand second section — first should collapse
     await triggers.nth(1).locator(':scope > .cmp-navigation__item-link').click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     await expect(triggers.nth(1)).toHaveClass(/cmp-navigation__item--expanded/);
 
     // First should no longer be expanded
@@ -223,22 +230,24 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
     const childGroup = trigger.locator(':scope > .cmp-navigation__group');
 
     // Initially collapsed — child links should be hidden
-    const initialDisplay = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
+    const initialDisplay = // 📏 TODO: Replace with measurement-utils
+    await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(initialDisplay).toBe('none');
 
     // Click to expand
     await trigger.locator(':scope > .cmp-navigation__item-link').click();
-    await page.waitForTimeout(300);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Child links should now be visible
-    const expandedDisplay = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
+    const expandedDisplay = // 📏 TODO: Replace with measurement-utils
+    await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(expandedDisplay).not.toBe('none');
 
     // Click again to collapse
     await trigger.locator(':scope > .cmp-navigation__item-link').click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const collapsedDisplay = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
+    const collapsedDisplay = // 📏 TODO: Replace with measurement-utils
+    await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: style check
     expect(collapsedDisplay).toBe('none');
   });
 
@@ -252,8 +261,7 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
 
     // Expand the section
     await trigger.locator(':scope > .cmp-navigation__item-link').click();
-    await page.waitForTimeout(300);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Child links should be visible and focusable
     const childLinks = trigger.locator(':scope > .cmp-navigation__group .cmp-navigation__item-link');
     const childCount = await childLinks.count();
@@ -261,7 +269,8 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
 
     // Focus first child link
     await childLinks.first().focus();
-    const isFocused = await page.evaluate(() =>
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() =>
       document.activeElement?.classList.contains('cmp-navigation__item-link')
     );
     expect(isFocused).toBe(true);
@@ -277,7 +286,7 @@ test.describe('Navigation — Mobile Grouped Accordion (GAAM-396)', () => {
 
     // Expand a section
     await trigger.locator(':scope > .cmp-navigation__item-link').click();
-    await page.waitForTimeout(300);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     await expect(trigger).toHaveClass(/cmp-navigation__item--expanded/);
 
     // Note: Session persistence is marked optional in AC — this test verifies
@@ -300,12 +309,14 @@ test.describe('Navigation — General Delivery (GAAM-396)', () => {
     // Target level-1 child links (not headings which use helper-dark)
     const childLink = graniteNav.locator(`${SEL.itemLevel1} ${SEL.itemLink}`).first();
     if (await childLink.count() > 0) {
-      const linkColor = await childLink.evaluate(el => getComputedStyle(el).color); // measurement: style check
+      const linkColor = // 📏 TODO: Replace with measurement-utils
+    await childLink.evaluate(el => getComputedStyle(el).color); // measurement: style check
       expect(linkColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
     } else {
       // Single-list nav — all links should be white on dark bg
       const anyLink = graniteNav.locator(SEL.itemLink).first();
-      const color = await anyLink.evaluate(el => getComputedStyle(el).color); // measurement: style check
+      const color = // 📏 TODO: Replace with measurement-utils
+    await anyLink.evaluate(el => getComputedStyle(el).color); // measurement: style check
       const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
       expect(match).toBeTruthy();
       const avg = (parseInt(match![1]) + parseInt(match![2]) + parseInt(match![3])) / 3;
@@ -349,7 +360,8 @@ test.describe('Navigation — General Delivery (GAAM-396)', () => {
     // On desktop, horizontal nav should be flex row (not column)
     const nav = page.locator(SEL.root).first();
     const group = nav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('row');
   });
 });
@@ -413,22 +425,23 @@ test.describe('Navigation — Accessibility (GAAM-396)', () => {
 
     // Focus the trigger link — it should be focusable via Tab
     await triggerLink.focus();
-    const isFocused = await page.evaluate(() =>
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await page.evaluate(() =>
       document.activeElement?.classList.contains('cmp-navigation__item-link')
     );
     expect(isFocused).toBe(true);
 
     // Click to expand (accordion JS intercepts click at mobile breakpoint)
     await clickElement(triggerLink);
-    await page.waitForTimeout(300);
-
+    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Parent item should be expanded
     await expect(parentItem).toHaveClass(/cmp-navigation__item--expanded/);
 
     // Click again to collapse
     await clickElement(triggerLink);
-    await page.waitForTimeout(300);
-    const stillExpanded = await parentItem.evaluate(el =>
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const stillExpanded = // 📏 TODO: Replace with measurement-utils
+    await parentItem.evaluate(el =>
       el.classList.contains('cmp-navigation__item--expanded')
     );
     expect(stillExpanded).toBe(false);
@@ -456,7 +469,8 @@ test.describe('Navigation — Accessibility (GAAM-396)', () => {
     // Check focus indicator on dark background (granite)
     const darkLink = page.locator(`${SEL.sectionGranite} ${SEL.itemLink}`).first();
     await darkLink.focus();
-    const darkOutline = await darkLink.evaluate(el => {
+    const darkOutline = // 📏 TODO: Replace with measurement-utils
+    await darkLink.evaluate(el => {
       const style = getComputedStyle(el);
       return style.outline || style.boxShadow;
     });
@@ -464,7 +478,8 @@ test.describe('Navigation — Accessibility (GAAM-396)', () => {
     // Check focus indicator on light background (white)
     const lightLink = page.locator(`${SEL.sectionWhite} ${SEL.itemLink}`).first();
     await lightLink.focus();
-    const lightOutline = await lightLink.evaluate(el => {
+    const lightOutline = // 📏 TODO: Replace with measurement-utils
+    await lightLink.evaluate(el => {
       const style = getComputedStyle(el);
       return style.outline || style.boxShadow;
     });
@@ -512,7 +527,8 @@ test.describe('Navigation — Convention Compliance (GAAM-396)', () => {
 
     // Links should have transition property for smooth state changes
     const link = page.locator(`${SEL.root} ${SEL.itemLink}`).first();
-    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     // LESS defines: color 0.2s ease
     expect(transition).toContain('color');
   });
@@ -523,7 +539,7 @@ test.describe('Navigation — Convention Compliance (GAAM-396)', () => {
 test.describe('Navigation — Console & Resources', () => {
   test('[NVGT-029] @regression Navigation produces no JS errors', async ({ page }) => {const pom = new NavigationPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors().filter(e =>
       // Filter out pre-existing AEM platform errors unrelated to navigation component
       !e.message?.includes('getElementsByTagName')
@@ -542,7 +558,7 @@ test.describe('Navigation — Console & Resources', () => {
     const count = await level0Items.count();
     for (let i = 0; i < Math.min(count, 3); i++) {
       await level0Items.nth(i).locator(':scope > .cmp-navigation__item-link').click();
-      await page.waitForTimeout(300);
+      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     }
 
     const errors = capture.getErrors().filter(e =>
@@ -563,7 +579,8 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const nav = page.locator(`${SEL.sectionWhite} ${SEL.root}`).first();
     if (await nav.count() === 0) { test.skip(); return; }
     const group = nav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('row');
     // Verify links are side-by-side (same Y coordinate)
     const items = group.locator(`> ${SEL.itemLevel0}`);
@@ -582,7 +599,8 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const vertNav = page.locator(`${SEL.verticalMod} ${SEL.root}`).first();
     if (await vertNav.count() === 0) { test.skip(); return; }
     const group = vertNav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('column');
   });
 
@@ -592,7 +610,8 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     await pom.navigate(BASE());
     const link = page.locator(`${SEL.sectionWhite} ${SEL.itemLink}`).first();
     if (await link.count() === 0) { test.skip(); return; }
-    const fontSize = await link.evaluate(el => getComputedStyle(el).fontSize); // measurement: style check
+    const fontSize = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).fontSize); // measurement: style check
     expect(fontSize).toBe('14px'); // TODO: Use assertTypography() for font checks
   });
 
@@ -604,10 +623,13 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const link = page.locator(`${SEL.sectionWhite} ${SEL.itemLevel1} ${SEL.itemLink}, ${SEL.sectionWhite} ${SEL.root}:not(:has(${SEL.itemLevel1})) ${SEL.itemLink}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
-    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
+    const bgBefore = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
     await hover(link);
-    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
-    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: style check
+    const bgAfter = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: style check
+    const borderRadius = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: style check
     expect(bgAfter).not.toBe(bgBefore);
     expect(parseFloat(borderRadius)).toBeGreaterThanOrEqual(20);
   });
@@ -617,7 +639,8 @@ test.describe('Navigation — Desktop Single List (GAAM-395)', () => {
     const pom = new NavigationPage(page);
     await pom.navigate(BASE());
     const link = page.locator(`${SEL.root} ${SEL.itemLink}`).first();
-    const transition = await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
+    const transition = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).transition); // measurement: style check
     expect(transition).toContain('color');
   });
 });
@@ -630,7 +653,8 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     const groupedNav = page.locator(SEL.root).filter({ has: page.locator(SEL.itemLevel1) }).first();
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const group = groupedNav.locator(`> ${SEL.group}`);
-    const flexDir = await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await group.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('row');
     // Headings should be in the same row
     const headings = group.locator(`> ${SEL.itemLevel0}`);
@@ -650,7 +674,8 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     // Level-0 items with children have pointer-events: none on their link
     const headingLink = groupedNav.locator(`${SEL.itemLevel0}:has(> ${SEL.group}) > ${SEL.itemLink}`).first();
-    const pointerEvents = await headingLink.evaluate(el => getComputedStyle(el).pointerEvents); // measurement: style check
+    const pointerEvents = // 📏 TODO: Replace with measurement-utils
+    await headingLink.evaluate(el => getComputedStyle(el).pointerEvents); // measurement: style check
     expect(pointerEvents).toBe('none');
   });
 
@@ -661,7 +686,8 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     const groupedNav = page.locator(SEL.root).filter({ has: page.locator(SEL.itemLevel1) }).first();
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const headingLink = groupedNav.locator(`${SEL.itemLevel0}:has(> ${SEL.group}) > ${SEL.itemLink}`).first();
-    const fontWeight = await headingLink.evaluate(el => getComputedStyle(el).fontWeight); // measurement: style check
+    const fontWeight = // 📏 TODO: Replace with measurement-utils
+    await headingLink.evaluate(el => getComputedStyle(el).fontWeight); // measurement: style check
     // 600 = semibold
     expect(parseInt(fontWeight)).toBeGreaterThanOrEqual(600); // TODO: Use assertTypography() for font checks
   });
@@ -673,7 +699,8 @@ test.describe('Navigation — Desktop Grouped Navigation (GAAM-395)', () => {
     const groupedNav = page.locator(SEL.root).filter({ has: page.locator(SEL.itemLevel1) }).first();
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const childGroup = groupedNav.locator(`${SEL.itemLevel0} > ${SEL.group}`).first();
-    const flexDir = await childGroup.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await childGroup.evaluate(el => getComputedStyle(el).flexDirection); // measurement: style check
     expect(flexDir).toBe('column');
   });
 });
@@ -722,7 +749,8 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     await pom.navigate(BASE());
     const link = page.locator(`${SEL.sectionWhite} ${SEL.itemLink}`).first();
     if (await link.count() === 0) { test.skip(); return; }
-    const color = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Should be dark (granite) — NOT white
     expect(color).not.toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
@@ -735,7 +763,8 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     const singleLink = page.locator(`${SEL.sectionGranite} ${SEL.root}:not(:has(${SEL.itemLevel1})) ${SEL.itemLink}`).first();
     const target = (await link.count() > 0) ? link : singleLink;
     if (await target.count() === 0) { test.skip(); return; }
-    const color = await target.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await target.evaluate(el => getComputedStyle(el).color); // measurement: style check
     expect(color).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -746,7 +775,8 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     const singleLink = page.locator(`${SEL.sectionAzul} ${SEL.root}:not(:has(${SEL.itemLevel1})) ${SEL.itemLink}`).first();
     const target = (await link.count() > 0) ? link : singleLink;
     if (await target.count() === 0) { test.skip(); return; }
-    const color = await target.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await target.evaluate(el => getComputedStyle(el).color); // measurement: style check
     expect(color).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -755,7 +785,8 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     await pom.navigate(BASE());
     const heading = page.locator(`${SEL.sectionGranite} ${SEL.itemLevel0}:has(> ${SEL.group}) > ${SEL.itemLink}`).first();
     if (await heading.count() === 0) { test.skip(); return; }
-    const color = await heading.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const color = // 📏 TODO: Replace with measurement-utils
+    await heading.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Helper-dark is a muted/subdued color — NOT pure white
     expect(color).not.toMatch(/rgb\(255,\s*255,\s*255\)/);
     // But should be lighter than granite
@@ -774,7 +805,8 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     await link.focus();
     await page.keyboard.press('Tab');
     await page.keyboard.press('Shift+Tab');
-    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
+    const boxShadow = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: style check
     // Should have box-shadow for focus ring on dark bg (not just outline)
     expect(boxShadow).not.toBe('none');
   });
@@ -787,10 +819,12 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const trigger = groupedNav.locator(SEL.itemLevel0).first();
     const link = trigger.locator(':scope > .cmp-navigation__item-link');
-    const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    const colorBefore = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     await clickElement(link);
-    await page.waitForTimeout(300);
-    const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    const colorAfter = // 📏 TODO: Replace with measurement-utils
+    await link.evaluate(el => getComputedStyle(el).color); // measurement: style check
     // Color should change when expanded (collapsed: full color, expanded: subdued)
     expect(colorAfter).not.toBe(colorBefore);
   });

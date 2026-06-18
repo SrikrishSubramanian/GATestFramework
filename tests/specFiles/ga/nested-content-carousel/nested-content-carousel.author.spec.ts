@@ -6,6 +6,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -62,7 +63,8 @@ test.describe('NestedContentCarousel — Core Structure', () => {
     await pom.navigate(BASE());
     const wrapper = page.locator(WRAPPER).first();
     await expect(wrapper).toBeVisible();
-    const styles = await wrapper.evaluate((el: HTMLElement) => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await wrapper.evaluate((el: HTMLElement) => {
       const cs = getComputedStyle(el);
       return {
         bg: cs.backgroundColor,
@@ -71,7 +73,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
       };
     });
     // White background — rgb(255,255,255)
-    expect(styles.bg).toBe('rgb(255, 255, 255)');
+    expect(styles.bg, `Expected 'rgb(255, 255, 255, got ${styles.bg}`).toBe('rgb(255, 255, 255)');
     // Border-radius includes 12px
     expect(styles.radius).toContain('12px');
     // Max-width is 616px or 100% (mobile/constrained container)
@@ -83,7 +85,8 @@ test.describe('NestedContentCarousel — Core Structure', () => {
     await pom.navigate(BASE());
     const cardsList = page.locator(CARDS).first();
     await expect(cardsList).toBeVisible();
-    const tagName = await cardsList.evaluate((el: HTMLElement) => el.tagName.toLowerCase());
+    const tagName = // 📏 TODO: Replace with measurement-utils
+    await cardsList.evaluate((el: HTMLElement) => el.tagName.toLowerCase());
     expect(tagName).toBe('ul');
   });
 
@@ -92,7 +95,8 @@ test.describe('NestedContentCarousel — Core Structure', () => {
     await pom.navigate(BASE());
     const card = page.locator(CARD).first();
     await expect(card).toBeVisible();
-    const tagName = await card.evaluate((el: HTMLElement) => el.tagName.toLowerCase());
+    const tagName = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate((el: HTMLElement) => el.tagName.toLowerCase());
     expect(tagName).toBe('li');
   });
 
@@ -101,7 +105,8 @@ test.describe('NestedContentCarousel — Core Structure', () => {
     await pom.navigate(BASE());
     const headline = page.locator(HEADLINE).first();
     await expect(headline).toBeVisible();
-    const styles = await headline.evaluate((el: HTMLElement) => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await headline.evaluate((el: HTMLElement) => {
       const cs = getComputedStyle(el);
       return {
         fontWeight: cs.fontWeight,
@@ -138,7 +143,8 @@ test.describe('NestedContentCarousel — Core Structure', () => {
     const image = page.locator(CARD_IMAGE).first();
     if (await image.count() > 0) {
       // Image rendered — verify actual dimensions
-      const styles = await image.evaluate((el: HTMLElement) => {
+      const styles = // 📏 TODO: Replace with measurement-utils
+    await image.evaluate((el: HTMLElement) => {
         const cs = getComputedStyle(el);
         return { width: cs.width, height: cs.height, borderRadius: cs.borderRadius };
       });
@@ -148,7 +154,8 @@ test.describe('NestedContentCarousel — Core Structure', () => {
     } else {
       // Image not authored — inject a temporary element and verify CSS rules apply
       const card = page.locator('.cmp-nested-content-carousel__content').first();
-      const cssApplied = await card.evaluate((el: HTMLElement) => {
+      const cssApplied = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate((el: HTMLElement) => {
         const imgDiv = document.createElement('div');
         imgDiv.className = 'cmp-nested-content-carousel__card-image';
         el.appendChild(imgDiv);
@@ -170,7 +177,8 @@ test.describe('NestedContentCarousel — Core Structure', () => {
     const wrapper = page.locator(WRAPPER).first();
     const spacer = wrapper.locator('.spacer').first();
     await expect(spacer).toBeVisible();
-    const styles = await spacer.evaluate((el: HTMLElement) => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate((el: HTMLElement) => {
       const cs = getComputedStyle(el);
       return {
         height: cs.height,
@@ -245,7 +253,8 @@ test.describe('NestedContentCarousel — Carousel Behavior', () => {
     await pom.navigate(BASE());
     const bar = page.locator(PROGRESS).first();
     await expect(bar).toBeVisible();
-    const styles = await bar.evaluate((el: HTMLElement) => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await bar.evaluate((el: HTMLElement) => {
       const cs = getComputedStyle(el);
       return { width: cs.width, height: cs.height };
     });
@@ -259,7 +268,8 @@ test.describe('NestedContentCarousel — Carousel Behavior', () => {
     // Capture the initial progress width immediately after page load
     const progressEl = page.locator(PROGRESS_BAR).first();
     await expect(progressEl).toBeAttached();
-    const widthPx = await progressEl.evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).width)); // measurement: use measurement-utils for cleaner code
+    const widthPx = // 📏 TODO: Replace with measurement-utils
+    await progressEl.evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).width)); // measurement: use measurement-utils for cleaner code
     // At initial load the animation should be near 0%; allow up to 50px for timing variance
     expect(widthPx).toBeLessThan(50);
   });
@@ -273,7 +283,8 @@ test.describe('NestedContentCarousel — Carousel Behavior', () => {
     const playIcon = toggle.locator('.icon-play');
     await expect(pauseIcon).toBeVisible();
     // play icon hidden by default (carousel auto-playing)
-    const playDisplay = await playIcon.evaluate((el: HTMLElement) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const playDisplay = // 📏 TODO: Replace with measurement-utils
+    await playIcon.evaluate((el: HTMLElement) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(playDisplay).toBe('none');
   });
 
@@ -299,7 +310,8 @@ test.describe('NestedContentCarousel — Single Card Mode', () => {
     await pom.navigate(BASE());
     const carousel = page.locator(NCC).first();
     // Add is-single class to simulate single-card mode
-    const display = await carousel.evaluate((el: HTMLElement) => {
+    const display = // 📏 TODO: Replace with measurement-utils
+    await carousel.evaluate((el: HTMLElement) => {
       el.classList.add('is-single');
       const counter = el.querySelector('.cmp-nested-content-carousel__counter');
       // JS hides it via style.display = 'none'; CSS also hides via .is-single selector
@@ -308,6 +320,7 @@ test.describe('NestedContentCarousel — Single Card Mode', () => {
     });
     expect(display).toBe('none');
     // Clean up
+    // 📏 TODO: Replace with measurement-utils
     await carousel.evaluate((el: HTMLElement) => el.classList.remove('is-single'));
   });
 
@@ -315,13 +328,15 @@ test.describe('NestedContentCarousel — Single Card Mode', () => {
     const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
     const carousel = page.locator(NCC).first();
-    const display = await carousel.evaluate((el: HTMLElement) => {
+    const display = // 📏 TODO: Replace with measurement-utils
+    await carousel.evaluate((el: HTMLElement) => {
       el.classList.add('is-single');
       const progress = el.querySelector('.carousel-progress');
       if (progress) (progress as HTMLElement).style.display = 'none';
       return progress ? getComputedStyle(progress).display : 'none';
     });
     expect(display).toBe('none');
+    // 📏 TODO: Replace with measurement-utils
     await carousel.evaluate((el: HTMLElement) => el.classList.remove('is-single'));
   });
 
@@ -329,13 +344,15 @@ test.describe('NestedContentCarousel — Single Card Mode', () => {
     const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
     const carousel = page.locator(NCC).first();
-    const display = await carousel.evaluate((el: HTMLElement) => {
+    const display = // 📏 TODO: Replace with measurement-utils
+    await carousel.evaluate((el: HTMLElement) => {
       el.classList.add('is-single');
       const toggle = el.querySelector('.cmp-nested-content-carousel__toggle');
       if (toggle) (toggle as HTMLElement).style.display = 'none';
       return toggle ? getComputedStyle(toggle).display : 'none';
     });
     expect(display).toBe('none');
+    // 📏 TODO: Replace with measurement-utils
     await carousel.evaluate((el: HTMLElement) => el.classList.remove('is-single'));
   });
 
@@ -343,13 +360,15 @@ test.describe('NestedContentCarousel — Single Card Mode', () => {
     const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
     const carousel = page.locator(NCC).first();
-    const display = await carousel.evaluate((el: HTMLElement) => {
+    const display = // 📏 TODO: Replace with measurement-utils
+    await carousel.evaluate((el: HTMLElement) => {
       el.classList.add('is-single');
       const spacer = el.querySelector('.spacer');
       if (spacer) (spacer as HTMLElement).style.display = 'none';
       return spacer ? getComputedStyle(spacer).display : 'none';
     });
     expect(display).toBe('none');
+    // 📏 TODO: Replace with measurement-utils
     await carousel.evaluate((el: HTMLElement) => el.classList.remove('is-single'));
   });
 });
@@ -365,12 +384,14 @@ test.describe('NestedContentCarousel — Responsive', () => {
     await pom.navigate(BASE());
     const image = page.locator(CARD_IMAGE).first();
     if (await image.count() > 0) {
-      const display = await image.evaluate((el: HTMLElement) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+      const display = // 📏 TODO: Replace with measurement-utils
+    await image.evaluate((el: HTMLElement) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       expect(display).toBe('none');
     } else {
       // No image authored — inject temp element to verify CSS hides it at mobile
       const card = page.locator('.cmp-nested-content-carousel__content').first();
-      const display = await card.evaluate((el: HTMLElement) => {
+      const display = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate((el: HTMLElement) => {
         const imgDiv = document.createElement('div');
         imgDiv.className = 'cmp-nested-content-carousel__card-image';
         el.appendChild(imgDiv);
@@ -388,7 +409,8 @@ test.describe('NestedContentCarousel — Responsive', () => {
     await pom.navigate(BASE());
     const content = page.locator(CONTENT).first();
     await expect(content).toBeVisible();
-    const flexDir = await content.evaluate((el: HTMLElement) => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await content.evaluate((el: HTMLElement) => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('column');
   });
 
@@ -398,7 +420,8 @@ test.describe('NestedContentCarousel — Responsive', () => {
     const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
     const headline = page.locator(HEADLINE).first();
-    const mobileFontSize = await headline.evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
+    const mobileFontSize = // 📏 TODO: Replace with measurement-utils
+    await headline.evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
 
     // Then measure at desktop
     await page.setViewportSize({ width: 1440, height: 900 });
@@ -415,7 +438,8 @@ test.describe('NestedContentCarousel — Responsive', () => {
     await pom.navigate(BASE());
     // Inject a temporary image container to verify CSS doesn't hide it at desktop
     const card = page.locator('.cmp-nested-content-carousel__content').first();
-    const display = await card.evaluate((el: HTMLElement) => {
+    const display = // 📏 TODO: Replace with measurement-utils
+    await card.evaluate((el: HTMLElement) => {
       const imgDiv = document.createElement('div');
       imgDiv.className = 'cmp-nested-content-carousel__card-image';
       el.appendChild(imgDiv);
@@ -433,7 +457,8 @@ test.describe('NestedContentCarousel — Responsive', () => {
     await pom.navigate(BASE());
     const content = page.locator(CONTENT).first();
     await expect(content).toBeVisible();
-    const flexDir = await content.evaluate((el: HTMLElement) => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
+    const flexDir = // 📏 TODO: Replace with measurement-utils
+    await content.evaluate((el: HTMLElement) => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('row');
   });
 
@@ -443,7 +468,8 @@ test.describe('NestedContentCarousel — Responsive', () => {
     await pom.navigate(BASE());
     const root = page.locator(NCC).first();
     await expect(root).toBeVisible();
-    const overflow = await root.evaluate((el: HTMLElement) => el.scrollWidth > el.clientWidth + 2);
+    const overflow = // 📏 TODO: Replace with measurement-utils
+    await root.evaluate((el: HTMLElement) => el.scrollWidth > el.clientWidth + 2);
     expect(overflow).toBe(false);
   });
 });
@@ -458,7 +484,8 @@ test.describe('NestedContentCarousel — Counter Font Colors (GAAM-705)', () => 
     await pom.navigate(BASE());
     const current = page.locator(CURRENT).first();
     await expect(current).toBeVisible();
-    const color = await current.evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await current.evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Azul is a blue color — not black rgb(0,0,0) and not a very dark grey
     // Parse the rgb values
     const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
@@ -477,7 +504,8 @@ test.describe('NestedContentCarousel — Counter Font Colors (GAAM-705)', () => 
     await pom.navigate(BASE());
     const total = page.locator(TOTAL).first();
     await expect(total).toBeVisible();
-    const color = await total.evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const color = // 📏 TODO: Replace with measurement-utils
+    await total.evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // helper-dark is a muted color — not pure white and typically a grey/muted tone
     expect(color).not.toBe('rgb(255, 255, 255)');
     // Also not same color as azul (current); they must differ
@@ -491,7 +519,8 @@ test.describe('NestedContentCarousel — Counter Font Colors (GAAM-705)', () => 
     await pom.navigate(BASE());
     const current = page.locator(CURRENT).first();
     await expect(current).toBeVisible();
-    const styles = await current.evaluate((el: HTMLElement) => {
+    const styles = // 📏 TODO: Replace with measurement-utils
+    await current.evaluate((el: HTMLElement) => {
       const cs = getComputedStyle(el);
       return { fontSize: cs.fontSize, fontWeight: cs.fontWeight };
     });
@@ -591,7 +620,8 @@ test.describe('NestedContentCarousel — Accessibility', () => {
     const text = await srCounter.textContent();
     expect(text?.trim().length).toBeGreaterThan(0);
     // Visually hidden — check it is off-screen or has clip
-    const srStyles = await srCounter.evaluate((el: HTMLElement) => {
+    const srStyles = // 📏 TODO: Replace with measurement-utils
+    await srCounter.evaluate((el: HTMLElement) => {
       const cs = getComputedStyle(el);
       return { clip: cs.clip, position: cs.position, width: cs.width, height: cs.height };
     });
@@ -608,7 +638,8 @@ test.describe('NestedContentCarousel — Accessibility', () => {
     const cta = page.locator(CTA).first();
     await expect(cta).toBeVisible();
     await cta.focus();
-    const isFocused = await cta.evaluate((el: HTMLElement) => document.activeElement === el || el.contains(document.activeElement));
+    const isFocused = // 📏 TODO: Replace with measurement-utils
+    await cta.evaluate((el: HTMLElement) => document.activeElement === el || el.contains(document.activeElement));
     expect(isFocused).toBe(true);
   });
 
@@ -617,7 +648,8 @@ test.describe('NestedContentCarousel — Accessibility', () => {
     await pom.navigate(BASE());
     const toggle = page.locator(TOGGLE).first();
     await expect(toggle).toBeVisible();
-    const tagName = await toggle.evaluate((el: HTMLElement) => el.tagName.toLowerCase());
+    const tagName = // 📏 TODO: Replace with measurement-utils
+    await toggle.evaluate((el: HTMLElement) => el.tagName.toLowerCase());
     expect(tagName).toBe('button');
   });
 
@@ -690,7 +722,7 @@ test.describe('NestedContentCarousel — AEM Dialog & Overlay', () => {
 test.describe('NestedContentCarousel — Console Errors', () => {
   test('[NCC-044] @regression No JS errors on page load', async ({ page }) => {const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);
@@ -699,7 +731,7 @@ test.describe('NestedContentCarousel — Console Errors', () => {
   test('[NCC-045] @regression No JS errors during carousel auto-advance (wait 7s)', async ({ page }) => {const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
     // Wait for at least one full auto-advance cycle (typical delay ~4-5s, waiting 7s for margin)
-    await page.waitForTimeout(7000);
+    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
     const errors = capture.getErrors();
     capture.stop();
     expect(errors).toEqual([]);

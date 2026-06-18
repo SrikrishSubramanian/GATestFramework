@@ -3,6 +3,9 @@ import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 
@@ -41,7 +44,8 @@ test.describe('Spacer â€” State Matrix', () => {
         const spacer = page.locator('.cmp-spacer').first();
         await expect(spacer).toBeVisible();
 
-        const height = await spacer.evaluate(el => el.offsetHeight);
+        const height = // 📏 TODO: Replace with measurement-utils
+    await spacer.evaluate(el => el.offsetHeight);
         expect(height).toBeGreaterThan(0);
 
         const errors: string[] = [];

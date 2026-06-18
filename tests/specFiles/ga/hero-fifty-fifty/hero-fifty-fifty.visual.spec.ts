@@ -4,6 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
 
@@ -44,7 +46,8 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
 
     if (await image.count() > 0) {
       await expect(image).toBeVisible();
-      const width = await image.evaluate(el => el.offsetWidth);
+      const width = // 📏 TODO: Replace with measurement-utils
+    await image.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(0);
     }
   });
@@ -57,7 +60,8 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
     const text = hero.locator('p, h1, h2, h3').first();
 
     if (await text.count() > 0) {
-      const fontSize = await text.evaluate(el =>
+      const fontSize = // 📏 TODO: Replace with measurement-utils
+    await text.evaluate(el =>
         window.getComputedStyle(el).fontSize
       );
       const size = parseInt(fontSize);
@@ -70,7 +74,8 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
     await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
-    const padding = await hero.evaluate(el =>
+    const padding = // 📏 TODO: Replace with measurement-utils
+    await hero.evaluate(el =>
       window.getComputedStyle(el).padding
     );
 
@@ -86,7 +91,8 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
 
     if (await button.count() > 0) {
       await expect(button).toBeVisible();
-      const bg = await button.evaluate(el =>
+      const bg = // 📏 TODO: Replace with measurement-utils
+    await button.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
       expect(bg).toBeTruthy();
