@@ -11,6 +11,7 @@ import { test, expect, Page } from '@playwright/test';
 import { AEMTestHelper } from '../../utils/infra/aem-test-helper';
 import ENV from '../../utils/infra/env';
 import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
+import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 
 // Sprint 16 GAAM Tickets (50 total)
 const SPRINT_16_TICKETS = [
@@ -42,6 +43,7 @@ let capture: ConsoleCapture;
 test.describe('Sprint 16 - Comprehensive Test Suite @sprint-16', () => {
 
   test.beforeEach(async ({ page }) => {
+  await loginToAEMAuthor(page);
     // Auth already handled by globalSetup and loaded via storageState in config
   
   capture = new ConsoleCapture(page);

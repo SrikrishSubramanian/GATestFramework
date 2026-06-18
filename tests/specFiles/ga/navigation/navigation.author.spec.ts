@@ -332,7 +332,7 @@ test.describe('Navigation — General Delivery (GAAM-396)', () => {
   test('[NVGT-015] @regression Style Guide page exists with all variations', async ({ page }) => {
     const pom = new NavigationPage(page);
     const response = await page.goto(
-      `${BASE()}/content/global-atlantic/style-guide/components/navigation.html?wcmmode=disabled`
+      `resolveComponentUrl('navigation')`
     );
     expect(response?.status()).toBe(200);
 
