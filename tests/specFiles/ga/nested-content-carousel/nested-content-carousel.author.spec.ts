@@ -31,16 +31,16 @@ const TOGGLE = '.cmp-nested-content-carousel__toggle';
 const SR_COUNTER = '.cmp-nested-content-carousel__sr-counter';
 
 test.beforeEach(async ({ page }) => {
+  capture = new ConsoleCapture(page);
+  capture.start();
   await loginToAEMAuthor(page);
 });
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 // ---------------------------------------------------------------------------

@@ -46,11 +46,14 @@ export async function attachConsoleCapture(
 
 /**
  * Add environment info as test annotations.
+ * @param testInfo - Playwright TestInfo
+ * @param env - Environment name (optional, defaults to 'local')
+ * @param mode - Mode: 'author' or 'publish' (optional, defaults to 'author')
  */
 export function annotateEnvironment(
   testInfo: TestInfo,
-  env: string,
-  mode: 'author' | 'publish'
+  env: string = 'local',
+  mode: 'author' | 'publish' = 'author'
 ): void {
   testInfo.annotations.push(
     { type: 'environment', description: env },

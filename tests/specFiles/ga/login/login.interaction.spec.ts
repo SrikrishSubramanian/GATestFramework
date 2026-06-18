@@ -29,12 +29,10 @@ test.beforeEach(async ({ page }) => {
   capture.start();});
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 // â”€â”€â”€ Password Toggle Interaction (LGN-I-001 â€“ LGN-I-005) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€

@@ -13,12 +13,10 @@ test.describe('general - GAAM-989', () => {
   });
 
   test.afterEach(async ({ page }, testInfo) => {
-    const errors = capture.getErrors();
-    const warnings = capture.getWarnings();
-    if (errors.length > 0 || warnings.length > 0) {
-      await attachConsoleCapture(page, testInfo, errors, warnings);
-    }
-    await annotateEnvironment(page, testInfo);
+    if (capture) {
+    await attachConsoleCapture(testInfo, capture);
+  }
+    await annotateEnvironment(testInfo);
   });
 
   test('TC-1: Test', async ({ page }) => {

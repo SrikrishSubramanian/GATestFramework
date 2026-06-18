@@ -23,16 +23,16 @@ const SECTION_AZUL    = '.cmp-section--background-color-azul';
 const SECTION_SLATE   = '.cmp-section--background-color-slate';
 
 test.beforeEach(async ({ page }) => {
+  capture = new ConsoleCapture(page);
+  capture.start();
   await loginToAEMAuthor(page);
 });
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 // ─────────────────────────────────────────────────────────────────────────────

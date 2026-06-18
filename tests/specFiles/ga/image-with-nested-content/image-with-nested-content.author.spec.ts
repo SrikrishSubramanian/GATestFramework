@@ -19,16 +19,16 @@ const STAT_ITEM = '.cmp-statistic__item';
 const SMALL_CLASS = 'cmp-image-with-nested-content--small';
 
 test.beforeEach(async ({ page }) => {
+  capture = new ConsoleCapture(page);
+  capture.start();
   await loginToAEMAuthor(page);
 });
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 // ── Helper: inject temp <img> if none exists and check CSS ──

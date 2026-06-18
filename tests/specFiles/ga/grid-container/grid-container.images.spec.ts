@@ -1,3 +1,4 @@
+import { scanImages, attachImageScanResults } from '../../../utils/infra/image-scan-utils';
 import { test, expect } from '@playwright/test';
 import { GridContainerPage } from '../../../pages/ga/components/gridContainerPage';
 import { scanImages, attachImageScanResults } from '../../../utils/infra/broken-image-detector';
@@ -16,12 +17,10 @@ test.beforeEach(async ({ page }) => {
   capture.start();});
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 test.describe('GridContainer — Image Health', () => {

@@ -53,16 +53,16 @@ const TC_WITH_CTA    = `${TC_OUTER} a${TC}`;
 const TC_WITHOUT_CTA = `${TC_OUTER} div${TC}`;
 
 test.beforeEach(async ({ page }) => {
+  capture = new ConsoleCapture(page);
+  capture.start();
   await loginToAEMAuthor(page);
 });
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 // ---------------------------------------------------------------------------

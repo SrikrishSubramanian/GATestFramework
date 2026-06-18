@@ -22,16 +22,16 @@ const PB_CTA = '.cmp-promo-banner__links-cta';
 const CMP_BUTTON = '.cmp-button';
 
 test.beforeEach(async ({ page }) => {
+  capture = new ConsoleCapture(page);
+  capture.start();
   await loginToAEMAuthor(page);
 });
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 // ---------------------------------------------------------------------------

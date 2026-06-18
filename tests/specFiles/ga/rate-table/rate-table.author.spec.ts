@@ -21,16 +21,16 @@ const BASE = () => process.env.AEM_AUTHOR_URL || 'http://localhost:4502';
 const STYLE_GUIDE_PATH = '/content/global-atlantic/style-guide/components/rate-table.html';
 
 test.beforeEach(async ({ page }) => {
+  capture = new ConsoleCapture(page);
+  capture.start();
   // Auth handled by globalSetup + storageState in config
 });
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 // ── GAAM-558 Acceptance Criteria ─────────────────────────────────────────────

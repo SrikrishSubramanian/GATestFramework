@@ -80,12 +80,10 @@ test('[BTN-FIGMA-001] Primary button color matches Figma', async ({ page }) => {
 });
 
 test.afterEach(async ({ page }, testInfo) => {
-  const errors = capture.getErrors();
-  const warnings = capture.getWarnings();
-  if (errors.length > 0 || warnings.length > 0) {
-    await attachConsoleCapture(page, testInfo, errors, warnings);
+  if (capture) {
+    await attachConsoleCapture(testInfo, capture);
   }
-  await annotateEnvironment(page, testInfo);
+  await annotateEnvironment(testInfo);
 });
 
 test('[BTN-FIGMA-002] Button hover color matches Figma', async ({ page }) => {
