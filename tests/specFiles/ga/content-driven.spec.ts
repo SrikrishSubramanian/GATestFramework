@@ -1,12 +1,26 @@
 import { test, expect } from '@playwright/test';
 import ENV from '../../utils/infra/env';
+import { ConsoleCapture } from '../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
 
-// Authenticate with AEM Author before each test
+let capture: ConsoleCapture;
+
 test.beforeEach(async ({ page }) => {
   if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
     await loginToAEMAuthor(page);
   }
+  capture = new ConsoleCapture(page);
+  capture.start();
+});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
 test.describe('Content-Driven Validation', () => {

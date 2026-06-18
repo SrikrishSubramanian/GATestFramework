@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Accordion Tabs Feature — Visual Regression', () => {
+test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
   test('[ACCORDION-TABS-VISUAL-001] @visual Accordion/tabs layout is properly structured', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const container = page.locator('[class*="accordion"], [class*="tabs"], .cmp-accordion-tabs').first();
     await expect(container).toBeVisible();
@@ -22,7 +38,8 @@ test.describe('Accordion Tabs Feature — Visual Regression', () => {
   });
 
   test('[ACCORDION-TABS-VISUAL-002] @visual Accordion/tabs headers are styled correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const headers = page.locator('[class*="accordion"] [class*="header"], [class*="tabs"] [class*="tab"], .cmp-accordion-tabs button');
     const count = await headers.count();
@@ -38,7 +55,8 @@ test.describe('Accordion Tabs Feature — Visual Regression', () => {
   });
 
   test('[ACCORDION-TABS-VISUAL-003] @visual Accordion/tabs content area is properly spaced', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const content = page.locator('[class*="accordion"] [class*="content"], [class*="tabs"] [class*="panel"], [class*="tabpanel"]').first();
     if (await content.count() > 0) {
@@ -50,7 +68,8 @@ test.describe('Accordion Tabs Feature — Visual Regression', () => {
   });
 
   test('[ACCORDION-TABS-VISUAL-004] @visual Accordion/tabs indicators are visible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const indicators = page.locator('[class*="accordion"] [class*="icon"], [class*="tabs"] [class*="indicator"], .cmp-accordion-tabs [class*="indicator"]');
     const count = await indicators.count();
@@ -58,10 +77,12 @@ test.describe('Accordion Tabs Feature — Visual Regression', () => {
   });
 
   test('[ACCORDION-TABS-VISUAL-005] @visual Accordion/tabs maintains consistent spacing', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const items = page.locator('[class*="accordion"] [class*="item"], [class*="tabs"] [class*="tab"]');
     const count = await items.count();
     expect(count).toBeGreaterThan(0);
   });
 });
+

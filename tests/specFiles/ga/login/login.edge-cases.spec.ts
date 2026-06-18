@@ -1,17 +1,33 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
+test.describe('Login Component â€” Edge Cases & Enhanced Validation', () => {
   // ============ Edge Case: Max Key Points Constraint ============
   test('[LOGIN-EDGE-001] @edge Verify maximum 4 key points enforced', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const keyPointsList = page.locator('[class*="key-points"], [class*="keyPoints"], .cmp-login li');
     const count = await keyPointsList.count();
@@ -22,7 +38,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-002] @edge Verify key points list hidden when not authored', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const keyPointsContainer = page.locator('[class*="key-points"], [class*="keyPoints"]');
 
@@ -38,7 +55,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-003] @edge Verify subheadline hidden when not authored', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const subheadline = page.locator('[class*="subheadline"], [class*="subtitle"], .cmp-login h3');
 
@@ -52,7 +70,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-004] @edge Verify fine print hidden when not authored', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const finePrint = page.locator('[class*="fine-print"], [class*="disclaimer"], .cmp-login small');
 
@@ -67,7 +86,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   // ============ Edge Case: Responsive Behavior ============
   test('[LOGIN-EDGE-005] @edge Verify decorative SVG hidden on mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const svg = page.locator('[class*="login"] [class*="decorative"] svg, [class*="login"] svg[aria-hidden="true"]');
 
@@ -80,7 +100,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
 
   test('[LOGIN-EDGE-006] @edge Verify split layout preserves on desktop', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
@@ -93,7 +114,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
 
   test('[LOGIN-EDGE-007] @edge Verify single column layout on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
@@ -105,7 +127,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Input Validation & Constraints ============
   test('[LOGIN-EDGE-008] @edge Verify username field accepts special characters', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const usernameField = page.locator('input[type="email"], input[name*="username"], input[name*="email"]').first();
     if (await usernameField.count() > 0) {
@@ -117,7 +140,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-009] @edge Verify password field masks input on default state', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const passwordField = page.locator('input[type="password"]').first();
     if (await passwordField.count() > 0) {
@@ -127,7 +151,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-010] @edge Verify password visibility toggle functionality', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const passwordField = page.locator('input[type="password"]').first();
     const toggleButton = page.locator('button[class*="toggle"], [class*="show-password"], [aria-label*="password"]').first();
@@ -146,7 +171,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Validation Error Scenarios ============
   test('[LOGIN-EDGE-011] @edge Verify empty username field validation error', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const submitButton = page.locator('button:has-text("Continue"), button[type="submit"], [class*="cta"] button').first();
     if (await submitButton.count() > 0) {
@@ -161,7 +187,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-012] @edge Verify empty password field validation error', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const usernameField = page.locator('input[type="email"], input[name*="username"]').first();
     const submitButton = page.locator('button:has-text("Continue"), button[type="submit"]').first();
@@ -181,7 +208,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-013] @edge Verify invalid email format detection', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const emailField = page.locator('input[type="email"]').first();
     if (await emailField.count() > 0) {
@@ -194,7 +222,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Form State Preservation ============
   test('[LOGIN-EDGE-014] @edge Verify form state after page navigation', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const usernameField = page.locator('input[type="email"], input[name*="username"]').first();
     if (await usernameField.count() > 0) {
@@ -212,7 +241,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-015] @edge Verify form submission with both fields filled', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const usernameField = page.locator('input[type="email"], input[name*="username"]').first();
     const passwordField = page.locator('input[type="password"]').first();
@@ -230,7 +260,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Accessibility ============
   test('[LOGIN-EDGE-016] @edge Verify form labels associated with inputs via for attribute', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const labels = page.locator('label');
     const labelCount = await labels.count();
@@ -248,7 +279,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-017] @edge Verify password toggle button has accessible label', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const toggleButton = page.locator('button[class*="toggle"], [class*="show-password"], [aria-label*="password"]').first();
     if (await toggleButton.count() > 0) {
@@ -259,7 +291,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-018] @edge Verify form has proper heading hierarchy', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const h1 = page.locator('h1');
     const h2 = page.locator('h2');
@@ -270,8 +303,9 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   // ============ Edge Case: Content Constraints ============
-  test('[LOGIN-EDGE-019] @edge Verify content order: H1 → subheadline → key points → fine print', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+  test('[LOGIN-EDGE-019] @edge Verify content order: H1 â†’ subheadline â†’ key points â†’ fine print', async ({ page }) => {
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const leftPanel = page.locator('[class*="login"] [class*="panel"], [class*="login"] [class*="left"], [class*="login"] section').first();
 
@@ -289,7 +323,8 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[LOGIN-EDGE-020] @edge Verify slate background color applied', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('login');
+    await page.goto(url);
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
@@ -302,3 +337,4 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     }
   });
 });
+

@@ -1,7 +1,8 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +26,8 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('SAML Login Component (GAAM-410)', () => {
   // ============ Login Form Rendering ============
   test('[GAAM-410-001] @regression Verify SAML login form renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/saml-login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('saml-login');
+    await page.goto(url);
 
     const form = page.locator('form, [class*="login"], [class*="saml"]').first();
     if (await form.count() > 0) {
@@ -34,7 +36,8 @@ test.describe('SAML Login Component (GAAM-410)', () => {
   });
 
   test('[GAAM-410-002] @regression Verify SAML login button present', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/saml-login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('saml-login');
+    await page.goto(url);
 
     const samlBtn = page.locator('button[class*="saml"], a[class*="saml"], button[class*="login"]').first();
     if (await samlBtn.count() > 0) {
@@ -43,7 +46,8 @@ test.describe('SAML Login Component (GAAM-410)', () => {
   });
 
   test('[GAAM-410-003] @regression Verify SAML login has secure connection indicator', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/saml-login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('saml-login');
+    await page.goto(url);
 
     const form = page.locator('form').first();
     if (await form.count() > 0) {
@@ -54,7 +58,8 @@ test.describe('SAML Login Component (GAAM-410)', () => {
   });
 
   test('[GAAM-410-004] @a11y @regression Verify SAML login is accessible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/saml-login.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('saml-login');
+    await page.goto(url);
 
     const button = page.locator('button, a[class*="login"]').first();
     if (await button.count() > 0) {
@@ -63,3 +68,4 @@ test.describe('SAML Login Component (GAAM-410)', () => {
     }
   });
 });
+

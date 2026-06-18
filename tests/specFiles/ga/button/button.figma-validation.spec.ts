@@ -16,6 +16,9 @@
 
 import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE_URL = 'http://localhost:4503';
 
@@ -73,6 +76,15 @@ test('[BTN-FIGMA-001] Primary button color matches Figma', async ({ page }) => {
 
   expect(actualColor).toBe(expectedColor);
   console.log(`   ✅ MATCH`);
+});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
 test('[BTN-FIGMA-002] Button hover color matches Figma', async ({ page }) => {

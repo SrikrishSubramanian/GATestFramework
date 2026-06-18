@@ -1,17 +1,33 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
+test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
   // ============ Edge Case: Content Variations ============
   test('[GAAM-531-EDGE-001] @edge Verify very long paragraph wraps correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const p = page.locator('p').first();
     if (await p.count() > 0) {
@@ -24,7 +40,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-002] @edge Verify nested list indentation preserved', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const nestedList = page.locator('ul ul, ol ol').first();
     if (await nestedList.count() > 0) {
@@ -34,7 +51,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-003] @edge Verify empty lines between paragraphs', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const paragraphs = page.locator('p');
     const count = await paragraphs.count();
@@ -47,7 +65,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   // ============ Edge Case: Link Edge Cases ============
   test('[GAAM-531-EDGE-004] @edge Verify email links format correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const emailLink = page.locator('a[href^="mailto:"]').first();
     if (await emailLink.count() > 0) {
@@ -57,7 +76,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-005] @edge Verify anchor links work', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const anchorLink = page.locator('a[href^="#"]').first();
     if (await anchorLink.count() > 0) {
@@ -68,7 +88,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   // ============ Edge Case: Code & Blockquote ============
   test('[GAAM-531-EDGE-006] @edge Verify code blocks maintain formatting', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const code = page.locator('code, pre').first();
     if (await code.count() > 0) {
@@ -78,7 +99,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-007] @edge Verify blockquote styling distinct', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const blockquote = page.locator('blockquote').first();
     if (await blockquote.count() > 0) {
@@ -89,7 +111,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   // ============ Edge Case: Text Variations ============
   test('[GAAM-531-EDGE-008] @edge Verify mixed text formatting (bold + italic)', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const mixed = page.locator('strong em, em strong, b i, i b').first();
     if (await mixed.count() > 0) {
@@ -98,7 +121,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-009] @edge Verify underlined text visible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const underline = page.locator('u, ins, [style*="text-decoration: underline"]').first();
     if (await underline.count() > 0) {
@@ -109,7 +133,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   // ============ Edge Case: Alignment ============
   test('[GAAM-531-EDGE-010] @edge Verify center-aligned text correct position', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const centered = page.locator('[style*="text-align: center"]').first();
     if (await centered.count() > 0) {
@@ -119,7 +144,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-011] @edge Verify right-aligned text correct position', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const rightAligned = page.locator('[style*="text-align: right"]').first();
     if (await rightAligned.count() > 0) {
@@ -131,7 +157,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   // ============ Edge Case: Responsive Image Handling ============
   test('[GAAM-531-EDGE-012] @edge Verify images responsive width on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const img = page.locator('img').first();
     if (await img.count() > 0) {
@@ -142,7 +169,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   test('[GAAM-531-EDGE-013] @edge Verify table responsive on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const table = page.locator('table').first();
     if (await table.count() > 0) {
@@ -153,7 +181,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   // ============ Edge Case: Accessibility Compliance ============
   test('[GAAM-531-EDGE-014] @a11y @edge Verify skip to content link if present', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const skipLink = page.locator('a[href*="content"], a[href*="main"]').first();
     // Verify skip link exists or main content is properly marked
@@ -161,7 +190,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-015] @a11y @edge Verify headings use semantic tags', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const semanticHeadings = page.locator('h1, h2, h3, h4, h5, h6');
     const count = await semanticHeadings.count();
@@ -170,7 +200,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-016] @a11y @edge Verify list structure is semantic', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const lists = page.locator('ul, ol');
     const count = await lists.count();
@@ -183,7 +214,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   // ============ Edge Case: Performance ============
   test('[GAAM-531-EDGE-017] @edge Verify no cumulative layout shift', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const body = page.locator('body');
     const width1 = await body.evaluate(el => el.offsetWidth);
@@ -197,7 +229,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   test('[GAAM-531-EDGE-018] @edge Verify fast content rendering', async ({ page }) => {
     const startTime = Date.now();
 
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const content = page.locator('[class*="rte-content"]').first();
     if (await content.count() > 0) {
@@ -210,7 +243,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   // ============ Edge Case: Content Preservation ============
   test('[GAAM-531-EDGE-019] @edge Verify special characters preserved', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const content = page.locator('[class*="rte-content"]').first();
     if (await content.count() > 0) {
@@ -221,7 +255,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-020] @edge Verify HTML not visible to users', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const bodyText = await page.locator('body').textContent();
     // HTML tags should not be visible as text
@@ -230,7 +265,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
 
   // ============ Edge Case: No Editing Capability ============
   test('[GAAM-531-EDGE-021] @edge Verify content cannot be edited by users', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const editableContent = page.locator('[contenteditable="true"]');
     const count = await editableContent.count();
@@ -238,7 +274,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   });
 
   test('[GAAM-531-EDGE-022] @edge Verify no edit dialogs present', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const editDialogs = page.locator('[class*="edit"], [role="dialog"]');
     const count = await editDialogs.count();
@@ -251,7 +288,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
     const errors: string[] = [];
     page.on('pageerror', e => errors.push(e.message));
 
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
     await page.waitForTimeout(1000);
 
     expect(errors).toEqual([]);
@@ -261,7 +299,8 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
     const errors: string[] = [];
     page.on('pageerror', e => errors.push(e.message));
 
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte-frontend.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte-frontend');
+    await page.goto(url);
 
     const internalLink = page.locator('a[href^="/"]').first();
     if (await internalLink.count() > 0) {
@@ -271,3 +310,4 @@ test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
     expect(errors).toEqual([]);
   });
 });
+

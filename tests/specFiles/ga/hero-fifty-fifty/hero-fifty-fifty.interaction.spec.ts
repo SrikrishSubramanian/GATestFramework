@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Hero Fifty-Fifty — Interactions', () => {
+test.describe('Hero Fifty-Fifty â€” Interactions', () => {
   test('[H5050-INTERACTION-001] @interaction @regression CTA button is clickable', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     const button = hero.locator('button, a[class*="button"]').first();
@@ -22,7 +38,8 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
   });
 
   test('[H5050-INTERACTION-002] @interaction @regression Hero links are functional', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     const links = hero.locator('a');
@@ -36,7 +53,8 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
   });
 
   test('[H5050-INTERACTION-003] @interaction @regression Hero 50/50 hover states work', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const button = page.locator('.cmp-hero-fifty-fifty button, .cmp-hero-fifty-fifty a[class*="button"]').first();
 
@@ -57,7 +75,8 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
   });
 
   test('[H5050-INTERACTION-004] @interaction @regression Keyboard navigation works', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     await hero.focus();
@@ -68,7 +87,8 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
   });
 
   test('[H5050-INTERACTION-005] @interaction @regression Image adapts to content changes', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     await expect(hero).toBeVisible();
@@ -78,3 +98,4 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
     expect(width).toBeGreaterThan(0);
   });
 });
+

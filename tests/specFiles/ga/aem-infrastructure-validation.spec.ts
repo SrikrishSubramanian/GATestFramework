@@ -1,31 +1,46 @@
-/**
- * AEM Infrastructure Validation — Cross-Component
+﻿/**
+ * AEM Infrastructure Validation â€” Cross-Component
  *
  * Tests four classes of silent CMS configuration bugs:
- *   1. Template policy mappings — container policies point to correct policy definitions
- *   2. Style system ID → CSS class — authored styleIds have corresponding CSS rules in compiled stylesheets
- *   3. Component resourceType chain — GA overlays correctly extend base components
- *   4. Clientlib loading integrity — GA CSS/JS resources are present in the page
+ *   1. Template policy mappings â€” container policies point to correct policy definitions
+ *   2. Style system ID â†’ CSS class â€” authored styleIds have corresponding CSS rules in compiled stylesheets
+ *   3. Component resourceType chain â€” GA overlays correctly extend base components
+ *   4. Clientlib loading integrity â€” GA CSS/JS resources are present in the page
  *
  * These tests catch configuration regressions that produce no JS errors
- * and no visible rendering failures — the component simply silently breaks
+ * and no visible rendering failures â€” the component simply silently breaks
  * for authors or renders without expected styling.
  */
 import { test, expect } from '@playwright/test';
 import ENV from '../../utils/infra/env';
 import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // 1. TEMPLATE POLICY MAPPING VALIDATION
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // Verifies that critical policy definitions exist at their expected Sling paths.
-// Bug class: accordion_item_content policy was missing → authors couldn't add
+// Bug class: accordion_item_content policy was missing â†’ authors couldn't add
 // components inside accordion items. The template mapped to accordion_default
 // which only allowed accordion-item as a child.
 
@@ -34,17 +49,17 @@ const REQUIRED_POLICIES = [
   {
     name: 'all-components (layout container)',
     path: '/conf/global-atlantic/settings/wcm/policies/wcm/foundation/components/responsivegrid/all-components',
-    description: 'Master policy for the freeform page layout container — lists all allowed GA components',
+    description: 'Master policy for the freeform page layout container â€” lists all allowed GA components',
   },
   {
     name: 'accordion default',
     path: '/conf/global-atlantic/settings/wcm/policies/ga/components/content/accordion/accordion_default',
-    description: 'Accordion container policy — controls which sub-components are allowed',
+    description: 'Accordion container policy â€” controls which sub-components are allowed',
   },
   {
     name: 'accordion-item content',
     path: '/conf/global-atlantic/settings/wcm/policies/ga/components/content/accordion/accordion_item_content',
-    description: 'Accordion-item inner parsys policy — must allow text, button, image, etc.',
+    description: 'Accordion-item inner parsys policy â€” must allow text, button, image, etc.',
   },
   {
     name: 'button default',
@@ -79,11 +94,11 @@ const REQUIRED_POLICIES = [
   {
     name: 'form container default',
     path: '/conf/global-atlantic/settings/wcm/policies/ga/components/form/container/form-container-default',
-    description: 'Form container policy — controls allowed form field components',
+    description: 'Form container policy â€” controls allowed form field components',
   },
 ];
 
-test.describe('Template Policy Mapping — Policy Definitions Exist', () => {
+test.describe('Template Policy Mapping â€” Policy Definitions Exist', () => {
   for (const policy of REQUIRED_POLICIES) {
     test(`@author @regression ${policy.name} policy exists`, async ({ page }) => {
       const url = `${BASE()}${policy.path}.1.json`;
@@ -96,7 +111,7 @@ test.describe('Template Policy Mapping — Policy Definitions Exist', () => {
   }
 });
 
-test.describe('Template Policy Mapping — Container Policies Allow Expected Components', () => {
+test.describe('Template Policy Mapping â€” Container Policies Allow Expected Components', () => {
   test('@author @regression @smoke Layout container policy includes all GA content components', async ({ page }) => {
     // The all-components policy on the responsivegrid must list all GA content components
     const url = `${BASE()}/conf/global-atlantic/settings/wcm/policies/wcm/foundation/components/responsivegrid/all-components.infinity.json`;
@@ -123,7 +138,7 @@ test.describe('Template Policy Mapping — Container Policies Allow Expected Com
     for (const comp of requiredComponents) {
       expect(
         policyText.includes(comp),
-        `Layout container policy does not list ${comp} — authors cannot add this component to pages`
+        `Layout container policy does not list ${comp} â€” authors cannot add this component to pages`
       ).toBe(true);
     }
   });
@@ -147,15 +162,15 @@ test.describe('Template Policy Mapping — Container Policies Allow Expected Com
     for (const comp of requiredChildren) {
       expect(
         policyText.includes(comp),
-        `Accordion-item policy does not allow ${comp} — authors cannot add this inside accordion items`
+        `Accordion-item policy does not allow ${comp} â€” authors cannot add this inside accordion items`
       ).toBe(true);
     }
   });
 });
 
-// ═══════════════════════════════════════════════════════════════════════════════
-// 2. STYLE SYSTEM ID → CSS CLASS EXISTENCE
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// 2. STYLE SYSTEM ID â†’ CSS CLASS EXISTENCE
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // Verifies that cq:styleId values authored in content XML have corresponding
 // CSS rules in the compiled GA stylesheet. If a style ID maps to a CSS class
 // that doesn't exist, the component renders without the expected styling.
@@ -166,7 +181,7 @@ interface StyleMapping {
   cssClass: string;
 }
 
-/** Known style ID → CSS class mappings from the GA policies XML. */
+/** Known style ID â†’ CSS class mappings from the GA policies XML. */
 const STYLE_MAPPINGS: StyleMapping[] = [
   // Button
   { component: 'button', styleId: 'primary-filled', cssClass: 'ga-button--primary' },
@@ -194,8 +209,8 @@ const STYLE_MAPPINGS: StyleMapping[] = [
   { component: 'headline-block', styleId: 'headline-block-center-alignment', cssClass: 'cmp-section--center' },
 ];
 
-test.describe('Style System — CSS Class Existence', () => {
-  // Load a style guide page once — all GA component styles should be in the compiled stylesheet
+test.describe('Style System â€” CSS Class Existence', () => {
+  // Load a style guide page once â€” all GA component styles should be in the compiled stylesheet
   const STYLE_GUIDE_URL = '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled';
 
   test('@regression @smoke Style system CSS classes exist in compiled GA stylesheet', async ({ page }) => {
@@ -218,14 +233,14 @@ test.describe('Style System — CSS Class Existence', () => {
               }
             }
           } catch {
-            // Cross-origin stylesheets — skip
+            // Cross-origin stylesheets â€” skip
           }
         }
         return false;
       }, mapping.cssClass);
 
       if (!found) {
-        missingClasses.push(`${mapping.component}: styleId="${mapping.styleId}" → .${mapping.cssClass}`);
+        missingClasses.push(`${mapping.component}: styleId="${mapping.styleId}" â†’ .${mapping.cssClass}`);
       }
     }
 
@@ -237,7 +252,8 @@ test.describe('Style System — CSS Class Existence', () => {
 
   // Also verify per-component that style classes on rendered elements have effect
   test('@regression Section background style classes produce non-transparent backgrounds', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion');
+    await page.goto(url);
     await page.waitForLoadState('networkidle');
 
     const backgrounds = [
@@ -256,9 +272,9 @@ test.describe('Style System — CSS Class Existence', () => {
   });
 });
 
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // 3. COMPONENT RESOURCETYPE CHAIN VALIDATION
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // Verifies that GA component overlays have correct sling:resourceSuperType
 // pointing to their base component. If this chain breaks, the component
 // silently falls back or fails to render.
@@ -285,14 +301,14 @@ const GA_OVERLAYS: ComponentOverlay[] = [
   { name: 'text', gaPath: '/apps/ga/components/content/text', expectedSuperType: 'kkr-aem-base/components/content/text' },
 ];
 
-test.describe('Component ResourceType Chain — GA Overlays', () => {
+test.describe('Component ResourceType Chain â€” GA Overlays', () => {
   for (const overlay of GA_OVERLAYS) {
     test(`@author @regression ${overlay.name} overlay exists at GA path`, async ({ page }) => {
       const url = `${BASE()}${overlay.gaPath}.1.json`;
       const response = await page.request.get(url);
       expect(
         response.ok(),
-        `GA component overlay not found at ${overlay.gaPath} — the component may not be registered`
+        `GA component overlay not found at ${overlay.gaPath} â€” the component may not be registered`
       ).toBe(true);
     });
 
@@ -326,14 +342,14 @@ test.describe('Component ResourceType Chain — GA Overlays', () => {
   });
 });
 
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // 4. CLIENTLIB LOADING INTEGRITY
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // Verifies that the GA clientlib (ga.site) CSS and JS are loaded on GA pages.
 // If the clientlib category is misconfigured or a LESS import fails, styles
 // silently don't load and components render unstyled.
 
-test.describe('Clientlib Loading — GA Stylesheets and Scripts', () => {
+test.describe('Clientlib Loading â€” GA Stylesheets and Scripts', () => {
   const STYLE_GUIDE_URL = '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled';
 
   test('@regression @smoke GA clientlib CSS is loaded on the page', async ({ page }) => {
@@ -413,7 +429,7 @@ test.describe('Clientlib Loading — GA Stylesheets and Scripts', () => {
             }
           }
         } catch {
-          // Cross-origin — skip
+          // Cross-origin â€” skip
         }
       }
       return count;
@@ -457,3 +473,4 @@ test.describe('Clientlib Loading — GA Stylesheets and Scripts', () => {
     ).toBeGreaterThan(5000);
   });
 });
+

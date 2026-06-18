@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Form Text — Interactions', () => {
+test.describe('Form Text â€” Interactions', () => {
   test('[FORMTEXT-INTERACTION-001] @interaction Form text field receives focus', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -21,7 +37,8 @@ test.describe('Form Text — Interactions', () => {
   });
 
   test('[FORMTEXT-INTERACTION-002] @interaction Form text field displays focus outline', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -34,7 +51,8 @@ test.describe('Form Text — Interactions', () => {
   });
 
   test('[FORMTEXT-INTERACTION-003] @interaction Form text field changes background on focus', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -52,7 +70,8 @@ test.describe('Form Text — Interactions', () => {
   });
 
   test('[FORMTEXT-INTERACTION-004] @interaction Form text allows text selection', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -64,7 +83,8 @@ test.describe('Form Text — Interactions', () => {
   });
 
   test('[FORMTEXT-INTERACTION-005] @interaction Form text responds to keyboard events', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -76,7 +96,8 @@ test.describe('Form Text — Interactions', () => {
   });
 
   test('[FORMTEXT-INTERACTION-006] @interaction Form text field clears on backspace', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -87,3 +108,4 @@ test.describe('Form Text — Interactions', () => {
     }
   });
 });
+

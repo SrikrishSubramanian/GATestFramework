@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Text — Images & Media', () => {
+test.describe('Text â€” Images & Media', () => {
   test('[TEXT-IMAGE-001] @regression Text embedded images load', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const images = page.locator('.cmp-text img');
     const count = await images.count();
@@ -23,7 +39,8 @@ test.describe('Text — Images & Media', () => {
   });
 
   test('[TEXT-IMAGE-002] @regression Text images have alt text', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const images = page.locator('.cmp-text img');
     const count = await images.count();
@@ -36,7 +53,8 @@ test.describe('Text — Images & Media', () => {
   });
 
   test('[TEXT-IMAGE-003] @regression Text image sizing is responsive', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const images = page.locator('.cmp-text img');
     const count = await images.count();
@@ -49,7 +67,8 @@ test.describe('Text — Images & Media', () => {
   });
 
   test('[TEXT-IMAGE-004] @regression Text figure elements are semantic', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const figures = page.locator('.cmp-text figure');
     const count = await figures.count();
@@ -64,7 +83,8 @@ test.describe('Text — Images & Media', () => {
   });
 
   test('[TEXT-IMAGE-005] @regression Text icons are visible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const icons = page.locator('.cmp-text svg, .cmp-text i[class*="icon"]');
     const count = await icons.count();
@@ -75,3 +95,4 @@ test.describe('Text — Images & Media', () => {
     }
   });
 });
+

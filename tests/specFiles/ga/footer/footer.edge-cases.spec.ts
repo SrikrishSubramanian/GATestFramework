@@ -1,17 +1,33 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
+test.describe('Footer Component â€” Edge Cases & Enhanced Validation', () => {
   // ============ Edge Case: Component Presence & Assembly ============
   test('[FOOTER-EDGE-001] @edge Verify all required footer sections rendered', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"], .cmp-footer').first();
     expect(await footer.count()).toBeGreaterThan(0);
@@ -25,7 +41,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[FOOTER-EDGE-003] @edge Verify promo banner component in agnostic XF', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const promoBanner = page.locator('[class*="promo"], [class*="banner"]');
     // Promo banner should be conditionally rendered
@@ -34,7 +51,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[FOOTER-EDGE-004] @edge Verify navigation component rendered', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -45,7 +63,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Link Validation ============
   test('[FOOTER-EDGE-005] @edge Verify all footer links are valid and not broken', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -65,7 +84,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[FOOTER-EDGE-006] @edge Verify footer links open in correct target', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -83,7 +103,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   // ============ Edge Case: Responsive Layout ============
   test('[FOOTER-EDGE-007] @edge Verify footer responsive on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -94,7 +115,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   test('[FOOTER-EDGE-008] @edge Verify footer responsive on tablet', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -105,7 +127,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   test('[FOOTER-EDGE-009] @edge Verify footer full width on desktop', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -116,7 +139,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Navigation Type Handling ============
   test('[FOOTER-EDGE-010] @edge Verify navigation single list on agnostic XF', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const nav = page.locator('footer nav, [role="contentinfo"] nav').first();
     if (await nav.count() > 0) {
@@ -127,7 +151,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[FOOTER-EDGE-011] @edge Verify grouped navigation structure', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const nav = page.locator('footer nav, [role="contentinfo"] nav').first();
     if (await nav.count() > 0) {
@@ -139,7 +164,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Content Constraints ============
   test('[FOOTER-EDGE-012] @edge Verify footer content is not empty', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -149,7 +175,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[FOOTER-EDGE-013] @edge Verify footer text content is readable', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -163,7 +190,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Disclosure Component (Footer Disclosure) ============
   test('[FOOTER-EDGE-014] @edge Verify disclosure component expands on click', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const disclosure = page.locator('[class*="disclosure"], details, [role="button"][aria-expanded]').first();
     if (await disclosure.count() > 0) {
@@ -180,7 +208,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[FOOTER-EDGE-015] @edge Verify disclosure content visible when expanded', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const disclosure = page.locator('[class*="disclosure"], details, [role="button"][aria-expanded="false"]').first();
     if (await disclosure.count() > 0) {
@@ -195,7 +224,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Form in Footer ============
   test('[FOOTER-EDGE-016] @edge Verify footer form if present is accessible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -213,7 +243,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[FOOTER-EDGE-017] @edge Verify footer form submission handling', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -228,7 +259,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Social Links ============
   test('[FOOTER-EDGE-018] @edge Verify social media links present', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -240,7 +272,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
   });
 
   test('[FOOTER-EDGE-019] @edge Verify social links have descriptive labels', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -258,7 +291,8 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
 
   // ============ Edge Case: Footer Styling ============
   test('[FOOTER-EDGE-020] @edge Verify footer has proper contrast for readability', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('footer');
+    await page.goto(url);
 
     const footer = page.locator('footer, [role="contentinfo"]').first();
     if (await footer.count() > 0) {
@@ -275,3 +309,4 @@ test.describe('Footer Component — Edge Cases & Enhanced Validation', () => {
     }
   });
 });
+

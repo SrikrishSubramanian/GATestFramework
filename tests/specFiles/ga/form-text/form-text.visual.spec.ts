@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Form Text — Visual Regression', () => {
+test.describe('Form Text â€” Visual Regression', () => {
   test('[FORMTEXT-VISUAL-001] @visual Form text field is properly styled', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -22,7 +38,8 @@ test.describe('Form Text — Visual Regression', () => {
   });
 
   test('[FORMTEXT-VISUAL-002] @visual Form text label is visible and readable', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const label = page.locator('label, .cmp-form-text label').first();
     if (await label.count() > 0) {
@@ -34,7 +51,8 @@ test.describe('Form Text — Visual Regression', () => {
   });
 
   test('[FORMTEXT-VISUAL-003] @visual Form text input has appropriate padding', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -46,7 +64,8 @@ test.describe('Form Text — Visual Regression', () => {
   });
 
   test('[FORMTEXT-VISUAL-004] @visual Form text placeholder text is visible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const textInput = page.locator('input[type="text"][placeholder], .cmp-form-text input[placeholder]').first();
     if (await textInput.count() > 0) {
@@ -58,7 +77,8 @@ test.describe('Form Text — Visual Regression', () => {
   });
 
   test('[FORMTEXT-VISUAL-005] @visual Form text field maintains proper alignment', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const container = page.locator('.cmp-form-text, [class*="form-text"]').first();
     if (await container.count() > 0) {
@@ -69,3 +89,4 @@ test.describe('Form Text — Visual Regression', () => {
     }
   });
 });
+

@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Hero Fifty-Fifty — Visual Regression', () => {
+test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
   test('[H5050-VISUAL-001] @visual Hero 50/50 layout has two columns', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     await expect(hero).toBeVisible();
@@ -21,7 +37,8 @@ test.describe('Hero Fifty-Fifty — Visual Regression', () => {
   });
 
   test('[H5050-VISUAL-002] @visual Hero 50/50 image is properly sized', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     const image = hero.locator('img').first();
@@ -34,7 +51,8 @@ test.describe('Hero Fifty-Fifty — Visual Regression', () => {
   });
 
   test('[H5050-VISUAL-003] @visual Hero 50/50 content is readable', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     const text = hero.locator('p, h1, h2, h3').first();
@@ -49,7 +67,8 @@ test.describe('Hero Fifty-Fifty — Visual Regression', () => {
   });
 
   test('[H5050-VISUAL-004] @visual Hero 50/50 has proper spacing', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     const padding = await hero.evaluate(el =>
@@ -60,7 +79,8 @@ test.describe('Hero Fifty-Fifty — Visual Regression', () => {
   });
 
   test('[H5050-VISUAL-005] @visual Hero 50/50 call-to-action button is prominent', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero-fifty-fifty');
+    await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     const button = hero.locator('button, a[class*="button"], a[class*="cta"]').first();
@@ -74,3 +94,4 @@ test.describe('Hero Fifty-Fifty — Visual Regression', () => {
     }
   });
 });
+

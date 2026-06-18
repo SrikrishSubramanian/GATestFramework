@@ -1,17 +1,33 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Hero CTA Video Modal — Edge Cases', () => {
+test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
   // ============ Edge Case: Multiple Modal Interactions ============
   test('[GAAM-621-EDGE-001] @edge Verify modal can be opened and closed multiple times', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -37,7 +53,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
 
   // ============ Edge Case: Rapid Click Behavior ============
   test('[GAAM-621-EDGE-002] @edge Verify rapid CTA clicks do not create multiple modals', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -56,7 +73,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
 
   // ============ Edge Case: Keyboard Interaction Combinations ============
   test('[GAAM-621-EDGE-003] @edge Verify Tab + Enter opens modal', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -73,7 +91,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-004] @edge Verify Space key opens modal on button', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -90,7 +109,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
 
   // ============ Edge Case: Video Playback Edge Cases ============
   test('[GAAM-621-EDGE-005] @edge Verify video remains paused if not interacted', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -108,7 +128,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-006] @edge Verify video resets position on modal close/reopen', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const video = page.locator('video').first();
     if (await video.count() > 0) {
@@ -137,7 +158,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
 
   // ============ Edge Case: Focus Management Edge Cases ============
   test('[GAAM-621-EDGE-007] @a11y @edge Verify focus loop in modal with single focusable element', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -156,7 +178,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-008] @a11y @edge Verify Shift+Tab backwards navigation in modal', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -177,7 +200,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
 
   // ============ Edge Case: Overlay Interaction Edge Cases ============
   test('[GAAM-621-EDGE-009] @edge Verify clicking on video does not close modal', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -200,7 +224,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-010] @edge Verify clicking overlay edge closes modal', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -225,7 +250,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
 
   // ============ Edge Case: Responsive Behavior Edge Cases ============
   test('[GAAM-621-EDGE-011] @edge Verify modal adapts to viewport resize', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -245,7 +271,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-012] @edge Verify modal orientation change behavior', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -265,7 +292,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
 
   // ============ Edge Case: Error Scenarios ============
   test('[GAAM-621-EDGE-013] @edge Verify modal gracefully handles missing video source', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const video = page.locator('video').first();
     if (await video.count() > 0) {
@@ -284,7 +312,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
     const errors: string[] = [];
     page.on('pageerror', e => errors.push(e.message));
 
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -299,7 +328,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
 
   // ============ Edge Case: Accessibility Edge Cases ============
   test('[GAAM-621-EDGE-015] @a11y @edge Verify close button has accessible label', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -318,7 +348,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-016] @a11y @edge Verify modal has proper aria-modal attribute', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -334,7 +365,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-017] @a11y @edge Verify video has captions/subtitles support', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const video = page.locator('video').first();
     if (await video.count() > 0) {
@@ -345,7 +377,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-018] @edge Verify modal content contrast meets WCAG standards', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -368,7 +401,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-019] @edge Verify modal min/max width constraints', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -385,7 +419,8 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
   });
 
   test('[GAAM-621-EDGE-020] @edge Verify no layout shift when modal appears', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const body = page.locator('body');
     const initialWidth = await body.evaluate(el => el.offsetWidth);
@@ -401,3 +436,4 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
     }
   });
 });
+

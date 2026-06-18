@@ -1,14 +1,29 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Nested Content Carousel — State Matrix', () => {
+test.describe('Nested Content Carousel â€” State Matrix', () => {
   const autoplay = ['on', 'off'];
   const viewports = [
     { name: 'mobile', width: 375 },
@@ -22,7 +37,8 @@ test.describe('Nested Content Carousel — State Matrix', () => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
         await loginToAEMAuthor(page);
-        await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/nested-content-carousel.html?wcmmode=disabled`, { waitUntil: 'networkidle' });
+        const url = resolveComponentUrl('nested-content-carousel');
+    await page.goto(url, { waitUntil: 'networkidle' });
 
         const root = page.locator('.cmp-nested-content-carousel').first();
         await expect(root).toBeVisible();
@@ -37,3 +53,4 @@ test.describe('Nested Content Carousel — State Matrix', () => {
     }
   }
 });
+

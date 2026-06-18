@@ -6,6 +6,8 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 
+let capture: ConsoleCapture;
+
 const BASE = () => ENV.BASE_URL || 'http://localhost:4503';
 
 test.describe('Login — UI & Layout (CSV Test Cases)', () => {
@@ -18,6 +20,15 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
     const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection);
     expect(['row', 'row-reverse']).toContain(flexDir);
   });
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
+});
 
   test('[LGN-002] @UI Background Color Validation', async ({ page }) => {
     const pom = new LoginPage(page);

@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Text — Visual Regression', () => {
+test.describe('Text â€” Visual Regression', () => {
   test('[TEXT-VISUAL-001] @visual Text content is readable', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const root = page.locator('.cmp-text').first();
     await expect(root).toBeVisible();
@@ -23,7 +39,8 @@ test.describe('Text — Visual Regression', () => {
   });
 
   test('[TEXT-VISUAL-002] @visual Text color contrast is adequate', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const root = page.locator('.cmp-text').first();
     const color = await root.evaluate(el =>
@@ -38,7 +55,8 @@ test.describe('Text — Visual Regression', () => {
   });
 
   test('[TEXT-VISUAL-003] @visual Text formatting is preserved', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const root = page.locator('.cmp-text').first();
     const bold = root.locator('strong, b');
@@ -57,7 +75,8 @@ test.describe('Text — Visual Regression', () => {
   });
 
   test('[TEXT-VISUAL-004] @visual Text line height is appropriate', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const text = page.locator('.cmp-text p').first();
     if (await text.count() > 0) {
@@ -69,7 +88,8 @@ test.describe('Text — Visual Regression', () => {
   });
 
   test('[TEXT-VISUAL-005] @visual Text lists display correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const lists = page.locator('.cmp-text ul, .cmp-text ol');
     const count = await lists.count();
@@ -80,3 +100,4 @@ test.describe('Text — Visual Regression', () => {
     }
   });
 });
+

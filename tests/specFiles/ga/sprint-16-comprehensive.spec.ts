@@ -10,6 +10,7 @@
 import { test, expect, Page } from '@playwright/test';
 import { AEMTestHelper } from '../../utils/infra/aem-test-helper';
 import ENV from '../../utils/infra/env';
+import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
 
 // Sprint 16 GAAM Tickets (50 total)
 const SPRINT_16_TICKETS = [
@@ -36,11 +37,24 @@ const COMPONENT_MAP: Record<string, { name: string; path: string; cssClass: stri
   'GAAM-393': { name: 'PageTemplate', path: 'page', cssClass: 'cmp-page' },
 };
 
+let capture: ConsoleCapture;
+
 test.describe('Sprint 16 - Comprehensive Test Suite @sprint-16', () => {
 
   test.beforeEach(async ({ page }) => {
     // Auth already handled by globalSetup and loaded via storageState in config
-  });
+  
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
+});
 
   // ═══════════════════════════════════════════════════════════
   // SMOKE TESTS - Quick validation

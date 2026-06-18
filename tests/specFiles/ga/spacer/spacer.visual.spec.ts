@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Spacer — Visual Regression', () => {
+test.describe('Spacer â€” Visual Regression', () => {
   test('[SPACER-VISUAL-001] @visual Spacer creates proper vertical spacing', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -20,7 +36,8 @@ test.describe('Spacer — Visual Regression', () => {
   });
 
   test('[SPACER-VISUAL-002] @visual Spacer margin/padding is correct', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const margin = await spacer.evaluate(el => window.getComputedStyle(el).margin);
@@ -30,7 +47,8 @@ test.describe('Spacer — Visual Regression', () => {
   });
 
   test('[SPACER-VISUAL-003] @visual Spacer does not affect horizontal layout', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const width = await spacer.evaluate(el => el.offsetWidth);
@@ -41,7 +59,8 @@ test.describe('Spacer — Visual Regression', () => {
   });
 
   test('[SPACER-VISUAL-004] @visual Spacer variants apply different heights', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacers = page.locator('.cmp-spacer');
     const count = await spacers.count();
@@ -57,7 +76,8 @@ test.describe('Spacer — Visual Regression', () => {
   });
 
   test('[SPACER-VISUAL-005] @visual Spacer is transparent', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const bg = await spacer.evaluate(el => window.getComputedStyle(el).backgroundColor);
@@ -66,3 +86,4 @@ test.describe('Spacer — Visual Regression', () => {
     expect(['rgba(0, 0, 0, 0)', 'transparent']).toContain(bg);
   });
 });
+

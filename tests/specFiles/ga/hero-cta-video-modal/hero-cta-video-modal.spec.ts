@@ -1,17 +1,33 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Hero CTA Video Modal — GAAM-621', () => {
+test.describe('Hero CTA Video Modal â€” GAAM-621', () => {
   // ============ Modal Opening & Closing ============
   test('[GAAM-621-001] @regression Verify video modal opens on CTA click', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const ctaButton = page.locator('button[class*="cta"], a[class*="cta"], [class*="hero"] button').first();
     if (await ctaButton.count() > 0) {
@@ -26,7 +42,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-002] @regression Verify modal closes on X button click', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const modal = page.locator('[class*="modal"], [role="dialog"]').first();
     if (await modal.count() > 0) {
@@ -44,7 +61,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-003] @regression Verify modal closes on overlay click', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const overlay = page.locator('[class*="overlay"], [class*="backdrop"], [class*="modal-backdrop"]').first();
     if (await overlay.count() > 0) {
@@ -58,7 +76,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-004] @regression Verify modal closes on ESC key press', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const ctaButton = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await ctaButton.count() > 0) {
@@ -76,7 +95,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
 
   // ============ Video Controls ============
   test('[GAAM-621-005] @regression Verify video plays and pauses on click', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const videoElement = page.locator('video, [class*="video-player"]').first();
     if (await videoElement.count() > 0) {
@@ -90,7 +110,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-006] @regression Verify video controls are accessible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const videoControl = page.locator('[class*="video-controls"], video');
     if (await videoControl.count() > 0) {
@@ -104,7 +125,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-007] @regression Verify video fullscreen capability', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const video = page.locator('video').first();
     if (await video.count() > 0) {
@@ -115,7 +137,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
 
   // ============ Focus & Keyboard Navigation ============
   test('[GAAM-621-008] @a11y @regression Verify CTA is implemented as button element', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -125,7 +148,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-009] @a11y @regression Verify CTA has accessible name', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -138,7 +162,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-010] @a11y @regression Verify focus moves to modal on open', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -151,7 +176,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-011] @a11y @regression Verify focus trap within modal', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const modal = page.locator('[role="dialog"], [class*="modal"]').first();
     if (await modal.count() > 0) {
@@ -162,7 +188,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-012] @a11y @regression Verify focus returns to CTA on modal close', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -183,7 +210,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
 
   // ============ Modal Behavior ============
   test('[GAAM-621-013] @regression Verify background scrolling is disabled when modal open', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -201,7 +229,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-014] @regression Verify video stops when modal closes', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const video = page.locator('video').first();
     if (await video.count() > 0) {
@@ -223,7 +252,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   // ============ Responsive Behavior ============
   test('[GAAM-621-015] @regression Verify modal responsive on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -240,7 +270,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
 
   test('[GAAM-621-016] @regression Verify modal responsive on tablet', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -257,7 +288,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
 
   // ============ Video Source & Loading ============
   test('[GAAM-621-017] @regression Verify video source is valid', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const video = page.locator('video').first();
     if (await video.count() > 0) {
@@ -270,7 +302,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-018] @regression Verify video loads without errors', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const errors: string[] = [];
     page.on('pageerror', e => errors.push(e.message));
@@ -285,7 +318,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
 
   // ============ Modal Styling ============
   test('[GAAM-621-019] @regression Verify modal has proper backdrop', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -303,7 +337,8 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
   });
 
   test('[GAAM-621-020] @regression Verify modal content is centered', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/hero.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('hero');
+    await page.goto(url);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
@@ -320,3 +355,4 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     }
   });
 });
+

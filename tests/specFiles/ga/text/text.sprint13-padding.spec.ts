@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
 test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', () => {
   test('[GAAM-675-001] @regression Verify text component has default padding applied', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
@@ -22,7 +38,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-002] @regression Verify padding is consistent across all text elements', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textElements = page.locator('.cmp-text p, [class*="text"] p').first();
     if (await textElements.count() > 0) {
@@ -35,7 +52,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
   test('[GAAM-675-003] @regression Verify padding on mobile viewport', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
@@ -48,7 +66,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
   test('[GAAM-675-004] @regression Verify padding on tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
@@ -60,7 +79,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-005] @regression Verify padding maintains readability', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textElement = page.locator('.cmp-text p, [class*="text"] p').first();
     if (await textElement.count() > 0) {
@@ -72,7 +92,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-006] @regression Verify padding does not cause horizontal scroll', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
@@ -82,7 +103,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-007] @regression Verify padding respects layout constraints', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const container = page.locator('[class*="container"], main, [role="main"]').first();
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
@@ -96,7 +118,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-008] @regression Verify paragraph spacing includes padding', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const paragraphs = page.locator('.cmp-text p, [class*="text"] p');
     const count = await paragraphs.count();
@@ -115,7 +138,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-009] @regression Verify padding with different text sizes', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const headings = page.locator('.cmp-text h1, .cmp-text h2, .cmp-text h3');
     const count = await headings.count();
@@ -130,7 +154,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-010] @regression Verify list padding within text component', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const lists = page.locator('.cmp-text ul, .cmp-text ol, [class*="text"] ul, [class*="text"] ol');
     const count = await lists.count();
@@ -153,7 +178,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
 
     for (const viewport of viewports) {
       await page.setViewportSize({ width: viewport.width, height: 600 });
-      await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+      const url = resolveComponentUrl('text');
+    await page.goto(url);
 
       const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
       if (await textComponent.count() > 0) {
@@ -166,7 +192,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-012] @edge Verify text component padding with empty content', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const emptyText = page.locator('.cmp-text:empty, [class*="text-component"]:empty').first();
     if (await emptyText.count() > 0) {
@@ -178,7 +205,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-013] @edge Verify text component padding with rich content', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const richText = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await richText.count() > 0) {
@@ -193,7 +221,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-014] @edge Verify nested element padding inheritance', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const strong = page.locator('.cmp-text strong, [class*="text"] strong').first();
     const em = page.locator('.cmp-text em, [class*="text"] em').first();
@@ -208,7 +237,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-015] @edge Verify text component padding with links', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const link = page.locator('.cmp-text a, [class*="text"] a').first();
     if (await link.count() > 0) {
@@ -220,7 +250,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-016] @edge Verify text component padding with blockquotes', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const blockquote = page.locator('.cmp-text blockquote, [class*="text"] blockquote').first();
     if (await blockquote.count() > 0) {
@@ -232,7 +263,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-017] @regression Verify text component padding with code blocks', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const code = page.locator('.cmp-text code, .cmp-text pre, [class*="text"] code, [class*="text"] pre').first();
     if (await code.count() > 0) {
@@ -244,7 +276,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-018] @regression Verify text component padding consistent with design system', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
@@ -270,7 +303,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-019] @edge Verify text component padding with long form content', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
@@ -280,7 +314,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
   });
 
   test('[GAAM-675-020] @regression Verify text component padding does not hide content', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('text');
+    await page.goto(url);
 
     const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
     if (await textComponent.count() > 0) {
@@ -289,3 +324,4 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
     }
   });
 });
+

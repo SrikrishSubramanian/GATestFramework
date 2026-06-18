@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Spacer — Interactions', () => {
+test.describe('Spacer â€” Interactions', () => {
   test('[SPACER-INTERACTION-001] @interaction @regression Spacer height adjusts responsively', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const initialHeight = await spacer.evaluate(el => el.offsetHeight);
@@ -26,7 +42,8 @@ test.describe('Spacer — Interactions', () => {
   });
 
   test('[SPACER-INTERACTION-002] @interaction @regression Spacer does not block keyboard navigation', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     // Spacer should not interfere with tab navigation
     await page.keyboard.press('Tab');
@@ -36,7 +53,8 @@ test.describe('Spacer — Interactions', () => {
   });
 
   test('[SPACER-INTERACTION-003] @interaction @regression Spacer is not clickable', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const pointerEvents = await spacer.evaluate(el =>
@@ -48,7 +66,8 @@ test.describe('Spacer — Interactions', () => {
   });
 
   test('[SPACER-INTERACTION-004] @interaction @regression Spacer maintains spacing under different content', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacers = page.locator('.cmp-spacer');
     const count = await spacers.count();
@@ -71,10 +90,12 @@ test.describe('Spacer — Interactions', () => {
 
     for (const viewport of viewports) {
       await page.setViewportSize(viewport);
-      await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+      const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
       const spacer = page.locator('.cmp-spacer').first();
       await expect(spacer).toBeVisible();
     }
   });
 });
+

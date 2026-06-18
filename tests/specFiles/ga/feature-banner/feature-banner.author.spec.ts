@@ -1,7 +1,8 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +26,8 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
   // ============ Banner Rendering ============
   test('[FB-001] @regression Verify feature banner renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const banner = page.locator('[class*="feature-banner"], [class*="banner"]').first();
     if (await banner.count() > 0) {
@@ -34,7 +36,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
   });
 
   test('[FB-002] @regression Verify banner has background image or color', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
@@ -49,7 +52,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
   });
 
   test('[FB-003] @regression Verify banner text/content displays', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const content = page.locator('[class*="feature-banner"] *').first();
     if (await content.count() > 0) {
@@ -59,7 +63,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
   });
 
   test('[FB-004] @regression Verify banner has CTA button', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const button = page.locator('[class*="feature-banner"] button, [class*="feature-banner"] a[class*="cta"]').first();
     if (await button.count() > 0) {
@@ -69,7 +74,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
   test('[FB-005] @regression Verify responsive on mobile (375px)', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
@@ -80,7 +86,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
   test('[FB-006] @regression Verify responsive on tablet (768px)', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
@@ -91,7 +98,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
   test('[FB-007] @regression Verify responsive on desktop (1440px)', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
@@ -101,7 +109,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
   });
 
   test('[FB-008] @a11y @regression Verify CTA button accessible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const cta = page.locator('[class*="feature-banner"] button').first();
     if (await cta.count() > 0) {
@@ -111,7 +120,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
   });
 
   test('[FB-009] @a11y @regression Verify banner image has alt text', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const image = page.locator('[class*="feature-banner"] img').first();
     if (await image.count() > 0) {
@@ -121,7 +131,8 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
   });
 
   test('[FB-010] @regression Verify text readable over background', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('feature-banner');
+    await page.goto(url);
 
     const text = page.locator('[class*="feature-banner"] p').first();
     if (await text.count() > 0) {
@@ -132,3 +143,4 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     }
   });
 });
+

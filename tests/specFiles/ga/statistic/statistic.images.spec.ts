@@ -1,13 +1,27 @@
 import { test, expect } from '@playwright/test';
 import { StatisticPage } from '../../../pages/ga/components/statisticPage';
-import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
+import { scanImages, attachImageScanResults } from '../../../utils/infra/broken-image-detector';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
 test.describe('Statistic — Image Health', () => {

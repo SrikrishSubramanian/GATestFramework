@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Accordion Tabs Feature — Images & Media', () => {
+test.describe('Accordion Tabs Feature â€” Images & Media', () => {
   test('[ACCORDION-TABS-IMAGE-001] @regression Accordion/tabs icons load successfully', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const icons = page.locator('[class*="accordion"] [class*="icon"], [class*="tabs"] [class*="icon"], .cmp-accordion-tabs svg');
     const iconCount = await icons.count();
@@ -18,7 +34,8 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
   });
 
   test('[ACCORDION-TABS-IMAGE-002] @regression Accordion/tabs has no broken images', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const images = page.locator('[class*="accordion"] img, [class*="tabs"] img, .cmp-accordion-tabs img');
     const count = await images.count();
@@ -31,7 +48,8 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
   });
 
   test('[ACCORDION-TABS-IMAGE-003] @regression Accordion/tabs images have alt text', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const images = page.locator('[class*="accordion"] img, [class*="tabs"] img, .cmp-accordion-tabs img');
     const count = await images.count();
@@ -44,7 +62,8 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
   });
 
   test('[ACCORDION-TABS-IMAGE-004] @regression Accordion/tabs background images render', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const bgElements = page.locator('[class*="accordion"] [style*="background-image"], [class*="tabs"] [style*="background-image"], .cmp-accordion-tabs [style*="background-image"]');
     const count = await bgElements.count();
@@ -61,7 +80,8 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
   });
 
   test('[ACCORDION-TABS-IMAGE-005] @regression Accordion/tabs SVG icons are accessible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('accordion-tabs-feature');
+    await page.goto(url);
 
     const svgs = page.locator('[class*="accordion"] svg, [class*="tabs"] svg, .cmp-accordion-tabs svg');
     const svgCount = await svgs.count();
@@ -74,3 +94,4 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
     }
   });
 });
+

@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Spacer — Images & Media', () => {
+test.describe('Spacer â€” Images & Media', () => {
   test('[SPACER-IMAGE-001] @regression Spacer component has no images by design', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const images = spacer.locator('img');
@@ -21,7 +37,8 @@ test.describe('Spacer — Images & Media', () => {
   });
 
   test('[SPACER-IMAGE-002] @regression Spacer background image is transparent', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const bgImage = await spacer.evaluate(el =>
@@ -33,7 +50,8 @@ test.describe('Spacer — Images & Media', () => {
   });
 
   test('[SPACER-IMAGE-003] @regression Spacer renders without visual artifacts', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -47,7 +65,8 @@ test.describe('Spacer — Images & Media', () => {
   });
 
   test('[SPACER-IMAGE-004] @regression Spacer border is not visible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const borderStyle = await spacer.evaluate(el =>
@@ -59,7 +78,8 @@ test.describe('Spacer — Images & Media', () => {
   });
 
   test('[SPACER-IMAGE-005] @regression Spacer outline is not visible', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('spacer');
+    await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
     const outline = await spacer.evaluate(el =>
@@ -70,3 +90,4 @@ test.describe('Spacer — Images & Media', () => {
     expect(outline).toBeTruthy();
   });
 });
+

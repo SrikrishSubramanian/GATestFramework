@@ -1,16 +1,32 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Form Text — Images & Media', () => {
+test.describe('Form Text â€” Images & Media', () => {
   test('[FORMTEXT-IMAGE-001] @regression Form text field icons are present', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const icons = page.locator('.cmp-form-text [class*="icon"], .cmp-form-text svg');
     const iconCount = await icons.count();
@@ -18,7 +34,8 @@ test.describe('Form Text — Images & Media', () => {
   });
 
   test('[FORMTEXT-IMAGE-002] @regression Form text field icons load correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const svgs = page.locator('.cmp-form-text svg, .cmp-form-text [class*="icon"] svg');
     const svgCount = await svgs.count();
@@ -31,7 +48,8 @@ test.describe('Form Text — Images & Media', () => {
   });
 
   test('[FORMTEXT-IMAGE-003] @regression Form text background images render', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const bgElements = page.locator('.cmp-form-text [style*="background-image"]');
     const count = await bgElements.count();
@@ -48,7 +66,8 @@ test.describe('Form Text — Images & Media', () => {
   });
 
   test('[FORMTEXT-IMAGE-004] @regression Form text has no broken images', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const images = page.locator('.cmp-form-text img');
     const imgCount = await images.count();
@@ -61,7 +80,8 @@ test.describe('Form Text — Images & Media', () => {
   });
 
   test('[FORMTEXT-IMAGE-005] @regression Form text images have alt text', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-text.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-text');
+    await page.goto(url);
 
     const images = page.locator('.cmp-form-text img');
     const count = await images.count();
@@ -73,3 +93,4 @@ test.describe('Form Text — Images & Media', () => {
     }
   });
 });
+

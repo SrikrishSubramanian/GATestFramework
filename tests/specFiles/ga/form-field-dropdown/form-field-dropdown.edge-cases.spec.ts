@@ -1,17 +1,33 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+
+let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+
+  capture = new ConsoleCapture(page);
+  capture.start();});
+
+test.afterEach(async ({ page }, testInfo) => {
+  const errors = capture.getErrors();
+  const warnings = capture.getWarnings();
+  if (errors.length > 0 || warnings.length > 0) {
+    await attachConsoleCapture(page, testInfo, errors, warnings);
+  }
+  await annotateEnvironment(page, testInfo);
 });
 
-test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
+test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
   // ============ Edge Case: Large Option Lists ============
   test('[GAAM-507-EDGE-001] @edge Verify dropdown handles many options (100+)', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -23,7 +39,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
   });
 
   test('[GAAM-507-EDGE-002] @edge Verify keyboard navigation in large option list', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -41,7 +58,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Special Characters in Options ============
   test('[GAAM-507-EDGE-003] @edge Verify options with special characters display correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -57,7 +75,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
   });
 
   test('[GAAM-507-EDGE-004] @edge Verify options with very long text wrap correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -76,7 +95,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Rapid Selection ============
   test('[GAAM-507-EDGE-005] @edge Verify rapid selection changes work correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -96,7 +116,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
   });
 
   test('[GAAM-507-EDGE-006] @edge Verify selecting same option twice works', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -117,7 +138,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Empty Option ============
   test('[GAAM-507-EDGE-007] @edge Verify empty option can be selected', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -134,7 +156,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Focus & Blur Interactions ============
   test('[GAAM-507-EDGE-008] @edge Verify focus event fires on dropdown focus', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -153,7 +176,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
   });
 
   test('[GAAM-507-EDGE-009] @edge Verify blur event fires on dropdown blur', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -167,7 +191,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Form Submission with Dropdown ============
   test('[GAAM-507-EDGE-010] @edge Verify form includes dropdown value on submission', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const form = page.locator('form').first();
     if (await form.count() > 0) {
@@ -190,7 +215,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Disabled & ReadOnly States ============
   test('[GAAM-507-EDGE-011] @edge Verify disabled dropdown cannot change value', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const disabledSelect = page.locator('select[disabled]').first();
     if (await disabledSelect.count() > 0) {
@@ -209,7 +235,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
     for (const viewport of viewports) {
       await page.setViewportSize(viewport);
-      await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+      const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
       const select = page.locator('select').first();
       if (await select.count() > 0) {
@@ -227,7 +254,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
     for (const viewport of viewports) {
       await page.setViewportSize(viewport);
-      await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+      const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
       const select = page.locator('select').first();
       if (await select.count() > 0) {
@@ -241,7 +269,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Custom Styling ============
   test('[GAAM-507-EDGE-014] @edge Verify custom background color on dropdown', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -253,7 +282,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
   });
 
   test('[GAAM-507-EDGE-015] @edge Verify custom font styling on options', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -266,7 +296,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Accessibility States ============
   test('[GAAM-507-EDGE-016] @a11y @edge Verify aria-required on required dropdown', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const requiredSelect = page.locator('select[required]').first();
     if (await requiredSelect.count() > 0) {
@@ -276,7 +307,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
   });
 
   test('[GAAM-507-EDGE-017] @a11y @edge Verify aria-invalid on error state', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const errorSelect = page.locator('select[aria-invalid="true"]').first();
     if (await errorSelect.count() > 0) {
@@ -285,7 +317,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
   });
 
   test('[GAAM-507-EDGE-018] @a11y @edge Verify aria-describedby for error messages', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select[aria-describedby]').first();
     if (await select.count() > 0) {
@@ -296,7 +329,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Change Event ============
   test('[GAAM-507-EDGE-019] @edge Verify change event fires on option selection', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -322,7 +356,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     const errors: string[] = [];
     page.on('pageerror', e => errors.push(e.message));
 
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -337,7 +372,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Value Persistence ============
   test('[GAAM-507-EDGE-021] @edge Verify selected value persists after page scroll', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
@@ -356,7 +392,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Empty Form State ============
   test('[GAAM-507-EDGE-022] @edge Verify dropdown maintains empty state when not required', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const optionalSelect = page.locator('select:not([required])').first();
     if (await optionalSelect.count() > 0) {
@@ -368,7 +405,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Multiple Selections with Ctrl/Cmd ============
   test('[GAAM-507-EDGE-023] @edge Verify dropdown ignores Ctrl+Click for single-select', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select:not([multiple])').first();
     if (await select.count() > 0) {
@@ -384,7 +422,8 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
 
   // ============ Edge Case: Dropdown with Data Attributes ============
   test('[GAAM-507-EDGE-024] @edge Verify custom data attributes preserved on dropdown', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/form-field-dropdown.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('form-field-dropdown');
+    await page.goto(url);
 
     const select = page.locator('select[data-testid], select[data-value], select[data-*]').first();
     if (await select.count() > 0) {
@@ -394,3 +433,4 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     }
   });
 });
+

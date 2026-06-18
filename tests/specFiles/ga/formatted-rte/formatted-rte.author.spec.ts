@@ -1,7 +1,8 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +26,8 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Formatted RTE Component (GAAM-530)', () => {
   // ============ RTE Container & Structure ============
   test('[GAAM-530-001] @regression Verify RTE component renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const rte = page.locator('[class*="rte"], [class*="rich-text"], [role="textbox"]').first();
     if (await rte.count() > 0) {
@@ -34,7 +36,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-002] @regression Verify RTE has content area', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const content = page.locator('[class*="rte-content"], [class*="text-content"], div[contenteditable="true"]').first();
     if (await content.count() > 0) {
@@ -44,7 +47,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Text Formatting ============
   test('[GAAM-530-003] @regression Verify bold text formatting applies', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const boldText = page.locator('strong, b, [style*="font-weight"]').first();
     if (await boldText.count() > 0) {
@@ -56,7 +60,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-004] @regression Verify italic text formatting applies', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const italicText = page.locator('em, i, [style*="font-style"]').first();
     if (await italicText.count() > 0) {
@@ -68,7 +73,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-005] @regression Verify underline text formatting applies', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const underlineText = page.locator('u, [style*="text-decoration"]').first();
     if (await underlineText.count() > 0) {
@@ -80,7 +86,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-006] @regression Verify strikethrough text formatting applies', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const strikeText = page.locator('del, s, [style*="text-decoration: line-through"]').first();
     if (await strikeText.count() > 0) {
@@ -91,7 +98,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Headings & Paragraphs ============
   test('[GAAM-530-007] @regression Verify heading 1 renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const h1 = page.locator('h1, [class*="heading-1"]').first();
     if (await h1.count() > 0) {
@@ -100,7 +108,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-008] @regression Verify heading 2 renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const h2 = page.locator('h2, [class*="heading-2"]').first();
     if (await h2.count() > 0) {
@@ -109,7 +118,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-009] @regression Verify heading 3 renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const h3 = page.locator('h3, [class*="heading-3"]').first();
     if (await h3.count() > 0) {
@@ -118,7 +128,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-010] @regression Verify paragraph text renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const paragraph = page.locator('p').first();
     if (await paragraph.count() > 0) {
@@ -128,7 +139,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Lists ============
   test('[GAAM-530-011] @regression Verify unordered list renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const ul = page.locator('ul').first();
     if (await ul.count() > 0) {
@@ -138,7 +150,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-012] @regression Verify ordered list renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const ol = page.locator('ol').first();
     if (await ol.count() > 0) {
@@ -148,7 +161,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-013] @regression Verify list items display bullet points', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const li = page.locator('li').first();
     if (await li.count() > 0) {
@@ -160,7 +174,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-014] @regression Verify nested lists render correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const nestedList = page.locator('ul ul, ol ol, ul ol, ol ul').first();
     if (await nestedList.count() > 0) {
@@ -170,7 +185,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Links ============
   test('[GAAM-530-015] @regression Verify links render and are clickable', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const link = page.locator('a[href]').first();
     if (await link.count() > 0) {
@@ -180,7 +196,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-016] @regression Verify links have accessible text', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const link = page.locator('a[href]').first();
     if (await link.count() > 0) {
@@ -191,7 +208,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-017] @regression Verify internal links work correctly', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const internalLink = page.locator('a[href^="/"]').first();
     if (await internalLink.count() > 0) {
@@ -201,7 +219,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-018] @regression Verify external links have target attribute', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const externalLink = page.locator('a[href^="http"]').first();
     if (await externalLink.count() > 0) {
@@ -213,7 +232,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Code & Blockquotes ============
   test('[GAAM-530-019] @regression Verify code formatting renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const code = page.locator('code').first();
     if (await code.count() > 0) {
@@ -225,7 +245,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-020] @regression Verify blockquote renders with styling', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const blockquote = page.locator('blockquote').first();
     if (await blockquote.count() > 0) {
@@ -237,7 +258,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-021] @regression Verify pre-formatted text preserves whitespace', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const pre = page.locator('pre').first();
     if (await pre.count() > 0) {
@@ -250,7 +272,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Text Color & Highlighting ============
   test('[GAAM-530-022] @regression Verify text color formatting applies', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const coloredText = page.locator('[style*="color:"]').first();
     if (await coloredText.count() > 0) {
@@ -262,7 +285,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-023] @regression Verify text background/highlight applies', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const highlightedText = page.locator('[style*="background-color:"]').first();
     if (await highlightedText.count() > 0) {
@@ -275,7 +299,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Horizontal Rule ============
   test('[GAAM-530-024] @regression Verify horizontal rule renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const hr = page.locator('hr, [class*="divider"], [class*="separator"]').first();
     if (await hr.count() > 0) {
@@ -285,7 +310,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Alignment ============
   test('[GAAM-530-025] @regression Verify left-aligned text', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const paragraph = page.locator('p').first();
     if (await paragraph.count() > 0) {
@@ -297,7 +323,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-026] @regression Verify center-aligned text renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const centerText = page.locator('[style*="text-align: center"]').first();
     if (await centerText.count() > 0) {
@@ -306,7 +333,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-027] @regression Verify right-aligned text renders', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const rightText = page.locator('[style*="text-align: right"]').first();
     if (await rightText.count() > 0) {
@@ -317,7 +345,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   // ============ Responsive Behavior ============
   test('[GAAM-530-028] @regression Verify RTE responsive on mobile (375px)', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
@@ -328,7 +357,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   test('[GAAM-530-029] @regression Verify RTE responsive on tablet (768px)', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
@@ -339,7 +369,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   test('[GAAM-530-030] @regression Verify RTE responsive on desktop (1440px)', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
@@ -350,7 +381,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
   // ============ Content Readability ============
   test('[GAAM-530-031] @a11y @regression Verify readable font size', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const text = page.locator('p, li').first();
     if (await text.count() > 0) {
@@ -363,7 +395,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-032] @a11y @regression Verify readable line height', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const text = page.locator('p').first();
     if (await text.count() > 0) {
@@ -376,7 +409,8 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
   });
 
   test('[GAAM-530-033] @a11y @regression Verify readable text contrast', async ({ page }) => {
-    await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/formatted-rte.html?wcmmode=disabled`);
+    const url = resolveComponentUrl('formatted-rte');
+    await page.goto(url);
 
     const text = page.locator('p').first();
     if (await text.count() > 0) {
@@ -387,3 +421,4 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
     }
   });
 });
+
