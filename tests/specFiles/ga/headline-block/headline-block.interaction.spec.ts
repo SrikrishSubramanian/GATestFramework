@@ -37,9 +37,9 @@ test.describe('Headline Block — CTA Hover States', () => {
     await pom.navigate(BASE());
     const btn = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER} .cmp-button`).first();
     await btn.scrollIntoViewIfNeeded();
-    const bgBefore = await btn.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgBefore = await btn.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await btn.hover();
-    const bgAfter = await btn.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgAfter = await btn.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });
 
@@ -48,11 +48,11 @@ test.describe('Headline Block — CTA Hover States', () => {
     await pom.navigate(BASE());
     const btn = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER} .cmp-button`).nth(1);
     await btn.scrollIntoViewIfNeeded();
-    const bgBefore = await btn.evaluate(el => getComputedStyle(el).backgroundColor);
-    const borderBefore = await btn.evaluate(el => getComputedStyle(el).borderColor);
+    const bgBefore = await btn.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const borderBefore = await btn.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
     await btn.hover();
-    const bgAfter = await btn.evaluate(el => getComputedStyle(el).backgroundColor);
-    const borderAfter = await btn.evaluate(el => getComputedStyle(el).borderColor);
+    const bgAfter = await btn.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
+    const borderAfter = await btn.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
     // At least one of background or border should change
     const changed = bgAfter !== bgBefore || borderAfter !== borderBefore;
     expect(changed).toBe(true);
@@ -101,7 +101,7 @@ test.describe('Headline Block — CTA Hover States', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const btn = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER} .cmp-button`).first();
-    const transition = await btn.evaluate(el => getComputedStyle(el).transition);
+    const transition = await btn.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     // Should have a transition property set (not 'none' or empty)
     expect(transition.length).toBeGreaterThan(0);
     expect(transition).not.toBe('none 0s ease 0s');
@@ -167,13 +167,13 @@ test.describe('Headline Block — CTA Layout Transitions', () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await pom.navigate(BASE());
     const ctaWrapper = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER}`).first();
-    const desktopDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection);
+    const desktopDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(desktopDir).toBe('row');
 
     // Switch to mobile
     await page.setViewportSize({ width: 390, height: 844 });
     await page.waitForTimeout(300); // Allow reflow
-    const mobileDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection);
+    const mobileDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(mobileDir).toBe('column');
   });
 
@@ -182,7 +182,7 @@ test.describe('Headline Block — CTA Layout Transitions', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const ctaWrapper = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER}`).first();
-    const alignItems = await ctaWrapper.evaluate(el => getComputedStyle(el).alignItems);
+    const alignItems = await ctaWrapper.evaluate(el => getComputedStyle(el).alignItems); // measurement: use measurement-utils for cleaner code
     expect(alignItems).toBe('flex-start');
   });
 });

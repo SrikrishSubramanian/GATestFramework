@@ -445,7 +445,7 @@ test.describe('AccordionTabsFeature — Dark Background Matrix @matrix @regressi
     const graniteSections = page.locator('.cmp-section--background-color-granite');
     if (await graniteSections.count() === 0) { test.skip(); return; }
 
-    const bgColor = await graniteSections.first().evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgColor = await graniteSections.first().evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgColor, 'Granite section should have a visible bg color').not.toBe('rgba(0, 0, 0, 0)');
     expect(bgColor).not.toBe('transparent');
   });
@@ -463,7 +463,7 @@ test.describe('AccordionTabsFeature — Dark Background Matrix @matrix @regressi
     const ctas = darkInstance.locator(`${PANEL_CTA} a`);
     const ctaCount = await ctas.count();
     for (let i = 0; i < ctaCount; i++) {
-      const color = await ctas.nth(i).evaluate(el => getComputedStyle(el).color);
+      const color = await ctas.nth(i).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
       if (!match) continue;
       const [, r, g, b] = match.map(Number);
@@ -486,7 +486,7 @@ test.describe('AccordionTabsFeature — Dark Background Matrix @matrix @regressi
     const desc = darkInstance.locator(PANEL_DESCRIPTION).first();
     if (await desc.count() === 0) { test.skip(); return; }
 
-    const color = await desc.evaluate(el => getComputedStyle(el).color);
+    const color = await desc.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
     if (!match) { test.skip(); return; }
     const [, r, g, b] = match.map(Number);

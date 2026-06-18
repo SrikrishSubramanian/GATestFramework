@@ -51,7 +51,7 @@ test.describe('Image — Core Structure', () => {
     await pom.navigate(BASE());
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const radius = await picture.evaluate((el: Element) => getComputedStyle(el).borderRadius);
+    const radius = await picture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('20px');
   });
 
@@ -61,7 +61,7 @@ test.describe('Image — Core Structure', () => {
     await pom.navigate(BASE());
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const radius = await picture.evaluate((el: Element) => getComputedStyle(el).borderRadius);
+    const radius = await picture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('12px');
   });
 
@@ -85,8 +85,8 @@ test.describe('Image — Core Structure', () => {
     }
 
     const img = page.locator(IMG_IMAGE).first();
-    const display = await img.evaluate((el: Element) => getComputedStyle(el).display);
-    const width = await img.evaluate((el: Element) => getComputedStyle(el).width);
+    const display = await img.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
+    const width = await img.evaluate((el: Element) => getComputedStyle(el).width); // measurement: use measurement-utils for cleaner code
     const parentWidth = await img.evaluate((el: HTMLElement) => el.parentElement ? el.parentElement.getBoundingClientRect().width : 0);
 
     expect(display).toBe('block');
@@ -163,7 +163,7 @@ test.describe('Image — Sizing Variants', () => {
     // The max-width is on the .image wrapper (parent of .cmp-image), not .cmp-image itself
     const wrapper = page.locator('.cmp-section .aem-Grid > .image:not(.cmp-image--full-width)').first();
     if (await wrapper.count() === 0) { test.skip(); return; }
-    const maxWidth = await wrapper.evaluate((el: Element) => getComputedStyle(el).maxWidth);
+    const maxWidth = await wrapper.evaluate((el: Element) => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('1134px');
   });
 
@@ -176,7 +176,7 @@ test.describe('Image — Sizing Variants', () => {
     const count = await fullWidth.count();
     if (count === 0) { test.skip(); return; }
 
-    const maxWidth = await fullWidth.evaluate((el: Element) => getComputedStyle(el).maxWidth);
+    const maxWidth = await fullWidth.evaluate((el: Element) => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     // 100% resolves to the viewport width at top-level
     expect(['100%', `${1440}px`].some(v => maxWidth === v) || parseFloat(maxWidth) >= 1400).toBe(true);
   });
@@ -190,7 +190,7 @@ test.describe('Image — Sizing Variants', () => {
     const count = await fullWidthPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await fullWidthPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius);
+    const radius = await fullWidthPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('0px');
   });
 
@@ -203,7 +203,7 @@ test.describe('Image — Sizing Variants', () => {
     const count = await gridPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius);
+    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('20px');
   });
 
@@ -214,7 +214,7 @@ test.describe('Image — Sizing Variants', () => {
 
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const overflow = await picture.evaluate((el: Element) => getComputedStyle(el).overflow);
+    const overflow = await picture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
     expect(overflow).toBe('hidden');
   });
 
@@ -225,7 +225,7 @@ test.describe('Image — Sizing Variants', () => {
 
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const display = await picture.evaluate((el: Element) => getComputedStyle(el).display);
+    const display = await picture.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(display).toBe('block');
   });
 });
@@ -280,7 +280,7 @@ test.describe('Image — Padding Variants', () => {
     if (await wrapper.count() === 0) { test.skip(); return; }
     await wrapper.evaluate(el => el.classList.add('cmp-image--no-top-padding'));
     const inner = wrapper.locator('.cmp-image').first();
-    const paddingTop = await inner.evaluate(el => getComputedStyle(el).paddingTop);
+    const paddingTop = await inner.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
     expect(paddingTop).toBe('0px');
     await wrapper.evaluate(el => el.classList.remove('cmp-image--no-top-padding'));
   });
@@ -294,7 +294,7 @@ test.describe('Image — Padding Variants', () => {
     if (await wrapper.count() === 0) { test.skip(); return; }
     await wrapper.evaluate(el => el.classList.add('cmp-image--no-bottom-padding'));
     const inner = wrapper.locator('.cmp-image').first();
-    const paddingBottom = await inner.evaluate(el => getComputedStyle(el).paddingBottom);
+    const paddingBottom = await inner.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
     expect(paddingBottom).toBe('0px');
   });
 
@@ -363,7 +363,7 @@ test.describe('Image — Hover Zoom', () => {
     }
 
     await linkedPicture.hover();
-    const transform = await page.locator(`${IMG_LINK} ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform);
+    const transform = await page.locator(`${IMG_LINK} ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
     // scale(1.15) resolves to a matrix — check it is not 'none' and not identity
     expect(transform).not.toBe('none');
     expect(transform).not.toContain('matrix(1, 0, 0, 1,');
@@ -398,7 +398,7 @@ test.describe('Image — Hover Zoom', () => {
     }
 
     await nonLinkedPicture.hover();
-    const transform = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform);
+    const transform = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
     expect(transform === 'none' || transform === 'matrix(1, 0, 0, 1, 0, 0)').toBe(true);
 
     if (imgCount === 0) {
@@ -424,7 +424,7 @@ test.describe('Image — Hover Zoom', () => {
       }, IMG_PICTURE);
     }
 
-    const transition = await page.locator(IMG_IMAGE).first().evaluate((el: Element) => getComputedStyle(el).transition);
+    const transition = await page.locator(IMG_IMAGE).first().evaluate((el: Element) => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     // transition should include 'transform' with '0.3s'
     expect(transition).toContain('0.3s');
 
@@ -440,7 +440,7 @@ test.describe('Image — Hover Zoom', () => {
 
     const picture = page.locator(IMG_PICTURE).first();
     await expect(picture).toBeVisible();
-    const overflow = await picture.evaluate((el: Element) => getComputedStyle(el).overflow);
+    const overflow = await picture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
     expect(overflow).toBe('hidden');
   });
 });
@@ -459,7 +459,7 @@ test.describe('Image — Caption', () => {
     const count = await caption.count();
     if (count === 0) { test.skip(); return; }
 
-    const fontSize = await caption.evaluate((el: Element) => getComputedStyle(el).fontSize);
+    const fontSize = await caption.evaluate((el: Element) => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
     expect(fontSize).toBe('14px');
   });
 
@@ -472,7 +472,7 @@ test.describe('Image — Caption', () => {
     const count = await caption.count();
     if (count === 0) { test.skip(); return; }
 
-    const fontSize = await caption.evaluate((el: Element) => getComputedStyle(el).fontSize);
+    const fontSize = await caption.evaluate((el: Element) => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
     expect(fontSize).toBe('13px');
   });
 
@@ -488,7 +488,7 @@ test.describe('Image — Caption', () => {
       // Use any caption not in a dark section
       const fallback = page.locator(IMG_TITLE).first();
       if (await fallback.count() === 0) { test.skip(); return; }
-      const color = await fallback.evaluate((el: Element) => getComputedStyle(el).color);
+      const color = await fallback.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       // granite is a dark color; should not be pure white
       const rgb = color.match(/\d+/g)?.map(Number) ?? [];
       if (rgb.length >= 3) {
@@ -497,7 +497,7 @@ test.describe('Image — Caption', () => {
       }
       return;
     }
-    const color = await caption.evaluate((el: Element) => getComputedStyle(el).color);
+    const color = await caption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const rgb = color.match(/\d+/g)?.map(Number) ?? [];
     if (rgb.length >= 3) {
       expect(rgb[0] > 240 && rgb[1] > 240 && rgb[2] > 240).toBe(false);
@@ -521,7 +521,7 @@ test.describe('Image — Caption', () => {
 
       const injectedCaption = page.locator(`${SECTION_GRANITE} ${IMG_TITLE}`).first();
       if (await injectedCaption.count() === 0) { test.skip(); return; }
-      const color = await injectedCaption.evaluate((el: Element) => getComputedStyle(el).color);
+      const color = await injectedCaption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       const rgb = color.match(/\d+/g)?.map(Number) ?? [];
       // slate is a light color — all channels should be high
       if (rgb.length >= 3) {
@@ -529,7 +529,7 @@ test.describe('Image — Caption', () => {
       }
       return;
     }
-    const color = await darkCaption.evaluate((el: Element) => getComputedStyle(el).color);
+    const color = await darkCaption.evaluate((el: Element) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const rgb = color.match(/\d+/g)?.map(Number) ?? [];
     if (rgb.length >= 3) {
       expect(rgb[0] + rgb[1] + rgb[2]).toBeGreaterThan(500);
@@ -556,7 +556,7 @@ test.describe('Image — Mobile', () => {
       }, IMG_ROOT);
       target = page.locator('.hide-image').first();
     }
-    const display = await target.evaluate((el: Element) => getComputedStyle(el).display);
+    const display = await target.evaluate((el: Element) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(display).toBe('none');
   });
 
@@ -595,7 +595,7 @@ test.describe('Image — Mobile', () => {
     const count = await gridPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius);
+    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('12px');
   });
 });

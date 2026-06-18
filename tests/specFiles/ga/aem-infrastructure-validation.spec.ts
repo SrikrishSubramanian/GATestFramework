@@ -263,7 +263,7 @@ test.describe('Style System â€” CSS Class Existence', () => {
     for (const bg of backgrounds) {
       const section = page.locator(bg.selector).first();
       if (await section.count() === 0) continue;
-      const bgColor = await section.evaluate(el => getComputedStyle(el).backgroundColor);
+      const bgColor = await section.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
       // Should not be transparent or white on dark backgrounds
       expect(bgColor).not.toBe('rgba(0, 0, 0, 0)');
       expect(bgColor).not.toBe('rgb(255, 255, 255)');

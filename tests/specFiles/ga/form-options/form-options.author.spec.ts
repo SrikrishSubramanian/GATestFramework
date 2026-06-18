@@ -222,7 +222,7 @@ test.describe('FormOptions — Dark Background', () => {
     if (await graniteSection.count() === 0) { test.skip(); return; }
     const label = graniteSection.locator(`${ROOT} label`).first();
     if (await label.count() === 0) { test.skip(); return; }
-    const color = await label.evaluate(el => getComputedStyle(el).color);
+    const color = await label.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Text on dark background should be light
     expect(color).toContain('255');
   });
@@ -234,7 +234,7 @@ test.describe('FormOptions — Dark Background', () => {
     if (await azulSection.count() === 0) { test.skip(); return; }
     const label = azulSection.locator(`${ROOT} label`).first();
     if (await label.count() === 0) { test.skip(); return; }
-    const color = await label.evaluate(el => getComputedStyle(el).color);
+    const color = await label.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(color).toContain('255');
   });
 });

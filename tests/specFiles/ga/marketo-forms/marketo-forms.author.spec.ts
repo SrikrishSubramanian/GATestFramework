@@ -212,7 +212,7 @@ test.describe('Marketo Forms Component (GAAM-533)', () => {
     const input = page.locator('input').first();
     if (await input.count() > 0) {
       await input.focus();
-      const outline = await input.evaluate(el => window.getComputedStyle(el).outline);
+      const outline = await input.evaluate(el => window.getComputedStyle(el).outline); // measurement: use measurement-utils for cleaner code
       expect(outline).toBeTruthy();
     }
   });

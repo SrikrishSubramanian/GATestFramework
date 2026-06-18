@@ -48,7 +48,7 @@ test.describe('TeaserCard — Standard Hover', () => {
     const linkedCard = page.locator(`${TC}:has(${TC_LINK})`).first();
     if (await linkedCard.count() === 0) { test.skip(); return; }
     await linkedCard.hover();
-    const cursor = await linkedCard.evaluate(el => getComputedStyle(el).cursor);
+    const cursor = await linkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Hovering a clickable card must show pointer cursor').toBe('pointer');
   });
 
@@ -61,7 +61,7 @@ test.describe('TeaserCard — Standard Hover', () => {
     if (await linkedCard.count() === 0) { test.skip(); return; }
 
     // A CSS transition property must be present on the card to animate the hover
-    const transition = await linkedCard.evaluate(el => getComputedStyle(el).transition);
+    const transition = await linkedCard.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'CTA card must have a CSS transition for hover animation').not.toBe('all 0s ease 0s');
     expect(transition.length).toBeGreaterThan(0);
   });
@@ -75,12 +75,12 @@ test.describe('TeaserCard — Standard Hover', () => {
     if (await linkedCard.count() === 0) { test.skip(); return; }
 
     const ctaLink = linkedCard.locator(TC_LINK).first();
-    const colorBefore = await ctaLink.evaluate(el => getComputedStyle(el).color);
+    const colorBefore = await ctaLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
 
     await linkedCard.hover();
     await page.waitForTimeout(350);
 
-    const colorAfter = await ctaLink.evaluate(el => getComputedStyle(el).color);
+    const colorAfter = await ctaLink.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Color should change on hover (CTA hover state activates)
     expect(colorAfter, 'CTA should change color when card is hovered').not.toBe(colorBefore);
   });
@@ -93,7 +93,7 @@ test.describe('TeaserCard — Standard Hover', () => {
     const nonLinkedCard = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
     if (await nonLinkedCard.count() === 0) { test.skip(); return; }
     await nonLinkedCard.hover();
-    const cursor = await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor);
+    const cursor = await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Non-CTA card must not show pointer cursor').not.toBe('pointer');
   });
 
@@ -180,10 +180,10 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     const title = enhanced.locator(TC_TITLE).first();
     if (await title.count() === 0) { test.skip(); return; }
 
-    const colorBefore = await title.evaluate(el => getComputedStyle(el).color);
+    const colorBefore = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     await enhanced.hover();
     await page.waitForTimeout(500);
-    const colorAfter = await title.evaluate(el => getComputedStyle(el).color);
+    const colorAfter = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
 
     expect(colorAfter, 'Enhanced hover: title should transition to white').not.toBe(colorBefore);
     const rgb = colorAfter.match(/\d+/g)?.map(Number) ?? [];
@@ -203,7 +203,7 @@ test.describe('TeaserCard — Enhanced Hover', () => {
     const imgWrapper = enhanced.locator(TC_IMAGE_WRAPPER).first();
     if (await imgWrapper.count() === 0) { test.skip(); return; }
 
-    const transition = await imgWrapper.evaluate(el => getComputedStyle(el).transition);
+    const transition = await imgWrapper.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'Enhanced hover image wrapper must have a CSS transition').not.toBe('all 0s ease 0s');
   });
 
@@ -326,10 +326,10 @@ test.describe('TeaserCard — No-hover Conditions', () => {
     const nonLinked = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
     if (await nonLinked.count() === 0) { test.skip(); return; }
 
-    const bgBefore = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgBefore = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await nonLinked.hover();
     await page.waitForTimeout(350);
-    const bgAfter = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgAfter = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgBefore, 'Non-CTA card background must not change on hover').toBe(bgAfter);
   });
 
@@ -341,7 +341,7 @@ test.describe('TeaserCard — No-hover Conditions', () => {
     const nonLinked = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
     if (await nonLinked.count() === 0) { test.skip(); return; }
     await nonLinked.hover();
-    const cursor = await nonLinked.evaluate(el => getComputedStyle(el).cursor);
+    const cursor = await nonLinked.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor, 'Non-CTA card must not show pointer cursor').not.toBe('pointer');
   });
 
@@ -447,7 +447,7 @@ test.describe('TeaserCard — Left/Right Position Layout', () => {
     let card = page.locator(`${TC_POS_LEFT}${TC}.cmp-teaser-card--image-style-circle`).first();
     if (await card.count() === 0) { test.skip(); return; }
 
-    const flexDir = await card.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await card.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(['row', 'row-reverse'], 'Circle Left card should remain side-by-side on mobile').toContain(flexDir);
   });
 });

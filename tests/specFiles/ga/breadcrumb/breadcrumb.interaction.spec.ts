@@ -36,9 +36,9 @@ test.describe('Breadcrumb — Hover Interactions', () => {
     await pom.navigate(BASE());
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
-    const colorBefore = await link.evaluate(el => getComputedStyle(el).color);
+    const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     await link.hover();
-    const colorAfter = await link.evaluate(el => getComputedStyle(el).color);
+    const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(colorAfter).not.toBe(colorBefore);
   });
 
@@ -59,11 +59,11 @@ test.describe('Breadcrumb — Hover Interactions', () => {
       return;
     }
     // Before hover: white (high channel values)
-    const colorBefore = await link.evaluate(el => getComputedStyle(el).color);
+    const colorBefore = await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     await link.hover();
-    const colorAfter = await link.evaluate(el => getComputedStyle(el).color);
+    const colorAfter = await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Dark hover uses opacity:0.7 (not color change) per LESS
-    const opacityAfter = await link.evaluate(el => getComputedStyle(el).opacity);
+    const opacityAfter = await link.evaluate(el => getComputedStyle(el).opacity); // measurement: use measurement-utils for cleaner code
     expect(parseFloat(opacityAfter)).toBeLessThan(1);
     // Color stays white
     expect(colorBefore).toMatch(/rgb\(255,\s*255,\s*255\)/);
@@ -76,7 +76,7 @@ test.describe('Breadcrumb — Hover Interactions', () => {
     const link = page.locator(BC_LINK).first();
     await expect(link).toBeVisible();
     await link.hover();
-    const textDecoration = await link.evaluate(el => getComputedStyle(el).textDecoration);
+    const textDecoration = await link.evaluate(el => getComputedStyle(el).textDecoration); // measurement: use measurement-utils for cleaner code
     // Should not contain 'underline'
     expect(textDecoration).not.toContain('underline');
   });
@@ -154,7 +154,7 @@ test.describe('Breadcrumb — Responsive Visibility', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display);
+    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(display).toBe('block');
   });
 
@@ -163,7 +163,7 @@ test.describe('Breadcrumb — Responsive Visibility', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display);
+    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(display).toBe('none');
   });
 
@@ -172,7 +172,7 @@ test.describe('Breadcrumb — Responsive Visibility', () => {
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
     const root = page.locator(BC).first();
-    const display = await root.evaluate(el => getComputedStyle(el).display);
+    const display = await root.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(display).toBe('none');
   });
 });
@@ -193,7 +193,7 @@ test.describe('Breadcrumb — Dark Mode Interaction', () => {
       return;
     }
     await lightLink.focus();
-    const lightBoxShadow = await lightLink.evaluate(el => getComputedStyle(el).boxShadow);
+    const lightBoxShadow = await lightLink.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
 
     // Dark mode focus ring
     const darkSection = page.locator(SECTION_GRANITE).first();
@@ -209,7 +209,7 @@ test.describe('Breadcrumb — Dark Mode Interaction', () => {
       return;
     }
     await darkLink.focus();
-    const darkBoxShadow = await darkLink.evaluate(el => getComputedStyle(el).boxShadow);
+    const darkBoxShadow = await darkLink.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
 
     // Dark and light focus rings must use different color tokens
     expect(darkBoxShadow).not.toBe(lightBoxShadow);
@@ -227,7 +227,7 @@ test.describe('Breadcrumb — Dark Mode Interaction', () => {
     expect(linkCount).toBe(0);
     // Hovering should not change cursor to pointer (no link present)
     await active.hover();
-    const cursor = await active.evaluate(el => getComputedStyle(el).cursor);
+    const cursor = await active.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor).not.toBe('pointer');
   });
 });

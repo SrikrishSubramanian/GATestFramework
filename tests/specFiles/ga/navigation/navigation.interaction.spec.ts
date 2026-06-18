@@ -44,11 +44,11 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     const link = page.locator(`${SECTION_WHITE} ${ITEM_L1} ${LINK}, ${SECTION_WHITE} ${NAV}:not(:has(${ITEM_L1})) ${LINK}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
-    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await link.hover();
-    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
-    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius);
+    const borderRadius = await link.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(parseFloat(borderRadius)).toBeGreaterThanOrEqual(20);
   });
 
@@ -59,9 +59,9 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     const link = page.locator(`${SECTION_GRANITE} ${ITEM_L1} ${LINK}, ${SECTION_GRANITE} ${NAV}:not(:has(${ITEM_L1})) ${LINK}`).first();
     if (await link.count() === 0) { test.skip(); return; }
     await link.scrollIntoViewIfNeeded();
-    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgBefore = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await link.hover();
-    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgAfter = await link.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgAfter).not.toBe(bgBefore);
   });
 
@@ -93,7 +93,7 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
     await link.focus();
     await page.keyboard.press('Tab');
     await page.keyboard.press('Shift+Tab');
-    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow);
+    const boxShadow = await link.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
     expect(boxShadow).not.toBe('none');
   });
 });
@@ -109,11 +109,11 @@ test.describe('Navigation — Mobile Accordion Interactions (GAAM-396)', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const trigger = groupedNav.locator(ITEM_L0).first();
     const childGroup = trigger.locator(`:scope > ${GROUP}`);
-    const displayBefore = await childGroup.evaluate(el => getComputedStyle(el).display);
+    const displayBefore = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(displayBefore).toBe('none');
     await trigger.locator(`:scope > ${LINK}`).click();
     await page.waitForTimeout(400);
-    const displayAfter = await childGroup.evaluate(el => getComputedStyle(el).display);
+    const displayAfter = await childGroup.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(displayAfter).not.toBe('none');
   });
 
@@ -125,11 +125,11 @@ test.describe('Navigation — Mobile Accordion Interactions (GAAM-396)', () => {
     if (await groupedNav.count() === 0) { test.skip(); return; }
     const trigger = groupedNav.locator(ITEM_L0).first();
     const link = trigger.locator(`:scope > ${LINK}`);
-    const collapsedContent = await link.evaluate(el => getComputedStyle(el, '::after').content);
+    const collapsedContent = await link.evaluate(el => getComputedStyle(el, '::after').content); // measurement: use measurement-utils for cleaner code
     expect(collapsedContent).toContain('+');
     await link.click();
     await page.waitForTimeout(300);
-    const expandedContent = await link.evaluate(el => getComputedStyle(el, '::after').content);
+    const expandedContent = await link.evaluate(el => getComputedStyle(el, '::after').content); // measurement: use measurement-utils for cleaner code
     expect(expandedContent).not.toContain('+');
   });
 
@@ -213,10 +213,10 @@ test.describe('Navigation — Responsive Transition', () => {
     const nav = page.locator(`${SECTION_WHITE} ${NAV}`).first();
     if (await nav.count() === 0) { test.skip(); return; }
     const group = nav.locator(`> ${GROUP}`);
-    expect(await group.evaluate(el => getComputedStyle(el).flexDirection)).toBe('row');
+    expect(await group.evaluate(el => getComputedStyle(el).flexDirection)).toBe('row'); // measurement: use measurement-utils for cleaner code
     await page.setViewportSize(MOBILE);
     await page.waitForTimeout(300);
-    expect(await group.evaluate(el => getComputedStyle(el).flexDirection)).toBe('column');
+    expect(await group.evaluate(el => getComputedStyle(el).flexDirection)).toBe('column'); // measurement: use measurement-utils for cleaner code
   });
 
   test('[NVGT-INT-012] @interaction @mobile @regression Accordion dividers between sections', async ({ page }) => {

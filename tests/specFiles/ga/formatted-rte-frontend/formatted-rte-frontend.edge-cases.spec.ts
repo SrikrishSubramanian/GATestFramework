@@ -44,7 +44,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const nestedList = page.locator('ul ul, ol ol').first();
     if (await nestedList.count() > 0) {
-      const marginLeft = await nestedList.evaluate(el => window.getComputedStyle(el).marginLeft);
+      const marginLeft = await nestedList.evaluate(el => window.getComputedStyle(el).marginLeft); // measurement: use measurement-utils for cleaner code
       expect(marginLeft).not.toBe('0px');
     }
   });
@@ -57,7 +57,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
     const count = await paragraphs.count();
 
     if (count > 1) {
-      const margin = await paragraphs.first().evaluate(el => window.getComputedStyle(el).marginBottom);
+      const margin = await paragraphs.first().evaluate(el => window.getComputedStyle(el).marginBottom); // measurement: use measurement-utils for cleaner code
       expect(margin).not.toBe('0px');
     }
   });
@@ -92,7 +92,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const code = page.locator('code, pre').first();
     if (await code.count() > 0) {
-      const whiteSpace = await code.evaluate(el => window.getComputedStyle(el).whiteSpace);
+      const whiteSpace = await code.evaluate(el => window.getComputedStyle(el).whiteSpace); // measurement: use measurement-utils for cleaner code
       expect(['pre', 'pre-wrap', 'pre-line']).toContain(whiteSpace);
     }
   });
@@ -103,7 +103,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const blockquote = page.locator('blockquote').first();
     if (await blockquote.count() > 0) {
-      const borderLeft = await blockquote.evaluate(el => window.getComputedStyle(el).borderLeft);
+      const borderLeft = await blockquote.evaluate(el => window.getComputedStyle(el).borderLeft); // measurement: use measurement-utils for cleaner code
       expect(borderLeft).not.toBe('none');
     }
   });
@@ -125,7 +125,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const underline = page.locator('u, ins, [style*="text-decoration: underline"]').first();
     if (await underline.count() > 0) {
-      const decoration = await underline.evaluate(el => window.getComputedStyle(el).textDecoration);
+      const decoration = await underline.evaluate(el => window.getComputedStyle(el).textDecoration); // measurement: use measurement-utils for cleaner code
       expect(decoration).toContain('underline');
     }
   });
@@ -137,7 +137,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const centered = page.locator('[style*="text-align: center"]').first();
     if (await centered.count() > 0) {
-      const textAlign = await centered.evaluate(el => window.getComputedStyle(el).textAlign);
+      const textAlign = await centered.evaluate(el => window.getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
       expect(textAlign).toBe('center');
     }
   });
@@ -148,7 +148,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const rightAligned = page.locator('[style*="text-align: right"]').first();
     if (await rightAligned.count() > 0) {
-      const textAlign = await rightAligned.evaluate(el => window.getComputedStyle(el).textAlign);
+      const textAlign = await rightAligned.evaluate(el => window.getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
       expect(textAlign).toBe('right');
     }
   });

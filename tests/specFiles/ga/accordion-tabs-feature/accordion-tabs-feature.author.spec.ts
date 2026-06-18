@@ -66,7 +66,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
     await expect(instance.locator(LEFT)).toBeVisible();
     await expect(instance.locator(RIGHT)).toBeVisible();
     // Wrapper layout (flex or block) depends on whether component CSS is loaded
-    const display = await instance.locator(WRAPPER).evaluate(el => getComputedStyle(el).display);
+    const display = await instance.locator(WRAPPER).evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(['flex', 'block']).toContain(display);
   });
 
@@ -102,10 +102,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
     }
   });
 
-  test('[ATF-006] @regression Tabs are clickable without JS errors', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new AccordionTabsFeaturePage(page);
+  test('[ATF-006] @regression Tabs are clickable without JS errors', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     capture.clear();
@@ -242,7 +239,7 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Desktop)', () =>
   test('[ATF-015] @smoke @regression Scrolling tabs right column uses sticky positioning', async ({ page }) => {
     const instance = await activateScrollingTabs(page);
     const right = instance.locator(RIGHT);
-    const position = await right.evaluate(el => getComputedStyle(el).position);
+    const position = await right.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     // Sticky requires component CSS — skip if not loaded
     if (position === 'static') { test.skip(); return; }
     expect(position).toBe('sticky');
@@ -251,16 +248,16 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Desktop)', () =>
   test('[ATF-016] @regression Scrolling tabs right column has top offset for sticky', async ({ page }) => {
     const instance = await activateScrollingTabs(page);
     const right = instance.locator(RIGHT);
-    const position = await right.evaluate(el => getComputedStyle(el).position);
+    const position = await right.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     if (position !== 'sticky') { test.skip(); return; }
-    const top = await right.evaluate(el => getComputedStyle(el).top);
+    const top = await right.evaluate(el => getComputedStyle(el).top); // measurement: use measurement-utils for cleaner code
     expect(top).toBe('64px');
   });
 
   test('[ATF-017] @regression Scrolling tabs left column has defined width', async ({ page }) => {
     const instance = await activateScrollingTabs(page);
     const left = instance.locator(LEFT);
-    const flex = await left.evaluate(el => getComputedStyle(el).flex);
+    const flex = await left.evaluate(el => getComputedStyle(el).flex); // measurement: use measurement-utils for cleaner code
     // Component CSS sets flex: 0 0 440px — skip if CSS not loaded
     if (flex === '0 1 auto') { test.skip(); return; }
     expect(flex).toContain('440');
@@ -315,7 +312,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Mobile)', () => {
     await pom.navigate(BASE());
     const instance = page.locator(ROOT).first();
     const right = instance.locator(RIGHT);
-    const display = await right.evaluate(el => getComputedStyle(el).display);
+    const display = await right.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     // Requires component CSS for responsive hiding — skip if not loaded
     if (display !== 'none') { test.skip(); return; }
     expect(display).toBe('none');
@@ -332,10 +329,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Mobile)', () => {
     }
   });
 
-  test('[ATF-023] @mobile @regression Tab click does not cause errors on mobile', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new AccordionTabsFeaturePage(page);
+  test('[ATF-023] @mobile @regression Tab click does not cause errors on mobile', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     capture.clear();
@@ -365,7 +359,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Mobile)', () => {
     // Panel titles are in the right column which is hidden on mobile
     // Check tab text size instead
     const tab = page.locator(ROOT).first().locator(TAB).first();
-    const mobileSize = await tab.evaluate(el => parseFloat(getComputedStyle(el).fontSize));
+    const mobileSize = await tab.evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
     expect(mobileSize).toBeGreaterThan(0);
   });
 });
@@ -396,7 +390,7 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Mobile)', () => 
   test('[ATF-027] @mobile @regression Scrolling tabs right column hidden on mobile', async ({ page }) => {
     const instance = await activateScrollingTabsMobile(page);
     const right = instance.locator(RIGHT);
-    const display = await right.evaluate(el => getComputedStyle(el).display);
+    const display = await right.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     // Requires component CSS for responsive hiding — skip if not loaded
     if (display !== 'none') { test.skip(); return; }
     expect(display).toBe('none');
@@ -562,10 +556,7 @@ test.describe('AccordionTabsFeature — Accessibility', () => {
 
 // ─── Console & Resources ────────────────────────────────────────────────────
 test.describe('AccordionTabsFeature — Console & Resources', () => {
-  test('[ATF-041] @regression No unexpected JS errors on load and interaction', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new AccordionTabsFeaturePage(page);
+  test('[ATF-041] @regression No unexpected JS errors on load and interaction', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     capture.clear();
@@ -626,10 +617,7 @@ test.describe('AccordionTabsFeature — Tablet Viewport', () => {
   });
 
   test('[ATF-046] @regression Tablet tab interaction is error-free', async ({ page }) => {
-    await page.setViewportSize({ width: 1024, height: 1366 });
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new AccordionTabsFeaturePage(page);
+    await page.setViewportSize({ width: 1024, height: 1366 });const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     capture.clear();

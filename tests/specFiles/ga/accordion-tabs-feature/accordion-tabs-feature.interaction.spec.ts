@@ -464,10 +464,7 @@ test.describe('AccordionTabsFeature — Keyboard Navigation @interaction @a11y @
 // GAAM-422: TC_034
 test.describe('AccordionTabsFeature — Stability @interaction @regression', () => {
 
-  test('[ATF-065] @interaction @regression Rapid tab switching produces no JS errors', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new AccordionTabsFeaturePage(page);
+  test('[ATF-065] @interaction @regression Rapid tab switching produces no JS errors', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     capture.clear();
@@ -635,10 +632,7 @@ test.describe('AccordionTabsFeature — Mobile Drawer Interaction @interaction @
     await expect(tabs.nth(2)).toHaveAttribute('aria-selected', 'true');
   });
 
-  test('[ATF-074] @interaction @mobile @regression Mobile: rapid drawer switching with no errors', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new AccordionTabsFeaturePage(page);
+  test('[ATF-074] @interaction @mobile @regression Mobile: rapid drawer switching with no errors', async ({ page }) => {const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     capture.clear();

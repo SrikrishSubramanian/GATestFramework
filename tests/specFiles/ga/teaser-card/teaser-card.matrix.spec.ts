@@ -108,10 +108,10 @@ test.describe('TeaserCard — State Matrix: Position × Image Style', () => {
           await expect(imgWrapper).toBeVisible();
 
           if (style === 'circle') {
-            const radius = await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius);
+            const radius = await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
             expect(radius, `Circle image wrapper must have 50% border-radius`).toBe('50%');
           } else {
-            const radius = await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius);
+            const radius = await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
             expect(radius, `Rectangle image wrapper must not be circular`).not.toBe('50%');
           }
         }

@@ -170,11 +170,11 @@ test.describe('ImageWithNestedContent — Responsive', () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await pom.navigate(BASE());
     const overlay = page.locator(`${IWNC} ${CT_CONTAINER}, ${IWNC} ${STAT_ITEM}`).first();
-    const desktopPos = await overlay.evaluate(el => getComputedStyle(el).position);
+    const desktopPos = await overlay.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(desktopPos).toBe('absolute');
     await page.setViewportSize({ width: 390, height: 844 });
     await page.waitForTimeout(300);
-    const mobilePos = await overlay.evaluate(el => getComputedStyle(el).position);
+    const mobilePos = await overlay.evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(mobilePos).toBe('absolute');
   });
 
@@ -184,7 +184,7 @@ test.describe('ImageWithNestedContent — Responsive', () => {
     await pom.navigate(BASE());
     const iwnc = page.locator(IWNC).nth(1);
     await iwnc.evaluate((el, cls) => el.parentElement?.classList.add(cls), SMALL_CLASS);
-    const maxW = await iwnc.evaluate(el => getComputedStyle(el).maxWidth);
+    const maxW = await iwnc.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxW).toBe('350px');
     await iwnc.evaluate((el, cls) => el.parentElement?.classList.remove(cls), SMALL_CLASS);
   });

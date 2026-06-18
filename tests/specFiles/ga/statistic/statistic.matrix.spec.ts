@@ -161,7 +161,7 @@ test.describe('Statistic — State Matrix (Theme Colors)', () => {
     for (const theme of themes) {
       const el = page.locator(`${WRAPPER}.cmp-statistic--${theme}`).first();
       if (await el.count() === 0) continue;
-      const color = await el.locator(VALUE).evaluate(el => getComputedStyle(el).color);
+      const color = await el.locator(VALUE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       colors.push(color);
     }
     // At least 2 distinct colors among themes

@@ -109,15 +109,15 @@ test.describe('Button — Visual Verification', () => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const el = primaryBtn(page);
-    const transition = await el.evaluate(el => getComputedStyle(el).transition);
+    const transition = await el.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition).toContain('background');
     expect(transition).toContain('0.18s');
 
     // Capture before/after states
-    const beforeBg = await el.evaluate(el => getComputedStyle(el).backgroundColor);
+    const beforeBg = await el.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     await el.hover();
     await page.waitForTimeout(250);
-    const afterBg = await el.evaluate(el => getComputedStyle(el).backgroundColor);
+    const afterBg = await el.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(beforeBg).not.toBe(afterBg);
   });
 

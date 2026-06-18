@@ -139,7 +139,7 @@ test.describe('Footer — Happy Path & Core Functionality', () => {
     await expect(root).toBeVisible();
 
     // Footer should be visible even if some sections are empty
-    const display = await root.evaluate(el => window.getComputedStyle(el).display);
+    const display = await root.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(['block', 'flex', 'grid', 'table']).toContain(display);
   });
 

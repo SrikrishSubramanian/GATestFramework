@@ -51,7 +51,7 @@ test.describe('Breadcrumb — Visual Regression', () => {
     await pom.navigate(BASE());
     const el = page.locator('.cmp-breadcrumb').first();
     // At 1024px breadcrumb may be visible (depends on desktop breakpoint)
-    const display = await el.evaluate(el => getComputedStyle(el).display);
+    const display = await el.evaluate(el => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     if (display === 'none') {
       // Component hidden at this breakpoint — verify that's correct
       expect(display).toBe('none');

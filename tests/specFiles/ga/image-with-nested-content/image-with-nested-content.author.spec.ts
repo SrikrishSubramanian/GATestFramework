@@ -100,7 +100,7 @@ test.describe('ImageWithNestedContent — Core Structure', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const overlay = page.locator(`${IWNC} ${CT_CONTAINER}, ${IWNC} ${STAT_ITEM}`).first();
-    const pos = await overlay.evaluate((el: HTMLElement) => getComputedStyle(el).position);
+    const pos = await overlay.evaluate((el: HTMLElement) => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(pos).toBe('absolute');
   });
 
@@ -154,7 +154,7 @@ test.describe('ImageWithNestedContent — Core Structure', () => {
   test('[IWNC-010] @regression Root has position: relative for overlay stacking', async ({ page }) => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
-    const pos = await page.locator(IWNC).first().evaluate(el => getComputedStyle(el).position);
+    const pos = await page.locator(IWNC).first().evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(pos).toBe('relative');
   });
 });
@@ -165,7 +165,7 @@ test.describe('ImageWithNestedContent — Size Variants', () => {
   test('[IWNC-011] @regression Default variant has no max-width constraint (<= 100%)', async ({ page }) => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
-    const maxW = await page.locator(IWNC).first().evaluate(el => getComputedStyle(el).maxWidth);
+    const maxW = await page.locator(IWNC).first().evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxW === 'none' || maxW === '100%' || parseInt(maxW) > 350).toBe(true);
   });
 
@@ -174,7 +174,7 @@ test.describe('ImageWithNestedContent — Size Variants', () => {
     await pom.navigate(BASE());
     await withSmallClass(page, async () => {
       const iwnc = page.locator(IWNC).nth(1);
-      const maxW = await iwnc.evaluate(el => getComputedStyle(el).maxWidth);
+      const maxW = await iwnc.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
       expect(maxW).toBe('350px');
     });
   });
@@ -184,7 +184,7 @@ test.describe('ImageWithNestedContent — Size Variants', () => {
     await pom.navigate(BASE());
     await withSmallClass(page, async () => {
       const iwnc = page.locator(IWNC).nth(1);
-      const maxH = await iwnc.evaluate(el => getComputedStyle(el).maxHeight);
+      const maxH = await iwnc.evaluate(el => getComputedStyle(el).maxHeight); // measurement: use measurement-utils for cleaner code
       expect(maxH).toBe('366px');
     });
   });
@@ -249,7 +249,7 @@ test.describe('ImageWithNestedContent — Positioning', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const overlay = page.locator(`${IWNC} ${CT_CONTAINER}, ${IWNC} ${STAT_ITEM}`).first();
-    const zIndex = await overlay.evaluate(el => getComputedStyle(el).zIndex);
+    const zIndex = await overlay.evaluate(el => getComputedStyle(el).zIndex); // measurement: use measurement-utils for cleaner code
     expect(zIndex === 'auto' || parseInt(zIndex) >= 0).toBe(true);
   });
 
@@ -267,7 +267,7 @@ test.describe('ImageWithNestedContent — Positioning', () => {
   test('[IWNC-020] @regression Root position:relative for overlay context', async ({ page }) => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
-    const pos = await page.locator(IWNC).first().evaluate(el => getComputedStyle(el).position);
+    const pos = await page.locator(IWNC).first().evaluate(el => getComputedStyle(el).position); // measurement: use measurement-utils for cleaner code
     expect(pos).toBe('relative');
   });
 });
@@ -344,7 +344,7 @@ test.describe('ImageWithNestedContent — Mobile', () => {
     const pom = new ImageWithNestedContentPage(page);
     await pom.navigate(BASE());
     const statValue = page.locator(`${IWNC} .cmp-statistic__value p`).first();
-    const fontSize = await statValue.evaluate(el => getComputedStyle(el).fontSize);
+    const fontSize = await statValue.evaluate(el => getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
     expect(fontSize).toBe('40px');
   });
 
@@ -408,7 +408,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.add('cmp-section--background-color-white');
     });
-    const bg = await ctInstance.locator(CT_CONTAINER).first().evaluate(el => getComputedStyle(el).backgroundColor);
+    const bg = await ctInstance.locator(CT_CONTAINER).first().evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).toMatch(/rgb\(255,\s*255,\s*255\)/);
     await ctInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
@@ -424,7 +424,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.add('cmp-section--background-color-white');
     });
-    const bg = await statInstance.locator(STAT_ITEM).first().evaluate(el => getComputedStyle(el).backgroundColor);
+    const bg = await statInstance.locator(STAT_ITEM).first().evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).toMatch(/rgb\(255,\s*255,\s*255\)/);
     await statInstance.evaluate(el => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
@@ -440,7 +440,7 @@ test.describe('ImageWithNestedContent — Section Background Colors', () => {
       const wrapper = el.closest('.aem-GridColumn') || el.parentElement;
       if (wrapper) wrapper.classList.add('cmp-section--background-color-granite');
     });
-    const bg = await statInstance.locator(STAT_ITEM).first().evaluate(el => getComputedStyle(el).backgroundColor);
+    const bg = await statInstance.locator(STAT_ITEM).first().evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).not.toBe('rgba(0, 0, 0, 0)');
     expect(bg).not.toMatch(/rgb\(255,\s*255,\s*255\)/); // Not white on dark bg
     await statInstance.evaluate(el => {

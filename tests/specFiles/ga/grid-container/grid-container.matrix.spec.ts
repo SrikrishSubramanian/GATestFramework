@@ -217,7 +217,7 @@ test.describe('GridContainer — Desktop Matrix', () => {
 
     // On granite, text color should be white/light
     const wrapper = graniteSection.locator('.grid-container').first();
-    const textColor = await wrapper.evaluate((el: HTMLElement) => window.getComputedStyle(el).color);
+    const textColor = await wrapper.evaluate((el: HTMLElement) => window.getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const match = textColor.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
     if (match) {
       expect(parseInt(match[1])).toBeGreaterThan(200);

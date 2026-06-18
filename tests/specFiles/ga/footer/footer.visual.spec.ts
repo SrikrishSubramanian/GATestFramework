@@ -31,7 +31,7 @@ test.describe('Footer — Visual Regression', () => {
     await expect(root).toBeVisible();
 
     // Verify footer background
-    const bg = await root.evaluate(el => window.getComputedStyle(el).backgroundColor);
+    const bg = await root.evaluate(el => window.getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bg).toBeTruthy();
   });
 
@@ -40,7 +40,7 @@ test.describe('Footer — Visual Regression', () => {
     await pom.navigate(BASE());
 
     const root = await pom.getRoot();
-    const display = await root.evaluate(el => window.getComputedStyle(el).display);
+    const display = await root.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
 
     // Footer should use flexbox or grid for alignment
     expect(['flex', 'grid', 'block']).toContain(display);

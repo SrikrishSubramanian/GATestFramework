@@ -70,7 +70,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const bold = page.locator('strong, b').first();
     if (await bold.count() > 0) {
-      const fontWeight = await bold.evaluate(el => window.getComputedStyle(el).fontWeight);
+      const fontWeight = await bold.evaluate(el => window.getComputedStyle(el).fontWeight); // measurement: use measurement-utils for cleaner code
       expect(fontWeight).not.toBe('400');
     }
   });
@@ -81,7 +81,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const italic = page.locator('em, i').first();
     if (await italic.count() > 0) {
-      const fontStyle = await italic.evaluate(el => window.getComputedStyle(el).fontStyle);
+      const fontStyle = await italic.evaluate(el => window.getComputedStyle(el).fontStyle); // measurement: use measurement-utils for cleaner code
       expect(fontStyle).toBe('italic');
     }
   });
@@ -150,7 +150,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const ul = page.locator('ul').first();
     if (await ul.count() > 0) {
-      const marginLeft = await ul.evaluate(el => window.getComputedStyle(el).marginLeft);
+      const marginLeft = await ul.evaluate(el => window.getComputedStyle(el).marginLeft); // measurement: use measurement-utils for cleaner code
       expect(marginLeft).not.toBe('0px');
     }
   });
@@ -164,8 +164,8 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     const p = page.locator('p').first();
 
     if (await h1.count() > 0 && await p.count() > 0) {
-      const h1Size = await h1.evaluate(el => window.getComputedStyle(el).fontSize);
-      const pSize = await p.evaluate(el => window.getComputedStyle(el).fontSize);
+      const h1Size = await h1.evaluate(el => window.getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
+      const pSize = await p.evaluate(el => window.getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
 
       expect(parseInt(h1Size)).toBeGreaterThan(parseInt(pSize));
     }
@@ -188,7 +188,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const textElement = page.locator('p, span, li').first();
     if (await textElement.count() > 0) {
-      const color = await textElement.evaluate(el => window.getComputedStyle(el).color);
+      const color = await textElement.evaluate(el => window.getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       expect(color).not.toBe('rgba(0, 0, 0, 0)');
     }
   });
@@ -288,7 +288,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     const link = page.locator('a[href]').first();
     if (await link.count() > 0) {
       await link.focus();
-      const outline = await link.evaluate(el => window.getComputedStyle(el).outline);
+      const outline = await link.evaluate(el => window.getComputedStyle(el).outline); // measurement: use measurement-utils for cleaner code
       expect(outline).toBeTruthy();
     }
   });

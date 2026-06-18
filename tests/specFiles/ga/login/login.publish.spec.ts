@@ -18,7 +18,7 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
     const root = page.locator('.cmp-login').first();
     await expect(root).toBeVisible();
     // Verify split layout: Left marketing panel and Right login card
-    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(['row', 'row-reverse']).toContain(flexDir);
   });
 
@@ -33,7 +33,7 @@ test.afterEach(async ({ page }, testInfo) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const root = page.locator('.cmp-login').first();
-    const bgColor = await root.evaluate(el => getComputedStyle(el).backgroundColor);
+    const bgColor = await root.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
     expect(bgColor).toBeTruthy();
   });
 
@@ -90,7 +90,7 @@ test.afterEach(async ({ page }, testInfo) => {
     const card = page.locator('.cmp-login').first();
     await expect(card).toBeVisible();
     // Card should have visible styling
-    const opacity = await card.evaluate(el => getComputedStyle(el).opacity);
+    const opacity = await card.evaluate(el => getComputedStyle(el).opacity); // measurement: use measurement-utils for cleaner code
     expect(parseFloat(opacity)).toBeGreaterThan(0);
   });
 
@@ -186,7 +186,7 @@ test.afterEach(async ({ page }, testInfo) => {
     const pom = new LoginPage(page);
     await pom.navigate(BASE());
     const root = page.locator('.cmp-login').first();
-    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await root.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(['column', 'column-reverse']).toContain(flexDir);
   });
 
@@ -282,7 +282,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await pom.navigate(BASE());
     const button = pom.getLoginButton();
     await button.focus();
-    const outline = await button.evaluate(el => getComputedStyle(el).outline);
+    const outline = await button.evaluate(el => getComputedStyle(el).outline); // measurement: use measurement-utils for cleaner code
     expect(outline).not.toBe('none');
   });
 
@@ -1154,7 +1154,7 @@ test.describe('Login — Accessibility: WCAG 2.2 AA Compliance', () => {
     await pom.navigate(BASE());
     const errorMsg = pom.getErrorMessage();
     if (await errorMsg.count() > 0) {
-      const color = await errorMsg.first().evaluate(el => getComputedStyle(el).color);
+      const color = await errorMsg.first().evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       expect(color).toBeTruthy();
     }
   });

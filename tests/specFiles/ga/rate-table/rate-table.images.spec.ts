@@ -38,7 +38,7 @@ test.describe('Rate Table — Image & Media Validation', () => {
       expect(src).toBeTruthy();
 
       // Verify image is visible (or intentionally hidden)
-      const display = await img.evaluate(el => window.getComputedStyle(el).display);
+      const display = await img.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       expect(['block', 'inline', 'inline-block', 'none']).toContain(display);
     }
   });
@@ -98,7 +98,7 @@ test.describe('Rate Table — Image & Media Validation', () => {
       // Verify icons are visible or intentionally hidden
       for (let i = 0; i < Math.min(iconCount, 3); i++) {
         const icon = icons.nth(i);
-        const display = await icon.evaluate(el => window.getComputedStyle(el).display);
+        const display = await icon.evaluate(el => window.getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
         expect(['block', 'inline', 'inline-block', 'none']).toContain(display);
       }
     }

@@ -57,12 +57,12 @@ test.describe('Image — Hover Zoom Interaction', () => {
     }
 
     const imgLocator = page.locator(`${IMG_LINK} ${IMG_IMAGE}`).first();
-    const beforeTransform = await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform);
+    const beforeTransform = await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
 
     await linkedPicture.hover();
     await page.waitForTimeout(350); // allow 0.3s transition to complete
 
-    const afterTransform = await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform);
+    const afterTransform = await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
 
     // After hover, transform should differ from the default identity matrix
     // or explicitly be the scale(1.15) matrix
@@ -101,7 +101,7 @@ test.describe('Image — Hover Zoom Interaction', () => {
     await nonLinkedPicture.hover();
     await page.waitForTimeout(350);
 
-    const transform = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform);
+    const transform = await page.locator(`${IMG_ROOT}:not(:has(${IMG_LINK})) ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform); // measurement: use measurement-utils for cleaner code
     expect(transform === 'none' || transform === 'matrix(1, 0, 0, 1, 0, 0)').toBe(true);
 
     if (imgCount === 0) {
@@ -119,7 +119,7 @@ test.describe('Image — Hover Zoom Interaction', () => {
     if (count === 0) { test.skip(); return; }
 
     // Verify overflow:hidden is set (structural guarantee of clip behaviour)
-    const overflow = await linkedPicture.evaluate((el: Element) => getComputedStyle(el).overflow);
+    const overflow = await linkedPicture.evaluate((el: Element) => getComputedStyle(el).overflow); // measurement: use measurement-utils for cleaner code
     expect(overflow).toBe('hidden');
 
     // Hover and confirm the picture box dimensions do not change (clip in place)
@@ -150,7 +150,7 @@ test.describe('Image — Hover Zoom Interaction', () => {
       }, IMG_PICTURE);
     }
 
-    const transition = await page.locator(IMG_IMAGE).first().evaluate((el: Element) => getComputedStyle(el).transition);
+    const transition = await page.locator(IMG_IMAGE).first().evaluate((el: Element) => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition).toContain('0.3s');
 
     if (imgCount === 0) {
@@ -239,7 +239,7 @@ test.describe('Image — Responsive Interaction', () => {
     const count = await gridPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius);
+    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('20px');
   });
 
@@ -252,7 +252,7 @@ test.describe('Image — Responsive Interaction', () => {
     const count = await gridPicture.count();
     if (count === 0) { test.skip(); return; }
 
-    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius);
+    const radius = await gridPicture.evaluate((el: Element) => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('12px');
   });
 
@@ -309,8 +309,8 @@ test.describe('Image — Caption Interaction', () => {
       return;
     }
 
-    const lightColor = await lightCaption.evaluate(el => getComputedStyle(el).color);
-    const darkColor = await darkCaption.evaluate(el => getComputedStyle(el).color);
+    const lightColor = await lightCaption.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
+    const darkColor = await darkCaption.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(lightColor).not.toBe(darkColor);
   });
 });

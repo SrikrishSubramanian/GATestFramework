@@ -39,7 +39,7 @@ test.describe('ContentTrail — GAAM-328: Reskin Acceptance Criteria', () => {
     // Default (transparent with border)
     const defaultVariant = page.locator('.cmp-content-trail__container').first();
     await expect(defaultVariant).toBeVisible();
-    const border = await defaultVariant.evaluate(el => getComputedStyle(el).borderStyle);
+    const border = await defaultVariant.evaluate(el => getComputedStyle(el).borderStyle); // measurement: use measurement-utils for cleaner code
     expect(border).not.toBe('none');
     // Light mode (white bg without border)
     const lightSection = page.locator('.cmp-section--background-light-color .cmp-content-trail__container').first();
@@ -82,7 +82,7 @@ test.describe('ContentTrail — GAAM-328: Reskin Acceptance Criteria', () => {
     await pom.navigate(BASE());
     const img = page.locator('.cmp-content-trail__image img').first();
     await expect(img).toBeVisible();
-    const radius = await img.evaluate(el => getComputedStyle(el).borderRadius);
+    const radius = await img.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
     expect(radius).toBe('50%');
   });
 });
@@ -143,7 +143,7 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     await expect(videoContainer).toBeVisible();
     // LESS applies cursor:pointer on :hover only — verify it changes on hover
     await videoContainer.hover();
-    const cursor = await videoContainer.evaluate(el => getComputedStyle(el).cursor);
+    const cursor = await videoContainer.evaluate(el => getComputedStyle(el).cursor); // measurement: use measurement-utils for cleaner code
     expect(cursor).toBe('pointer');
     // Click and check modal dialog element exists in DOM
     await videoContainer.click();
@@ -175,7 +175,7 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     // Content trail in dark context (granite section)
     const darkEyebrow = page.locator('.cmp-section--background-color-granite .cmp-content-trail__eyebrow').first();
     if (await darkEyebrow.count() > 0) {
-      const color = await darkEyebrow.evaluate(el => getComputedStyle(el).color);
+      const color = await darkEyebrow.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       // White text: rgb values should be high (> 200)
       const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
       if (match) {
@@ -193,7 +193,7 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     // The LESS uses .cmp-section--large as a CSS class on the wrapper when content-trail-large styleId is applied.
     const largeImg = page.locator('.cmp-section--large .cmp-content-trail__image').first();
     if (await largeImg.count() > 0) {
-      const height = await largeImg.evaluate(el => parseInt(getComputedStyle(el).height));
+      const height = await largeImg.evaluate(el => parseInt(getComputedStyle(el).height)); // measurement: use measurement-utils for cleaner code
       expect(height).toBeGreaterThanOrEqual(78); // 80px on desktop per LESS
     } else {
       // Fallback: find any content-trail image that is 80px tall (large variant)
@@ -201,7 +201,7 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
       const count = await allImages.count();
       let foundLarge = false;
       for (let i = 0; i < count; i++) {
-        const h = await allImages.nth(i).evaluate(el => parseInt(getComputedStyle(el).height));
+        const h = await allImages.nth(i).evaluate(el => parseInt(getComputedStyle(el).height)); // measurement: use measurement-utils for cleaner code
         if (h >= 78) { foundLarge = true; break; }
       }
       expect(foundLarge).toBe(true);

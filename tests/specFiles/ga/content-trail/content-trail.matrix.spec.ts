@@ -47,7 +47,7 @@ test.describe('ContentTrail — State Matrix: Background Variants', () => {
     const ct = page.locator('.cmp-content-trail').first();
     await expect(ct).toBeVisible();
     const container = ct.locator('.cmp-content-trail__container').first();
-    const borderStyle = await container.evaluate(el => getComputedStyle(el).borderStyle);
+    const borderStyle = await container.evaluate(el => getComputedStyle(el).borderStyle); // measurement: use measurement-utils for cleaner code
     expect(borderStyle).not.toBe('none');
   });
 
@@ -57,7 +57,7 @@ test.describe('ContentTrail — State Matrix: Background Variants', () => {
     const lightWrapper = page.locator('.cmp-section--background-light-color .cmp-content-trail__container').first();
     if (await lightWrapper.count() > 0) {
       await expect(lightWrapper).toBeVisible();
-      const bg = await lightWrapper.evaluate(el => getComputedStyle(el).backgroundColor);
+      const bg = await lightWrapper.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
       // White background should have high RGB values
       expect(bg).toBeDefined();
     }
@@ -79,7 +79,7 @@ test.describe('ContentTrail — State Matrix: Background Variants', () => {
     if (await graniteWrapper.count() > 0) {
       await expect(graniteWrapper).toBeVisible();
       // Granite bg variant has granite background and transparent border
-      const bg = await graniteWrapper.evaluate(el => getComputedStyle(el).backgroundColor);
+      const bg = await graniteWrapper.evaluate(el => getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
       expect(bg).toBeDefined();
     }
   });
@@ -119,7 +119,7 @@ test.describe('ContentTrail — State Matrix: Sizes', () => {
     // Default (small) content-trail — first one without .cmp-section--large
     const smallImg = page.locator('.cmp-content-trail:not(.cmp-section--large) .cmp-content-trail__image').first();
     await expect(smallImg).toBeVisible();
-    const height = await smallImg.evaluate(el => parseInt(getComputedStyle(el).height));
+    const height = await smallImg.evaluate(el => parseInt(getComputedStyle(el).height)); // measurement: use measurement-utils for cleaner code
     expect(height).toBe(64);
   });
 
@@ -129,7 +129,7 @@ test.describe('ContentTrail — State Matrix: Sizes', () => {
     await pom.navigate(BASE());
     const largeImg = page.locator('.cmp-section--large .cmp-content-trail__image').first();
     if (await largeImg.count() > 0) {
-      const height = await largeImg.evaluate(el => parseInt(getComputedStyle(el).height));
+      const height = await largeImg.evaluate(el => parseInt(getComputedStyle(el).height)); // measurement: use measurement-utils for cleaner code
       expect(height).toBe(80);
     }
   });
@@ -145,7 +145,7 @@ test.describe('ContentTrail — State Matrix: Section Context', () => {
     if (await sectionCT.count() > 0) {
       await expect(sectionCT).toBeVisible();
       // Dark context: border should be white/semi-transparent
-      const borderColor = await sectionCT.evaluate(el => getComputedStyle(el).borderColor);
+      const borderColor = await sectionCT.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
       expect(borderColor).toBeDefined();
     }
   });

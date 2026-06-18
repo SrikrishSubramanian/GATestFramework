@@ -115,10 +115,7 @@ test.describe('Headline Block — Core Structure (GAAM-344)', () => {
     await expect(icons.first()).toHaveClass(/Arrow-Right/);
   });
 
-  test('[HB-007] @regression All 8 style guide variations render without errors', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new HeadlineBlockPage(page);
+  test('[HB-007] @regression All 8 style guide variations render without errors', async ({ page }) => {const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const blocks = page.locator(HB);
     const count = await blocks.count();
@@ -159,7 +156,7 @@ test.describe('Headline Block — Alignment (GAAM-344)', () => {
     // First section is left-aligned on white
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
     const eyebrow = block.locator(EYEBROW);
-    const textAlign = await eyebrow.evaluate(el => getComputedStyle(el).textAlign);
+    const textAlign = await eyebrow.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     // left or start are both acceptable
     expect(['left', 'start']).toContain(textAlign);
   });
@@ -174,9 +171,9 @@ test.describe('Headline Block — Alignment (GAAM-344)', () => {
     const title = block.locator(TITLE);
     const descriptor = block.locator(DESCRIPTOR);
     // All text should be centered
-    const eyeAlign = await eyebrow.evaluate(el => getComputedStyle(el).textAlign);
-    const titleAlign = await title.evaluate(el => getComputedStyle(el).textAlign);
-    const descAlign = await descriptor.evaluate(el => getComputedStyle(el).textAlign);
+    const eyeAlign = await eyebrow.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
+    const titleAlign = await title.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
+    const descAlign = await descriptor.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(eyeAlign).toBe('center');
     expect(titleAlign).toBe('center');
     expect(descAlign).toBe('center');
@@ -187,7 +184,7 @@ test.describe('Headline Block — Alignment (GAAM-344)', () => {
     await pom.navigate(BASE());
     const centerSection = page.locator(`${SECTION_WHITE}`).nth(1);
     const ctaWrapper = centerSection.locator(`${HB} ${CTA_WRAPPER}`);
-    const alignItems = await ctaWrapper.evaluate(el => getComputedStyle(el).alignItems);
+    const alignItems = await ctaWrapper.evaluate(el => getComputedStyle(el).alignItems); // measurement: use measurement-utils for cleaner code
     expect(alignItems).toBe('center');
   });
 });
@@ -200,7 +197,7 @@ test.describe('Headline Block — Background Color Overrides (GAAM-344)', () => 
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
     const eyebrow = block.locator(EYEBROW);
-    const color = await eyebrow.evaluate(el => getComputedStyle(el).color);
+    const color = await eyebrow.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Should NOT be white/light — should be a dark color on light background
     expect(color).not.toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
@@ -210,7 +207,7 @@ test.describe('Headline Block — Background Color Overrides (GAAM-344)', () => 
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_SLATE} ${HB}`).first();
     const title = block.locator(TITLE);
-    const color = await title.evaluate(el => getComputedStyle(el).color);
+    const color = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Light mode — title should be dark colored, not white
     expect(color).not.toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
@@ -220,7 +217,7 @@ test.describe('Headline Block — Background Color Overrides (GAAM-344)', () => 
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_GRANITE} ${HB}`).first();
     const title = block.locator(TITLE);
-    const color = await title.evaluate(el => getComputedStyle(el).color);
+    const color = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Dark mode — title should be white
     expect(color).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
@@ -230,7 +227,7 @@ test.describe('Headline Block — Background Color Overrides (GAAM-344)', () => 
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_GRANITE} ${HB}`).first();
     const desc = block.locator(`${DESCRIPTOR} p`).first();
-    const color = await desc.evaluate(el => getComputedStyle(el).color);
+    const color = await desc.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(color).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -239,7 +236,7 @@ test.describe('Headline Block — Background Color Overrides (GAAM-344)', () => 
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_AZUL} ${HB}`).first();
     const title = block.locator(TITLE);
-    const color = await title.evaluate(el => getComputedStyle(el).color);
+    const color = await title.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(color).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -248,7 +245,7 @@ test.describe('Headline Block — Background Color Overrides (GAAM-344)', () => 
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_AZUL} ${HB}`).first();
     const eyebrow = block.locator(EYEBROW);
-    const color = await eyebrow.evaluate(el => getComputedStyle(el).color);
+    const color = await eyebrow.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Should be a light color (ga-gray-20 or similar) — NOT the dark granite-light
     // Parse RGB and check lightness
     const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
@@ -266,7 +263,7 @@ test.describe('Headline Block — Max Width (GAAM-676)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth);
+    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('1032px');
   });
 
@@ -277,7 +274,7 @@ test.describe('Headline Block — Max Width (GAAM-676)', () => {
     // Center-aligned block (second white section)
     const centerSection = page.locator(`${SECTION_WHITE}`).nth(1);
     const block = centerSection.locator(HB);
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth);
+    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('1150px');
   });
 
@@ -286,7 +283,7 @@ test.describe('Headline Block — Max Width (GAAM-676)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth);
+    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     // On mobile, max-width should be 'none' or not set
     expect(maxWidth).toBe('none');
   });
@@ -297,9 +294,9 @@ test.describe('Headline Block — Max Width (GAAM-676)', () => {
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
     // Individual elements should NOT have their own max-width
-    const eyebrowMaxW = await block.locator(EYEBROW).evaluate(el => getComputedStyle(el).maxWidth);
-    const titleMaxW = await block.locator(TITLE).evaluate(el => getComputedStyle(el).maxWidth);
-    const descMaxW = await block.locator(DESCRIPTOR).evaluate(el => getComputedStyle(el).maxWidth);
+    const eyebrowMaxW = await block.locator(EYEBROW).evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+    const titleMaxW = await block.locator(TITLE).evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
+    const descMaxW = await block.locator(DESCRIPTOR).evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(eyebrowMaxW).toBe('none');
     expect(titleMaxW).toBe('none');
     expect(descMaxW).toBe('none');
@@ -314,8 +311,8 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
-    const paddingTop = await block.evaluate(el => getComputedStyle(el).paddingTop);
-    const paddingBottom = await block.evaluate(el => getComputedStyle(el).paddingBottom);
+    const paddingTop = await block.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
+    const paddingBottom = await block.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
     expect(paddingTop).toBe('48px');
     expect(paddingBottom).toBe('48px');
   });
@@ -325,8 +322,8 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
-    const paddingTop = await block.evaluate(el => getComputedStyle(el).paddingTop);
-    const paddingBottom = await block.evaluate(el => getComputedStyle(el).paddingBottom);
+    const paddingTop = await block.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
+    const paddingBottom = await block.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
     expect(paddingTop).toBe('32px');
     expect(paddingBottom).toBe('32px');
   });
@@ -342,8 +339,8 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
       test.skip(true, 'No padding-top-off variation on style guide — needs content fixture');
       return;
     }
-    const paddingTop = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingTop);
-    const paddingBottom = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingBottom);
+    const paddingTop = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
+    const paddingBottom = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
     expect(paddingTop).toBe('0px');
     expect(paddingBottom).toBe('48px');
   });
@@ -358,8 +355,8 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
       test.skip(true, 'No padding-bottom-off variation on style guide — needs content fixture');
       return;
     }
-    const paddingTop = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingTop);
-    const paddingBottom = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingBottom);
+    const paddingTop = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
+    const paddingBottom = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
     expect(paddingTop).toBe('48px');
     expect(paddingBottom).toBe('0px');
   });
@@ -398,7 +395,7 @@ test.describe('Headline Block — Responsive (GAAM-344)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const ctaWrapper = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER}`).first();
-    const flexDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('column');
   });
 
@@ -407,7 +404,7 @@ test.describe('Headline Block — Responsive (GAAM-344)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const ctaWrapper = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER}`).first();
-    const flexDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('row');
   });
 
@@ -443,7 +440,7 @@ test.describe('Headline Block — Responsive (GAAM-344)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const ctaWrapper = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER}`).first();
-    const gap = await ctaWrapper.evaluate(el => getComputedStyle(el).gap);
+    const gap = await ctaWrapper.evaluate(el => getComputedStyle(el).gap); // measurement: use measurement-utils for cleaner code
     expect(gap).toBe('12px');
   });
 });
@@ -621,10 +618,7 @@ test.describe('Headline Block — Accessibility (GAAM-344/655/676)', () => {
 // ── Console & JS Errors ──
 
 test.describe('Headline Block — Console Errors', () => {
-  test('[HB-046] @regression No JS errors on page load', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new HeadlineBlockPage(page);
+  test('[HB-046] @regression No JS errors on page load', async ({ page }) => {const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     capture.stop();

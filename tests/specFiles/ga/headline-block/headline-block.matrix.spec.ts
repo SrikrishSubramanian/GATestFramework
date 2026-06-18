@@ -61,9 +61,9 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
     await expect(block).toBeVisible();
-    const eyeAlign = await block.locator(EYEBROW).evaluate(el => getComputedStyle(el).textAlign);
+    const eyeAlign = await block.locator(EYEBROW).evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(['left', 'start']).toContain(eyeAlign);
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth);
+    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('1032px');
   });
 
@@ -73,9 +73,9 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     // Center-aligned is in the second white section
     const block = page.locator(`${SECTION_WHITE}`).nth(1).locator(HB);
     await expect(block).toBeVisible();
-    const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign);
+    const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(titleAlign).toBe('center');
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth);
+    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('1150px');
   });
 
@@ -84,7 +84,7 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_SLATE} ${HB}`).first();
     await expect(block).toBeVisible();
-    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color);
+    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Light mode: title should be dark, not white
     expect(titleColor).not.toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
@@ -94,9 +94,9 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_SLATE}`).nth(1).locator(HB);
     await expect(block).toBeVisible();
-    const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign);
+    const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(titleAlign).toBe('center');
-    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color);
+    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(titleColor).not.toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -105,9 +105,9 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_GRANITE} ${HB}`).first();
     await expect(block).toBeVisible();
-    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color);
+    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(titleColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
-    const descColor = await block.locator(`${DESCRIPTOR} p`).first().evaluate(el => getComputedStyle(el).color);
+    const descColor = await block.locator(`${DESCRIPTOR} p`).first().evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(descColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -116,9 +116,9 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_GRANITE}`).nth(1).locator(HB);
     await expect(block).toBeVisible();
-    const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign);
+    const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(titleAlign).toBe('center');
-    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color);
+    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(titleColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -127,7 +127,7 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_AZUL} ${HB}`).first();
     await expect(block).toBeVisible();
-    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color);
+    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(titleColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -136,9 +136,9 @@ test.describe('Headline Block — Matrix: Alignment × Background (Desktop)', ()
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_AZUL}`).nth(1).locator(HB);
     await expect(block).toBeVisible();
-    const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign);
+    const titleAlign = await block.locator(TITLE).evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(titleAlign).toBe('center');
-    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color);
+    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(titleColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 });
@@ -153,7 +153,7 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
     const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
     await expect(block).toBeVisible();
     // No max-width on mobile
-    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth);
+    const maxWidth = await block.evaluate(el => getComputedStyle(el).maxWidth); // measurement: use measurement-utils for cleaner code
     expect(maxWidth).toBe('none');
   });
 
@@ -163,7 +163,7 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
     await pom.navigate(BASE());
     const block = page.locator(`${SECTION_GRANITE} ${HB}`).first();
     await expect(block).toBeVisible();
-    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color);
+    const titleColor = await block.locator(TITLE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(titleColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
   });
 
@@ -172,7 +172,7 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const ctaWrapper = page.locator(`${SECTION_AZUL} ${HB} .ga-headline-block__cta-wrapper`).first();
-    const flexDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection);
+    const flexDir = await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('column');
   });
 
@@ -185,8 +185,8 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
       const block = page.locator(`${bg} ${HB}`).first();
       const count = await block.count();
       if (count === 0) continue;
-      const pt = await block.evaluate(el => getComputedStyle(el).paddingTop);
-      const pb = await block.evaluate(el => getComputedStyle(el).paddingBottom);
+      const pt = await block.evaluate(el => getComputedStyle(el).paddingTop); // measurement: use measurement-utils for cleaner code
+      const pb = await block.evaluate(el => getComputedStyle(el).paddingBottom); // measurement: use measurement-utils for cleaner code
       expect(pt, `${bg} paddingTop`).toBe('32px');
       expect(pb, `${bg} paddingBottom`).toBe('32px');
     }

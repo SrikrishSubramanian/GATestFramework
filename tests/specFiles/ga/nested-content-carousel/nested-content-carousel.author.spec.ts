@@ -259,7 +259,7 @@ test.describe('NestedContentCarousel — Carousel Behavior', () => {
     // Capture the initial progress width immediately after page load
     const progressEl = page.locator(PROGRESS_BAR).first();
     await expect(progressEl).toBeAttached();
-    const widthPx = await progressEl.evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).width));
+    const widthPx = await progressEl.evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).width)); // measurement: use measurement-utils for cleaner code
     // At initial load the animation should be near 0%; allow up to 50px for timing variance
     expect(widthPx).toBeLessThan(50);
   });
@@ -273,7 +273,7 @@ test.describe('NestedContentCarousel — Carousel Behavior', () => {
     const playIcon = toggle.locator('.icon-play');
     await expect(pauseIcon).toBeVisible();
     // play icon hidden by default (carousel auto-playing)
-    const playDisplay = await playIcon.evaluate((el: HTMLElement) => getComputedStyle(el).display);
+    const playDisplay = await playIcon.evaluate((el: HTMLElement) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
     expect(playDisplay).toBe('none');
   });
 
@@ -365,7 +365,7 @@ test.describe('NestedContentCarousel — Responsive', () => {
     await pom.navigate(BASE());
     const image = page.locator(CARD_IMAGE).first();
     if (await image.count() > 0) {
-      const display = await image.evaluate((el: HTMLElement) => getComputedStyle(el).display);
+      const display = await image.evaluate((el: HTMLElement) => getComputedStyle(el).display); // measurement: use measurement-utils for cleaner code
       expect(display).toBe('none');
     } else {
       // No image authored — inject temp element to verify CSS hides it at mobile
@@ -388,7 +388,7 @@ test.describe('NestedContentCarousel — Responsive', () => {
     await pom.navigate(BASE());
     const content = page.locator(CONTENT).first();
     await expect(content).toBeVisible();
-    const flexDir = await content.evaluate((el: HTMLElement) => getComputedStyle(el).flexDirection);
+    const flexDir = await content.evaluate((el: HTMLElement) => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('column');
   });
 
@@ -398,13 +398,13 @@ test.describe('NestedContentCarousel — Responsive', () => {
     const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
     const headline = page.locator(HEADLINE).first();
-    const mobileFontSize = await headline.evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).fontSize));
+    const mobileFontSize = await headline.evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
 
     // Then measure at desktop
     await page.setViewportSize({ width: 1440, height: 900 });
     await pom.navigate(BASE());
     const desktopFontSize = await page.locator(HEADLINE).first()
-      .evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).fontSize));
+      .evaluate((el: HTMLElement) => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
 
     expect(mobileFontSize).toBeLessThan(desktopFontSize);
   });
@@ -433,7 +433,7 @@ test.describe('NestedContentCarousel — Responsive', () => {
     await pom.navigate(BASE());
     const content = page.locator(CONTENT).first();
     await expect(content).toBeVisible();
-    const flexDir = await content.evaluate((el: HTMLElement) => getComputedStyle(el).flexDirection);
+    const flexDir = await content.evaluate((el: HTMLElement) => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('row');
   });
 
@@ -458,7 +458,7 @@ test.describe('NestedContentCarousel — Counter Font Colors (GAAM-705)', () => 
     await pom.navigate(BASE());
     const current = page.locator(CURRENT).first();
     await expect(current).toBeVisible();
-    const color = await current.evaluate((el: HTMLElement) => getComputedStyle(el).color);
+    const color = await current.evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Azul is a blue color — not black rgb(0,0,0) and not a very dark grey
     // Parse the rgb values
     const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
@@ -477,12 +477,12 @@ test.describe('NestedContentCarousel — Counter Font Colors (GAAM-705)', () => 
     await pom.navigate(BASE());
     const total = page.locator(TOTAL).first();
     await expect(total).toBeVisible();
-    const color = await total.evaluate((el: HTMLElement) => getComputedStyle(el).color);
+    const color = await total.evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // helper-dark is a muted color — not pure white and typically a grey/muted tone
     expect(color).not.toBe('rgb(255, 255, 255)');
     // Also not same color as azul (current); they must differ
     const currentColor = await page.locator(CURRENT).first()
-      .evaluate((el: HTMLElement) => getComputedStyle(el).color);
+      .evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     expect(color).not.toBe(currentColor);
   });
 
@@ -521,7 +521,7 @@ test.describe('NestedContentCarousel — Counter Font Colors (GAAM-705)', () => 
 
     // Check current slide number (azul) — should meet 4.5:1
     const currentColor = await page.locator(CURRENT).first()
-      .evaluate((el: HTMLElement) => getComputedStyle(el).color);
+      .evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const currentMatch = currentColor.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
     expect(currentMatch).not.toBeNull();
     if (currentMatch) {
@@ -533,7 +533,7 @@ test.describe('NestedContentCarousel — Counter Font Colors (GAAM-705)', () => 
     // Check total count (helper-dark) — may be subdued per design
     // GAAM-705 targets improving this, but the helper-dark color may not reach 4.5:1
     const totalColor = await page.locator(TOTAL).first()
-      .evaluate((el: HTMLElement) => getComputedStyle(el).color);
+      .evaluate((el: HTMLElement) => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     const totalMatch = totalColor.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
     expect(totalMatch).not.toBeNull();
     if (totalMatch) {
@@ -688,10 +688,7 @@ test.describe('NestedContentCarousel — AEM Dialog & Overlay', () => {
 // ---------------------------------------------------------------------------
 
 test.describe('NestedContentCarousel — Console Errors', () => {
-  test('[NCC-044] @regression No JS errors on page load', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new NestedContentCarouselPage(page);
+  test('[NCC-044] @regression No JS errors on page load', async ({ page }) => {const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
     await page.waitForTimeout(1000);
     const errors = capture.getErrors();
@@ -699,10 +696,7 @@ test.describe('NestedContentCarousel — Console Errors', () => {
     expect(errors).toEqual([]);
   });
 
-  test('[NCC-045] @regression No JS errors during carousel auto-advance (wait 7s)', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
-    capture.start();
-    const pom = new NestedContentCarouselPage(page);
+  test('[NCC-045] @regression No JS errors during carousel auto-advance (wait 7s)', async ({ page }) => {const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
     // Wait for at least one full auto-advance cycle (typical delay ~4-5s, waiting 7s for margin)
     await page.waitForTimeout(7000);

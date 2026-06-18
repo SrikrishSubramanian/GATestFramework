@@ -281,7 +281,7 @@ test.describe('Login â€” Form State', () => {
     const submit = page.locator(SUBMIT).first();
     if (await submit.count() === 0) { test.skip(); return; }
     await expect(submit).toBeVisible();
-    const transition = await submit.evaluate(el => getComputedStyle(el).transition);
+    const transition = await submit.evaluate(el => getComputedStyle(el).transition); // measurement: use measurement-utils for cleaner code
     expect(transition, 'Submit button should have CSS transition for animated state change').not.toBe('');
     expect(transition).not.toBe('none');
   });
@@ -292,11 +292,11 @@ test.describe('Login â€” Form State', () => {
     await pom.navigate(BASE());
     const username = page.locator(USERNAME).first();
     if (await username.count() === 0) { test.skip(); return; }
-    const borderBefore = await username.evaluate(el => getComputedStyle(el).borderColor);
+    const borderBefore = await username.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
     await username.focus();
-    const borderAfter = await username.evaluate(el => getComputedStyle(el).borderColor);
+    const borderAfter = await username.evaluate(el => getComputedStyle(el).borderColor); // measurement: use measurement-utils for cleaner code
     // Border color or box-shadow should change on focus
-    const boxShadow = await username.evaluate(el => getComputedStyle(el).boxShadow);
+    const boxShadow = await username.evaluate(el => getComputedStyle(el).boxShadow); // measurement: use measurement-utils for cleaner code
     const changed = borderBefore !== borderAfter || boxShadow !== 'none';
     expect(changed, 'Username input should show visual change on focus').toBe(true);
   });

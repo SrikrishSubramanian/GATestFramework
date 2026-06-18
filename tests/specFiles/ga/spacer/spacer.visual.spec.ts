@@ -39,8 +39,8 @@ test.describe('Spacer â€” Visual Regression', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const margin = await spacer.evaluate(el => window.getComputedStyle(el).margin);
-    const padding = await spacer.evaluate(el => window.getComputedStyle(el).padding);
+    const margin = await spacer.evaluate(el => window.getComputedStyle(el).margin); // measurement: use measurement-utils for cleaner code
+    const padding = await spacer.evaluate(el => window.getComputedStyle(el).padding); // measurement: use measurement-utils for cleaner code
 
     expect(margin || padding).toBeTruthy();
   });
@@ -79,7 +79,7 @@ test.describe('Spacer â€” Visual Regression', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const bg = await spacer.evaluate(el => window.getComputedStyle(el).backgroundColor);
+    const bg = await spacer.evaluate(el => window.getComputedStyle(el).backgroundColor); // measurement: use measurement-utils for cleaner code
 
     // Should be transparent or inherit
     expect(['rgba(0, 0, 0, 0)', 'transparent']).toContain(bg);

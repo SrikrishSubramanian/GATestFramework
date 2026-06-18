@@ -106,7 +106,7 @@ test.describe('Statistic — Alignment Variants', () => {
     await pom.navigate(BASE());
     const leftAligned = page.locator('.cmp-statistic--align-left').first();
     if (await leftAligned.count() === 0) { test.skip(); return; }
-    const textAlign = await leftAligned.evaluate(el => getComputedStyle(el).textAlign);
+    const textAlign = await leftAligned.evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(textAlign).toMatch(/left|start/);
   });
 
@@ -117,7 +117,7 @@ test.describe('Statistic — Alignment Variants', () => {
     const centerWrapper = page.locator('.cmp-statistic--align-center').first();
     if (await centerWrapper.count() === 0) { test.skip(); return; }
     // Check the value element's computed text-align
-    const textAlign = await centerWrapper.locator(VALUE).evaluate(el => getComputedStyle(el).textAlign);
+    const textAlign = await centerWrapper.locator(VALUE).evaluate(el => getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
     expect(textAlign).toBe('center');
   });
 });
@@ -128,7 +128,7 @@ test.describe('Statistic — Theme Color Variants', () => {
     await pom.navigate(BASE());
     const granite = page.locator('.cmp-statistic--theme-granite').first();
     if (await granite.count() === 0) { test.skip(); return; }
-    const color = await granite.locator(VALUE).evaluate(el => getComputedStyle(el).color);
+    const color = await granite.locator(VALUE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Granite text should be dark
     expect(color).not.toContain('rgb(255, 255, 255)');
   });
@@ -138,7 +138,7 @@ test.describe('Statistic — Theme Color Variants', () => {
     await pom.navigate(BASE());
     const azul = page.locator('.cmp-statistic--theme-azul').first();
     if (await azul.count() === 0) { test.skip(); return; }
-    const color = await azul.locator(VALUE).evaluate(el => getComputedStyle(el).color);
+    const color = await azul.locator(VALUE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
     // Azul text should be blue-toned, not default black
     expect(color).not.toBe('rgb(0, 0, 0)');
   });
@@ -151,7 +151,7 @@ test.describe('Statistic — Theme Color Variants', () => {
     for (const theme of themes) {
       const el = page.locator(`.cmp-statistic--${theme}`).first();
       if (await el.count() === 0) continue;
-      const color = await el.locator(VALUE).evaluate(el => getComputedStyle(el).color);
+      const color = await el.locator(VALUE).evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       colors.push(color);
     }
     // At least 2 distinct colors among the themes
@@ -166,7 +166,7 @@ test.describe('Statistic — Border Modifier', () => {
     await pom.navigate(BASE());
     const bordered = page.locator('.cmp-statistic--border').first();
     if (await bordered.count() === 0) { test.skip(); return; }
-    const borderStyle = await bordered.locator(ITEM).evaluate(el => getComputedStyle(el).borderLeftStyle);
+    const borderStyle = await bordered.locator(ITEM).evaluate(el => getComputedStyle(el).borderLeftStyle); // measurement: use measurement-utils for cleaner code
     expect(borderStyle).not.toBe('none');
   });
 
