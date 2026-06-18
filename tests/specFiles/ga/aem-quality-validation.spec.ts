@@ -9,6 +9,7 @@
  * These issues are invisible during development but directly impact user experience
  * and search engine rankings on the live site.
  */
+import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
 import ENV from '../../utils/infra/env';
 import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';

@@ -1,3 +1,4 @@
+import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
 import ENV from '../../utils/infra/env';
 import { ConsoleCapture } from '../../utils/infra/console-capture';

@@ -1,3 +1,4 @@
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
 import { PromoBannerPage } from '../../../pages/ga/components/promoBannerPage';
 import ENV from '../../../utils/infra/env';
@@ -9,8 +10,7 @@ import { assertLayout, assertSpacing, assertTypography } from '../../../utils/in
 let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
-const STYLE_GUIDE_URL = () =>
-  `${BASE()}/content/global-atlantic/style-guide/components/promo-banner.html?wcmmode=disabled`;
+const componentUrl = () => resolveComponentUrl('promo-banner');
 
 const PB              = '.cmp-promo-banner';
 const PB_SOCIAL_LINK  = '.cmp-promo-banner__links-social a';
@@ -44,15 +44,13 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await expect(link).toBeVisible();
 
     // Capture pre-hover background
-    const bgBefore = await link.evaluate((el) =>
-      getComputedStyle(el).backgroundColor
+    const bgBefore = await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor
     );
 
     await link.hover();
     await page.waitForTimeout(250); // allow transition to complete
 
-    const bgAfter = await link.evaluate((el) =>
-      getComputedStyle(el).backgroundColor
+    const bgAfter = await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor
     );
 
     // After hover the background should be white (rgb(255, 255, 255))
@@ -124,12 +122,12 @@ test.describe('PromoBanner — Interaction Tests', () => {
     const btn = page.locator(PB_CTA).first();
     await expect(btn).toBeVisible();
 
-    const bgBefore = await btn.evaluate((el) => getComputedStyle(el).backgroundColor);
+    const bgBefore = await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor);
 
     await btn.hover();
     await page.waitForTimeout(250);
 
-    const bgAfter = await btn.evaluate((el) => getComputedStyle(el).backgroundColor);
+    const bgAfter = await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor);
 
     // Background must change on hover
     expect(bgAfter).not.toBe(bgBefore);
@@ -148,8 +146,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await page.goto(STYLE_GUIDE_URL());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
-    const cursor = await page.locator(PB_CTA).first().evaluate((el) =>
-      getComputedStyle(el).cursor
+    const cursor = await page.locator(PB_CTA).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.cursor
     );
 
     expect(cursor).toBe('pointer');
@@ -242,8 +239,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await page.goto(STYLE_GUIDE_URL());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
-    const flexDirection = await page.locator(PB).first().evaluate((el) =>
-      getComputedStyle(el).flexDirection
+    const flexDirection = await page.locator(PB).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.flexDirection
     );
 
     expect(flexDirection).toBe('row');
@@ -275,16 +271,14 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await page.goto(STYLE_GUIDE_URL());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
-    const desktopDir = await page.locator(ctaSelector).first().evaluate((el) =>
-      getComputedStyle(el).flexDirection
+    const desktopDir = await page.locator(ctaSelector).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.flexDirection
     );
 
     // Mobile
     await page.setViewportSize({ width: 375, height: 812 });
     await page.waitForTimeout(200); // allow layout reflow
 
-    const mobileDir = await page.locator(ctaSelector).first().evaluate((el) =>
-      getComputedStyle(el).flexDirection
+    const mobileDir = await page.locator(ctaSelector).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.flexDirection
     );
 
     expect(desktopDir).toBe('row');
