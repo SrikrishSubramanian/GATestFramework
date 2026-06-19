@@ -6,7 +6,7 @@ import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deploy
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../../utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 

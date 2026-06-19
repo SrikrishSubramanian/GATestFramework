@@ -4,7 +4,7 @@ import { DomProbe } from '../../../utils/infra/dom-probe';
 import ENV from '../../../utils/infra/env';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 

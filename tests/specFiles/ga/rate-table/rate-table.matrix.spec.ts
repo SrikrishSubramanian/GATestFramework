@@ -6,7 +6,7 @@ import { assertLayout, assertSpacing, assertTypography } from '../../../utils/in
 import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 

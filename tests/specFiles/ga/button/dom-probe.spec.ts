@@ -5,7 +5,7 @@ import ENV from '../../../utils/infra/env';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../../utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 

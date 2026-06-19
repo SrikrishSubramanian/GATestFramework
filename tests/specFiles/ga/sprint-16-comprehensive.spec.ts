@@ -14,7 +14,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/rep
 import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../utils/infra/component-assertions';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture } from '../../utils/infra/console-capture';
 
 // Sprint 16 GAAM Tickets (50 total)
 const SPRINT_16_TICKETS = [
