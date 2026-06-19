@@ -711,13 +711,22 @@ The remaining 216 errors are **NOT framework-level issues**:
 
 **All pre-existing bugs in generated test code** - not blocking framework functionality.
 
+#### 5. Locator File Paths (37 POM files) ✅
+**Problem:** POMs looking for locator files in wrong directory
+**Solution:** Updated all POM files to look for locators in same directory
+- Changed: `path.join(__dirname, '../../locators/file.locators.json')`
+- To: `path.join(__dirname, './file.locators.json')`
+- All 37 POM files in `tests/pages/ga/components/` now use correct path
+
 ### Framework Health Status
 
 ✅ **All Critical Issues Resolved:**
 - No "Cannot find module" errors for framework utilities
 - All relative import paths correct and consistent
+- All locator file paths corrected (37 POMs)
 - Framework structure is sound and maintainable
 - All utilities properly importable
+- **Ready for locator file generation**
 
 ⚠️ **Generated Code Quality Issues:**
 - Pre-existing bugs from code generation phase
@@ -732,6 +741,11 @@ The remaining 216 errors are **NOT framework-level issues**:
 | `add-console-capture-imports.js` | Added ConsoleCapture imports | ✅ Executed |
 | `fix-console-capture-import.js` | Corrected ConsoleCapture paths | ✅ Executed |
 | `fix-utility-imports.js` | Fixed utility file imports | ✅ Executed |
+
+### Additional Fixes Applied
+
+- **Locator file paths**: Corrected in 37 POM files via sed batch replace
+- **Import paths**: Fixed in 5 typography utility files
 
 ---
 
