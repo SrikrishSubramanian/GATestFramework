@@ -6,9 +6,9 @@ import fs from 'fs';
 import path from 'path';
 import { promises as fsPromises } from 'fs'; // Use fsPromises for async operations
 import { checkBrokenLinks } from './brokenLinksUtils'
-import { extractFontDetailsWithHighlightCompare, extractImageDetailsCompare } from '../utils/typography-compare';
-import { getPage } from '../../src/utils/page-utils';
-import { attachFileToReport } from '../utils/reportAttach'
+import { extractFontDetailsWithHighlightCompare, extractImageDetailsCompare } from './typography-compare';
+import { getPage } from '../../../src/utils/page-utils';
+import { attachFileToReport } from './reportAttach'
 
 type Detail = {
   id: string;

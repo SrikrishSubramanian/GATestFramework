@@ -1,12 +1,12 @@
 /* This file includes the extractMasterDetails function, which retrieves 
 typography details from a page and saves them in a result/master folder.
  This function is implemented in the typography-execute.ts utils file. */
-import { extractFontDetailsWithHighlight, extractImageDetails, saveFontDetailsToJson, createDirectories } from '../utils/typography-master';
+import { extractFontDetailsWithHighlight, extractImageDetails, saveFontDetailsToJson, createDirectories } from './typography-master';
 import { gotoURL } from '../../../src/utils/action-utils';
 import { getPage } from '../../../src/utils/page-utils';
 import * as path from 'path';
 import * as fs from 'fs';
-import { attachFileToReport } from '../utils/reportAttach'
+import { attachFileToReport } from './reportAttach'
 
 export async function extractMasterDetails(url: string, screenshotIndex: number = 1) {
   const rootDir = process.cwd();

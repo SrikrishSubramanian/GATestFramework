@@ -4,7 +4,7 @@ These functions will be utilized within the typography-master-execute.ts utils f
 const fs = require('fs');
 const path = require('path');
 import { Page } from '@playwright/test';
-import { attachFileToReport } from '../utils/reportAttach'
+import { attachFileToReport } from './reportAttach'
 
 export function createDirectories(baseDir: any, subDirectories: any) {
   subDirectories.forEach((subDir: any) => {

@@ -3,10 +3,10 @@
 
 import path from 'path';
 import fs from 'fs';
-import { extractMasterDetails } from '../utils/typography-master-execute';
-import { compareExtractedWithMaster } from '../utils/typography-compare-execute';
-import { getPage } from '../../src/utils/page-utils';
-import { attachFileToReport } from '../utils/reportAttach'
+import { extractMasterDetails } from './typography-master-execute';
+import { compareExtractedWithMaster } from './typography-compare-execute';
+import { getPage } from '../../../src/utils/page-utils';
+import { attachFileToReport } from './reportAttach'
 
 export async function typographyTesting() {
   
