@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
 import { FeatureBannerPage } from '../../../pages/ga/components/featureBannerPage';
-import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import ENV from '../../../../tests/utils/infra/env';
+import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 

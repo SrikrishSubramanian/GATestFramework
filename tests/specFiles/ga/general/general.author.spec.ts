@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
+import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../../tests/utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 

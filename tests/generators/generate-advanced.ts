@@ -22,11 +22,11 @@ import { generateDispatcherSpec } from '../utils/generation/dispatcher-tester';
 import { formatCoverageReport, updateComponentCoverage } from '../utils/generation/coverage-matrix-reporter';
 import { generateVisualSpec } from '../utils/generation/visual-assertion-generator';
 import { FigmaDesignSpec } from '../utils/generation/requirements-merger';
-import { setupMocks, clearMocks, initMockData, MockConfig } from '../utils/infra/api-mock-helper';
-import { TestLogger, TestRunResult } from '../utils/infra/test-logger';
-import { testInfoToLogResult, attachConsoleCapture, annotateEnvironment } from '../utils/infra/report-enhancer';
-import { ConsoleCapture } from '../utils/infra/console-capture';
-import { TestCategory } from '../utils/infra/test-tagger';
+import { setupMocks, clearMocks, initMockData, MockConfig } from '../../../tests/utils/infra/api-mock-helper';
+import { TestLogger, TestRunResult } from '../../../tests/utils/infra/test-logger';
+import { testInfoToLogResult, attachConsoleCapture, annotateEnvironment } from '../../../tests/utils/infra/report-enhancer';
+import { ConsoleCapture } from '../../../tests/utils/infra/console-capture';
+import { TestCategory } from '../../../tests/utils/infra/test-tagger';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -168,8 +168,8 @@ test.describe('Phase 5 — Interaction Tests', () => {
 
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import ENV from '../../../utils/infra/env';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import ENV from '../../../tests/utils/infra/env';
+import { loginToAEMAuthor } from '../../../tests/utils/infra/auth-fixture';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
@@ -266,8 +266,8 @@ test.describe('Phase 5 — Visual Baselines', () => {
       const className = toPascalCase(comp.name) + 'Page';
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import ENV from '../../../utils/infra/env';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import ENV from '../../../tests/utils/infra/env';
+import { loginToAEMAuthor } from '../../../tests/utils/infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
@@ -349,9 +349,9 @@ test.describe('Phase 6 — Broken Image Specs', () => {
       const className = toPascalCase(comp.name) + 'Page';
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
-import ENV from '../../../utils/infra/env';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { scanImages, attachImageScanResults } from '../utils/generation/broken-image-detector';
+import ENV from '../../../tests/utils/infra/env';
+import { loginToAEMAuthor } from '../../../tests/utils/infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
@@ -458,7 +458,7 @@ test.describe('Phase 7 — Content-Driven Tests', () => {
 
     // Generate content validation spec (cross-component, lives at ga/ root)
     const specContent = `import { test, expect } from '@playwright/test';
-import ENV from '../../utils/infra/env';
+import ENV from '../../../tests/utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
@@ -513,9 +513,9 @@ test.describe('Phase 7 — Dispatcher Tests', () => {
 
     // Add auth beforeEach
     const withAuth = specContent.replace(
-      "import { testDispatcherCache } from '../../utils/generation/dispatcher-tester';",
-      `import { testDispatcherCache } from '../../utils/generation/dispatcher-tester';
-import ENV from '../../utils/infra/env';
+      "import { testDispatcherCache } from '../utils/generation/dispatcher-tester';",
+      `import { testDispatcherCache } from '../utils/generation/dispatcher-tester';
+import ENV from '../../../tests/utils/infra/env';
 
 test.beforeEach(async ({ page }) => {
   if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
@@ -587,8 +587,8 @@ test.describe('Phase 7 — API Mocking', () => {
 
     // Generate a sample API mock spec (cross-component, lives at ga/ root)
     const specContent = `import { test, expect } from '@playwright/test';
-import { setupMocks, clearMocks, MockConfig } from '../../utils/infra/api-mock-helper';
-import ENV from '../../utils/infra/env';
+import { setupMocks, clearMocks, MockConfig } from '../../../tests/utils/infra/api-mock-helper';
+import ENV from '../../../tests/utils/infra/env';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {

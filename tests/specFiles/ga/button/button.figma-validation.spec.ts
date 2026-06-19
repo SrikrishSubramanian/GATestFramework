@@ -16,11 +16,11 @@
 
 import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 

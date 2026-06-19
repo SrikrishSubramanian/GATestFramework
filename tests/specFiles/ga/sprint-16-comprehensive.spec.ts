@@ -8,13 +8,13 @@
  */
 
 import { test, expect, Page } from '@playwright/test';
-import { AEMTestHelper } from '../../../utils/infra/aem-test-helper';
-import ENV from '../../../utils/infra/env';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { AEMTestHelper } from '../../../../tests/utils/infra/aem-test-helper';
+import ENV from '../../../../tests/utils/infra/env';
+import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
+import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
-import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../../tests/utils/infra/component-assertions';
+import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
 
 // Sprint 16 GAAM Tickets (50 total)
 const SPRINT_16_TICKETS = [

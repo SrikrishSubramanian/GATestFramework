@@ -1,13 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { StatisticPage } from '../../../pages/ga/components/statisticPage';
-import ENV from '../../../utils/infra/env';
+import ENV from '../../../../tests/utils/infra/env';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
 
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 

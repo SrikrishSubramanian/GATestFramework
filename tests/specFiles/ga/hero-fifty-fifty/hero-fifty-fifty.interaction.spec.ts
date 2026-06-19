@@ -1,12 +1,12 @@
 ﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import ENV from '../../../../tests/utils/infra/env';
+import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
