@@ -76,6 +76,55 @@ tests/pages/
 
 See `tests/pages/FOLDER_STRUCTURE.md` for complete details.
 
+### Locator JSON Generation
+
+Locator JSON files are **auto-generated** by the playwright-agent (not manually created).
+
+**Methods:**
+1. **From Live DOM** (Recommended)
+   ```bash
+   COMPONENT=button npx playwright test generate-components \
+     --config playwright.generators.config.ts --project chromium
+   ```
+
+2. **From Jira Tickets**
+   ```bash
+   JIRA_JSON=req.json COMPONENT=button npx playwright test generate-from-jira \
+     --config playwright.generators.config.ts --project chromium
+   ```
+
+3. **From CSV Test Cases**
+   ```bash
+   CSV_PATH=test-cases.csv npx playwright test generate-from-csv \
+     --config playwright.generators.config.ts --project chromium
+   ```
+
+**File Location:** `tests/pages/ga/locators/<componentName>.locators.json`
+
+**Validation:**
+```bash
+# Verify locator file was created
+ls tests/pages/ga/locators/ | grep buttonPage
+
+# Run tests to validate locators work
+env=local npx playwright test tests/specFiles/ga/button/ --project chromium
+```
+
+**Locator JSON Structure:**
+```json
+{
+  "entries": {
+    "buttonRoot": {
+      "strategies": [
+        { "type": "css", "selector": ".cmp-button", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//div[@class='cmp-button']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    }
+  }
+}
+```
+
 ---
 
 ## 🏗️ Architecture & Components
