@@ -1,11 +1,11 @@
-import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
-import ENV from '../../utils/infra/env';
-import { ConsoleCapture } from '../../utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
-import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../utils/infra/measurement-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 

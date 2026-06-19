@@ -1,4 +1,4 @@
-import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
 import { GridContainerPage } from '../../../pages/ga/components/gridContainerPage';
 import ENV from '../../../utils/infra/env';

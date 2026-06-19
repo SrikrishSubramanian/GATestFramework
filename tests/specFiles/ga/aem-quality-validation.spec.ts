@@ -9,14 +9,14 @@
  * These issues are invisible during development but directly impact user experience
  * and search engine rankings on the live site.
  */
-import { resolveComponentUrl } from '../../utils/infra/content-fixture-deployer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
-import ENV from '../../utils/infra/env';
-import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
-import { attachConsoleCapture, annotateEnvironment } from '../../utils/infra/report-enhancer';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
-import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../utils/infra/component-assertions';
-import { ConsoleCapture } from '../../utils/infra/console-capture';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
