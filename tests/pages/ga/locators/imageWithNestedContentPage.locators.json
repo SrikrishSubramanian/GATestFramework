@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "imageWithNestedContentPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-imagewithnestedcontent",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-imagewithnestedcontent']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

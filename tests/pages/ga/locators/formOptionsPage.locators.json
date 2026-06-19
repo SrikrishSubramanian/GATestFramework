@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "formOptionsPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-formoptions",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-formoptions']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

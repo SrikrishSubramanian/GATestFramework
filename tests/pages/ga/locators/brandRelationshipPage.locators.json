@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "brandRelationshipPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-brandrelationship",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-brandrelationship']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

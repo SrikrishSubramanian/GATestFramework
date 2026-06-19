@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "siteHeaderPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-siteheader",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-siteheader']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "homepageHeroPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-homepagehero",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-homepagehero']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

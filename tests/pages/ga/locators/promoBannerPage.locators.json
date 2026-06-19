@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "promoBannerPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-promobanner",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-promobanner']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

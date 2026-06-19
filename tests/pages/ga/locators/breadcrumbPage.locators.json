@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "breadcrumbPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-breadcrumb']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "footerPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-footer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-footer']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

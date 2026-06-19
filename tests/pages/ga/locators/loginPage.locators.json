@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "loginPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-login",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-login']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

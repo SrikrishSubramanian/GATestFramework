@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "teaserCardPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-teasercard",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-teasercard']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "nestedContentCarouselPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-nestedcontentcarousel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-nestedcontentcarousel']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

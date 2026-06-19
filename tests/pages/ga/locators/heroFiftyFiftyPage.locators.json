@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "heroFiftyFiftyPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-herofiftyfifty",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-herofiftyfifty']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

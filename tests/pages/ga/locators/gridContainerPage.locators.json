@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "gridContainerPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-gridcontainer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-gridcontainer']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

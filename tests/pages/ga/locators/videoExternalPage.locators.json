@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "videoExternalPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-videoexternal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-videoexternal']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}

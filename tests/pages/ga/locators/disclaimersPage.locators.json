@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "disclaimersPageRoot": {
+      "strategies": [
+        {
+          "type": "css",
+          "selector": ".cmp-disclaimers",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "selector": "//div[@class='cmp-disclaimers']",
+          "confidence": 0.7
+        }
+      ],
+      "primary": "css"
+    }
+  }
+}
