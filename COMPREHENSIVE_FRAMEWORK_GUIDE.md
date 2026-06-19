@@ -43,6 +43,41 @@ The GATestFramework is a **Playwright-based E2E test automation framework for AE
 
 ---
 
+## 📁 Folder Structure & Organization
+
+### Page Objects & Locators
+
+**Location:** `tests/pages/`
+
+```
+tests/pages/
+├── ga/
+│   ├── components/              ← All POM TypeScript files (38 POMs)
+│   │   ├── buttonPage.ts
+│   │   ├── textPage.ts
+│   │   └── ... (all component POMs)
+│   │
+│   └── locators/                ← All locator JSON files
+│       ├── buttonPage.locators.json
+│       ├── textPage.locators.json
+│       └── ... (150+ locator files)
+│
+├── locators/                    ← Root-level locators
+│   └── (shared/global locators)
+│
+└── loginPage.ts                 ← Root-level POM
+```
+
+**Key Points:**
+- POMs and locators **separated by folder** for clean organization
+- All POMs reference locators via relative path: `../locators/`
+- Locator files are **auto-generated** by playwright-agent
+- Consistent naming: `<componentName>Page.ts` ↔ `<componentName>Page.locators.json`
+
+See `tests/pages/FOLDER_STRUCTURE.md` for complete details.
+
+---
+
 ## 🏗️ Architecture & Components
 
 ### Three-Layer Utility Architecture
