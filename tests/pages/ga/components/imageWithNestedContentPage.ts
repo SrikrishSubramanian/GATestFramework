@@ -2,7 +2,7 @@ import { Page, Locator } from '@playwright/test';
 import { loadLocators, resolveLocator } from '../../../utils/infra/locator-registry';
 import path from 'path';
 
-const registry = loadLocators(path.join(__dirname, './imageWithNestedContentPage.locators.json'));
+const registry = loadLocators(path.join(__dirname, '../locators/imageWithNestedContentPage.locators.json'));
 
 export class ImageWithNestedContentPage {
   constructor(private page: Page) {}
