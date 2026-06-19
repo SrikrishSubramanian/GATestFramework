@@ -101,6 +101,15 @@ Locator JSON files are **auto-generated** by the playwright-agent (not manually 
 
 **File Location:** `tests/pages/ga/locators/<componentName>.locators.json`
 
+**Placeholder Locators:**
+All 38 locator JSON files are pre-generated with placeholder selectors:
+- Basic `.cmp-<component>` CSS selector
+- XPath alternative
+- Confidence scores (0.7-0.8)
+- Ready to be replaced with real locators via playwright-agent
+
+Placeholder files allow framework to load without errors. Replace with real locators using generation methods above.
+
 **Validation:**
 ```bash
 # Verify locator file was created
@@ -830,6 +839,7 @@ The remaining 216 errors are **NOT framework-level issues**:
 
 - **Locator file paths**: Corrected in 37 POM files via sed batch replace
 - **Import paths**: Fixed in 5 typography utility files
+- **Placeholder locators**: Generated 38 locator JSON files in `tests/pages/ga/locators/`
 
 ---
 
