@@ -2,7 +2,7 @@ import { Page, Locator } from '@playwright/test';
 import { loadLocators, resolveLocator } from '../../../utils/infra/locator-registry';
 import path from 'path';
 
-const registry = loadLocators(path.join(__dirname, '../../locators/rateTablePage.locators.json'));
+const registry = loadLocators(path.join(__dirname, './rateTablePage.locators.json'));
 
 /** Variation IDs matching the AEM dialog select values */
 export const RATE_TABLE_VARIATIONS = [

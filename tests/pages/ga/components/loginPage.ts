@@ -2,7 +2,7 @@ import { Page, Locator } from '@playwright/test';
 import { loadLocators, resolveLocator } from '../../../utils/infra/locator-registry';
 import path from 'path';
 
-const registry = loadLocators(path.join(__dirname, '../../locators/loginPage.locators.json'));
+const registry = loadLocators(path.join(__dirname, './loginPage.locators.json'));
 
 /**
  * Page Object Model for the Login component (including MFA support - GAAM-601).

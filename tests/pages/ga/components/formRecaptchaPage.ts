@@ -2,7 +2,7 @@ import { Page, Locator } from '@playwright/test';
 import { loadLocators, resolveLocator } from '../../../utils/infra/locator-registry';
 import path from 'path';
 
-const registry = loadLocators(path.join(__dirname, '../../locators/formRecaptchaPage.locators.json'));
+const registry = loadLocators(path.join(__dirname, './formRecaptchaPage.locators.json'));
 
 export class FormRecaptchaPage {
   constructor(private page: Page) {}
