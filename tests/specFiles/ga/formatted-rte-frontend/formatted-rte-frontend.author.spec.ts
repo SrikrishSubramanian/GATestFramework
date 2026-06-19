@@ -4,7 +4,8 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
-import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
+import { ConsoleCapture } from '../../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 

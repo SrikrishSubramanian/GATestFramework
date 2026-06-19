@@ -5,7 +5,7 @@ import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
-import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 

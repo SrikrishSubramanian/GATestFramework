@@ -2,8 +2,8 @@
 typography details from a page and saves them in a result/master folder.
  This function is implemented in the typography-execute.ts utils file. */
 import { extractFontDetailsWithHighlight, extractImageDetails, saveFontDetailsToJson, createDirectories } from '../utils/typography-master';
-import { gotoURL } from '../../src/utils/action-utils';
-import { getPage } from '../../src/utils/page-utils';
+import { gotoURL } from '../../../src/utils/action-utils';
+import { getPage } from '../../../src/utils/page-utils';
 import * as path from 'path';
 import * as fs from 'fs';
 import { attachFileToReport } from '../utils/reportAttach'

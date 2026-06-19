@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { FormOptionsPage } from '../../../pages/ga/components/formOptionsPage';
 import ENV from '../../../utils/infra/env';
-import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
+import { ConsoleCapture } from '../../../../utils/infra/console-capture';
 
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';

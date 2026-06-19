@@ -1,10 +1,11 @@
 import { test, expect } from '../../../utils/infra/persistent-context';
 import { ButtonPage } from '../../../pages/ga/components/buttonPage';
 import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
-import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;

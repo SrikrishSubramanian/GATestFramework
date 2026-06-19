@@ -4,9 +4,10 @@ import { NavigationPage } from '../../../pages/ga/components/navigationPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
-import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 

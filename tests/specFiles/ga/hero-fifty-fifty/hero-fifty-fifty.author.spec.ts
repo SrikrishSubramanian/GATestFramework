@@ -3,7 +3,7 @@ import { HeroFiftyFiftyPage } from '../../../pages/ga/components/heroFiftyFiftyP
 import ENV from '../../../utils/infra/env';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import {
   assertColumnLayout, assertNoEmptyWrappers, assertImageFillsContainer,
   assertTagName, assertFocusIndicator, assertHidden, assertAlignment,

@@ -18,8 +18,9 @@ import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
-import { clickElement, fill, hover, doubleClick } from '../../../src/utils/action-utils';
+import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
