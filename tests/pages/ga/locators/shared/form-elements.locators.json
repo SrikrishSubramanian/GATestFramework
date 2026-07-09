@@ -1,0 +1,61 @@
+{
+  "description": "Shared form element locators",
+  "entries": {
+    "formField": {
+      "strategies": [
+        { "type": "css", "selector": ".form-field, .form-group", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//*[@class='form-field' or @class='form-group']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "formLabel": {
+      "strategies": [
+        { "type": "css", "selector": ".form-label, label.required", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//label[contains(@class, 'form-label')]", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "formError": {
+      "strategies": [
+        { "type": "css", "selector": ".form-error, .error-message, .invalid-feedback", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//*[@class='form-error' or @class='error-message']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "submitButton": {
+      "strategies": [
+        { "type": "css", "selector": "button[type='submit']", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//button[@type='submit']", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "resetButton": {
+      "strategies": [
+        { "type": "css", "selector": "button[type='reset']", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//button[@type='reset']", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "textarea": {
+      "strategies": [
+        { "type": "css", "selector": "textarea", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//textarea", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "requiredField": {
+      "strategies": [
+        { "type": "css", "selector": "[required], .required", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//*[@required] | //*[@class='required']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "fieldHint": {
+      "strategies": [
+        { "type": "css", "selector": ".field-hint, .form-text, .helper-text", "confidence": 0.85 },
+        { "type": "xpath", "selector": "//*[@class='field-hint' or @class='form-text']", "confidence": 0.8 }
+      ],
+      "primary": "css"
+    }
+  }
+}

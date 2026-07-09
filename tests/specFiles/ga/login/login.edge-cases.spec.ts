@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Login Component â€” Edge Cases & Enhanced Validation', () => {
+test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
   // ============ Edge Case: Max Key Points Constraint ============
   test('[LOGIN-EDGE-001] @edge Verify maximum 4 key points enforced', async ({ page }) => {
     const url = resolveComponentUrl('login');
@@ -107,7 +107,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
-      const display = // 📏 TODO: Replace with measurement-utils
+      const display = // ?? TODO: Replace with measurement-utils
     await loginComponent.evaluate(el =>
         window.getComputedStyle(el).display
       );
@@ -122,7 +122,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await loginComponent.evaluate(el => el.offsetWidth);
       // Should be responsive and fit viewport
       expect(width).toBeLessThanOrEqual(375);
@@ -166,7 +166,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
       // Click toggle to show password
       await clickElement(toggleButton);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const fieldType = await passwordField.getAttribute('type');
       expect(['text', 'password']).toContain(fieldType);
@@ -307,7 +307,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
   });
 
   // ============ Edge Case: Content Constraints ============
-  test('[LOGIN-EDGE-019] @edge Verify content order: H1 â†’ subheadline â†’ key points â†’ fine print', async ({ page }) => {
+  test('[LOGIN-EDGE-019] @edge Verify content order: H1 → subheadline → key points → fine print', async ({ page }) => {
     const url = resolveComponentUrl('login');
     await page.goto(url);
 
@@ -332,7 +332,7 @@ test.describe('Login Component â€” Edge Cases & Enhanced Validation', () =>
 
     const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
     if (await loginComponent.count() > 0) {
-      const bgColor = // 📏 TODO: Replace with measurement-utils
+      const bgColor = // ?? TODO: Replace with measurement-utils
     await loginComponent.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );

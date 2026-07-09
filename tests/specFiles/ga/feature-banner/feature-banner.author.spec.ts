@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -43,11 +43,11 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
-      const bgImage = // 📏 TODO: Replace with measurement-utils
+      const bgImage = // ?? TODO: Replace with measurement-utils
     await banner.evaluate(el =>
         window.getComputedStyle(el).backgroundImage
       );
-      const bgColor = // 📏 TODO: Replace with measurement-utils
+      const bgColor = // ?? TODO: Replace with measurement-utils
     await banner.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
@@ -83,7 +83,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await banner.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -96,7 +96,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await banner.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
@@ -109,7 +109,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const banner = page.locator('[class*="feature-banner"]').first();
     if (await banner.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await banner.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(400);
     }
@@ -143,7 +143,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
 
     const text = page.locator('[class*="feature-banner"] p').first();
     if (await text.count() > 0) {
-      const color = // 📏 TODO: Replace with measurement-utils
+      const color = // ?? TODO: Replace with measurement-utils
     await text.evaluate(el =>
         window.getComputedStyle(el).color
       );

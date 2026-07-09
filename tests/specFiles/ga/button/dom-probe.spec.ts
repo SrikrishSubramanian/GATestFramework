@@ -1,11 +1,11 @@
 import { test } from '@playwright/test';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { DomProbe } from '../../../../tests/utils/infra/dom-probe';
-import ENV from '../../../../tests/utils/infra/env';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { DomProbe } from '../../../utils/infra/dom-probe';
+import ENV from '../../../utils/infra/env';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 

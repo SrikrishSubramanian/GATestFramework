@@ -1,0 +1,61 @@
+{
+  "description": "Shared navigation element locators",
+  "entries": {
+    "navMenu": {
+      "strategies": [
+        { "type": "css", "selector": "nav, [role='navigation']", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//nav | //*[@role='navigation']", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "navItem": {
+      "strategies": [
+        { "type": "css", "selector": "nav li, nav [role='menuitem']", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//nav//li | //nav//*[@role='menuitem']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "navLink": {
+      "strategies": [
+        { "type": "css", "selector": "nav a", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//nav//a", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "breadcrumb": {
+      "strategies": [
+        { "type": "css", "selector": "nav[aria-label='Breadcrumb'], .breadcrumb", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//nav[@aria-label='Breadcrumb'] | //*[@class='breadcrumb']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "breadcrumbItem": {
+      "strategies": [
+        { "type": "css", "selector": ".breadcrumb li, [aria-current='page']", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//*[@class='breadcrumb']//li | //*[@aria-current='page']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "submenu": {
+      "strategies": [
+        { "type": "css", "selector": "nav ul ul, [role='submenu']", "confidence": 0.85 },
+        { "type": "xpath", "selector": "//nav//ul//ul | //*[@role='submenu']", "confidence": 0.8 }
+      ],
+      "primary": "css"
+    },
+    "menuButton": {
+      "strategies": [
+        { "type": "css", "selector": "button[aria-haspopup='true'], .menu-button", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//button[@aria-haspopup='true']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "skipLink": {
+      "strategies": [
+        { "type": "css", "selector": "a.skip-link, a[href='#main']", "confidence": 0.85 },
+        { "type": "xpath", "selector": "//a[contains(@class, 'skip-link')]", "confidence": 0.8 }
+      ],
+      "primary": "css"
+    }
+  }
+}

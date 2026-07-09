@@ -1,11 +1,11 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
+test.describe('Hero Fifty-Fifty — Visual Regression', () => {
   test('[H5050-VISUAL-001] @visual Hero 50/50 layout has two columns', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
     await page.goto(url);
@@ -47,7 +47,7 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
 
     if (await image.count() > 0) {
       await expect(image).toBeVisible();
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await image.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(0);
     }
@@ -61,7 +61,7 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
     const text = hero.locator('p, h1, h2, h3').first();
 
     if (await text.count() > 0) {
-      const fontSize = // 📏 TODO: Replace with measurement-utils
+      const fontSize = // ?? TODO: Replace with measurement-utils
     await text.evaluate(el =>
         window.getComputedStyle(el).fontSize
       );
@@ -75,7 +75,7 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
     await page.goto(url);
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
-    const padding = // 📏 TODO: Replace with measurement-utils
+    const padding = // ?? TODO: Replace with measurement-utils
     await hero.evaluate(el =>
       window.getComputedStyle(el).padding
     );
@@ -92,7 +92,7 @@ test.describe('Hero Fifty-Fifty â€” Visual Regression', () => {
 
     if (await button.count() > 0) {
       await expect(button).toBeVisible();
-      const bg = // 📏 TODO: Replace with measurement-utils
+      const bg = // ?? TODO: Replace with measurement-utils
     await button.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );

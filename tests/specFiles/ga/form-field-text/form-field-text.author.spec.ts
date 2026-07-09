@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -259,7 +259,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const disabledInput = page.locator('input[type="text"][disabled]').first();
     if (await disabledInput.count() > 0) {
-      const isDisabled = // 📏 TODO: Replace with measurement-utils
+      const isDisabled = // ?? TODO: Replace with measurement-utils
     await disabledInput.evaluate((el: HTMLInputElement) => el.disabled);
       expect(isDisabled).toBe(true);
     }
@@ -271,7 +271,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const readonlyInput = page.locator('input[type="text"][readonly]').first();
     if (await readonlyInput.count() > 0) {
-      const isReadonly = // 📏 TODO: Replace with measurement-utils
+      const isReadonly = // ?? TODO: Replace with measurement-utils
     await readonlyInput.evaluate((el: HTMLInputElement) => el.readOnly);
       expect(isReadonly).toBe(true);
     }
@@ -285,7 +285,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
       await input.focus();
-      const focused = // 📏 TODO: Replace with measurement-utils
+      const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).toBe('INPUT');
     }
@@ -298,7 +298,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     const textarea = page.locator('textarea').first();
     if (await textarea.count() > 0) {
       await textarea.focus();
-      const focused = // 📏 TODO: Replace with measurement-utils
+      const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).toBe('TEXTAREA');
     }
@@ -311,7 +311,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
       await input.focus();
-      const outline = // 📏 TODO: Replace with measurement-utils
+      const outline = // ?? TODO: Replace with measurement-utils
     await input.evaluate(el =>
         window.getComputedStyle(el).outline || window.getComputedStyle(el).boxShadow
       );
@@ -327,7 +327,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await input.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -340,7 +340,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const textarea = page.locator('textarea').first();
     if (await textarea.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await textarea.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -353,7 +353,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await input.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
@@ -366,7 +366,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await input.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(200);
     }
@@ -379,7 +379,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      const border = // 📏 TODO: Replace with measurement-utils
+      const border = // ?? TODO: Replace with measurement-utils
     await input.evaluate(el =>
         window.getComputedStyle(el).border
       );
@@ -393,7 +393,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const textarea = page.locator('textarea').first();
     if (await textarea.count() > 0) {
-      const border = // 📏 TODO: Replace with measurement-utils
+      const border = // ?? TODO: Replace with measurement-utils
     await textarea.evaluate(el =>
         window.getComputedStyle(el).border
       );
@@ -407,7 +407,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      const color = // 📏 TODO: Replace with measurement-utils
+      const color = // ?? TODO: Replace with measurement-utils
     await input.evaluate(el =>
         window.getComputedStyle(el).color
       );
@@ -421,7 +421,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      const padding = // 📏 TODO: Replace with measurement-utils
+      const padding = // ?? TODO: Replace with measurement-utils
     await input.evaluate(el =>
         window.getComputedStyle(el).padding
       );

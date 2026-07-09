@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Text â€” Visual Regression', () => {
+test.describe('Text — Visual Regression', () => {
   test('[TEXT-VISUAL-001] @visual Text content is readable', async ({ page }) => {
     const url = resolveComponentUrl('text');
     await page.goto(url);
@@ -33,7 +33,7 @@ test.describe('Text â€” Visual Regression', () => {
     const root = page.locator('.cmp-text').first();
     await expect(root).toBeVisible();
 
-    const fontSize = // 📏 TODO: Replace with measurement-utils
+    const fontSize = // ?? TODO: Replace with measurement-utils
     await root.evaluate(el =>
       window.getComputedStyle(el).fontSize
     );
@@ -46,11 +46,11 @@ test.describe('Text â€” Visual Regression', () => {
     await page.goto(url);
 
     const root = page.locator('.cmp-text').first();
-    const color = // 📏 TODO: Replace with measurement-utils
+    const color = // ?? TODO: Replace with measurement-utils
     await root.evaluate(el =>
       window.getComputedStyle(el).color
     );
-    const bg = // 📏 TODO: Replace with measurement-utils
+    const bg = // ?? TODO: Replace with measurement-utils
     await root.evaluate(el =>
       window.getComputedStyle(el).backgroundColor
     );
@@ -85,7 +85,7 @@ test.describe('Text â€” Visual Regression', () => {
 
     const text = page.locator('.cmp-text p').first();
     if (await text.count() > 0) {
-      const lineHeight = // 📏 TODO: Replace with measurement-utils
+      const lineHeight = // ?? TODO: Replace with measurement-utils
     await text.evaluate(el =>
         window.getComputedStyle(el).lineHeight
       );

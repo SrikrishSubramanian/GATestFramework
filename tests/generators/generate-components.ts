@@ -16,7 +16,7 @@ import { test } from '@playwright/test';
 import { scanDOM, DOMSnapshot, loadLatestSnapshot } from '../utils/generation/dom-scanner';
 import { writePOMFromDOM, POMWriteResult } from '../utils/generation/pom-writer';
 import { writeComponentSpec, SpecWriteResult } from '../utils/generation/spec-writer';
-import { getDefaultCategories, TestCategory, A11yLevel } from '../../../tests/utils/infra/test-tagger';
+import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/infra/test-tagger';
 import * as fs from 'fs';
 import * as path from 'path';
 

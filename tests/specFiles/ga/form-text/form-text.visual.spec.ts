@@ -1,11 +1,11 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
@@ -25,14 +25,14 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Form Text â€” Visual Regression', () => {
+test.describe('Form Text — Visual Regression', () => {
   test('[FORMTEXT-VISUAL-001] @visual Form text field is properly styled', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
     await page.goto(url);
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
-      const borderStyle = // 📏 TODO: Replace with measurement-utils
+      const borderStyle = // ?? TODO: Replace with measurement-utils
     await textInput.evaluate(el =>
         window.getComputedStyle(el).borderStyle
       );
@@ -46,7 +46,7 @@ test.describe('Form Text â€” Visual Regression', () => {
 
     const label = page.locator('label, .cmp-form-text label').first();
     if (await label.count() > 0) {
-      const fontSize = // 📏 TODO: Replace with measurement-utils
+      const fontSize = // ?? TODO: Replace with measurement-utils
     await label.evaluate(el =>
         parseInt(window.getComputedStyle(el).fontSize)
       );
@@ -60,7 +60,7 @@ test.describe('Form Text â€” Visual Regression', () => {
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
-      const padding = // 📏 TODO: Replace with measurement-utils
+      const padding = // ?? TODO: Replace with measurement-utils
     await textInput.evaluate(el =>
         window.getComputedStyle(el).padding
       );
@@ -74,7 +74,7 @@ test.describe('Form Text â€” Visual Regression', () => {
 
     const textInput = page.locator('input[type="text"][placeholder], .cmp-form-text input[placeholder]').first();
     if (await textInput.count() > 0) {
-      const placeholderColor = // 📏 TODO: Replace with measurement-utils
+      const placeholderColor = // ?? TODO: Replace with measurement-utils
     await textInput.evaluate(el =>
         window.getComputedStyle(el).color
       );
@@ -88,7 +88,7 @@ test.describe('Form Text â€” Visual Regression', () => {
 
     const container = page.locator('.cmp-form-text, [class*="form-text"]').first();
     if (await container.count() > 0) {
-      const display = // 📏 TODO: Replace with measurement-utils
+      const display = // ?? TODO: Replace with measurement-utils
     await container.evaluate(el =>
         window.getComputedStyle(el).display
       );

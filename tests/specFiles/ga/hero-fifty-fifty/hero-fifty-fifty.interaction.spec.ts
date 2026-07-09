@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Hero Fifty-Fifty â€” Interactions', () => {
+test.describe('Hero Fifty-Fifty — Interactions', () => {
   test('[H5050-INTERACTION-001] @interaction @regression CTA button is clickable', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
     await page.goto(url);
@@ -61,15 +61,15 @@ test.describe('Hero Fifty-Fifty â€” Interactions', () => {
     const button = page.locator('.cmp-hero-fifty-fifty button, .cmp-hero-fifty-fifty a[class*="button"]').first();
 
     if (await button.count() > 0) {
-      const initialBg = // 📏 TODO: Replace with measurement-utils
+      const initialBg = // ?? TODO: Replace with measurement-utils
     await button.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
 
       await hover(button);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-      const hoverBg = // 📏 TODO: Replace with measurement-utils
+      const hoverBg = // ?? TODO: Replace with measurement-utils
     await button.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
@@ -86,7 +86,7 @@ test.describe('Hero Fifty-Fifty â€” Interactions', () => {
     await hero.focus();
 
     await page.keyboard.press('Tab');
-    const focused = // 📏 TODO: Replace with measurement-utils
+    const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.tagName);
     expect(focused).toBeTruthy();
   });
@@ -99,7 +99,7 @@ test.describe('Hero Fifty-Fifty â€” Interactions', () => {
     await expect(hero).toBeVisible();
 
     // Verify layout is responsive
-    const width = // 📏 TODO: Replace with measurement-utils
+    const width = // ?? TODO: Replace with measurement-utils
     await hero.evaluate(el => el.offsetWidth);
     expect(width).toBeGreaterThan(0);
   });

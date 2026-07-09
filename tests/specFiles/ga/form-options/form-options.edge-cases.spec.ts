@@ -1,11 +1,11 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../../tests/utils/infra/component-assertions';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -24,7 +24,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
+test.describe('Form Options — Edge Cases & Enhanced Validation', () => {
   // ============ Edge Case: Multiple Selection Types ============
   test('[FORMOPTIONS-EDGE-001] @edge Verify checkbox can be selected and deselected', async ({ page }) => {
     const url = resolveComponentUrl('form-options');
@@ -226,7 +226,7 @@ test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
     const checkbox = page.locator('input[type="checkbox"]').first();
     if (await checkbox.count() > 0) {
       await checkbox.focus();
-      const focused = // 📏 TODO: Replace with measurement-utils
+      const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).toBe('INPUT');
     }
@@ -242,7 +242,7 @@ test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
       const initialState = await checkbox.isChecked();
 
       await page.keyboard.press('Space');
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const newState = await checkbox.isChecked();
       expect(newState).not.toBe(initialState);
@@ -258,7 +258,7 @@ test.describe('Form Options â€” Edge Cases & Enhanced Validation', () => {
       await firstInput.focus();
       await page.keyboard.press('Tab');
 
-      const focused = // 📏 TODO: Replace with measurement-utils
+      const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.getAttribute('class'));
       expect(focused).toBeDefined();
     }

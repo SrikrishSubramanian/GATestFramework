@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Accordion Tabs Feature â€” Images & Media', () => {
+test.describe('Accordion Tabs Feature — Images & Media', () => {
   test('[ACCORDION-TABS-IMAGE-001] @regression Accordion/tabs icons load successfully', async ({ page }) => {
     const url = resolveComponentUrl('accordion-tabs-feature');
     await page.goto(url);
@@ -72,7 +72,7 @@ test.describe('Accordion Tabs Feature â€” Images & Media', () => {
 
     for (let i = 0; i < Math.min(count, 3); i++) {
       const el = bgElements.nth(i);
-      const bgImage = // 📏 TODO: Replace with measurement-utils
+      const bgImage = // ?? TODO: Replace with measurement-utils
     await el.evaluate(el =>
         window.getComputedStyle(el).backgroundImage
       );

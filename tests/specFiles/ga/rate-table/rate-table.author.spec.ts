@@ -1,7 +1,7 @@
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import {
   RateTablePage,
   RATE_TABLE_VARIATIONS,
@@ -11,11 +11,11 @@ import {
   VARIATION_PRODUCTS,
   RateTableVariation,
 } from '../../../pages/ga/components/rateTablePage';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
-import { loginToAEMAuthor, navigateToEditor, openComponentDialog, cancelDialog } from '../../../../tests/utils/infra/auth-fixture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { loginToAEMAuthor, navigateToEditor, openComponentDialog, cancelDialog } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 
 let capture: ConsoleCapture;
 

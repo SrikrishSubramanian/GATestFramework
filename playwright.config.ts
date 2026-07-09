@@ -72,7 +72,7 @@ export default defineConfig({
   // timeout: 120_000,
   // Local: 2 minutes (allow for slow auth/network)
   // CI: 5 minutes (longer for CI environment overhead)
-  timeout: process.env.CI ? 5 * 60 * 1000 : 2 * 60 * 1000,
+  timeout: process.env.CI ? 5 * 60 * 1000 : process.env.FAST ? 30 * 1000 : 60 * 1000,
   testDir: './tests/specFiles',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -82,12 +82,11 @@ export default defineConfig({
   // retries: process.env.CI ? 2 : 0,
   retries: 0,
   /* Worker configuration
-     Local: Use fewer workers when running all 5 browser projects to avoid memory overhead
-     - Single browser: 4 workers
-     - All 5 browsers: 2 workers (parallelization handles the rest)
-     CI: 1 worker per project (mobile/desktop run separately)
+     FAST mode: 8 workers (smoke tests only, 30s timeout)
+     Local: 4 workers (smoke + regression, 60s timeout)
+     CI: 1 worker (full suite, 5min timeout)
   */
-  workers: process.env.CI ? 1 : 2,
+  workers: process.env.FAST ? 8 : process.env.CI ? 1 : 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html', { outputFolder: reportDir }],

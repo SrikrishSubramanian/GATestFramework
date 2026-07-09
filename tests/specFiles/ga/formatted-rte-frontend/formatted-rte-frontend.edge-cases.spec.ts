@@ -1,11 +1,11 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -24,7 +24,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
+test.describe('Formatted RTE Frontend — Edge Cases (GAAM-531)', () => {
   // ============ Edge Case: Content Variations ============
   test('[GAAM-531-EDGE-001] @edge Verify very long paragraph wraps correctly', async ({ page }) => {
     const url = resolveComponentUrl('formatted-rte-frontend');
@@ -34,7 +34,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
     if (await p.count() > 0) {
       const text = await p.textContent();
       if (text && text.length > 200) {
-        const height = // 📏 TODO: Replace with measurement-utils
+        const height = // ?? TODO: Replace with measurement-utils
     await p.evaluate(el => el.offsetHeight);
         expect(height).toBeGreaterThan(40);
       }
@@ -47,7 +47,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const nestedList = page.locator('ul ul, ol ol').first();
     if (await nestedList.count() > 0) {
-      const marginLeft = // 📏 TODO: Replace with measurement-utils
+      const marginLeft = // ?? TODO: Replace with measurement-utils
     await nestedList.evaluate(el => window.getComputedStyle(el).marginLeft); // measurement: use measurement-utils for cleaner code
       expect(marginLeft).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
@@ -96,7 +96,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const code = page.locator('code, pre').first();
     if (await code.count() > 0) {
-      const whiteSpace = // 📏 TODO: Replace with measurement-utils
+      const whiteSpace = // ?? TODO: Replace with measurement-utils
     await code.evaluate(el => window.getComputedStyle(el).whiteSpace); // measurement: use measurement-utils for cleaner code
       expect(['pre', 'pre-wrap', 'pre-line']).toContain(whiteSpace);
     }
@@ -108,7 +108,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const blockquote = page.locator('blockquote').first();
     if (await blockquote.count() > 0) {
-      const borderLeft = // 📏 TODO: Replace with measurement-utils
+      const borderLeft = // ?? TODO: Replace with measurement-utils
     await blockquote.evaluate(el => window.getComputedStyle(el).borderLeft); // measurement: use measurement-utils for cleaner code
       expect(borderLeft).not.toBe('none');
     }
@@ -131,7 +131,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const underline = page.locator('u, ins, [style*="text-decoration: underline"]').first();
     if (await underline.count() > 0) {
-      const decoration = // 📏 TODO: Replace with measurement-utils
+      const decoration = // ?? TODO: Replace with measurement-utils
     await underline.evaluate(el => window.getComputedStyle(el).textDecoration); // measurement: use measurement-utils for cleaner code
       expect(decoration).toContain('underline');
     }
@@ -144,7 +144,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const centered = page.locator('[style*="text-align: center"]').first();
     if (await centered.count() > 0) {
-      const textAlign = // 📏 TODO: Replace with measurement-utils
+      const textAlign = // ?? TODO: Replace with measurement-utils
     await centered.evaluate(el => window.getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
       expect(textAlign).toBe('center');
     }
@@ -156,7 +156,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const rightAligned = page.locator('[style*="text-align: right"]').first();
     if (await rightAligned.count() > 0) {
-      const textAlign = // 📏 TODO: Replace with measurement-utils
+      const textAlign = // ?? TODO: Replace with measurement-utils
     await rightAligned.evaluate(el => window.getComputedStyle(el).textAlign); // measurement: use measurement-utils for cleaner code
       expect(textAlign).toBe('right');
     }
@@ -170,7 +170,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const img = page.locator('img').first();
     if (await img.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await img.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -183,7 +183,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const table = page.locator('table').first();
     if (await table.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await table.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -228,12 +228,12 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
     await page.goto(url);
 
     const body = page.locator('body');
-    const width1 = // 📏 TODO: Replace with measurement-utils
+    const width1 = // ?? TODO: Replace with measurement-utils
     await body.evaluate(el => el.offsetWidth);
 
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const width2 = // 📏 TODO: Replace with measurement-utils
+    const width2 = // ?? TODO: Replace with measurement-utils
     await body.evaluate(el => el.offsetWidth);
     expect(width1).toBe(width2);
   });
@@ -302,7 +302,7 @@ test.describe('Formatted RTE Frontend â€” Edge Cases (GAAM-531)', () => {
 
     const url = resolveComponentUrl('formatted-rte-frontend');
     await page.goto(url);
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     expect(errors).toEqual([]);
   });

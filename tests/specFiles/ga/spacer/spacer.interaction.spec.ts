@@ -1,11 +1,11 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
@@ -25,20 +25,20 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Spacer â€” Interactions', () => {
+test.describe('Spacer — Interactions', () => {
   test('[SPACER-INTERACTION-001] @interaction @regression Spacer height adjusts responsively', async ({ page }) => {
     const url = resolveComponentUrl('spacer');
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const initialHeight = // 📏 TODO: Replace with measurement-utils
+    const initialHeight = // ?? TODO: Replace with measurement-utils
     await spacer.evaluate(el => el.offsetHeight);
 
     // Resize viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const newHeight = // 📏 TODO: Replace with measurement-utils
+    const newHeight = // ?? TODO: Replace with measurement-utils
     await spacer.evaluate(el => el.offsetHeight);
 
     // Height should adapt or stay reasonable
@@ -51,7 +51,7 @@ test.describe('Spacer â€” Interactions', () => {
 
     // Spacer should not interfere with tab navigation
     await page.keyboard.press('Tab');
-    const focused = // 📏 TODO: Replace with measurement-utils
+    const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.tagName);
 
     expect(focused).toBeTruthy();
@@ -62,7 +62,7 @@ test.describe('Spacer â€” Interactions', () => {
     await page.goto(url);
 
     const spacer = page.locator('.cmp-spacer').first();
-    const pointerEvents = // 📏 TODO: Replace with measurement-utils
+    const pointerEvents = // ?? TODO: Replace with measurement-utils
     await spacer.evaluate(el =>
       window.getComputedStyle(el).pointerEvents
     );
@@ -81,7 +81,7 @@ test.describe('Spacer â€” Interactions', () => {
     if (count > 0) {
       for (let i = 0; i < Math.min(count, 3); i++) {
         const spacer = spacers.nth(i);
-        const height = // 📏 TODO: Replace with measurement-utils
+        const height = // ?? TODO: Replace with measurement-utils
     await spacer.evaluate(el => el.offsetHeight);
         expect(height).toBeGreaterThan(0);
       }

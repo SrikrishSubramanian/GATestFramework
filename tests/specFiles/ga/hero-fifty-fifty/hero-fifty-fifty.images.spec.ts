@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Hero Fifty-Fifty â€” Images & Media', () => {
+test.describe('Hero Fifty-Fifty — Images & Media', () => {
   test('[H5050-IMAGE-001] @regression Hero hero image loads successfully', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
     await page.goto(url);
@@ -64,9 +64,9 @@ test.describe('Hero Fifty-Fifty â€” Images & Media', () => {
     const image = hero.locator('img').first();
 
     if (await image.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await image.evaluate(el => el.offsetWidth);
-      const maxWidth = // 📏 TODO: Replace with measurement-utils
+      const maxWidth = // ?? TODO: Replace with measurement-utils
     await image.evaluate(el =>
         window.getComputedStyle(el).maxWidth
       );
@@ -84,9 +84,9 @@ test.describe('Hero Fifty-Fifty â€” Images & Media', () => {
     const image = hero.locator('img').first();
 
     if (await image.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await image.evaluate(el => (el as HTMLImageElement).naturalWidth);
-      const height = // 📏 TODO: Replace with measurement-utils
+      const height = // ?? TODO: Replace with measurement-utils
     await image.evaluate(el => (el as HTMLImageElement).naturalHeight);
 
       if (width > 0 && height > 0) {
@@ -106,7 +106,7 @@ test.describe('Hero Fifty-Fifty â€” Images & Media', () => {
 
     for (let i = 0; i < Math.min(count, 3); i++) {
       const el = bgElements.nth(i);
-      const bgImage = // 📏 TODO: Replace with measurement-utils
+      const bgImage = // ?? TODO: Replace with measurement-utils
     await el.evaluate(el =>
         window.getComputedStyle(el).backgroundImage
       );

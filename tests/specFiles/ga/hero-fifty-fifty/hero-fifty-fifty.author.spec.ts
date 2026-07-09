@@ -1,15 +1,15 @@
 import { test, expect } from '@playwright/test';
 import { HeroFiftyFiftyPage } from '../../../pages/ga/components/heroFiftyFiftyPage';
-import ENV from '../../../../tests/utils/infra/env';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import {
   assertColumnLayout, assertNoEmptyWrappers, assertImageFillsContainer,
   assertTagName, assertFocusIndicator, assertHidden, assertAlignment,
-} from '../../../../tests/utils/infra/component-assertions';
+} from '../../../utils/infra/component-assertions';
 import AxeBuilder from '@axe-core/playwright';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 
 let capture: ConsoleCapture;
 

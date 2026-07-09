@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
+test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
   // ============ Edge Case: Mixed Formatting ============
   test('[GAAM-530-EDGE-001] @edge Verify mixed bold and italic formatting', async ({ page }) => {
     const url = resolveComponentUrl('formatted-rte');
@@ -33,11 +33,11 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const mixedFormat = page.locator('strong em, b i, em strong, i b').first();
     if (await mixedFormat.count() > 0) {
-      const fontWeight = // 📏 TODO: Replace with measurement-utils
+      const fontWeight = // ?? TODO: Replace with measurement-utils
     await mixedFormat.evaluate(el =>
         window.getComputedStyle(el).fontWeight
       );
-      const fontStyle = // 📏 TODO: Replace with measurement-utils
+      const fontStyle = // ?? TODO: Replace with measurement-utils
     await mixedFormat.evaluate(el =>
         window.getComputedStyle(el).fontStyle
       );
@@ -125,7 +125,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
     if (await li.count() > 0) {
       // List items should be in valid list context
       const parent = li.locator('..');
-      const tag = // 📏 TODO: Replace with measurement-utils
+      const tag = // ?? TODO: Replace with measurement-utils
     await parent.evaluate(el => el.tagName);
       expect(['UL', 'OL']).toContain(tag);
     }
@@ -140,7 +140,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
     if (await paragraph.count() > 0) {
       const text = await paragraph.textContent();
       if (text && text.length > 500) {
-        const height = // 📏 TODO: Replace with measurement-utils
+        const height = // ?? TODO: Replace with measurement-utils
     await paragraph.evaluate(el => el.offsetHeight);
         // Long text should wrap and have height
         expect(height).toBeGreaterThan(0);
@@ -211,7 +211,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const pre = page.locator('pre').first();
     if (await pre.count() > 0) {
-      const whiteSpace = // 📏 TODO: Replace with measurement-utils
+      const whiteSpace = // ?? TODO: Replace with measurement-utils
     await pre.evaluate(el =>
         window.getComputedStyle(el).whiteSpace
       );
@@ -263,9 +263,9 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const paragraph = page.locator('p').first();
     if (await paragraph.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await paragraph.evaluate(el => el.offsetWidth);
-      const height = // 📏 TODO: Replace with measurement-utils
+      const height = // ?? TODO: Replace with measurement-utils
     await paragraph.evaluate(el => el.offsetHeight);
 
       // Text should wrap to fit viewport
@@ -281,7 +281,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const ul = page.locator('ul').first();
     if (await ul.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await ul.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -294,7 +294,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const coloredText = page.locator('[style*="color"]').first();
     if (await coloredText.count() > 0) {
-      const color = // 📏 TODO: Replace with measurement-utils
+      const color = // ?? TODO: Replace with measurement-utils
     await coloredText.evaluate(el =>
         window.getComputedStyle(el).color
       );
@@ -308,7 +308,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
 
     const highlighted = page.locator('[style*="background"]').first();
     if (await highlighted.count() > 0) {
-      const bgColor = // 📏 TODO: Replace with measurement-utils
+      const bgColor = // ?? TODO: Replace with measurement-utils
     await highlighted.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
@@ -349,7 +349,7 @@ test.describe('Formatted RTE â€” Edge Cases (GAAM-530)', () => {
     await page.goto(url);
 
     // Allow some time for any async content loading
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     expect(errors).toEqual([]);
   });

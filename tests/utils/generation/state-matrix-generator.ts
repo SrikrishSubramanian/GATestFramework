@@ -237,10 +237,10 @@ function sectionSel(bg: string) {
     ? `Background: component-level classes on ${known?.wrapperSelector || `.cmp-${comp}`}`
     : `Section: .${SECTION_BG_CLASS_PREFIX}{bg}`;
 
-  return `import { test, expect } from '../../../utils/infra/persistent-context';
+  return `import { test, expect } from '../infra/persistent-context';
 import { ${pomClassName} } from '${pomImportPath}';
-import ENV from '../../../utils/infra/env';
-import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import ENV from '../infra/env';
+import { loginToAEMAuthor } from '../infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 

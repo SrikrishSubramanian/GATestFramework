@@ -33,7 +33,7 @@ import { scanDOM } from '../utils/generation/dom-scanner';
 import { writePOMFromDOM } from '../utils/generation/pom-writer';
 import { writeSpecFromCSV, writeComponentSpec } from '../utils/generation/spec-writer';
 import { generateVisualSpec } from '../utils/generation/visual-assertion-generator';
-import { getDefaultCategories, TestCategory, A11yLevel } from '../../../tests/utils/infra/test-tagger';
+import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/infra/test-tagger';
 import { updateComponentCoverage } from '../utils/generation/coverage-matrix-reporter';
 import * as fs from 'fs';
 import * as path from 'path';

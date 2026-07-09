@@ -268,10 +268,10 @@ function buildImports(options: SpecWriterOptions, extraImports: string[] = []): 
   const lines = [
     `import { test, expect } from '@playwright/test';`,
     `import { ${options.pomClassName} } from '${options.pomImportPath}';`,
-    `import ENV from '../../../utils/infra/env';`,
-    `import { ConsoleCapture } from '../../../utils/infra/console-capture';`,
-    `import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';`,
-    `import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';`,
+    `import ENV from '../infra/env';`,
+    `import { ConsoleCapture } from '../infra/console-capture';`,
+    `import { attachConsoleCapture, annotateEnvironment } from '../infra/report-enhancer';`,
+    `import { loginToAEMAuthor } from '../infra/auth-fixture';`,
   ];
 
   if (options.a11yLevel !== 'none') {

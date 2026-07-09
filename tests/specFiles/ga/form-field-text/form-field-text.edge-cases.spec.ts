@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
+test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
   // ============ Edge Case: Maxlength Constraint ============
   test('[GAAM-504-EDGE-001] @edge Verify input enforces maxlength strictly', async ({ page }) => {
     const url = resolveComponentUrl('form-field-text');
@@ -96,7 +96,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      const unicode = 'ä½ å¥½ä¸–ç•Œ Ù…Ø±Ø­Ø¨Ø§ Ø§Ù„Ø¹Ø§Ù„Ù…';
+      const unicode = '你好世界 مرحبا العالم';
       await input.fill(unicode);
       const value = await input.inputValue();
 
@@ -110,11 +110,11 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const textarea = page.locator('textarea').first();
     if (await textarea.count() > 0) {
-      const emoji = 'ðŸ˜€ðŸŽ‰ðŸš€âœ¨';
+      const emoji = '😀🎉🚀✨';
       await textarea.fill(emoji);
       const value = await textarea.inputValue();
 
-      expect(value).toContain('ðŸ˜€');
+      expect(value).toContain('😀');
     }
   });
 
@@ -286,7 +286,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      // 📏 TODO: Replace with measurement-utils
+      // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => {
         (window as any).inputEvents = 0;
         document.querySelector('input[type="text"]')?.addEventListener('input', () => {
@@ -295,7 +295,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
       });
 
       await fill(input, 'test');
-      const events = // 📏 TODO: Replace with measurement-utils
+      const events = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => (window as any).inputEvents || 0);
 
       expect(events).toBeGreaterThanOrEqual(1);
@@ -308,7 +308,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const input = page.locator('input[type="text"]').first();
     if (await input.count() > 0) {
-      // 📏 TODO: Replace with measurement-utils
+      // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => {
         (window as any).changeEvents = 0;
         document.querySelector('input[type="text"]')?.addEventListener('change', () => {
@@ -319,7 +319,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
       await fill(input, 'test');
       await input.blur();
 
-      const events = // 📏 TODO: Replace with measurement-utils
+      const events = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => (window as any).changeEvents || 0);
       expect(events).toBeGreaterThanOrEqual(0);
     }
@@ -332,7 +332,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const disabledInput = page.locator('input[type="text"][disabled]').first();
     if (await disabledInput.count() > 0) {
-      const opacity = // 📏 TODO: Replace with measurement-utils
+      const opacity = // ?? TODO: Replace with measurement-utils
     await disabledInput.evaluate(el =>
         window.getComputedStyle(el).opacity
       );
@@ -347,7 +347,7 @@ test.describe('Form Field Text â€” Edge Cases (GAAM-504)', () => {
 
     const readonlyInput = page.locator('input[type="text"][readonly]').first();
     if (await readonlyInput.count() > 0) {
-      const bgColor = // 📏 TODO: Replace with measurement-utils
+      const bgColor = // ?? TODO: Replace with measurement-utils
     await readonlyInput.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );

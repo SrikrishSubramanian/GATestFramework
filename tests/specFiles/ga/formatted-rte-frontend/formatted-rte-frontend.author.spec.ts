@@ -1,11 +1,11 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -72,7 +72,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const bold = page.locator('strong, b').first();
     if (await bold.count() > 0) {
-      const fontWeight = // 📏 TODO: Replace with measurement-utils
+      const fontWeight = // ?? TODO: Replace with measurement-utils
     await bold.evaluate(el => window.getComputedStyle(el).fontWeight); // measurement: use measurement-utils for cleaner code
       expect(fontWeight).not.toBe('400'); // TODO: Use assertTypography() for font checks
     }
@@ -84,7 +84,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const italic = page.locator('em, i').first();
     if (await italic.count() > 0) {
-      const fontStyle = // 📏 TODO: Replace with measurement-utils
+      const fontStyle = // ?? TODO: Replace with measurement-utils
     await italic.evaluate(el => window.getComputedStyle(el).fontStyle); // measurement: use measurement-utils for cleaner code
       expect(fontStyle).toBe('italic');
     }
@@ -154,7 +154,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const ul = page.locator('ul').first();
     if (await ul.count() > 0) {
-      const marginLeft = // 📏 TODO: Replace with measurement-utils
+      const marginLeft = // ?? TODO: Replace with measurement-utils
     await ul.evaluate(el => window.getComputedStyle(el).marginLeft); // measurement: use measurement-utils for cleaner code
       expect(marginLeft).not.toBe('0px'); // TODO: Use assertSpacing() for padding/margin
     }
@@ -169,9 +169,9 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     const p = page.locator('p').first();
 
     if (await h1.count() > 0 && await p.count() > 0) {
-      const h1Size = // 📏 TODO: Replace with measurement-utils
+      const h1Size = // ?? TODO: Replace with measurement-utils
     await h1.evaluate(el => window.getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
-      const pSize = // 📏 TODO: Replace with measurement-utils
+      const pSize = // ?? TODO: Replace with measurement-utils
     await p.evaluate(el => window.getComputedStyle(el).fontSize); // measurement: use measurement-utils for cleaner code
 
       expect(parseInt(h1Size)).toBeGreaterThan(parseInt(pSize));
@@ -195,7 +195,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const textElement = page.locator('p, span, li').first();
     if (await textElement.count() > 0) {
-      const color = // 📏 TODO: Replace with measurement-utils
+      const color = // ?? TODO: Replace with measurement-utils
     await textElement.evaluate(el => window.getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
       expect(color).not.toBe('rgba(0, 0, 0, 0)');
     }
@@ -207,7 +207,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const text = page.locator('p').first();
     if (await text.count() > 0) {
-      const fontSize = // 📏 TODO: Replace with measurement-utils
+      const fontSize = // ?? TODO: Replace with measurement-utils
     await text.evaluate(el => {
         const size = window.getComputedStyle(el).fontSize;
         return parseInt(size);
@@ -224,7 +224,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const content = page.locator('[class*="rte-content"]').first();
     if (await content.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await content.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -237,7 +237,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const content = page.locator('[class*="rte-content"]').first();
     if (await content.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await content.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
@@ -250,7 +250,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
 
     const content = page.locator('[class*="rte-content"]').first();
     if (await content.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await content.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(400);
     }
@@ -300,7 +300,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     const link = page.locator('a[href]').first();
     if (await link.count() > 0) {
       await link.focus();
-      const outline = // 📏 TODO: Replace with measurement-utils
+      const outline = // ?? TODO: Replace with measurement-utils
     await link.evaluate(el => window.getComputedStyle(el).outline); // measurement: use measurement-utils for cleaner code
       expect(outline).toBeTruthy();
     }
@@ -312,12 +312,12 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     await page.goto(url);
 
     const body = page.locator('body');
-    const initialWidth = // 📏 TODO: Replace with measurement-utils
+    const initialWidth = // ?? TODO: Replace with measurement-utils
     await body.evaluate(el => el.offsetWidth);
 
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-    const finalWidth = // 📏 TODO: Replace with measurement-utils
+    const finalWidth = // ?? TODO: Replace with measurement-utils
     await body.evaluate(el => el.offsetWidth);
     expect(finalWidth).toBe(initialWidth);
   });
@@ -329,7 +329,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     const url = resolveComponentUrl('formatted-rte-frontend');
     await page.goto(url);
 
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
     expect(errors).toEqual([]);
   });

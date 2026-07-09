@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -54,7 +54,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const boldText = page.locator('strong, b, [style*="font-weight"]').first();
     if (await boldText.count() > 0) {
-      const fontWeight = // 📏 TODO: Replace with measurement-utils
+      const fontWeight = // ?? TODO: Replace with measurement-utils
     await boldText.evaluate(el =>
         window.getComputedStyle(el).fontWeight
       );
@@ -68,7 +68,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const italicText = page.locator('em, i, [style*="font-style"]').first();
     if (await italicText.count() > 0) {
-      const fontStyle = // 📏 TODO: Replace with measurement-utils
+      const fontStyle = // ?? TODO: Replace with measurement-utils
     await italicText.evaluate(el =>
         window.getComputedStyle(el).fontStyle
       );
@@ -82,7 +82,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const underlineText = page.locator('u, [style*="text-decoration"]').first();
     if (await underlineText.count() > 0) {
-      const decoration = // 📏 TODO: Replace with measurement-utils
+      const decoration = // ?? TODO: Replace with measurement-utils
     await underlineText.evaluate(el =>
         window.getComputedStyle(el).textDecoration
       );
@@ -171,7 +171,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const li = page.locator('li').first();
     if (await li.count() > 0) {
-      const listStyleType = // 📏 TODO: Replace with measurement-utils
+      const listStyleType = // ?? TODO: Replace with measurement-utils
     await li.evaluate(el =>
         window.getComputedStyle(el).listStyleType
       );
@@ -243,7 +243,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const code = page.locator('code').first();
     if (await code.count() > 0) {
-      const fontFamily = // 📏 TODO: Replace with measurement-utils
+      const fontFamily = // ?? TODO: Replace with measurement-utils
     await code.evaluate(el =>
         window.getComputedStyle(el).fontFamily
       );
@@ -257,7 +257,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const blockquote = page.locator('blockquote').first();
     if (await blockquote.count() > 0) {
-      const marginLeft = // 📏 TODO: Replace with measurement-utils
+      const marginLeft = // ?? TODO: Replace with measurement-utils
     await blockquote.evaluate(el =>
         window.getComputedStyle(el).marginLeft
       );
@@ -271,7 +271,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const pre = page.locator('pre').first();
     if (await pre.count() > 0) {
-      const whiteSpace = // 📏 TODO: Replace with measurement-utils
+      const whiteSpace = // ?? TODO: Replace with measurement-utils
     await pre.evaluate(el =>
         window.getComputedStyle(el).whiteSpace
       );
@@ -286,7 +286,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const coloredText = page.locator('[style*="color:"]').first();
     if (await coloredText.count() > 0) {
-      const color = // 📏 TODO: Replace with measurement-utils
+      const color = // ?? TODO: Replace with measurement-utils
     await coloredText.evaluate(el =>
         window.getComputedStyle(el).color
       );
@@ -300,7 +300,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const highlightedText = page.locator('[style*="background-color:"]').first();
     if (await highlightedText.count() > 0) {
-      const bgColor = // 📏 TODO: Replace with measurement-utils
+      const bgColor = // ?? TODO: Replace with measurement-utils
     await highlightedText.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
@@ -326,7 +326,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const paragraph = page.locator('p').first();
     if (await paragraph.count() > 0) {
-      const textAlign = // 📏 TODO: Replace with measurement-utils
+      const textAlign = // ?? TODO: Replace with measurement-utils
     await paragraph.evaluate(el =>
         window.getComputedStyle(el).textAlign
       );
@@ -362,7 +362,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await rte.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(375);
     }
@@ -375,7 +375,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await rte.evaluate(el => el.offsetWidth);
       expect(width).toBeLessThanOrEqual(768);
     }
@@ -388,7 +388,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const rte = page.locator('[class*="rte"]').first();
     if (await rte.count() > 0) {
-      const width = // 📏 TODO: Replace with measurement-utils
+      const width = // ?? TODO: Replace with measurement-utils
     await rte.evaluate(el => el.offsetWidth);
       expect(width).toBeGreaterThan(400);
     }
@@ -401,7 +401,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const text = page.locator('p, li').first();
     if (await text.count() > 0) {
-      const fontSize = // 📏 TODO: Replace with measurement-utils
+      const fontSize = // ?? TODO: Replace with measurement-utils
     await text.evaluate(el => {
         const size = window.getComputedStyle(el).fontSize;
         return parseInt(size);
@@ -416,7 +416,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const text = page.locator('p').first();
     if (await text.count() > 0) {
-      const lineHeight = // 📏 TODO: Replace with measurement-utils
+      const lineHeight = // ?? TODO: Replace with measurement-utils
     await text.evaluate(el => {
         const lh = window.getComputedStyle(el).lineHeight;
         return parseInt(lh);
@@ -431,7 +431,7 @@ test.describe('Formatted RTE Component (GAAM-530)', () => {
 
     const text = page.locator('p').first();
     if (await text.count() > 0) {
-      const color = // 📏 TODO: Replace with measurement-utils
+      const color = // ?? TODO: Replace with measurement-utils
     await text.evaluate(el =>
         window.getComputedStyle(el).color
       );

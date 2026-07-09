@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
+test.describe('Hero CTA Video Modal — Edge Cases', () => {
   // ============ Edge Case: Multiple Modal Interactions ============
   test('[GAAM-621-EDGE-001] @edge Verify modal can be opened and closed multiple times', async ({ page }) => {
     const url = resolveComponentUrl('hero');
@@ -36,7 +36,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
       // Open, close, open cycle
       for (let i = 0; i < 2; i++) {
         await clickElement(cta);
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+        // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
         const modal = page.locator('[role="dialog"], [class*="modal"]').first();
         if (await modal.count() > 0) {
@@ -47,7 +47,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
         const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
         if (await closeBtn.count() > 0) {
           await clickElement(closeBtn);
-          // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+          // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
         }
       }
     }
@@ -64,7 +64,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
       await clickElement(cta);
       await clickElement(cta);
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modals = page.locator('[role="dialog"], [class*="modal"]');
       const count = await modals.count();
@@ -82,7 +82,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     if (await cta.count() > 0) {
       await cta.focus();
       await page.keyboard.press('Enter');
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       if (await modal.count() > 0) {
@@ -100,7 +100,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     if (await cta.count() > 0) {
       await cta.focus();
       await page.keyboard.press('Space');
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       if (await modal.count() > 0) {
@@ -117,12 +117,12 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const video = page.locator('video').first();
       if (await video.count() > 0) {
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-        const isPaused = // 📏 TODO: Replace with measurement-utils
+        // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+        const isPaused = // ?? TODO: Replace with measurement-utils
     await video.evaluate((el: HTMLVideoElement) => el.paused);
         // Video should start paused
         expect(isPaused).toBeDefined();
@@ -140,19 +140,19 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
 
       // Open modal
       await clickElement(cta);
-      // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+      // ?? Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Close modal
       const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
       if (await closeBtn.count() > 0) {
         await clickElement(closeBtn);
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+        // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
       }
 
       // Reopen modal
       await clickElement(cta);
-      // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+      // ?? Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Check video position reset
-      const position = // 📏 TODO: Replace with measurement-utils
+      const position = // ?? TODO: Replace with measurement-utils
     await video.evaluate((el: HTMLVideoElement) => el.currentTime);
       expect(position).toBeDefined();
     }
@@ -166,14 +166,14 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
       if (await closeBtn.count() > 0) {
         await closeBtn.focus();
         await page.keyboard.press('Tab');
 
-        const focused = // 📏 TODO: Replace with measurement-utils
+        const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.getAttribute('class'));
         expect(focused).toBeDefined();
       }
@@ -187,7 +187,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       if (await modal.count() > 0) {
@@ -195,7 +195,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
         await lastFocusable.focus();
         await page.keyboard.press('Shift+Tab');
 
-        const focused = // 📏 TODO: Replace with measurement-utils
+        const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.tagName);
         expect(focused).toBeDefined();
       }
@@ -210,7 +210,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const video = page.locator('video').first();
       if (await video.count() > 0) {
@@ -218,7 +218,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
         const box = await video.boundingBox();
         if (box) {
           await page.click(`video`, { position: { x: 10, y: 10 } });
-          // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+          // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
           const modal = page.locator('[role="dialog"], [class*="modal"]').first();
           expect(await modal.isVisible()).toBe(true);
@@ -234,7 +234,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const overlay = page.locator('[class*="overlay"], [class*="backdrop"]').first();
       if (await overlay.count() > 0) {
@@ -242,7 +242,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
         const box = await overlay.boundingBox();
         if (box) {
           await page.click(`[class*="overlay"]`, { position: { x: 5, y: 5 } });
-          // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+          // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
           const modal = page.locator('[role="dialog"], [class*="modal"]').first();
           const closed = !(await modal.isVisible().catch(() => false));
@@ -260,17 +260,17 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-      const initialWidth = // 📏 TODO: Replace with measurement-utils
+      const initialWidth = // ?? TODO: Replace with measurement-utils
     await modal.evaluate(el => el.offsetWidth);
 
       // Resize viewport
       await page.setViewportSize({ width: 500, height: 600 });
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-      const resizedWidth = // 📏 TODO: Replace with measurement-utils
+      const resizedWidth = // ?? TODO: Replace with measurement-utils
     await modal.evaluate(el => el.offsetWidth);
       expect(resizedWidth).toBeLessThanOrEqual(500);
     }
@@ -285,10 +285,10 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
       // Start in portrait
       await page.setViewportSize({ width: 375, height: 667 });
       await clickElement(cta);
-      // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+      // ?? Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Switch to landscape
       await page.setViewportSize({ width: 667, height: 375 });
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       expect(await modal.isVisible()).toBe(true);
@@ -339,7 +339,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
       if (await closeBtn.count() > 0) {
@@ -359,7 +359,7 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"]').first();
       if (await modal.count() > 0) {
@@ -388,15 +388,15 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       if (await modal.count() > 0) {
-        const bgColor = // 📏 TODO: Replace with measurement-utils
+        const bgColor = // ?? TODO: Replace with measurement-utils
     await modal.evaluate(el =>
           window.getComputedStyle(el).backgroundColor
         );
-        const textColor = // 📏 TODO: Replace with measurement-utils
+        const textColor = // ?? TODO: Replace with measurement-utils
     await modal.evaluate(el =>
           window.getComputedStyle(el).color
         );
@@ -415,11 +415,11 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     if (await cta.count() > 0) {
       await page.setViewportSize({ width: 300, height: 400 });
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const modal = page.locator('[role="dialog"], [class*="modal"]').first();
       if (await modal.count() > 0) {
-        const width = // 📏 TODO: Replace with measurement-utils
+        const width = // ?? TODO: Replace with measurement-utils
     await modal.evaluate(el => el.offsetWidth);
         expect(width).toBeGreaterThan(0);
       }
@@ -431,15 +431,15 @@ test.describe('Hero CTA Video Modal â€” Edge Cases', () => {
     await page.goto(url);
 
     const body = page.locator('body');
-    const initialWidth = // 📏 TODO: Replace with measurement-utils
+    const initialWidth = // ?? TODO: Replace with measurement-utils
     await body.evaluate(el => el.offsetWidth);
 
     const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
     if (await cta.count() > 0) {
       await clickElement(cta);
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
-      const finalWidth = // 📏 TODO: Replace with measurement-utils
+      const finalWidth = // ?? TODO: Replace with measurement-utils
     await body.evaluate(el => el.offsetWidth);
       // Width should remain the same (no scrollbar shift)
       expect(finalWidth).toBe(initialWidth);

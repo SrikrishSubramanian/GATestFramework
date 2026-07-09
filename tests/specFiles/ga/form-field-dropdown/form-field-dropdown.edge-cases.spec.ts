@@ -1,12 +1,12 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
+test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
   // ============ Edge Case: Large Option Lists ============
   test('[GAAM-507-EDGE-001] @edge Verify dropdown handles many options (100+)', async ({ page }) => {
     const url = resolveComponentUrl('form-field-dropdown');
@@ -164,7 +164,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
     const select = page.locator('select').first();
     if (await select.count() > 0) {
       let focusCount = 0;
-      // 📏 TODO: Replace with measurement-utils
+      // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => {
         (document.querySelector('select') as any)?.addEventListener('focus', () => {
           (window as any).focusCount = ((window as any).focusCount || 0) + 1;
@@ -172,7 +172,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
       });
 
       await select.focus();
-      const count = // 📏 TODO: Replace with measurement-utils
+      const count = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => (window as any).focusCount || 0);
 
       expect(count).toBeGreaterThanOrEqual(0);
@@ -188,7 +188,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
       await select.focus();
       await select.blur();
 
-      const focused = // 📏 TODO: Replace with measurement-utils
+      const focused = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => document.activeElement?.tagName);
       expect(focused).not.toBe('SELECT');
     }
@@ -225,7 +225,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
 
     const disabledSelect = page.locator('select[disabled]').first();
     if (await disabledSelect.count() > 0) {
-      const isDisabled = // 📏 TODO: Replace with measurement-utils
+      const isDisabled = // ?? TODO: Replace with measurement-utils
     await disabledSelect.evaluate((el: HTMLSelectElement) => el.disabled);
       expect(isDisabled).toBe(true);
     }
@@ -280,7 +280,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const bgColor = // 📏 TODO: Replace with measurement-utils
+      const bgColor = // ?? TODO: Replace with measurement-utils
     await select.evaluate(el =>
         window.getComputedStyle(el).backgroundColor
       );
@@ -294,7 +294,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
 
     const select = page.locator('select').first();
     if (await select.count() > 0) {
-      const fontSize = // 📏 TODO: Replace with measurement-utils
+      const fontSize = // ?? TODO: Replace with measurement-utils
     await select.evaluate(el =>
         window.getComputedStyle(el).fontSize
       );
@@ -344,7 +344,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
     if (await select.count() > 0) {
       const options = select.locator('option');
       if (await options.count() > 1) {
-        // 📏 TODO: Replace with measurement-utils
+        // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => {
           (window as any).changeCount = 0;
           document.querySelector('select')?.addEventListener('change', () => {
@@ -353,7 +353,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
         });
 
         await select.selectOption(await options.nth(1).getAttribute('value') || '');
-        const changes = // 📏 TODO: Replace with measurement-utils
+        const changes = // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => (window as any).changeCount || 0);
 
         expect(changes).toBeGreaterThanOrEqual(1);
@@ -392,7 +392,7 @@ test.describe('Form Field Dropdown â€” Edge Cases (GAAM-507)', () => {
         const selectedValue = await options.nth(1).getAttribute('value') || '';
         await select.selectOption(selectedValue);
 
-        // 📏 TODO: Replace with measurement-utils
+        // ?? TODO: Replace with measurement-utils
     await page.evaluate(() => window.scrollBy(0, 500));
         const valueAfterScroll = await select.inputValue();
 

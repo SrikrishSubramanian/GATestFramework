@@ -1,0 +1,111 @@
+{
+  "description": "Shared locators for common elements used across multiple components",
+  "entries": {
+    "closeButton": {
+      "strategies": [
+        { "type": "css", "selector": "button[aria-label*='Close'], button[aria-label*='close']", "confidence": 0.9 },
+        { "type": "css", "selector": ".close-button, .btn-close", "confidence": 0.8 },
+        { "type": "xpath", "selector": "//button[contains(@aria-label, 'Close')]", "confidence": 0.8 }
+      ],
+      "primary": "css"
+    },
+    "closeIcon": {
+      "strategies": [
+        { "type": "css", "selector": ".icon-close, .close-icon, svg[data-testid='close']", "confidence": 0.85 },
+        { "type": "xpath", "selector": "//*[@class='close-icon' or @class='icon-close']", "confidence": 0.75 }
+      ],
+      "primary": "css"
+    },
+    "dialogOverlay": {
+      "strategies": [
+        { "type": "css", "selector": "dialog, [role='dialog']", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//dialog | //*[@role='dialog']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "primaryButton": {
+      "strategies": [
+        { "type": "css", "selector": "button.btn-primary, button.primary, [role='button'].primary", "confidence": 0.85 },
+        { "type": "xpath", "selector": "//button[contains(@class, 'primary')]", "confidence": 0.8 }
+      ],
+      "primary": "css"
+    },
+    "secondaryButton": {
+      "strategies": [
+        { "type": "css", "selector": "button.btn-secondary, button.secondary", "confidence": 0.85 },
+        { "type": "xpath", "selector": "//button[contains(@class, 'secondary')]", "confidence": 0.8 }
+      ],
+      "primary": "css"
+    },
+    "textInput": {
+      "strategies": [
+        { "type": "css", "selector": "input[type='text']", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//input[@type='text']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "checkbox": {
+      "strategies": [
+        { "type": "css", "selector": "input[type='checkbox']", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//input[@type='checkbox']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "radioButton": {
+      "strategies": [
+        { "type": "css", "selector": "input[type='radio']", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//input[@type='radio']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    },
+    "select": {
+      "strategies": [
+        { "type": "css", "selector": "select", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//select", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "heading": {
+      "strategies": [
+        { "type": "css", "selector": "h1, h2, h3, h4, h5, h6", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//h1 | //h2 | //h3 | //h4 | //h5 | //h6", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "link": {
+      "strategies": [
+        { "type": "css", "selector": "a", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//a", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "image": {
+      "strategies": [
+        { "type": "css", "selector": "img", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//img", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "paragraph": {
+      "strategies": [
+        { "type": "css", "selector": "p", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//p", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "label": {
+      "strategies": [
+        { "type": "css", "selector": "label", "confidence": 0.95 },
+        { "type": "xpath", "selector": "//label", "confidence": 0.9 }
+      ],
+      "primary": "css"
+    },
+    "modal": {
+      "strategies": [
+        { "type": "css", "selector": ".modal, .dialog-modal, [data-testid='modal']", "confidence": 0.9 },
+        { "type": "xpath", "selector": "//*[@class='modal']", "confidence": 0.85 }
+      ],
+      "primary": "css"
+    }
+  }
+}

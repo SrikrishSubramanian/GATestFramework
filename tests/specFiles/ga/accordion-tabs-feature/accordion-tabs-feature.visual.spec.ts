@@ -1,11 +1,11 @@
-﻿import { test, expect } from '@playwright/test';
-import ENV from '../../../../tests/utils/infra/env';
-import { ConsoleCapture } from '../../../../tests/utils/infra/console-capture';
-import { loginToAEMAuthor } from '../../../../tests/utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../../tests/utils/infra/content-fixture-deployer';
-import { attachConsoleCapture, annotateEnvironment } from '../../../../tests/utils/infra/report-enhancer';
-import { assertLayout, assertSpacing, assertTypography } from '../../../../tests/utils/infra/component-assertions';
-import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../../tests/utils/infra/measurement-utils';
+import { test, expect } from '@playwright/test';
+import ENV from '../../../utils/infra/env';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
+import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 
 let capture: ConsoleCapture;
@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
   await annotateEnvironment(testInfo);
 });
 
-test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
+test.describe('Accordion Tabs Feature — Visual Regression', () => {
   test('[ACCORDION-TABS-VISUAL-001] @visual Accordion/tabs layout is properly structured', async ({ page }) => {
     const url = resolveComponentUrl('accordion-tabs-feature');
     await page.goto(url);
@@ -33,7 +33,7 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
     const container = page.locator('[class*="accordion"], [class*="tabs"], .cmp-accordion-tabs').first();
     await expect(container).toBeVisible();
 
-    const display = // 📏 TODO: Replace with measurement-utils
+    const display = // ?? TODO: Replace with measurement-utils
     await container.evaluate(el =>
       window.getComputedStyle(el).display
     );
@@ -50,7 +50,7 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
 
     if (count > 0) {
       const header = headers.first();
-      const fontSize = // 📏 TODO: Replace with measurement-utils
+      const fontSize = // ?? TODO: Replace with measurement-utils
     await header.evaluate(el =>
         parseInt(window.getComputedStyle(el).fontSize)
       );
@@ -64,7 +64,7 @@ test.describe('Accordion Tabs Feature â€” Visual Regression', () => {
 
     const content = page.locator('[class*="accordion"] [class*="content"], [class*="tabs"] [class*="panel"], [class*="tabpanel"]').first();
     if (await content.count() > 0) {
-      const padding = // 📏 TODO: Replace with measurement-utils
+      const padding = // ?? TODO: Replace with measurement-utils
     await content.evaluate(el =>
         window.getComputedStyle(el).padding
       );
