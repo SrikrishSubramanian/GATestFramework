@@ -1,0 +1,1936 @@
+{
+  "component": "product-path-detail-card",
+  "generatedAt": "2026-07-14T14:49:44.184Z",
+  "source": "dom",
+  "entries": {
+    "a_FindAn_Advisor": {
+      "name": "a_FindAn_Advisor",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__cta-callout-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-product-path-detail-card__cta-callout-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Find an Advisor",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_1": {
+      "name": "a_1",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-product-path-detail-card__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Download Sales Guide\n                    Opens in a new tab",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Learn_More": {
+      "name": "a_Learn_More",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-product-path-detail-card__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "img_PersonReviewingFin": {
+      "name": "img_PersonReviewingFin",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-product-path-detail-card__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_PortraitOf_Sarah_R": {
+      "name": "img_PortraitOf_Sarah_R",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image.cmp-product-path-detail-card__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_5": {
+      "name": "ul_5",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-product-path-detail-card__list-items')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_6": {
+      "name": "ul_6",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-product-path-detail-card__list-items')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Path_A": {
+      "name": "div_Path_A",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__path-name",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__path-name')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Path A",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_10": {
+      "name": "div_10",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__header')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Maximize_My_Reliability": {
+      "name": "div_Maximize_My_Reliability",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Maximize My Reliability",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__sub-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__sub-headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-elements",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element--list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_HowItWorks": {
+      "name": "div_HowItWorks",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How it works",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_17": {
+      "name": "li_17",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Guaranteed_Rollup": {
+      "name": "div_Guaranteed_Rollup",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Guaranteed Roll-up",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_19": {
+      "name": "div_19",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_20": {
+      "name": "li_20",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Flexible_Income_Options": {
+      "name": "div_Flexible_Income_Options",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Flexible Income Options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_22": {
+      "name": "div_22",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_23": {
+      "name": "li_23",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Principal_Protection": {
+      "name": "div_Principal_Protection",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Principal Protection",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_25": {
+      "name": "div_25",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_26": {
+      "name": "div_26",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_27": {
+      "name": "div_27",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element--image-only",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--image-only')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Path_B": {
+      "name": "div_Path_B",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__path-name",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__path-name')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Path B",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_29": {
+      "name": "div_29",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_30": {
+      "name": "div_30",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_31": {
+      "name": "div_31",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__header')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Build_Guaranteed_Income": {
+      "name": "div_Build_Guaranteed_Income",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Build Guaranteed Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_33": {
+      "name": "div_33",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__sub-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__sub-headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_34": {
+      "name": "div_34",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-elements",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_35": {
+      "name": "div_35",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_36": {
+      "name": "div_36",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element--descriptor",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_IncomeYouCanCountOn": {
+      "name": "div_IncomeYouCanCountOn",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__descriptor-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Income you can count on",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_38": {
+      "name": "div_38",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__descriptor-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Path_C": {
+      "name": "div_Path_C",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__path-name",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__path-name')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Path C",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_40": {
+      "name": "div_40",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_41": {
+      "name": "div_41",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_42": {
+      "name": "div_42",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__header')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_SecureA_Higher_Starting_Check": {
+      "name": "div_SecureA_Higher_Starting_Check",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secure a Higher Starting Check",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_44": {
+      "name": "div_44",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__sub-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__sub-headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Maximise your guaranteed monthly income from day one.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_45": {
+      "name": "div_45",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-elements",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_46": {
+      "name": "div_46",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_47": {
+      "name": "div_47",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element--cta-callout",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--cta-callout')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ReadyToGetStarted": {
+      "name": "div_ReadyToGetStarted",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__cta-callout-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__cta-callout-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Ready to get started?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_49": {
+      "name": "div_49",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__cta-callout-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__cta-callout-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_50": {
+      "name": "div_50",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__sub-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__sub-headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_51": {
+      "name": "div_51",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-elements",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_52": {
+      "name": "div_52",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_53": {
+      "name": "div_53",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element--list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_KeyBenefits": {
+      "name": "div_KeyBenefits",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Key benefits",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_55": {
+      "name": "div_55",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Annual credited interest, guaranteed for 10 years.1",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_56": {
+      "name": "div_56",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "No market downside risk on your initial premium.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_57": {
+      "name": "li_57",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Flexible_Riders": {
+      "name": "div_Flexible_Riders",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Flexible Riders",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_59": {
+      "name": "div_59",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional income rider available at no additional base cost.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_60": {
+      "name": "div_60",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_61": {
+      "name": "div_61",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element--cta-callout",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--cta-callout')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ReadyToLearnMore": {
+      "name": "div_ReadyToLearnMore",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__cta-callout-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__cta-callout-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Ready to learn more?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_63": {
+      "name": "div_63",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__cta-callout-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__cta-callout-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Path_D": {
+      "name": "div_Path_D",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__path-name",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__path-name')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Path D",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Protect_What_Matters_Most": {
+      "name": "div_Protect_What_Matters_Most",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Protect What Matters Most",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Protect_What_Matters_Most_66": {
+      "name": "div_Protect_What_Matters_Most_66",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Protect What Matters Most",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Protect_What_Matters_Most_67": {
+      "name": "div_Protect_What_Matters_Most_67",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Protect What Matters Most",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Protect_What_Matters_Most_68": {
+      "name": "div_Protect_What_Matters_Most_68",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Protect What Matters Most",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_69": {
+      "name": "div_69",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_70": {
+      "name": "div_70",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element--featured-case-study",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--featured-case-study')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Client_Case_Study": {
+      "name": "div_Client_Case_Study",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__badge",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__badge')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Client Case Study",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_72": {
+      "name": "div_72",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__featured-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__featured-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_73": {
+      "name": "div_73",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-elements",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_74": {
+      "name": "div_74",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_75": {
+      "name": "div_75",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element--descriptor",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_IncomeForLife": {
+      "name": "div_IncomeForLife",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__descriptor-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Income for life",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_77": {
+      "name": "div_77",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__descriptor-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_78": {
+      "name": "div_78",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_79": {
+      "name": "div_79",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element--featured-case-study",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--featured-case-study')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_80": {
+      "name": "div_80",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__featured-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__featured-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_81": {
+      "name": "div_81",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-elements",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_82": {
+      "name": "div_82",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_83": {
+      "name": "div_83",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element--list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_WhyThisPathWorks": {
+      "name": "div_WhyThisPathWorks",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Why this path works",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_85": {
+      "name": "li_85",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Inflation_Protection": {
+      "name": "div_Inflation_Protection",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Inflation Protection",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_87": {
+      "name": "div_87",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_88": {
+      "name": "li_88",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Lifetime_Guarantee": {
+      "name": "div_Lifetime_Guarantee",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lifetime Guarantee",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_90": {
+      "name": "div_90",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__list-item-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Payments continue for as long as you live, no matter what.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_91": {
+      "name": "div_91",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_92": {
+      "name": "div_92",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element--quote",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--quote')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_93": {
+      "name": "figure_93",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_94": {
+      "name": "picture_94",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "blockquote_95": {
+      "name": "blockquote_95",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__quote",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//blockquote[contains(@class,'cmp-product-path-detail-card__quote')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Sarah_M_Retired_Teacher": {
+      "name": "div_Sarah_M_Retired_Teacher",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__attribution-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__attribution-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sarah M., Retired Teacher",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_97": {
+      "name": "div_97",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__sub-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__sub-headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Guaranteed protection that keeps pace with your needs.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_98": {
+      "name": "div_98",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-elements",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_99": {
+      "name": "div_99",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_100": {
+      "name": "div_100",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__text-element--descriptor",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_BuiltForReliability": {
+      "name": "div_BuiltForReliability",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__descriptor-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Built for reliability",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_102": {
+      "name": "div_102",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__descriptor-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_103": {
+      "name": "div_103",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element--quote",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--quote')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "blockquote_104": {
+      "name": "blockquote_104",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__quote",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//blockquote[contains(@class,'cmp-product-path-detail-card__quote')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_105": {
+      "name": "div_105",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_106": {
+      "name": "div_106",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__image-element--quote",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--quote')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "blockquote_107": {
+      "name": "blockquote_107",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__quote",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//blockquote[contains(@class,'cmp-product-path-detail-card__quote')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_James_T_Retired_Firefighter": {
+      "name": "div_James_T_Retired_Firefighter",
+      "component": "product-path-detail-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-path-detail-card__attribution-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-path-detail-card__attribution-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "James T., Retired Firefighter",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

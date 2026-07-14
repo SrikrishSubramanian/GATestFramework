@@ -226,3 +226,220 @@ test.describe('Text — AEM Dialog Configuration', () => {
     expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });
+
+test.describe('Text — CSV Test Cases (GAAM-1464)', () => {
+  test('[TEXT-016] @smoke @regression CMS FE: Red Oak Form Submission Issues — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: h1. FE Issues reported in following Forms:
+    // 
+    // *Complaint Form:* 
+    // 
+    // [https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/complaint-form.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/complaint-form.html?wcmmode=disabled]
+    // 
+    // # Dropdown is not in-line with other field width. → {color:#bf2600}*Require Front End Change.*{color}
+    // 
+    //  
+    // 
+    // h1. *Report Fraud:* 
+    // 
+    // [https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/report-fraud-form/Report-Fruad-Form-Updated.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/report-fraud-form/Report-Fruad-Form-Updated.html?wcmmode=disabled]
+    // 
+    // # Dropdown is not in-line with other field width. → {color:#ff5630}*Require Front End Change.*{color}
+    // # File Upload should be displayed only when the document dropdown is displayed as “Yes”. It is not working as expected. → {color:#bf2600}*Require Front End Change.*{color}
+    // # Date format placeholder is incorrect. It should be MM-DD-YY format → {color:#bf2600}*Need to Override Placeholder using JS (Frontend)*{color}
+    // 
+    //  
+    // 
+    // h1. *Private Report Fraud:* 
+    // 
+    // [https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/private-report-fraud-form.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/private-report-fraud-form.html?wcmmode=disabled]
+    // 
+    // # Date format placeholder is incorrect. It should be MM-DD-YY format → {color:#bf2600}*Need to Override Placeholder using JS (Frontend)*{color}
+    // # Error message is not shown for email field when the user left the field blank → {color:#bf2600}*FE*{color}
+    // # Selecting “Others” in *Type of Suspicious Activity* is not revealing the text box. →{color:#bf2600} *FE*{color}
+    // # Selecting “Others” in *Relationship to Policy* is not revealing the text box → {color:#bf2600}*FE*{color}
+    // # Selecting “Others” in *Company* is not revealing the text box → {color:#bf2600}*FE*{color}
+    // # File Upload should be displayed only when the document dropdown is displayed as “Yes”. It is not working as expected. → {color:#bf2600}*FE*{color}
+    // # Dropdown is not in-line with other field width → {color:#bf2600}*FE*{color}
+    test.fixme();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-1405)', () => {
+  test('[TEXT-017] @smoke @regression CMS BE: Red Oak Form Submission Issues — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: h1. *Complaint form:* 
+    // 
+    // [https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/complaint-form.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/complaint-form.html?wcmmode=disabled]
+    // 
+    // # File upload text should be fixed.
+    // # Dropdown is not inline with other field width.
+    // # -CAPTCHA- not able to author-  *-_(Will be verified in STAGE)_-*
+    // # -When I select any option in “Have you reported this issue to a regulatory/governmental agency, (e.g. FINRA State Insurance Department) BBB or other third party?”, Type of Policy/Contract option is unselected-
+    // # -Phone number, mailing address and zip code is not throwing error when invalid format is given-
+    // # -Files that has been uploaded is generating ON the file upload box itself which is hiding the UI-
+    // # -when user selects more than 3 files, it is not throwing error (Neither uploads the file)-
+    // # File upload-> video and zip format is not accepted
+    // # Form submission is not working
+    // 
+    //  
+    // 
+    // h1. *Report fraud:* 
+    // 
+    // [https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/report-fraud-form/Report-Fruad-Form-Updated.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/report-fraud-form/Report-Fruad-Form-Updated.html?wcmmode=disabled]
+    // 
+    // # FIELD SET component should be added to achieve 2 columns inside form container
+    // # Dropdown is not inline with other field width.
+    // # -CAPTCHA- not able to author  -- *-_(Will be verified in Stage)_-*
+    // # -Files that has been uploaded is generating ON the file upload box itself which is hiding the UI-
+    // # -when user selects more than 3 files, it is not throwing error (Neither uploads the file)-
+    // # File upload-> video and zip format is not accepted
+    // # File Upload should be displayed only when the document dropdown is displayed as “Yes”. It is not working as expected.
+    // # -What is the dollar amount involved?--> it is not throwing error when invalid format is given.-
+    // # File upload text should be fixed.
+    // # Date format placeholder is incorrect. It should be MM-DD-YY format
+    // # -Clicking on the date field is not exposing the calendar. It is opened only when the user clicks on the calendar icon within the field-
+    // # Form submission is not working
+    // 
+    //  
+    // 
+    // h1. *Private report fraud:* 
+    // 
+    // [https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/private-report-fraud-form.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/redoak-forms/private-report-fraud-form.html?wcmmode=disabled]
+    // 
+    // # Date format placeholder is incorrect. It should be MM-DD-YY format
+    // # Error message is not shown for email field when the user left the field blank
+    // # Selecting “Others” in *Type of Suspicious Activity* is not revealing the text box.
+    // # Selecting “Others” in *Relationship to Policy* is not revealing the text box
+    // # Selecting “Others” in *Company* is not revealing the text box
+    // # File Upload should be displayed only when the document dropdown is displayed as “Yes”. It is not working as expected.
+    // # Dropdown is not inline with other field width
+    // # -CAPTCHA- not able to author  -- *-_(Will be verified in Stage)_-*
+    // # File upload text should be fixed
+    // # -Dollar Amount Involved ($) is not throwing error when the format is incorrect-
+    // # F-iles that has been uploaded is generating ON the file upload box itself which is hiding the UI-
+    // # -When user selects more than 3 files, it is not throwing error (Neither uploads the file)-
+    // # File upload-> video and zip format is not accepted
+    // # Form submission is not working
+    test.fixme();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-1384)', () => {
+  test('[TEXT-018] @smoke @regression CMS BE: Product Comparison CF - Increase Key Features Max to 4 — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: The Key Features multifield on the Product CF model allows authors to add up to 4 items (previously 3)
+    test.fixme();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-1380)', () => {
+  test('[TEXT-019] @smoke @regression CMS FE: Disclosure List Component – Superscript & Border Rendering — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Hi, VQA done and I found a few small issues. 
+    // 1. The border stroke colour on light background needs to be azul according to design. The colour codes are not matching, kindly check.
+    // 2. For the table, the logic is to add a spacing of 8px on left and right to the text in each cell. The table does not need to be end to end, It can sit upto the width at which it ends. 
+    // Otherwise, all looks good. Thank you.
+    // 
+    // CC: [~accountid:712020:eeba6bf9-a31d-42a5-b064-8fe7f8354b32][~accountid:712020:ca49fe11-4085-496b-8053-2df97275fc28] [~accountid:606ce8584703e400679818a2] [~accountid:712020:19496377-93fa-4b6a-be8c-4f3dac15dfb5] 
+    test.fixme();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-1308)', () => {
+  test('[TEXT-020] @smoke @regression CMS BE: Form Container — Marketo Illustrations Action Type — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Dialog Structure*
+    test.fixme();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-1269)', () => {
+  test('[TEXT-021] @smoke @regression BE: Product Path Detail Card - Superscript — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: h2. Issue:
+    // 
+    // Product Path Detail Card List Item Titles, Descriptor Titles, and CTA Titles don't support superscript text.
+    // 
+    // The Product Path Detail Card currently renders all title text using the same baseline styling. There is no way to mark a portion of the title as superscript when the design or content requires it.
+    // 
+    // Some titles may include disclosure markers, legal references, footnote indicators, or other notation that must appear as superscript. This is demonstrated in the Figma design and is a realistic content requirement for disclosures. Today, when superscript content is provided in the title, it displays the same as regular title text instead of being raised and styled as superscript.
+    // 
+    // h2. Expected behavior
+    // 
+    // The Product Path Detail Card List Item Titles, Descriptor Titles, and CTA Titles should support superscript formatting for selected characters or text within the title.
+    // 
+    // Superscript text should render visually raised relative to the title baseline and use an appropriate reduced size consistent with the Figma design.
+    // 
+    // Only the marked superscript portion should receive superscript styling; the rest of the title should retain the standard title styling.
+    // 
+    // The solution should support real-world disclosure markers such as symbols, numbers, or short text snippets.
+    // 
+    // Current behavior
+    // 
+    // Superscript text in the Product Path Detail Card title is rendered the same as regular title text, with no visual superscript treatment.
+    // 
+    // !Product Path Detail - Super Script.mp4|width=665,alt="Product Path Detail - Super Script.mp4"!
+    test.fixme();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-1231)', () => {
+  test('[TEXT-022] @smoke @regression CMS QA Task: Report Fraud Form – Red Oak Submission Integration — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // Desktop
+    await page.setViewportSize({ width: 1440, height: 900 });
+    const pom1 = new TextPage(page);
+    await pom1.navigate(BASE());
+    await expect(page.locator('.cmp-text').first()).toBeVisible();
+    // Mobile
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.reload({ waitUntil: 'networkidle' });
+    await expect(page.locator('.cmp-text').first()).toBeVisible();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-1230)', () => {
+  test('[TEXT-023] @smoke @regression CMS QA Task: Complaint Form – Red Oak Submission Integration — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // Desktop
+    await page.setViewportSize({ width: 1440, height: 900 });
+    const pom1 = new TextPage(page);
+    await pom1.navigate(BASE());
+    await expect(page.locator('.cmp-text').first()).toBeVisible();
+    // Mobile
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.reload({ waitUntil: 'networkidle' });
+    await expect(page.locator('.cmp-text').first()).toBeVisible();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-1147)', () => {
+  test('[TEXT-024] @smoke @regression CMS BE: Assets - Make the description a textarea field — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: The section for description is too small - we need to make it a much taller area - 4-5 lines is probably good enough or if it can have a scroll or something.
+    // 
+    // !image-20260528-215126.png|width=686,alt="image-20260528-215126.png"!
+    // 
+    //   Acceptance Criteria - the field is taller so authors can see what they’re typing.
+    test.fixme();
+  });
+});
+
+test.describe('Text — CSV Test Cases (GAAM-548)', () => {
+  test('[TEXT-025] @smoke @regression CMS Analytics FE – Page View: Add Product Info to Data Layer — AC1', async ({ page }) => {
+    const pom = new TextPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Functionality*
+    test.fixme();
+  });
+});

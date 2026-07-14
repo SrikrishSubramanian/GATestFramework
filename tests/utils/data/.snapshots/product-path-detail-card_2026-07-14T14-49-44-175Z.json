@@ -1,0 +1,2543 @@
+{
+  "component": "product-path-detail-card",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/product-path-detail-card.html?wcmmode=disabled",
+  "scannedAt": "2026-07-14T14:49:44.174Z",
+  "rootSelector": ".cmp-product-path-detail-card",
+  "elements": [
+    {
+      "name": "a_FindAn_Advisor",
+      "tag": "a",
+      "text": "Find an Advisor",
+      "classes": [
+        "cmp-product-path-detail-card__cta-callout-button"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_self",
+        "data-is-link-external": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--cta-callout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 331,
+        "y": 2859,
+        "width": 177,
+        "height": 44
+      }
+    },
+    {
+      "name": "a_1",
+      "tag": "a",
+      "text": "Download Sales Guide\n                    Opens in a new tab",
+      "classes": [
+        "cmp-product-path-detail-card__cta-button"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_blank",
+        "data-is-link-external": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--featured-case-study"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 688,
+        "y": 6153,
+        "width": 225,
+        "height": 44
+      }
+    },
+    {
+      "name": "a_Learn_More",
+      "tag": "a",
+      "text": "Learn More",
+      "classes": [
+        "cmp-product-path-detail-card__cta-button"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_self",
+        "data-is-link-external": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--featured-case-study"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 688,
+        "y": 7141,
+        "width": 149,
+        "height": 44
+      }
+    },
+    {
+      "name": "img_PersonReviewingFin",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-product-path-detail-card__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/product-path-detail-card/_jcr_content/root/main-par/section_list_image_only/section-par/card_list_image_only/image.coreimg.png/1784039966579/background-image.png",
+        "alt": "Person reviewing financial documents"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--image-only"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 525,
+        "width": 512,
+        "height": 526
+      }
+    },
+    {
+      "name": "img_PortraitOf_Sarah_R",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image",
+        "cmp-product-path-detail-card__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/product-path-detail-card/_jcr_content/root/main-par/section_quote_attr/section-par/card_quote_attr/image.coreimg.png/1784039966579/background-image.png",
+        "width": "944",
+        "height": "532",
+        "itemprop": "contentUrl",
+        "alt": "Portrait of Sarah, retired teacher",
+        "data-src": "/content/global-atlantic/style-guide/components/product-path-detail-card/_jcr_content/root/main-par/section_quote_attr/section-par/card_quote_attr/image.coreimg{.width}.png/1784039966579/background-image.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 7693,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "ul_5",
+      "tag": "ul",
+      "text": "Guaranteed Roll-up\n                                \n                                \n               ",
+      "classes": [
+        "cmp-product-path-detail-card__list-items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 742,
+        "width": 396,
+        "height": 309
+      }
+    },
+    {
+      "name": "ul_6",
+      "tag": "ul",
+      "text": "Inflation Protection\n                                \n                                \n             ",
+      "classes": [
+        "cmp-product-path-detail-card__list-items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7959,
+        "width": 396,
+        "height": 206
+      }
+    },
+    {
+      "name": "div_Path_A",
+      "tag": "div",
+      "text": "Path A",
+      "classes": [
+        "cmp-product-path-detail-card__path-name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 429,
+        "width": 1152,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "Maximize My Reliability\n                \n                \n                    Guaranteed protection ",
+      "classes": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 477,
+        "width": 1152,
+        "height": 622
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "Maximize My Reliability\n                \n                \n                    Guaranteed protection ",
+      "classes": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 525,
+        "width": 396,
+        "height": 526
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "Maximize My Reliability\n                \n                \n                    Guaranteed protection ",
+      "classes": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 525,
+        "width": 396,
+        "height": 139
+      }
+    },
+    {
+      "name": "div_Maximize_My_Reliability",
+      "tag": "div",
+      "text": "Maximize My Reliability",
+      "classes": [
+        "cmp-product-path-detail-card__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 525,
+        "width": 396,
+        "height": 38
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "Guaranteed protection designed to keep pace with your financial goals, whatever the market brings.",
+      "classes": [
+        "cmp-product-path-detail-card__sub-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 571,
+        "width": 396,
+        "height": 92
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "How it works\n                        \n                        \n                            \n        ",
+      "classes": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 712,
+        "width": 396,
+        "height": 339
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "How it works\n                        \n                        \n                            \n        ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 712,
+        "width": 396,
+        "height": 339
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "How it works\n                        \n                        \n                            \n        ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element--list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 712,
+        "width": 396,
+        "height": 339
+      }
+    },
+    {
+      "name": "div_HowItWorks",
+      "tag": "div",
+      "text": "How it works",
+      "classes": [
+        "cmp-product-path-detail-card__list-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 712,
+        "width": 396,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_17",
+      "tag": "li",
+      "text": "Guaranteed Roll-up\n                                \n                                \n               ",
+      "classes": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-items"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 743,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_Guaranteed_Rollup",
+      "tag": "div",
+      "text": "Guaranteed Roll-up",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 767,
+        "width": 396,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "Annual credited interest guaranteed for 10 years regardless of market performance.",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 795,
+        "width": 396,
+        "height": 50
+      }
+    },
+    {
+      "name": "li_20",
+      "tag": "li",
+      "text": "Flexible Income Options\n                                \n                                \n          ",
+      "classes": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-items"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 846,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_Flexible_Income_Options",
+      "tag": "div",
+      "text": "Flexible Income Options",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 870,
+        "width": 396,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "Choose the payout schedule that fits your retirement timeline and needs.",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 898,
+        "width": 396,
+        "height": 50
+      }
+    },
+    {
+      "name": "li_23",
+      "tag": "li",
+      "text": "Principal Protection\n                                \n                                \n             ",
+      "classes": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-items"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 948,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_Principal_Protection",
+      "tag": "div",
+      "text": "Principal Protection",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 972,
+        "width": 396,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_25",
+      "tag": "div",
+      "text": "Your initial premium is protected — no market downside risk.",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1000,
+        "width": 396,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_26",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 525,
+        "width": 512,
+        "height": 526
+      }
+    },
+    {
+      "name": "div_27",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-product-path-detail-card__image-element--image-only"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 525,
+        "width": 512,
+        "height": 526
+      }
+    },
+    {
+      "name": "div_Path_B",
+      "tag": "div",
+      "text": "Path B",
+      "classes": [
+        "cmp-product-path-detail-card__path-name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1431,
+        "width": 1152,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_29",
+      "tag": "div",
+      "text": "Build Guaranteed Income\n                \n                \n                    A reliable income stre",
+      "classes": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1479,
+        "width": 1152,
+        "height": 608
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "Build Guaranteed Income\n                \n                \n                    A reliable income stre",
+      "classes": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1641,
+        "width": 396,
+        "height": 284
+      }
+    },
+    {
+      "name": "div_31",
+      "tag": "div",
+      "text": "Build Guaranteed Income\n                \n                \n                    A reliable income stre",
+      "classes": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1641,
+        "width": 396,
+        "height": 108
+      }
+    },
+    {
+      "name": "div_Build_Guaranteed_Income",
+      "tag": "div",
+      "text": "Build Guaranteed Income",
+      "classes": [
+        "cmp-product-path-detail-card__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1641,
+        "width": 396,
+        "height": 38
+      }
+    },
+    {
+      "name": "div_33",
+      "tag": "div",
+      "text": "A reliable income stream designed to last through every stage of retirement.",
+      "classes": [
+        "cmp-product-path-detail-card__sub-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1688,
+        "width": 396,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_34",
+      "tag": "div",
+      "text": "Income you can count on\n                        \n                        \n                          ",
+      "classes": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1797,
+        "width": 396,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_35",
+      "tag": "div",
+      "text": "Income you can count on\n                        \n                        \n                          ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1797,
+        "width": 396,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_36",
+      "tag": "div",
+      "text": "Income you can count on\n                        \n                        \n                          ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1797,
+        "width": 396,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_IncomeYouCanCountOn",
+      "tag": "div",
+      "text": "Income you can count on",
+      "classes": [
+        "cmp-product-path-detail-card__descriptor-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1797,
+        "width": 396,
+        "height": 27
+      }
+    },
+    {
+      "name": "div_38",
+      "tag": "div",
+      "text": "Earn a starting paycheck with the potential to grow — without taking on market risk. Designed for th",
+      "classes": [
+        "cmp-product-path-detail-card__descriptor-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 1824,
+        "width": 396,
+        "height": 101
+      }
+    },
+    {
+      "name": "div_Path_C",
+      "tag": "div",
+      "text": "Path C",
+      "classes": [
+        "cmp-product-path-detail-card__path-name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 2419,
+        "width": 1152,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_40",
+      "tag": "div",
+      "text": "Secure a Higher Starting Check\n                \n                \n                    Maximise your g",
+      "classes": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 2467,
+        "width": 1152,
+        "height": 608
+      }
+    },
+    {
+      "name": "div_41",
+      "tag": "div",
+      "text": "Secure a Higher Starting Check\n                \n                \n                    Maximise your g",
+      "classes": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2574,
+        "width": 396,
+        "height": 394
+      }
+    },
+    {
+      "name": "div_42",
+      "tag": "div",
+      "text": "Secure a Higher Starting Check\n                \n                \n                    Maximise your g",
+      "classes": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2574,
+        "width": 396,
+        "height": 146
+      }
+    },
+    {
+      "name": "div_SecureA_Higher_Starting_Check",
+      "tag": "div",
+      "text": "Secure a Higher Starting Check",
+      "classes": [
+        "cmp-product-path-detail-card__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2574,
+        "width": 396,
+        "height": 77
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "Maximise your guaranteed monthly income from day one.",
+      "classes": [
+        "cmp-product-path-detail-card__sub-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2659,
+        "width": 396,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_45",
+      "tag": "div",
+      "text": "Ready to get started?\n                        \n                        \n                            ",
+      "classes": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2769,
+        "width": 396,
+        "height": 200
+      }
+    },
+    {
+      "name": "div_46",
+      "tag": "div",
+      "text": "Ready to get started?\n                        \n                        \n                            ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2769,
+        "width": 396,
+        "height": 200
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "Ready to get started?\n                        \n                        \n                            ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element--cta-callout"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2769,
+        "width": 396,
+        "height": 200
+      }
+    },
+    {
+      "name": "div_ReadyToGetStarted",
+      "tag": "div",
+      "text": "Ready to get started?",
+      "classes": [
+        "cmp-product-path-detail-card__cta-callout-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--cta-callout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2794,
+        "width": 187,
+        "height": 54
+      }
+    },
+    {
+      "name": "div_49",
+      "tag": "div",
+      "text": "Talk to a financial professional about which path is right for you.",
+      "classes": [
+        "cmp-product-path-detail-card__cta-callout-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--cta-callout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 2848,
+        "width": 187,
+        "height": 101
+      }
+    },
+    {
+      "name": "div_50",
+      "tag": "div",
+      "text": "Guaranteed protection that keeps pace with your financial goals through every market condition.",
+      "classes": [
+        "cmp-product-path-detail-card__sub-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3550,
+        "width": 396,
+        "height": 92
+      }
+    },
+    {
+      "name": "div_51",
+      "tag": "div",
+      "text": "Key benefits\n                        \n                        \n                            \n        ",
+      "classes": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3691,
+        "width": 396,
+        "height": 562
+      }
+    },
+    {
+      "name": "div_52",
+      "tag": "div",
+      "text": "Key benefits\n                        \n                        \n                            \n        ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3691,
+        "width": 396,
+        "height": 314
+      }
+    },
+    {
+      "name": "div_53",
+      "tag": "div",
+      "text": "Key benefits\n                        \n                        \n                            \n        ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element--list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3691,
+        "width": 396,
+        "height": 314
+      }
+    },
+    {
+      "name": "div_KeyBenefits",
+      "tag": "div",
+      "text": "Key benefits",
+      "classes": [
+        "cmp-product-path-detail-card__list-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3691,
+        "width": 396,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_55",
+      "tag": "div",
+      "text": "Annual credited interest, guaranteed for 10 years.1",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3774,
+        "width": 396,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_56",
+      "tag": "div",
+      "text": "No market downside risk on your initial premium.",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3877,
+        "width": 396,
+        "height": 25
+      }
+    },
+    {
+      "name": "li_57",
+      "tag": "li",
+      "text": "Flexible Riders\n                                \n                                \n                  ",
+      "classes": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-items"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3902,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_Flexible_Riders",
+      "tag": "div",
+      "text": "Flexible Riders",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3926,
+        "width": 396,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_59",
+      "tag": "div",
+      "text": "Optional income rider available at no additional base cost.",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 3954,
+        "width": 396,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_60",
+      "tag": "div",
+      "text": "Ready to learn more?\n                        \n                        \n                            S",
+      "classes": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 4053,
+        "width": 396,
+        "height": 200
+      }
+    },
+    {
+      "name": "div_61",
+      "tag": "div",
+      "text": "Ready to learn more?\n                        \n                        \n                            S",
+      "classes": [
+        "cmp-product-path-detail-card__text-element--cta-callout"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 4053,
+        "width": 396,
+        "height": 200
+      }
+    },
+    {
+      "name": "div_ReadyToLearnMore",
+      "tag": "div",
+      "text": "Ready to learn more?",
+      "classes": [
+        "cmp-product-path-detail-card__cta-callout-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--cta-callout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 4078,
+        "width": 187,
+        "height": 54
+      }
+    },
+    {
+      "name": "div_63",
+      "tag": "div",
+      "text": "Speak with a financial professional about how this path can work for you.",
+      "classes": [
+        "cmp-product-path-detail-card__cta-callout-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--cta-callout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 4132,
+        "width": 187,
+        "height": 101
+      }
+    },
+    {
+      "name": "div_Path_D",
+      "tag": "div",
+      "text": "Path D",
+      "classes": [
+        "cmp-product-path-detail-card__path-name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 4632,
+        "width": 1152,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_Protect_What_Matters_Most",
+      "tag": "div",
+      "text": "Protect What Matters Most",
+      "classes": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 4681,
+        "width": 1152,
+        "height": 608
+      }
+    },
+    {
+      "name": "div_Protect_What_Matters_Most_66",
+      "tag": "div",
+      "text": "Protect What Matters Most",
+      "classes": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 4946,
+        "width": 396,
+        "height": 77
+      }
+    },
+    {
+      "name": "div_Protect_What_Matters_Most_67",
+      "tag": "div",
+      "text": "Protect What Matters Most",
+      "classes": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 4946,
+        "width": 396,
+        "height": 77
+      }
+    },
+    {
+      "name": "div_Protect_What_Matters_Most_68",
+      "tag": "div",
+      "text": "Protect What Matters Most",
+      "classes": [
+        "cmp-product-path-detail-card__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 4946,
+        "width": 396,
+        "height": 77
+      }
+    },
+    {
+      "name": "div_69",
+      "tag": "div",
+      "text": "Client Case Study\n                \n                \n                    I want a safe place to earn ",
+      "classes": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 5717,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "div_70",
+      "tag": "div",
+      "text": "Client Case Study\n                \n                \n                    I want a safe place to earn ",
+      "classes": [
+        "cmp-product-path-detail-card__image-element--featured-case-study"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 5717,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "div_Client_Case_Study",
+      "tag": "div",
+      "text": "Client Case Study",
+      "classes": [
+        "cmp-product-path-detail-card__badge"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--featured-case-study"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 688,
+        "y": 5717,
+        "width": 132,
+        "height": 28
+      }
+    },
+    {
+      "name": "div_72",
+      "tag": "div",
+      "text": "I want a safe place to earn a competitive rate right now without the worry.",
+      "classes": [
+        "cmp-product-path-detail-card__featured-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--featured-case-study"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 688,
+        "y": 6075,
+        "width": 448,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_73",
+      "tag": "div",
+      "text": "Income for life\n                        \n                        \n                            Earn a",
+      "classes": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7000,
+        "width": 396,
+        "height": 77
+      }
+    },
+    {
+      "name": "div_74",
+      "tag": "div",
+      "text": "Income for life\n                        \n                        \n                            Earn a",
+      "classes": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7000,
+        "width": 396,
+        "height": 77
+      }
+    },
+    {
+      "name": "div_75",
+      "tag": "div",
+      "text": "Income for life\n                        \n                        \n                            Earn a",
+      "classes": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7000,
+        "width": 396,
+        "height": 77
+      }
+    },
+    {
+      "name": "div_IncomeForLife",
+      "tag": "div",
+      "text": "Income for life",
+      "classes": [
+        "cmp-product-path-detail-card__descriptor-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7000,
+        "width": 396,
+        "height": 27
+      }
+    },
+    {
+      "name": "div_77",
+      "tag": "div",
+      "text": "Earn a starting paycheck with the potential to increase — without market risk.",
+      "classes": [
+        "cmp-product-path-detail-card__descriptor-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7027,
+        "width": 396,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_78",
+      "tag": "div",
+      "text": "I want the highest possible guaranteed monthly check, starting now.\n\n                \n              ",
+      "classes": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 6705,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "div_79",
+      "tag": "div",
+      "text": "I want the highest possible guaranteed monthly check, starting now.\n\n                \n              ",
+      "classes": [
+        "cmp-product-path-detail-card__image-element--featured-case-study"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 6705,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "div_80",
+      "tag": "div",
+      "text": "I want the highest possible guaranteed monthly check, starting now.",
+      "classes": [
+        "cmp-product-path-detail-card__featured-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--featured-case-study"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 688,
+        "y": 7063,
+        "width": 448,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_81",
+      "tag": "div",
+      "text": "Why this path works\n                        \n                        \n                            \n ",
+      "classes": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7928,
+        "width": 396,
+        "height": 237
+      }
+    },
+    {
+      "name": "div_82",
+      "tag": "div",
+      "text": "Why this path works\n                        \n                        \n                            \n ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7928,
+        "width": 396,
+        "height": 237
+      }
+    },
+    {
+      "name": "div_83",
+      "tag": "div",
+      "text": "Why this path works\n                        \n                        \n                            \n ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element--list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7928,
+        "width": 396,
+        "height": 237
+      }
+    },
+    {
+      "name": "div_WhyThisPathWorks",
+      "tag": "div",
+      "text": "Why this path works",
+      "classes": [
+        "cmp-product-path-detail-card__list-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7928,
+        "width": 396,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_85",
+      "tag": "li",
+      "text": "Inflation Protection\n                                \n                                \n             ",
+      "classes": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-items"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7960,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_Inflation_Protection",
+      "tag": "div",
+      "text": "Inflation Protection",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 7984,
+        "width": 396,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_87",
+      "tag": "div",
+      "text": "Income designed to keep pace with the rising cost of living.",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8012,
+        "width": 396,
+        "height": 50
+      }
+    },
+    {
+      "name": "li_88",
+      "tag": "li",
+      "text": "Lifetime Guarantee\n                                \n                                \n               ",
+      "classes": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-items"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8062,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_Lifetime_Guarantee",
+      "tag": "div",
+      "text": "Lifetime Guarantee",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8086,
+        "width": 396,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_90",
+      "tag": "div",
+      "text": "Payments continue for as long as you live, no matter what.",
+      "classes": [
+        "cmp-product-path-detail-card__list-item-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__list-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8115,
+        "width": 396,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_91",
+      "tag": "div",
+      "text": "I want a starting paycheck that has the potential to increase over time.\n\n                \n         ",
+      "classes": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 7693,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "div_92",
+      "tag": "div",
+      "text": "I want a starting paycheck that has the potential to increase over time.\n\n                \n         ",
+      "classes": [
+        "cmp-product-path-detail-card__image-element--quote"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 7693,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "figure_93",
+      "tag": "figure",
+      "text": "",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 912,
+        "y": 7844,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "picture_94",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 912,
+        "y": 7844,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "blockquote_95",
+      "tag": "blockquote",
+      "text": "I want a starting paycheck that has the potential to increase over time.",
+      "classes": [
+        "cmp-product-path-detail-card__quote"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 688,
+        "y": 8081,
+        "width": 448,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_Sarah_M_Retired_Teacher",
+      "tag": "div",
+      "text": "Sarah M., Retired Teacher",
+      "classes": [
+        "cmp-product-path-detail-card__attribution-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 688,
+        "y": 8155,
+        "width": 448,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_97",
+      "tag": "div",
+      "text": "Guaranteed protection that keeps pace with your needs.",
+      "classes": [
+        "cmp-product-path-detail-card__sub-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8855,
+        "width": 396,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_98",
+      "tag": "div",
+      "text": "Built for reliability\n                        \n                        \n                            ",
+      "classes": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8964,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_99",
+      "tag": "div",
+      "text": "Built for reliability\n                        \n                        \n                            ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-elements"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8964,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_100",
+      "tag": "div",
+      "text": "Built for reliability\n                        \n                        \n                            ",
+      "classes": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8964,
+        "width": 396,
+        "height": 103
+      }
+    },
+    {
+      "name": "div_BuiltForReliability",
+      "tag": "div",
+      "text": "Built for reliability",
+      "classes": [
+        "cmp-product-path-detail-card__descriptor-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8964,
+        "width": 396,
+        "height": 27
+      }
+    },
+    {
+      "name": "div_102",
+      "tag": "div",
+      "text": "Designed from the ground up to deliver consistent guaranteed income no matter what the market does.",
+      "classes": [
+        "cmp-product-path-detail-card__descriptor-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__text-element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 112,
+        "y": 8991,
+        "width": 396,
+        "height": 76
+      }
+    },
+    {
+      "name": "div_103",
+      "tag": "div",
+      "text": "I want the highest possible guaranteed monthly check, starting now.",
+      "classes": [
+        "cmp-product-path-detail-card__image-element--quote"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 8682,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "blockquote_104",
+      "tag": "blockquote",
+      "text": "I want the highest possible guaranteed monthly check, starting now.",
+      "classes": [
+        "cmp-product-path-detail-card__quote"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 688,
+        "y": 9099,
+        "width": 448,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_105",
+      "tag": "div",
+      "text": "I want a safe place to earn a competitive rate right now without the worry.\n\n                \n      ",
+      "classes": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 9712,
+        "width": 512,
+        "height": 630
+      }
+    },
+    {
+      "name": "div_106",
+      "tag": "div",
+      "text": "I want a safe place to earn a competitive rate right now without the worry.\n\n                \n      ",
+      "classes": [
+        "cmp-product-path-detail-card__image-element--quote"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 9712,
+        "width": 512,
+        "height": 630
+      }
+    },
+    {
+      "name": "blockquote_107",
+      "tag": "blockquote",
+      "text": "I want a safe place to earn a competitive rate right now without the worry.",
+      "classes": [
+        "cmp-product-path-detail-card__quote"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 688,
+        "y": 10218,
+        "width": 448,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_James_T_Retired_Firefighter",
+      "tag": "div",
+      "text": "James T., Retired Firefighter",
+      "classes": [
+        "cmp-product-path-detail-card__attribution-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-detail-card__image-element--quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 688,
+        "y": 10292,
+        "width": 448,
+        "height": 18
+      }
+    }
+  ],
+  "pageTitle": "Product Path Detail Card",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

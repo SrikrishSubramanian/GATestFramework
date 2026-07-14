@@ -3,7 +3,6 @@ import { StatisticPage } from '../../../pages/ga/components/statisticPage';
 import ENV from '../../../utils/infra/env';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
-
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -276,5 +275,117 @@ test.describe('Statistic — Accessibility', () => {
     await page.evaluate(() => window.innerHeight));
       }
     }
+  });
+});
+
+test.describe('Statistic — CSV Test Cases (GAAM-1399)', () => {
+  test('[STTS-033] @smoke @regression CMS: FE Product Path Summary Cards – Statistics Headline Does Not Support Superscript Text — AC1', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: The *Statistics Headline* field in the *BE Product Path Summary Cards* component does not support superscript formatting. As a result, content requiring superscript (e.g., trademark symbols, footnote references, or exponents) cannot be displayed correctly.
+    // 
+    // *Steps to Reproduce:*
+    // 
+    // # Navigate to the CMS authoring page containing the *BE Product Path Summary Cards* component.
+    // # Open the *Statistics Headline* field for editing.
+    // # Enter text that requires superscript (e.g., {{95%¹}}, {{10²}}, or {{Performance™}} with the ™ in superscript).
+    // # Save the changes and publish/preview the page.
+    // 
+    // *Actual Result:*
+    // The superscript formatting is not applied or is not supported. The text appears in normal baseline formatting.
+    // 
+    // !image-20260629-103745.png|width=482,alt="image-20260629-103745.png"!
+    // 
+    // 
+    // 
+    // *Expected Result:*
+    // The *Statistics Headline* field should support superscript formatting so that designated characters or text are rendered correctly on the page.
+    // 
+    // !image-20260629-103929.png|width=600,alt="image-20260629-103929.png"!
+    test.fixme();
+  });
+});
+
+test.describe('Statistic — Negative & Boundary', () => {
+  test('[STTS-036] @negative @regression Statistic handles empty content gracefully', async ({ page }) => {
+    // Capture JS errors during page load
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    // Component should render without JS errors
+    expect(errors).toEqual([]);
+    // Root element should still be present (not crash)
+    await expect(page.locator('.cmp-statistic').first()).toBeVisible();
+  });
+
+  test('[STTS-037] @negative @regression Statistic handles missing images', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-statistic img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+});
+
+test.describe('Statistic — Console & Resources', () => {
+  test('[STTS-040] @regression Statistic produces no JS errors', async ({ page }) => {
+    const capture = new ConsoleCapture(page);
+    capture.start();
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    await page.waitForTimeout(1000);
+    const errors = capture.getErrors();
+    capture.stop();
+    expect(errors).toEqual([]);
+  });
+});
+
+test.describe('Statistic — Broken Images', () => {
+  test('[STTS-041] @regression Statistic all images load successfully', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-statistic img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const img = images.nth(i);
+      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+
+  test('[STTS-042] @regression Statistic all images have alt attributes', async ({ page }) => {
+    const pom = new StatisticPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-statistic img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const alt = await images.nth(i).getAttribute('alt');
+      expect(alt).not.toBeNull();
+    }
+  });
+});
+
+test.describe('Statistic — AEM Dialog Configuration', () => {
+  // Regression: GA overlay components must have their own _cq_dialog with helpPath.
+  // Without helpPath, authors see no help link in the component toolbar.
+
+  test('[STTS-046] @author @regression @smoke @smoke Statistic dialog has helpPath configured', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/statistic/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok(), 'Statistic GA dialog overlay not found — component may be missing _cq_dialog').toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath, 'Statistic dialog missing helpPath property').toBeTruthy();
+  });
+
+  test('[STTS-047] @author @regression @smoke Statistic helpPath points to correct component details page', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/statistic/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    if (!response.ok()) { test.skip(); return; }
+    const dialog = await response.json();
+    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });

@@ -1,0 +1,444 @@
+{
+  "component": "detail-hero",
+  "generatedAt": "2026-07-14T14:49:22.722Z",
+  "source": "dom",
+  "entries": {
+    "a_Style_Guide": {
+      "name": "a_Style_Guide",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Component_Library": {
+      "name": "a_Component_Library",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Primary_CTA": {
+      "name": "a_Primary_CTA",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-8992ccbd6a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Primary CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Secondary_CTA": {
+      "name": "a_Secondary_CTA",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-f9be0967af",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secondary CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_4": {
+      "name": "h1_4",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-detail-hero__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet consectetur adipiscing",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Breadcrumb": {
+      "name": "Breadcrumb",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "navigation[name='Breadcrumb']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//nav[contains(@class,'cmp-detail-hero__breadcrumb')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "nav_6": {
+      "name": "nav_6",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "breadcrumb-f8ef86cf78",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//nav[contains(@class,'cmp-breadcrumb')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ol_7": {
+      "name": "ol_7",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ol[contains(@class,'cmp-breadcrumb__list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__wave-overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-detail-hero__wave-overlay')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_9": {
+      "name": "span_9",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__wave-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-detail-hero__wave-2')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_Style_Guide": {
+      "name": "li_Style_Guide",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Component_Library": {
+      "name": "li_Component_Library",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Detail_Hero": {
+      "name": "li_Detail_Hero",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item.cmp-breadcrumb__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Detail Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-detail-hero__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-detail-hero__eyebrow-headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_OptionalEyebrow": {
+      "name": "p_OptionalEyebrow",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-detail-hero__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional eyebrow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_16": {
+      "name": "div_16",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-detail-hero__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_17": {
+      "name": "div_17",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__buttons",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-detail-hero__buttons')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_18": {
+      "name": "i_18",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.arrow-right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Primary_CTA": {
+      "name": "span_Primary_CTA",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Primary CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Secondary_CTA": {
+      "name": "span_Secondary_CTA",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Secondary CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-detail-hero__description.cmp-detail-hero__description--body-l",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-detail-hero__description')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

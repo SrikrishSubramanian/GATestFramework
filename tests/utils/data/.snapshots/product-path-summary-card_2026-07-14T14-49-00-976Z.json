@@ -1,0 +1,1506 @@
+{
+  "component": "product-path-summary-card",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/product-path-summary-card.html?wcmmode=disabled",
+  "scannedAt": "2026-07-14T14:49:00.975Z",
+  "rootSelector": ".cmp-product-path-summary-card",
+  "elements": [
+    {
+      "name": "aLinks",
+      "tag": "a",
+      "text": "links",
+      "classes": [],
+      "attributes": {
+        "href": "#"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 800,
+        "y": 1204,
+        "width": 29,
+        "height": 16
+      }
+    },
+    {
+      "name": "ul_1",
+      "tag": "ul",
+      "text": "Included at no additional cost\n\n                \n\n                    Available 24/7 with dedicated ",
+      "classes": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 498,
+        "width": 390,
+        "height": 154
+      }
+    },
+    {
+      "name": "ul_2",
+      "tag": "ul",
+      "text": "Minimum 1% guaranteed floor\n\n                \n\n                    No surrender charges after year 7",
+      "classes": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1113,
+        "width": 390,
+        "height": 109
+      }
+    },
+    {
+      "name": "ul_3",
+      "tag": "ul",
+      "text": "Principal protection guaranteed\n\n                \n\n                    Predictable, stable returns\n\n",
+      "classes": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1682,
+        "width": 390,
+        "height": 154
+      }
+    },
+    {
+      "name": "ul_4",
+      "tag": "ul",
+      "text": "Predictable growth, regardless of market performance",
+      "classes": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 2319,
+        "width": 390,
+        "height": 18
+      }
+    },
+    {
+      "name": "ul_5",
+      "tag": "ul",
+      "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean me",
+      "classes": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 2820,
+        "width": 390,
+        "height": 127
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "Path A\n        \n\n        \n            Guaranteed roll-up with optional income rider",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 410,
+        "width": 913,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_Path_A",
+      "tag": "div",
+      "text": "Path A",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow-name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 208,
+        "y": 423,
+        "width": 61,
+        "height": 21
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "Guaranteed roll-up with optional income rider",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 269,
+        "y": 423,
+        "width": 410,
+        "height": 21
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "30 %\n\n            \n\n            \n                \n                    Guaranteed Roll-up1\n          ",
+      "classes": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 458,
+        "width": 913,
+        "height": 234
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "30 %\n\n            \n\n            \n                \n                    Guaranteed Roll-up1\n          ",
+      "classes": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 543,
+        "width": 400,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_30_",
+      "tag": "div",
+      "text": "30 %",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 543,
+        "width": 130,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "Guaranteed Roll-up1\n                \n\n                \n                    Annual credited interest,",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 366,
+        "y": 545,
+        "width": 250,
+        "height": 62
+      }
+    },
+    {
+      "name": "div_Guaranteed_Rollup1",
+      "tag": "div",
+      "text": "Guaranteed Roll-up1",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 366,
+        "y": 545,
+        "width": 172,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "Annual credited interest, guaranteed for 10 years1",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 366,
+        "y": 570,
+        "width": 250,
+        "height": 36
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "Included at no additional cost\n\n                \n\n                    Available 24/7 with dedicated ",
+      "classes": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 498,
+        "width": 390,
+        "height": 154
+      }
+    },
+    {
+      "name": "li_IncludedAtNoAdditionalCost",
+      "tag": "li",
+      "text": "Included at no additional cost",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 498,
+        "width": 390,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Available_247WithDedicatedS",
+      "tag": "li",
+      "text": "Available 24/7 with dedicated support",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 529,
+        "width": 390,
+        "height": 33
+      }
+    },
+    {
+      "name": "li_18",
+      "tag": "li",
+      "text": "Fully portable — keeps pace with your career",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 574,
+        "width": 390,
+        "height": 33
+      }
+    },
+    {
+      "name": "li_FlexiblePremiumPaymentOptio",
+      "tag": "li",
+      "text": "Flexible premium payment options2",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 619,
+        "width": 390,
+        "height": 33
+      }
+    },
+    {
+      "name": "div_Path_B",
+      "tag": "div",
+      "text": "Path B",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 1024,
+        "width": 913,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_Path_B_21",
+      "tag": "div",
+      "text": "Path B",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow-name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 208,
+        "y": 1037,
+        "width": 55,
+        "height": 21
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "6.5%\n\n            \n\n            \n                \n                    Annual Yield\n                \n",
+      "classes": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 1073,
+        "width": 913,
+        "height": 189
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "6.5%\n\n            \n\n            \n                \n                    Annual Yield\n                \n",
+      "classes": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 1135,
+        "width": 400,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_65",
+      "tag": "div",
+      "text": "6.5%",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 1135,
+        "width": 132,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_25",
+      "tag": "div",
+      "text": "Annual Yield\n                \n\n                \n                    Subject to market conditions",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 367,
+        "y": 1145,
+        "width": 248,
+        "height": 43
+      }
+    },
+    {
+      "name": "div_Annual_Yield",
+      "tag": "div",
+      "text": "Annual Yield",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 367,
+        "y": 1145,
+        "width": 105,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_SubjectToMarketConditions",
+      "tag": "div",
+      "text": "Subject to market conditions",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 367,
+        "y": 1170,
+        "width": 185,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_28",
+      "tag": "div",
+      "text": "Minimum 1% guaranteed floor\n\n                \n\n                    No surrender charges after year 7",
+      "classes": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1113,
+        "width": 390,
+        "height": 109
+      }
+    },
+    {
+      "name": "li_Minimum_1GuaranteedFloor",
+      "tag": "li",
+      "text": "Minimum 1% guaranteed floor",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1113,
+        "width": 390,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_NoSurrenderChargesAfterYea",
+      "tag": "li",
+      "text": "No surrender charges after year 7",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1143,
+        "width": 390,
+        "height": 33
+      }
+    },
+    {
+      "name": "li_SupportsInlineLinksAndSupe",
+      "tag": "li",
+      "text": "Supports inline links and superscripts1",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1188,
+        "width": 390,
+        "height": 33
+      }
+    },
+    {
+      "name": "div_32",
+      "tag": "div",
+      "text": "Path C\n        \n\n        \n            Conservative growth with capital protection",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 1593,
+        "width": 913,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_Path_C",
+      "tag": "div",
+      "text": "Path C",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow-name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 208,
+        "y": 1606,
+        "width": 60,
+        "height": 21
+      }
+    },
+    {
+      "name": "div_34",
+      "tag": "div",
+      "text": "Conservative growth with capital protection",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 267,
+        "y": 1606,
+        "width": 396,
+        "height": 21
+      }
+    },
+    {
+      "name": "div_35",
+      "tag": "div",
+      "text": "4%\n\n            \n\n            \n                \n                    Fixed Rate\n                \n\n   ",
+      "classes": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 1642,
+        "width": 913,
+        "height": 234
+      }
+    },
+    {
+      "name": "div_36",
+      "tag": "div",
+      "text": "4%\n\n            \n\n            \n                \n                    Fixed Rate",
+      "classes": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 1726,
+        "width": 400,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "4%",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 1726,
+        "width": 82,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_Fixed_Rate",
+      "tag": "div",
+      "text": "Fixed Rate",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 318,
+        "y": 1746,
+        "width": 298,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_Fixed_Rate_39",
+      "tag": "div",
+      "text": "Fixed Rate",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 318,
+        "y": 1746,
+        "width": 89,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_40",
+      "tag": "div",
+      "text": "Principal protection guaranteed\n\n                \n\n                    Predictable, stable returns\n\n",
+      "classes": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1682,
+        "width": 390,
+        "height": 154
+      }
+    },
+    {
+      "name": "li_PrincipalProtectionGuarantee",
+      "tag": "li",
+      "text": "Principal protection guaranteed",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1682,
+        "width": 390,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_PredictableStableReturns",
+      "tag": "li",
+      "text": "Predictable, stable returns",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1712,
+        "width": 390,
+        "height": 33
+      }
+    },
+    {
+      "name": "li_NoMarketRiskExposure",
+      "tag": "li",
+      "text": "No market risk exposure",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1757,
+        "width": 390,
+        "height": 33
+      }
+    },
+    {
+      "name": "li_AnnualLiquidityProvisionsAv",
+      "tag": "li",
+      "text": "Annual liquidity provisions available",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 1802,
+        "width": 390,
+        "height": 33
+      }
+    },
+    {
+      "name": "div_45",
+      "tag": "div",
+      "text": "Path A\n        \n\n        \n            Guaranteed Income Builder Benefit",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 2207,
+        "width": 913,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_Guaranteed_Income_Builder_Bene",
+      "tag": "div",
+      "text": "Guaranteed Income Builder Benefit",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 269,
+        "y": 2220,
+        "width": 325,
+        "height": 21
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "15 %\n\n            \n\n            \n                \n                    Guaranteed Roll-up\n           ",
+      "classes": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 2256,
+        "width": 913,
+        "height": 144
+      }
+    },
+    {
+      "name": "div_48",
+      "tag": "div",
+      "text": "15 %\n\n            \n\n            \n                \n                    Guaranteed Roll-up",
+      "classes": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 2296,
+        "width": 400,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_15_",
+      "tag": "div",
+      "text": "15 %",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 2296,
+        "width": 130,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_Guaranteed_Rollup",
+      "tag": "div",
+      "text": "Guaranteed Roll-up",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 366,
+        "y": 2315,
+        "width": 250,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_Guaranteed_Rollup_51",
+      "tag": "div",
+      "text": "Guaranteed Roll-up",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 366,
+        "y": 2315,
+        "width": 163,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_52",
+      "tag": "div",
+      "text": "Predictable growth, regardless of market performance",
+      "classes": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 2319,
+        "width": 390,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_53",
+      "tag": "li",
+      "text": "Predictable growth, regardless of market performance",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 2319,
+        "width": 390,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_54",
+      "tag": "div",
+      "text": "Path A\n        \n\n        \n            Lorem ipsum dolor sit amet consequat adipscing elit",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 2732,
+        "width": 913,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_55",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit",
+      "classes": [
+        "cmp-product-path-summary-card__eyebrow-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__eyebrow"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 269,
+        "y": 2745,
+        "width": 462,
+        "height": 21
+      }
+    },
+    {
+      "name": "div_56",
+      "tag": "div",
+      "text": "150 %\n\n            \n\n            \n                \n                    Lorem ipsum dolor sit amet, c",
+      "classes": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 184,
+        "y": 2780,
+        "width": 913,
+        "height": 207
+      }
+    },
+    {
+      "name": "div_57",
+      "tag": "div",
+      "text": "150 %\n\n            \n\n            \n                \n                    Lorem ipsum dolor sit amet, c",
+      "classes": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 2827,
+        "width": 400,
+        "height": 112
+      }
+    },
+    {
+      "name": "div_150_",
+      "tag": "div",
+      "text": "150 %",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 216,
+        "y": 2851,
+        "width": 168,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_59",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet, consectetuer adipiscin1\n                \n\n                \n             ",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 403,
+        "y": 2827,
+        "width": 212,
+        "height": 112
+      }
+    },
+    {
+      "name": "div_60",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet, consectetuer adipiscin1",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 403,
+        "y": 2827,
+        "width": 212,
+        "height": 76
+      }
+    },
+    {
+      "name": "div_61",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet, consectetuer adipiscin1",
+      "classes": [
+        "cmp-product-path-summary-card__statistic-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__statistic-details"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 403,
+        "y": 2903,
+        "width": 212,
+        "height": 36
+      }
+    },
+    {
+      "name": "div_62",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean me",
+      "classes": [
+        "cmp-product-path-summary-card__bullets-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 2820,
+        "width": 390,
+        "height": 127
+      }
+    },
+    {
+      "name": "li_63",
+      "tag": "li",
+      "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean me",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 2820,
+        "width": 390,
+        "height": 36
+      }
+    },
+    {
+      "name": "li_64",
+      "tag": "li",
+      "text": "Lorem ipsum dolor sit amet consectetuer adipiscing elit.",
+      "classes": [
+        "cmp-product-path-summary-card__bullet"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-path-summary-card__bullets"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 675,
+        "y": 2868,
+        "width": 390,
+        "height": 33
+      }
+    }
+  ],
+  "pageTitle": "Product Path Summary Card",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

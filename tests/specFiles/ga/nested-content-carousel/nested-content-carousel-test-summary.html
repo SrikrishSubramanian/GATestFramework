@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Content Carousel — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Nested Content Carousel — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>nested-content-carousel.author.spec.ts, nested-content-carousel.images.spec.ts, nested-content-carousel.interaction.spec.ts, nested-content-carousel.matrix.spec.ts, nested-content-carousel.visual.spec.ts</div>
+      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span><span class="source-tag">Image health generator</span><span class="source-tag">Interaction generator</span><span class="source-tag">State matrix generator</span><span class="source-tag">Visual assertion generator</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">64</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">11</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">4</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">7</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Core Structure</h2>
+        <span class="section-count">10</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">NCC-001</td>
+              <td>Carousel root renders with role=&quot;region&quot; and aria-label</td>
+              
+              <td>Carousel root renders with role=&quot;region&quot; and aria-label</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-002</td>
+              <td>Wrapper has white background, border-radius 12px, max-width 616px</td>
+              
+              <td>Wrapper has white background, border-radius 12px, max-width 616px</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-003</td>
+              <td>Cards list is a &lt;ul&gt; element</td>
+              
+              <td>Cards list is a &lt;ul&gt; element</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-004</td>
+              <td>Card is a &lt;li&gt; element inside the list</td>
+              
+              <td>Card is a &lt;li&gt; element inside the list</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-005</td>
+              <td>Headline uses semibold font and 2-line clamp</td>
+              
+              <td>Headline uses semibold font and 2-line clamp</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-006</td>
+              <td>CTA button renders with arrow icon and text</td>
+              
+              <td>CTA button renders with arrow icon and text</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-007</td>
+              <td>Image container CSS rules define 127x95px dimensions and 8px radius</td>
+              
+              <td>Image container CSS rules define 127x95px dimensions and 8px radius</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-008</td>
+              <td>Spacer is a 1px gray divider between content and controls</td>
+              
+              <td>Spacer is a 1px gray divider between content and controls</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-009</td>
+              <td>Controls section renders counter, progress bar, and toggle</td>
+              
+              <td>Controls section renders counter, progress bar, and toggle</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-010</td>
+              <td>No inline styles on structural component elements</td>
+              
+              <td>No inline styles on structural component elements</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Carousel Behavior</h2>
+        <span class="section-count">6</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">NCC-011</td>
+              <td>Counter shows &quot;01&quot; as current slide initially</td>
+              
+              <td>Counter shows &quot;01&quot; as current slide initially</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-012</td>
+              <td>Counter total shows correct number padded to 2 digits</td>
+              
+              <td>Counter total shows correct number padded to 2 digits</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-013</td>
+              <td>Progress bar container is 88px wide and 3px height</td>
+              
+              <td>Progress bar container is 88px wide and 3px height</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-014</td>
+              <td>Progress bar inner .progress starts at 0% or low width on load</td>
+              
+              <td>Progress bar inner .progress starts at 0% or low width on load</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-015</td>
+              <td>Toggle button shows pause icon by default</td>
+              
+              <td>Toggle button shows pause icon by default</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-016</td>
+              <td>Toggle has aria-label &quot;Pause carousel&quot; by default</td>
+              
+              <td>Toggle has aria-label &quot;Pause carousel&quot; by default</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Single Card Mode</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">NCC-017</td>
+              <td>Single-card mode: counter hidden by CSS when .is-single applied</td>
+              
+              <td>Single-card mode: counter hidden by CSS when .is-single applied</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-018</td>
+              <td>Single-card mode: progress bar hidden when .is-single applied</td>
+              
+              <td>Single-card mode: progress bar hidden when .is-single applied</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-019</td>
+              <td>Single-card mode: toggle hidden when .is-single applied</td>
+              
+              <td>Single-card mode: toggle hidden when .is-single applied</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-020</td>
+              <td>Single-card mode: spacer hidden when .is-single applied</td>
+              
+              <td>Single-card mode: spacer hidden when .is-single applied</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Responsive</h2>
+        <span class="section-count">6</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">NCC-021</td>
+              <td>At 390px: image container CSS applies display:none</td>
+              <td class="viewport">Mobile</td>
+              <td>At 390px: image container CSS applies display:none</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-022</td>
+              <td>At 390px: content stacks vertically (flex-direction: column)</td>
+              <td class="viewport">Mobile</td>
+              <td>At 390px: content stacks vertically (flex-direction: column)</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-023</td>
+              <td>At 390px: headline uses smaller font size than desktop</td>
+              <td class="viewport">Mobile</td>
+              <td>At 390px: headline uses smaller font size than desktop</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-024</td>
+              <td>At 1440px: image CSS does not hide the container (display != none)</td>
+              <td class="viewport">Desktop</td>
+              <td>At 1440px: image CSS does not hide the container (display != none)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-025</td>
+              <td>At 1440px: content is side-by-side (flex-direction row)</td>
+              <td class="viewport">Desktop</td>
+              <td>At 1440px: content is side-by-side (flex-direction row)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-026</td>
+              <td>No horizontal overflow on mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>No horizontal overflow on mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Counter Font Colors (GAAM-705)</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">NCC-027</td>
+              <td>Current slide number color is azul (blue)</td>
+              
+              <td>Current slide number color is azul (blue)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-028</td>
+              <td>Total slide number color is helper-dark (muted, not pure black)</td>
+              
+              <td>Total slide number color is helper-dark (muted, not pure black)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-029</td>
+              <td>Counter font is semibold at 12px</td>
+              
+              <td>Counter font is semibold at 12px</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-030</td>
+              <td>Counter colors meet 4.5:1 contrast against white background</td>
+              
+              <td>Counter colors meet 4.5:1 contrast against white background</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Accessibility</h2>
+        <span class="section-count">8</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">NCC-031</td>
+              <td>axe-core scan passes on the carousel</td>
+              
+              <td>axe-core scan passes on the carousel</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-032</td>
+              <td>Root has role=&quot;region&quot;</td>
+              
+              <td>Root has role=&quot;region&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-033</td>
+              <td>Root has aria-label=&quot;Story Cards&quot;</td>
+              
+              <td>Root has aria-label=&quot;Story Cards&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-034</td>
+              <td>Progress bar has aria-hidden=&quot;true&quot;</td>
+              
+              <td>Progress bar has aria-hidden=&quot;true&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-035</td>
+              <td>Screen reader counter (sr-only) exists with meaningful text</td>
+              
+              <td>Screen reader counter (sr-only) exists with meaningful text</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-036</td>
+              <td>CTA links are keyboard focusable</td>
+              
+              <td>CTA links are keyboard focusable</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-037</td>
+              <td>Toggle button is a &lt;button&gt; element (keyboard operable)</td>
+              
+              <td>Toggle button is a &lt;button&gt; element (keyboard operable)</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-038</td>
+              <td>All img elements have alt attribute (empty or descriptive)</td>
+              
+              <td>All img elements have alt attribute (empty or descriptive)</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — AEM Dialog &amp; Overlay</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">NCC-039</td>
+              <td>GA overlay has correct sling:resourceSuperType</td>
+              
+              <td>GA overlay has correct sling:resourceSuperType</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-040</td>
+              <td>componentGroup is &quot;GA Base&quot;</td>
+              
+              <td>componentGroup is &quot;GA Base&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-041</td>
+              <td>Dialog has helpPath configured</td>
+              
+              <td>Dialog has helpPath configured</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-042</td>
+              <td>Dialog has multifield &quot;cards&quot; field</td>
+              
+              <td>Dialog has multifield &quot;cards&quot; field</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-043</td>
+              <td>Headline field is marked as required in dialog</td>
+              
+              <td>Headline field is marked as required in dialog</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Console Errors</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">NCC-044</td>
+              <td>No JS errors on page load</td>
+              
+              <td>No JS errors on page load</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">NCC-045</td>
+              <td>No JS errors during carousel auto-advance (wait 7s)</td>
+              
+              <td>No JS errors during carousel auto-advance (wait 7s)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Image Health</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>No broken images</td>
+              
+              <td>No broken images</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have alt text</td>
+              
+              <td>All images have alt text</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>No oversized images (&gt;500KB)</td>
+              
+              <td>No oversized images (&gt;500KB)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Nested Content Carousel — Interaction Tests</h2>
+        <span class="section-count">12</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-001: Progress bar width increases over time</td>
+              
+              <td>NCC-INT-001: Progress bar width increases over time</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-002: Counter advances from &quot;01&quot; to &quot;02&quot; after ~6-7 seconds</td>
+              
+              <td>NCC-INT-002: Counter advances from &quot;01&quot; to &quot;02&quot; after ~6-7 seconds</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-003: Carousel loops back to &quot;01&quot; after reaching the last slide</td>
+              
+              <td>NCC-INT-003: Carousel loops back to &quot;01&quot; after reaching the last slide</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-004: Clicking toggle button adds &quot;.is-paused&quot; class</td>
+              
+              <td>NCC-INT-004: Clicking toggle button adds &quot;.is-paused&quot; class</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-005: Clicking toggle changes aria-label to &quot;Play carousel&quot;</td>
+              
+              <td>NCC-INT-005: Clicking toggle changes aria-label to &quot;Play carousel&quot;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-006: Clicking toggle twice resumes playing (removes &quot;.is-paused&quot;)</td>
+              
+              <td>NCC-INT-006: Clicking toggle twice resumes playing (removes &quot;.is-paused&quot;)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-007: Progress bar stops advancing when paused</td>
+              
+              <td>NCC-INT-007: Progress bar stops advancing when paused</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-008: Tab navigation reaches the toggle button</td>
+              
+              <td>NCC-INT-008: Tab navigation reaches the toggle button</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-009: Space/Enter on toggle button toggles pause state</td>
+              
+              <td>NCC-INT-009: Space/Enter on toggle button toggles pause state</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-010: CTA link is focusable via Tab</td>
+              
+              <td>NCC-INT-010: CTA link is focusable via Tab</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-011: CTA hover changes icon background color (azul 10% opacity)</td>
+              
+              <td>NCC-INT-011: CTA hover changes icon background color (azul 10% opacity)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>NCC-INT-012: CTA hover increases gap between icon and text</td>
+              
+              <td>NCC-INT-012: CTA hover increases gap between icon and text</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>NestedContentCarousel — Visual Regression</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>Desktop screenshot matches baseline</td>
+              <td class="viewport">Desktop</td>
+              <td>Desktop screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Mobile screenshot matches baseline</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Tablet screenshot matches baseline</td>
+              <td class="viewport">Tablet</td>
+              <td>Tablet screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>nested-content-carousel.author.spec.ts</code>, <code>nested-content-carousel.images.spec.ts</code>, <code>nested-content-carousel.interaction.spec.ts</code>, <code>nested-content-carousel.visual.spec.ts</code>
+    &mdash; nested-content-carousel &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

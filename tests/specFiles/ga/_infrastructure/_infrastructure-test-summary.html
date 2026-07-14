@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Infrastructure — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1> Infrastructure — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>aem-config-validation.spec.ts, aem-infrastructure-validation.spec.ts, aem-quality-validation.spec.ts, api-mock.spec.ts, content-driven.spec.ts</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">45</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">6</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">3</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">4</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Template Policy Mapping — Container Policies Allow Expected Components</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>Layout container policy includes all GA content components</td>
+              
+              <td>Layout container policy includes all GA content components</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Accordion-item policy allows content components</td>
+              
+              <td>Accordion-item policy allows content components</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Style System — CSS Class Existence</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>Style system CSS classes exist in compiled GA stylesheet</td>
+              
+              <td>Style system CSS classes exist in compiled GA stylesheet</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Section background style classes produce non-transparent backgrounds</td>
+              
+              <td>Section background style classes produce non-transparent backgrounds</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Component ResourceType Chain — GA Overlays</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>All GA overlays have componentGroup=&quot;GA Base&quot;</td>
+              
+              <td>All GA overlays have componentGroup=&quot;GA Base&quot;</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Clientlib Loading — GA Stylesheets and Scripts</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>GA clientlib CSS is loaded on the page</td>
+              
+              <td>GA clientlib CSS is loaded on the page</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GA clientlib CSS loads without HTTP errors</td>
+              
+              <td>GA clientlib CSS loads without HTTP errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GA clientlib JS loads without HTTP errors</td>
+              
+              <td>GA clientlib JS loads without HTTP errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Page has non-zero GA-specific CSS rules loaded</td>
+              
+              <td>Page has non-zero GA-specific CSS rules loaded</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Compiled CSS is not empty or trivially small</td>
+              
+              <td>Compiled CSS is not empty or trivially small</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>API Mocking — Error States</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>Component handles API error gracefully</td>
+              
+              <td>Component handles API error gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Component handles empty API response</td>
+              
+              <td>Component handles empty API response</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Content-Driven Validation</h2>
+        <span class="section-count">33</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: content_trail.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: content_trail.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: content_trail_copy.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: content_trail_copy.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: content_trail_copy_249442947.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: content_trail_copy_249442947.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: content_trail_copy_c.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: content_trail_copy_c.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: content_trail_copy_c_2003914106.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: content_trail_copy_c_2003914106.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: content_trail_copy_c_1509132237.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: content_trail_copy_c_1509132237.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: content_trail_copy_1521364670.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: content_trail_copy_1521364670.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: feature_banner_one.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: feature_banner_one.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: feature_banner_three.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: feature_banner_three.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: feature_banner_four.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: feature_banner_four.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: feature_banner_five.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: feature_banner_five.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: feature_banner_six.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: feature_banner_six.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: feature_banner_seven.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: feature_banner_seven.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: feature_banner_eight.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: feature_banner_eight.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section_v1.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section_v1.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section_v2.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section_v2.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section_v3.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section_v3.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section_v4.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section_v4.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section_v5.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section_v5.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section_v6.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section_v6.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section_v7.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section_v7.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: section_v8.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: section_v8.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: hero_fifty_fifty.fileReference: DAM path contains spaces</td>
+              
+              <td>Content: hero_fifty_fifty.fileReference: DAM path contains spaces</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: hero_xl.fileReference: DAM path contains spaces</td>
+              
+              <td>Content: hero_xl.fileReference: DAM path contains spaces</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: hero_large_desc.fileReference: DAM path contains spaces</td>
+              
+              <td>Content: hero_large_desc.fileReference: DAM path contains spaces</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: root.linkDestination: internal link may be missing .html extension</td>
+              
+              <td>Content: root.linkDestination: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: workbench_one.linkURL: internal link may be missing .html extension</td>
+              
+              <td>Content: workbench_one.linkURL: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: workbench_two.linkURL: internal link may be missing .html extension</td>
+              
+              <td>Content: workbench_two.linkURL: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: workbench_three.linkURL: internal link may be missing .html extension</td>
+              
+              <td>Content: workbench_three.linkURL: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: workbench_four.linkURL: internal link may be missing .html extension</td>
+              
+              <td>Content: workbench_four.linkURL: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: workbench_five.linkURL: internal link may be missing .html extension</td>
+              
+              <td>Content: workbench_five.linkURL: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Content: workbench_six.linkURL: internal link may be missing .html extension</td>
+              
+              <td>Content: workbench_six.linkURL: internal link may be missing .html extension</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>aem-infrastructure-validation.spec.ts</code>, <code>api-mock.spec.ts</code>, <code>content-driven.spec.ts</code>
+    &mdash; _infrastructure &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

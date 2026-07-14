@@ -69,22 +69,19 @@ export function writeSpecFromCSV(
   ensureDir(dir);
 
   const specPath = path.join(dir, `${group.component}.${options.mode}.spec.ts`);
-  let testCount = 0;
-  const usedCategories = new Set<string>();
   const prefix = componentToPrefix(group.component);
-  let idCounter = options.startTestId || 1;
+  const existingSpec = parseExistingSpec(specPath);
+  let idCounter = existingSpec ? existingSpec.maxTestId + 1 : (options.startTestId || 1);
 
   const authBlock = buildAuthBlock(options.mode);
-  const describes: string[] = [];
+  const blocks: DescribeBlock[] = [];
 
   // Generate tests from CSV test cases with real assertions
   const csvAssertions: InferredAssertion[] = [];
   if (group.testCases.length > 0) {
     const sel = options.rootSelector || `.cmp-${group.component}`;
     const tests = group.testCases.map(tc => {
-      testCount++;
       const testId = formatTestId(prefix, idCounter++);
-      usedCategories.add('csv');
       const tags = tc.tags.length > 0
         ? tc.tags.map(t => t.startsWith('@') ? t : `@${t}`).join(' ')
         : formatTags(getTagsForTest('happy-path', tc.priority, options.a11yLevel));
@@ -105,32 +102,41 @@ ${inferred.code}
   });`;
     });
 
-    describes.push(`test.describe('${toPascalCase(group.component)} — CSV Test Cases', () => {
-${tests.join('\n\n')}
-});`);
+    // Suffix with the source ticket/id (e.g. "GAAM-1481") so repeated runs for
+    // different tickets against the same component don't collide on describe title.
+    const sourceKeyMatch = group.testCases[0]?.testId.match(/^([A-Za-z]+-\d+)/);
+    const describeSuffix = sourceKeyMatch ? ` (${sourceKeyMatch[1]})` : '';
+    const title = `${toPascalCase(group.component)} — CSV Test Cases${describeSuffix}`;
+    blocks.push({
+      title,
+      category: 'csv',
+      count: tests.length,
+      code: `test.describe('${title}', () => {\n${tests.join('\n\n')}\n});`,
+    });
   }
 
   // Generate category-based tests
   for (const category of options.categories) {
     const catTests = generateCategoryTests(group.component, category, options, prefix, idCounter);
     if (catTests) {
-      testCount += catTests.count;
       idCounter += catTests.count;
-      usedCategories.add(category);
-      describes.push(catTests.code);
+      const m = catTests.code.match(/^test\.describe\('([^']*)'/);
+      blocks.push({ title: m ? m[1] : category, category, count: catTests.count, code: catTests.code });
     }
   }
 
   // Build imports including any assertion library imports needed by inferred code
   const extraImports = collectImports(csvAssertions);
   const imports = buildImports(options, extraImports);
-  const content = `${imports}\n${authBlock}\n${describes.join('\n\n')}\n`;
+  const { content, kept } = assembleSpecContent(specPath, imports, authBlock, blocks);
   fs.writeFileSync(specPath, content, 'utf-8');
 
   // Generate HTML summary for the component directory
   generateHTMLSummaryForComponent(dir, group.component);
 
-  return { specPath, testCount, categories: Array.from(usedCategories) };
+  const testCount = kept.reduce((sum, b) => sum + b.count, 0);
+  const categories = Array.from(new Set(kept.map(b => b.category)));
+  return { specPath, testCount, categories };
 }
 
 /**
@@ -172,28 +178,29 @@ export function writeComponentSpec(options: SpecWriterOptions): SpecWriteResult 
   ensureDir(dir);
 
   const specPath = path.join(dir, `${options.component}.${options.mode}.spec.ts`);
-  let testCount = 0;
-  const usedCategories: string[] = [];
   const prefix = componentToPrefix(options.component);
-  let idCounter = options.startTestId || 1;
+  const existingSpec = parseExistingSpec(specPath);
+  let idCounter = existingSpec ? existingSpec.maxTestId + 1 : (options.startTestId || 1);
 
   const imports = buildImports(options);
-  const describes: string[] = [];
+  const blocks: DescribeBlock[] = [];
 
   for (const category of options.categories) {
     const catTests = generateCategoryTests(options.component, category, options, prefix, idCounter);
     if (catTests) {
-      testCount += catTests.count;
       idCounter += catTests.count;
-      usedCategories.push(category);
-      describes.push(catTests.code);
+      const m = catTests.code.match(/^test\.describe\('([^']*)'/);
+      blocks.push({ title: m ? m[1] : category, category, count: catTests.count, code: catTests.code });
     }
   }
 
   const authBlock = buildAuthBlock(options.mode);
 
-  const content = `${imports}\n${authBlock}\n${describes.join('\n\n')}\n`;
+  const { content, kept } = assembleSpecContent(specPath, imports, authBlock, blocks);
   fs.writeFileSync(specPath, content, 'utf-8');
+
+  const testCount = kept.reduce((sum, b) => sum + b.count, 0);
+  const usedCategories = Array.from(new Set(kept.map(b => b.category)));
 
   // Generate HTML summary for the component directory
   generateHTMLSummaryForComponent(dir, options.component);
@@ -268,10 +275,10 @@ function buildImports(options: SpecWriterOptions, extraImports: string[] = []): 
   const lines = [
     `import { test, expect } from '@playwright/test';`,
     `import { ${options.pomClassName} } from '${options.pomImportPath}';`,
-    `import ENV from '../infra/env';`,
-    `import { ConsoleCapture } from '../infra/console-capture';`,
-    `import { attachConsoleCapture, annotateEnvironment } from '../infra/report-enhancer';`,
-    `import { loginToAEMAuthor } from '../infra/auth-fixture';`,
+    `import ENV from '../../../utils/infra/env';`,
+    `import { ConsoleCapture } from '../../../utils/infra/console-capture';`,
+    `import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';`,
+    `import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';`,
   ];
 
   if (options.a11yLevel !== 'none') {
@@ -604,4 +611,104 @@ function ensureDir(dir: string): void {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
+}
+
+interface ExistingSpecInfo {
+  importLines: string[];
+  body: string;
+  describeTitles: Set<string>;
+  maxTestId: number;
+}
+
+/**
+ * Read a previously generated spec file (if present) so new test cases can be
+ * merged into it instead of clobbering existing coverage. Generator output
+ * always starts with a block of `import` lines (some hand-edited files have
+ * blank lines interspersed within that block), so everything from the first
+ * true non-import statement onward is treated as preserved body content.
+ */
+function parseExistingSpec(specPath: string): ExistingSpecInfo | null {
+  if (!fs.existsSync(specPath)) return null;
+  // Repo checkouts normalize to CRLF (core.autocrlf=true) while generated
+  // content uses plain LF — normalize so line-exact import dedup and line
+  // splitting behave the same regardless of the existing file's line endings.
+  const content = fs.readFileSync(specPath, 'utf-8').replace(/\r\n/g, '\n');
+
+  const lines = content.split('\n');
+  let i = 0;
+  while (i < lines.length) {
+    const trimmed = lines[i].trim();
+    if (trimmed.startsWith('import ')) { i++; continue; }
+    if (trimmed === '') {
+      // Blank line — only part of the import block if a later non-blank
+      // line is also an import (some existing files have stray blank
+      // lines mid-block); otherwise this is the true body boundary.
+      let j = i + 1;
+      while (j < lines.length && lines[j].trim() === '') j++;
+      if (j < lines.length && lines[j].trim().startsWith('import ')) { i = j; continue; }
+    }
+    break;
+  }
+  const importLines = lines.slice(0, i).filter(l => l.trim() !== '');
+  // Strip leading blank lines so the imports/body boundary is always rebuilt
+  // fresh with an explicit separator, rather than depending on whatever
+  // leading whitespace happened to survive from the previous write.
+  const body = lines.slice(i).join('\n').replace(/^\n+/, '');
+
+  const describeTitles = new Set<string>();
+  for (const m of content.matchAll(/test\.describe\('((?:[^'\\]|\\.)*)'/g)) {
+    describeTitles.add(m[1]);
+  }
+
+  let maxTestId = 0;
+  for (const m of content.matchAll(/\[[A-Za-z]+-(\d+)\]/g)) {
+    maxTestId = Math.max(maxTestId, parseInt(m[1], 10));
+  }
+
+  return { importLines, body, describeTitles, maxTestId };
+}
+
+/** Merge new import lines into an existing import block, deduping exact matches. */
+function mergeImportLines(existingImportLines: string[], newImportsBlock: string): string[] {
+  const merged = [...existingImportLines];
+  for (const imp of newImportsBlock.split('\n')) {
+    if (imp && !merged.includes(imp)) merged.push(imp);
+  }
+  return merged;
+}
+
+interface DescribeBlock {
+  title: string;
+  code: string;
+  category: string;
+  count: number;
+}
+
+/**
+ * Assemble final spec content, merging into an existing file when present so
+ * prior test coverage (from earlier tickets/CSV runs) is preserved rather than
+ * overwritten. Blocks whose title already exists in the file are skipped to
+ * avoid duplicate boilerplate blocks across repeated runs; the returned
+ * `kept` list reflects only what was actually written, for accurate reporting.
+ */
+function assembleSpecContent(
+  specPath: string,
+  imports: string,
+  authBlock: string,
+  blocks: DescribeBlock[]
+): { content: string; kept: DescribeBlock[] } {
+  const existing = parseExistingSpec(specPath);
+  if (!existing) {
+    const content = `${imports}\n${authBlock}\n${blocks.map(b => b.code).join('\n\n')}\n`;
+    return { content, kept: blocks };
+  }
+
+  const kept = blocks.filter(b => !existing.describeTitles.has(b.title));
+
+  const mergedImportLines = mergeImportLines(existing.importLines, imports);
+  const body = existing.body.replace(/\s*$/, '');
+  const appended = kept.length > 0 ? `\n\n${kept.map(b => b.code).join('\n\n')}` : '';
+  // Always rebuild the imports/body boundary with an explicit blank line —
+  // never rely on leading whitespace surviving inside `body` for separation.
+  return { content: `${mergedImportLines.join('\n')}\n\n${body}${appended}\n`, kept };
 }

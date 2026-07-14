@@ -1,0 +1,473 @@
+{
+  "component": "quote",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/quote.html?wcmmode=disabled",
+  "scannedAt": "2026-07-14T15:05:27.269Z",
+  "rootSelector": ".cmp-quote",
+  "elements": [
+    {
+      "name": "div_0",
+      "tag": "div",
+      "text": "Global Atlantic has been an outstanding partner — their deep expertise and genuine commitment to cli",
+      "classes": [
+        "cmp-quote__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 111,
+        "y": 638,
+        "width": 1058,
+        "height": 106
+      }
+    },
+    {
+      "name": "div_1",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-quote__icon-wrapper"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 111,
+        "y": 638,
+        "width": 40,
+        "height": 38
+      }
+    },
+    {
+      "name": "span_2",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-quote__icon"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__icon-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_3",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-quote__icon-quote"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__icon-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 111,
+        "y": 638,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "Global Atlantic has been an outstanding partner — their deep expertise and genuine commitment to cli",
+      "classes": [
+        "cmp-quote__text-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 638,
+        "width": 986,
+        "height": 106
+      }
+    },
+    {
+      "name": "blockquote_5",
+      "tag": "blockquote",
+      "text": "Global Atlantic has been an outstanding partner — their deep expertise and genuine commitment to cli",
+      "classes": [
+        "cmp-quote__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__text-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 638,
+        "width": 986,
+        "height": 106
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-quote__author"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_7",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-quote__accents-line"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__author"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "The best investment you can make is in yourself and the relationships you build along the way.",
+      "classes": [
+        "cmp-quote__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 111,
+        "y": 2773,
+        "width": 1058,
+        "height": 70
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "The best investment you can make is in yourself and the relationships you build along the way.",
+      "classes": [
+        "cmp-quote__text-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 2773,
+        "width": 986,
+        "height": 70
+      }
+    },
+    {
+      "name": "blockquote_10",
+      "tag": "blockquote",
+      "text": "The best investment you can make is in yourself and the relationships you build along the way.",
+      "classes": [
+        "cmp-quote__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__text-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 2773,
+        "width": 986,
+        "height": 70
+      }
+    },
+    {
+      "name": "div_XSTopAndBottomPaddingExam",
+      "tag": "div",
+      "text": "XS top and bottom padding example.",
+      "classes": [
+        "cmp-quote__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 111,
+        "y": 7302,
+        "width": 1058,
+        "height": 38
+      }
+    },
+    {
+      "name": "div_XSTopAndBottomPaddingExam_12",
+      "tag": "div",
+      "text": "XS top and bottom padding example.",
+      "classes": [
+        "cmp-quote__text-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 7302,
+        "width": 547,
+        "height": 38
+      }
+    },
+    {
+      "name": "blockquote_XSTopAndBottomPaddingExam",
+      "tag": "blockquote",
+      "text": "XS top and bottom padding example.",
+      "classes": [
+        "cmp-quote__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__text-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 7302,
+        "width": 547,
+        "height": 38
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "M (medium) top and bottom padding example.",
+      "classes": [
+        "cmp-quote__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 111,
+        "y": 7738,
+        "width": 1058,
+        "height": 38
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "M (medium) top and bottom padding example.",
+      "classes": [
+        "cmp-quote__text-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 7738,
+        "width": 686,
+        "height": 38
+      }
+    },
+    {
+      "name": "blockquote_16",
+      "tag": "blockquote",
+      "text": "M (medium) top and bottom padding example.",
+      "classes": [
+        "cmp-quote__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__text-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 7738,
+        "width": 686,
+        "height": 38
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "No padding top or bottom — useful when embedding inside a grid alongside other components.",
+      "classes": [
+        "cmp-quote__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 111,
+        "y": 8154,
+        "width": 1058,
+        "height": 70
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "No padding top or bottom — useful when embedding inside a grid alongside other components.",
+      "classes": [
+        "cmp-quote__text-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 8154,
+        "width": 986,
+        "height": 70
+      }
+    },
+    {
+      "name": "blockquote_19",
+      "tag": "blockquote",
+      "text": "No padding top or bottom — useful when embedding inside a grid alongside other components.",
+      "classes": [
+        "cmp-quote__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-quote__text-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 183,
+        "y": 8154,
+        "width": 986,
+        "height": 70
+      }
+    }
+  ],
+  "pageTitle": "Quote",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

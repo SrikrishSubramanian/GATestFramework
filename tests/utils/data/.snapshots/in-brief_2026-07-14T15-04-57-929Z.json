@@ -1,0 +1,106 @@
+{
+  "component": "in-brief",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/in-brief.html?wcmmode=disabled",
+  "scannedAt": "2026-07-14T15:04:57.928Z",
+  "rootSelector": ".cmp-in-brief",
+  "elements": [
+    {
+      "name": "a_LearnMoreAboutRateAdjustme",
+      "tag": "a",
+      "text": "Learn more about rate adjustments",
+      "classes": [],
+      "attributes": {
+        "title": "alt",
+        "href": "/content/global-atlantic/style-guide/components/in-brief.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 120,
+        "y": 360,
+        "width": 1014,
+        "height": 46
+      }
+    },
+    {
+      "name": "h3_In_Brief",
+      "tag": "h3",
+      "text": "In Brief",
+      "classes": [
+        "cmp-in-brief__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-in-brief"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 251,
+        "width": 1088,
+        "height": 26
+      }
+    },
+    {
+      "name": "ul_2",
+      "tag": "ul",
+      "text": "Fixed index annuities credit interest based on the performance of an external index, offering growth",
+      "classes": [
+        "cmp-in-brief__pointer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-in-brief__pointers"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 295,
+        "width": 1088,
+        "height": 175
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "Fixed index annuities credit interest based on the performance of an external index, offering growth",
+      "classes": [
+        "cmp-in-brief__pointers"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-in-brief"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 295,
+        "width": 1088,
+        "height": 175
+      }
+    }
+  ],
+  "pageTitle": "In Brief",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

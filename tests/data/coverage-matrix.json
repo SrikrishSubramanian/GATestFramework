@@ -375,17 +375,10 @@
     "pomPath": "../pages/ga/components/buttonPage.ts",
     "sidecarPath": "../pages/ga/components/buttonPage.locators.json",
     "specPath": "../specFiles/ga/button/button.author.spec.ts",
-    "elementCount": 17,
+    "elementCount": 9,
     "testCount": 0,
-    "categories": [
-      "happy-path",
-      "negative",
-      "responsive",
-      "console-errors",
-      "broken-images",
-      "accessibility"
-    ],
-    "generatedAt": "2026-03-18T11:46:22.074Z",
+    "categories": [],
+    "generatedAt": "2026-07-14T14:43:39.739Z",
     "source": "dom"
   },
   "feature-banner": {
@@ -678,5 +671,233 @@
     ],
     "generatedAt": "2026-05-04T00:00:00.000Z",
     "source": "jira"
+  },
+  "product-comparison-card": {
+    "pomClass": "ProductComparisonCardPage",
+    "pomPath": "../pages/ga/components/productComparisonCardPage.ts",
+    "sidecarPath": "../pages/ga/components/productComparisonCardPage.locators.json",
+    "specPath": "../specFiles/ga/product-comparison-card/product-comparison-card.author.spec.ts",
+    "elementCount": 66,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T14:48:50.752Z",
+    "source": "dom"
+  },
+  "product-path-summary-card": {
+    "pomClass": "ProductPathSummaryCardPage",
+    "pomPath": "../pages/ga/components/productPathSummaryCardPage.ts",
+    "sidecarPath": "../pages/ga/components/productPathSummaryCardPage.locators.json",
+    "specPath": "../specFiles/ga/product-path-summary-card/product-path-summary-card.author.spec.ts",
+    "elementCount": 65,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T14:49:01.007Z",
+    "source": "dom"
+  },
+  "benefits-table": {
+    "pomClass": "BenefitsTablePage",
+    "pomPath": "../pages/ga/components/benefitsTablePage.ts",
+    "sidecarPath": "../pages/ga/components/benefitsTablePage.locators.json",
+    "specPath": "../specFiles/ga/benefits-table/benefits-table.author.spec.ts",
+    "elementCount": 10,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T14:49:11.605Z",
+    "source": "dom"
+  },
+  "detail-hero": {
+    "pomClass": "DetailHeroPage",
+    "pomPath": "../pages/ga/components/detailHeroPage.ts",
+    "sidecarPath": "../pages/ga/components/detailHeroPage.locators.json",
+    "specPath": "../specFiles/ga/detail-hero/detail-hero.author.spec.ts",
+    "elementCount": 22,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T14:49:22.755Z",
+    "source": "dom"
+  },
+  "product-path-detail-card": {
+    "pomClass": "ProductPathDetailCardPage",
+    "pomPath": "../pages/ga/components/productPathDetailCardPage.ts",
+    "sidecarPath": "../pages/ga/components/productPathDetailCardPage.locators.json",
+    "specPath": "../specFiles/ga/product-path-detail-card/product-path-detail-card.author.spec.ts",
+    "elementCount": 109,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T14:49:44.227Z",
+    "source": "dom"
+  },
+  "content-highlight": {
+    "pomClass": "ContentHighlightPage",
+    "pomPath": "../pages/ga/components/contentHighlightPage.ts",
+    "sidecarPath": "../pages/ga/components/contentHighlightPage.locators.json",
+    "specPath": "../specFiles/ga/content-highlight/content-highlight.author.spec.ts",
+    "elementCount": 54,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T15:04:17.682Z",
+    "source": "dom"
+  },
+  "decision-tree": {
+    "pomClass": "DecisionTreePage",
+    "pomPath": "../pages/ga/components/decisionTreePage.ts",
+    "sidecarPath": "../pages/ga/components/decisionTreePage.locators.json",
+    "specPath": "../specFiles/ga/decision-tree/decision-tree.author.spec.ts",
+    "elementCount": 65,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T15:04:28.798Z",
+    "source": "dom"
+  },
+  "enhanced-related-content": {
+    "pomClass": "EnhancedRelatedContentPage",
+    "pomPath": "../pages/ga/components/enhancedRelatedContentPage.ts",
+    "sidecarPath": "../pages/ga/components/enhancedRelatedContentPage.locators.json",
+    "specPath": "../specFiles/ga/enhanced-related-content/enhanced-related-content.author.spec.ts",
+    "elementCount": 55,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T15:04:48.508Z",
+    "source": "dom"
+  },
+  "in-brief": {
+    "pomClass": "InBriefPage",
+    "pomPath": "../pages/ga/components/inBriefPage.ts",
+    "sidecarPath": "../pages/ga/components/inBriefPage.locators.json",
+    "specPath": "../specFiles/ga/in-brief/in-brief.author.spec.ts",
+    "elementCount": 4,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T15:04:57.952Z",
+    "source": "dom"
+  },
+  "insights-detail-hero": {
+    "pomClass": "InsightsDetailHeroPage",
+    "pomPath": "../pages/ga/components/insightsDetailHeroPage.ts",
+    "sidecarPath": "../pages/ga/components/insightsDetailHeroPage.locators.json",
+    "specPath": "../specFiles/ga/insights-detail-hero/insights-detail-hero.author.spec.ts",
+    "elementCount": 14,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T15:05:07.642Z",
+    "source": "dom"
+  },
+  "insights-listing": {
+    "pomClass": "InsightsListingPage",
+    "pomPath": "../pages/ga/components/insightsListingPage.ts",
+    "sidecarPath": "../pages/ga/components/insightsListingPage.locators.json",
+    "specPath": "../specFiles/ga/insights-listing/insights-listing.author.spec.ts",
+    "elementCount": 40,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T15:05:17.635Z",
+    "source": "dom"
+  },
+  "quote": {
+    "pomClass": "QuotePage",
+    "pomPath": "../pages/ga/components/quotePage.ts",
+    "sidecarPath": "../pages/ga/components/quotePage.locators.json",
+    "specPath": "../specFiles/ga/quote/quote.author.spec.ts",
+    "elementCount": 20,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-14T15:05:27.293Z",
+    "source": "dom"
   }
 }

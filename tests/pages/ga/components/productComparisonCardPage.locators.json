@@ -1,0 +1,1273 @@
+{
+  "component": "product-comparison-card",
+  "generatedAt": "2026-07-14T14:48:50.733Z",
+  "source": "dom",
+  "entries": {
+    "Explore_Forge_Accumulation": {
+      "name": "Explore_Forge_Accumulation",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Explore Forge Accumulation']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Forge Accumulation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Explore_Heritage_Income": {
+      "name": "Explore_Heritage_Income",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Explore Heritage Income']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Heritage Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Explore_Foundation_Plus": {
+      "name": "Explore_Foundation_Plus",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Explore Foundation Plus']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Foundation Plus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Forge_Accumulation": {
+      "name": "h3_Forge_Accumulation",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-product-comparison-card__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Forge Accumulation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Heritage_Income": {
+      "name": "h3_Heritage_Income",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-product-comparison-card__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Heritage Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Foundation_Plus": {
+      "name": "h3_Foundation_Plus",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-product-comparison-card__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Foundation Plus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_7": {
+      "name": "ul_7",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-product-comparison-card__list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_8": {
+      "name": "ul_8",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-values",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-product-comparison-card__element-values')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_9": {
+      "name": "ul_9",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-values",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-product-comparison-card__element-values')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_10": {
+      "name": "ul_10",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-values",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-product-comparison-card__element-values')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__swiper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__swiper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_12": {
+      "name": "li_12",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Forge_Accumulation": {
+      "name": "div_Forge_Accumulation",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__top",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__top')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Forge Accumulation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Forge_Accumulation_14": {
+      "name": "div_Forge_Accumulation_14",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Forge Accumulation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_16": {
+      "name": "div_16",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_17": {
+      "name": "div_17",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element--list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__element--list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Issue_Ages": {
+      "name": "span_Issue_Ages",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Issue Ages",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_1880": {
+      "name": "span_1880",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "18–80",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_22": {
+      "name": "div_22",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element--list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__element--list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Withdrawal_Charge_Period": {
+      "name": "span_Withdrawal_Charge_Period",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Withdrawal Charge Period",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_7_Years": {
+      "name": "span_7_Years",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "7 Years",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_25": {
+      "name": "div_25",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_26": {
+      "name": "div_26",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element--bulleted",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__element--bulleted')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Key_Features": {
+      "name": "span_Key_Features",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Key Features",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_IndexlinkedGrowthPotential": {
+      "name": "li_IndexlinkedGrowthPotential",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Index-linked growth potential",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_PrincipalProtectionFromMark": {
+      "name": "li_PrincipalProtectionFromMark",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Principal protection from market loss",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_TaxdeferredAccumulation": {
+      "name": "li_TaxdeferredAccumulation",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tax-deferred accumulation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_31": {
+      "name": "div_31",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__element')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_32": {
+      "name": "div_32",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element--descriptor",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__element--descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Best_For": {
+      "name": "span_Best_For",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Best For",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_34": {
+      "name": "span_34",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Explore_Forge_Accumulation": {
+      "name": "div_Explore_Forge_Accumulation",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__footer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__footer')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Forge Accumulation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Explore_Forge_Accumulation": {
+      "name": "span_Explore_Forge_Accumulation",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Forge Accumulation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_37": {
+      "name": "span_37",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_38": {
+      "name": "li_38",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Heritage_Income": {
+      "name": "div_Heritage_Income",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__top",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__top')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Heritage Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Heritage_Income_40": {
+      "name": "div_Heritage_Income_40",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Heritage Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_4585": {
+      "name": "span_4585",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "45–85",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_10_Years": {
+      "name": "span_10_Years",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "10 Years",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_GuaranteedIncomeForLife": {
+      "name": "li_GuaranteedIncomeForLife",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Guaranteed income for life",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_MultiplePayoutOptions": {
+      "name": "li_MultiplePayoutOptions",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Multiple payout options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_SpousalContinuationFeature": {
+      "name": "li_SpousalContinuationFeature",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spousal continuation feature",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_46": {
+      "name": "span_46",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Explore_Heritage_Income": {
+      "name": "div_Explore_Heritage_Income",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__footer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__footer')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Heritage Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Explore_Heritage_Income": {
+      "name": "span_Explore_Heritage_Income",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Heritage Income",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_01_": {
+      "name": "div_01_",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__pagination",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__pagination')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "01\n                    /",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_01__50": {
+      "name": "div_01__50",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__pagination-info",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__pagination-info')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "01\n                    /",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_01": {
+      "name": "span_01",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__pagination-current",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__pagination-current')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_52": {
+      "name": "span_52",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__pagination-separator",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__pagination-separator')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_53": {
+      "name": "span_53",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__pagination-total",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__pagination-total')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_54": {
+      "name": "div_54",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__pagination-bar",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__pagination-bar')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_55": {
+      "name": "div_55",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__pagination-progress",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__pagination-progress')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_56": {
+      "name": "li_56",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Foundation_Plus": {
+      "name": "div_Foundation_Plus",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__top",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__top')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Foundation Plus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Foundation_Plus_58": {
+      "name": "div_Foundation_Plus_58",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Foundation Plus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_085": {
+      "name": "span_085",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "0–85",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_5_Years": {
+      "name": "span_5_Years",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "5 Years",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_GuaranteedFixedInterestRate": {
+      "name": "li_GuaranteedFixedInterestRate",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Guaranteed fixed interest rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_FullPrincipalProtection": {
+      "name": "li_FullPrincipalProtection",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Full principal protection",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_FlexibleWithdrawalOptions": {
+      "name": "li_FlexibleWithdrawalOptions",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Flexible withdrawal options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_64": {
+      "name": "span_64",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__element-value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-product-comparison-card__element-value')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Explore_Foundation_Plus": {
+      "name": "div_Explore_Foundation_Plus",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-product-comparison-card__footer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-product-comparison-card__footer')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Foundation Plus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Explore_Foundation_Plus": {
+      "name": "span_Explore_Foundation_Plus",
+      "component": "product-comparison-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Foundation Plus",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

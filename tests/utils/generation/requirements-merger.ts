@@ -44,8 +44,12 @@ export function fromRequirementsReader(
   raw: RequirementsReaderOutput,
   component?: string
 ): JiraRequirement {
-  // Try to detect component from title or description
+  // Try to detect component: an explicit override wins, then a style-guide URL
+  // in the ticket's references (most reliable — names the exact page tested),
+  // then keyword matching against known component names, then the 'general'
+  // catch-all (which the generator will refuse to guess selectors for).
   const detectedComponent = component
+    || detectComponentFromReferences(raw.references)
     || detectComponentFromText(raw.title)
     || detectComponentFromText(raw.raw_description)
     || 'general';
@@ -79,22 +83,42 @@ export function fromRequirementsReader(
 }
 
 /**
- * Detect GA component name from ticket text.
+ * Detect GA component name from ticket text. Kept in sync with the component
+ * directories under tests/pages/ga/components/ and tests/specFiles/ga/.
+ * Sorted longest-first so e.g. "image-with-nested-content" matches before the
+ * more generic "image" and multi-word names aren't shadowed by a substring.
  */
 const GA_COMPONENTS = [
-  'button', 'feature-banner', 'statistic', 'section', 'separator', 'spacer',
-  'headline-block', 'text', 'image-with-nested-content', 'homepage-hero',
-  'footer-banner', 'breadcrumb', 'disclaimers', 'login', 'role-selector',
-  'brand-relationship', 'content-trail', 'rate-sheet-grid', 'user-box',
-  'ratingsCard', 'accordion', 'tabs', 'navigation',
-  'text-field', 'text-area', 'form-field',
-];
+  'accordion-tabs-feature', 'image-with-nested-content', 'hero-cta-video-modal',
+  'nested-content-carousel', 'brand-relationship', 'formatted-rte-frontend',
+  'form-field-dropdown', 'hero-fifty-fifty', 'content-trail', 'grid-container',
+  'form-field-text', 'headline-block', 'video-external', 'form-recaptcha',
+  'homepage-hero', 'promo-banner', 'ratings-card', 'role-selector', 'rate-table',
+  'formatted-rte', 'form-container', 'site-header', 'teaser-card', 'form-options',
+  'marketo-forms', 'saml-login', 'form-hidden', 'feature-banner', 'breadcrumb',
+  'disclaimers', 'form-text', 'navigation', 'accordion', 'statistic', 'workbench',
+  'separator', 'button', 'section', 'top-nav', 'spacer', 'header', 'footer',
+  'login', 'image', 'tabs', 'text',
+].sort((a, b) => b.length - a.length);
 
 function detectComponentFromText(text: string): string | null {
   if (!text) return null;
   const lower = text.toLowerCase();
   for (const comp of GA_COMPONENTS) {
     if (lower.includes(comp)) return comp;
+  }
+  return null;
+}
+
+/**
+ * Detect component from a style-guide page URL in the ticket's references —
+ * the most reliable signal, since it names the exact live page the bug was
+ * reported against (e.g. ".../style-guide/components/bio-card.html").
+ */
+function detectComponentFromReferences(references: string[]): string | null {
+  for (const ref of references || []) {
+    const m = ref.match(/\/style-guide\/components\/([a-z0-9-]+)(?:\.html|\/|$)/i);
+    if (m) return m[1].toLowerCase();
   }
   return null;
 }

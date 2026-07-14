@@ -1,0 +1,1583 @@
+{
+  "component": "product-comparison-card",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/product-comparison-card.html?wcmmode=disabled",
+  "scannedAt": "2026-07-14T14:48:50.725Z",
+  "rootSelector": ".cmp-product-comparison-card",
+  "elements": [
+    {
+      "name": "Explore_Forge_Accumulation",
+      "tag": "a",
+      "text": "Explore Forge Accumulation",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Explore Forge Accumulation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "cmp-product-comparison-card-button",
+        "cmp-product-comparison-card-button--secondary"
+      ],
+      "role": null,
+      "ariaLabel": "Explore Forge Accumulation",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 453,
+        "y": 792,
+        "width": 267,
+        "height": 40
+      }
+    },
+    {
+      "name": "Explore_Heritage_Income",
+      "tag": "a",
+      "text": "Explore Heritage Income",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Explore Heritage Income"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "cmp-product-comparison-card-button",
+        "cmp-product-comparison-card-button--secondary"
+      ],
+      "role": null,
+      "ariaLabel": "Explore Heritage Income",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 689,
+        "y": 1467,
+        "width": 242,
+        "height": 40
+      }
+    },
+    {
+      "name": "Explore_Foundation_Plus",
+      "tag": "a",
+      "text": "Explore Foundation Plus",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Explore Foundation Plus"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "cmp-product-comparison-card-button",
+        "cmp-product-comparison-card-button--secondary"
+      ],
+      "role": null,
+      "ariaLabel": "Explore Foundation Plus",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 908,
+        "y": 2157,
+        "width": 238,
+        "height": 40
+      }
+    },
+    {
+      "name": "h3_Forge_Accumulation",
+      "tag": "h3",
+      "text": "Forge Accumulation",
+      "classes": [
+        "cmp-product-comparison-card__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 426,
+        "width": 374,
+        "height": 26
+      }
+    },
+    {
+      "name": "h3_Heritage_Income",
+      "tag": "h3",
+      "text": "Heritage Income",
+      "classes": [
+        "cmp-product-comparison-card__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1100,
+        "width": 374,
+        "height": 26
+      }
+    },
+    {
+      "name": "h3_Foundation_Plus",
+      "tag": "h3",
+      "text": "Foundation Plus",
+      "classes": [
+        "cmp-product-comparison-card__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 1775,
+        "width": 339,
+        "height": 26
+      }
+    },
+    {
+      "name": "imgImage_6",
+      "tag": "img",
+      "text": "",
+      "classes": [],
+      "attributes": {
+        "src": "/content/dam/global-atlantic/style-guide/087fa21017a5cf8fb97b97afca137e8c10b71b9f.jpg",
+        "alt": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ul_7",
+      "tag": "ul",
+      "text": "Forge Accumulation\n                            \n                            \n                       ",
+      "classes": [
+        "cmp-product-comparison-card__list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__swiper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 393,
+        "width": 1280,
+        "height": 472
+      }
+    },
+    {
+      "name": "ul_8",
+      "tag": "ul",
+      "text": "Index-linked growth potential\n                                        \n                             ",
+      "classes": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--bulleted"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 611,
+        "width": 260,
+        "height": 64
+      }
+    },
+    {
+      "name": "ul_9",
+      "tag": "ul",
+      "text": "Guaranteed income for life\n                                        \n                                ",
+      "classes": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--bulleted"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1285,
+        "width": 210,
+        "height": 64
+      }
+    },
+    {
+      "name": "ul_10",
+      "tag": "ul",
+      "text": "Guaranteed fixed interest rate\n                                        \n                            ",
+      "classes": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--bulleted"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 1975,
+        "width": 219,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "Forge Accumulation\n                            \n                            \n                       ",
+      "classes": [
+        "cmp-product-comparison-card__swiper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 393,
+        "width": 1280,
+        "height": 472
+      }
+    },
+    {
+      "name": "li_12",
+      "tag": "li",
+      "text": "Forge Accumulation\n                            \n                            \n                       ",
+      "classes": [
+        "cmp-product-comparison-card__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 420,
+        "y": 393,
+        "width": 440,
+        "height": 472
+      }
+    },
+    {
+      "name": "div_Forge_Accumulation",
+      "tag": "div",
+      "text": "Forge Accumulation",
+      "classes": [
+        "cmp-product-comparison-card__top"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 426,
+        "width": 374,
+        "height": 30
+      }
+    },
+    {
+      "name": "div_Forge_Accumulation_14",
+      "tag": "div",
+      "text": "Forge Accumulation",
+      "classes": [
+        "cmp-product-comparison-card__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__top"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 426,
+        "width": 374,
+        "height": 30
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-product-comparison-card__image"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__top"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_16",
+      "tag": "div",
+      "text": "Issue Ages\n                                \n\n                                \n                      ",
+      "classes": [
+        "cmp-product-comparison-card__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 489,
+        "width": 374,
+        "height": 272
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "Issue Ages\n                                \n\n                                \n                      ",
+      "classes": [
+        "cmp-product-comparison-card__element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 489,
+        "width": 374,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Issue Ages\n                                \n\n                                \n                      ",
+      "classes": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 489,
+        "width": 374,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Issue_Ages",
+      "tag": "span",
+      "text": "Issue Ages",
+      "classes": [
+        "cmp-product-comparison-card__element-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 489,
+        "width": 179,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_1880",
+      "tag": "span",
+      "text": "18–80",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 648,
+        "y": 489,
+        "width": 179,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "Withdrawal Charge Period\n                                \n\n                                \n        ",
+      "classes": [
+        "cmp-product-comparison-card__element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 521,
+        "width": 374,
+        "height": 33
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "Withdrawal Charge Period\n                                \n\n                                \n        ",
+      "classes": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 538,
+        "width": 374,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Withdrawal_Charge_Period",
+      "tag": "span",
+      "text": "Withdrawal Charge Period",
+      "classes": [
+        "cmp-product-comparison-card__element-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 538,
+        "width": 179,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_7_Years",
+      "tag": "span",
+      "text": "7 Years",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 648,
+        "y": 538,
+        "width": 179,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_25",
+      "tag": "div",
+      "text": "Key Features\n                                \n\n                                \n                    ",
+      "classes": [
+        "cmp-product-comparison-card__element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 570,
+        "width": 374,
+        "height": 105
+      }
+    },
+    {
+      "name": "div_26",
+      "tag": "div",
+      "text": "Key Features\n                                \n\n                                \n                    ",
+      "classes": [
+        "cmp-product-comparison-card__element--bulleted"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 587,
+        "width": 374,
+        "height": 88
+      }
+    },
+    {
+      "name": "span_Key_Features",
+      "tag": "span",
+      "text": "Key Features",
+      "classes": [
+        "cmp-product-comparison-card__element-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--bulleted"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 587,
+        "width": 86,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_IndexlinkedGrowthPotential",
+      "tag": "li",
+      "text": "Index-linked growth potential",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 611,
+        "width": 260,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_PrincipalProtectionFromMark",
+      "tag": "li",
+      "text": "Principal protection from market loss",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 635,
+        "width": 260,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_TaxdeferredAccumulation",
+      "tag": "li",
+      "text": "Tax-deferred accumulation",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 659,
+        "width": 260,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_31",
+      "tag": "div",
+      "text": "Best For\n                                \n\n                                \n                        ",
+      "classes": [
+        "cmp-product-comparison-card__element"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 691,
+        "width": 374,
+        "height": 69
+      }
+    },
+    {
+      "name": "div_32",
+      "tag": "div",
+      "text": "Best For\n                                \n\n                                \n                        ",
+      "classes": [
+        "cmp-product-comparison-card__element--descriptor"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 708,
+        "width": 374,
+        "height": 52
+      }
+    },
+    {
+      "name": "span_Best_For",
+      "tag": "span",
+      "text": "Best For",
+      "classes": [
+        "cmp-product-comparison-card__element-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 708,
+        "width": 54,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_34",
+      "tag": "span",
+      "text": "Individuals seeking tax-deferred growth with downside protection from market volatility",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 728,
+        "width": 374,
+        "height": 32
+      }
+    },
+    {
+      "name": "div_Explore_Forge_Accumulation",
+      "tag": "div",
+      "text": "Explore Forge Accumulation",
+      "classes": [
+        "cmp-product-comparison-card__footer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 453,
+        "y": 792,
+        "width": 374,
+        "height": 40
+      }
+    },
+    {
+      "name": "span_Explore_Forge_Accumulation",
+      "tag": "span",
+      "text": "Explore Forge Accumulation",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 470,
+        "y": 804,
+        "width": 205,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_37",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 687,
+        "y": 804,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_38",
+      "tag": "li",
+      "text": "Heritage Income\n                            \n                            \n                        \n ",
+      "classes": [
+        "cmp-product-comparison-card__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 1067,
+        "width": 440,
+        "height": 472
+      }
+    },
+    {
+      "name": "div_Heritage_Income",
+      "tag": "div",
+      "text": "Heritage Income",
+      "classes": [
+        "cmp-product-comparison-card__top"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1100,
+        "width": 374,
+        "height": 30
+      }
+    },
+    {
+      "name": "div_Heritage_Income_40",
+      "tag": "div",
+      "text": "Heritage Income",
+      "classes": [
+        "cmp-product-comparison-card__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__top"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1100,
+        "width": 374,
+        "height": 30
+      }
+    },
+    {
+      "name": "span_4585",
+      "tag": "span",
+      "text": "45–85",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 884,
+        "y": 1163,
+        "width": 179,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_10_Years",
+      "tag": "span",
+      "text": "10 Years",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 884,
+        "y": 1212,
+        "width": 179,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_GuaranteedIncomeForLife",
+      "tag": "li",
+      "text": "Guaranteed income for life",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1285,
+        "width": 210,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_MultiplePayoutOptions",
+      "tag": "li",
+      "text": "Multiple payout options",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1309,
+        "width": 210,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_SpousalContinuationFeature",
+      "tag": "li",
+      "text": "Spousal continuation feature",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1333,
+        "width": 210,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_46",
+      "tag": "span",
+      "text": "Retirees seeking predictable, guaranteed lifetime income with spousal protection",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1402,
+        "width": 374,
+        "height": 32
+      }
+    },
+    {
+      "name": "div_Explore_Heritage_Income",
+      "tag": "div",
+      "text": "Explore Heritage Income",
+      "classes": [
+        "cmp-product-comparison-card__footer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 1467,
+        "width": 374,
+        "height": 40
+      }
+    },
+    {
+      "name": "span_Explore_Heritage_Income",
+      "tag": "span",
+      "text": "Explore Heritage Income",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 706,
+        "y": 1479,
+        "width": 180,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_01_",
+      "tag": "div",
+      "text": "01\n                    /",
+      "classes": [
+        "cmp-product-comparison-card__pagination"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__swiper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_01__50",
+      "tag": "div",
+      "text": "01\n                    /",
+      "classes": [
+        "cmp-product-comparison-card__pagination-info"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__pagination"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_01",
+      "tag": "span",
+      "text": "01",
+      "classes": [
+        "cmp-product-comparison-card__pagination-current"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__pagination-info"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_52",
+      "tag": "span",
+      "text": "/",
+      "classes": [
+        "cmp-product-comparison-card__pagination-separator"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__pagination-info"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_53",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-product-comparison-card__pagination-total"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__pagination-info"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_54",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-product-comparison-card__pagination-bar"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__pagination"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_55",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-product-comparison-card__pagination-progress"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__pagination-bar"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "li_56",
+      "tag": "li",
+      "text": "Foundation Plus\n                            \n                            \n                        \n ",
+      "classes": [
+        "cmp-product-comparison-card__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 875,
+        "y": 1742,
+        "width": 405,
+        "height": 488
+      }
+    },
+    {
+      "name": "div_Foundation_Plus",
+      "tag": "div",
+      "text": "Foundation Plus",
+      "classes": [
+        "cmp-product-comparison-card__top"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 1775,
+        "width": 339,
+        "height": 30
+      }
+    },
+    {
+      "name": "div_Foundation_Plus_58",
+      "tag": "div",
+      "text": "Foundation Plus",
+      "classes": [
+        "cmp-product-comparison-card__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__top"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 1775,
+        "width": 339,
+        "height": 30
+      }
+    },
+    {
+      "name": "span_085",
+      "tag": "span",
+      "text": "0–85",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1085,
+        "y": 1837,
+        "width": 162,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_5_Years",
+      "tag": "span",
+      "text": "5 Years",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1085,
+        "y": 1886,
+        "width": 162,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_GuaranteedFixedInterestRate",
+      "tag": "li",
+      "text": "Guaranteed fixed interest rate",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 1975,
+        "width": 219,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_FullPrincipalProtection",
+      "tag": "li",
+      "text": "Full principal protection",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 2000,
+        "width": 219,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_FlexibleWithdrawalOptions",
+      "tag": "li",
+      "text": "Flexible withdrawal options",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element-values"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 2024,
+        "width": 219,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_64",
+      "tag": "span",
+      "text": "Clients seeking safe, predictable returns with full principal protection",
+      "classes": [
+        "cmp-product-comparison-card__element-value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__element--descriptor"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 2093,
+        "width": 339,
+        "height": 32
+      }
+    },
+    {
+      "name": "div_Explore_Foundation_Plus",
+      "tag": "div",
+      "text": "Explore Foundation Plus",
+      "classes": [
+        "cmp-product-comparison-card__footer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-product-comparison-card__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 908,
+        "y": 2157,
+        "width": 339,
+        "height": 40
+      }
+    },
+    {
+      "name": "span_Explore_Foundation_Plus",
+      "tag": "span",
+      "text": "Explore Foundation Plus",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 925,
+        "y": 2169,
+        "width": 176,
+        "height": 16
+      }
+    }
+  ],
+  "pageTitle": "Product Comparison Card",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

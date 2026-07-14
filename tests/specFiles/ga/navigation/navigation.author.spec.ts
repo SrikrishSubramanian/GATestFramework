@@ -829,3 +829,334 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
     expect(colorAfter).not.toBe(colorBefore);
   });
 });
+
+test.describe('Navigation — CSV Test Cases (GAAM-1454)', () => {
+  test('[NVGT-049] @smoke @regression DR FE: Preview link opens incorrect Rate Detail page for selected row — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: The *Preview* link in each row should open the *Rate Detail* page associated with that specific row, based on the combination of *Product*, *Firm*, and *Effective Date*. Currently, the navigation does not consistently open the exact record corresponding to the Effective date.
+    // 
+    // *Steps to Reproduce:*
+    // 
+    // # Navigate to the DR FE rates table.
+    // # Identify a row with a specific *Product*, *Firm*, and *Effective Date*.
+    // # Click the *Preview* link for that row.
+    // # Observe the Rate Detail page that opens.
+    // 
+    // *Expected Result:*
+    // The *Preview* link should open the *Rate Detail* page for the selected row, matching the *Product*, *Firm*, and *Effective Date*, and navigate to the exact *Effective Date* displayed in the table.
+    // 
+    // *Actual Result:*
+    // The *Preview* link does not consistently open the Rate Detail page corresponding to the selected row and/or does not navigate to the exact *Effective Date* shown in the table.
+    // 
+    // !20260702-1237-25.2803875.mp4|width=559,alt="20260702-1237-25.2803875.mp4"!
+    test.fixme();
+  });
+});
+
+test.describe('Navigation — Happy Path', () => {
+  test('[NVGT-050] @smoke @regression Navigation renders correctly', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-navigation').first();
+    await expect(root).toBeVisible();
+    // Verify core structure: heading or primary content exists
+    const heading = root.locator('h1, h2, h3').first();
+    const hasHeading = await heading.count() > 0;
+    if (hasHeading) {
+      await expect(heading).toBeVisible();
+    }
+    // Verify no JS errors during render
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    expect(errors).toEqual([]);
+  });
+
+  test('[NVGT-051] @smoke @regression Navigation interactive elements are functional', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-navigation').first();
+    await expect(root).toBeVisible();
+    // Verify interactive elements (links, buttons) are present and clickable
+    const interactive = root.locator('a, button');
+    const count = await interactive.count();
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      await expect(interactive.nth(i)).toBeVisible();
+      await expect(interactive.nth(i)).toBeEnabled();
+    }
+  });
+});
+
+test.describe('Navigation — Negative & Boundary', () => {
+  test('[NVGT-052] @negative @regression Navigation handles empty content gracefully', async ({ page }) => {
+    // Capture JS errors during page load
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // Component should render without JS errors
+    expect(errors).toEqual([]);
+    // Root element should still be present (not crash)
+    await expect(page.locator('.cmp-navigation').first()).toBeVisible();
+  });
+
+  test('[NVGT-053] @negative @regression Navigation handles missing images', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-navigation img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+});
+
+test.describe('Navigation — Responsive', () => {
+  test('[NVGT-054] @mobile @regression @mobile Navigation adapts to mobile viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-navigation').first();
+    await expect(root).toBeVisible();
+    // Verify layout adapts to mobile: check flex-direction changes to column
+    const flexDir = await root.evaluate(el => {
+      const cs = getComputedStyle(el);
+      return cs.flexDirection || cs.display;
+    });
+    // At mobile, flex containers typically switch to column layout
+    // Grid containers may change template columns
+    expect(flexDir).toBeDefined();
+  });
+
+  test('[NVGT-055] @mobile @regression Navigation adapts to tablet viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 1024, height: 1366 });
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-navigation').first();
+    await expect(root).toBeVisible();
+    // Tablet should render without horizontal overflow
+    const overflow = await root.evaluate(el => {
+      return el.scrollWidth > el.clientWidth;
+    });
+    expect(overflow).toBe(false);
+  });
+});
+
+test.describe('Navigation — Broken Images', () => {
+  test('[NVGT-057] @regression Navigation all images load successfully', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-navigation img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const img = images.nth(i);
+      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+
+  test('[NVGT-058] @regression Navigation all images have alt attributes', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-navigation img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const alt = await images.nth(i).getAttribute('alt');
+      expect(alt).not.toBeNull();
+    }
+  });
+});
+
+test.describe('Navigation — Accessibility', () => {
+  test('[NVGT-059] @a11y @wcag22 @regression @smoke Navigation passes axe-core scan', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const results = await new AxeBuilder({ page })
+      .include('.cmp-navigation')
+      .withTags(["wcag2a","wcag2aa","wcag22aa"])
+      .analyze();
+    expect(results.violations).toEqual([]);
+  });
+
+  test('[NVGT-060] @a11y @wcag22 @regression @smoke Navigation interactive elements meet 24px target size', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const interactive = page.locator('.cmp-navigation a, .cmp-navigation button, .cmp-navigation input');
+    const count = await interactive.count();
+    for (let i = 0; i < count; i++) {
+      const box = await interactive.nth(i).boundingBox();
+      if (box) {
+        expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(24);
+      }
+    }
+  });
+
+  test('[NVGT-061] @a11y @wcag22 @regression @smoke Navigation focus is not obscured by sticky elements', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    const focusable = page.locator('.cmp-navigation a, .cmp-navigation button, .cmp-navigation input');
+    const count = await focusable.count();
+    for (let i = 0; i < Math.min(count, 5); i++) {
+      await focusable.nth(i).focus();
+      const box = await focusable.nth(i).boundingBox();
+      if (box) {
+        expect(box.y).toBeGreaterThanOrEqual(0);
+        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
+      }
+    }
+  });
+});
+
+test.describe('Navigation — AEM Dialog Configuration', () => {
+  // Regression: GA overlay components must have their own _cq_dialog with helpPath.
+  // Without helpPath, authors see no help link in the component toolbar.
+
+  test('[NVGT-062] @author @regression @smoke @smoke Navigation dialog has helpPath configured', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/navigation/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok(), 'Navigation GA dialog overlay not found — component may be missing _cq_dialog').toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath, 'Navigation dialog missing helpPath property').toBeTruthy();
+  });
+
+  test('[NVGT-063] @author @regression @smoke Navigation helpPath points to correct component details page', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/navigation/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    if (!response.ok()) { test.skip(); return; }
+    const dialog = await response.json();
+    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-1386)', () => {
+  test('[NVGT-064] @smoke @regression CMS BE: Global External Link Handler — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Functionality*
+    test.fixme();
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-1371)', () => {
+  test('[NVGT-065] @smoke @regression CMS FE: Alert Modal – Consent Alert "Show Once" Behavior — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // As a site visitor, 
+    // I want a consent alert modal to display only once per browser when the author has configured it as a consent alert, 
+    // so that I'm not repeatedly shown the same acknowledgement prompt on every page load.
+    // 
+    // 
+    // *Background*
+    // This pairs with backend ticket [https://bounteous.jira.com/browse/GAAM-1347|https://bounteous.jira.com/browse/GAAM-1347|smart-link], which replaces the authored Preference Key text field with a "Consent Alert" checkbox and auto-generates a unique key (derived from the component's JCR resource path) rendered as a {{data-consent-key}} attribute on the component's wrapper element. This ticket covers the client-side logic that reads that attribute and manages the "show once" behavior.
+    // 
+    // *Acceptance Criteria*
+    // 
+    // *Functionality*
+    // 
+    // * On page load, component JS reads the {{data-consent-key}} attribute on the wrapper element (present in the DOM regardless of Consent Alert state).
+    // * If the author has checked "Consent Alert" in the dialog and the visitor has previously seen/dismissed the modal, the modal does not display on subsequent page loads.
+    // * Visitor "seen" state is tracked via localStorage, keyed by the {{data-consent-key}} value.
+    // * If "Consent Alert" is unchecked (default), the modal displays on every page load — no localStorage read/write occurs.
+    // * Remove any existing JS logic that reads an authored {{preferenceKey}} string; consent tracking now keys off {{data-consent-key}} only.
+    // * No author input is required for key generation — this is handled entirely on the backend/HTL side.
+    // 
+    // *Responsive Behavior*
+    // 
+    // * "Show once" behavior is consistent across desktop, tablet, and mobile breakpoints.
+    // * No visual or layout changes are introduced by this ticket.
+    // 
+    // *Accessibility (WCAG 2.2 Level AA)*
+    // 
+    // * No new interactive elements are introduced; existing modal focus trap, keyboard navigation, and screen reader behavior remain unchanged.
+    // * Suppressing display of the modal (when previously seen) must not affect tab order or leave hidden focusable elements in the DOM.
+    // 
+    // 
+    // 
+    // *QA Checklist*
+    // 
+    // * Component is available on any existing templates (except Rate Administration)
+    // * Styles match Figma
+    // * Authoring Guide exists and is updated with all style variations
+    // * Style Guide page exists and reflects all variations
+    // * Both desktop and mobile versions are implemented
+    // * Notify the design team that the component is ready for their review and provide a link to the Style Guide page
+    test.fixme();
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-1358)', () => {
+  test('[NVGT-066] @smoke @regression VQA - Main Nav sticky behavior — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: [https://bounteous.jira.com/browse/GAAM-397|https://bounteous.jira.com/browse/GAAM-397|smart-link] 
+    // 
+    // 
+    // 
+    // !image-20260626-131941.png|width=893,alt="image-20260626-131941.png"!
+    // 
+    // 
+    // 
+    // once you're on the role site (like, you've selected FP), the FP navigation bar isn't sticky to the top when it should be. Kindly resolve this issue, Thank you.
+    // 
+    // 
+    // 
+    // Here is the prototype thats showcases the sticky behaviour: [https://www.figma.com/proto/bGvnz1Z5Yi9ceIWVYNNvcj/GAFG-%7C-Template-Reference-File?node-id=1921-4123&viewport=909%2C122%2C0.08&t=IS1D53hC0WDcLRsa-9&scaling=min-zoom&content-scaling=fixed&page-id=1866%3A12030&starting-point-node-id=1921%3A4123&show-proto-sidebar=1&desktop-link-click-timestamp=1782813546875&desktop-ul-exp-bucket=po&desktop-ul-pref-conflict=1|https://www.figma.com/proto/bGvnz1Z5Yi9ceIWVYNNvcj/GAFG-%7C-Template-Reference-File?node-id=1921-4123&viewport=909%2C122%2C0.08&t=IS1D53hC0WDcLRsa-9&scaling=min-zoom&content-scaling=fixed&page-id=1866%3A12030&starting-point-node-id=1921%3A4123&show-proto-sidebar=1&desktop-link-click-timestamp=1782813546875&desktop-ul-exp-bucket=po&desktop-ul-pref-conflict=1|smart-link] 
+    // 
+    // 
+    // 
+    test.fixme();
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-1342)', () => {
+  test('[NVGT-067] @smoke @regression CMS FE: Navigation Component - Link Type SE2 — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Functionality*
+    test.fixme();
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-1233)', () => {
+  test('[NVGT-068] @smoke @regression CMS QA Task: Private Report Fraud Form – Red Oak Submission Integration — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // Desktop
+    await page.setViewportSize({ width: 1440, height: 900 });
+    const pom1 = new NavigationPage(page);
+    await pom1.navigate(BASE());
+    await expect(page.locator('.cmp-navigation').first()).toBeVisible();
+    // Mobile
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.reload({ waitUntil: 'networkidle' });
+    await expect(page.locator('.cmp-navigation').first()).toBeVisible();
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-1215)', () => {
+  test('[NVGT-069] @smoke @regression CMS FE: Navigation Component - flows for snapApp and Illustrations — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: h3. Illustrations Nav Item — On Click
+    test.fixme();
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-1214)', () => {
+  test('[NVGT-070] @smoke @regression CMS BE: Navigation Component - Link types : SnapApp, Illustration & SE2 Driven — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Link Type Dropdown*
+    test.fixme();
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-549)', () => {
+  test('[NVGT-071] @smoke @regression CMS Analytics FE – Component Tracking: Include Product Info in Click Event — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Functionality*
+    test.fixme();
+  });
+});

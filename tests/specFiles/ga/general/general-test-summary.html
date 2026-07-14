@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>General — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>general.author.spec.ts</div>
+      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">68</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">1</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">1</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">0</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>general - GAAM-989</h2>
+        <span class="section-count">68</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-1: Test</td>
+              
+              <td>TC-1: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-2: Test</td>
+              
+              <td>TC-2: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-3: Test</td>
+              
+              <td>TC-3: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-4: Test</td>
+              
+              <td>TC-4: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-5: Test</td>
+              
+              <td>TC-5: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-6: Test</td>
+              
+              <td>TC-6: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-7: Test</td>
+              
+              <td>TC-7: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-8: Test</td>
+              
+              <td>TC-8: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-9: Test</td>
+              
+              <td>TC-9: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-10: Test</td>
+              
+              <td>TC-10: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-11: Test</td>
+              
+              <td>TC-11: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-12: Test</td>
+              
+              <td>TC-12: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-13: Test</td>
+              
+              <td>TC-13: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-14: Test</td>
+              
+              <td>TC-14: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-15: Test</td>
+              
+              <td>TC-15: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-16: Test</td>
+              
+              <td>TC-16: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-17: Test</td>
+              
+              <td>TC-17: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-18: Test</td>
+              
+              <td>TC-18: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-19: Test</td>
+              
+              <td>TC-19: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-20: Test</td>
+              
+              <td>TC-20: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-21: Test</td>
+              
+              <td>TC-21: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-22: Test</td>
+              
+              <td>TC-22: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-23: Test</td>
+              
+              <td>TC-23: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-24: Test</td>
+              
+              <td>TC-24: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-25: Test</td>
+              
+              <td>TC-25: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-26: Test</td>
+              
+              <td>TC-26: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-27: Test</td>
+              
+              <td>TC-27: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-28: Test</td>
+              
+              <td>TC-28: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-29: Test</td>
+              
+              <td>TC-29: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-30: Test</td>
+              
+              <td>TC-30: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-31: Test</td>
+              
+              <td>TC-31: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-32: Test</td>
+              
+              <td>TC-32: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-33: Test</td>
+              
+              <td>TC-33: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-34: Test</td>
+              
+              <td>TC-34: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-35: Test</td>
+              
+              <td>TC-35: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-36: Test</td>
+              
+              <td>TC-36: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-37: Test</td>
+              
+              <td>TC-37: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-38: Test</td>
+              
+              <td>TC-38: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-39: Test</td>
+              
+              <td>TC-39: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-40: Test</td>
+              
+              <td>TC-40: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-41: Test</td>
+              
+              <td>TC-41: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-42: Test</td>
+              
+              <td>TC-42: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-43: Test</td>
+              
+              <td>TC-43: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-44: Test</td>
+              
+              <td>TC-44: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-45: Test</td>
+              
+              <td>TC-45: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-46: Test</td>
+              
+              <td>TC-46: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-47: Test</td>
+              
+              <td>TC-47: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-48: Test</td>
+              
+              <td>TC-48: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-49: Test</td>
+              
+              <td>TC-49: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-50: Test</td>
+              
+              <td>TC-50: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-51: Test</td>
+              
+              <td>TC-51: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-52: Test</td>
+              
+              <td>TC-52: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-53: Test</td>
+              
+              <td>TC-53: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-54: Test</td>
+              
+              <td>TC-54: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-55: Test</td>
+              
+              <td>TC-55: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-56: Test</td>
+              
+              <td>TC-56: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-57: Test</td>
+              
+              <td>TC-57: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-58: Test</td>
+              
+              <td>TC-58: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-59: Test</td>
+              
+              <td>TC-59: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-60: Test</td>
+              
+              <td>TC-60: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-61: Test</td>
+              
+              <td>TC-61: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-62: Test</td>
+              
+              <td>TC-62: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-63: Test</td>
+              
+              <td>TC-63: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-64: Test</td>
+              
+              <td>TC-64: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-65: Test</td>
+              
+              <td>TC-65: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-66: Test</td>
+              
+              <td>TC-66: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-67: Test</td>
+              
+              <td>TC-67: Test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>TC-68: Test</td>
+              
+              <td>TC-68: Test</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>general.author.spec.ts</code>
+    &mdash; general &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

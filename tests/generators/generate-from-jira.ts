@@ -47,6 +47,23 @@ const AUTH = {
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
 const SPECS_DIR = path.resolve(__dirname, '../specFiles/ga');
+const NEEDS_REVIEW_PATH = path.resolve(__dirname, '../../.aem-developer/artifacts/jira-generation-needs-review.json');
+
+/**
+ * Record a ticket that couldn't be generated because DOM scanning found no
+ * matching style guide page — per project rule, we never fall back to guessed
+ * selectors, so these need a human to map them to the correct component.
+ */
+function logNeedsReview(entry: { ticketKey: string; title: string; component: string; reason: string }): void {
+  let existing: any[] = [];
+  if (fs.existsSync(NEEDS_REVIEW_PATH)) {
+    try { existing = JSON.parse(fs.readFileSync(NEEDS_REVIEW_PATH, 'utf-8')); } catch { existing = []; }
+  }
+  existing = existing.filter(e => e.ticketKey !== entry.ticketKey);
+  existing.push(entry);
+  fs.mkdirSync(path.dirname(NEEDS_REVIEW_PATH), { recursive: true });
+  fs.writeFileSync(NEEDS_REVIEW_PATH, JSON.stringify(existing, null, 2), 'utf-8');
+}
 
 /**
  * Normalize requirements JSON from the dev-agents-shared requirements-reader agent
@@ -300,6 +317,15 @@ test.describe('Jira/Figma Test Generation', () => {
         console.log(`  POM generated: ${pomResult.className} (${pomResult.elementCount} elements)`);
       } else {
         console.warn(`  WARNING: No DOM elements found for ${jiraReq.component}. Style guide page may not exist.`);
+        logNeedsReview({
+          ticketKey: reqOutput.ticket_key,
+          title: reqOutput.title,
+          component: jiraReq.component,
+          reason: `No DOM elements found at ${styleGuideUrl} — component may not exist or auto-detected component name is wrong.`,
+        });
+        console.log(`\n  SKIPPED — no spec written. Logged to ${NEEDS_REVIEW_PATH} for manual component mapping.`);
+        console.log(`\n=== Jira generation SKIPPED: ${reqOutput.ticket_key} ===`);
+        return;
       }
     } else {
       console.log(`\n  POM exists: ${pomPath}`);

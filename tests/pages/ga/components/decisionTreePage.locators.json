@@ -1,0 +1,1382 @@
+{
+  "component": "decision-tree",
+  "generatedAt": "2026-07-14T15:04:28.772Z",
+  "source": "dom",
+  "entries": {
+    "a_Optional_CTA": {
+      "name": "a_Optional_CTA",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-74e4f91e31",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ShowOrHideOptions": {
+      "name": "ShowOrHideOptions",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__toggle",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Show or hide options']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-step__toggle')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Spouse": {
+      "name": "Spouse",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='Spouse']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spouse\n            Optional Description",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Traditional": {
+      "name": "Traditional",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='Traditional']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Traditional",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Roth": {
+      "name": "Roth",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='Roth']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Roth",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "MoreInformationAbout_DeathO": {
+      "name": "MoreInformationAbout_DeathO",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__info-trigger",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='More information about Death of Original IRA Owner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-step__info-trigger')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Close": {
+      "name": "Close",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-step__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Today": {
+      "name": "Today",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='Today']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Today",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Before_1120": {
+      "name": "Before_1120",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='Before 1/1/20']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Before 1/1/20",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "el1120OrLater": {
+      "name": "el1120OrLater",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='1/1/20 or later']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "1/1/20 or later",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "NonSpouse": {
+      "name": "NonSpouse",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='Non-Spouse']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Non-Spouse",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "SeeThrough_Trust": {
+      "name": "SeeThrough_Trust",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='See-Through Trust']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "See-Through Trust",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Successor_Beneficiary": {
+      "name": "Successor_Beneficiary",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radio[name='Successor Beneficiary']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-decision-tree-option__card')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Successor Beneficiary",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_RequiredBeginningDate": {
+      "name": "h3_RequiredBeginningDate",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-62fd22cd19-modal-title",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__modal-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-decision-tree-step__modal-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Required beginning date",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Step_1_Select_RelationshipTo_": {
+      "name": "Step_1_Select_RelationshipTo_",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-7a660ab690-options",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__options",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radiogroup[name='Step 1 Select Relationship to IRA Owner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__options')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Select_Market_Type": {
+      "name": "Select_Market_Type",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-622682a5c8-options",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__options",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radiogroup[name='Select Market Type']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__options')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "decisionTreeStep_62fd22cd19Modal": {
+      "name": "decisionTreeStep_62fd22cd19Modal",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-62fd22cd19-modal",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "dialog",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "DeathOf_Original_IRA_Owner": {
+      "name": "DeathOf_Original_IRA_Owner",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-62fd22cd19-options",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__options",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "radiogroup[name='Death of Original IRA Owner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__options')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_Select_RelationshipTo_IRA_Own": {
+      "name": "p_Select_RelationshipTo_IRA_Own",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-7a660ab690-prompt",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__prompt",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-decision-tree-step__prompt')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Select Relationship to IRA Owner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_Select_Market_Type": {
+      "name": "p_Select_Market_Type",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-622682a5c8-prompt",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__prompt",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-decision-tree-step__prompt')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Select Market Type",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_DeathOf_Original_IRA_Owner": {
+      "name": "p_DeathOf_Original_IRA_Owner",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-62fd22cd19-prompt",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__prompt",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-decision-tree-step__prompt')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Death of Original IRA Owner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 1\n                Select Relationship to IRA Owner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_22": {
+      "name": "div_22",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__heading",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__heading')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 1\n                Select Relationship to IRA Owner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Step_1": {
+      "name": "span_Step_1",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-7a660ab690-number",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__number",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-step__number')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 1",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Spouse": {
+      "name": "span_Spouse",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spouse",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Optional_Description": {
+      "name": "span_Optional_Description",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional Description",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_26": {
+      "name": "span_26",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__check",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__check')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_27": {
+      "name": "div_27",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_28": {
+      "name": "div_28",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 2\n                Select Market Type",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_29": {
+      "name": "div_29",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__heading",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__heading')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 2\n                Select Market Type",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Step_2": {
+      "name": "span_Step_2",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-622682a5c8-number",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__number",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-step__number')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 2",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Traditional": {
+      "name": "span_Traditional",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Traditional",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_32": {
+      "name": "div_32",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Roth": {
+      "name": "span_Roth",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Roth",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_34": {
+      "name": "div_34",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_35": {
+      "name": "div_35",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 3\n                Death of Original IRA Owner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_36": {
+      "name": "div_36",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__heading",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__heading')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 3\n                Death of Original IRA Owner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Step_3": {
+      "name": "span_Step_3",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "decision-tree-step-62fd22cd19-number",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__number",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-step__number')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Step 3",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_38": {
+      "name": "div_38",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__modal-dialog",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__modal-dialog')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_39": {
+      "name": "div_39",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-step__modal-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-step__modal-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Today": {
+      "name": "span_Today",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Today",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_41": {
+      "name": "div_41",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_42": {
+      "name": "div_42",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_43": {
+      "name": "div_43",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__media",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__media')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_44": {
+      "name": "div_44",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_45": {
+      "name": "div_45",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_46": {
+      "name": "div_46",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__content-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__content-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_47": {
+      "name": "div_47",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__headline-block",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__headline-block')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_OptionalEyebrow": {
+      "name": "div_OptionalEyebrow",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-headline-block__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-headline-block__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional eyebrow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_LoremIpsumDolorSitAmetCon": {
+      "name": "div_LoremIpsumDolorSitAmetCon",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-headline-block__title.headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-headline-block__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet consectetur.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_50": {
+      "name": "div_50",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-headline-block__descriptor.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_51": {
+      "name": "div_51",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-headline-block__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-headline-block__cta-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_52": {
+      "name": "i_52",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.arrow-right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Optional_CTA": {
+      "name": "span_Optional_CTA",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_54": {
+      "name": "div_54",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-feature-banner__component-parsys",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-feature-banner__component-parsys')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Before_1120": {
+      "name": "span_Before_1120",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Before 1/1/20",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_ThisIs_Before_1120SectionAr": {
+      "name": "div_ThisIs_Before_1120SectionAr",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "This is Before 1/1/20 section area",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_1120OrLater": {
+      "name": "span_1120OrLater",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "1/1/20 or later",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_ThisIs_1120OrLaterSection_": {
+      "name": "div_ThisIs_1120OrLaterSection_",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "This is 1/1/20 or later section area",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_NonSpouse": {
+      "name": "span_NonSpouse",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Non-Spouse",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_60": {
+      "name": "div_60",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_SeeThrough_Trust": {
+      "name": "span_SeeThrough_Trust",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "See-Through Trust",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_62": {
+      "name": "div_62",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Successor_Beneficiary": {
+      "name": "span_Successor_Beneficiary",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-decision-tree-option__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Successor Beneficiary",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_64": {
+      "name": "div_64",
+      "component": "decision-tree",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-decision-tree-option__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

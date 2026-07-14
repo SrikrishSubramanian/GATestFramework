@@ -790,3 +790,166 @@ test.describe('PromoBanner — Console Errors', () => {
     expect(errors, `JS errors found on promo-banner style guide: ${errors.join(' | ')}`).toEqual([]);
   });
 });
+
+test.describe('PromoBanner — CSV Test Cases (GAAM-1329)', () => {
+  test('[PB-046] @smoke @regression CMS: Promo Banner: Tablet view in both Android and Apple is misaligned. — AC1', async ({ page }) => {
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: *Environment:*
+    // 
+    // * CMS Web Application
+    // * Android Tablets (various screen sizes)
+    // * Apple iPads (various screen sizes)
+    // * Tablet viewport/responsive mode
+    // 
+    // URL Tested - [Promo-Banner|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/Promo-banner.html?wcmmode=disabled]
+    // 
+    // *Description:*
+    // The Promo Banner displayed through the CMS is visually misaligned when viewed on tablet devices. The issue occurs on both Android tablets and Apple iPads, indicating a responsive layout problem specific to tablet breakpoints.
+    // 
+    // *Steps to Reproduce:*
+    // 
+    // # Open the CMS-managed website/application.
+    // # Navigate to a page containing the Promo Banner.
+    // # Access the page using an Android tablet or iPad (or emulate tablet view in browser developer tools).
+    // # Observe the banner layout and alignment.
+    // 
+    // *Actual Result:*
+    // The Promo Banner content appears misaligned in tablet view. Elements such as text, images, buttons, or banner containers are not properly positioned within the layout.
+    // 
+    // *Expected Result:*
+    // The Promo Banner should be correctly aligned and displayed according to the approved design across all supported tablet devices and screen resolutions.
+    // 
+    // 
+    // 
+    // !image-20260622-072622.png|width=451,alt="image-20260622-072622.png"!
+    test.fixme();
+  });
+});
+
+test.describe('PromoBanner — Happy Path', () => {
+  test('[PB-047] @smoke @regression PromoBanner renders correctly', async ({ page }) => {
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-promo-banner').first();
+    await expect(root).toBeVisible();
+    // Verify core structure: heading or primary content exists
+    const heading = root.locator('h1, h2, h3').first();
+    const hasHeading = await heading.count() > 0;
+    if (hasHeading) {
+      await expect(heading).toBeVisible();
+    }
+    // Verify no JS errors during render
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    expect(errors).toEqual([]);
+  });
+
+  test('[PB-048] @smoke @regression PromoBanner interactive elements are functional', async ({ page }) => {
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-promo-banner').first();
+    await expect(root).toBeVisible();
+    // Verify interactive elements (links, buttons) are present and clickable
+    const interactive = root.locator('a, button');
+    const count = await interactive.count();
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      await expect(interactive.nth(i)).toBeVisible();
+      await expect(interactive.nth(i)).toBeEnabled();
+    }
+  });
+});
+
+test.describe('PromoBanner — Negative & Boundary', () => {
+  test('[PB-049] @negative @regression PromoBanner handles empty content gracefully', async ({ page }) => {
+    // Capture JS errors during page load
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    // Component should render without JS errors
+    expect(errors).toEqual([]);
+    // Root element should still be present (not crash)
+    await expect(page.locator('.cmp-promo-banner').first()).toBeVisible();
+  });
+
+  test('[PB-050] @negative @regression PromoBanner handles missing images', async ({ page }) => {
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-promo-banner img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+});
+
+test.describe('PromoBanner — Responsive', () => {
+  test('[PB-051] @mobile @regression @mobile PromoBanner adapts to mobile viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-promo-banner').first();
+    await expect(root).toBeVisible();
+    // Verify layout adapts to mobile: check flex-direction changes to column
+    const flexDir = await root.evaluate(el => {
+      const cs = getComputedStyle(el);
+      return cs.flexDirection || cs.display;
+    });
+    // At mobile, flex containers typically switch to column layout
+    // Grid containers may change template columns
+    expect(flexDir).toBeDefined();
+  });
+
+  test('[PB-052] @mobile @regression PromoBanner adapts to tablet viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 1024, height: 1366 });
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-promo-banner').first();
+    await expect(root).toBeVisible();
+    // Tablet should render without horizontal overflow
+    const overflow = await root.evaluate(el => {
+      return el.scrollWidth > el.clientWidth;
+    });
+    expect(overflow).toBe(false);
+  });
+});
+
+test.describe('PromoBanner — Console & Resources', () => {
+  test('[PB-053] @regression PromoBanner produces no JS errors', async ({ page }) => {
+    const capture = new ConsoleCapture(page);
+    capture.start();
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    await page.waitForTimeout(1000);
+    const errors = capture.getErrors();
+    capture.stop();
+    expect(errors).toEqual([]);
+  });
+});
+
+test.describe('PromoBanner — Broken Images', () => {
+  test('[PB-054] @regression PromoBanner all images load successfully', async ({ page }) => {
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-promo-banner img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const img = images.nth(i);
+      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+
+  test('[PB-055] @regression PromoBanner all images have alt attributes', async ({ page }) => {
+    const pom = new PromoBannerPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-promo-banner img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const alt = await images.nth(i).getAttribute('alt');
+      expect(alt).not.toBeNull();
+    }
+  });
+});

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Existence &amp; Coverage Report</title>
+  <style>
+    :root {
+      --azul: #003DA5; --granite: #2D3138; --slate: #F0F1F2; --white: #FFFFFF; --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--granite); background: var(--slate); line-height: 1.6; }
+    .header { background: var(--azul); color: var(--white); padding: 32px 40px; }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .stats { display: flex; background: var(--white); border-bottom: 1px solid var(--border); }
+    .stat-box { flex: 1; text-align: center; padding: 18px 12px; border-right: 1px solid var(--border); }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1300px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section { background: var(--white); border-radius: 8px; border: 1px solid var(--border); overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; padding: 10px 16px; border-bottom: 2px solid var(--border); background: #FDFDFE; }
+    tbody td { padding: 12px 16px; border-bottom: 1px solid #F0F1F2; font-size: 14px; vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .status-badge { font-size: 11px; padding: 3px 10px; border-radius: 10px; font-weight: 600; white-space: nowrap; }
+    .muted { color: #ADB5BD; }
+    code { font-family: 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; background: #F5F6F8; padding: 1px 6px; border-radius: 4px; }
+    a { color: var(--azul); font-weight: 600; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Component Existence &amp; Coverage Report</h1>
+    <p>Cross-reference of the master component checklist against generated, DOM-verified test coverage.</p>
+  </div>
+  <div class="stats">
+    <div class="stat-box"><div class="num">54</div><div class="label">Checklist Items</div></div>
+    <div class="stat-box"><div class="num">44</div><div class="label">Automated</div></div>
+    <div class="stat-box"><div class="num">2</div><div class="label">Ambiguous</div></div>
+    <div class="stat-box"><div class="num">8</div><div class="label">Not Automated</div></div>
+    <div class="stat-box"><div class="num">2037</div><div class="label">Total Tests</div></div>
+  </div>
+  <div class="content">
+    <div class="section">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:110px">Status</th>
+            <th>Checklist Item</th>
+            <th style="width:200px">Component</th>
+            <th style="width:80px">Tests</th>
+            <th>Reason / Notes</th>
+            <th style="width:140px">Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Feature Banner</td>
+            <td><code>feature-banner</code></td>
+            <td class="num"><strong>28</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/feature-banner/feature-banner-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Homepage Hero</td>
+            <td><code>homepage-hero</code></td>
+            <td class="num"><strong>4</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/homepage-hero/homepage-hero-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Ratings Card</td>
+            <td><code>ratings-card</code></td>
+            <td class="num"><strong>3</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/ratings-card/ratings-card-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Headline Block Component</td>
+            <td><code>headline-block</code></td>
+            <td class="num"><strong>77</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/headline-block/headline-block-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Brand Relationship</td>
+            <td><code>brand-relationship</code></td>
+            <td class="num"><strong>4</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/brand-relationship/brand-relationship-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Statistic Component</td>
+            <td><code>statistic</code></td>
+            <td class="num"><strong>45</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/statistic/statistic-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Image with Nested Content.</td>
+            <td><code>image-with-nested-content</code></td>
+            <td class="num"><strong>59</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/image-with-nested-content/image-with-nested-content-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Accordion Tabs Component</td>
+            <td><code>accordion-tabs-feature</code></td>
+            <td class="num"><strong>125</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/accordion-tabs-feature/accordion-tabs-feature-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: 50/50 Page Hero</td>
+            <td><code>hero-fifty-fifty</code></td>
+            <td class="num"><strong>60</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/hero-fifty-fifty/hero-fifty-fifty-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Promo Banner</td>
+            <td><code>promo-banner</code></td>
+            <td class="num"><strong>74</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/promo-banner/promo-banner-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Nested Carousel</td>
+            <td><code>nested-content-carousel</code></td>
+            <td class="num"><strong>64</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/nested-content-carousel/nested-content-carousel-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Workbench</td>
+            <td><code>workbench</code></td>
+            <td class="num"><strong>4</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/workbench/workbench-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Product Comparison Card</td>
+            <td><code>product-comparison-card</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/product-comparison-card/product-comparison-card-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Product Path Summary Card</td>
+            <td><code>product-path-summary-card</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/product-path-summary-card/product-path-summary-card-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Benefits Table</td>
+            <td><code>benefits-table</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/benefits-table/benefits-table-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#F8D7DA;color:#721C24">Not Automated</span></td>
+            <td>CMS: Section Updates: Overlay Capabilities</td>
+            <td><span class="muted">&mdash;</span></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Not a standalone component — an enhancement to the existing `section` component.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Detail Hero</td>
+            <td><code>detail-hero</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/detail-hero/detail-hero-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Navigation Component</td>
+            <td><code>navigation</code></td>
+            <td class="num"><strong>87</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/navigation/navigation-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Section Component</td>
+            <td><code>section</code></td>
+            <td class="num"><strong>27</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/section/section-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Buttons</td>
+            <td><code>button</code></td>
+            <td class="num"><strong>48</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/button/button-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Rich Text Component</td>
+            <td><code>formatted-rte</code></td>
+            <td class="num"><strong>58</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/formatted-rte/formatted-rte-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Content Trail</td>
+            <td><code>content-trail</code></td>
+            <td class="num"><strong>53</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/content-trail/content-trail-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Spacer</td>
+            <td><code>spacer</code></td>
+            <td class="num"><strong>37</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/spacer/spacer-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Breadcrumb</td>
+            <td><code>breadcrumb</code></td>
+            <td class="num"><strong>70</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/breadcrumb/breadcrumb-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#F8D7DA;color:#721C24">Not Automated</span></td>
+            <td>CMS: RTE Table</td>
+            <td><code>rte-table</code></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Style-guide page exists and renders, but has no authored demo content — nothing to scan yet.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Content Highlight</td>
+            <td><code>content-highlight</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/content-highlight/content-highlight-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Accordion</td>
+            <td><code>accordion</code></td>
+            <td class="num"><strong>92</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/accordion/accordion-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS Grid Component</td>
+            <td><code>grid-container</code></td>
+            <td class="num"><strong>77</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/grid-container/grid-container-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Separator Component</td>
+            <td><code>separator</code></td>
+            <td class="num"><strong>3</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/separator/separator-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Tabs Component</td>
+            <td><code>tabs</code></td>
+            <td class="num"><strong>78</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/tabs/tabs-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Video Component</td>
+            <td><code>video-external</code></td>
+            <td class="num"><strong>4</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/video-external/video-external-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>CMS: Teaser</td>
+            <td><code>teaser-card</code></td>
+            <td class="num"><strong>96</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/teaser-card/teaser-card-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#FFF3CD;color:#856404">Ambiguous</span></td>
+            <td>CMS Form Field Styling</td>
+            <td><code>form-field-text</code></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>form-field-text/form-field-dropdown exist, but there's no dedicated 'styling' spec — unclear if this names a distinct requirement.</td>
+            <td><a href="../../specFiles/ga/form-field-text/form-field-text-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Role selector</td>
+            <td><code>role-selector</code></td>
+            <td class="num"><strong>19</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/role-selector/role-selector-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#FFF3CD;color:#856404">Ambiguous</span></td>
+            <td>DR</td>
+            <td><span class="muted">&mdash;</span></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Unclear what this item refers to — never resolved with the requester.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Header</td>
+            <td><code>header</code></td>
+            <td class="num"><strong>15</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/header/header-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Footer</td>
+            <td><code>footer</code></td>
+            <td class="num"><strong>49</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/footer/footer-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Enhanced related content</td>
+            <td><code>enhanced-related-content</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/enhanced-related-content/enhanced-related-content-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#F8D7DA;color:#721C24">Not Automated</span></td>
+            <td>embed html</td>
+            <td><code>embedhtml</code></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Component code exists in kkr-aem source, but no style-guide demo page has been authored.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Rate list Accordion</td>
+            <td><code>rate-table</code></td>
+            <td class="num"><strong>38</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/rate-table/rate-table-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Product path Detail card</td>
+            <td><code>product-path-detail-card</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/product-path-detail-card/product-path-detail-card-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#F8D7DA;color:#721C24">Not Automated</span></td>
+            <td>Alert Banner</td>
+            <td><code>alert-banner</code></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Style-guide page exists and renders, but has no authored demo content.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#F8D7DA;color:#721C24">Not Automated</span></td>
+            <td>Alert Model</td>
+            <td><code>alert-modal</code></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Component code exists (as 'alert-modal'), but no style-guide demo page has been authored.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#F8D7DA;color:#721C24">Not Automated</span></td>
+            <td>Bio card</td>
+            <td><code>bio-card</code></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Style-guide page exists and renders, but has no authored demo content — matches an active Jira bug (GAAM-1474) with no test coverage.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Decision tree</td>
+            <td><code>decision-tree</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/decision-tree/decision-tree-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#F8D7DA;color:#721C24">Not Automated</span></td>
+            <td>Disclosure list</td>
+            <td><code>disclosure-list</code></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Style-guide page exists and renders, but has no authored demo content.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#F8D7DA;color:#721C24">Not Automated</span></td>
+            <td>Gated Section</td>
+            <td><code>gated-section</code></td>
+            <td class="num"><span class="muted">&mdash;</span></td>
+            <td>Component code exists, but no style-guide demo page has been authored.</td>
+            <td><span class="muted">&mdash;</span></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Image</td>
+            <td><code>image</code></td>
+            <td class="num"><strong>82</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/image/image-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>In-Brief</td>
+            <td><code>in-brief</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/in-brief/in-brief-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Insight Detail Hero</td>
+            <td><code>insights-detail-hero</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/insights-detail-hero/insights-detail-hero-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Insight listing</td>
+            <td><code>insights-listing</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/insights-listing/insights-listing-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Login</td>
+            <td><code>login</code></td>
+            <td class="num"><strong>243</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/login/login-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Navigation</td>
+            <td><code>navigation</code></td>
+            <td class="num"><strong>87</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/navigation/navigation-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><span class="status-badge" style="background:#D4EDDA;color:#155724">Automated</span></td>
+            <td>Quote</td>
+            <td><code>quote</code></td>
+            <td class="num"><strong>14</strong></td>
+            <td><span class="muted">&mdash;</span></td>
+            <td><a href="../../specFiles/ga/quote/quote-test-summary.html" target="_blank">View report &rarr;</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">Generated by GATestFramework &mdash; Component Existence &amp; Coverage Report</div>
+</body>
+</html>

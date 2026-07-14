@@ -1,0 +1,1076 @@
+{
+  "component": "content-highlight",
+  "generatedAt": "2026-07-14T15:04:17.658Z",
+  "source": "dom",
+  "entries": {
+    "a_Product_Button": {
+      "name": "a_Product_Button",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-0e9d5cab56",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_ReadTheRelease": {
+      "name": "a_ReadTheRelease",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-d37b5739a5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Read the release",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Contact_Us": {
+      "name": "a_Contact_Us",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-7c43e45284",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Contact Us",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_GlobalBioLink": {
+      "name": "a_GlobalBioLink",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-ca1a429123",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global bio link",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_ProductButton": {
+      "name": "a_ProductButton",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-d5a168a010",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h5_BarronsRecognizes_Global_Atla": {
+      "name": "h5_BarronsRecognizes_Global_Atla",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h5[contains(@class,'cmp-content-block__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Barron’s recognizes Global Atlantic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h5_6": {
+      "name": "h5_6",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h5[contains(@class,'cmp-content-block__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Proven success helping institutional clients",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h5_7": {
+      "name": "h5_7",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h5[contains(@class,'cmp-content-block__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What consumers are saying about retirement in 2026",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "imgImage_8": {
+      "name": "imgImage_8",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "contentHighlightBannerMain": {
+      "name": "contentHighlightBannerMain",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "contentHighlightBannerMain",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__brightcove-video",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//video[contains(@class,'cmp-content-highlight__brightcove-video')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "item1780302280431": {
+      "name": "item1780302280431",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "content-block-fe66a66dcb",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__item.cmp-content-highlight__item-active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region[name='item_1780302280431']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Close": {
+      "name": "Close",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "item1780304577141": {
+      "name": "item1780304577141",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "content-block-e7c432b64c",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region[name='item_1780304577141']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "item1780304694932": {
+      "name": "item1780304694932",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "content-block-8d90fa7ca3",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region[name='item_1780304694932']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Pause": {
+      "name": "Pause",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__background-icon.active.cmp-content-highlight__background-icon--pause",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Pause']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__background-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Play": {
+      "name": "Play",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__background-icon.cmp-content-highlight__background-icon--play",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__background-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_16": {
+      "name": "div_16",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_17": {
+      "name": "div_17",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__image-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__image-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_19": {
+      "name": "figure_19",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_20": {
+      "name": "picture_20",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "section_21": {
+      "name": "section_21",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__block",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//section[contains(@class,'cmp-content-highlight__block')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_22": {
+      "name": "div_22",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__content.block-size-1",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_23": {
+      "name": "div_23",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__items",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__items')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_24": {
+      "name": "div_24",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-block__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Product_Button": {
+      "name": "div_Product_Button",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-block__cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "i_26": {
+      "name": "i_26",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.arrow-right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Product_Button": {
+      "name": "span_Product_Button",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "dialog_28": {
+      "name": "dialog_28",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-content-highlight__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_29": {
+      "name": "div_29",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__modal-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__modal-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_30": {
+      "name": "div_30",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__modal-video-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__modal-video-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_31": {
+      "name": "div_31",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__content.block-size-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ReadTheRelease": {
+      "name": "div_ReadTheRelease",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-block__cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Read the release",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "i_33": {
+      "name": "i_33",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.arrow-down",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_ReadTheRelease": {
+      "name": "span_ReadTheRelease",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Read the release",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_35": {
+      "name": "div_35",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-block__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Contact_Us": {
+      "name": "div_Contact_Us",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-block__cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Contact Us",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Contact_Us": {
+      "name": "span_Contact_Us",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Contact Us",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_38": {
+      "name": "div_38",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__content.block-size-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_GlobalBioLink": {
+      "name": "div_GlobalBioLink",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-block__cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global bio link",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_GlobalBioLink": {
+      "name": "span_GlobalBioLink",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global bio link",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_41": {
+      "name": "div_41",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-block__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ProductButton": {
+      "name": "div_ProductButton",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-block__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-block__cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_ProductButton": {
+      "name": "span_ProductButton",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_44": {
+      "name": "div_44",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_45": {
+      "name": "div_45",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_46": {
+      "name": "div_46",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__video-container.ready",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__video-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_47": {
+      "name": "div_47",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__content-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__content-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_48": {
+      "name": "div_48",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__content-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__content-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_49": {
+      "name": "span_49",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__video-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-content-highlight__video-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_50": {
+      "name": "div_50",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__video-caption",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__video-caption')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_HonoredToBeRecognizedAgain": {
+      "name": "span_HonoredToBeRecognizedAgain",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__caption",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-content-highlight__caption')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Honored to be recognized again",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_52": {
+      "name": "span_52",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__caption-desc",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-content-highlight__caption-desc')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Income 150+ SE highlighted for new guaranted income design",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_53": {
+      "name": "div_53",
+      "component": "content-highlight",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-highlight__background-video-actions",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-highlight__background-video-actions')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

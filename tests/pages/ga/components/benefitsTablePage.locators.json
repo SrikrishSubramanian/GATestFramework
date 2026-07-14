@@ -1,0 +1,197 @@
+{
+  "component": "benefits-table",
+  "generatedAt": "2026-07-14T14:49:11.577Z",
+  "source": "dom",
+  "entries": {
+    "aHyperlinks": {
+      "name": "aHyperlinks",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "hyperlinks",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_1": {
+      "name": "ul_1",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-benefits-table__list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_2": {
+      "name": "ul_2",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__list.cmp-benefits-table__list--no-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-benefits-table__list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Optional_Headline": {
+      "name": "div_Optional_Headline",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-benefits-table__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional Headline",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_IncludedAtNoAdditionalCost": {
+      "name": "li_IncludedAtNoAdditionalCost",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-benefits-table__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Included at no additional cost",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Available_247WithDedicatedS": {
+      "name": "li_Available_247WithDedicatedS",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-benefits-table__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Available 24/7 with dedicated support",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_6": {
+      "name": "li_6",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-benefits-table__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Fully portable — keeps pace with your career",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_FlexiblePremiumPaymentOptio": {
+      "name": "li_FlexiblePremiumPaymentOptio",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-benefits-table__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Flexible premium payment options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_8": {
+      "name": "li_8",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-benefits-table__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Guaranteed renewable regardless of health changes",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_9": {
+      "name": "li_9",
+      "component": "benefits-table",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-benefits-table__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-benefits-table__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Supports inline hyperlinks and superscripts1",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

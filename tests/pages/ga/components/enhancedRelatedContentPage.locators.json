@@ -1,0 +1,1012 @@
+{
+  "component": "enhanced-related-content",
+  "generatedAt": "2026-07-14T15:04:48.479Z",
+  "source": "dom",
+  "entries": {
+    "ViewAllInsights": {
+      "name": "ViewAllInsights",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='View all insights']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View all insights",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Benefits_Table": {
+      "name": "Benefits_Table",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Benefits Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-enhanced-related-content__card-link')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Content_Trail": {
+      "name": "Content_Trail",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Content Trail']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-enhanced-related-content__card-link')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Feature_Banner": {
+      "name": "Feature_Banner",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Feature Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-enhanced-related-content__card-link')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Headline_Block": {
+      "name": "Headline_Block",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Headline Block']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-enhanced-related-content__card-link')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "PreviousRelatedContentSlide": {
+      "name": "PreviousRelatedContentSlide",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__btn--prev.swiper-button-prev.swiper-button-disabled",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Previous related content slide']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-enhanced-related-content__btn--prev')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "NextRelatedContentSlide": {
+      "name": "NextRelatedContentSlide",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__btn--next.swiper-button-next",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Next related content slide']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-enhanced-related-content__btn--next')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "h3_7": {
+      "name": "h3_7",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-enhanced-related-content__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet consequat adipscing",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_8": {
+      "name": "ul_8",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__cards",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-enhanced-related-content__cards')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_9": {
+      "name": "ul_9",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__cards.swiper-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-enhanced-related-content__cards')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Close": {
+      "name": "Close",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__header-row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__header-row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__header')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_OptionalEyebrow": {
+      "name": "p_OptionalEyebrow",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional eyebrow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__descriptor",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ViewAllInsights": {
+      "name": "div_ViewAllInsights",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".button.cmp-enhanced-related-content__view-all",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View all insights",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_ViewAllInsights": {
+      "name": "span_ViewAllInsights",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View all insights",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_17": {
+      "name": "span_17",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__cards-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__cards-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_19": {
+      "name": "li_19",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__card-image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "dialog_21": {
+      "name": "dialog_21",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-image__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_22": {
+      "name": "div_22",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__modal-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__modal-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_23": {
+      "name": "div_23",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__modal-image-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__modal-image-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_24": {
+      "name": "div_24",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__card-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_Benefits_Table": {
+      "name": "p_Benefits_Table",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__card-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Benefits Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_26": {
+      "name": "p_26",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__card-text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_ReadThe_Artilce": {
+      "name": "span_ReadThe_Artilce",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-enhanced-related-content__card-cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Read the Artilce",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "i_28": {
+      "name": "i_28",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_ReadThe_Artilce_29": {
+      "name": "span_ReadThe_Artilce_29",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Read the Artilce",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_30": {
+      "name": "div_30",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-tags",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__card-tags')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Development": {
+      "name": "span_Development",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-topic",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-enhanced-related-content__card-topic')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Development",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Tutorials": {
+      "name": "span_Tutorials",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-topic",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-enhanced-related-content__card-topic')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tutorials",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Insights": {
+      "name": "span_Insights",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-topic",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-enhanced-related-content__card-topic')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_34": {
+      "name": "li_34",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_35": {
+      "name": "div_35",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__card-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_Content_Trail": {
+      "name": "p_Content_Trail",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__card-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Trail",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_Content_Trail_Description": {
+      "name": "p_Content_Trail_Description",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__card-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Trail Description",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_38": {
+      "name": "li_38",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_39": {
+      "name": "div_39",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__card-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_Feature_Banner": {
+      "name": "p_Feature_Banner",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__card-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_Feature_Banner_Description": {
+      "name": "p_Feature_Banner_Description",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__card-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner Description",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_42": {
+      "name": "li_42",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_43": {
+      "name": "div_43",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__card-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_Headline_Block": {
+      "name": "p_Headline_Block",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__card-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Headline Block",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_Headline_Block_Description": {
+      "name": "p_Headline_Block_Description",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-enhanced-related-content__card-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Headline Block Description",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_46": {
+      "name": "div_46",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__carousel-nav",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__carousel-nav')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_47": {
+      "name": "i_47",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-enhanced-related-content__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_48": {
+      "name": "div_48",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__cards-container.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-enhanced-related-content__cards-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el1Of_6": {
+      "name": "el1Of_6",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card.swiper-slide.swiper-slide-active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el2Of_6": {
+      "name": "el2Of_6",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card.swiper-slide.swiper-slide-next",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el3Of_6": {
+      "name": "el3Of_6",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card.swiper-slide",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el4Of_6": {
+      "name": "el4Of_6",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card.swiper-slide",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el5Of_6": {
+      "name": "el5Of_6",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card.swiper-slide",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el6Of_6": {
+      "name": "el6Of_6",
+      "component": "enhanced-related-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-enhanced-related-content__card.swiper-slide",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-enhanced-related-content__card')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

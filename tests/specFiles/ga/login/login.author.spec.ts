@@ -226,3 +226,39 @@ test.describe('Login — AEM Dialog Configuration', () => {
     expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });
+
+test.describe('Login — CSV Test Cases (GAAM-1352)', () => {
+  test('[LGN-016] @smoke @regression CMS BE: Update Login Processing with OOTB SAML Handler — AC1', async ({ page }) => {
+    const pom = new LoginPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: A valid, signed assertion at {{/saml_login}} creates an *AEM login-token session* + a user under {{/home/users/global-atlantic/fiancial-professionals/ping}} with {{profile/*}} populated from the assertion.
+    test.fixme();
+  });
+});
+
+test.describe('Login — CSV Test Cases (GAAM-1351)', () => {
+  test('[LGN-017] @smoke @regression CMS BE: Enable Login Processing with MFA - OTP — AC1', async ({ page }) => {
+    const pom = new LoginPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Correct username/password advances to an *OTP step* showing the *masked registered phone*.
+    test.fixme();
+  });
+});
+
+test.describe('Login — CSV Test Cases (GAAM-1299)', () => {
+  test('[LGN-018] @smoke @regression CMS BE: Login Component - New firm Products API integration — AC1', async ({ page }) => {
+    const pom = new LoginPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: API Integration — NTT Firms API (Request 2 in attached pdf)*
+    test.fixme();
+  });
+});
+
+test.describe('Login — CSV Test Cases (GAAM-1288)', () => {
+  test('[LGN-019] @smoke @regression CMS BE: Login Component – MFA Extension — AC1', async ({ page }) => {
+    const pom = new LoginPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Dialog Structure*
+    test.fixme();
+  });
+});

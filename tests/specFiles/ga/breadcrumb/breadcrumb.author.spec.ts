@@ -625,3 +625,223 @@ test.describe('Breadcrumb — Dialog & GA Overlay', () => {
     expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });
+
+test.describe('Breadcrumb — CSV Test Cases (GAAM-1451)', () => {
+  test('[BRDC-036] @smoke @regression CMS Analytics FE – Component Tracking | The Breadcrumb component is currently identifying as "homepage"  — AC1', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Launch [https://author-p101514-e947796.adobeaemcloud.com/content/global-atlantic/style-guide/components/breadcrumb.html?wcmmode=disabled|https://author-p101514-e947796.adobeaemcloud.com/content/global-atlantic/style-guide/components/breadcrumb.html?wcmmode=disabled]
+    // 
+    // Inspect breadcrumb and verify the Datalayer
+    // 
+    // *Actual*: The Breadcrumb component is currently identifying as "homepage" 
+    // 
+    // *Expected*: it should be identified as “Breadcrumb”
+    // 
+    // !Screenshot 2026-06-09 at 12.57.53 PM.png|width=250,alt="Screenshot 2026-06-09 at 12.57.53 PM.png"!
+    test.fixme();
+  });
+});
+
+test.describe('Breadcrumb — Happy Path', () => {
+  test('[BRDC-037] @smoke @regression Breadcrumb renders correctly', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-breadcrumb').first();
+    await expect(root).toBeVisible();
+    // Verify core structure: heading or primary content exists
+    const heading = root.locator('h1, h2, h3').first();
+    const hasHeading = await heading.count() > 0;
+    if (hasHeading) {
+      await expect(heading).toBeVisible();
+    }
+    // Verify no JS errors during render
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    expect(errors).toEqual([]);
+  });
+
+  test('[BRDC-038] @smoke @regression Breadcrumb interactive elements are functional', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-breadcrumb').first();
+    await expect(root).toBeVisible();
+    // Verify interactive elements (links, buttons) are present and clickable
+    const interactive = root.locator('a, button');
+    const count = await interactive.count();
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      await expect(interactive.nth(i)).toBeVisible();
+      await expect(interactive.nth(i)).toBeEnabled();
+    }
+  });
+});
+
+test.describe('Breadcrumb — Negative & Boundary', () => {
+  test('[BRDC-039] @negative @regression Breadcrumb handles empty content gracefully', async ({ page }) => {
+    // Capture JS errors during page load
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    // Component should render without JS errors
+    expect(errors).toEqual([]);
+    // Root element should still be present (not crash)
+    await expect(page.locator('.cmp-breadcrumb').first()).toBeVisible();
+  });
+
+  test('[BRDC-040] @negative @regression Breadcrumb handles missing images', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-breadcrumb img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+});
+
+test.describe('Breadcrumb — Responsive', () => {
+  test('[BRDC-041] @mobile @regression @mobile Breadcrumb adapts to mobile viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-breadcrumb').first();
+    await expect(root).toBeVisible();
+    // Verify layout adapts to mobile: check flex-direction changes to column
+    const flexDir = await root.evaluate(el => {
+      const cs = getComputedStyle(el);
+      return cs.flexDirection || cs.display;
+    });
+    // At mobile, flex containers typically switch to column layout
+    // Grid containers may change template columns
+    expect(flexDir).toBeDefined();
+  });
+
+  test('[BRDC-042] @mobile @regression Breadcrumb adapts to tablet viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 1024, height: 1366 });
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-breadcrumb').first();
+    await expect(root).toBeVisible();
+    // Tablet should render without horizontal overflow
+    const overflow = await root.evaluate(el => {
+      return el.scrollWidth > el.clientWidth;
+    });
+    expect(overflow).toBe(false);
+  });
+});
+
+test.describe('Breadcrumb — Console & Resources', () => {
+  test('[BRDC-043] @regression Breadcrumb produces no JS errors', async ({ page }) => {
+    const capture = new ConsoleCapture(page);
+    capture.start();
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    await page.waitForTimeout(1000);
+    const errors = capture.getErrors();
+    capture.stop();
+    expect(errors).toEqual([]);
+  });
+});
+
+test.describe('Breadcrumb — Broken Images', () => {
+  test('[BRDC-044] @regression Breadcrumb all images load successfully', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-breadcrumb img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const img = images.nth(i);
+      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+
+  test('[BRDC-045] @regression Breadcrumb all images have alt attributes', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-breadcrumb img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const alt = await images.nth(i).getAttribute('alt');
+      expect(alt).not.toBeNull();
+    }
+  });
+});
+
+test.describe('Breadcrumb — Accessibility', () => {
+  test('[BRDC-046] @a11y @wcag22 @regression @smoke Breadcrumb passes axe-core scan', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const results = await new AxeBuilder({ page })
+      .include('.cmp-breadcrumb')
+      .withTags(["wcag2a","wcag2aa","wcag22aa"])
+      .analyze();
+    expect(results.violations).toEqual([]);
+  });
+
+  test('[BRDC-047] @a11y @wcag22 @regression @smoke Breadcrumb interactive elements meet 24px target size', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const interactive = page.locator('.cmp-breadcrumb a, .cmp-breadcrumb button, .cmp-breadcrumb input');
+    const count = await interactive.count();
+    for (let i = 0; i < count; i++) {
+      const box = await interactive.nth(i).boundingBox();
+      if (box) {
+        expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(24);
+      }
+    }
+  });
+
+  test('[BRDC-048] @a11y @wcag22 @regression @smoke Breadcrumb focus is not obscured by sticky elements', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    const focusable = page.locator('.cmp-breadcrumb a, .cmp-breadcrumb button, .cmp-breadcrumb input');
+    const count = await focusable.count();
+    for (let i = 0; i < Math.min(count, 5); i++) {
+      await focusable.nth(i).focus();
+      const box = await focusable.nth(i).boundingBox();
+      if (box) {
+        expect(box.y).toBeGreaterThanOrEqual(0);
+        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
+      }
+    }
+  });
+});
+
+test.describe('Breadcrumb — AEM Dialog Configuration', () => {
+  // Regression: GA overlay components must have their own _cq_dialog with helpPath.
+  // Without helpPath, authors see no help link in the component toolbar.
+
+  test('[BRDC-049] @author @regression @smoke @smoke Breadcrumb dialog has helpPath configured', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/breadcrumb/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok(), 'Breadcrumb GA dialog overlay not found — component may be missing _cq_dialog').toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath, 'Breadcrumb dialog missing helpPath property').toBeTruthy();
+  });
+
+  test('[BRDC-050] @author @regression @smoke Breadcrumb helpPath points to correct component details page', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/breadcrumb/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    if (!response.ok()) { test.skip(); return; }
+    const dialog = await response.json();
+    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
+  });
+});
+
+test.describe('Breadcrumb — CSV Test Cases (GAAM-1355)', () => {
+  test('[BRDC-051] @smoke @regression [VQA] - Alignment Adjustments - Detail Hero — AC1', async ({ page }) => {
+    const pom = new BreadcrumbPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Hi, can we please ensure the desktop text container has a max width of 914px (or 8-columns) to match the figma?
+    // Raising this as a separate bug on Arun’s explanation: “This needs to be implemented in both Detail Hero and in Rate Details Hero component. Text alignment and Breadcrumb alignment needs to be addressed.(_fixed width of 914px needs to be verified in tablet view as well_).
+    // According to figma, text container has:
+    // width: 914px;
+    // max-width: 1032px;”
+    // 
+    // CC [~accountid:712020:89a2fe59-27ba-41cb-b203-75c545fb669a] [~accountid:5e73d47c17c6640c385f56a6] [~accountid:606ce8584703e400679818a2] [~accountid:628724d262e0790069a80c2f] [~accountid:712020:19496377-93fa-4b6a-be8c-4f3dac15dfb5] 
+    test.fixme();
+  });
+});

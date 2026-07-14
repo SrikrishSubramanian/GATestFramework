@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Footer — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>footer.author.spec.ts, footer.edge-cases.spec.ts, footer.images.spec.ts, footer.interaction.spec.ts, footer.matrix.spec.ts, footer.visual.spec.ts</div>
+      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span><span class="source-tag">Image health generator</span><span class="source-tag">Interaction generator</span><span class="source-tag">State matrix generator</span><span class="source-tag">Visual assertion generator</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">49</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">6</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">5</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">9</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Footer — Happy Path &amp; Core Functionality</h2>
+        <span class="section-count">10</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FTR-001</td>
+              <td>Footer renders correctly</td>
+              
+              <td>Footer renders correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-002</td>
+              <td>Footer has required sections</td>
+              
+              <td>Footer has required sections</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-003</td>
+              <td>Footer navigation links are functional</td>
+              
+              <td>Footer navigation links are functional</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-004</td>
+              <td>Footer social media links are present</td>
+              
+              <td>Footer social media links are present</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-005</td>
+              <td>Footer copyright notice is visible</td>
+              
+              <td>Footer copyright notice is visible</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-006</td>
+              <td>Footer disclosure buttons expand/collapse</td>
+              
+              <td>Footer disclosure buttons expand/collapse</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-007</td>
+              <td>Footer subscribe form accepts input</td>
+              
+              <td>Footer subscribe form accepts input</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-008</td>
+              <td>Footer handles empty content gracefully</td>
+              
+              <td>Footer handles empty content gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-009</td>
+              <td>Footer no JavaScript errors</td>
+              
+              <td>Footer no JavaScript errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-010</td>
+              <td>Footer is accessible</td>
+              
+              <td>Footer is accessible</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Footer — Responsive Design</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FTR-020</td>
+              <td>Footer adapts to mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>Footer adapts to mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-021</td>
+              <td>Footer menu toggle works on mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>Footer menu toggle works on mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Footer Component — Edge Cases &amp; Enhanced Validation</h2>
+        <span class="section-count">20</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-001</td>
+              <td>Verify all required footer sections rendered</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify all required footer sections rendered</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-002</td>
+              <td>Verify footer renders on full page layout</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify footer renders on full page layout</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-003</td>
+              <td>Verify promo banner component in agnostic XF</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify promo banner component in agnostic XF</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-004</td>
+              <td>Verify navigation component rendered</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify navigation component rendered</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-005</td>
+              <td>Verify all footer links are valid and not broken</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify all footer links are valid and not broken</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-006</td>
+              <td>Verify footer links open in correct target</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify footer links open in correct target</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-007</td>
+              <td>Verify footer responsive on mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>Verify footer responsive on mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-008</td>
+              <td>Verify footer responsive on tablet</td>
+              <td class="viewport">Tablet</td>
+              <td>Verify footer responsive on tablet</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-009</td>
+              <td>Verify footer full width on desktop</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify footer full width on desktop</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-010</td>
+              <td>Verify navigation single list on agnostic XF</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify navigation single list on agnostic XF</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-011</td>
+              <td>Verify grouped navigation structure</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify grouped navigation structure</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-012</td>
+              <td>Verify footer content is not empty</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify footer content is not empty</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-013</td>
+              <td>Verify footer text content is readable</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify footer text content is readable</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-014</td>
+              <td>Verify disclosure component expands on click</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify disclosure component expands on click</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-015</td>
+              <td>Verify disclosure content visible when expanded</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify disclosure content visible when expanded</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-016</td>
+              <td>Verify footer form if present is accessible</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify footer form if present is accessible</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-017</td>
+              <td>Verify footer form submission handling</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify footer form submission handling</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-018</td>
+              <td>Verify social media links present</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify social media links present</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-019</td>
+              <td>Verify social links have descriptive labels</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify social links have descriptive labels</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FOOTER-EDGE-020</td>
+              <td>Verify footer has proper contrast for readability</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify footer has proper contrast for readability</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Footer — Images &amp; Media</h2>
+        <span class="section-count">6</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FTR-IMAGE-001</td>
+              <td>Footer logos load successfully</td>
+              
+              <td>Footer logos load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-IMAGE-002</td>
+              <td>Footer images have alt text</td>
+              
+              <td>Footer images have alt text</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-IMAGE-003</td>
+              <td>Footer logo size is appropriate</td>
+              
+              <td>Footer logo size is appropriate</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-IMAGE-004</td>
+              <td>Footer images have width/height attributes</td>
+              
+              <td>Footer images have width/height attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-IMAGE-005</td>
+              <td>Footer background images load</td>
+              
+              <td>Footer background images load</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-IMAGE-006</td>
+              <td>Footer SVG icons render correctly</td>
+              
+              <td>Footer SVG icons render correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Footer — Interactions</h2>
+        <span class="section-count">6</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FTR-INTERACTION-001</td>
+              <td>Footer links are clickable</td>
+              
+              <td>Footer links are clickable</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-INTERACTION-002</td>
+              <td>Footer disclosure buttons toggle</td>
+              
+              <td>Footer disclosure buttons toggle</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-INTERACTION-003</td>
+              <td>Footer subscribe form submission</td>
+              
+              <td>Footer subscribe form submission</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-INTERACTION-004</td>
+              <td>Footer logo link navigates home</td>
+              
+              <td>Footer logo link navigates home</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-INTERACTION-005</td>
+              <td>Footer keyboard navigation</td>
+              
+              <td>Footer keyboard navigation</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-INTERACTION-006</td>
+              <td>Footer social links open in new tab</td>
+              
+              <td>Footer social links open in new tab</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Footer — Visual Regression</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">FTR-VISUAL-001</td>
+              <td>Footer layout is visually correct</td>
+              
+              <td>Footer layout is visually correct</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-VISUAL-002</td>
+              <td>Footer columns are aligned</td>
+              
+              <td>Footer columns are aligned</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-VISUAL-003</td>
+              <td>Footer links are styled consistently</td>
+              
+              <td>Footer links are styled consistently</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-VISUAL-004</td>
+              <td>Footer text is readable</td>
+              
+              <td>Footer text is readable</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">FTR-VISUAL-005</td>
+              <td>Footer spacing is correct</td>
+              
+              <td>Footer spacing is correct</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>footer.author.spec.ts</code>, <code>footer.edge-cases.spec.ts</code>, <code>footer.images.spec.ts</code>, <code>footer.interaction.spec.ts</code>, <code>footer.visual.spec.ts</code>
+    &mdash; footer &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

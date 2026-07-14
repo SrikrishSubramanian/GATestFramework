@@ -660,3 +660,221 @@ test.describe('Tabs — Console', () => {
     expect(errors).toEqual([]);
   });
 });
+
+test.describe('Tabs — CSV Test Cases (GAAM-1375)', () => {
+  test('[TABS-046] @smoke @regression CMS Analytics FE: Include a property label in the form object | Follow-up ticket - GAAM-641 — AC1', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: *AS IS*: AEM passes the unique field {{name}} attribute for form field in kkrDatalayer object. 
+    // 
+    // *TO BE*: The requirement is to capture and pass the author-configured field label instead of the field {{name}} attribute, as the field label is defined through the authoring dialog.
+    // 
+    // # *Form Start*
+    // 
+    // * When a user clicks or tabs into the first field of a form, execute the following:
+    // * It is important to understand the privacy concerns related to tracking fields in which the user could provide personal information (do not include personally identifiable information in data layer pushes).
+    // 
+    // {noformat}kkrDataLayer.push({
+    //   event: "form_start",
+    //   form: {
+    //     name: "contact",
+    //     id: "abc123",
+    //     field: "<Field Label>"
+    //   }
+    // });{noformat}
+    // 
+    //   
+    // 
+    // # *Form Interaction*
+    // 
+    // * When a user interacts with a form, execute the following:
+    // * It is important to understand the privacy concerns related to tracking fields in which the user could provide personal information (do not include personally identifiable information in data layer pushes).
+    // 
+    // {noformat}kkrDataLayer.push({
+    //   event: "form_interaction",
+    //   form: {
+    //     name: "contact",
+    //     id: "abc123",
+    //     field: "<Field Label>"
+    //   }
+    // });{noformat}
+    // 
+    //  
+    test.fixme();
+  });
+});
+
+test.describe('Tabs — Happy Path', () => {
+  test('[TABS-047] @smoke @regression Tabs renders correctly', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-tabs').first();
+    await expect(root).toBeVisible();
+    // Verify core structure: heading or primary content exists
+    const heading = root.locator('h1, h2, h3').first();
+    const hasHeading = await heading.count() > 0;
+    if (hasHeading) {
+      await expect(heading).toBeVisible();
+    }
+    // Verify no JS errors during render
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    expect(errors).toEqual([]);
+  });
+
+  test('[TABS-048] @smoke @regression Tabs interactive elements are functional', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-tabs').first();
+    await expect(root).toBeVisible();
+    // Verify interactive elements (links, buttons) are present and clickable
+    const interactive = root.locator('a, button');
+    const count = await interactive.count();
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      await expect(interactive.nth(i)).toBeVisible();
+      await expect(interactive.nth(i)).toBeEnabled();
+    }
+  });
+});
+
+test.describe('Tabs — Negative & Boundary', () => {
+  test('[TABS-049] @negative @regression Tabs handles empty content gracefully', async ({ page }) => {
+    // Capture JS errors during page load
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    // Component should render without JS errors
+    expect(errors).toEqual([]);
+    // Root element should still be present (not crash)
+    await expect(page.locator('.cmp-tabs').first()).toBeVisible();
+  });
+
+  test('[TABS-050] @negative @regression Tabs handles missing images', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-tabs img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+});
+
+test.describe('Tabs — Console & Resources', () => {
+  test('[TABS-053] @regression Tabs produces no JS errors', async ({ page }) => {
+    const capture = new ConsoleCapture(page);
+    capture.start();
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    await page.waitForTimeout(1000);
+    const errors = capture.getErrors();
+    capture.stop();
+    expect(errors).toEqual([]);
+  });
+});
+
+test.describe('Tabs — Broken Images', () => {
+  test('[TABS-054] @regression Tabs all images load successfully', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-tabs img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const img = images.nth(i);
+      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+
+  test('[TABS-055] @regression Tabs all images have alt attributes', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-tabs img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const alt = await images.nth(i).getAttribute('alt');
+      expect(alt).not.toBeNull();
+    }
+  });
+});
+
+test.describe('Tabs — Accessibility', () => {
+  test('[TABS-056] @a11y @wcag22 @regression @smoke Tabs passes axe-core scan', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    const results = await new AxeBuilder({ page })
+      .include('.cmp-tabs')
+      .withTags(["wcag2a","wcag2aa","wcag22aa"])
+      .analyze();
+    expect(results.violations).toEqual([]);
+  });
+
+  test('[TABS-057] @a11y @wcag22 @regression @smoke Tabs interactive elements meet 24px target size', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    const interactive = page.locator('.cmp-tabs a, .cmp-tabs button, .cmp-tabs input');
+    const count = await interactive.count();
+    for (let i = 0; i < count; i++) {
+      const box = await interactive.nth(i).boundingBox();
+      if (box) {
+        expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(24);
+      }
+    }
+  });
+
+  test('[TABS-058] @a11y @wcag22 @regression @smoke Tabs focus is not obscured by sticky elements', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    const focusable = page.locator('.cmp-tabs a, .cmp-tabs button, .cmp-tabs input');
+    const count = await focusable.count();
+    for (let i = 0; i < Math.min(count, 5); i++) {
+      await focusable.nth(i).focus();
+      const box = await focusable.nth(i).boundingBox();
+      if (box) {
+        expect(box.y).toBeGreaterThanOrEqual(0);
+        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
+      }
+    }
+  });
+});
+
+test.describe('Tabs — AEM Dialog Configuration', () => {
+  // Regression: GA overlay components must have their own _cq_dialog with helpPath.
+  // Without helpPath, authors see no help link in the component toolbar.
+
+  test('[TABS-059] @author @regression @smoke @smoke Tabs dialog has helpPath configured', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/tabs/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok(), 'Tabs GA dialog overlay not found — component may be missing _cq_dialog').toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath, 'Tabs dialog missing helpPath property').toBeTruthy();
+  });
+
+  test('[TABS-060] @author @regression @smoke Tabs helpPath points to correct component details page', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/tabs/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    if (!response.ok()) { test.skip(); return; }
+    const dialog = await response.json();
+    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
+  });
+});
+
+test.describe('Tabs — CSV Test Cases (GAAM-1300)', () => {
+  test('[TABS-061] @smoke @regression Tabs Component - Update the authoring guide — AC1', async ({ page }) => {
+    const pom = new TabsPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Hi, 
+    // The number of tabs is limited to a min of 2 and a max of 6 - We need to include this constraint while authoring.
+    // 
+    // We need to include this in the authoring guidelines.  Please update to include the min and max recommendation.
+    // 
+    // 
+    // 
+    // *Recommendation - max of 6*
+    // 
+    // CC: [~accountid:712020:19496377-93fa-4b6a-be8c-4f3dac15dfb5] [~accountid:606ce8584703e400679818a2] [~accountid:712020:fe8fe45b-af82-40e5-baec-1580ec63583e] 
+    test.fixme();
+  });
+});

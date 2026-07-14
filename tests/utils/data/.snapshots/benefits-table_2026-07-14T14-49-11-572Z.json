@@ -1,0 +1,242 @@
+{
+  "component": "benefits-table",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/benefits-table.html?wcmmode=disabled",
+  "scannedAt": "2026-07-14T14:49:11.571Z",
+  "rootSelector": ".cmp-benefits-table",
+  "elements": [
+    {
+      "name": "aHyperlinks",
+      "tag": "a",
+      "text": "hyperlinks",
+      "classes": [],
+      "attributes": {
+        "href": "#"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 214,
+        "y": 827,
+        "width": 83,
+        "height": 21
+      }
+    },
+    {
+      "name": "ul_1",
+      "tag": "ul",
+      "text": "Included at no additional cost\n    \n  \n    \n      Available 24/7 with dedicated support\n    \n  \n    ",
+      "classes": [
+        "cmp-benefits-table__list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 517,
+        "width": 1154,
+        "height": 333
+      }
+    },
+    {
+      "name": "ul_2",
+      "tag": "ul",
+      "text": "Included at no additional cost\n    \n  \n    \n      Available 24/7 with dedicated support\n    \n  \n    ",
+      "classes": [
+        "cmp-benefits-table__list",
+        "cmp-benefits-table__list--no-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 6410,
+        "width": 1154,
+        "height": 200
+      }
+    },
+    {
+      "name": "div_Optional_Headline",
+      "tag": "div",
+      "text": "Optional Headline",
+      "classes": [
+        "cmp-benefits-table__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 476,
+        "width": 1154,
+        "height": 25
+      }
+    },
+    {
+      "name": "li_IncludedAtNoAdditionalCost",
+      "tag": "li",
+      "text": "Included at no additional cost",
+      "classes": [
+        "cmp-benefits-table__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 517,
+        "width": 1154,
+        "height": 42
+      }
+    },
+    {
+      "name": "li_Available_247WithDedicatedS",
+      "tag": "li",
+      "text": "Available 24/7 with dedicated support",
+      "classes": [
+        "cmp-benefits-table__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 575,
+        "width": 1154,
+        "height": 42
+      }
+    },
+    {
+      "name": "li_6",
+      "tag": "li",
+      "text": "Fully portable — keeps pace with your career",
+      "classes": [
+        "cmp-benefits-table__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 633,
+        "width": 1154,
+        "height": 42
+      }
+    },
+    {
+      "name": "li_FlexiblePremiumPaymentOptio",
+      "tag": "li",
+      "text": "Flexible premium payment options",
+      "classes": [
+        "cmp-benefits-table__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 691,
+        "width": 1154,
+        "height": 42
+      }
+    },
+    {
+      "name": "li_8",
+      "tag": "li",
+      "text": "Guaranteed renewable regardless of health changes",
+      "classes": [
+        "cmp-benefits-table__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 750,
+        "width": 1154,
+        "height": 42
+      }
+    },
+    {
+      "name": "li_9",
+      "tag": "li",
+      "text": "Supports inline hyperlinks and superscripts1",
+      "classes": [
+        "cmp-benefits-table__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-benefits-table__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 808,
+        "width": 1154,
+        "height": 42
+      }
+    }
+  ],
+  "pageTitle": "Benefits Table",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

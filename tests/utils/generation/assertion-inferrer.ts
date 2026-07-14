@@ -403,7 +403,7 @@ export function inferAssertions(
   for (const pat of FIXME_PATTERNS) {
     if (pat.test(combinedText)) {
       return {
-        code: `    // ${expected}\n    test.fixme();`,
+        code: `${toLineComment(expected)}\n    test.fixme();`,
         imports: [],
       };
     }
@@ -418,9 +418,21 @@ export function inferAssertions(
 
   // Fallback: no pattern matched → test.fixme() so it doesn't falsely pass
   return {
-    code: `    // TODO: Implement assertion for: ${expected.replace(/'/g, "\\'")}\n    test.fixme();`,
+    code: `${toLineComment(`TODO: Implement assertion for: ${expected}`)}\n    test.fixme();`,
     imports: [],
   };
+}
+
+/**
+ * Render arbitrary (possibly multi-line) text as a block of `//`-prefixed
+ * comment lines. Jira/CSV description text often spans multiple lines —
+ * commenting only the first line leaves the rest as bare, invalid statements.
+ */
+function toLineComment(text: string, indent = '    '): string {
+  return text
+    .split(/\r\n|\r|\n/)
+    .map(line => `${indent}// ${line}`)
+    .join('\n');
 }
 
 /**

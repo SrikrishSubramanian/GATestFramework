@@ -1,0 +1,71 @@
+{
+  "component": "in-brief",
+  "generatedAt": "2026-07-14T15:04:57.933Z",
+  "source": "dom",
+  "entries": {
+    "a_LearnMoreAboutRateAdjustme": {
+      "name": "a_LearnMoreAboutRateAdjustme",
+      "component": "in-brief",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "Learn more about rate adjustments",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_In_Brief": {
+      "name": "h3_In_Brief",
+      "component": "in-brief",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-in-brief__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-in-brief__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "In Brief",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_2": {
+      "name": "ul_2",
+      "component": "in-brief",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-in-brief__pointer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-in-brief__pointer')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_3": {
+      "name": "div_3",
+      "component": "in-brief",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-in-brief__pointers",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-in-brief__pointers')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

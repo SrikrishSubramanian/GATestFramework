@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Container — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Grid Container — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>grid-container.author.spec.ts, grid-container.images.spec.ts, grid-container.interaction.spec.ts, grid-container.matrix.spec.ts, grid-container.visual.spec.ts</div>
+      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span><span class="source-tag">Image health generator</span><span class="source-tag">Interaction generator</span><span class="source-tag">State matrix generator</span><span class="source-tag">Visual assertion generator</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">77</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">13</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">5</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">8</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Core Structure</h2>
+        <span class="section-count">9</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-001</td>
+              <td>Style guide page loads and grid containers are visible</td>
+              
+              <td>Style guide page loads and grid containers are visible</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-002</td>
+              <td>Each grid container has .cmp-grid-container__items child</td>
+              
+              <td>Each grid container has .cmp-grid-container__items child</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-003</td>
+              <td>Each grid container has an .aem-Grid inside __items</td>
+              
+              <td>Each grid container has an .aem-Grid inside __items</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-004</td>
+              <td>Grid wrappers use ga-grid--* style system classes, not inline styles</td>
+              
+              <td>Grid wrappers use ga-grid--* style system classes, not inline styles</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-005</td>
+              <td>Child components render inside grid columns</td>
+              
+              <td>Child components render inside grid columns</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-006</td>
+              <td>Grid columns contain rendered child content (text components)</td>
+              
+              <td>Grid columns contain rendered child content (text components)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-007</td>
+              <td>2col grids use display:grid on .aem-Grid</td>
+              
+              <td>2col grids use display:grid on .aem-Grid</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-008</td>
+              <td>3col grid uses display:grid on .aem-Grid</td>
+              
+              <td>3col grid uses display:grid on .aem-Grid</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-009</td>
+              <td>4col grid uses display:grid on .aem-Grid</td>
+              
+              <td>4col grid uses display:grid on .aem-Grid</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Column Layouts</h2>
+        <span class="section-count">10</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-010</td>
+              <td>2col 1:1 grid has two equal columns (~50% each)</td>
+              
+              <td>2col 1:1 grid has two equal columns (~50% each)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-011</td>
+              <td>2col 1:3 grid has first column ~25% and second ~75%</td>
+              
+              <td>2col 1:3 grid has first column ~25% and second ~75%</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-012</td>
+              <td>2col 3:1 CSS grid-template-columns defines 75%/25% split</td>
+              
+              <td>2col 3:1 CSS grid-template-columns defines 75%/25% split</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-013</td>
+              <td>2col 2:3 grid has first column ~40% and second ~60%</td>
+              
+              <td>2col 2:3 grid has first column ~40% and second ~60%</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-014</td>
+              <td>2col 3:2 CSS grid-template-columns defines 60%/40% split</td>
+              
+              <td>2col 3:2 CSS grid-template-columns defines 60%/40% split</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-015</td>
+              <td>3col grid has three equal column tracks (~33% each)</td>
+              
+              <td>3col grid has three equal column tracks (~33% each)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-016</td>
+              <td>4col grid has four equal column tracks (~25% each)</td>
+              
+              <td>4col grid has four equal column tracks (~25% each)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-017</td>
+              <td>2col grid renders exactly 2 aem-GridColumn children</td>
+              
+              <td>2col grid renders exactly 2 aem-GridColumn children</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-018</td>
+              <td>3col grid renders exactly 3 aem-GridColumn children</td>
+              
+              <td>3col grid renders exactly 3 aem-GridColumn children</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-019</td>
+              <td>4col grid renders exactly 4 aem-GridColumn children</td>
+              
+              <td>4col grid renders exactly 4 aem-GridColumn children</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Gap and Padding</h2>
+        <span class="section-count">6</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-020</td>
+              <td>Default 30px gap is applied on 2col 1:1 grid</td>
+              
+              <td>Default 30px gap is applied on 2col 1:1 grid</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-021</td>
+              <td>30px gap is applied on 3col grid</td>
+              
+              <td>30px gap is applied on 3col grid</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-022</td>
+              <td>1-Column Gap variant has a larger gap than 30px</td>
+              
+              <td>1-Column Gap variant has a larger gap than 30px</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-023</td>
+              <td>1-Column Gap is approximately 100-200px at desktop viewport</td>
+              
+              <td>1-Column Gap is approximately 100-200px at desktop viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-024</td>
+              <td>Gap is between columns, not applied as outer padding on the wrapper</td>
+              
+              <td>Gap is between columns, not applied as outer padding on the wrapper</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-025</td>
+              <td>2col 2:3 grid on Slate has same gap as white-bg grids</td>
+              
+              <td>2col 2:3 grid on Slate has same gap as white-bg grids</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Mobile Stacking</h2>
+        <span class="section-count">7</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-026</td>
+              <td>At 390px viewport, 2col grid stacks to 1 column</td>
+              <td class="viewport">Mobile</td>
+              <td>At 390px viewport, 2col grid stacks to 1 column</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-027</td>
+              <td>At 390px viewport, 3col grid stacks to 1 column</td>
+              <td class="viewport">Mobile</td>
+              <td>At 390px viewport, 3col grid stacks to 1 column</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-028</td>
+              <td>At 390px viewport, 4col grid stacks to 1 column</td>
+              <td class="viewport">Mobile</td>
+              <td>At 390px viewport, 4col grid stacks to 1 column</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-029</td>
+              <td>Mobile Grid (.ga-grid--mobile-grid) keeps 2-col at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile Grid (.ga-grid--mobile-grid) keeps 2-col at 390px</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-030</td>
+              <td>Mobile Grid columns are approximately equal at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile Grid columns are approximately equal at 390px</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-031</td>
+              <td>Mobile stacked grid has no horizontal overflow</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile stacked grid has no horizontal overflow</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-032</td>
+              <td>Mobile stacked grid gap is between 20px and 32px</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile stacked grid gap is between 20px and 32px</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Dark Section Background</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-033</td>
+              <td>4col on Granite: grid inherits white or light text color</td>
+              
+              <td>4col on Granite: grid inherits white or light text color</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-034</td>
+              <td>4col on Granite: wrapper has granite background applied</td>
+              
+              <td>4col on Granite: wrapper has granite background applied</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-035</td>
+              <td>Grid container on granite section renders without layout issues</td>
+              
+              <td>Grid container on granite section renders without layout issues</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — AEM Dialog and Overlay</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-036</td>
+              <td>GA overlay has sling:resourceSuperType pointing to base component</td>
+              
+              <td>GA overlay has sling:resourceSuperType pointing to base component</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-037</td>
+              <td>Component belongs to &quot;GA Base&quot; component group</td>
+              
+              <td>Component belongs to &quot;GA Base&quot; component group</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-038</td>
+              <td>Dialog exists and has a Properties tab</td>
+              
+              <td>Dialog exists and has a Properties tab</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-039</td>
+              <td>Style guide page returns HTTP 200</td>
+              
+              <td>Style guide page returns HTTP 200</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-040</td>
+              <td>Component description is set</td>
+              
+              <td>Component description is set</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Accessibility</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-041</td>
+              <td>axe-core scan on 2col grid passes</td>
+              <td class="viewport">Desktop</td>
+              <td>axe-core scan on 2col grid passes</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-042</td>
+              <td>axe-core scan on 3col and 4col grids passes</td>
+              <td class="viewport">Desktop</td>
+              <td>axe-core scan on 3col and 4col grids passes</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#FFF3CD;color:#856404">wcag22</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-043</td>
+              <td>Grid columns maintain logical DOM order (first column first in DOM)</td>
+              <td class="viewport">Desktop</td>
+              <td>Grid columns maintain logical DOM order (first column first in DOM)</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-044</td>
+              <td>No grid container overflows viewport at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>No grid container overflows viewport at 390px</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-045</td>
+              <td>Images inside grid columns have alt attributes</td>
+              <td class="viewport">Desktop</td>
+              <td>Images inside grid columns have alt attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Console Errors</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-046</td>
+              <td>No JS errors or page errors on style guide page load</td>
+              
+              <td>No JS errors or page errors on style guide page load</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Image Health</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>No broken images</td>
+              
+              <td>No broken images</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have alt text</td>
+              
+              <td>All images have alt text</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>No oversized images (&gt;500KB)</td>
+              
+              <td>No oversized images (&gt;500KB)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Deep Interaction Tests</h2>
+        <span class="section-count">12</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-001 @interaction @regression 2col layout transitions from grid to stacked at mobile (1440px → 390px)</td>
+              <td class="viewport">Mobile</td>
+              <td>GC-INT-001 @interaction @regression 2col layout transitions from grid to stacked at mobile (1440px → 390px)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-002 @interaction @regression 3col layout transitions from 3-col to stacked at mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>GC-INT-002 @interaction @regression 3col layout transitions from 3-col to stacked at mobile</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-003 @interaction @regression 4col layout transitions from 4-col to stacked at mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>GC-INT-003 @interaction @regression 4col layout transitions from 4-col to stacked at mobile</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-004 @interaction @regression Mobile Grid 2col stays 2-col at 390px (flex-direction row, flex-wrap wrap)</td>
+              <td class="viewport">Mobile</td>
+              <td>GC-INT-004 @interaction @regression Mobile Grid 2col stays 2-col at 390px (flex-direction row, flex-wrap wrap)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-005 @interaction @regression Mobile Grid columns are ~50% width each at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>GC-INT-005 @interaction @regression Mobile Grid columns are ~50% width each at 390px</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-006 @interaction @regression Mobile Grid gap is 24px at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>GC-INT-006 @interaction @regression Mobile Grid gap is 24px at 390px</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-007 @interaction @regression 1 Column Gap at desktop is larger than 30px default gap</td>
+              <td class="viewport">Desktop</td>
+              <td>GC-INT-007 @interaction @regression 1 Column Gap at desktop is larger than 30px default gap</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-008 @interaction @regression 1 Column Gap reverts to mobile gap at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>GC-INT-008 @interaction @regression 1 Column Gap reverts to mobile gap at 390px</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-009 @interaction @regression Grid display property is consistent across white/slate/granite backgrounds</td>
+              <td class="viewport">Desktop</td>
+              <td>GC-INT-009 @interaction @regression Grid display property is consistent across white/slate/granite backgrounds</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-010 @interaction @regression Column widths are consistent regardless of background color</td>
+              <td class="viewport">Desktop</td>
+              <td>GC-INT-010 @interaction @regression Column widths are consistent regardless of background color</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-011 @interaction @regression Columns in 2col layout have equal height (stretch alignment)</td>
+              <td class="viewport">Desktop</td>
+              <td>GC-INT-011 @interaction @regression Columns in 2col layout have equal height (stretch alignment)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>GC-INT-012 @interaction @regression Tab navigation flows through grid columns in DOM order</td>
+              <td class="viewport">Desktop</td>
+              <td>GC-INT-012 @interaction @regression Tab navigation flows through grid columns in DOM order</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Desktop Matrix</h2>
+        <span class="section-count">8</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-MX-001</td>
+              <td>2col ratio-1-1 on white: equal columns and 30px gap</td>
+              <td class="viewport">Desktop</td>
+              <td>2col ratio-1-1 on white: equal columns and 30px gap</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-002</td>
+              <td>2col ratio-1-3 on white: 25%/75% column split</td>
+              <td class="viewport">Desktop</td>
+              <td>2col ratio-1-3 on white: 25%/75% column split</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-003</td>
+              <td>2col ratio-2-3 on slate: 40%/60% columns and slate background</td>
+              <td class="viewport">Desktop</td>
+              <td>2col ratio-2-3 on slate: 40%/60% columns and slate background</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-004</td>
+              <td>2col 1-column-gap on white: column gap larger than 100px</td>
+              <td class="viewport">Desktop</td>
+              <td>2col 1-column-gap on white: column gap larger than 100px</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-005</td>
+              <td>3col on white: three columns side by side</td>
+              <td class="viewport">Desktop</td>
+              <td>3col on white: three columns side by side</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-006</td>
+              <td>4col on granite: four columns and white text</td>
+              <td class="viewport">Desktop</td>
+              <td>4col on granite: four columns and white text</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-007</td>
+              <td>mobile-grid on white: has ga-grid--mobile-grid class</td>
+              <td class="viewport">Mobile</td>
+              <td>mobile-grid on white: has ga-grid--mobile-grid class</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-008</td>
+              <td>all grids use display: grid at desktop (1280px)</td>
+              <td class="viewport">Desktop</td>
+              <td>all grids use display: grid at desktop (1280px)</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Mobile Matrix</h2>
+        <span class="section-count">4</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GC-MX-009</td>
+              <td>2col stacks to single column at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>2col stacks to single column at 390px</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-010</td>
+              <td>3col stacks to single column at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>3col stacks to single column at 390px</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-011</td>
+              <td>4col stacks to single column at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>4col stacks to single column at 390px</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GC-MX-012</td>
+              <td>mobile-grid stays 2-col at 390px</td>
+              <td class="viewport">Mobile</td>
+              <td>mobile-grid stays 2-col at 390px</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>GridContainer — Visual Regression</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>Desktop screenshot matches baseline</td>
+              <td class="viewport">Desktop</td>
+              <td>Desktop screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Mobile screenshot matches baseline</td>
+              <td class="viewport">Mobile</td>
+              <td>Mobile screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>Tablet screenshot matches baseline</td>
+              <td class="viewport">Tablet</td>
+              <td>Tablet screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>grid-container.author.spec.ts</code>, <code>grid-container.images.spec.ts</code>, <code>grid-container.interaction.spec.ts</code>, <code>grid-container.matrix.spec.ts</code>, <code>grid-container.visual.spec.ts</code>
+    &mdash; grid-container &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

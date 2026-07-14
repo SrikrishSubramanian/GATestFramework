@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Cta Video Modal — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Hero Cta Video Modal — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>hero-cta-video-modal.edge-cases.spec.ts, hero-cta-video-modal.spec.ts</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">40</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">2</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">2</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">3</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Hero CTA Video Modal — Edge Cases</h2>
+        <span class="section-count">20</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-001</td>
+              <td>Verify modal can be opened and closed multiple times</td>
+              
+              <td>Verify modal can be opened and closed multiple times</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-002</td>
+              <td>Verify rapid CTA clicks do not create multiple modals</td>
+              
+              <td>Verify rapid CTA clicks do not create multiple modals</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-003</td>
+              <td>Verify Tab + Enter opens modal</td>
+              
+              <td>Verify Tab + Enter opens modal</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-004</td>
+              <td>Verify Space key opens modal on button</td>
+              
+              <td>Verify Space key opens modal on button</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-005</td>
+              <td>Verify video remains paused if not interacted</td>
+              
+              <td>Verify video remains paused if not interacted</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-006</td>
+              <td>Verify video resets position on modal close/reopen</td>
+              
+              <td>Verify video resets position on modal close/reopen</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-007</td>
+              <td>Verify focus loop in modal with single focusable element</td>
+              
+              <td>Verify focus loop in modal with single focusable element</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-008</td>
+              <td>Verify Shift+Tab backwards navigation in modal</td>
+              
+              <td>Verify Shift+Tab backwards navigation in modal</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-009</td>
+              <td>Verify clicking on video does not close modal</td>
+              
+              <td>Verify clicking on video does not close modal</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-010</td>
+              <td>Verify clicking overlay edge closes modal</td>
+              
+              <td>Verify clicking overlay edge closes modal</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-011</td>
+              <td>Verify modal adapts to viewport resize</td>
+              
+              <td>Verify modal adapts to viewport resize</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-012</td>
+              <td>Verify modal orientation change behavior</td>
+              
+              <td>Verify modal orientation change behavior</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-013</td>
+              <td>Verify modal gracefully handles missing video source</td>
+              
+              <td>Verify modal gracefully handles missing video source</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-014</td>
+              <td>Verify no JavaScript errors on modal interactions</td>
+              
+              <td>Verify no JavaScript errors on modal interactions</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-015</td>
+              <td>Verify close button has accessible label</td>
+              
+              <td>Verify close button has accessible label</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-016</td>
+              <td>Verify modal has proper aria-modal attribute</td>
+              
+              <td>Verify modal has proper aria-modal attribute</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-017</td>
+              <td>Verify video has captions/subtitles support</td>
+              
+              <td>Verify video has captions/subtitles support</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-018</td>
+              <td>Verify modal content contrast meets WCAG standards</td>
+              
+              <td>Verify modal content contrast meets WCAG standards</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-019</td>
+              <td>Verify modal min/max width constraints</td>
+              
+              <td>Verify modal min/max width constraints</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-EDGE-020</td>
+              <td>Verify no layout shift when modal appears</td>
+              
+              <td>Verify no layout shift when modal appears</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">edge</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Hero CTA Video Modal — GAAM-621</h2>
+        <span class="section-count">20</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GAAM-621-001</td>
+              <td>Verify video modal opens on CTA click</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify video modal opens on CTA click</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-002</td>
+              <td>Verify modal closes on X button click</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify modal closes on X button click</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-003</td>
+              <td>Verify modal closes on overlay click</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify modal closes on overlay click</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-004</td>
+              <td>Verify modal closes on ESC key press</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify modal closes on ESC key press</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-005</td>
+              <td>Verify video plays and pauses on click</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify video plays and pauses on click</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-006</td>
+              <td>Verify video controls are accessible</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify video controls are accessible</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-007</td>
+              <td>Verify video fullscreen capability</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify video fullscreen capability</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-008</td>
+              <td>Verify CTA is implemented as button element</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify CTA is implemented as button element</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-009</td>
+              <td>Verify CTA has accessible name</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify CTA has accessible name</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-010</td>
+              <td>Verify focus moves to modal on open</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify focus moves to modal on open</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-011</td>
+              <td>Verify focus trap within modal</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify focus trap within modal</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-012</td>
+              <td>Verify focus returns to CTA on modal close</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify focus returns to CTA on modal close</td>
+              <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-013</td>
+              <td>Verify background scrolling is disabled when modal open</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify background scrolling is disabled when modal open</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-014</td>
+              <td>Verify video stops when modal closes</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify video stops when modal closes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-015</td>
+              <td>Verify modal responsive on mobile</td>
+              <td class="viewport">Mobile</td>
+              <td>Verify modal responsive on mobile</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-016</td>
+              <td>Verify modal responsive on tablet</td>
+              <td class="viewport">Tablet</td>
+              <td>Verify modal responsive on tablet</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-017</td>
+              <td>Verify video source is valid</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify video source is valid</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-018</td>
+              <td>Verify video loads without errors</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify video loads without errors</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-019</td>
+              <td>Verify modal has proper backdrop</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify modal has proper backdrop</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-621-020</td>
+              <td>Verify modal content is centered</td>
+              <td class="viewport">Desktop</td>
+              <td>Verify modal content is centered</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>hero-cta-video-modal.edge-cases.spec.ts</code>, <code>hero-cta-video-modal.spec.ts</code>
+    &mdash; hero-cta-video-modal &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

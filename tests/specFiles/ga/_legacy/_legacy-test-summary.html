@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Legacy — Test Case Summary</title>
+  <style>
+    :root {
+      --azul: #003DA5;
+      --granite: #2D3138;
+      --slate: #F0F1F2;
+      --white: #FFFFFF;
+      --border: #DEE2E6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--granite);
+      background: var(--slate);
+      line-height: 1.6;
+    }
+    .header {
+      background: var(--azul);
+      color: var(--white);
+      padding: 32px 40px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+    .header p { opacity: 0.85; font-size: 14px; }
+    .meta-bar { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .meta-item {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .meta-item strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; margin-bottom: 2px; }
+    .meta-item a { color: var(--white); text-decoration: underline; }
+    .jira-tag, .source-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 2px 4px 2px 0;
+    }
+    .stats {
+      display: flex;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-box {
+      flex: 1;
+      text-align: center;
+      padding: 18px 12px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: var(--azul); }
+    .stat-box .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #6C757D; margin-top: 2px; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+    .section {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: #F8F9FA;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: #EEF0F2; }
+    .section-header h2 { font-size: 16px; font-weight: 600; }
+    .section-count {
+      background: var(--azul);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6C757D;
+      padding: 10px 16px;
+      border-bottom: 2px solid var(--border);
+      background: #FDFDFE;
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0F1F2;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #F8FAFC; }
+    .test-id {
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      white-space: nowrap;
+    }
+    .tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .viewport { font-size: 12px; color: #6C757D; white-space: nowrap; }
+    .expected-value { font-weight: 600; color: var(--granite); }
+    .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+    .section-body { display: block; }
+    .section.collapsed .section-body { display: none; }
+    .chevron { transition: transform 0.2s; font-size: 12px; color: #999; }
+    .section.collapsed .chevron { transform: rotate(-90deg); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1> Legacy — Test Summary</h1>
+    
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Spec Files</strong>sprint-16-comprehensive.spec.ts</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">18</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">6</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">1</div><div class="label">Spec Files</div></div>
+    <div class="stat-box"><div class="num">0</div><div class="label">Tag Types</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Smoke Tests @smoke</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GAAM-1098</td>
+              <td>Button component smoke test</td>
+              
+              <td>Button component smoke test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1091</td>
+              <td>Text component smoke test</td>
+              
+              <td>Text component smoke test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1080</td>
+              <td>Hero component smoke test</td>
+              
+              <td>Hero component smoke test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1068</td>
+              <td>Navigation component smoke test</td>
+              
+              <td>Navigation component smoke test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1024</td>
+              <td>Footer component smoke test</td>
+              
+              <td>Footer component smoke test</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Regression Tests @regression</h2>
+        <span class="section-count">5</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GAAM-1098</td>
+              <td>Button - CSS classes follow BEM convention</td>
+              
+              <td>Button - CSS classes follow BEM convention</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1091</td>
+              <td>Text - Semantic HTML validation</td>
+              
+              <td>Text - Semantic HTML validation</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1080</td>
+              <td>Hero - Responsive design test</td>
+              
+              <td>Hero - Responsive design test</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-394</td>
+              <td>SiteHeader - Component registration</td>
+              
+              <td>SiteHeader - Component registration</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-393</td>
+              <td>PageTemplate - Dialog structure</td>
+              
+              <td>PageTemplate - Dialog structure</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Accessibility Tests @a11y</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GAAM-1098</td>
+              <td>Button - Keyboard navigation</td>
+              
+              <td>Button - Keyboard navigation</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1098</td>
+              <td>Button - ARIA labels</td>
+              
+              <td>Button - ARIA labels</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Quality Checks @quality</h2>
+        <span class="section-count">3</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GAAM-1098</td>
+              <td>Button - No inline styles</td>
+              
+              <td>Button - No inline styles</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1091</td>
+              <td>Text - No inline JavaScript</td>
+              
+              <td>Text - No inline JavaScript</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-394</td>
+              <td>SiteHeader - HTL comments not in output</td>
+              
+              <td>SiteHeader - HTL comments not in output</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Performance Tests @performance</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">GAAM-1098</td>
+              <td>Button - Component load time &lt; 1s</td>
+              
+              <td>Button - Component load time &lt; 1s</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="test-id">GAAM-1091</td>
+              <td>Text - Component render time &lt; 500ms</td>
+              
+              <td>Text - Component render time &lt; 500ms</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Sprint 16 Summary @summary</h2>
+        <span class="section-count">1</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>Print Sprint 16 ticket count and info</td>
+              
+              <td>Print Sprint 16 ticket count and info</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Generated from <code>sprint-16-comprehensive.spec.ts</code>
+    &mdash; _legacy &mdash; Global Atlantic Test Framework
+  </div>
+
+</body>
+</html>

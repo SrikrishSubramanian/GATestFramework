@@ -1,0 +1,837 @@
+{
+  "component": "insights-listing",
+  "generatedAt": "2026-07-14T15:05:17.616Z",
+  "source": "dom",
+  "entries": {
+    "button_Professionals": {
+      "name": "button_Professionals",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-btn",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__featured-topic-btn')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Individuals": {
+      "name": "button_Individuals",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-btn",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__featured-topic-btn')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Corp": {
+      "name": "button_Corp",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-btn",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__featured-topic-btn')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corp",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Corporate_Agnostic": {
+      "name": "button_Corporate_Agnostic",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-btn",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__featured-topic-btn')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate (Agnostic)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Financial_Professionals": {
+      "name": "button_Financial_Professionals",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-btn",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__featured-topic-btn')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "CloseFilterPanel": {
+      "name": "CloseFilterPanel",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close filter panel']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__filter-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ApplySelectedFilters": {
+      "name": "ApplySelectedFilters",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-apply",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Apply selected filters']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__filter-apply')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Apply Filters",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ClearAllFilters": {
+      "name": "ClearAllFilters",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-clear-panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Clear all filters']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__filter-clear-panel')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Clear All Filters",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "OpenFilters": {
+      "name": "OpenFilters",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-trigger",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Open filters']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__filter-trigger')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Filter",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ClearAllActiveFilters": {
+      "name": "ClearAllActiveFilters",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__clear-all",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Clear all active filters']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__clear-all')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Clear All Filters",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Prev": {
+      "name": "Prev",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__pagination-prev",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Prev']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__pagination-prev')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Prev",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Next": {
+      "name": "Next",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__pagination-next",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Next']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-listing__pagination-next')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Next",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Explore_All_Insights": {
+      "name": "h2_Explore_All_Insights",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-insights-listing__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore All Insights",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "InsightsPagination": {
+      "name": "InsightsPagination",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__pagination",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "navigation[name='Insights pagination']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//nav[contains(@class,'cmp-insights-listing__pagination')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_14": {
+      "name": "ul_14",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topics-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "list",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-insights-listing__featured-topics-list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_15": {
+      "name": "ul_15",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__cards",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "list",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-insights-listing__cards')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_16": {
+      "name": "ul_16",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__pagination-pages",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "list",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-insights-listing__pagination-pages')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "FilterInsights": {
+      "name": "FilterInsights",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "cmp-insights-listing-filter-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "dialog[name='Filter insights']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-listing__filter-panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topics",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-listing__featured-topics')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_JumpToA_Featured_Topic": {
+      "name": "p_JumpToA_Featured_Topic",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topics-heading",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-insights-listing__featured-topics-heading')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Jump to a Featured Topic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Professionals": {
+      "name": "li_Professionals",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-insights-listing__featured-topic-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_21": {
+      "name": "span_21",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-btn-check",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-insights-listing__featured-topic-btn-check')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_Individuals": {
+      "name": "li_Individuals",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-insights-listing__featured-topic-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Corp": {
+      "name": "li_Corp",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-insights-listing__featured-topic-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corp",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Corporate_Agnostic": {
+      "name": "li_Corporate_Agnostic",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-insights-listing__featured-topic-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate (Agnostic)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Financial_Professionals": {
+      "name": "li_Financial_Professionals",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__featured-topic-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-insights-listing__featured-topic-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_26": {
+      "name": "div_26",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-listing__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "aside_27": {
+      "name": "aside_27",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__sidebar",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//aside[contains(@class,'cmp-insights-listing__sidebar')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_FilterBy_Topics": {
+      "name": "div_FilterBy_Topics",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-panel-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-listing__filter-panel-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Filter by Topics",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_FilterBy_Topics": {
+      "name": "p_FilterBy_Topics",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-panel-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-insights-listing__filter-panel-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Filter by Topics",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_FilterBy_Topics_30": {
+      "name": "p_FilterBy_Topics_30",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-by-topics",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-insights-listing__filter-by-topics')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Filter by Topics",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_31": {
+      "name": "div_31",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-panel-footer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-listing__filter-panel-footer')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "main_32": {
+      "name": "main_32",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__main",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//main[contains(@class,'cmp-insights-listing__main')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_33": {
+      "name": "div_33",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__summary-bar",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-listing__summary-bar')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_0_Insights": {
+      "name": "p_0_Insights",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__summary-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-insights-listing__summary-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "0 Insights",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Filter": {
+      "name": "span_Filter",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-trigger-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-insights-listing__filter-trigger-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Filter",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_36": {
+      "name": "span_36",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__filter-trigger-badge",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-insights-listing__filter-trigger-badge')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_37": {
+      "name": "div_37",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__empty-state",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-listing__empty-state')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "No insights were found. Please try a different filter.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_38": {
+      "name": "span_38",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__empty-state-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-insights-listing__empty-state-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_39": {
+      "name": "p_39",
+      "component": "insights-listing",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-listing__empty-state-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-insights-listing__empty-state-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "No insights were found. Please try a different filter.",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

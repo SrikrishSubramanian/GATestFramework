@@ -1,0 +1,246 @@
+{
+  "component": "insights-detail-hero",
+  "generatedAt": "2026-07-14T15:05:07.622Z",
+  "source": "dom",
+  "entries": {
+    "PlayVideo": {
+      "name": "PlayVideo",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__play-btn",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-detail-hero__play-btn')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "CloseVideo": {
+      "name": "CloseVideo",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-insights-detail-hero__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "h1_2": {
+      "name": "h1_2",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-insights-detail-hero__headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_3": {
+      "name": "div_3",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__left",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-detail-hero__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_4": {
+      "name": "div_4",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-detail-hero__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__info",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-detail-hero__info')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__info-item.cmp-insights-detail-hero__read-watch-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-detail-hero__info-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_7": {
+      "name": "span_7",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__read-time",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-insights-detail-hero__read-time')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__media",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-detail-hero__media')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_9": {
+      "name": "span_9",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__watch-time",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-insights-detail-hero__watch-time')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_10": {
+      "name": "div_10",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__video-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-detail-hero__video-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__video-overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-insights-detail-hero__video-overlay')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "VideoPlayer": {
+      "name": "VideoPlayer",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-insights-detail-hero__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "insightsDetailHero_66ffcfaa31": {
+      "name": "insightsDetailHero_66ffcfaa31",
+      "component": "insights-detail-hero",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "insights-detail-hero-66ffcfaa31",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-insights-detail-hero__modal-video.video-js",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//video-js[contains(@class,'cmp-insights-detail-hero__modal-video')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

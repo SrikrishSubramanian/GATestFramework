@@ -1,0 +1,1354 @@
+{
+  "component": "enhanced-related-content",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/enhanced-related-content.html?wcmmode=disabled",
+  "scannedAt": "2026-07-14T15:04:48.473Z",
+  "rootSelector": ".cmp-enhanced-related-content",
+  "elements": [
+    {
+      "name": "ViewAllInsights",
+      "tag": "a",
+      "text": "View all insights",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "aria-label": "View all insights"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "cmp-enhanced-related-content__view-all"
+      ],
+      "role": null,
+      "ariaLabel": "View all insights",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1029,
+        "y": 531,
+        "width": 188,
+        "height": 50
+      }
+    },
+    {
+      "name": "Benefits_Table",
+      "tag": "a",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/benefits-table.html",
+        "aria-label": "Benefits Table"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card"
+      ],
+      "role": null,
+      "ariaLabel": "Benefits Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 629,
+        "width": 561,
+        "height": 543
+      }
+    },
+    {
+      "name": "Content_Trail",
+      "tag": "a",
+      "text": "Content Trail\n                                Content Trail Description\n                            ",
+      "classes": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/content-trail.html",
+        "aria-label": "Content Trail"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card"
+      ],
+      "role": null,
+      "ariaLabel": "Content Trail",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 656,
+        "y": 629,
+        "width": 561,
+        "height": 543
+      }
+    },
+    {
+      "name": "Feature_Banner",
+      "tag": "a",
+      "text": "Feature Banner\n                                Feature Banner Description\n                          ",
+      "classes": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/feature-banner.html",
+        "aria-label": "Feature Banner"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card"
+      ],
+      "role": null,
+      "ariaLabel": "Feature Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 854,
+        "y": 2680,
+        "width": 363,
+        "height": 436
+      }
+    },
+    {
+      "name": "Headline_Block",
+      "tag": "a",
+      "text": "Headline Block\n                                Headline Block Description\n                          ",
+      "classes": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/headline-block.html",
+        "aria-label": "Headline Block"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card"
+      ],
+      "role": null,
+      "ariaLabel": "Headline Block",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 843,
+        "y": 4961,
+        "width": 374,
+        "height": 132
+      }
+    },
+    {
+      "name": "PreviousRelatedContentSlide",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-enhanced-related-content__btn--prev",
+        "swiper-button-prev",
+        "swiper-button-disabled"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Previous related content slide",
+        "disabled": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__carousel-nav"
+      ],
+      "role": null,
+      "ariaLabel": "Previous related content slide",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1115,
+        "y": 6901,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "name": "NextRelatedContentSlide",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-enhanced-related-content__btn--next",
+        "swiper-button-next"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Next related content slide"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__carousel-nav"
+      ],
+      "role": null,
+      "ariaLabel": "Next related content slide",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1167,
+        "y": 6901,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "name": "h3_7",
+      "tag": "h3",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing",
+      "classes": [
+        "cmp-enhanced-related-content__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 451,
+        "width": 918,
+        "height": 42
+      }
+    },
+    {
+      "name": "ul_8",
+      "tag": "ul",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__cards"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 629,
+        "width": 1154,
+        "height": 543
+      }
+    },
+    {
+      "name": "ul_9",
+      "tag": "ul",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__cards",
+        "swiper-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards-container",
+        "swiper",
+        "swiper-initialized",
+        "swiper-horizontal",
+        "swiper-backface-hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 6993,
+        "width": 1154,
+        "height": 435
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "Optional eyebrow\n\n                Lorem ipsum dolor sit amet consequat adipscing\n\n                \n ",
+      "classes": [
+        "cmp-enhanced-related-content__header-row"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 421,
+        "width": 918,
+        "height": 160
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "Optional eyebrow\n\n                Lorem ipsum dolor sit amet consequat adipscing\n\n                \n ",
+      "classes": [
+        "cmp-enhanced-related-content__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__header-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 421,
+        "width": 918,
+        "height": 160
+      }
+    },
+    {
+      "name": "p_OptionalEyebrow",
+      "tag": "p",
+      "text": "Optional eyebrow",
+      "classes": [
+        "cmp-enhanced-related-content__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 421,
+        "width": 918,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscin",
+      "classes": [
+        "cmp-enhanced-related-content__descriptor"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 505,
+        "width": 747,
+        "height": 76
+      }
+    },
+    {
+      "name": "div_ViewAllInsights",
+      "tag": "div",
+      "text": "View all insights",
+      "classes": [
+        "button",
+        "cmp-enhanced-related-content__view-all"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1029,
+        "y": 531,
+        "width": 188,
+        "height": 50
+      }
+    },
+    {
+      "name": "span_ViewAllInsights",
+      "tag": "span",
+      "text": "View all insights",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1051,
+        "y": 548,
+        "width": 116,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_17",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1179,
+        "y": 548,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__cards-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 629,
+        "width": 1154,
+        "height": 543
+      }
+    },
+    {
+      "name": "li_19",
+      "tag": "li",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__card"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 629,
+        "width": 561,
+        "height": 543
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-enhanced-related-content__card-image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 629,
+        "width": 561,
+        "height": 374
+      }
+    },
+    {
+      "name": "dialog_21",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-image__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-image-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1003,
+        "width": 561,
+        "height": 102
+      }
+    },
+    {
+      "name": "p_Benefits_Table",
+      "tag": "p",
+      "text": "Benefits Table",
+      "classes": [
+        "cmp-enhanced-related-content__card-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1027,
+        "width": 561,
+        "height": 22
+      }
+    },
+    {
+      "name": "p_26",
+      "tag": "p",
+      "text": "Benefits Table style guide page — Size (Large/Small), Padding, and Color (Midnight/Slate) variations",
+      "classes": [
+        "cmp-enhanced-related-content__card-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1055,
+        "width": 561,
+        "height": 50
+      }
+    },
+    {
+      "name": "span_ReadThe_Artilce",
+      "tag": "span",
+      "text": "Read the Artilce",
+      "classes": [
+        "cmp-enhanced-related-content__card-cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "i_28",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_ReadThe_Artilce_29",
+      "tag": "span",
+      "text": "Read the Artilce",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "Development\n                                \n                                    Tutorials\n         ",
+      "classes": [
+        "cmp-enhanced-related-content__card-tags"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1145,
+        "width": 525,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_Development",
+      "tag": "span",
+      "text": "Development",
+      "classes": [
+        "cmp-enhanced-related-content__card-topic"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-tags"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1145,
+        "width": 107,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_Tutorials",
+      "tag": "span",
+      "text": "Tutorials",
+      "classes": [
+        "cmp-enhanced-related-content__card-topic"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-tags"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1145,
+        "width": 77,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_Insights",
+      "tag": "span",
+      "text": "Insights",
+      "classes": [
+        "cmp-enhanced-related-content__card-topic"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-tags"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 267,
+        "y": 1145,
+        "width": 71,
+        "height": 26
+      }
+    },
+    {
+      "name": "li_34",
+      "tag": "li",
+      "text": "Content Trail\n                                Content Trail Description\n                            ",
+      "classes": [
+        "cmp-enhanced-related-content__card"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 629,
+        "width": 561,
+        "height": 543
+      }
+    },
+    {
+      "name": "div_35",
+      "tag": "div",
+      "text": "Content Trail\n                                Content Trail Description\n                            ",
+      "classes": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 1003,
+        "width": 561,
+        "height": 102
+      }
+    },
+    {
+      "name": "p_Content_Trail",
+      "tag": "p",
+      "text": "Content Trail",
+      "classes": [
+        "cmp-enhanced-related-content__card-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 1027,
+        "width": 561,
+        "height": 22
+      }
+    },
+    {
+      "name": "p_Content_Trail_Description",
+      "tag": "p",
+      "text": "Content Trail Description",
+      "classes": [
+        "cmp-enhanced-related-content__card-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 656,
+        "y": 1055,
+        "width": 561,
+        "height": 25
+      }
+    },
+    {
+      "name": "li_38",
+      "tag": "li",
+      "text": "Feature Banner\n                                Feature Banner Description\n                          ",
+      "classes": [
+        "cmp-enhanced-related-content__card"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 854,
+        "y": 2680,
+        "width": 363,
+        "height": 436
+      }
+    },
+    {
+      "name": "div_39",
+      "tag": "div",
+      "text": "Feature Banner\n                                Feature Banner Description\n                          ",
+      "classes": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 854,
+        "y": 2922,
+        "width": 363,
+        "height": 128
+      }
+    },
+    {
+      "name": "p_Feature_Banner",
+      "tag": "p",
+      "text": "Feature Banner",
+      "classes": [
+        "cmp-enhanced-related-content__card-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 854,
+        "y": 2946,
+        "width": 363,
+        "height": 22
+      }
+    },
+    {
+      "name": "p_Feature_Banner_Description",
+      "tag": "p",
+      "text": "Feature Banner Description",
+      "classes": [
+        "cmp-enhanced-related-content__card-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 854,
+        "y": 2974,
+        "width": 363,
+        "height": 25
+      }
+    },
+    {
+      "name": "li_42",
+      "tag": "li",
+      "text": "Headline Block\n                                Headline Block Description\n                          ",
+      "classes": [
+        "cmp-enhanced-related-content__card"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 843,
+        "y": 4930,
+        "width": 374,
+        "height": 194
+      }
+    },
+    {
+      "name": "div_43",
+      "tag": "div",
+      "text": "Headline Block\n                                Headline Block Description\n                          ",
+      "classes": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 995,
+        "y": 4961,
+        "width": 222,
+        "height": 132
+      }
+    },
+    {
+      "name": "p_Headline_Block",
+      "tag": "p",
+      "text": "Headline Block",
+      "classes": [
+        "cmp-enhanced-related-content__card-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 995,
+        "y": 4961,
+        "width": 222,
+        "height": 22
+      }
+    },
+    {
+      "name": "p_Headline_Block_Description",
+      "tag": "p",
+      "text": "Headline Block Description",
+      "classes": [
+        "cmp-enhanced-related-content__card-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__card-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_46",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-enhanced-related-content__carousel-nav"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1105,
+        "y": 6923,
+        "width": 112,
+        "height": 18
+      }
+    },
+    {
+      "name": "i_47",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-enhanced-related-content__icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__btn--prev",
+        "swiper-button-prev",
+        "swiper-button-disabled"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1127,
+        "y": 6913,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_48",
+      "tag": "div",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__cards-container",
+        "swiper",
+        "swiper-initialized",
+        "swiper-horizontal",
+        "swiper-backface-hidden"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 6993,
+        "width": 1154,
+        "height": 435
+      }
+    },
+    {
+      "name": "el1Of_6",
+      "tag": "li",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__card",
+        "swiper-slide",
+        "swiper-slide-active"
+      ],
+      "attributes": {
+        "aria-label": "1 of 6"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards",
+        "swiper-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "1 of 6",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 6993,
+        "width": 307,
+        "height": 435
+      }
+    },
+    {
+      "name": "el2Of_6",
+      "tag": "li",
+      "text": "Content Trail\n                                Content Trail Description\n                            ",
+      "classes": [
+        "cmp-enhanced-related-content__card",
+        "swiper-slide",
+        "swiper-slide-next"
+      ],
+      "attributes": {
+        "aria-label": "2 of 6"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards",
+        "swiper-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "2 of 6",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 402,
+        "y": 6993,
+        "width": 307,
+        "height": 435
+      }
+    },
+    {
+      "name": "el3Of_6",
+      "tag": "li",
+      "text": "Feature Banner\n                                Feature Banner Description\n                          ",
+      "classes": [
+        "cmp-enhanced-related-content__card",
+        "swiper-slide"
+      ],
+      "attributes": {
+        "aria-label": "3 of 6"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards",
+        "swiper-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "3 of 6",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 741,
+        "y": 6993,
+        "width": 307,
+        "height": 435
+      }
+    },
+    {
+      "name": "el4Of_6",
+      "tag": "li",
+      "text": "Headline Block\n                                Headline Block Description\n                          ",
+      "classes": [
+        "cmp-enhanced-related-content__card",
+        "swiper-slide"
+      ],
+      "attributes": {
+        "aria-label": "4 of 6"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards",
+        "swiper-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "4 of 6",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1080,
+        "y": 6993,
+        "width": 307,
+        "height": 435
+      }
+    },
+    {
+      "name": "el5Of_6",
+      "tag": "li",
+      "text": "Benefits Table\n                                Benefits Table style guide page — Size (Large/Small),",
+      "classes": [
+        "cmp-enhanced-related-content__card",
+        "swiper-slide"
+      ],
+      "attributes": {
+        "aria-label": "5 of 6"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards",
+        "swiper-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "5 of 6",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1418,
+        "y": 6993,
+        "width": 307,
+        "height": 435
+      }
+    },
+    {
+      "name": "el6Of_6",
+      "tag": "li",
+      "text": "Content Trail\n                                Content Trail Description\n                            ",
+      "classes": [
+        "cmp-enhanced-related-content__card",
+        "swiper-slide"
+      ],
+      "attributes": {
+        "aria-label": "6 of 6"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-enhanced-related-content__cards",
+        "swiper-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "6 of 6",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1757,
+        "y": 6993,
+        "width": 307,
+        "height": 435
+      }
+    }
+  ],
+  "pageTitle": "Enhanced Related Content",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

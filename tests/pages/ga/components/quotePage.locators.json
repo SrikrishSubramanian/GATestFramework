@@ -1,0 +1,357 @@
+{
+  "component": "quote",
+  "generatedAt": "2026-07-14T15:05:27.274Z",
+  "source": "dom",
+  "entries": {
+    "div_0": {
+      "name": "div_0",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_1": {
+      "name": "div_1",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__icon-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__icon-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_2": {
+      "name": "span_2",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-quote__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_3": {
+      "name": "span_3",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__icon-quote",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-quote__icon-quote')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_4": {
+      "name": "div_4",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__text-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "blockquote_5": {
+      "name": "blockquote_5",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//blockquote[contains(@class,'cmp-quote__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__author",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__author')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_7": {
+      "name": "span_7",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__accents-line",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-quote__accents-line')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__text-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "blockquote_10": {
+      "name": "blockquote_10",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//blockquote[contains(@class,'cmp-quote__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_XSTopAndBottomPaddingExam": {
+      "name": "div_XSTopAndBottomPaddingExam",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "XS top and bottom padding example.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_XSTopAndBottomPaddingExam_12": {
+      "name": "div_XSTopAndBottomPaddingExam_12",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__text-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "XS top and bottom padding example.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "blockquote_XSTopAndBottomPaddingExam": {
+      "name": "blockquote_XSTopAndBottomPaddingExam",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//blockquote[contains(@class,'cmp-quote__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "XS top and bottom padding example.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "M (medium) top and bottom padding example.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__text-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "M (medium) top and bottom padding example.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "blockquote_16": {
+      "name": "blockquote_16",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//blockquote[contains(@class,'cmp-quote__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "M (medium) top and bottom padding example.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_17": {
+      "name": "div_17",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-quote__text-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "blockquote_19": {
+      "name": "blockquote_19",
+      "component": "quote",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-quote__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//blockquote[contains(@class,'cmp-quote__text')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}
