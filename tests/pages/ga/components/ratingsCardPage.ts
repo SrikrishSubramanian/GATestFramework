@@ -13,11 +13,11 @@ export class RatingsCardPage {
   }
 
   get root(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.root || { strategies: [{ type: 'css', value: '.cmp-ratings-card' }] });
+    return resolveLocator(this.page, registry.entries.root || { strategies: [{ type: 'css', value: '.cmp-rating-card' }] });
   }
 
   get rating(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.rating || { strategies: [{ type: 'css', value: '.cmp-ratings-card__rating' }] });
+    return resolveLocator(this.page, registry.entries.rating || { strategies: [{ type: 'css', value: '.cmp-rating-card__rating' }] });
   }
 
   async isVisible(): Promise<boolean> {

@@ -16,11 +16,11 @@ const SECTION_WHITE = '.cmp-section--background-color-white';
 const SECTION_SLATE = '.cmp-section--background-color-slate';
 const SECTION_GRANITE = '.cmp-section--background-color-granite';
 const SECTION_AZUL = '.cmp-section--background-color-azul';
-const HB = '.ga-headline-block';
-const EYEBROW = '.ga-headline-block__eyebrow';
-const TITLE = '.ga-headline-block__title';
-const DESCRIPTOR = '.ga-headline-block__descriptor';
-const CTA_WRAPPER = '.ga-headline-block__cta-wrapper';
+const HB = '.cmp-headline-block';
+const EYEBROW = '.cmp-headline-block__eyebrow';
+const TITLE = '.cmp-headline-block__title';
+const DESCRIPTOR = '.cmp-headline-block__descriptor';
+const CTA_WRAPPER = '.cmp-headline-block__cta-wrapper';
 
 test.beforeEach(async ({ page }) => {
   capture = new ConsoleCapture(page);
@@ -126,14 +126,11 @@ test.describe('Headline Block — Core Structure (GAAM-344)', () => {
     expect(capture.getErrors()).toEqual([]);
   });
 
-  test('[HB-008] @regression @smoke HeadlineBlock uses ga-headline-block BEM prefix (not cmp-)', async ({ page }) => {
+  test('[HB-008] @regression @smoke HeadlineBlock uses cmp-headline-block BEM prefix', async ({ page }) => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     const block = page.locator(HB).first();
     await expect(block).toBeVisible();
-    // Verify the component does NOT use cmp- prefix
-    const hasCmp = await page.locator('.cmp-headline-block').count();
-    expect(hasCmp).toBe(0);
     // Verify BEM child elements exist
     await expect(block.locator(EYEBROW)).toBeVisible();
     await expect(block.locator(TITLE)).toBeVisible();
@@ -353,7 +350,7 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
     // Look for a block with padding-top-off applied
-    const paddingOffBlock = page.locator('.ga-headline-block--padding-top-off .ga-headline-block');
+    const paddingOffBlock = page.locator('.cmp-headline-block--padding-top-off .cmp-headline-block');
     const count = await paddingOffBlock.count();
     if (count === 0) {
       test.skip(true, 'No padding-top-off variation on style guide — needs content fixture');
@@ -369,7 +366,7 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
-    const paddingOffBlock = page.locator('.ga-headline-block--padding-bottom-off .ga-headline-block');
+    const paddingOffBlock = page.locator('.cmp-headline-block--padding-bottom-off .cmp-headline-block');
     const count = await paddingOffBlock.count();
     if (count === 0) {
       test.skip(true, 'No padding-bottom-off variation on style guide — needs content fixture');
@@ -391,7 +388,7 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
     const normalGap = normalTitleBox!.y - (normalEyeBox!.y + normalEyeBox!.height);
 
     // Check padding-off block if available
-    const paddingOffBlock = page.locator('.ga-headline-block--padding-top-off .ga-headline-block');
+    const paddingOffBlock = page.locator('.cmp-headline-block--padding-top-off .cmp-headline-block');
     const count = await paddingOffBlock.count();
     if (count === 0) {
       test.skip(true, 'No padding-off variation on style guide — needs content fixture');
@@ -630,10 +627,10 @@ test.describe('Headline Block — Accessibility (GAAM-344/655/676)', () => {
     await block.evaluate(el => {
       return Array.from(el.children).map(c => c.className.split(' ')[0]);
     });
-    const eyeIdx = children.indexOf('ga-headline-block__eyebrow');
-    const titleIdx = children.findIndex(c => c.includes('ga-headline-block__title'));
-    const descIdx = children.indexOf('ga-headline-block__descriptor');
-    const ctaIdx = children.indexOf('ga-headline-block__cta-wrapper');
+    const eyeIdx = children.indexOf('cmp-headline-block__eyebrow');
+    const titleIdx = children.findIndex(c => c.includes('cmp-headline-block__title'));
+    const descIdx = children.indexOf('cmp-headline-block__descriptor');
+    const ctaIdx = children.indexOf('cmp-headline-block__cta-wrapper');
     expect(eyeIdx).toBeLessThan(titleIdx);
     expect(titleIdx).toBeLessThan(descIdx);
     expect(descIdx).toBeLessThan(ctaIdx);

@@ -28,25 +28,17 @@ test.afterEach(async ({ page }, testInfo) => {
  * Statistic State Matrix
  *
  * Statistic uses component-level theme classes on the parent wrapper div,
- * NOT section-level backgrounds:
- *   - default (no theme class) = white/default
+ * NOT section-level backgrounds. Every instance now carries an explicit
+ * theme class (no untagged/themeless default):
+ *   - cmp-statistic--theme-white (default)
  *   - cmp-statistic--theme-slate
  *   - cmp-statistic--theme-granite
+ *   - cmp-statistic--theme-aubergine
  *   - cmp-statistic--theme-azul
  *
  * Other modifiers:
  *   - cmp-statistic--align-center (text alignment)
  *   - cmp-statistic--border (left border accent)
- *
- * 8 instances on style guide:
- *   0: default + border
- *   1: center-aligned
- *   2: theme-slate
- *   3: theme-slate
- *   4: theme-granite
- *   5: theme-azul
- *   6: border
- *   7: center + granite + border
  */
 
 const ROOT = '.cmp-statistic';
@@ -60,8 +52,8 @@ test.describe('Statistic — State Matrix (Theme Variants)', () => {
   test('[STAT-025] @matrix @regression default theme statistic renders', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(BASE());
-    // Default = no theme class on wrapper
-    const defaultStat = page.locator(`${WRAPPER}:not([class*="theme-"])`).first();
+    // Default is now explicit theme-white on the wrapper
+    const defaultStat = page.locator(`${WRAPPER}.cmp-statistic--theme-white`).first();
     await expect(defaultStat).toBeVisible();
     await expect(defaultStat.locator(ROOT)).toBeVisible();
   });
@@ -111,10 +103,10 @@ test.describe('Statistic — State Matrix (Modifiers)', () => {
     await expect(centered.locator(ROOT)).toBeVisible();
   });
 
-  test('[STAT-031] @matrix @regression combined: granite + center + border', async ({ page }) => {
+  test('[STAT-031] @matrix @regression combined: azul + center + border', async ({ page }) => {
     const pom = new StatisticPage(page);
     await pom.navigate(BASE());
-    const combined = page.locator(`${WRAPPER}.cmp-statistic--theme-granite.cmp-statistic--align-center.cmp-statistic--border`).first();
+    const combined = page.locator(`${WRAPPER}.cmp-statistic--theme-azul.cmp-statistic--align-center.cmp-statistic--border`).first();
     await expect(combined).toBeVisible();
     await expect(combined.locator(ROOT)).toBeVisible();
   });

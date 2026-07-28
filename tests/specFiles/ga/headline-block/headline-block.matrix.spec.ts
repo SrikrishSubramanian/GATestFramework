@@ -15,10 +15,10 @@ const SECTION_WHITE = '.cmp-section--background-color-white';
 const SECTION_SLATE = '.cmp-section--background-color-slate';
 const SECTION_GRANITE = '.cmp-section--background-color-granite';
 const SECTION_AZUL = '.cmp-section--background-color-azul';
-const HB = '.ga-headline-block';
-const EYEBROW = '.ga-headline-block__eyebrow';
-const TITLE = '.ga-headline-block__title';
-const DESCRIPTOR = '.ga-headline-block__descriptor';
+const HB = '.cmp-headline-block';
+const EYEBROW = '.cmp-headline-block__eyebrow';
+const TITLE = '.cmp-headline-block__title';
+const DESCRIPTOR = '.cmp-headline-block__descriptor';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
@@ -176,7 +176,7 @@ test.describe('Headline Block — Matrix: Responsive (Mobile)', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
-    const ctaWrapper = page.locator(`${SECTION_AZUL} ${HB} .ga-headline-block__cta-wrapper`).first();
+    const ctaWrapper = page.locator(`${SECTION_AZUL} ${HB} .cmp-headline-block__cta-wrapper`).first();
     const flexDir = // 📏 TODO: Replace with measurement-utils
     await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection); // measurement: use measurement-utils for cleaner code
     expect(flexDir).toBe('column');

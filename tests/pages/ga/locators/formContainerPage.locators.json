@@ -1,19 +1,27 @@
 {
   "entries": {
-    "formContainerPageRoot": {
+    "root": {
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-formcontainer",
-          "confidence": 0.8
+          "value": ".cmp-form",
+          "confidence": 0.95
         },
         {
           "type": "xpath",
-          "selector": "//div[@class='cmp-formcontainer']",
+          "value": "//form[contains(@class,'cmp-form')]",
           "confidence": 0.7
         }
-      ],
-      "primary": "css"
+      ]
+    },
+    "form": {
+      "strategies": [
+        {
+          "type": "css",
+          "value": "form.cmp-form",
+          "confidence": 0.95
+        }
+      ]
     }
   }
 }

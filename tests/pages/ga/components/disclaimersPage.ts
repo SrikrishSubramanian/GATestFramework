@@ -4,6 +4,11 @@ import path from 'path';
 
 const registry = loadLocators(path.join(__dirname, '../locators/disclaimersPage.locators.json'));
 
+/**
+ * NOTE: the AEM disclaimers component (apps/ga/components/content/disclaimers/disclaimers.html)
+ * is currently an unimplemented placeholder — it renders only an HTL comment, no markup.
+ * `.cmp-disclaimers` will never appear in the DOM until the component is built out.
+ */
 export class DisclaimersPage {
   constructor(private page: Page) {}
 

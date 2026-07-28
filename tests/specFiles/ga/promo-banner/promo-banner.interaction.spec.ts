@@ -36,7 +36,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   // ── Social Link Hover ────────────────────────────────────────────────────
 
   test('@interaction @regression PB-INT-001 social link hover changes background to white', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.locator(PB_SOCIAL_LINK).waitFor({ state: 'visible' });
 
     const link = page.locator(PB_SOCIAL_LINK).first();
@@ -62,7 +62,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-002 social link CSS defines white color', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.waitForLoadState('networkidle');
     const link = page.locator(PB_SOCIAL_LINK).first();
     if (await link.count() === 0) {
@@ -95,7 +95,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-003 social link CSS defines transition 0.18s', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.waitForLoadState('networkidle');
     const link = page.locator(PB_SOCIAL_LINK).first();
     if (await link.count() === 0) {
@@ -122,7 +122,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   // ── CTA Button Hover ─────────────────────────────────────────────────────
 
   test('@interaction @regression PB-INT-004 CTA button hover changes background color', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
     const btn = page.locator(PB_CTA).first();
@@ -142,7 +142,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-005 CTA button contains Arrow-Right icon', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
     // Each CTA button should contain the Arrow-Right icon element
@@ -151,7 +151,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-006 CTA button link has cursor pointer', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
     const cursor = await page.locator(PB_CTA).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.cursor // measurement: use measurement-utils for cleaner code
@@ -163,7 +163,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   // ── Keyboard Navigation ──────────────────────────────────────────────────
 
   test('@interaction @regression PB-INT-007 Tab key reaches social links', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
     // Start from the top of the page and Tab until a social link is focused
@@ -183,7 +183,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-008 Tab key reaches CTA buttons', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
     await page.keyboard.press('Tab');
@@ -202,7 +202,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-009 social link focus-visible CSS defines outline', async ({ page }) => {
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.waitForLoadState('networkidle');
     const firstLink = page.locator(PB_SOCIAL_LINK).first();
     if (await firstLink.count() === 0) {
@@ -248,7 +248,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-010 desktop layout: promo-banner uses flex-direction row', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 900 });
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
     const flexDirection = await page.locator(PB).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.flexDirection // measurement: use measurement-utils for cleaner code
@@ -259,7 +259,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-011 mobile layout: promo-banner is NOT flex-row', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.waitForLoadState('networkidle');
 
     const layout = await page.locator(PB).first().evaluate(el => {
@@ -280,7 +280,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
     // Desktop
     await page.setViewportSize({ width: 1280, height: 900 });
-    await page.goto(STYLE_GUIDE_URL());
+    await page.goto(componentUrl());
     await page.locator(PB_CTA).waitFor({ state: 'visible' });
 
     const desktopDir = await page.locator(ctaSelector).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.flexDirection // measurement: use measurement-utils for cleaner code

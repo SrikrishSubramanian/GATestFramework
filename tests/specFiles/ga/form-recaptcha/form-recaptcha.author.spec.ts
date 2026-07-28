@@ -30,16 +30,17 @@ test.describe('Form reCAPTCHA — Happy Path', () => {
   test('[RECAP-001] @smoke @regression reCAPTCHA field renders', async ({ page }) => {
     const pom = new FormRecaptchaPage(page);
     await pom.navigate(BASE());
-    const root = page.locator('.cmp-form-recaptcha').first();
-    await expect(root).toBeVisible();
+    // This site renders Google's invisible reCAPTCHA variant (data-size="invisible"),
+    // so it is attached to the DOM but never visually visible — that's expected.
+    const root = page.locator('.cmp-recaptcha').first();
+    await expect(root).toBeAttached();
   });
 
   test('[RECAP-002] @regression reCAPTCHA container is present', async ({ page }) => {
     const pom = new FormRecaptchaPage(page);
     await pom.navigate(BASE());
     const captcha = page.locator('.g-recaptcha, [data-sitekey]');
-    const count = await captcha.count();
-    expect(count).toBeGreaterThanOrEqual(0);
+    expect(await captcha.count()).toBeGreaterThan(0);
   });
 });
 
@@ -50,7 +51,7 @@ test.describe('Form reCAPTCHA — Accessibility', () => {
     const pom = new FormRecaptchaPage(page);
     await pom.navigate(BASE());
     const results = await new AxeBuilder({ page })
-      .include('.cmp-form-recaptcha')
+      .include('.cmp-recaptcha')
       .withTags(["wcag2a","wcag2aa","wcag22aa"])
       .analyze();
     expect(results.violations).toEqual([]);

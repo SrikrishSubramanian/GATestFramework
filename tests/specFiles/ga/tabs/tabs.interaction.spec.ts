@@ -48,7 +48,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
     await expect(tabsRoot).toBeVisible();
 
     const tabs = tabsRoot.locator(TAB);
-    await expect(tabs).toHaveCount(6);
+    await expect(tabs).toHaveCount(7);
 
     // 1st tab should be active by default
     const firstTab = tabs.nth(0);

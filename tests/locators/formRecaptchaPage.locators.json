@@ -3,7 +3,7 @@
   "entries": {
     "root": {
       "strategies": [
-        { "type": "css", "value": ".cmp-form-recaptcha", "confidence": 0.95 }
+        { "type": "css", "value": ".cmp-recaptcha", "confidence": 0.95 }
       ]
     },
     "container": {

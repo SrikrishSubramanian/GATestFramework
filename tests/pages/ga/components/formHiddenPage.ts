@@ -13,7 +13,7 @@ export class FormHiddenPage {
   }
 
   get root(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.root || { strategies: [{ type: 'css', value: '.cmp-form-hidden' }] });
+    return resolveLocator(this.page, registry.entries.root || { strategies: [{ type: 'css', value: 'input[type="hidden"]' }] });
   }
 
   get hiddenInput(): Promise<Locator> {

@@ -1,19 +1,13 @@
 {
   "entries": {
-    "formHiddenPageRoot": {
+    "root": {
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-formhidden",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-formhidden']",
-          "confidence": 0.7
+          "value": "input[type=\"hidden\"]",
+          "confidence": 0.95
         }
-      ],
-      "primary": "css"
+      ]
     }
   }
 }

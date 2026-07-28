@@ -3,12 +3,12 @@
   "entries": {
     "root": {
       "strategies": [
-        { "type": "css", "value": ".cmp-top-nav", "confidence": 0.95 }
+        { "type": "css", "value": ".cmp-site-header__top-nav", "confidence": 0.95 }
       ]
     },
     "items": {
       "strategies": [
-        { "type": "css", "value": ".cmp-top-nav__item", "confidence": 0.9 }
+        { "type": "css", "value": ".cmp-site-header__top-nav-item", "confidence": 0.9 }
       ]
     }
   }

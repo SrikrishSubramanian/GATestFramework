@@ -82,11 +82,9 @@ test.afterEach(async ({ page }, testInfo) => {
     const initialText = (await counter.textContent())?.trim() ?? '';
     expect(initialText).toBe('01');
 
-    // Wait enough time for auto-play to advance (6s interval + 1s buffer + fade speed)
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-    const updatedText = (await counter.textContent())?.trim() ?? '';
-    expect(updatedText).toBe('02');
+    // Wait for auto-play to advance (6s interval + 1s buffer + fade speed) —
+    // toHaveText polls until the counter updates instead of a fixed sleep.
+    await expect(counter).toHaveText('02', { timeout: 9000 });
   });
 
   test('NCC-INT-003: Carousel loops back to "01" after reaching the last slide', async ({ page }) => {
@@ -306,12 +304,15 @@ test.afterEach(async ({ page }, testInfo) => {
 
     // Hover over the CTA link
     await hover(ctaLink);
-    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-    // allow CSS transition to complete
+
+    // Poll until the hover transition completes instead of guessing a fixed wait.
+    await expect.poll(
+      () => ctaIcon.evaluate((el: HTMLElement) => window.getComputedStyle(el).backgroundColor),
+      { timeout: 3000 }
+    ).not.toBe(bgBefore);
 
     // Capture background color after hover
-    const bgAfter = // 📏 TODO: Replace with measurement-utils
-    await ctaIcon.evaluate((el: HTMLElement) => {
+    const bgAfter = await ctaIcon.evaluate((el: HTMLElement) => {
       return window.getComputedStyle(el).backgroundColor;
     });
 

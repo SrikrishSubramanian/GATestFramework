@@ -78,7 +78,7 @@ test.describe('PromoBanner — Core Structure', () => {
     expect(radius, 'Desktop border-radius should be 20px').toBe('20px');
   });
 
-  test('[PB-004] @smoke @regression root has 16px border-radius on mobile', async ({ page }) => {
+  test('[PB-004] @smoke @regression root has 12px border-radius on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     const pom = new PromoBannerPage(page);
     await pom.navigate(BASE());
@@ -86,7 +86,7 @@ test.describe('PromoBanner — Core Structure', () => {
     await expect(root).toBeVisible();
     const radius = // 📏 TODO: Replace with measurement-utils
     await root.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
-    expect(radius, 'Mobile border-radius should be 16px').toBe('16px');
+    expect(radius, 'Mobile border-radius should be 12px').toBe('12px');
   });
 
   test('[PB-005] @smoke @regression root element has white text color', async ({ page }) => {

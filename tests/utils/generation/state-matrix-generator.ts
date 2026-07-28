@@ -356,6 +356,101 @@ export const KNOWN_VARIANTS: Record<string, {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
   },
+  'ratings-card': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-rating-card',
+  },
+  'benefits-table': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-benefits-table',
+  },
+  'brand-relationship': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-brand-relationship',
+  },
+  'content-highlight': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-content-highlight',
+  },
+  'decision-tree': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-decision-tree',
+  },
+  'detail-hero': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-detail-hero',
+  },
+  'enhanced-related-content': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-enhanced-related-content',
+  },
+  'homepage-hero': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-homepage-hero',
+  },
+  'in-brief': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-in-brief',
+  },
+  'insights-detail-hero': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-insights-detail-hero',
+  },
+  'insights-listing': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-insights-listing',
+  },
+  login: {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-login',
+  },
+  'product-comparison-card': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-product-comparison-card',
+  },
+  'product-path-detail-card': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-product-path-detail-card',
+  },
+  'product-path-summary-card': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-product-path-summary-card',
+  },
+  quote: {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-quote',
+  },
+  separator: {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-separator',
+  },
+  'video-external': {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-video-external',
+  },
+  workbench: {
+    variants: ['default'],
+    themes: ['light-theme', 'dark-theme', 'auto-theme'],
+    innerSelector: '.cmp-workbench',
+  },
   section: {
     variants: ['default'],
     themes: ['default'],
@@ -392,10 +487,10 @@ export const KNOWN_VARIANTS: Record<string, {
     backgroundStrategy: 'section',
     availableBackgrounds: ['white', 'slate', 'granite', 'azul'],
     variantClasses: {
-      'left-alignment': '.ga-headline-block',
-      'center-alignment': '.cmp-section--center .ga-headline-block',
+      'left-alignment': '.cmp-headline-block',
+      'center-alignment': '.cmp-section--center .cmp-headline-block',
     },
-    innerSelector: '.ga-headline-block',
+    innerSelector: '.cmp-headline-block',
   },
   'grid-container': {
     variants: ['2col', '3col', '4col'],

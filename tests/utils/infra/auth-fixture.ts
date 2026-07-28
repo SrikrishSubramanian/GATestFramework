@@ -58,10 +58,21 @@ export async function loginToAEMAuthor(page: Page, options?: AuthOptions): Promi
   }
 
   // Navigate to login page
-  await page.goto(`${authorUrl}/libs/granite/core/content/login.html`, {
-    waitUntil: 'domcontentloaded',
-    timeout,
-  });
+  try {
+    await page.goto(`${authorUrl}/libs/granite/core/content/login.html`, {
+      waitUntil: 'domcontentloaded',
+      timeout,
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    if (message.includes('net::ERR_INTERNET_DISCONNECTED') || message.includes('net::ERR_NAME_NOT_RESOLVED') || message.includes('net::ERR_CONNECTION')) {
+      throw new Error(
+        `Cannot reach AEM author instance at ${authorUrl} — check VPN/network connectivity ` +
+        `(and confirm AEM_AUTHOR_URL for the active env is correct). Original error: ${message}`
+      );
+    }
+    throw err;
+  }
 
   // Check if already logged in — covers direct redirect or active session
   if (isAlreadyLoggedIn(page.url())) {

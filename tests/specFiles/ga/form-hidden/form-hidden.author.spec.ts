@@ -29,16 +29,15 @@ test.describe('Form Hidden Field — Happy Path', () => {
   test('[FH-001] @smoke @regression Hidden form field renders without visibility', async ({ page }) => {
     const pom = new FormHiddenPage(page);
     await pom.navigate(BASE());
-    const hidden = page.locator('.cmp-form-hidden');
-    const count = await hidden.count();
-    expect(count).toBeGreaterThanOrEqual(0);
+    const hidden = page.locator('input[type="hidden"]').first();
+    await expect(hidden).toBeAttached();
+    await expect(hidden).not.toBeVisible();
   });
 
   test('[FH-002] @regression Hidden input field exists in DOM', async ({ page }) => {
     const pom = new FormHiddenPage(page);
     await pom.navigate(BASE());
     const hiddenInputs = page.locator('input[type="hidden"]');
-    const count = await hiddenInputs.count();
-    expect(count).toBeGreaterThanOrEqual(0);
+    expect(await hiddenInputs.count()).toBeGreaterThan(0);
   });
 });

@@ -1,19 +1,27 @@
 {
   "entries": {
-    "imageWithNestedContentPageRoot": {
+    "root": {
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-imagewithnestedcontent",
-          "confidence": 0.8
+          "value": ".cmp-image-with-nested-content",
+          "confidence": 0.95
         },
         {
           "type": "xpath",
-          "selector": "//div[@class='cmp-imagewithnestedcontent']",
+          "value": "//div[contains(@class,'cmp-image-with-nested-content')]",
           "confidence": 0.7
         }
-      ],
-      "primary": "css"
+      ]
+    },
+    "image": {
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image-with-nested-content__image",
+          "confidence": 0.95
+        }
+      ]
     }
   }
 }

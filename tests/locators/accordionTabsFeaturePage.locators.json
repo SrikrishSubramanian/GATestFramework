@@ -30,12 +30,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__title.headline-",
+          "value": ".cmp-headline-block__title.headline-",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "value": "//h2[contains(@class,'cmp-headline-block__title')]",
           "confidence": 0.6
         }
       ]
@@ -670,12 +670,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__cta-wrapper",
+          "value": ".cmp-headline-block__cta-wrapper",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__cta-wrapper')]",
+          "value": "//div[contains(@class,'cmp-headline-block__cta-wrapper')]",
           "confidence": 0.6
         }
       ]

@@ -57,7 +57,7 @@ export class SpacerPage {
   /** Get the computed height of a spacer element */
   async getSpacerHeight(locator: Locator): Promise<number> {
     const box = await locator.boundingBox();
-    return box?.height ?? 0;
+    return Math.round(box?.height ?? 0);
   }
 
   /** Get all .cmp-spacer inner elements on the page */

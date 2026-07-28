@@ -1,19 +1,27 @@
 {
   "entries": {
-    "ratingsCardPageRoot": {
+    "root": {
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-ratingscard",
-          "confidence": 0.8
+          "value": ".cmp-rating-card",
+          "confidence": 0.95
         },
         {
           "type": "xpath",
-          "selector": "//div[@class='cmp-ratingscard']",
+          "value": "//div[contains(@class,'cmp-rating-card')]",
           "confidence": 0.7
         }
-      ],
-      "primary": "css"
+      ]
+    },
+    "rating": {
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rating-card__rating",
+          "confidence": 0.95
+        }
+      ]
     }
   }
 }

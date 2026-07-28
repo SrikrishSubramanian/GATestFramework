@@ -3,7 +3,7 @@
   "entries": {
     "root": {
       "strategies": [
-        { "type": "css", "value": ".cmp-form-hidden", "confidence": 0.95 }
+        { "type": "css", "value": "input[type=\"hidden\"]", "confidence": 0.95 }
       ]
     },
     "input": {

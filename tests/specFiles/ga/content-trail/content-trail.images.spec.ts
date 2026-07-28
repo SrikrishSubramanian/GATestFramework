@@ -1,4 +1,4 @@
-import { scanImages, attachImageScanResults } from '../../../utils/infra/image-scan-utils';
+import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
 import { test, expect } from '@playwright/test';
 import { ContentTrailPage } from '../../../pages/ga/components/contentTrailPage';
 import ENV from '../../../utils/infra/env';
@@ -42,6 +42,7 @@ test.describe('ContentTrail — Image Health', () => {
   test('@regression All images have alt text', async ({ page }, testInfo) => {
     const pom = new ContentTrailPage(page);
     await pom.navigate(BASE());
+    const results = await scanImages(page, '.cmp-content-trail');
     await attachImageScanResults(testInfo, results);
     expect(results.missingAlt).toBe(0);
   });
@@ -49,6 +50,7 @@ test.describe('ContentTrail — Image Health', () => {
   test('@regression No oversized images (>500KB)', async ({ page }, testInfo) => {
     const pom = new ContentTrailPage(page);
     await pom.navigate(BASE());
+    const results = await scanImages(page, '.cmp-content-trail');
     await attachImageScanResults(testInfo, results);
     expect(results.oversized).toBe(0);
   });

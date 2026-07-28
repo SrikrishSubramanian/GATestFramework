@@ -15,8 +15,8 @@ const SECTION_WHITE = '.cmp-section--background-color-white';
 const SECTION_SLATE = '.cmp-section--background-color-slate';
 const SECTION_GRANITE = '.cmp-section--background-color-granite';
 const SECTION_AZUL = '.cmp-section--background-color-azul';
-const HB = '.ga-headline-block';
-const CTA_WRAPPER = '.ga-headline-block__cta-wrapper';
+const HB = '.cmp-headline-block';
+const CTA_WRAPPER = '.cmp-headline-block__cta-wrapper';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);

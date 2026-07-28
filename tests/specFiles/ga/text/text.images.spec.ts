@@ -13,10 +13,15 @@ let capture: ConsoleCapture;
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
+  // Cloud IMS fallback (email/password/MFA) can take up to ~2min if the
+  // cached session expired — don't let the default 60s config timeout kill it mid-flow.
+  test.setTimeout(180_000);
+
   await loginToAEMAuthor(page);
 
   capture = new ConsoleCapture(page);
-  capture.start();});
+  capture.start();
+});
 
 test.afterEach(async ({ page }, testInfo) => {
   if (capture) {

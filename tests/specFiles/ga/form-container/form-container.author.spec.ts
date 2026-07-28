@@ -30,14 +30,14 @@ test.describe('Form Container — Happy Path', () => {
   test('[FC-001] @smoke @regression Form Container renders', async ({ page }) => {
     const pom = new FormContainerPage(page);
     await pom.navigate(BASE());
-    const root = page.locator('.cmp-form-container').first();
+    const root = page.locator('.cmp-form').first();
     await expect(root).toBeVisible();
   });
 
   test('[FC-002] @regression Form element is present', async ({ page }) => {
     const pom = new FormContainerPage(page);
     await pom.navigate(BASE());
-    const form = page.locator('.cmp-form-container form');
+    const form = page.locator('form.cmp-form').first();
     await expect(form).toBeVisible();
   });
 });
@@ -49,7 +49,7 @@ test.describe('Form Container — Accessibility', () => {
     const pom = new FormContainerPage(page);
     await pom.navigate(BASE());
     const results = await new AxeBuilder({ page })
-      .include('.cmp-form-container')
+      .include('.cmp-form')
       .withTags(["wcag2a","wcag2aa","wcag22aa"])
       .analyze();
     expect(results.violations).toEqual([]);

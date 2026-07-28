@@ -30,14 +30,14 @@ test.describe('Top Nav — Happy Path', () => {
   test('[TN-001] @smoke @regression Top Navigation renders', async ({ page }) => {
     const pom = new TopNavPage(page);
     await pom.navigate(BASE());
-    const root = page.locator('.cmp-top-nav').first();
+    const root = page.locator('.cmp-site-header__top-nav').first();
     await expect(root).toBeVisible();
   });
 
   test('[TN-002] @regression Navigation items are visible', async ({ page }) => {
     const pom = new TopNavPage(page);
     await pom.navigate(BASE());
-    const items = page.locator('.cmp-top-nav__item');
+    const items = page.locator('.cmp-site-header__top-nav-item');
     const count = await items.count();
     expect(count).toBeGreaterThan(0);
   });
@@ -47,7 +47,7 @@ test.describe('Top Nav — Interaction', () => {
   test('[TN-005] @interaction @regression Top nav items are clickable', async ({ page }) => {
     const pom = new TopNavPage(page);
     await pom.navigate(BASE());
-    const items = page.locator('.cmp-top-nav__item');
+    const items = page.locator('.cmp-site-header__top-nav-item');
     if (await items.count() > 0) {
       await expect(items.first()).toBeEnabled();
     }
@@ -61,7 +61,7 @@ test.describe('Top Nav — Accessibility', () => {
     const pom = new TopNavPage(page);
     await pom.navigate(BASE());
     const results = await new AxeBuilder({ page })
-      .include('.cmp-top-nav')
+      .include('.cmp-site-header__top-nav')
       .withTags(["wcag2a","wcag2aa","wcag22aa"])
       .analyze();
     expect(results.violations).toEqual([]);

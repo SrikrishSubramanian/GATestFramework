@@ -1,19 +1,18 @@
 {
   "entries": {
-    "formRecaptchaPageRoot": {
+    "root": {
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-formrecaptcha",
-          "confidence": 0.8
+          "value": ".cmp-recaptcha",
+          "confidence": 0.95
         },
         {
           "type": "xpath",
-          "selector": "//div[@class='cmp-formrecaptcha']",
+          "value": "//div[contains(@class,'cmp-recaptcha')]",
           "confidence": 0.7
         }
-      ],
-      "primary": "css"
+      ]
     }
   }
 }

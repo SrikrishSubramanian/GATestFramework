@@ -3,12 +3,12 @@
   "entries": {
     "root": {
       "strategies": [
-        { "type": "css", "value": ".cmp-ratings-card", "confidence": 0.95 }
+        { "type": "css", "value": ".cmp-rating-card", "confidence": 0.95 }
       ]
     },
     "rating": {
       "strategies": [
-        { "type": "css", "value": ".cmp-ratings-card__rating", "confidence": 0.9 }
+        { "type": "css", "value": ".cmp-rating-card__rating", "confidence": 0.9 }
       ]
     }
   }

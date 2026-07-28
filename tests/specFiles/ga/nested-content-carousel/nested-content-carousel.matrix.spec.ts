@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { NestedContentCarouselPage } from '../../../pages/ga/components/nestedContentCarouselPage';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
@@ -39,8 +39,8 @@ test.describe('Nested Content Carousel — State Matrix', () => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
         await loginToAEMAuthor(page);
-        const url = resolveComponentUrl('nested-content-carousel');
-    await page.goto(url, { waitUntil: 'networkidle' });
+        const pom = new NestedContentCarouselPage(page);
+        await pom.navigate(BASE());
 
         const root = page.locator('.cmp-nested-content-carousel').first();
         await expect(root).toBeVisible();

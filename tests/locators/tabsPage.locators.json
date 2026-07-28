@@ -9,12 +9,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__title.headline-h2",
+          "value": ".cmp-headline-block__title.headline-h2",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "value": "//h2[contains(@class,'cmp-headline-block__title')]",
           "confidence": 0.6
         }
       ]
@@ -25,12 +25,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__title.headline-h2",
+          "value": ".cmp-headline-block__title.headline-h2",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "value": "//h2[contains(@class,'cmp-headline-block__title')]",
           "confidence": 0.6
         },
         {
@@ -46,12 +46,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__title.headline-h2",
+          "value": ".cmp-headline-block__title.headline-h2",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "value": "//h2[contains(@class,'cmp-headline-block__title')]",
           "confidence": 0.6
         },
         {
@@ -67,12 +67,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__title.headline-h2",
+          "value": ".cmp-headline-block__title.headline-h2",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "value": "//h2[contains(@class,'cmp-headline-block__title')]",
           "confidence": 0.6
         },
         {
@@ -88,12 +88,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__title.headline-h2",
+          "value": ".cmp-headline-block__title.headline-h2",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//h2[contains(@class,'ga-headline-block__title')]",
+          "value": "//h2[contains(@class,'cmp-headline-block__title')]",
           "confidence": 0.6
         },
         {
@@ -556,12 +556,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__eyebrow",
+          "value": ".cmp-headline-block__eyebrow",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "value": "//div[contains(@class,'cmp-headline-block__eyebrow')]",
           "confidence": 0.6
         },
         {
@@ -577,12 +577,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__descriptor.body-m",
+          "value": ".cmp-headline-block__descriptor.body-m",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
           "confidence": 0.6
         }
       ]
@@ -593,12 +593,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__cta-wrapper",
+          "value": ".cmp-headline-block__cta-wrapper",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__cta-wrapper')]",
+          "value": "//div[contains(@class,'cmp-headline-block__cta-wrapper')]",
           "confidence": 0.6
         }
       ]
@@ -609,12 +609,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__eyebrow",
+          "value": ".cmp-headline-block__eyebrow",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "value": "//div[contains(@class,'cmp-headline-block__eyebrow')]",
           "confidence": 0.6
         },
         {
@@ -630,12 +630,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__eyebrow",
+          "value": ".cmp-headline-block__eyebrow",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "value": "//div[contains(@class,'cmp-headline-block__eyebrow')]",
           "confidence": 0.6
         },
         {
@@ -651,12 +651,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__descriptor.body-m",
+          "value": ".cmp-headline-block__descriptor.body-m",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
           "confidence": 0.6
         },
         {
@@ -672,12 +672,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__eyebrow",
+          "value": ".cmp-headline-block__eyebrow",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "value": "//div[contains(@class,'cmp-headline-block__eyebrow')]",
           "confidence": 0.6
         },
         {
@@ -693,12 +693,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__descriptor.body-m",
+          "value": ".cmp-headline-block__descriptor.body-m",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
           "confidence": 0.6
         },
         {
@@ -714,12 +714,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__eyebrow",
+          "value": ".cmp-headline-block__eyebrow",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "value": "//div[contains(@class,'cmp-headline-block__eyebrow')]",
           "confidence": 0.6
         },
         {
@@ -735,12 +735,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__descriptor.body-m",
+          "value": ".cmp-headline-block__descriptor.body-m",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
           "confidence": 0.6
         },
         {
@@ -756,12 +756,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__eyebrow",
+          "value": ".cmp-headline-block__eyebrow",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__eyebrow')]",
+          "value": "//div[contains(@class,'cmp-headline-block__eyebrow')]",
           "confidence": 0.6
         },
         {
@@ -777,12 +777,12 @@
       "strategies": [
         {
           "type": "css",
-          "value": ".ga-headline-block__descriptor.body-m",
+          "value": ".cmp-headline-block__descriptor.body-m",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'ga-headline-block__descriptor')]",
+          "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
           "confidence": 0.6
         },
         {

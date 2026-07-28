@@ -41,21 +41,23 @@ const IMAGE_PANEL = '.cmp-accordion-tabs-feature__image-panel';
 const PANEL_TITLE = '.cmp-accordion-tab__title';
 const PANEL_DESCRIPTION = '.cmp-accordion-tab__description';
 const PANEL_CTA = '.cmp-accordion-tab__cta-wrapper';
-const HEADLINE_BLOCK = '.ga-headline-block';
+const HEADLINE_BLOCK = '.cmp-headline-block';
 
 // Instance indices on the style guide page:
 // 0 = Accordion variant (Investment Strategy / Portfolio Management / Risk Assessment)
 // 1 = Scrolling Tabs variant (Discover / Evaluate / Execute) — cq:styleIds=[behavior-scroll]
 // 2 = Accordion + Headline variant (Financial Strength / Expert Team / Innovation Focus)
+// 3 = Slate Background variant (Wealth Management / Retirement Planning / Insurance Solutions) — background-slate
+// 4 = Granite Background variant (Global Reach / Innovation / Sustainability) — background-granite
 
 // ─── Accordion Variant — Desktop ────────────────────────────────────────────
 test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
-  test('[ATF-001] @smoke @regression Style guide page loads with all 3 component instances', async ({ page }) => {
+  test('[ATF-001] @smoke @regression Style guide page loads with all 5 component instances', async ({ page }) => {
     const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     const roots = page.locator(ROOT);
-    await expect(roots).toHaveCount(3);
-    for (let i = 0; i < 3; i++) {
+    await expect(roots).toHaveCount(5);
+    for (let i = 0; i < 5; i++) {
       await expect(roots.nth(i)).toBeVisible();
     }
   });

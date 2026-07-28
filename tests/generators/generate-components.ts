@@ -67,7 +67,7 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
   },
   {
     name: 'headline-block',
-    rootSelector: '.ga-headline-block',
+    rootSelector: '.cmp-headline-block',
   },
   {
     name: 'grid-container',

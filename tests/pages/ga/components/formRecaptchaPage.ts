@@ -7,13 +7,17 @@ const registry = loadLocators(path.join(__dirname, '../locators/formRecaptchaPag
 export class FormRecaptchaPage {
   constructor(private page: Page) {}
 
+  /**
+   * NOTE: there is no dedicated form-recaptcha demo page — reCAPTCHA only appears nested
+   * inside the base kkr tenant's form-container style guide page (verified via querybuilder + live DOM).
+   */
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/form-recaptcha.html?wcmmode=disabled`);
+    await this.page.goto(`${baseUrl}/content/kkr/style-guide/components/form-container.html?wcmmode=disabled`);
     await this.page.waitForLoadState('networkidle');
   }
 
   get root(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.root || { strategies: [{ type: 'css', value: '.cmp-form-recaptcha' }] });
+    return resolveLocator(this.page, registry.entries.root || { strategies: [{ type: 'css', value: '.cmp-recaptcha' }] });
   }
 
   get captchaContainer(): Promise<Locator> {

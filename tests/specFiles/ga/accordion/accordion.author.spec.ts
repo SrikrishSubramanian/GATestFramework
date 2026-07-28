@@ -56,11 +56,11 @@ test.describe('Accordion — Style Guide Page', () => {
   test('[ACRD-002] @smoke @regression Each accordion section renders all expected items', async ({ page }) => {
     const pom = new AccordionPage(page);
     await pom.navigate(BASE());
-    // White: 4 items, Slate: 3 items, Granite: 3 items, Azul: 2 items
+    // White: 4 items, Slate: 3 items, Granite: 3 items, Azul: 4 items
     await expect(page.locator(`${SECTION_WHITE} ${ITEM}`)).toHaveCount(4);
     await expect(page.locator(`${SECTION_SLATE} ${ITEM}`)).toHaveCount(3);
     await expect(page.locator(`${SECTION_GRANITE} ${ITEM}`)).toHaveCount(3);
-    await expect(page.locator(`${SECTION_AZUL} ${ITEM}`)).toHaveCount(2);
+    await expect(page.locator(`${SECTION_AZUL} ${ITEM}`)).toHaveCount(4);
   });
 });
 

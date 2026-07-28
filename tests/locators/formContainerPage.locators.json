@@ -3,12 +3,12 @@
   "entries": {
     "root": {
       "strategies": [
-        { "type": "css", "value": ".cmp-form-container", "confidence": 0.95 }
+        { "type": "css", "value": ".cmp-form", "confidence": 0.95 }
       ]
     },
     "form": {
       "strategies": [
-        { "type": "css", "value": ".cmp-form-container form", "confidence": 0.9 }
+        { "type": "css", "value": ".cmp-form form", "confidence": 0.9 }
       ]
     }
   }

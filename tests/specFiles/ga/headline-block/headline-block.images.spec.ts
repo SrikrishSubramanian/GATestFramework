@@ -1,4 +1,4 @@
-import { scanImages, attachImageScanResults } from '../../../utils/infra/image-scan-utils';
+import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
 import { test, expect } from '@playwright/test';
 import { HeadlineBlockPage } from '../../../pages/ga/components/headlineBlockPage';
 import ENV from '../../../utils/infra/env';
@@ -30,6 +30,7 @@ test.describe('HeadlineBlock — Image Health', () => {
   test('@regression No broken images', async ({ page }, testInfo) => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
+    const results = await scanImages(page, '.cmp-headline-block');
     await attachImageScanResults(testInfo, results);
     expect(results.broken).toBe(0);
   });
@@ -37,6 +38,7 @@ test.describe('HeadlineBlock — Image Health', () => {
   test('@regression All images have alt text', async ({ page }, testInfo) => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
+    const results = await scanImages(page, '.cmp-headline-block');
     await attachImageScanResults(testInfo, results);
     expect(results.missingAlt).toBe(0);
   });
@@ -44,6 +46,7 @@ test.describe('HeadlineBlock — Image Health', () => {
   test('@regression No oversized images (>500KB)', async ({ page }, testInfo) => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
+    const results = await scanImages(page, '.cmp-headline-block');
     await attachImageScanResults(testInfo, results);
     expect(results.oversized).toBe(0);
   });
@@ -51,6 +54,7 @@ test.describe('HeadlineBlock — Image Health', () => {
   test('@regression All images have explicit dimensions (CLS prevention)', async ({ page }, testInfo) => {
     const pom = new HeadlineBlockPage(page);
     await pom.navigate(BASE());
+    const results = await scanImages(page, '.cmp-headline-block');
     await attachImageScanResults(testInfo, results);
     expect(results.missingDimensions).toBe(0);
   });

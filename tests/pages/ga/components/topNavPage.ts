@@ -7,21 +7,30 @@ const registry = loadLocators(path.join(__dirname, '../locators/topNavPage.locat
 export class TopNavPage {
   constructor(private page: Page) {}
 
-  async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/top-nav.html?wcmmode=disabled`);
+  /**
+   * Navigate to the site header Experience Fragment preview page.
+   * NOTE: top-nav is not a standalone AEM component — it's the <nav class="cmp-site-header__top-nav">
+   * nested inside site-header, which is delivered via Experience Fragment (GAAM-792). There is no
+   * site-header.html under the global-atlantic style guide; the live instance is the XF itself
+   * (verified via querybuilder + live DOM).
+   */
+  async navigate(baseUrl: string, overrideUrl?: string) {
+    const url = overrideUrl
+      ?? `${baseUrl}/content/experience-fragments/global-atlantic/style-guide/header/header-master/master.html?wcmmode=disabled`;
+    await this.page.goto(url);
     await this.page.waitForLoadState('networkidle');
   }
 
   get root(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.root || { strategies: [{ type: 'css', value: '.cmp-top-nav' }] });
+    return resolveLocator(this.page, registry.entries.root || { strategies: [{ type: 'css', value: '.cmp-site-header__top-nav' }] });
   }
 
   get items(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.items || { strategies: [{ type: 'css', value: '.cmp-top-nav__item' }] });
+    return resolveLocator(this.page, registry.entries.items || { strategies: [{ type: 'css', value: '.cmp-site-header__top-nav-item' }] });
   }
 
   async clickItem(index: number): Promise<void> {
-    const itemList = this.page.locator('.cmp-top-nav__item');
+    const itemList = this.page.locator('.cmp-site-header__top-nav-item');
     if (await itemList.count() > index) {
       await itemList.nth(index).click();
     }

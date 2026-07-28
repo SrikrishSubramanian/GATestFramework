@@ -52,7 +52,7 @@ const IMAGE_PANEL = '.cmp-accordion-tabs-feature__image-panel';
 const PANEL_TITLE = '.cmp-accordion-tab__title';
 const PANEL_DESCRIPTION = '.cmp-accordion-tab__description';
 const PANEL_CTA = '.cmp-accordion-tab__cta-wrapper';
-const HEADLINE_BLOCK = '.ga-headline-block';
+const HEADLINE_BLOCK = '.cmp-headline-block';
 
 // ─── Edge Cases: Optional Content Handling ───────────────────────────────────
 // GAAM-421: TC_026 (no CTA), TC_027 (no desc), TC_028 (no title)

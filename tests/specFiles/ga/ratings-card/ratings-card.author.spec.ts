@@ -30,14 +30,14 @@ test.describe('Ratings Card — Happy Path', () => {
   test('[RC-001] @smoke @regression Ratings Card renders', async ({ page }) => {
     const pom = new RatingsCardPage(page);
     await pom.navigate(BASE());
-    const root = page.locator('.cmp-ratings-card').first();
+    const root = page.locator('.cmp-rating-card').first();
     await expect(root).toBeVisible();
   });
 
   test('[RC-002] @regression Rating display shows correctly', async ({ page }) => {
     const pom = new RatingsCardPage(page);
     await pom.navigate(BASE());
-    const rating = page.locator('.cmp-ratings-card__rating');
+    const rating = page.locator('.cmp-rating-card__rating').first();
     await expect(rating).toBeVisible();
   });
 });
@@ -49,7 +49,7 @@ test.describe('Ratings Card — Accessibility', () => {
     const pom = new RatingsCardPage(page);
     await pom.navigate(BASE());
     const results = await new AxeBuilder({ page })
-      .include('.cmp-ratings-card')
+      .include('.cmp-rating-card')
       .withTags(["wcag2a","wcag2aa","wcag22aa"])
       .analyze();
     expect(results.violations).toEqual([]);

@@ -46,7 +46,7 @@ test.afterEach(async ({ page }, testInfo) => {
  *   Panel title:  .cmp-accordion-tab__title
  *   Panel desc:   .cmp-accordion-tab__description
  *   Panel CTA:    .cmp-accordion-tab__cta-wrapper
- *   Headline:     .ga-headline-block
+ *   Headline:     .cmp-headline-block
  *
  * Instances on style guide:
  *   0 = Accordion (Investment Strategy / Portfolio Management / Risk Assessment)
@@ -67,7 +67,7 @@ const ICON_MINUS = '.cmp-accordion-tabs-feature__icon-minus';
 const PANEL_TITLE = '.cmp-accordion-tab__title';
 const PANEL_DESCRIPTION = '.cmp-accordion-tab__description';
 const PANEL_CTA = '.cmp-accordion-tab__cta-wrapper';
-const HEADLINE_BLOCK = '.ga-headline-block';
+const HEADLINE_BLOCK = '.cmp-headline-block';
 
 // ─── Accordion Open/Close Behavior (Desktop) ────────────────────────────────
 // GAAM-421: TC_019, TC_020, TC_037, TC_038
@@ -534,15 +534,15 @@ test.describe('AccordionTabsFeature — Headline Variant Interaction @interactio
     const pom = new AccordionTabsFeaturePage(page);
     await pom.navigate(BASE());
     const instance = page.locator(ROOT).nth(2);
-    // Headline block wrapper is .cmp-accordion-tabs-feature__headline-block containing .ga-headline-block
+    // Headline block wrapper is .cmp-accordion-tabs-feature__headline-block containing .cmp-headline-block
     const headlineWrapper = instance.locator('.cmp-accordion-tabs-feature__headline-block');
     const headline = instance.locator(HEADLINE_BLOCK);
 
     // Headline wrapper should exist in the headline variant
     expect(await headlineWrapper.count()).toBe(1);
-    // The ga-headline-block may render as empty if no headline text authored
+    // The cmp-headline-block may render as empty if no headline text authored
     // Verify the wrapper structure exists (content may be in a separate heading element)
-    const headlineTitle = instance.locator('.ga-headline-block__title');
+    const headlineTitle = instance.locator('.cmp-headline-block__title');
     if (await headlineTitle.count() > 0) {
       const titleText = await headlineTitle.textContent();
       if (titleText && titleText.trim().length > 0) {
@@ -720,11 +720,21 @@ test.describe('AccordionTabsFeature — Dark Background Interaction @interaction
     const tabCount = await tabs.count();
     expect(tabCount).toBeGreaterThan(0);
 
-    // Click each tab and verify no errors
+    // Click each tab and verify no errors. The first tab is expanded by default
+    // (ATF-049), so re-clicking it may toggle it closed instead of staying selected
+    // (accordion pattern) — same accepted ambiguity as the "click first tab again"
+    // test above. In that case, just verify the single-expansion invariant holds.
     for (let i = 0; i < tabCount; i++) {
+      const wasSelected = (await tabs.nth(i).getAttribute('aria-selected')) === 'true';
       await tabs.nth(i).click();
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-      await expect(tabs.nth(i)).toHaveAttribute('aria-selected', 'true');
+      if (wasSelected) {
+        const states = await Promise.all(
+          Array.from({ length: tabCount }, (_, j) => tabs.nth(j).getAttribute('aria-selected'))
+        );
+        expect(states.filter(s => s === 'true').length).toBeLessThanOrEqual(1);
+      } else {
+        await expect(tabs.nth(i)).toHaveAttribute('aria-selected', 'true');
+      }
     }
   });
 
