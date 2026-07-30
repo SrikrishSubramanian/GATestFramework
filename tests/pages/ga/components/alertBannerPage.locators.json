@@ -1,0 +1,425 @@
+{
+  "component": "alert-banner",
+  "generatedAt": "2026-07-29T16:08:28.711Z",
+  "source": "dom",
+  "entries": {
+    "aLink": {
+      "name": "aLink",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "link",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "DismissAlert": {
+      "name": "DismissAlert",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__close.cmp-alert-banner-message-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Dismiss alert']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-alert-banner__close')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Dismiss alert",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_2": {
+      "name": "ul_2",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner-messages",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-alert-banner-messages')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_3": {
+      "name": "ul_3",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner-messages",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-alert-banner-messages')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_4": {
+      "name": "li_4",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__section.alert-message-0.cmp-alert-banner__section--alert-banner-info.cmp-alert-banner__section--fixed",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-alert-banner__section')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Info alert (non-dismissible) with an inline link.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_5": {
+      "name": "li_5",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__section.alert-message-1.cmp-alert-banner__section--alert-banner-warning.cmp-alert-banner__section--dismissible",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-alert-banner__section')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_6": {
+      "name": "li_6",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__section.alert-message-0.cmp-alert-banner__section--alert-banner-warning.cmp-alert-banner__section--dismissible",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-alert-banner__section')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_7": {
+      "name": "div_7",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__box')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Info alert (non-dismissible) with an inline link.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__box-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__box-content')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Info alert (non-dismissible) with an inline link.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_9": {
+      "name": "span_9",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-alert-banner__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_10": {
+      "name": "div_10",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__innercontent",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__innercontent')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Info alert (non-dismissible) with an inline link.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner-message-description.cmp-alert-banner__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner-message-description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Info alert (non-dismissible) with an inline link.",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__box-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__box-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__box-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__box-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__innercontent",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__innercontent')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_16": {
+      "name": "div_16",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner-message-description.cmp-alert-banner__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner-message-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_DismissAlert": {
+      "name": "div_DismissAlert",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__box-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__box-close')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Dismiss alert",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_19": {
+      "name": "div_19",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__box-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__box-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__innercontent",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner__innercontent')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner-message-description.cmp-alert-banner__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-alert-banner-message-description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_22": {
+      "name": "li_22",
+      "component": "alert-banner",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-alert-banner__section.alert-message-1.alert-hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-alert-banner__section')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

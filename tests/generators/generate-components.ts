@@ -17,6 +17,7 @@ import { scanDOM, DOMSnapshot, loadLatestSnapshot } from '../utils/generation/do
 import { writePOMFromDOM, POMWriteResult } from '../utils/generation/pom-writer';
 import { writeComponentSpec, SpecWriteResult } from '../utils/generation/spec-writer';
 import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/infra/test-tagger';
+import { loginToAEMAuthor } from '../utils/infra/auth-fixture';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -102,6 +103,30 @@ const DEFAULT_COMPONENTS: ComponentConfig[] = [
     name: 'breadcrumb',
     rootSelector: '.cmp-breadcrumb',
   },
+  {
+    name: 'rate-details-hero',
+    rootSelector: '.cmp-rate-details-hero',
+  },
+  {
+    name: 'alert-banner',
+    rootSelector: '.cmp-alert-banner-ga',
+  },
+  {
+    name: 'firm-selection-modal',
+    rootSelector: '.cmp-firm-selection-modal',
+  },
+  {
+    name: 'site-search',
+    rootSelector: '.cmp-site-search',
+  },
+  {
+    name: 'bio-card',
+    rootSelector: '.cmp-bio-card',
+  },
+  {
+    name: 'gated-section',
+    rootSelector: '.cmp-gated-section',
+  },
 ];
 
 const COMPONENTS_DIR = path.resolve(__dirname, '..', 'pages', 'ga', 'components');
@@ -137,11 +162,7 @@ test.describe('Component Generation', () => {
 
       // Authenticate for author mode
       if (componentMode === 'author') {
-        await page.goto(`${AUTHOR_URL}/libs/granite/core/content/login.html`);
-        await page.fill('#username', AUTH.username);
-        await page.fill('#password', AUTH.password);
-        await page.click('#submit-button');
-        await page.waitForLoadState('networkidle');
+        await loginToAEMAuthor(page, { authorUrl: AUTHOR_URL, username: AUTH.username, password: AUTH.password });
       }
 
       console.log(`\n=== Scanning: ${config.name} ===`);

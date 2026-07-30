@@ -1,0 +1,432 @@
+{
+  "component": "gated-section",
+  "url": "https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/components/gated-section.html?wcmmode=disabled",
+  "scannedAt": "2026-07-29T16:37:34.108Z",
+  "rootSelector": ".cmp-gated-section",
+  "elements": [
+    {
+      "name": "button_Submit",
+      "tag": "button",
+      "text": "Submit",
+      "classes": [
+        "cmp-button",
+        "cmp-form-button"
+      ],
+      "attributes": {
+        "data-cta": "1",
+        "data-cmp-data-layer": "{\"submit\":{\"@type\":\"ga/components/form/button\",\"repo:modifyDate\":\"2026-03-05T05:47:45Z\",\"parentId\":\"new_form\"}}",
+        "type": "SUBMIT",
+        "name": "submit",
+        "value": "submit"
+      },
+      "testId": null,
+      "id": "submit",
+      "parentClasses": [
+        "button",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 51,
+        "y": 954,
+        "width": 123,
+        "height": 50
+      }
+    },
+    {
+      "name": "input_1",
+      "tag": "input",
+      "text": "",
+      "classes": [],
+      "attributes": {
+        "type": "hidden",
+        "name": ":formstart",
+        "value": "/content/experience-fragments/global-atlantic/style-guide/header/header-master/gated-section-form/jcr:content/root/container_copy_copy_"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form",
+        "aem-Grid",
+        "aem-Grid--12",
+        "aem-Grid--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "First_Name",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-form-text__text"
+      ],
+      "attributes": {
+        "data-cmp-hook-form-text": "input",
+        "aria-label": "First Name",
+        "type": "text",
+        "name": "firstName",
+        "title": ""
+      },
+      "testId": null,
+      "id": "form-text-2079301149",
+      "parentClasses": [
+        "cmp-form-text"
+      ],
+      "role": null,
+      "ariaLabel": "First Name",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 51,
+        "y": 473,
+        "width": 1178,
+        "height": 48
+      }
+    },
+    {
+      "name": "imgImage_3",
+      "tag": "img",
+      "text": "",
+      "classes": [],
+      "attributes": {
+        "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzI3OTlfNzk0IiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMSIgeT0iMyIgd2lkdGg9IjM4IiBoZWlnaHQ9IjMyIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xLjY2NjY2IDM1SDM4LjMzMzNMMjAgMy4zMzMzNEwxLjY2NjY2IDM1Wk0yMS42NjY3IDMwSDE4LjMzMzNWMjYuNjY2N0gyMS42NjY3VjMwWk0yMS42NjY3IDIzLjMzMzNIMTguMzMzM1YxNi42NjY3SDIxLjY2NjdWMjMuMzMzM1oiIGZpbGw9IndoaXRlIi8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8yNzk5Xzc5NCkiPgo8cmVjdCB4PSItMjEuNjY2NyIgeT0iLTIxLjY2NjciIHdpZHRoPSI4My4zMzMzIiBoZWlnaHQ9IjgzLjMzMzMiIGZpbGw9IiNEMDA5NDYiLz4KPG1hc2sgaWQ9Im1hc2sxXzI3OTlfNzk0IiBzdHlsZT0ibWFzay10eXBlOmx1bWluYW5jZSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iLTIyIiB5PSItMjIiIHdpZHRoPSI4NCIgaGVpZ2h0PSI4NCI+CjxyZWN0IHg9Ii0yMS42NjY3IiB5PSItMjEuNjY2NyIgd2lkdGg9IjgzLjMzMzMiIGhlaWdodD0iODMuMzMzMyIgZmlsbD0id2hpdGUiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2sxXzI3OTlfNzk0KSI+CjwvZz4KPC9nPgo8L3N2Zz4K"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-text__constraint-message",
+        "cmp-form-required"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-form-illustration__alert",
+        "cmp-form-illustration__alert-hide"
+      ],
+      "attributes": {
+        "role": "alert",
+        "aria-live": "assertive",
+        "aria-atomic": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form",
+        "aem-Grid",
+        "aem-Grid--12",
+        "aem-Grid--default--12"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "First Name\n    \n    \n    \n    \n     \n     \n     \n     \n\n\n\n    \n\n\n\n\n    Last Name\n    \n    \n    \n    ",
+      "classes": [
+        "cmp-gated-section__form"
+      ],
+      "attributes": {
+        "aria-hidden": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-gated-section"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 442,
+        "width": 1154,
+        "height": 562
+      }
+    },
+    {
+      "name": "span_6",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-form-illustration__alert-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-illustration__alert",
+        "cmp-form-illustration__alert-hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_7",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-form-illustration__alert-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-illustration__alert",
+        "cmp-form-illustration__alert-hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_8",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-form-text__constraint-message",
+        "cmp-form-required"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-text"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_9",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-form-text__personal-domain",
+        "cmp-form-required"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-text"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "i_10",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-form-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 136,
+        "y": 971,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Submit",
+      "tag": "span",
+      "text": "Submit",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-form-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 73,
+        "y": 971,
+        "width": 51,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_Submitting",
+      "tag": "div",
+      "text": "Submitting...",
+      "classes": [
+        "cmp-gated-section__loading"
+      ],
+      "attributes": {
+        "aria-live": "polite",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-gated-section__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_13",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-gated-section__spinner"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-gated-section__loading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Submitting",
+      "tag": "span",
+      "text": "Submitting...",
+      "classes": [
+        "cmp-gated-section__loading-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-gated-section__loading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "This content is revealed after the gated form is submitted (or immediately on reload once the gate k",
+      "classes": [
+        "cmp-gated-section__content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "inert": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-gated-section"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Gated Section",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

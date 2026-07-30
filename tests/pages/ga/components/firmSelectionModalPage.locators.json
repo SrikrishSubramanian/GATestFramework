@@ -1,0 +1,523 @@
+{
+  "component": "firm-selection-modal",
+  "generatedAt": "2026-07-29T16:08:38.188Z",
+  "source": "dom",
+  "entries": {
+    "Close": {
+      "name": "Close",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-firm-selection-modal__close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "button_Confirm": {
+      "name": "button_Confirm",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button.cmp-firm-selection-modal__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Confirm",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Continue": {
+      "name": "button_Continue",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button.cmp-firm-selection-modal__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Continue",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_SelectYourFirm": {
+      "name": "h2_SelectYourFirm",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "cmp-fsm-heading",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__heading",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-firm-selection-modal__heading')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Select your firm",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "SelectAFirm": {
+      "name": "SelectAFirm",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__firm-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "listbox[name='Select a firm']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-firm-selection-modal__firm-list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__error",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__error')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__backdrop",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__backdrop')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_7": {
+      "name": "div_7",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__dialog",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__dialog')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Illustrations\n      \n      \n        Select your firm",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_Illustrations": {
+      "name": "p_Illustrations",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-firm-selection-modal__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Illustrations",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_LoadingYourFirms": {
+      "name": "div_LoadingYourFirms",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__body')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Loading your firms...",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_LoadingYourFirms_11": {
+      "name": "div_LoadingYourFirms_11",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__loading",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__loading')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Loading your firms...",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_12": {
+      "name": "span_12",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__spinner",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-firm-selection-modal__spinner')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_LoadingYourFirms": {
+      "name": "span_LoadingYourFirms",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__loading-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-firm-selection-modal__loading-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Loading your firms...",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Confirm": {
+      "name": "div_Confirm",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__footer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__footer')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Confirm",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_15": {
+      "name": "span_15",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__error-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-firm-selection-modal__error-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_16": {
+      "name": "span_16",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__error-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-firm-selection-modal__error-text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Confirm_17": {
+      "name": "div_Confirm_17",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".button.ga-button--primary.cmp-firm-selection-modal__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Confirm",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "i_18": {
+      "name": "i_18",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Confirm": {
+      "name": "span_Confirm",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Confirm",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__dialog",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__dialog')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SnapApp\n      \n      \n        Select your firm",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_SnapApp": {
+      "name": "p_SnapApp",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-firm-selection-modal__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SnapApp",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Continue": {
+      "name": "div_Continue",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-firm-selection-modal__footer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-firm-selection-modal__footer')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Continue",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Continue_24": {
+      "name": "div_Continue_24",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".button.ga-button--primary.cmp-firm-selection-modal__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Continue",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Continue": {
+      "name": "span_Continue",
+      "component": "firm-selection-modal",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Continue",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

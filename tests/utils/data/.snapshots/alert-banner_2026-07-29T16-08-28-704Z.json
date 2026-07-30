@@ -1,0 +1,592 @@
+{
+  "component": "alert-banner",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/alert-banner.html?wcmmode=disabled",
+  "scannedAt": "2026-07-29T16:08:28.704Z",
+  "rootSelector": ".cmp-alert-banner-ga",
+  "elements": [
+    {
+      "name": "aLink",
+      "tag": "a",
+      "text": "link",
+      "classes": [],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 771,
+        "y": 406,
+        "width": 21,
+        "height": 16
+      }
+    },
+    {
+      "name": "DismissAlert",
+      "tag": "button",
+      "text": "Dismiss alert",
+      "classes": [
+        "cmp-alert-banner__close",
+        "cmp-alert-banner-message-close"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Dismiss alert"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box-close"
+      ],
+      "role": null,
+      "ariaLabel": "Dismiss alert",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1193,
+        "y": 449,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "name": "ul_2",
+      "tag": "ul",
+      "text": "Info alert (non-dismissible) with an inline link.\n                            \n                     ",
+      "classes": [
+        "cmp-alert-banner-messages"
+      ],
+      "attributes": {
+        "data-link-location": "mainTop"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner-ga",
+        "cmp-alert-banner__container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 392,
+        "width": 1280,
+        "height": 92
+      }
+    },
+    {
+      "name": "ul_3",
+      "tag": "ul",
+      "text": "Dismiss this banner to validate same-session persistence across page navigation.\n                   ",
+      "classes": [
+        "cmp-alert-banner-messages"
+      ],
+      "attributes": {
+        "data-link-location": "mainTop"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner-ga",
+        "cmp-alert-banner__container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 686,
+        "width": 1280,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_4",
+      "tag": "li",
+      "text": "Info alert (non-dismissible) with an inline link.",
+      "classes": [
+        "cmp-alert-banner__section",
+        "alert-message-0",
+        "cmp-alert-banner__section--alert-banner-info",
+        "cmp-alert-banner__section--fixed"
+      ],
+      "attributes": {
+        "data-alert-type": "alert-banner-info",
+        "data-alert-content": "<p>Info alert (non-dismissible) with an inline <a href='/content/global-atlantic/style-guide'>link</a>.</p>",
+        "role": "alert",
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner-messages"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 392,
+        "width": 1280,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_5",
+      "tag": "li",
+      "text": "Warning alert (dismissible) appears below the non-dismissible banner.\n                            \n ",
+      "classes": [
+        "cmp-alert-banner__section",
+        "alert-message-1",
+        "cmp-alert-banner__section--alert-banner-warning",
+        "cmp-alert-banner__section--dismissible"
+      ],
+      "attributes": {
+        "data-alert-type": "alert-banner-warning",
+        "data-alert-content": "<p>Warning alert (dismissible) appears below the non-dismissible banner.</p>",
+        "role": "alert",
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner-messages"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 438,
+        "width": 1280,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_6",
+      "tag": "li",
+      "text": "Dismiss this banner to validate same-session persistence across page navigation.\n                   ",
+      "classes": [
+        "cmp-alert-banner__section",
+        "alert-message-0",
+        "cmp-alert-banner__section--alert-banner-warning",
+        "cmp-alert-banner__section--dismissible"
+      ],
+      "attributes": {
+        "data-alert-type": "alert-banner-warning",
+        "data-alert-content": "<p>Dismiss this banner to validate same-session persistence across page navigation.</p>",
+        "role": "alert",
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner-messages"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 686,
+        "width": 1280,
+        "height": 46
+      }
+    },
+    {
+      "name": "div_7",
+      "tag": "div",
+      "text": "Info alert (non-dismissible) with an inline link.",
+      "classes": [
+        "cmp-alert-banner__box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__section",
+        "alert-message-0",
+        "cmp-alert-banner__section--alert-banner-info",
+        "cmp-alert-banner__section--fixed"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 392,
+        "width": 1280,
+        "height": 46
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "Info alert (non-dismissible) with an inline link.",
+      "classes": [
+        "cmp-alert-banner__box-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 405,
+        "width": 1154,
+        "height": 20
+      }
+    },
+    {
+      "name": "span_9",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-alert-banner__icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 484,
+        "y": 405,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "Info alert (non-dismissible) with an inline link.",
+      "classes": [
+        "cmp-alert-banner__innercontent"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 516,
+        "y": 405,
+        "width": 280,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "Info alert (non-dismissible) with an inline link.",
+      "classes": [
+        "cmp-alert-banner-message-description",
+        "cmp-alert-banner__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__innercontent"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 516,
+        "y": 405,
+        "width": 280,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-alert-banner__box-close"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1217,
+        "y": 415,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "Warning alert (dismissible) appears below the non-dismissible banner.\n                            \n ",
+      "classes": [
+        "cmp-alert-banner__box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__section",
+        "alert-message-1",
+        "cmp-alert-banner__section--alert-banner-warning",
+        "cmp-alert-banner__section--dismissible"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 438,
+        "width": 1280,
+        "height": 46
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "Warning alert (dismissible) appears below the non-dismissible banner.",
+      "classes": [
+        "cmp-alert-banner__box-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 451,
+        "width": 1154,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "Warning alert (dismissible) appears below the non-dismissible banner.",
+      "classes": [
+        "cmp-alert-banner__innercontent"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 437,
+        "y": 451,
+        "width": 437,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_16",
+      "tag": "div",
+      "text": "Warning alert (dismissible) appears below the non-dismissible banner.",
+      "classes": [
+        "cmp-alert-banner-message-description",
+        "cmp-alert-banner__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__innercontent"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 437,
+        "y": 451,
+        "width": 437,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_DismissAlert",
+      "tag": "div",
+      "text": "Dismiss alert",
+      "classes": [
+        "cmp-alert-banner__box-close"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1193,
+        "y": 449,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Dismiss this banner to validate same-session persistence across page navigation.\n                   ",
+      "classes": [
+        "cmp-alert-banner__box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__section",
+        "alert-message-0",
+        "cmp-alert-banner__section--alert-banner-warning",
+        "cmp-alert-banner__section--dismissible"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 686,
+        "width": 1280,
+        "height": 46
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "Dismiss this banner to validate same-session persistence across page navigation.",
+      "classes": [
+        "cmp-alert-banner__box-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 699,
+        "width": 1154,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "Dismiss this banner to validate same-session persistence across page navigation.",
+      "classes": [
+        "cmp-alert-banner__innercontent"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__box-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 403,
+        "y": 699,
+        "width": 505,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "Dismiss this banner to validate same-session persistence across page navigation.",
+      "classes": [
+        "cmp-alert-banner-message-description",
+        "cmp-alert-banner__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner__innercontent"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 403,
+        "y": 699,
+        "width": 505,
+        "height": 20
+      }
+    },
+    {
+      "name": "li_22",
+      "tag": "li",
+      "text": "",
+      "classes": [
+        "cmp-alert-banner__section",
+        "alert-message-1",
+        "alert-hidden"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-alert-banner-messages"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Alert Banner",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

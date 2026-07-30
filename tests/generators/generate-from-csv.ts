@@ -17,6 +17,7 @@ import { writePOMFromDOM } from '../utils/generation/pom-writer';
 import { writeSpecFromCSV, writeComponentSpec } from '../utils/generation/spec-writer';
 import { getDefaultCategories, TestCategory, A11yLevel } from '../utils/infra/test-tagger';
 import { updateComponentCoverage } from '../utils/generation/coverage-matrix-reporter';
+import { loginToAEMAuthor } from '../utils/infra/auth-fixture';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -58,11 +59,7 @@ test.describe('CSV Test Generation', () => {
 
     // Authenticate for author mode
     if (mode === 'author') {
-      await page.goto(`${AUTHOR_URL}/libs/granite/core/content/login.html`);
-      await page.fill('#username', AUTH.username);
-      await page.fill('#password', AUTH.password);
-      await page.click('#submit-button');
-      await page.waitForLoadState('networkidle');
+      await loginToAEMAuthor(page, { authorUrl: AUTHOR_URL, username: AUTH.username, password: AUTH.password });
     }
 
     for (const group of groups) {

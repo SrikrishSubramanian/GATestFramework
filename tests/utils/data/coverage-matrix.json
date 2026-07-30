@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-20T07:19:51.645Z",
+  "lastUpdated": "2026-07-29T18:22:06.115Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -2167,6 +2167,249 @@
       },
       "totalTests": 4,
       "lastUpdated": "2026-07-20T07:19:51.644Z"
+    },
+    "alert-banner": {
+      "component": "alert-banner",
+      "categories": {
+        "interaction": {
+          "category": "interaction",
+          "testCount": 2,
+          "specFile": "alert-banner.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 2,
+          "specFile": "alert-banner.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "alert-banner.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "alert-banner.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 2,
+      "lastUpdated": "2026-07-29T18:21:38.252Z"
+    },
+    "firm-selection-modal": {
+      "component": "firm-selection-modal",
+      "categories": {
+        "interaction": {
+          "category": "interaction",
+          "testCount": 2,
+          "specFile": "firm-selection-modal.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 2,
+          "specFile": "firm-selection-modal.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "firm-selection-modal.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "firm-selection-modal.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 2,
+      "lastUpdated": "2026-07-29T18:21:38.266Z"
+    },
+    "rate-details-hero": {
+      "component": "rate-details-hero",
+      "categories": {
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 2,
+          "specFile": "rate-details-hero.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "rate-details-hero.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "rate-details-hero.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 2,
+      "lastUpdated": "2026-07-29T18:21:38.235Z"
+    },
+    "site-search": {
+      "component": "site-search",
+      "categories": {
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 2,
+          "specFile": "site-search.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "site-search.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "site-search.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 2,
+          "specFile": "site-search.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 2,
+      "lastUpdated": "2026-07-29T18:22:06.069Z"
+    },
+    "bio-card": {
+      "component": "bio-card",
+      "categories": {
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 4,
+          "specFile": "bio-card.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "bio-card.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "bio-card.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 4,
+          "specFile": "bio-card.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 4,
+      "lastUpdated": "2026-07-29T18:22:06.091Z"
+    },
+    "gated-section": {
+      "component": "gated-section",
+      "categories": {
+        "state-matrix": {
+          "category": "state-matrix",
+          "testCount": 2,
+          "specFile": "gated-section.matrix.spec.ts",
+          "tags": [
+            "@matrix",
+            "@regression"
+          ]
+        },
+        "interaction": {
+          "category": "interaction",
+          "testCount": 1,
+          "specFile": "gated-section.interaction.spec.ts",
+          "tags": [
+            "@interaction",
+            "@regression"
+          ]
+        },
+        "visual": {
+          "category": "visual",
+          "testCount": 3,
+          "specFile": "gated-section.visual.spec.ts",
+          "tags": [
+            "@visual",
+            "@regression"
+          ]
+        },
+        "broken-images": {
+          "category": "broken-images",
+          "testCount": 4,
+          "specFile": "gated-section.images.spec.ts",
+          "tags": [
+            "@regression"
+          ]
+        }
+      },
+      "totalTests": 2,
+      "lastUpdated": "2026-07-29T18:22:06.115Z"
     }
   }
 }

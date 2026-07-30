@@ -1,0 +1,559 @@
+{
+  "component": "site-search",
+  "url": "https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/components/site-search.html?wcmmode=disabled",
+  "scannedAt": "2026-07-29T16:37:47.001Z",
+  "rootSelector": ".cmp-site-search",
+  "elements": [
+    {
+      "name": "Search",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-site-search__submit"
+      ],
+      "attributes": {
+        "aria-label": "Search",
+        "type": "submit"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-text"
+      ],
+      "role": null,
+      "ariaLabel": "Search",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 965,
+        "y": 1372,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "cmpSiteSearch",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-form-text__text",
+        "cmp-site-search__input"
+      ],
+      "attributes": {
+        "autocomplete": "off",
+        "data-cmp-hook-form-text": "input",
+        "type": "text",
+        "placeholder": "Search",
+        "name": "q",
+        "required": ""
+      },
+      "testId": null,
+      "id": "cmp-site-search",
+      "parentClasses": [
+        "cmp-form-text"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 291,
+        "y": 1377,
+        "width": 662,
+        "height": 22
+      }
+    },
+    {
+      "name": "h3_Search_Global_Atlantic",
+      "tag": "h3",
+      "text": "Search Global Atlantic",
+      "classes": [
+        "cmp-site-search__heading"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 267,
+        "y": 1278,
+        "width": 746,
+        "height": 61
+      }
+    },
+    {
+      "name": "ul_NoResults",
+      "tag": "ul",
+      "text": "No results",
+      "classes": [
+        "cmp-site-search__autocomplete"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__autocomplete-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ul_4",
+      "tag": "ul",
+      "text": "",
+      "classes": [
+        "cmp-site-search__results-list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__results-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ul_5",
+      "tag": "ul",
+      "text": "",
+      "classes": [
+        "cmp-site-search__pagination-pages"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__pagination-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Annuities",
+      "tag": "span",
+      "text": "Annuities",
+      "classes": [
+        "common-term"
+      ],
+      "attributes": {
+        "role": "button",
+        "tabindex": "0",
+        "data-common-search-term": "Annuities"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__search-term"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 485,
+        "y": 1439,
+        "width": 78,
+        "height": 21
+      }
+    },
+    {
+      "name": "span_Life_Insurance",
+      "tag": "span",
+      "text": "Life Insurance",
+      "classes": [
+        "common-term"
+      ],
+      "attributes": {
+        "role": "button",
+        "tabindex": "0",
+        "data-common-search-term": "Life Insurance"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__search-term"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 571,
+        "y": 1439,
+        "width": 116,
+        "height": 21
+      }
+    },
+    {
+      "name": "span_Continuing_Education",
+      "tag": "span",
+      "text": "Continuing Education",
+      "classes": [
+        "common-term"
+      ],
+      "attributes": {
+        "role": "button",
+        "tabindex": "0",
+        "data-common-search-term": "Continuing Education"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__search-term"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 695,
+        "y": 1439,
+        "width": 177,
+        "height": 21
+      }
+    },
+    {
+      "name": "span_Business_Building",
+      "tag": "span",
+      "text": "Business Building",
+      "classes": [
+        "common-term"
+      ],
+      "attributes": {
+        "role": "button",
+        "tabindex": "0",
+        "data-common-search-term": "Business Building"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__search-term"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 881,
+        "y": 1439,
+        "width": 141,
+        "height": 21
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "Search Global Atlantic\n                \n                    Search\n                    \n            ",
+      "classes": [
+        "cmp-site-search__form-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1158,
+        "width": 1280,
+        "height": 384
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-site-search__wave-overlay"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__form-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1158,
+        "width": 1280,
+        "height": 384
+      }
+    },
+    {
+      "name": "span_12",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-site-search__wave-2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__wave-overlay"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1158,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "Search Global Atlantic\n                \n                    Search\n                    \n            ",
+      "classes": [
+        "cmp-site-search__form-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__form-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1278,
+        "width": 1154,
+        "height": 159
+      }
+    },
+    {
+      "name": "form_14",
+      "tag": "form",
+      "text": "Search Global Atlantic\n                \n                    Search\n                    \n            ",
+      "classes": [
+        "cmp-site-search__form"
+      ],
+      "attributes": {
+        "method": "get"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__form-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 267,
+        "y": 1278,
+        "width": 746,
+        "height": 159
+      }
+    },
+    {
+      "name": "label_Search",
+      "tag": "label",
+      "text": "Search",
+      "classes": [
+        "cmp-site-search__label",
+        "sr-only"
+      ],
+      "attributes": {
+        "for": "cmp-site-search"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-form-text"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 290,
+        "y": 1383,
+        "width": 9,
+        "height": 1
+      }
+    },
+    {
+      "name": "svg_16",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-site-search__icon"
+      ],
+      "attributes": {
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width": "11",
+        "height": "11",
+        "viewBox": "0 0 11 11",
+        "fill": "none"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__submit"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_NoResults",
+      "tag": "div",
+      "text": "No results",
+      "classes": [
+        "cmp-site-search__autocomplete-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 267,
+        "y": 1437,
+        "width": 746,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Commonly searched terms:\n            \n                \n                    \n                        ",
+      "classes": [
+        "cmp-site-search__search-term"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__form-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1437,
+        "width": 1154,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "Search term\n        \n\n        \n\n        \n            \n            \n                \n                ",
+      "classes": [
+        "cmp-site-search__results-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 239,
+        "y": 1542,
+        "width": 802,
+        "height": 128
+      }
+    },
+    {
+      "name": "span_SearchTerm",
+      "tag": "span",
+      "text": "Search term",
+      "classes": [
+        "cmp-site-search__results-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__results-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "Prev page\n                    \n                \n            \n            \n                \n         ",
+      "classes": [
+        "cmp-site-search__pagination-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-site-search__results-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Site Search",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

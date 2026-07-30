@@ -1,0 +1,271 @@
+{
+  "component": "gated-section",
+  "generatedAt": "2026-07-29T16:37:34.135Z",
+  "source": "dom",
+  "entries": {
+    "button_Submit": {
+      "name": "button_Submit",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "submit",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button.cmp-form-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Submit",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "First_Name": {
+      "name": "First_Name",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "form-text-2079301149",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-form-text__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "textbox[name='First Name']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//input[contains(@class,'cmp-form-text__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_4": {
+      "name": "div_4",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-illustration__alert.cmp-form-illustration__alert-hide",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-form-illustration__alert')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-gated-section__form",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-gated-section__form')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_6": {
+      "name": "span_6",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-illustration__alert-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-illustration__alert-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_7": {
+      "name": "span_7",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-illustration__alert-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-illustration__alert-text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_8": {
+      "name": "span_8",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-text__constraint-message.cmp-form-required",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-text__constraint-message')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_9": {
+      "name": "span_9",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-form-text__personal-domain.cmp-form-required",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-form-text__personal-domain')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_10": {
+      "name": "i_10",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Submit": {
+      "name": "span_Submit",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Submit",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Submitting": {
+      "name": "div_Submitting",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-gated-section__loading",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-gated-section__loading')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Submitting...",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_13": {
+      "name": "span_13",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-gated-section__spinner",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-gated-section__spinner')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Submitting": {
+      "name": "span_Submitting",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-gated-section__loading-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-gated-section__loading-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Submitting...",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "gated-section",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-gated-section__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-gated-section__content')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

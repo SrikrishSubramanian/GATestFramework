@@ -1,0 +1,434 @@
+{
+  "component": "site-search",
+  "generatedAt": "2026-07-29T16:37:47.031Z",
+  "source": "dom",
+  "entries": {
+    "Search": {
+      "name": "Search",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__submit",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Search']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-site-search__submit')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "cmpSiteSearch": {
+      "name": "cmpSiteSearch",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "cmp-site-search",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-form-text__text.cmp-site-search__input",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//input[contains(@class,'cmp-form-text__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "h3_Search_Global_Atlantic": {
+      "name": "h3_Search_Global_Atlantic",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__heading",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-site-search__heading')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Search Global Atlantic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_NoResults": {
+      "name": "ul_NoResults",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__autocomplete",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-site-search__autocomplete')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "No results",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_4": {
+      "name": "ul_4",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__results-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-site-search__results-list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_5": {
+      "name": "ul_5",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__pagination-pages",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-site-search__pagination-pages')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Annuities": {
+      "name": "span_Annuities",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".common-term",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'common-term')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Annuities",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Life_Insurance": {
+      "name": "span_Life_Insurance",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".common-term",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'common-term')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Life Insurance",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Continuing_Education": {
+      "name": "span_Continuing_Education",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".common-term",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'common-term')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Continuing Education",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Business_Building": {
+      "name": "span_Business_Building",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".common-term",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'common-term')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Business Building",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_10": {
+      "name": "div_10",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__form-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-site-search__form-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__wave-overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-site-search__wave-overlay')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_12": {
+      "name": "span_12",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__wave-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-site-search__wave-2')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__form-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-site-search__form-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "form_14": {
+      "name": "form_14",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__form",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//form[contains(@class,'cmp-site-search__form')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "label_Search": {
+      "name": "label_Search",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__label.sr-only",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//label[contains(@class,'cmp-site-search__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Search",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "svg_16": {
+      "name": "svg_16",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//svg[contains(@class,'cmp-site-search__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_NoResults": {
+      "name": "div_NoResults",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__autocomplete-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-site-search__autocomplete-container')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "No results",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__search-term",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-site-search__search-term')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_19": {
+      "name": "div_19",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__results-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-site-search__results-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_SearchTerm": {
+      "name": "span_SearchTerm",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__results-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-site-search__results-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Search term",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "site-search",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-search__pagination-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-site-search__pagination-container')]",
+          "confidence": 0.6
+        }
+      ]
+    }
+  }
+}

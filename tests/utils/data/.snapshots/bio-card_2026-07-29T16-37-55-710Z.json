@@ -1,0 +1,463 @@
+{
+  "component": "bio-card",
+  "url": "https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/components/bio-card.html?wcmmode=disabled",
+  "scannedAt": "2026-07-29T16:37:55.709Z",
+  "rootSelector": ".cmp-bio-card",
+  "elements": [
+    {
+      "name": "ViewBioFor_Jane_Doe",
+      "tag": "a",
+      "text": "Jane Doe\n                Financial Professional\n\n                \n                \n                 ",
+      "classes": [
+        "cmp-bio-card__inner"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/financial-professionals/main/en/firm-selection-modal.html",
+        "aria-label": "View bio for Jane Doe"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card",
+        "cmp-bio-card--card"
+      ],
+      "role": null,
+      "ariaLabel": "View bio for Jane Doe",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 88,
+        "y": 568,
+        "width": 628,
+        "height": 224
+      }
+    },
+    {
+      "name": "a_Download_Jane_Does_Bio",
+      "tag": "a",
+      "text": "Download Jane Doe's Bio",
+      "classes": [
+        "cmp-bio-card__download-link"
+      ],
+      "attributes": {
+        "href": "/content/dam/global-atlantic/FIA1396%20(09-25)%20income150%20Case%20Study.pdf",
+        "target": "_blank",
+        "download": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__description"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 474,
+        "y": 1271,
+        "width": 203,
+        "height": 32
+      }
+    },
+    {
+      "name": "h1_Jane_Doe",
+      "tag": "h1",
+      "text": "Jane Doe",
+      "classes": [
+        "cmp-bio-card__name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__hero-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 474,
+        "y": 980,
+        "width": 695,
+        "height": 38
+      }
+    },
+    {
+      "name": "img_HeadshotOf_Jane_Doe",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-bio-card__headshot"
+      ],
+      "attributes": {
+        "src": "/content/dam/global-atlantic/corporate-agnostic/FPO-imagery/FPO-350x350.png",
+        "alt": "Headshot of Jane Doe",
+        "loading": "lazy"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 88,
+        "y": 568,
+        "width": 226,
+        "height": 226
+      }
+    },
+    {
+      "name": "ul_Individuals",
+      "tag": "ul",
+      "text": "Individuals",
+      "classes": [
+        "cmp-bio-card__meta-list"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__hero-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 474,
+        "y": 1054,
+        "width": 695,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-bio-card__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 88,
+        "y": 568,
+        "width": 226,
+        "height": 224
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "Jane Doe\n                Financial Professional\n\n                \n                \n                 ",
+      "classes": [
+        "cmp-bio-card__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 338,
+        "y": 568,
+        "width": 378,
+        "height": 224
+      }
+    },
+    {
+      "name": "p_Jane_Doe",
+      "tag": "p",
+      "text": "Jane Doe",
+      "classes": [
+        "cmp-bio-card__name"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 338,
+        "y": 568,
+        "width": 378,
+        "height": 26
+      }
+    },
+    {
+      "name": "p_Financial_Professional",
+      "tag": "p",
+      "text": "Financial Professional",
+      "classes": [
+        "cmp-bio-card__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 338,
+        "y": 598,
+        "width": 378,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_Individuals",
+      "tag": "div",
+      "text": "Individuals",
+      "classes": [
+        "cmp-bio-card__tags"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 338,
+        "y": 766,
+        "width": 378,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_Individuals",
+      "tag": "span",
+      "text": "Individuals",
+      "classes": [
+        "cmp-bio-card__tag"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__tags"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 338,
+        "y": 776,
+        "width": 378,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-bio-card__arrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "Jane Doe\n                    Financial Professional\n\n                    \n                    \n     ",
+      "classes": [
+        "cmp-bio-card__hero-inner"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card",
+        "cmp-bio-card--hero"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 111,
+        "y": 980,
+        "width": 1058,
+        "height": 323
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "Jane Doe\n                    Financial Professional\n\n                    \n                    \n     ",
+      "classes": [
+        "cmp-bio-card__hero-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__hero-inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 474,
+        "y": 980,
+        "width": 695,
+        "height": 323
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "Jane Doe\n                    Financial Professional\n\n                    \n                    \n     ",
+      "classes": [
+        "cmp-bio-card__hero-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__hero-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 474,
+        "y": 980,
+        "width": 695,
+        "height": 90
+      }
+    },
+    {
+      "name": "li_Individuals",
+      "tag": "li",
+      "text": "Individuals",
+      "classes": [
+        "cmp-bio-card__meta-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__meta-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 474,
+        "y": 1054,
+        "width": 65,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_16",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac venenatis diam. Suspendisse potent",
+      "classes": [
+        "cmp-bio-card__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__hero-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 474,
+        "y": 1136,
+        "width": 695,
+        "height": 167
+      }
+    },
+    {
+      "name": "span_17",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-bio-card__download-link-arrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__download-link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 478,
+        "y": 1275,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "name": "span_Download_Jane_Does_Bio",
+      "tag": "span",
+      "text": "Download Jane Doe's Bio",
+      "classes": [
+        "cmp-bio-card__download-link-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-bio-card__download-link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 510,
+        "y": 1280,
+        "width": 159,
+        "height": 14
+      }
+    }
+  ],
+  "pageTitle": "Bio Card",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

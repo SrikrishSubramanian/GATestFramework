@@ -74,7 +74,7 @@ async function fetchTickets() {
     process.stdout.write(`[${i + 1}/${TICKETS.length}] Fetching ${ticketKey}... `);
 
     try {
-      const response = await makeRequest(`/rest/api/3/issues/${ticketKey}`);
+      const response = await makeRequest(`/rest/api/3/issue/${ticketKey}`);
 
       if (response.status === 200) {
         const ticket = response.data;

@@ -237,10 +237,10 @@ function sectionSel(bg: string) {
     ? `Background: component-level classes on ${known?.wrapperSelector || `.cmp-${comp}`}`
     : `Section: .${SECTION_BG_CLASS_PREFIX}{bg}`;
 
-  return `import { test, expect } from '../infra/persistent-context';
+  return `import { test, expect } from '../../../utils/infra/persistent-context';
 import { ${pomClassName} } from '${pomImportPath}';
-import ENV from '../infra/env';
-import { loginToAEMAuthor } from '../infra/auth-fixture';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
@@ -503,6 +503,18 @@ export const KNOWN_VARIANTS: Record<string, {
       '4col': '.ga-grid--4col',
     },
     innerSelector: '.cmp-grid-container',
+  },
+  // Note: rate-details-hero, alert-banner, firm-selection-modal, site-search,
+  // and gated-section are intentionally omitted here — each has only a single
+  // style guide instance not wrapped in any themed section background, so a
+  // state matrix doesn't apply. generate-advanced.ts skips the matrix phase
+  // for components with no KNOWN_VARIANTS entry.
+  'bio-card': {
+    // Real background variety on style guide: white + granite only
+    variants: ['default'],
+    themes: ['default'],
+    availableBackgrounds: ['white', 'granite'],
+    innerSelector: '.cmp-bio-card',
   },
 };
 

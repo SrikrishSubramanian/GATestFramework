@@ -27,6 +27,7 @@ import { TestLogger, TestRunResult } from '../utils/infra/test-logger';
 import { testInfoToLogResult, attachConsoleCapture, annotateEnvironment } from '../utils/infra/report-enhancer';
 import { ConsoleCapture } from '../utils/infra/console-capture';
 import { TestCategory } from '../utils/infra/test-tagger';
+import { loginToAEMAuthor } from '../utils/infra/auth-fixture';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -86,6 +87,12 @@ const AVAILABLE_COMPONENTS = [
   { name: 'separator', rootSelector: '.cmp-separator' },
   { name: 'video-external', rootSelector: '.cmp-video-external' },
   { name: 'workbench', rootSelector: '.cmp-workbench' },
+  { name: 'rate-details-hero', rootSelector: '.cmp-rate-details-hero' },
+  { name: 'alert-banner', rootSelector: '.cmp-alert-banner-ga' },
+  { name: 'firm-selection-modal', rootSelector: '.cmp-firm-selection-modal' },
+  { name: 'site-search', rootSelector: '.cmp-site-search' },
+  { name: 'bio-card', rootSelector: '.cmp-bio-card' },
+  { name: 'gated-section', rootSelector: '.cmp-gated-section' },
 ];
 
 function getTargetComponents() {
@@ -141,11 +148,7 @@ function styleGuideUrl(comp: { name: string; rootSelector: string; styleGuideUrl
 // ─── Shared Auth ───────────────────────────────────────────────────
 
 async function aemLogin(page: any) {
-  await page.goto(`${AUTHOR_URL}/libs/granite/core/content/login.html`);
-  await page.fill('#username', AUTH.username);
-  await page.fill('#password', AUTH.password);
-  await page.click('#submit-button');
-  await page.waitForLoadState('networkidle');
+  await loginToAEMAuthor(page, { authorUrl: AUTHOR_URL, username: AUTH.username, password: AUTH.password });
 }
 
 // ─── Phase 5: Component Interaction Tests ──────────────────────────
@@ -188,8 +191,8 @@ test.describe('Phase 5 — Interaction Tests', () => {
 
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import ENV from '../utils/infra/env';
-import { loginToAEMAuthor } from '../utils/infra/auth-fixture';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
@@ -286,8 +289,8 @@ test.describe('Phase 5 — Visual Baselines', () => {
       const className = toPascalCase(comp.name) + 'Page';
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import ENV from '../utils/infra/env';
-import { loginToAEMAuthor } from '../utils/infra/auth-fixture';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
@@ -369,9 +372,9 @@ test.describe('Phase 6 — Broken Image Specs', () => {
       const className = toPascalCase(comp.name) + 'Page';
       const specContent = `import { test, expect } from '@playwright/test';
 import { ${className} } from '${pomImportPath(comp.name)}';
-import { scanImages, attachImageScanResults } from '../utils/generation/broken-image-detector';
-import ENV from '../utils/infra/env';
-import { loginToAEMAuthor } from '../utils/infra/auth-fixture';
+import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
@@ -478,17 +481,11 @@ test.describe('Phase 7 — Content-Driven Tests', () => {
 
     // Generate content validation spec (cross-component, lives at ga/ root)
     const specContent = `import { test, expect } from '@playwright/test';
-import ENV from '../utils/infra/env';
+import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(\`\${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html\`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
+  await loginToAEMAuthor(page);
 });
 
 test.describe('Content-Driven Validation', () => {
@@ -533,18 +530,12 @@ test.describe('Phase 7 — Dispatcher Tests', () => {
 
     // Add auth beforeEach
     const withAuth = specContent.replace(
-      "import { testDispatcherCache } from '../utils/generation/dispatcher-tester';",
-      `import { testDispatcherCache } from '../utils/generation/dispatcher-tester';
-import ENV from '../utils/infra/env';
+      "import { testDispatcherCache } from '../../utils/generation/dispatcher-tester';",
+      `import { testDispatcherCache } from '../../utils/generation/dispatcher-tester';
+import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 
 test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(\`\${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html\`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
+  await loginToAEMAuthor(page);
 });`
     );
 
@@ -607,18 +598,13 @@ test.describe('Phase 7 — API Mocking', () => {
 
     // Generate a sample API mock spec (cross-component, lives at ga/ root)
     const specContent = `import { test, expect } from '@playwright/test';
-import { setupMocks, clearMocks, MockConfig } from '../utils/infra/api-mock-helper';
-import ENV from '../utils/infra/env';
+import { setupMocks, clearMocks, MockConfig } from '../../utils/infra/api-mock-helper';
+import ENV from '../../utils/infra/env';
+import { loginToAEMAuthor } from '../../utils/infra/auth-fixture';
 
 // Authenticate with AEM Author before each test
 test.beforeEach(async ({ page }) => {
-  if (ENV.AEM_AUTHOR_URL && ENV.AEM_AUTHOR_USERNAME) {
-    await page.goto(\`\${ENV.AEM_AUTHOR_URL}/libs/granite/core/content/login.html\`);
-    await page.fill('#username', ENV.AEM_AUTHOR_USERNAME || 'admin');
-    await page.fill('#password', ENV.AEM_AUTHOR_PASSWORD || 'admin');
-    await page.click('#submit-button');
-    await page.waitForLoadState('networkidle');
-  }
+  await loginToAEMAuthor(page);
 });
 
 test.afterEach(async ({ page }) => {

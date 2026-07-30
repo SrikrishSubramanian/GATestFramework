@@ -33,10 +33,10 @@ const ASSERTION_IMPORT = `import {
   assertImageFillsContainer, assertOverlay, assertResponsiveSwitch,
   assertHidden, assertFocusIndicator, assertTypography, assertAlignment,
   assertTagName, assertHasClass,
-} from '../infra/component-assertions';`;
+} from '../../../utils/infra/component-assertions';`;
 
 const TOKEN_IMPORT_TPL = (component: string) =>
-  `import { loadDesignTokens } from '../infra/design-token-loader';\nconst tokens = loadDesignTokens('${component}');`;
+  `import { loadDesignTokens } from '../../../utils/infra/design-token-loader';\nconst tokens = loadDesignTokens('${component}');`;
 
 // ─── Pattern Rules ──────────────────────────────────────────────────────────
 

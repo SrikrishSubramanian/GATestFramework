@@ -1,0 +1,361 @@
+{
+  "component": "bio-card",
+  "generatedAt": "2026-07-29T16:37:55.722Z",
+  "source": "dom",
+  "entries": {
+    "ViewBioFor_Jane_Doe": {
+      "name": "ViewBioFor_Jane_Doe",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__inner",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='View bio for Jane Doe']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-bio-card__inner')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "a_Download_Jane_Does_Bio": {
+      "name": "a_Download_Jane_Does_Bio",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__download-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-bio-card__download-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Download Jane Doe's Bio",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_Jane_Doe": {
+      "name": "h1_Jane_Doe",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__name",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-bio-card__name')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Jane Doe",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "img_HeadshotOf_Jane_Doe": {
+      "name": "img_HeadshotOf_Jane_Doe",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__headshot",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-bio-card__headshot')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_Individuals": {
+      "name": "ul_Individuals",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__meta-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-bio-card__meta-list')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-bio-card__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-bio-card__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_Jane_Doe": {
+      "name": "p_Jane_Doe",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__name",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-bio-card__name')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Jane Doe",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_Financial_Professional": {
+      "name": "p_Financial_Professional",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-bio-card__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Professional",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Individuals": {
+      "name": "div_Individuals",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__tags",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-bio-card__tags')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Individuals": {
+      "name": "span_Individuals",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__tag",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-bio-card__tag')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__arrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-bio-card__arrow')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__hero-inner",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-bio-card__hero-inner')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__hero-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-bio-card__hero-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__hero-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-bio-card__hero-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_Individuals": {
+      "name": "li_Individuals",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__meta-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-bio-card__meta-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_16": {
+      "name": "div_16",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-bio-card__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_17": {
+      "name": "span_17",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__download-link-arrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-bio-card__download-link-arrow')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Download_Jane_Does_Bio": {
+      "name": "span_Download_Jane_Does_Bio",
+      "component": "bio-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-bio-card__download-link-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-bio-card__download-link-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Download Jane Doe's Bio",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}

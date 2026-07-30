@@ -1,0 +1,444 @@
+{
+  "component": "rate-details-hero",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/rate-details-hero.html?wcmmode=disabled",
+  "scannedAt": "2026-07-29T16:08:19.165Z",
+  "rootSelector": ".cmp-rate-details-hero",
+  "elements": [
+    {
+      "name": "a_Style_Guide",
+      "tag": "a",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Style Guide",
+        "data-cmp-clickable": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 52,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "a_Component_Library",
+      "tag": "a",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Component Library",
+        "data-cmp-clickable": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 163,
+        "y": 52,
+        "width": 127,
+        "height": 18
+      }
+    },
+    {
+      "name": "h1_ForeStructured_Growth_II_Rates",
+      "tag": "h1",
+      "text": "ForeStructured Growth II Rates",
+      "classes": [
+        "cmp-rate-details-hero__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 90,
+        "width": 914,
+        "height": 61
+      }
+    },
+    {
+      "name": "Breadcrumb",
+      "tag": "nav",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-rate-details-hero__breadcrumb"
+      ],
+      "attributes": {
+        "aria-label": "Breadcrumb"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero"
+      ],
+      "role": null,
+      "ariaLabel": "Breadcrumb",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 32,
+        "width": 1154,
+        "height": 58
+      }
+    },
+    {
+      "name": "nav_4",
+      "tag": "nav",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-33f2b71888\":{\"@type\":\"ga/components/content/breadcrumb\",\"parentId\":\"rate-details-hero-0616e03ae8\"}}"
+      },
+      "testId": null,
+      "id": "breadcrumb-33f2b71888",
+      "parentClasses": [
+        "breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 32,
+        "width": 1154,
+        "height": 58
+      }
+    },
+    {
+      "name": "ol_5",
+      "tag": "ol",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb__list"
+      ],
+      "attributes": {
+        "itemscope": "",
+        "itemtype": "http://schema.org/BreadcrumbList"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 52,
+        "width": 1154,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-rate-details-hero__wave-overlay"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 252
+      }
+    },
+    {
+      "name": "span_7",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-rate-details-hero__wave-2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero__wave-overlay"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "li_Style_Guide",
+      "tag": "li",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-33f2b71888-item-3dd3bf6e7a\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Style Guide\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"breadcrumb-33f2b71888\"}}",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 52,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Component_Library",
+      "tag": "li",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-33f2b71888-item-2b248a5ea1\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Component Library\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"breadcrumb-33f2b71888\"}}",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 145,
+        "y": 52,
+        "width": 145,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Rate_Details_Hero",
+      "tag": "li",
+      "text": "Rate Details Hero",
+      "classes": [
+        "cmp-breadcrumb__item",
+        "cmp-breadcrumb__item--active"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-33f2b71888-item-160b61fae3\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Rate Details Hero\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/rate-details-hero.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"breadcrumb-33f2b71888\"}}",
+        "aria-current": "page",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 298,
+        "y": 52,
+        "width": 133,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "ForeStructured Growth II Rates\n\n            \n                Fixed Index Annuity\n                |\n ",
+      "classes": [
+        "cmp-rate-details-hero__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 90,
+        "width": 1154,
+        "height": 129
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "Fixed Index Annuity\n                |\n                B-Share",
+      "classes": [
+        "cmp-rate-details-hero__meta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 175,
+        "width": 914,
+        "height": 22
+      }
+    },
+    {
+      "name": "span_Fixed_Index_Annuity",
+      "tag": "span",
+      "text": "Fixed Index Annuity",
+      "classes": [
+        "cmp-rate-details-hero__annuity-category"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero__meta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 175,
+        "width": 164,
+        "height": 22
+      }
+    },
+    {
+      "name": "span_14",
+      "tag": "span",
+      "text": "|",
+      "classes": [
+        "cmp-rate-details-hero__divider"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero__meta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 235,
+        "y": 175,
+        "width": 3,
+        "height": 22
+      }
+    },
+    {
+      "name": "span_BShare",
+      "tag": "span",
+      "text": "B-Share",
+      "classes": [
+        "cmp-rate-details-hero__variants"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero__meta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 246,
+        "y": 175,
+        "width": 67,
+        "height": 22
+      }
+    },
+    {
+      "name": "p_16",
+      "tag": "p",
+      "text": "Issued by Forethought Life Insurance Company",
+      "classes": [
+        "cmp-rate-details-hero__issuer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-rate-details-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 201,
+        "width": 914,
+        "height": 18
+      }
+    }
+  ],
+  "pageTitle": "Rate Details Hero",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

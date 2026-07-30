@@ -83,7 +83,7 @@ async function verify() {
 
         // Test 2: Get a sample ticket
         console.log('Test 2: Fetching sample ticket (GAAM-1267)...');
-        const ticketResponse = await makeRequest('/rest/api/3/issues/GAAM-1267');
+        const ticketResponse = await makeRequest('/rest/api/3/issue/GAAM-1267');
 
         if (ticketResponse.status === 200) {
             const ticket = ticketResponse.data;

@@ -899,5 +899,119 @@
     ],
     "generatedAt": "2026-07-14T15:05:27.293Z",
     "source": "dom"
+  },
+  "rate-details-hero": {
+    "pomClass": "RateDetailsHeroPage",
+    "pomPath": "../pages/ga/components/rateDetailsHeroPage.ts",
+    "sidecarPath": "../pages/ga/components/rateDetailsHeroPage.locators.json",
+    "specPath": "../specFiles/ga/rate-details-hero/rate-details-hero.author.spec.ts",
+    "elementCount": 17,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-29T16:08:19.208Z",
+    "source": "dom"
+  },
+  "alert-banner": {
+    "pomClass": "AlertBannerPage",
+    "pomPath": "../pages/ga/components/alertBannerPage.ts",
+    "sidecarPath": "../pages/ga/components/alertBannerPage.locators.json",
+    "specPath": "../specFiles/ga/alert-banner/alert-banner.author.spec.ts",
+    "elementCount": 23,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-29T16:08:28.734Z",
+    "source": "dom"
+  },
+  "firm-selection-modal": {
+    "pomClass": "FirmSelectionModalPage",
+    "pomPath": "../pages/ga/components/firmSelectionModalPage.ts",
+    "sidecarPath": "../pages/ga/components/firmSelectionModalPage.locators.json",
+    "specPath": "../specFiles/ga/firm-selection-modal/firm-selection-modal.author.spec.ts",
+    "elementCount": 26,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-29T16:08:38.210Z",
+    "source": "dom"
+  },
+  "gated-section": {
+    "pomClass": "GatedSectionPage",
+    "pomPath": "../pages/ga/components/gatedSectionPage.ts",
+    "sidecarPath": "../pages/ga/components/gatedSectionPage.locators.json",
+    "specPath": "../specFiles/ga/gated-section/gated-section.author.spec.ts",
+    "elementCount": 14,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-29T16:37:34.212Z",
+    "source": "dom"
+  },
+  "site-search": {
+    "pomClass": "SiteSearchPage",
+    "pomPath": "../pages/ga/components/siteSearchPage.ts",
+    "sidecarPath": "../pages/ga/components/siteSearchPage.locators.json",
+    "specPath": "../specFiles/ga/site-search/site-search.author.spec.ts",
+    "elementCount": 22,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-29T16:37:47.099Z",
+    "source": "dom"
+  },
+  "bio-card": {
+    "pomClass": "BioCardPage",
+    "pomPath": "../pages/ga/components/bioCardPage.ts",
+    "sidecarPath": "../pages/ga/components/bioCardPage.locators.json",
+    "specPath": "../specFiles/ga/bio-card/bio-card.author.spec.ts",
+    "elementCount": 19,
+    "testCount": 14,
+    "categories": [
+      "happy-path",
+      "negative",
+      "responsive",
+      "console-errors",
+      "broken-images",
+      "accessibility",
+      "aem-dialog"
+    ],
+    "generatedAt": "2026-07-29T16:37:55.761Z",
+    "source": "dom"
   }
 }

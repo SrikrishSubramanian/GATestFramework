@@ -1,0 +1,334 @@
+{
+  "component": "rate-details-hero",
+  "generatedAt": "2026-07-29T16:08:19.177Z",
+  "source": "dom",
+  "entries": {
+    "a_Style_Guide": {
+      "name": "a_Style_Guide",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Component_Library": {
+      "name": "a_Component_Library",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_ForeStructured_Growth_II_Rates": {
+      "name": "h1_ForeStructured_Growth_II_Rates",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-rate-details-hero__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeStructured Growth II Rates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Breadcrumb": {
+      "name": "Breadcrumb",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "navigation[name='Breadcrumb']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//nav[contains(@class,'cmp-rate-details-hero__breadcrumb')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "nav_4": {
+      "name": "nav_4",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "breadcrumb-33f2b71888",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//nav[contains(@class,'cmp-breadcrumb')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ol_5": {
+      "name": "ol_5",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ol[contains(@class,'cmp-breadcrumb__list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__wave-overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-details-hero__wave-overlay')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_7": {
+      "name": "span_7",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__wave-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-rate-details-hero__wave-2')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_Style_Guide": {
+      "name": "li_Style_Guide",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Component_Library": {
+      "name": "li_Component_Library",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Rate_Details_Hero": {
+      "name": "li_Rate_Details_Hero",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item.cmp-breadcrumb__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Details Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-details-hero__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__meta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-rate-details-hero__meta')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Fixed_Index_Annuity": {
+      "name": "span_Fixed_Index_Annuity",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__annuity-category",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-rate-details-hero__annuity-category')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Fixed Index Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_14": {
+      "name": "span_14",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__divider",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-rate-details-hero__divider')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_BShare": {
+      "name": "span_BShare",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__variants",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-rate-details-hero__variants')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "B-Share",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_16": {
+      "name": "p_16",
+      "component": "rate-details-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-rate-details-hero__issuer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-rate-details-hero__issuer')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Issued by Forethought Life Insurance Company",
+          "confidence": 0.4
+        }
+      ]
+    }
+  }
+}
