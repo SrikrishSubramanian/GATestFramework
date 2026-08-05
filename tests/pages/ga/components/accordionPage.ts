@@ -9,8 +9,7 @@ export class AccordionPage {
 
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/accordion.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/accordion.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
   /** Locator for button_WhatIs_Global_Atlantic */

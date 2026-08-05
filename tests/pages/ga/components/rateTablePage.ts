@@ -57,9 +57,9 @@ export class RateTablePage {
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
     await this.page.goto(
-      `${baseUrl}/content/global-atlantic/style-guide/components/rate-table.html?wcmmode=disabled`
+      `${baseUrl}/content/global-atlantic/style-guide/components/rate-table.html?wcmmode=disabled`,
+      { waitUntil: 'domcontentloaded' }
     );
-    await this.page.waitForLoadState('networkidle');
   }
 
   /** Get all rate-table component instances on the page */

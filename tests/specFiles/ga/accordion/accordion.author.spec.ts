@@ -607,8 +607,7 @@ test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion
   // The fixture section_mixed_content has pre-expanded items with diverse child types.
 
   test('[ACRD-048] @regression @smoke Accordion item renders button child component', async ({ page }) => {
-    await page.goto(FIXTURE_URL());
-    await page.waitForLoadState('networkidle');
+    await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
     // The mixed-content accordion has a button inside item_0
     const buttonInItem = page.locator(`${ITEM_CONTENT} .cmp-button`);
     await expect(buttonInItem.first()).toBeVisible();
@@ -617,29 +616,25 @@ test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion
   });
 
   test('[ACRD-049] @regression Accordion item renders headline-block child component', async ({ page }) => {
-    await page.goto(FIXTURE_URL());
-    await page.waitForLoadState('networkidle');
+    await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
     const headlineInItem = page.locator(`${ITEM_CONTENT} .cmp-headline-block`);
     await expect(headlineInItem.first()).toBeVisible();
   });
 
   test('[ACRD-050] @regression Accordion item renders separator child component', async ({ page }) => {
-    await page.goto(FIXTURE_URL());
-    await page.waitForLoadState('networkidle');
+    await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
     const separatorInItem = page.locator(`${ITEM_CONTENT} .cmp-separator`);
     await expect(separatorInItem.first()).toBeVisible();
   });
 
   test('[ACRD-051] @regression Accordion item renders spacer child component', async ({ page }) => {
-    await page.goto(FIXTURE_URL());
-    await page.waitForLoadState('networkidle');
+    await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
     const spacerInItem = page.locator(`${ITEM_CONTENT} .cmp-spacer`);
     await expect(spacerInItem.first()).toBeVisible();
   });
 
   test('[ACRD-052] @regression Multiple component types coexist in same accordion item parsys', async ({ page }) => {
-    await page.goto(FIXTURE_URL());
-    await page.waitForLoadState('networkidle');
+    await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
     // item_1 has headline-block + separator + text — verify all three render in one panel
     const panels = page.locator(ITEM_CONTENT);
     const count = await panels.count();
@@ -658,8 +653,7 @@ test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion
   });
 
   test('[ACRD-053] @regression Accordion item inner parsys has responsive grid resource type', async ({ page }) => {
-    await page.goto(FIXTURE_URL());
-    await page.waitForLoadState('networkidle');
+    await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
     // The inner parsys should be a responsive grid (allows arbitrary child components)
     const responsiveGrid = page.locator(`${ITEM_CONTENT} .aem-Grid, ${ITEM_CONTENT} .responsivegrid`);
     expect(await responsiveGrid.count()).toBeGreaterThanOrEqual(1);

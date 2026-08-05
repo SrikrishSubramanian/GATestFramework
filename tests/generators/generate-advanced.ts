@@ -620,8 +620,7 @@ test.describe('API Mocking — Error States', () => {
       status: 500,
     }];
     await setupMocks(page, mocks);
-    await page.goto(ENV.AEM_AUTHOR_URL + '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled');
-    await page.waitForLoadState('networkidle');
+    await page.goto(ENV.AEM_AUTHOR_URL + '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled', { waitUntil: 'domcontentloaded' });
     // Component should not crash on API errors
     await expect(page.locator('.button').first()).toBeVisible();
   });
@@ -633,8 +632,7 @@ test.describe('API Mocking — Error States', () => {
       component: 'button',
     }];
     await setupMocks(page, mocks);
-    await page.goto(ENV.AEM_AUTHOR_URL + '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled');
-    await page.waitForLoadState('networkidle');
+    await page.goto(ENV.AEM_AUTHOR_URL + '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled', { waitUntil: 'domcontentloaded' });
     // Component should handle empty state
     await expect(page.locator('.button').first()).toBeVisible();
   });

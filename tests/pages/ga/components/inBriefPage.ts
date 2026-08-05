@@ -9,8 +9,7 @@ export class InBriefPage {
 
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/in-brief.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/in-brief.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
   /** Locator for a_LearnMoreAboutRateAdjustme */

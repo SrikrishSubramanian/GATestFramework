@@ -62,8 +62,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-002 social link CSS defines white color', async ({ page }) => {
-    await page.goto(componentUrl());
-    await page.waitForLoadState('networkidle');
+    await page.goto(componentUrl(), { waitUntil: 'domcontentloaded' });
     const link = page.locator(PB_SOCIAL_LINK).first();
     if (await link.count() === 0) {
       // No social links on page — inject temp element to verify CSS rule
@@ -95,8 +94,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-003 social link CSS defines transition 0.18s', async ({ page }) => {
-    await page.goto(componentUrl());
-    await page.waitForLoadState('networkidle');
+    await page.goto(componentUrl(), { waitUntil: 'domcontentloaded' });
     const link = page.locator(PB_SOCIAL_LINK).first();
     if (await link.count() === 0) {
       const linksArea = page.locator('.cmp-promo-banner__links').first();
@@ -202,8 +200,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   });
 
   test('@interaction @regression PB-INT-009 social link focus-visible CSS defines outline', async ({ page }) => {
-    await page.goto(componentUrl());
-    await page.waitForLoadState('networkidle');
+    await page.goto(componentUrl(), { waitUntil: 'domcontentloaded' });
     const firstLink = page.locator(PB_SOCIAL_LINK).first();
     if (await firstLink.count() === 0) {
       // No social links — verify CSS rule via injection
@@ -259,8 +256,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-011 mobile layout: promo-banner is NOT flex-row', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
-    await page.goto(componentUrl());
-    await page.waitForLoadState('networkidle');
+    await page.goto(componentUrl(), { waitUntil: 'domcontentloaded' });
 
     const layout = await page.locator(PB).first().evaluate(el => {
       const cs = getComputedStyle(el);

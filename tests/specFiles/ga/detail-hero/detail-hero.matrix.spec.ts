@@ -1,7 +1,7 @@
-import { test, expect } from '../infra/persistent-context';
+import { test, expect } from '../../../utils/infra/persistent-context';
 import { DetailHeroPage } from '../../../pages/ga/components/detailHeroPage';
-import ENV from '../infra/env';
-import { loginToAEMAuthor } from '../infra/auth-fixture';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 

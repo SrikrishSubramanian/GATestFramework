@@ -223,8 +223,7 @@ export class ${className} {
 
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
-    await this.page.goto(\`\${baseUrl}${styleGuideUrl}\`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(\`\${baseUrl}${styleGuideUrl}\`, { waitUntil: 'domcontentloaded' });
   }
 
 ${getters}

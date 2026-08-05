@@ -10,7 +10,7 @@ export class FooterPage {
 
   async navigate(baseUrl: string): Promise<void> {
     const url = `${baseUrl}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`;
-    await this.page.goto(url, { waitUntil: 'networkidle' });
+    await this.page.goto(url, { waitUntil: 'domcontentloaded' });
   }
 
   // Root element

@@ -17,8 +17,7 @@ export class TopNavPage {
   async navigate(baseUrl: string, overrideUrl?: string) {
     const url = overrideUrl
       ?? `${baseUrl}/content/experience-fragments/global-atlantic/style-guide/header/header-master/master.html?wcmmode=disabled`;
-    await this.page.goto(url);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(url, { waitUntil: 'domcontentloaded' });
   }
 
   get root(): Promise<Locator> {

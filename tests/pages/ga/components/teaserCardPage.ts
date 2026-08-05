@@ -8,8 +8,7 @@ export class TeaserCardPage {
   constructor(private page: Page) {}
 
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/teaser-card.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/teaser-card.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
   get cardRoot(): Promise<Locator> {

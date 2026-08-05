@@ -11,8 +11,7 @@ export class LoginPage {
   constructor(private page: Page) {}
 
   async navigate(baseUrl: string): Promise<void> {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
   getComponentRoot(): Locator {

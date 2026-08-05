@@ -12,8 +12,7 @@ export class FormRecaptchaPage {
    * inside the base kkr tenant's form-container style guide page (verified via querybuilder + live DOM).
    */
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/kkr/style-guide/components/form-container.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(`${baseUrl}/content/kkr/style-guide/components/form-container.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
   get root(): Promise<Locator> {

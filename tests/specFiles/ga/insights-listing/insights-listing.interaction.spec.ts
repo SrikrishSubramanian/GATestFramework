@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { InsightsListingPage } from '../../../pages/ga/components/insightsListingPage';
-import ENV from '../utils/infra/env';
-import { loginToAEMAuthor } from '../utils/infra/auth-fixture';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);

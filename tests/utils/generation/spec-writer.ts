@@ -579,14 +579,12 @@ function generateCategoryTests(
   // If the policy only lists the container's own child type, content components can't be added.
 
   test('${formatTestId(pfx, id++)} ${tags} @smoke ${name} renders diverse child component types', async ({ page }) => {
-    await page.goto(\`\${BASE()}${fixtureUrl}\`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(\`\${BASE()}${fixtureUrl}\`, { waitUntil: 'domcontentloaded' });
 ${childChecks}
   });
 
   test('${formatTestId(pfx, id++)} ${tags} ${name} inner parsys has responsive grid', async ({ page }) => {
-    await page.goto(\`\${BASE()}${fixtureUrl}\`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(\`\${BASE()}${fixtureUrl}\`, { waitUntil: 'domcontentloaded' });
     const responsiveGrid = page.locator('.aem-Grid, .responsivegrid');
     expect(await responsiveGrid.count()).toBeGreaterThanOrEqual(1);
   });

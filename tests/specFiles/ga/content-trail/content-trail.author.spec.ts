@@ -329,7 +329,6 @@ test.describe('ContentTrail — Broken Images', () => {
   test('[CT-009] @regression ContentTrail image containers are present and styled', async ({ page }) => {
     const pom = new ContentTrailPage(page);
     await pom.navigate(BASE());
-    await page.waitForLoadState('networkidle');
     // Content-trail images use AEM adaptive image component — the <img> tag may start
     // without src (injected via JS). Check the image container divs are properly sized.
     const imageContainers = page.locator('.cmp-content-trail__image');

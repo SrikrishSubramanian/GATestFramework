@@ -16,8 +16,7 @@ export class SiteHeaderPage {
   async navigate(baseUrl: string, overrideUrl?: string) {
     const url = overrideUrl
       ?? `${baseUrl}/content/global-atlantic/style-guide/components/site-header.html?wcmmode=disabled`;
-    await this.page.goto(url);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(url, { waitUntil: 'domcontentloaded' });
   }
 
   /** Component root */

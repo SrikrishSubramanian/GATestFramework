@@ -40,8 +40,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   // ─── Click Interactions ───────────────────────────────────────────────────
 
   test('TAB-INT-001: clicking 2nd tab makes it active and removes active from 1st', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     // Use the first tabs instance (default / light background)
     const tabsRoot = page.locator(TABS).first();
@@ -64,8 +63,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   });
 
   test('TAB-INT-002: clicking a tab makes its associated panel active', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -90,8 +88,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   });
 
   test('TAB-INT-003: clicking an already-active tab keeps it active (no state change)', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -114,8 +111,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   });
 
   test('TAB-INT-004: rapid clicking between tabs leaves only the last clicked tab active', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -144,8 +140,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   // ─── Keyboard Navigation ──────────────────────────────────────────────────
 
   test('TAB-INT-005: Tab key focuses the active tab in the tablist', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -161,8 +156,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   });
 
   test('TAB-INT-006: ArrowRight from active tab moves focus and activates next tab', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -184,8 +178,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   });
 
   test('TAB-INT-007: ArrowLeft from active tab moves focus and activates previous tab', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -207,8 +200,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   });
 
   test('TAB-INT-008: focused tab has a visible focus-visible outline', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -234,8 +226,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   // ─── Hover States ─────────────────────────────────────────────────────────
 
   test('TAB-INT-009: hovering an inactive tab applies a background-color change', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -266,8 +257,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   });
 
   test('TAB-INT-010: hovering the active tab does not change its background-color', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     const tabsRoot = page.locator(TABS).first();
     await expect(tabsRoot).toBeVisible();
@@ -298,8 +288,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   // ─── Cross-Background ─────────────────────────────────────────────────────
 
   test('TAB-INT-011: tab click works on granite section (dark background)', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     // Locate the granite section and its tabs instance
     const graniteSection = page.locator(SECTION_GRANITE).first();
@@ -329,8 +318,7 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
   });
 
   test('TAB-INT-012: tab click works on default (light) section — both instances switch panels independently', async ({ page }) => {
-    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
-    await page.waitForLoadState('networkidle');
+    await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
 
     // The default instance is the first tabs on the page (no granite/azul parent)
     const allTabsInstances = page.locator(TABS);

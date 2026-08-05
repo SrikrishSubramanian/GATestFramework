@@ -9,8 +9,7 @@ export class PromoBannerPage {
 
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/promo-banner.html?wcmmode=disabled`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/promo-banner.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
   /** Locator for Learn_More */

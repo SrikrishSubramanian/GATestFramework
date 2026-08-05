@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { InsightsDetailHeroPage } from '../../../pages/ga/components/insightsDetailHeroPage';
-import { scanImages, attachImageScanResults } from '../utils/generation/broken-image-detector';
-import ENV from '../utils/infra/env';
-import { loginToAEMAuthor } from '../utils/infra/auth-fixture';
+import { scanImages, attachImageScanResults } from '../../../utils/generation/broken-image-detector';
+import ENV from '../../../utils/infra/env';
+import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
