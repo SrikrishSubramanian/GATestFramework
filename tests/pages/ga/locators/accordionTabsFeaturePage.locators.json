@@ -1,4 +1,7 @@
 {
+  "component": "accordion-tabs-feature",
+  "generatedAt": "2026-08-06T07:45:35.949Z",
+  "source": "dom",
   "entries": {
     "accordionTabsFeaturePageRoot": {
       "strategies": [
@@ -14,6 +17,4598 @@
         }
       ],
       "primary": "css"
+    },
+    "Learn_More": {
+      "name": "Learn_More",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Learn More']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Plan_Ahead": {
+      "name": "Plan_Ahead",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Plan Ahead']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Plan Ahead",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "View_Products": {
+      "name": "View_Products",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='View Products']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Products",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Explore_Markets": {
+      "name": "Explore_Markets",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Explore Markets']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Markets",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Our_Approach": {
+      "name": "Our_Approach",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Our Approach']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Approach",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "View_Portfolio": {
+      "name": "View_Portfolio",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='View Portfolio']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Portfolio",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Read_More": {
+      "name": "Read_More",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Read More']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Read More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Start_Exploring": {
+      "name": "Start_Exploring",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Start Exploring']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Start Exploring",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Learn_Process": {
+      "name": "Learn_Process",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Learn Process']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn Process",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "View_Success_Stories": {
+      "name": "View_Success_Stories",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='View Success Stories']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Success Stories",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Our_Strength": {
+      "name": "Our_Strength",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Our Strength']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Strength",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "MeetThe_Team": {
+      "name": "MeetThe_Team",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Meet the Team']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Meet the Team",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Our_Innovation": {
+      "name": "Our_Innovation",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Our Innovation']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-accordion-tab__cta-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Innovation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Wealth_Management": {
+      "name": "button_Wealth_Management",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-f26cac7ae1--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Wealth Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Retirement_Planning": {
+      "name": "button_Retirement_Planning",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-77723d07bb--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Retirement Planning",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Insurance_Solutions": {
+      "name": "button_Insurance_Solutions",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-9e14c1f6be--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insurance Solutions",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Global_Reach": {
+      "name": "button_Global_Reach",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-85a8815f97--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Reach",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Innovation": {
+      "name": "button_Innovation",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-c78a78f9cc--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Innovation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Sustainability": {
+      "name": "button_Sustainability",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-cd427f0aef--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sustainability",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Investment_Strategy": {
+      "name": "button_Investment_Strategy",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-cbe058cfe6--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Investment Strategy",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Portfolio_Management": {
+      "name": "button_Portfolio_Management",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-b58b139277--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Portfolio Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Risk_Assessment": {
+      "name": "button_Risk_Assessment",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-2cb0f20a56--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Risk Assessment",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Discover": {
+      "name": "button_Discover",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-247651daa6--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Discover",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Evaluate": {
+      "name": "button_Evaluate",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-358981e219--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Evaluate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Execute": {
+      "name": "button_Execute",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-1c86a17c0e--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Execute",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Financial_Strength": {
+      "name": "button_Financial_Strength",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-684bf12147--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Strength",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Expert_Team": {
+      "name": "button_Expert_Team",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-4030f728d5--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Expert Team",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Innovation_Focus": {
+      "name": "button_Innovation_Focus",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-d3a71b7036--tab",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tab",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion-tabs-feature__accordion-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Innovation Focus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Wealth_Management": {
+      "name": "h3_Wealth_Management",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Wealth Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Retirement_Planning": {
+      "name": "h3_Retirement_Planning",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Retirement Planning",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Insurance_Solutions": {
+      "name": "h3_Insurance_Solutions",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insurance Solutions",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Global_Reach": {
+      "name": "h3_Global_Reach",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Reach",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Innovation": {
+      "name": "h3_Innovation",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Innovation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Sustainability": {
+      "name": "h3_Sustainability",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sustainability",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Investment_Strategy": {
+      "name": "h3_Investment_Strategy",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Investment Strategy",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Portfolio_Management": {
+      "name": "h3_Portfolio_Management",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Portfolio Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Risk_Assessment": {
+      "name": "h3_Risk_Assessment",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Risk Assessment",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Discover": {
+      "name": "h3_Discover",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Discover",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Evaluate": {
+      "name": "h3_Evaluate",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Evaluate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Execute": {
+      "name": "h3_Execute",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Execute",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Financial_Strength": {
+      "name": "h3_Financial_Strength",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Strength",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Expert_Team": {
+      "name": "h3_Expert_Team",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Expert Team",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_Innovation_Focus": {
+      "name": "h3_Innovation_Focus",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-accordion-tab__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Innovation Focus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_43": {
+      "name": "div_43",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tablist",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTabF26cac7ae1": {
+      "name": "accordionTabF26cac7ae1",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-f26cac7ae1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_45": {
+      "name": "div_45",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_77723d07bb": {
+      "name": "accordionTab_77723d07bb",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-77723d07bb",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_47": {
+      "name": "div_47",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_9e14c1f6be": {
+      "name": "accordionTab_9e14c1f6be",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-9e14c1f6be",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_49": {
+      "name": "div_49",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_50": {
+      "name": "div_50",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tablist",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_85a8815f97": {
+      "name": "accordionTab_85a8815f97",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-85a8815f97",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_52": {
+      "name": "div_52",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTabC78a78f9cc": {
+      "name": "accordionTabC78a78f9cc",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-c78a78f9cc",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_54": {
+      "name": "div_54",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTabCd427f0aef": {
+      "name": "accordionTabCd427f0aef",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-cd427f0aef",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_56": {
+      "name": "div_56",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_57": {
+      "name": "div_57",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tablist",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTabCbe058cfe6": {
+      "name": "accordionTabCbe058cfe6",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-cbe058cfe6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_59": {
+      "name": "div_59",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTabB58b139277": {
+      "name": "accordionTabB58b139277",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-b58b139277",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_61": {
+      "name": "div_61",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_2cb0f20a56": {
+      "name": "accordionTab_2cb0f20a56",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-2cb0f20a56",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_63": {
+      "name": "div_63",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_64": {
+      "name": "div_64",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tablist",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_247651daa6": {
+      "name": "accordionTab_247651daa6",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-247651daa6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_66": {
+      "name": "div_66",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_358981e219": {
+      "name": "accordionTab_358981e219",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-358981e219",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_68": {
+      "name": "div_68",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_1c86a17c0e": {
+      "name": "accordionTab_1c86a17c0e",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-1c86a17c0e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_70": {
+      "name": "div_70",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_71": {
+      "name": "div_71",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-list",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tablist",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_684bf12147": {
+      "name": "accordionTab_684bf12147",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-684bf12147",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_73": {
+      "name": "div_73",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTab_4030f728d5": {
+      "name": "accordionTab_4030f728d5",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-4030f728d5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_75": {
+      "name": "div_75",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionTabD3a71b7036": {
+      "name": "accordionTabD3a71b7036",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-tab-d3a71b7036",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-body",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "tabpanel",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_77": {
+      "name": "div_77",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_78": {
+      "name": "div_78",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_79": {
+      "name": "div_79",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__left",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_80": {
+      "name": "div_80",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__headline-block",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__headline-block')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_81": {
+      "name": "div_81",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item.cmp-accordion-tabs-feature__accordion-item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Wealth_Management": {
+      "name": "span_Wealth_Management",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Wealth Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_83": {
+      "name": "span_83",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "svg_84": {
+      "name": "svg_84",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__icon-plus",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//svg[contains(@class,'cmp-accordion-tabs-feature__icon-plus')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_85": {
+      "name": "div_85",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_86": {
+      "name": "div_86",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Wealth_Management": {
+      "name": "div_Wealth_Management",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Wealth Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_88": {
+      "name": "div_88",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_89": {
+      "name": "div_89",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Learn_More": {
+      "name": "div_Learn_More",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_91": {
+      "name": "span_91",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Learn_More": {
+      "name": "span_Learn_More",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_93": {
+      "name": "div_93",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Retirement_Planning": {
+      "name": "span_Retirement_Planning",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Retirement Planning",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_95": {
+      "name": "div_95",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_96": {
+      "name": "div_96",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Retirement_Planning": {
+      "name": "div_Retirement_Planning",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Retirement Planning",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_98": {
+      "name": "div_98",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_99": {
+      "name": "div_99",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Plan_Ahead": {
+      "name": "div_Plan_Ahead",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Plan Ahead",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Plan_Ahead": {
+      "name": "span_Plan_Ahead",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Plan Ahead",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_102": {
+      "name": "div_102",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Insurance_Solutions": {
+      "name": "span_Insurance_Solutions",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insurance Solutions",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_104": {
+      "name": "div_104",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_105": {
+      "name": "div_105",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Insurance_Solutions": {
+      "name": "div_Insurance_Solutions",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insurance Solutions",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_107": {
+      "name": "div_107",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_108": {
+      "name": "div_108",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_View_Products": {
+      "name": "div_View_Products",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Products",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_View_Products": {
+      "name": "span_View_Products",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Products",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_111": {
+      "name": "div_111",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_112": {
+      "name": "div_112",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__image-panel.cmp-accordion-tabs-feature__image-panel--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__image-panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_113": {
+      "name": "div_113",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image-with-nested-content__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image-with-nested-content__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_114": {
+      "name": "div_114",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__image-panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__image-panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_115": {
+      "name": "div_115",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_116": {
+      "name": "div_116",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__left",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_117": {
+      "name": "div_117",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item.cmp-accordion-tabs-feature__accordion-item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Global_Reach": {
+      "name": "span_Global_Reach",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Reach",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_119": {
+      "name": "div_119",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_120": {
+      "name": "div_120",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Global_Reach": {
+      "name": "div_Global_Reach",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Global Reach",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_122": {
+      "name": "div_122",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_123": {
+      "name": "div_123",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Explore_Markets": {
+      "name": "div_Explore_Markets",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Markets",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Explore_Markets": {
+      "name": "span_Explore_Markets",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Markets",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_126": {
+      "name": "div_126",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Innovation": {
+      "name": "span_Innovation",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Innovation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_128": {
+      "name": "div_128",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_129": {
+      "name": "div_129",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Innovation": {
+      "name": "div_Innovation",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Innovation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_131": {
+      "name": "div_131",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_132": {
+      "name": "div_132",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_133": {
+      "name": "div_133",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Sustainability": {
+      "name": "span_Sustainability",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sustainability",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_135": {
+      "name": "div_135",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_136": {
+      "name": "div_136",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Sustainability": {
+      "name": "div_Sustainability",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sustainability",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_138": {
+      "name": "div_138",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_139": {
+      "name": "div_139",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Our_Approach": {
+      "name": "div_Our_Approach",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Approach",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Our_Approach": {
+      "name": "span_Our_Approach",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Approach",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_142": {
+      "name": "div_142",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_143": {
+      "name": "div_143",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__left",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_144": {
+      "name": "div_144",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item.cmp-accordion-tabs-feature__accordion-item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Investment_Strategy": {
+      "name": "span_Investment_Strategy",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Investment Strategy",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_146": {
+      "name": "div_146",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_147": {
+      "name": "div_147",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Investment_Strategy": {
+      "name": "div_Investment_Strategy",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Investment Strategy",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_149": {
+      "name": "div_149",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_150": {
+      "name": "div_150",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_151": {
+      "name": "div_151",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Portfolio_Management": {
+      "name": "span_Portfolio_Management",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Portfolio Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_153": {
+      "name": "div_153",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_154": {
+      "name": "div_154",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Portfolio_Management": {
+      "name": "div_Portfolio_Management",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Portfolio Management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_156": {
+      "name": "div_156",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_157": {
+      "name": "div_157",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_View_Portfolio": {
+      "name": "div_View_Portfolio",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Portfolio",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_View_Portfolio": {
+      "name": "span_View_Portfolio",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Portfolio",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_160": {
+      "name": "div_160",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Risk_Assessment": {
+      "name": "span_Risk_Assessment",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Risk Assessment",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_162": {
+      "name": "div_162",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_163": {
+      "name": "div_163",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Risk_Assessment": {
+      "name": "div_Risk_Assessment",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Risk Assessment",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_165": {
+      "name": "div_165",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_166": {
+      "name": "div_166",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Read_More": {
+      "name": "div_Read_More",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Read More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Read_More": {
+      "name": "span_Read_More",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Read More",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_169": {
+      "name": "div_169",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_170": {
+      "name": "div_170",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__left",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_171": {
+      "name": "div_171",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item.cmp-accordion-tabs-feature__accordion-item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Discover": {
+      "name": "span_Discover",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Discover",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_173": {
+      "name": "div_173",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_174": {
+      "name": "div_174",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Discover": {
+      "name": "div_Discover",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Discover",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_176": {
+      "name": "div_176",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_177": {
+      "name": "div_177",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Start_Exploring": {
+      "name": "div_Start_Exploring",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Start Exploring",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Start_Exploring": {
+      "name": "span_Start_Exploring",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Start Exploring",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_180": {
+      "name": "div_180",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Evaluate": {
+      "name": "span_Evaluate",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Evaluate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_182": {
+      "name": "div_182",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_183": {
+      "name": "div_183",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Evaluate": {
+      "name": "div_Evaluate",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Evaluate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_185": {
+      "name": "div_185",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_186": {
+      "name": "div_186",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Learn_Process": {
+      "name": "div_Learn_Process",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn Process",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Learn_Process": {
+      "name": "span_Learn_Process",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn Process",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_189": {
+      "name": "div_189",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Execute": {
+      "name": "span_Execute",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Execute",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_191": {
+      "name": "div_191",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_192": {
+      "name": "div_192",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Execute": {
+      "name": "div_Execute",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Execute",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_194": {
+      "name": "div_194",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_195": {
+      "name": "div_195",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_View_Success_Stories": {
+      "name": "div_View_Success_Stories",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Success Stories",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_View_Success_Stories": {
+      "name": "span_View_Success_Stories",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Success Stories",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_198": {
+      "name": "div_198",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_199": {
+      "name": "div_199",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__left",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_200": {
+      "name": "div_200",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item.cmp-accordion-tabs-feature__accordion-item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Financial_Strength": {
+      "name": "span_Financial_Strength",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Strength",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_202": {
+      "name": "div_202",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_203": {
+      "name": "div_203",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Financial_Strength": {
+      "name": "div_Financial_Strength",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Strength",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_205": {
+      "name": "div_205",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_206": {
+      "name": "div_206",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Our_Strength": {
+      "name": "div_Our_Strength",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Strength",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Our_Strength": {
+      "name": "span_Our_Strength",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Strength",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_209": {
+      "name": "div_209",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Expert_Team": {
+      "name": "span_Expert_Team",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Expert Team",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_211": {
+      "name": "div_211",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_212": {
+      "name": "div_212",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Expert_Team": {
+      "name": "div_Expert_Team",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Expert Team",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_214": {
+      "name": "div_214",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_215": {
+      "name": "div_215",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_MeetThe_Team": {
+      "name": "div_MeetThe_Team",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Meet the Team",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_MeetThe_Team": {
+      "name": "span_MeetThe_Team",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Meet the Team",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_218": {
+      "name": "div_218",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Innovation_Focus": {
+      "name": "span_Innovation_Focus",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tabs-feature__accordion-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Innovation Focus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_220": {
+      "name": "div_220",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tabs-feature__accordion-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tabs-feature__accordion-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_221": {
+      "name": "div_221",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Innovation_Focus": {
+      "name": "div_Innovation_Focus",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Innovation Focus",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_223": {
+      "name": "div_223",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__body",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__body')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_224": {
+      "name": "div_224",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Our_Innovation": {
+      "name": "div_Our_Innovation",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion-tab__cta-wrapper')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Innovation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Our_Innovation": {
+      "name": "span_Our_Innovation",
+      "component": "accordion-tabs-feature",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion-tab__cta-label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion-tab__cta-label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Our Innovation",
+          "confidence": 0.4
+        }
+      ]
     }
   }
 }

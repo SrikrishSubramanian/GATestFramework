@@ -1,0 +1,1375 @@
+{
+  "component": "content-highlight",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/content-highlight.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:43:04.084Z",
+  "rootSelector": ".cmp-content-highlight",
+  "elements": [
+    {
+      "name": "a_Product_Button",
+      "tag": "a",
+      "text": "Product Button",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/corporate-agnostic/main/en.html",
+        "target": "_self",
+        "data-link-location": "button-0e9d5cab56",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-0e9d5cab56\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Product Button\",\"xdm:linkURL\":\"/content/global-atlantic/corporate-agnostic/main/en.html\",\"parentId\":\"section-b4adc5b5a9\"}}"
+      },
+      "testId": null,
+      "id": "button-0e9d5cab56",
+      "parentClasses": [
+        "button",
+        "ga-button--icon-text"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 752,
+        "y": 734,
+        "width": 140,
+        "height": 32
+      }
+    },
+    {
+      "name": "a_ReadTheRelease",
+      "tag": "a",
+      "text": "Read the release",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-d37b5739a5",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-d37b5739a5\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Read the release\",\"xdm:linkURL\":\"#\",\"parentId\":\"section-a443e87ced\"}}"
+      },
+      "testId": null,
+      "id": "button-d37b5739a5",
+      "parentClasses": [
+        "button",
+        "ga-button--icon-text"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 752,
+        "y": 1537,
+        "width": 150,
+        "height": 32
+      }
+    },
+    {
+      "name": "a_Contact_Us",
+      "tag": "a",
+      "text": "Contact Us",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-7c43e45284",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-7c43e45284\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Contact Us\",\"xdm:linkURL\":\"#\",\"parentId\":\"section-a443e87ced\"}}"
+      },
+      "testId": null,
+      "id": "button-7c43e45284",
+      "parentClasses": [
+        "button",
+        "ga-button--icon-text"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 752,
+        "y": 1733,
+        "width": 113,
+        "height": 32
+      }
+    },
+    {
+      "name": "a_GlobalBioLink",
+      "tag": "a",
+      "text": "Global bio link",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-ca1a429123",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-ca1a429123\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Global bio link\",\"xdm:linkURL\":\"#\",\"parentId\":\"section-01712d0991\"}}"
+      },
+      "testId": null,
+      "id": "button-ca1a429123",
+      "parentClasses": [
+        "button",
+        "ga-button--icon-text"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 752,
+        "y": 2344,
+        "width": 132,
+        "height": 32
+      }
+    },
+    {
+      "name": "a_ProductButton",
+      "tag": "a",
+      "text": "Product button",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/corporate-agnostic/main/en.html",
+        "target": "_self",
+        "data-link-location": "button-d5a168a010",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-d5a168a010\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Product button\",\"xdm:linkURL\":\"/content/global-atlantic/corporate-agnostic/main/en.html\",\"parentId\":\"section-01712d0991\"}}"
+      },
+      "testId": null,
+      "id": "button-d5a168a010",
+      "parentClasses": [
+        "button",
+        "ga-button--icon-text"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 752,
+        "y": 2861,
+        "width": 139,
+        "height": 32
+      }
+    },
+    {
+      "name": "h5_BarronsRecognizes_Global_Atla",
+      "tag": "h5",
+      "text": "Barron’s recognizes Global Atlantic",
+      "classes": [
+        "cmp-content-block__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 499,
+        "width": 402,
+        "height": 26
+      }
+    },
+    {
+      "name": "h5_6",
+      "tag": "h5",
+      "text": "Proven success helping institutional clients",
+      "classes": [
+        "cmp-content-block__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 1610,
+        "width": 402,
+        "height": 53
+      }
+    },
+    {
+      "name": "h5_7",
+      "tag": "h5",
+      "text": "What consumers are saying about retirement in 2026",
+      "classes": [
+        "cmp-content-block__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 2612,
+        "width": 402,
+        "height": 53
+      }
+    },
+    {
+      "name": "imgImage_8",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/content-highlight/_jcr_content/root/main-par/section_847462320/section-par/content_highlight/image.coreimg.png/1784039966579/background-image.png",
+        "width": "944",
+        "height": "532",
+        "itemprop": "contentUrl",
+        "alt": "",
+        "data-src": "/content/global-atlantic/style-guide/components/content-highlight/_jcr_content/root/main-par/section_847462320/section-par/content_highlight/image.coreimg{.width}.png/1784039966579/background-image.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 307,
+        "width": 596,
+        "height": 651
+      }
+    },
+    {
+      "name": "contentHighlightBannerMain",
+      "tag": "video",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__brightcove-video"
+      ],
+      "attributes": {
+        "role": "none",
+        "data-video-id": "6365778310112",
+        "data-video-caption": "Honored to be recognized again",
+        "data-embed": "default",
+        "data-loop-start": "20",
+        "data-loop-end": "71",
+        "data-application-id": "",
+        "autoplay": "",
+        "muted": "",
+        "loop": ""
+      },
+      "testId": null,
+      "id": "contentHighlightBannerMain",
+      "parentClasses": [
+        "cmp-content-highlight__video-container",
+        "ready"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 4098,
+        "width": 596,
+        "height": 651
+      }
+    },
+    {
+      "name": "item1780302280431",
+      "tag": "div",
+      "text": "Barron’s recognizes Global Atlantic\n    For the fourth consecutive year, Barron’s has included Globa",
+      "classes": [
+        "cmp-content-highlight__item",
+        "cmp-content-highlight__item-active"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "role": "region",
+        "aria-label": "item_1780302280431",
+        "data-cmp-hook-content-highlight": "item"
+      },
+      "testId": null,
+      "id": "content-block-fe66a66dcb",
+      "parentClasses": [
+        "cmp-content-highlight__items"
+      ],
+      "role": "region",
+      "ariaLabel": "item_1780302280431",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 752,
+        "y": 499,
+        "width": 402,
+        "height": 267
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "item1780304577141",
+      "tag": "div",
+      "text": "Proven success helping institutional clients\n    We’ve built a solid track record of success helping",
+      "classes": [
+        "cmp-content-highlight__item"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "role": "region",
+        "aria-label": "item_1780304577141",
+        "data-cmp-hook-content-highlight": "item"
+      },
+      "testId": null,
+      "id": "content-block-e7c432b64c",
+      "parentClasses": [
+        "cmp-content-highlight__items"
+      ],
+      "role": "region",
+      "ariaLabel": "item_1780304577141",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 752,
+        "y": 1610,
+        "width": 402,
+        "height": 156
+      }
+    },
+    {
+      "name": "item1780304694932",
+      "tag": "div",
+      "text": "What consumers are saying about retirement in 2026\n    Having a source of predictable, reliable inco",
+      "classes": [
+        "cmp-content-highlight__item"
+      ],
+      "attributes": {
+        "tabindex": "-1",
+        "role": "region",
+        "aria-label": "item_1780304694932",
+        "data-cmp-hook-content-highlight": "item"
+      },
+      "testId": null,
+      "id": "content-block-8d90fa7ca3",
+      "parentClasses": [
+        "cmp-content-highlight__items"
+      ],
+      "role": "region",
+      "ariaLabel": "item_1780304694932",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 752,
+        "y": 2612,
+        "width": 402,
+        "height": 282
+      }
+    },
+    {
+      "name": "Pause",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__background-icon",
+        "active",
+        "cmp-content-highlight__background-icon--pause"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "data-action": "pause",
+        "role": "button",
+        "data-cta": "1",
+        "aria-label": "Pause",
+        "aria-pressed": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__background-video-actions"
+      ],
+      "role": "button",
+      "ariaLabel": "Pause",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 671,
+        "y": 4696,
+        "width": 14,
+        "height": 18
+      }
+    },
+    {
+      "name": "Play",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__background-icon",
+        "cmp-content-highlight__background-icon--play"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "data-action": "play",
+        "role": "button",
+        "data-cta": "1",
+        "aria-label": "Play",
+        "aria-pressed": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__background-video-actions"
+      ],
+      "role": "button",
+      "ariaLabel": "Play",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_16",
+      "tag": "div",
+      "text": "Barron’s recognizes Global Atlantic\n    For the fourth consecutive year, Barron’s has included Globa",
+      "classes": [
+        "cmp-content-highlight__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 307,
+        "width": 1028,
+        "height": 651
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "Barron’s recognizes Global Atlantic\n    For the fourth consecutive year, Barron’s has included Globa",
+      "classes": [
+        "cmp-content-highlight__container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 307,
+        "width": 1028,
+        "height": 651
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__image-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 307,
+        "width": 596,
+        "height": 651
+      }
+    },
+    {
+      "name": "figure_19",
+      "tag": "figure",
+      "text": "",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 307,
+        "width": 596,
+        "height": 651
+      }
+    },
+    {
+      "name": "picture_20",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 307,
+        "width": 596,
+        "height": 651
+      }
+    },
+    {
+      "name": "section_21",
+      "tag": "section",
+      "text": "Barron’s recognizes Global Atlantic\n    For the fourth consecutive year, Barron’s has included Globa",
+      "classes": [
+        "cmp-content-highlight__block"
+      ],
+      "attributes": {
+        "data-placeholder-text": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 307,
+        "width": 402,
+        "height": 651
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "Barron’s recognizes Global Atlantic\n    For the fourth consecutive year, Barron’s has included Globa",
+      "classes": [
+        "cmp-content-highlight__content",
+        "block-size-1"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 499,
+        "width": 402,
+        "height": 267
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "Barron’s recognizes Global Atlantic\n    For the fourth consecutive year, Barron’s has included Globa",
+      "classes": [
+        "cmp-content-highlight__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__content",
+        "block-size-1"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 499,
+        "width": 402,
+        "height": 267
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "For the fourth consecutive year, Barron’s has included Global Atlantic in its 100 Best Annuities lis",
+      "classes": [
+        "cmp-content-block__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 542,
+        "width": 402,
+        "height": 176
+      }
+    },
+    {
+      "name": "div_Product_Button",
+      "tag": "div",
+      "text": "Product Button",
+      "classes": [
+        "cmp-content-block__cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 734,
+        "width": 402,
+        "height": 32
+      }
+    },
+    {
+      "name": "i_26",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 756,
+        "y": 738,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "name": "span_Product_Button",
+      "tag": "span",
+      "text": "Product Button",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 788,
+        "y": 743,
+        "width": 96,
+        "height": 14
+      }
+    },
+    {
+      "name": "dialog_28",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_29",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__modal-video-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_31",
+      "tag": "div",
+      "text": "Barron’s recognizes Global Atlantic\n    For the fourth consecutive year, Barron’s has included Globa",
+      "classes": [
+        "cmp-content-highlight__content",
+        "block-size-2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 1314,
+        "width": 402,
+        "height": 451
+      }
+    },
+    {
+      "name": "div_ReadTheRelease",
+      "tag": "div",
+      "text": "Read the release",
+      "classes": [
+        "cmp-content-block__cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 1537,
+        "width": 402,
+        "height": 32
+      }
+    },
+    {
+      "name": "i_33",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-down"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 756,
+        "y": 1541,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "name": "span_ReadTheRelease",
+      "tag": "span",
+      "text": "Read the release",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 788,
+        "y": 1546,
+        "width": 106,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_35",
+      "tag": "div",
+      "text": "We’ve built a solid track record of success helping our institutional clients solve their business n",
+      "classes": [
+        "cmp-content-block__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 1666,
+        "width": 402,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_Contact_Us",
+      "tag": "div",
+      "text": "Contact Us",
+      "classes": [
+        "cmp-content-block__cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 1733,
+        "width": 402,
+        "height": 32
+      }
+    },
+    {
+      "name": "span_Contact_Us",
+      "tag": "span",
+      "text": "Contact Us",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 788,
+        "y": 1742,
+        "width": 69,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_38",
+      "tag": "div",
+      "text": "Barron’s recognizes Global Atlantic\n    For the fourth consecutive year, Barron’s has included Globa",
+      "classes": [
+        "cmp-content-highlight__content",
+        "block-size-3"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 2121,
+        "width": 402,
+        "height": 772
+      }
+    },
+    {
+      "name": "div_GlobalBioLink",
+      "tag": "div",
+      "text": "Global bio link",
+      "classes": [
+        "cmp-content-block__cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 2344,
+        "width": 402,
+        "height": 32
+      }
+    },
+    {
+      "name": "span_GlobalBioLink",
+      "tag": "span",
+      "text": "Global bio link",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 788,
+        "y": 2353,
+        "width": 88,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_41",
+      "tag": "div",
+      "text": "Having a source of predictable, reliable income is more important than ever — our 2026 Retirement Ou",
+      "classes": [
+        "cmp-content-block__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 2669,
+        "width": 402,
+        "height": 176
+      }
+    },
+    {
+      "name": "div_ProductButton",
+      "tag": "div",
+      "text": "Product button",
+      "classes": [
+        "cmp-content-block__cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 2861,
+        "width": 402,
+        "height": 32
+      }
+    },
+    {
+      "name": "span_ProductButton",
+      "tag": "span",
+      "text": "Product button",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 788,
+        "y": 2870,
+        "width": 95,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "Honored to be recognized again\n                                \n                                \n   ",
+      "classes": [
+        "cmp-content-highlight__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 4098,
+        "width": 1028,
+        "height": 651
+      }
+    },
+    {
+      "name": "div_45",
+      "tag": "div",
+      "text": "Honored to be recognized again\n                                \n                                \n   ",
+      "classes": [
+        "cmp-content-highlight__container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 4098,
+        "width": 1028,
+        "height": 651
+      }
+    },
+    {
+      "name": "div_46",
+      "tag": "div",
+      "text": "Honored to be recognized again\n                                \n                                \n   ",
+      "classes": [
+        "cmp-content-highlight__video-container",
+        "ready"
+      ],
+      "attributes": {
+        "data-cta": "1",
+        "data-link-location": "v_0012"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 4098,
+        "width": 596,
+        "height": 651
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "Honored to be recognized again\n                                \n                                \n   ",
+      "classes": [
+        "cmp-content-highlight__content-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__video-container",
+        "ready"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 4098,
+        "width": 596,
+        "height": 651
+      }
+    },
+    {
+      "name": "div_48",
+      "tag": "div",
+      "text": "Honored to be recognized again\n                                \n                                \n   ",
+      "classes": [
+        "cmp-content-highlight__content-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 150,
+        "y": 4641,
+        "width": 508,
+        "height": 84
+      }
+    },
+    {
+      "name": "span_49",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__video-icon"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__content-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 170,
+        "y": 4661,
+        "width": 40,
+        "height": 44
+      }
+    },
+    {
+      "name": "div_50",
+      "tag": "div",
+      "text": "Honored to be recognized again\n                                \n                                \n   ",
+      "classes": [
+        "cmp-content-highlight__video-caption"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__content-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 226,
+        "y": 4661,
+        "width": 406,
+        "height": 44
+      }
+    },
+    {
+      "name": "span_HonoredToBeRecognizedAgain",
+      "tag": "span",
+      "text": "Honored to be recognized again",
+      "classes": [
+        "cmp-content-highlight__caption"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__video-caption"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 226,
+        "y": 4661,
+        "width": 406,
+        "height": 21
+      }
+    },
+    {
+      "name": "span_52",
+      "tag": "span",
+      "text": "Income 150+ SE highlighted for new guaranted income design",
+      "classes": [
+        "cmp-content-highlight__caption-desc"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__video-caption"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 226,
+        "y": 4686,
+        "width": 406,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_53",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-highlight__background-video-actions"
+      ],
+      "attributes": {
+        "data-link-location": "v_0012"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-highlight__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 658,
+        "y": 4685,
+        "width": 40,
+        "height": 40
+      }
+    }
+  ],
+  "pageTitle": "Content Highlight",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

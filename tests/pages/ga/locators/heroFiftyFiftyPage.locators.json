@@ -1,4 +1,7 @@
 {
+  "component": "hero-fifty-fifty",
+  "generatedAt": "2026-08-06T07:45:35.972Z",
+  "source": "dom",
   "entries": {
     "heroFiftyFiftyPageRoot": {
       "strategies": [
@@ -14,6 +17,1364 @@
         }
       ],
       "primary": "css"
+    },
+    "a_Style_Guide": {
+      "name": "a_Style_Guide",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Component_Library": {
+      "name": "a_Component_Library",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-breadcrumb__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Optional_CTA": {
+      "name": "a_Optional_CTA",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-569f9eb4a9",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_LearnMore": {
+      "name": "a_LearnMore",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".nested-carousel-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'nested-carousel-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ComeGrowWithUs": {
+      "name": "ComeGrowWithUs",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__container.cmp-content-trail__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Come grow with us']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "a_Plan_Your_Future_Today": {
+      "name": "a_Plan_Your_Future_Today",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-76d13c030b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Plan Your Future Today",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "PauseCarousel": {
+      "name": "PauseCarousel",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__toggle",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Pause carousel']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-nested-content-carousel__toggle')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "h1_7": {
+      "name": "h1_7",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-hero-fifty-fifty__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tools, products, and partnership to power your practice",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_8": {
+      "name": "h1_8",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-hero-fifty-fifty__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeIncome II\nPlan for guaranteed income that lasts",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_9": {
+      "name": "h1_9",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-hero-fifty-fifty__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Security and support for your financial future",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_10": {
+      "name": "h1_10",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-hero-fifty-fifty__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolorsit amet consequat adipscing",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "nav_11": {
+      "name": "nav_11",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "breadcrumb-092e0cc614",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//nav[contains(@class,'cmp-breadcrumb')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "swiperWrapper_95e10ccf9211675bd": {
+      "name": "swiperWrapper_95e10ccf9211675bd",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "swiper-wrapper-95e10ccf9211675bd",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel-cards.swiper-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-nested-content-carousel-cards')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ol_13": {
+      "name": "ol_13",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__list",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ol[contains(@class,'cmp-breadcrumb__list')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Story_Cards": {
+      "name": "Story_Cards",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "nested-content-carousel-f8123ff5b7",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "region[name='Story Cards']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el1_2": {
+      "name": "el1_2",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel-card.swiper-slide.swiper-slide-visible.swiper-slide-active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "group[name='1 / 2']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-nested-content-carousel-card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el2_2": {
+      "name": "el2_2",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel-card.swiper-slide.swiper-slide-next",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "group[name='2 / 2']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-nested-content-carousel-card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Close": {
+      "name": "Close",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__left.cmp-section--background-color-granite",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__left')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_19": {
+      "name": "div_19",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__breadcrumb",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__breadcrumb')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_Style_Guide": {
+      "name": "li_Style_Guide",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Component_Library": {
+      "name": "li_Component_Library",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Hero_5050": {
+      "name": "li_Hero_5050",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-breadcrumb__item.cmp-breadcrumb__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-breadcrumb__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Hero 50/50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_23": {
+      "name": "div_23",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_24": {
+      "name": "div_24",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__eyebrow-headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tools, products, and partnership to power your practice",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_25": {
+      "name": "div_25",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__buttons",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__buttons')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_26": {
+      "name": "i_26",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.arrow-down",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Optional_CTA": {
+      "name": "span_Optional_CTA",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional CTA",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_28": {
+      "name": "div_28",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_29": {
+      "name": "div_29",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_30": {
+      "name": "div_30",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__secondary-slot",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__secondary-slot')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_31": {
+      "name": "div_31",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_32": {
+      "name": "div_32",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__swiper.swiper.swiper-fade.swiper-initialized.swiper-horizontal.swiper-watch-progress.swiper-backface-hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__swiper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_33": {
+      "name": "div_33",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_34": {
+      "name": "div_34",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_LearnMore": {
+      "name": "div_LearnMore",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".button.cmp-nested-content-carousel__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_36": {
+      "name": "span_36",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".nested-carousel-button__icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'nested-carousel-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_LearnMore": {
+      "name": "span_LearnMore",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".nested-carousel-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'nested-carousel-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_38": {
+      "name": "div_38",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__controls",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__controls')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_39": {
+      "name": "div_39",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__counter",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-nested-content-carousel__counter')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_01": {
+      "name": "span_01",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__current",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-nested-content-carousel__current')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_02": {
+      "name": "span_02",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-nested-content-carousel__total",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-nested-content-carousel__total')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Slide_1Of_2": {
+      "name": "span_Slide_1Of_2",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".sr-only.cmp-nested-content-carousel__sr-counter",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'sr-only')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Slide 1 of 2",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_43": {
+      "name": "div_43",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__content.cmp-hero-fifty-fifty__content--has-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_44": {
+      "name": "div_44",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__eyebrow-headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeIncome II\nPlan for guaranteed income that lasts",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_45": {
+      "name": "div_45",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_46": {
+      "name": "div_46",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_47": {
+      "name": "div_47",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__secondary-slot",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__secondary-slot')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_48": {
+      "name": "div_48",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_90": {
+      "name": "div_90",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "90%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_50": {
+      "name": "div_50",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_51": {
+      "name": "div_51",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_52": {
+      "name": "div_52",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__secondary-slot",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__secondary-slot')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_53": {
+      "name": "div_53",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ComeGrowWithUs": {
+      "name": "div_ComeGrowWithUs",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Come grow with us",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_55": {
+      "name": "p_55",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-content-trail__headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "dialog_56": {
+      "name": "dialog_56",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-content-trail__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_57": {
+      "name": "div_57",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_58": {
+      "name": "div_58",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-video-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-video-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_59": {
+      "name": "div_59",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_60": {
+      "name": "div_60",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__eyebrow-headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Security and support for your financial future",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_Plan_Your_Future_Today": {
+      "name": "div_Plan_Your_Future_Today",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__buttons",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__buttons')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Plan Your Future Today",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Plan_Your_Future_Today": {
+      "name": "span_Plan_Your_Future_Today",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Plan Your Future Today",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_63": {
+      "name": "div_63",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_64": {
+      "name": "div_64",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__secondary-slot",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__secondary-slot')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_65": {
+      "name": "div_65",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__content.cmp-hero-fifty-fifty__content--has-description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_66": {
+      "name": "div_66",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__eyebrow-headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_OptionalEyebrow": {
+      "name": "p_OptionalEyebrow",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-hero-fifty-fifty__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional eyebrow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_68": {
+      "name": "div_68",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_69": {
+      "name": "div_69",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__right')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_70": {
+      "name": "div_70",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-hero-fifty-fifty__secondary-slot",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-hero-fifty-fifty__secondary-slot')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_71": {
+      "name": "div_71",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_90_": {
+      "name": "div_90_",
+      "component": "hero-fifty-fifty",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "90 %",
+          "confidence": 0.4
+        }
+      ]
     }
   }
 }

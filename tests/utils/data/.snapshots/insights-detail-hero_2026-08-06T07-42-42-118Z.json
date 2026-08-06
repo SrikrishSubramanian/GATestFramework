@@ -1,0 +1,356 @@
+{
+  "component": "insights-detail-hero",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/insights-detail-hero.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:42:42.117Z",
+  "rootSelector": ".cmp-insights-detail-hero",
+  "elements": [
+    {
+      "name": "PlayVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-insights-detail-hero__play-btn"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Play video",
+        "aria-expanded": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__video-container"
+      ],
+      "role": null,
+      "ariaLabel": "Play video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 600,
+        "y": 1327,
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
+      "name": "CloseVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-insights-detail-hero__modal-close"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Close video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__modal"
+      ],
+      "role": null,
+      "ariaLabel": "Close video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h1_2",
+      "tag": "h1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec sit amet",
+      "classes": [
+        "cmp-insights-detail-hero__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__left"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 114,
+        "width": 565,
+        "height": 304
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec sit amet",
+      "classes": [
+        "cmp-insights-detail-hero__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 114,
+        "width": 565,
+        "height": 304
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "5",
+      "classes": [
+        "cmp-insights-detail-hero__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 778,
+        "y": 114,
+        "width": 439,
+        "height": 304
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "5",
+      "classes": [
+        "cmp-insights-detail-hero__info"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 778,
+        "y": 360,
+        "width": 439,
+        "height": 58
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "5",
+      "classes": [
+        "cmp-insights-detail-hero__info-item",
+        "cmp-insights-detail-hero__read-watch-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__info"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 778,
+        "y": 360,
+        "width": 439,
+        "height": 58
+      }
+    },
+    {
+      "name": "span_7",
+      "tag": "span",
+      "text": "5",
+      "classes": [
+        "cmp-insights-detail-hero__read-time"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__info-item",
+        "cmp-insights-detail-hero__read-watch-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 778,
+        "y": 376,
+        "width": 439,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-insights-detail-hero__media"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 482,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_9",
+      "tag": "span",
+      "text": "5",
+      "classes": [
+        "cmp-insights-detail-hero__watch-time"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__info-item",
+        "cmp-insights-detail-hero__read-watch-label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 778,
+        "y": 973,
+        "width": 439,
+        "height": 25
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-insights-detail-hero__video-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1079,
+        "width": 1154,
+        "height": 576
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-insights-detail-hero__video-overlay"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__video-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1079,
+        "width": 1154,
+        "height": 576
+      }
+    },
+    {
+      "name": "VideoPlayer",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-insights-detail-hero__modal"
+      ],
+      "attributes": {
+        "aria-label": "Video player"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-detail-hero__video-container"
+      ],
+      "role": null,
+      "ariaLabel": "Video player",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "insightsDetailHero_66ffcfaa31",
+      "tag": "video-js",
+      "text": "",
+      "classes": [
+        "cmp-insights-detail-hero__modal-video",
+        "video-js"
+      ],
+      "attributes": {
+        "data-video-id": "6136579892001",
+        "data-player": "default",
+        "data-embed": "default",
+        "data-application-id": "",
+        "controls": ""
+      },
+      "testId": null,
+      "id": "insights-detail-hero-66ffcfaa31",
+      "parentClasses": [
+        "cmp-insights-detail-hero__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Insights Detail Hero",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

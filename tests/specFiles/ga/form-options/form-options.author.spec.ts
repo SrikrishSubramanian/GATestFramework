@@ -3,7 +3,6 @@ import { FormOptionsPage } from '../../../pages/ga/components/formOptionsPage';
 import ENV from '../../../utils/infra/env';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
-
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -355,5 +354,39 @@ test.describe('FormOptions — Accessibility', () => {
     await page.evaluate(() => window.innerHeight));
       }
     }
+  });
+});
+
+test.describe('FormOptions — Console & Resources', () => {
+  test('[FO-043] @regression FormOptions produces no JS errors', async ({ page }) => {
+    const capture = new ConsoleCapture(page);
+    capture.start();
+    const pom = new FormOptionsPage(page);
+    await pom.navigate(BASE());
+    await page.waitForTimeout(1000);
+    const errors = capture.getErrors();
+    capture.stop();
+    expect(errors).toEqual([]);
+  });
+});
+
+test.describe('FormOptions — AEM Dialog Configuration', () => {
+  // Regression: GA overlay components must have their own _cq_dialog with helpPath.
+  // Without helpPath, authors see no help link in the component toolbar.
+
+  test('[FO-049] @author @regression @smoke @smoke FormOptions dialog has helpPath configured', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/form-options/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok(), 'FormOptions GA dialog overlay not found — component may be missing _cq_dialog').toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath, 'FormOptions dialog missing helpPath property').toBeTruthy();
+  });
+
+  test('[FO-050] @author @regression @smoke FormOptions helpPath points to correct component details page', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/form-options/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    if (!response.ok()) { test.skip(); return; }
+    const dialog = await response.json();
+    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });

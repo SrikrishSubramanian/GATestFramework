@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hero Fifty Fifty — Test Case Summary</title>
+  <title>HeroFiftyFifty — Test Case Summary</title>
   <style>
     :root {
       --azul: #003DA5;
@@ -133,19 +133,18 @@
 <body>
 
   <div class="header">
-    <h1>Hero Fifty Fifty — Test Summary</h1>
+    <h1>HeroFiftyFifty — Test Summary</h1>
     
     <div class="meta-bar">
       <div class="meta-item"><strong>Spec Files</strong>hero-fifty-fifty.author.spec.ts, hero-fifty-fifty.images.spec.ts, hero-fifty-fifty.interaction.spec.ts, hero-fifty-fifty.matrix.spec.ts, hero-fifty-fifty.visual.spec.ts</div>
-      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span><span class="source-tag">Image health generator</span><span class="source-tag">Interaction generator</span><span class="source-tag">State matrix generator</span><span class="source-tag">Visual assertion generator</span></div>
     </div>
   </div>
 
   <div class="stats">
-    <div class="stat-box"><div class="num">60</div><div class="label">Total Tests</div></div>
-    <div class="stat-box"><div class="num">15</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">70</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">20</div><div class="label">Sections</div></div>
     <div class="stat-box"><div class="num">4</div><div class="label">Spec Files</div></div>
-    <div class="stat-box"><div class="num">8</div><div class="label">Tag Types</div></div>
+    <div class="stat-box"><div class="num">9</div><div class="label">Tag Types</div></div>
   </div>
 
   <div class="content">
@@ -735,6 +734,191 @@
               
               <td>Interactive elements meet 24px target size</td>
               <td><div class="tags"><span class="tag" style="background:#FFF3CD;color:#856404">a11y</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>HeroFiftyFifty — Happy Path</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">HFF-050</td>
+              <td>HeroFiftyFifty renders correctly</td>
+              
+              <td>HeroFiftyFifty renders correctly</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">HFF-051</td>
+              <td>HeroFiftyFifty interactive elements are functional</td>
+              
+              <td>HeroFiftyFifty interactive elements are functional</td>
+              <td><div class="tags"><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>HeroFiftyFifty — Negative &amp; Boundary</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">HFF-052</td>
+              <td>HeroFiftyFifty handles empty content gracefully</td>
+              
+              <td>HeroFiftyFifty handles empty content gracefully</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">HFF-053</td>
+              <td>HeroFiftyFifty handles missing images</td>
+              
+              <td>HeroFiftyFifty handles missing images</td>
+              <td><div class="tags"><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>HeroFiftyFifty — Responsive</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              <th style="width:100px">Viewport</th>
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">HFF-054</td>
+              <td>HeroFiftyFifty adapts to mobile viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>HeroFiftyFifty adapts to mobile viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">HFF-055</td>
+              <td>HeroFiftyFifty adapts to tablet viewport</td>
+              <td class="viewport">Mobile</td>
+              <td>HeroFiftyFifty adapts to tablet viewport</td>
+              <td><div class="tags"><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>HeroFiftyFifty — Broken Images</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">HFF-057</td>
+              <td>HeroFiftyFifty all images load successfully</td>
+              
+              <td>HeroFiftyFifty all images load successfully</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">HFF-058</td>
+              <td>HeroFiftyFifty all images have alt attributes</td>
+              
+              <td>HeroFiftyFifty all images have alt attributes</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>HeroFiftyFifty — AEM Dialog Configuration</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">HFF-062</td>
+              <td>HeroFiftyFifty dialog has helpPath configured</td>
+              
+              <td>HeroFiftyFifty dialog has helpPath configured</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">HFF-063</td>
+              <td>HeroFiftyFifty helpPath points to correct component details page</td>
+              
+              <td>HeroFiftyFifty helpPath points to correct component details page</td>
+              <td><div class="tags"><span class="tag" style="background:#E9ECEF;color:#495057">author</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D4EDDA;color:#155724">smoke</span></div></td>
             </tr>
           </tbody>
         </table>

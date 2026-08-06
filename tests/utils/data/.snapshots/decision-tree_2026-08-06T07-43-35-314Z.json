@@ -1,0 +1,1659 @@
+{
+  "component": "decision-tree",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/decision-tree.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:43:35.314Z",
+  "rootSelector": ".cmp-decision-tree",
+  "elements": [
+    {
+      "name": "a_Optional_CTA",
+      "tag": "a",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-74e4f91e31",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-74e4f91e31\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Optional CTA\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"parentId\":\"headline-block-817c0cf222\"}}"
+      },
+      "testId": null,
+      "id": "button-74e4f91e31",
+      "parentClasses": [
+        "button",
+        "ga-button--primary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ShowOrHideOptions",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-decision-tree-step__toggle"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-expanded": "true",
+        "aria-controls": "decision-tree-step-7a660ab690-options",
+        "aria-label": "Show or hide options",
+        "data-cmp-hook-step-toggle": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step__header"
+      ],
+      "role": null,
+      "ariaLabel": "Show or hide options",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Spouse",
+      "tag": "button",
+      "text": "Spouse\n            Optional Description",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "Spouse",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "0"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "Spouse",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 488,
+        "width": 266,
+        "height": 97
+      }
+    },
+    {
+      "name": "Traditional",
+      "tag": "button",
+      "text": "Traditional",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "Traditional",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "Traditional",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Roth",
+      "tag": "button",
+      "text": "Roth",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "Roth",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "Roth",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "MoreInformationAbout_DeathO",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-decision-tree-step__info-trigger"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-haspopup": "dialog",
+        "aria-expanded": "false",
+        "aria-controls": "decision-tree-step-62fd22cd19-modal",
+        "aria-label": "More information about Death of Original IRA Owner",
+        "data-cmp-hook-step-info-trigger": "",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "role": null,
+      "ariaLabel": "More information about Death of Original IRA Owner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-decision-tree-step__modal-close"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Close",
+        "data-cmp-hook-step-modal-close": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step__modal-dialog"
+      ],
+      "role": null,
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Today",
+      "tag": "button",
+      "text": "Today",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "Today",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "Today",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Before_1120",
+      "tag": "button",
+      "text": "Before 1/1/20",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "Before 1/1/20",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "Before 1/1/20",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "el1120OrLater",
+      "tag": "button",
+      "text": "1/1/20 or later",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "1/1/20 or later",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "1/1/20 or later",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "NonSpouse",
+      "tag": "button",
+      "text": "Non-Spouse",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "Non-Spouse",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "Non-Spouse",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 359,
+        "y": 488,
+        "width": 266,
+        "height": 97
+      }
+    },
+    {
+      "name": "SeeThrough_Trust",
+      "tag": "button",
+      "text": "See-Through Trust",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "See-Through Trust",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "See-Through Trust",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 655,
+        "y": 488,
+        "width": 266,
+        "height": 97
+      }
+    },
+    {
+      "name": "Successor_Beneficiary",
+      "tag": "button",
+      "text": "Successor Beneficiary",
+      "classes": [
+        "cmp-decision-tree-option__card"
+      ],
+      "attributes": {
+        "type": "button",
+        "role": "radio",
+        "aria-checked": "false",
+        "aria-label": "Successor Beneficiary",
+        "data-cmp-hook-option-card": "",
+        "tabindex": "0"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": "radio",
+      "ariaLabel": "Successor Beneficiary",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 951,
+        "y": 488,
+        "width": 266,
+        "height": 97
+      }
+    },
+    {
+      "name": "h3_RequiredBeginningDate",
+      "tag": "h3",
+      "text": "Required beginning date",
+      "classes": [
+        "cmp-decision-tree-step__modal-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": "decision-tree-step-62fd22cd19-modal-title",
+      "parentClasses": [
+        "cmp-decision-tree-step__modal-dialog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Step_1_Select_RelationshipTo_",
+      "tag": "div",
+      "text": "Spouse\n            Optional Description \n            \n                \n                    \n        ",
+      "classes": [
+        "cmp-decision-tree-step__options"
+      ],
+      "attributes": {
+        "role": "radiogroup",
+        "aria-labelledby": "decision-tree-step-7a660ab690-number decision-tree-step-7a660ab690-prompt",
+        "aria-label": "Step 1 Select Relationship to IRA Owner"
+      },
+      "testId": null,
+      "id": "decision-tree-step-7a660ab690-options",
+      "parentClasses": [
+        "cmp-decision-tree-step"
+      ],
+      "role": "radiogroup",
+      "ariaLabel": "Step 1 Select Relationship to IRA Owner",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 488,
+        "width": 1154,
+        "height": 97
+      }
+    },
+    {
+      "name": "Select_Market_Type",
+      "tag": "div",
+      "text": "Traditional\n            \n            \n                \n                    \n                    \n   ",
+      "classes": [
+        "cmp-decision-tree-step__options"
+      ],
+      "attributes": {
+        "role": "radiogroup",
+        "aria-labelledby": "decision-tree-step-622682a5c8-number decision-tree-step-622682a5c8-prompt",
+        "aria-label": "Select Market Type"
+      },
+      "testId": null,
+      "id": "decision-tree-step-622682a5c8-options",
+      "parentClasses": [
+        "cmp-decision-tree-step"
+      ],
+      "role": "radiogroup",
+      "ariaLabel": "Select Market Type",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "decisionTreeStep_62fd22cd19Modal",
+      "tag": "div",
+      "text": "Required beginning date\n                The Internal Revenue Service will ultimately assess taxes on",
+      "classes": [
+        "cmp-decision-tree-step__modal"
+      ],
+      "attributes": {
+        "role": "dialog",
+        "aria-modal": "true",
+        "aria-labelledby": "decision-tree-step-62fd22cd19-modal-title",
+        "data-cmp-hook-step-modal": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "decision-tree-step-62fd22cd19-modal",
+      "parentClasses": [
+        "cmp-decision-tree-step"
+      ],
+      "role": "dialog",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "DeathOf_Original_IRA_Owner",
+      "tag": "div",
+      "text": "Today\n            \n            \n                \n                    \n                    \n         ",
+      "classes": [
+        "cmp-decision-tree-step__options"
+      ],
+      "attributes": {
+        "role": "radiogroup",
+        "aria-labelledby": "decision-tree-step-62fd22cd19-number decision-tree-step-62fd22cd19-prompt",
+        "aria-label": "Death of Original IRA Owner"
+      },
+      "testId": null,
+      "id": "decision-tree-step-62fd22cd19-options",
+      "parentClasses": [
+        "cmp-decision-tree-step"
+      ],
+      "role": "radiogroup",
+      "ariaLabel": "Death of Original IRA Owner",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "p_Select_RelationshipTo_IRA_Own",
+      "tag": "p",
+      "text": "Select Relationship to IRA Owner",
+      "classes": [
+        "cmp-decision-tree-step__prompt"
+      ],
+      "attributes": {
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": "decision-tree-step-7a660ab690-prompt",
+      "parentClasses": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 144,
+        "y": 446,
+        "width": 364,
+        "height": 26
+      }
+    },
+    {
+      "name": "p_Select_Market_Type",
+      "tag": "p",
+      "text": "Select Market Type",
+      "classes": [
+        "cmp-decision-tree-step__prompt"
+      ],
+      "attributes": {
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": "decision-tree-step-622682a5c8-prompt",
+      "parentClasses": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "p_DeathOf_Original_IRA_Owner",
+      "tag": "p",
+      "text": "Death of Original IRA Owner",
+      "classes": [
+        "cmp-decision-tree-step__prompt"
+      ],
+      "attributes": {
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": "decision-tree-step-62fd22cd19-prompt",
+      "parentClasses": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "Step 1\n                Select Relationship to IRA Owner",
+      "classes": [
+        "cmp-decision-tree-step__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 446,
+        "width": 1154,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "Step 1\n                Select Relationship to IRA Owner",
+      "classes": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Step_1",
+      "tag": "span",
+      "text": "Step 1",
+      "classes": [
+        "cmp-decision-tree-step__number"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": "decision-tree-step-7a660ab690-number",
+      "parentClasses": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 446,
+        "width": 73,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_Spouse",
+      "tag": "span",
+      "text": "Spouse",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 166,
+        "y": 513,
+        "width": 60,
+        "height": 24
+      }
+    },
+    {
+      "name": "span_Optional_Description",
+      "tag": "span",
+      "text": "Optional Description",
+      "classes": [
+        "cmp-decision-tree-option__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 129,
+        "y": 542,
+        "width": 133,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_26",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-decision-tree-option__check"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_27",
+      "tag": "div",
+      "text": "Step 2\n                Select Market Type\n                \n            \n            \n        \n      ",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_28",
+      "tag": "div",
+      "text": "Step 2\n                Select Market Type",
+      "classes": [
+        "cmp-decision-tree-step__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_29",
+      "tag": "div",
+      "text": "Step 2\n                Select Market Type",
+      "classes": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Step_2",
+      "tag": "span",
+      "text": "Step 2",
+      "classes": [
+        "cmp-decision-tree-step__number"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": "decision-tree-step-622682a5c8-number",
+      "parentClasses": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Traditional",
+      "tag": "span",
+      "text": "Traditional",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_32",
+      "tag": "div",
+      "text": "This is Traditional section area, please select Roth for next step",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Roth",
+      "tag": "span",
+      "text": "Roth",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_34",
+      "tag": "div",
+      "text": "Step 3\n                Death of Original IRA Owner\n                \n                    \n           ",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_35",
+      "tag": "div",
+      "text": "Step 3\n                Death of Original IRA Owner",
+      "classes": [
+        "cmp-decision-tree-step__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_36",
+      "tag": "div",
+      "text": "Step 3\n                Death of Original IRA Owner",
+      "classes": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Step_3",
+      "tag": "span",
+      "text": "Step 3",
+      "classes": [
+        "cmp-decision-tree-step__number"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": "decision-tree-step-62fd22cd19-number",
+      "parentClasses": [
+        "cmp-decision-tree-step__heading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_38",
+      "tag": "div",
+      "text": "Required beginning date\n                The Internal Revenue Service will ultimately assess taxes on",
+      "classes": [
+        "cmp-decision-tree-step__modal-dialog"
+      ],
+      "attributes": {
+        "data-cmp-hook-step-modal-dialog": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_39",
+      "tag": "div",
+      "text": "The Internal Revenue Service will ultimately assess taxes on the deferred growth of tax-advantaged a",
+      "classes": [
+        "cmp-decision-tree-step__modal-body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-step__modal-dialog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Today",
+      "tag": "span",
+      "text": "Today",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_41",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_42",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_43",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__media"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_45",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_46",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__headline-block"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_OptionalEyebrow",
+      "tag": "div",
+      "text": "Optional eyebrow",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_LoremIpsumDolorSitAmetCon",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consectetur.",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_50",
+      "tag": "div",
+      "text": "Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscin",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_51",
+      "tag": "div",
+      "text": "Optional CTA\n                \n                \n                    \n                    \n           ",
+      "classes": [
+        "cmp-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "i_52",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Optional_CTA",
+      "tag": "span",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_54",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__component-parsys"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Before_1120",
+      "tag": "span",
+      "text": "Before 1/1/20",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_ThisIs_Before_1120SectionAr",
+      "tag": "div",
+      "text": "This is Before 1/1/20 section area",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_1120OrLater",
+      "tag": "span",
+      "text": "1/1/20 or later",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_ThisIs_1120OrLaterSection_",
+      "tag": "div",
+      "text": "This is 1/1/20 or later section area",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_NonSpouse",
+      "tag": "span",
+      "text": "Non-Spouse",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 441,
+        "y": 524,
+        "width": 101,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_60",
+      "tag": "div",
+      "text": "This is Non-Spouse section, Please select Spouse for next step",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_SeeThrough_Trust",
+      "tag": "span",
+      "text": "See-Through Trust",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 712,
+        "y": 524,
+        "width": 152,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_62",
+      "tag": "div",
+      "text": "This is See-Through Trust section, Please select Spouse for next step",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Successor_Beneficiary",
+      "tag": "span",
+      "text": "Successor Beneficiary",
+      "classes": [
+        "cmp-decision-tree-option__label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 994,
+        "y": 524,
+        "width": 179,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_64",
+      "tag": "div",
+      "text": "This is Successor Beneficiary section, Please select Spouse for next step",
+      "classes": [
+        "cmp-decision-tree-option__panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-option-panel": "",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-decision-tree-option"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Decision Tree",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "component": "button",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:43:26.103Z",
+  "rootSelector": ".button",
+  "elements": [
+    {
+      "name": "a_Button",
+      "tag": "a",
+      "text": "Button",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-33131685b0",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-33131685b0\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Button\",\"xdm:linkURL\":\"#\",\"parentId\":\"grid-container-4b64093e80\"}}"
+      },
+      "testId": null,
+      "id": "button-33131685b0",
+      "parentClasses": [
+        "button",
+        "ga-button--primary",
+        "ga-button--right",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 177,
+        "y": 807,
+        "width": 121,
+        "height": 50
+      }
+    },
+    {
+      "name": "a_Watch_Video",
+      "tag": "a",
+      "text": "Watch Video",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-0d7952bdfe",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-0d7952bdfe\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Watch Video\",\"xdm:linkURL\":\"#\",\"parentId\":\"grid-container-4b64093e80\"}}"
+      },
+      "testId": null,
+      "id": "button-0d7952bdfe",
+      "parentClasses": [
+        "button",
+        "ga-button--primary",
+        "ga-button--md",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 655,
+        "y": 807,
+        "width": 165,
+        "height": 50
+      }
+    },
+    {
+      "name": "a_LearnMore",
+      "tag": "a",
+      "text": "Learn more",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-ec8bb5a645",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-ec8bb5a645\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Learn more\",\"xdm:linkURL\":\"#\",\"parentId\":\"grid-container-4b64093e80\"}}"
+      },
+      "testId": null,
+      "id": "button-ec8bb5a645",
+      "parentClasses": [
+        "button",
+        "ga-button--icon-text",
+        "ga-button--center",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 90,
+        "y": 967,
+        "width": 117,
+        "height": 32
+      }
+    },
+    {
+      "name": "a_Button_Icon_Text",
+      "tag": "a",
+      "text": "Button Icon Text",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-444cadd6a5",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-444cadd6a5\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Button Icon Text\",\"xdm:linkURL\":\"#\",\"parentId\":\"grid-container-655c53cce2\"}}"
+      },
+      "testId": null,
+      "id": "button-444cadd6a5",
+      "parentClasses": [
+        "button",
+        "ga-button--left",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 1218,
+        "width": 186,
+        "height": 46
+      }
+    },
+    {
+      "name": "i_4",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-down"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 260,
+        "y": 824,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Button",
+      "tag": "span",
+      "text": "Button",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 199,
+        "y": 824,
+        "width": 49,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Watch_Video",
+      "tag": "span",
+      "text": "Watch Video",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 677,
+        "y": 824,
+        "width": 93,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_LearnMore",
+      "tag": "span",
+      "text": "Learn more",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 976,
+        "width": 73,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_Button_Icon_Text",
+      "tag": "span",
+      "text": "Button Icon Text",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 20,
+        "y": 1233,
+        "width": 118,
+        "height": 16
+      }
+    }
+  ],
+  "pageTitle": "Button",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

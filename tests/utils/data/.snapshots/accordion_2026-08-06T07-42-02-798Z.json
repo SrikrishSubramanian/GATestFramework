@@ -1,0 +1,1706 @@
+{
+  "component": "accordion",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/accordion.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:42:02.796Z",
+  "rootSelector": ".cmp-accordion",
+  "elements": [
+    {
+      "name": "button_WhatIs_Global_Atlantic",
+      "tag": "button",
+      "text": "What is Global Atlantic?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "9dba8944fa0b4b4d829fc9e294fc0d46"
+      },
+      "testId": null,
+      "id": "2df179da4fb7433589902e52b1f354d0",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 700,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_HowDo_IContactCustomerServ",
+      "tag": "button",
+      "text": "How do I contact customer service?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "true",
+        "aria-controls": "278bdf8944194dd7bf093cd84c4b234e"
+      },
+      "testId": null,
+      "id": "8b6269fa2ca94453bb929acca878b512",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 805,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "d82a2104be224e5abef7d94815ab0b3b",
+      "tag": "button",
+      "text": "What products does Global Atlantic offer?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "a6217b1854ec48089550c6c7e92e1c1d"
+      },
+      "testId": null,
+      "id": "d82a2104be224e5abef7d94815ab0b3b",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 1017,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_WhereCan_IFindMyPolicyDoc",
+      "tag": "button",
+      "text": "Where can I find my policy documents?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "984f50c553d34ab4bcbac8d916612321"
+      },
+      "testId": null,
+      "id": "847de299c77646cab86c8bd5f81d1b3e",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 1122,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_Corporate_Pension_Plans",
+      "tag": "button",
+      "text": "Corporate Pension Plans",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "true",
+        "aria-controls": "c3daa9b285b04d30999c8ec6bc5cb6bc"
+      },
+      "testId": null,
+      "id": "8581534067304bf2b3856a730a1d0098",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 1598,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_Public_Pension_Plans",
+      "tag": "button",
+      "text": "Public Pension Plans",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "a8d9c60a644a435a93c1f273de726fd6"
+      },
+      "testId": null,
+      "id": "ef9b65a687304255bd6d08491f2319ff",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 1809,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_Sovereign_Wealth_Funds",
+      "tag": "button",
+      "text": "Sovereign Wealth Funds",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "54cdd17331a44f64a3166c849a6d8bb6"
+      },
+      "testId": null,
+      "id": "e4b5681763ea4a00a8384ae213be5a08",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 1914,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_Insurance_Companies",
+      "tag": "button",
+      "text": "Insurance Companies",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "a985960babf44683b16a7315c5647e72"
+      },
+      "testId": null,
+      "id": "5b2db5e4156e43f182d12f532ec80449",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 2391,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_Endowments_Foundations",
+      "tag": "button",
+      "text": "Endowments & Foundations",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "3330832fa2624965967c6c121cf8be2d"
+      },
+      "testId": null,
+      "id": "b1941991db6547679ed526988619ddb2",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 2496,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_Health_Care_Organizations",
+      "tag": "button",
+      "text": "Health Care Organizations",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "6eaedad62732470d990fa5bc9531796e"
+      },
+      "testId": null,
+      "id": "14692fa1f2e346f782770ffa67c51853",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 2601,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "span_WhatIs_Global_Atlantic",
+      "tag": "span",
+      "text": "What is Global Atlantic?",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 735,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_HowDo_IContactCustomerServ",
+      "tag": "span",
+      "text": "How do I contact customer service?",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 840,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_12",
+      "tag": "span",
+      "text": "What products does Global Atlantic offer?",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1051,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_WhereCan_IFindMyPolicyDoc",
+      "tag": "span",
+      "text": "Where can I find my policy documents?",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1156,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_Corporate_Pension_Plans",
+      "tag": "span",
+      "text": "Corporate Pension Plans",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1632,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_Public_Pension_Plans",
+      "tag": "span",
+      "text": "Public Pension Plans",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1844,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_Sovereign_Wealth_Funds",
+      "tag": "span",
+      "text": "Sovereign Wealth Funds",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1949,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_Insurance_Companies",
+      "tag": "span",
+      "text": "Insurance Companies",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2425,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_Endowments_Foundations",
+      "tag": "span",
+      "text": "Endowments & Foundations",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2530,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_Health_Care_Organizations",
+      "tag": "span",
+      "text": "Health Care Organizations",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2635,
+        "width": 1102,
+        "height": 35
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 699,
+        "width": 1154,
+        "height": 526
+      }
+    },
+    {
+      "name": "accordionItem_7bcebf78d9",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_0",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-7bcebf78d9\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-58c7b1680c\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-7bcebf78d9",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 699,
+        "width": 1154,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItem_7bcebf78d9Panel",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-7bcebf78d9-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 700,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_WhatIs_Global_Atlantic",
+      "tag": "div",
+      "text": "What is Global Atlantic?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 700,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--blog"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "svg_25",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-icon",
+        "cmp-accordion__item-icon--blog",
+        "cmp-accordion__item-icon--plus"
+      ],
+      "attributes": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16",
+        "fill": "none",
+        "xmlns": "http://www.w3.org/2000/svg"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--blog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_26",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--default"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1177,
+        "y": 732,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "name": "el9dba8944fa0b4b4d829fc9e294fc0d46",
+      "tag": "div",
+      "text": "Global Atlantic Financial Group is a leading insurance company meeting the retirement and life insur",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "9dba8944fa0b4b4d829fc9e294fc0d46",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 804,
+        "width": 1154,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItemF96058c61b",
+      "tag": "div",
+      "text": "How do I contact customer service?\n                \n                \n                    \n          ",
+      "classes": [
+        "cmp-accordion__item",
+        "expanded"
+      ],
+      "attributes": {
+        "name": "item_1",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-f96058c61b\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-58c7b1680c\"}}",
+        "data-cmp-expanded": ""
+      },
+      "testId": null,
+      "id": "accordion-item-f96058c61b",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 804,
+        "width": 1154,
+        "height": 211
+      }
+    },
+    {
+      "name": "accordionItemF96058c61bPanel",
+      "tag": "div",
+      "text": "How do I contact customer service?\n                \n                \n                    \n          ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-f96058c61b-panel",
+      "parentClasses": [
+        "cmp-accordion__item",
+        "expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 805,
+        "width": 1154,
+        "height": 210
+      }
+    },
+    {
+      "name": "div_HowDo_IContactCustomerServ",
+      "tag": "div",
+      "text": "How do I contact customer service?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 805,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "el278bdf8944194dd7bf093cd84c4b234e",
+      "tag": "div",
+      "text": "You can reach our customer service team by calling 1-800-555-0100 during business hours, Monday thro",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "false"
+      },
+      "testId": null,
+      "id": "278bdf8944194dd7bf093cd84c4b234e",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 909,
+        "width": 1154,
+        "height": 106
+      }
+    },
+    {
+      "name": "accordionItemE92b3cd16d",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?\n                \n                \n                    \n   ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_2",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-e92b3cd16d\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-58c7b1680c\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-e92b3cd16d",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1016,
+        "width": 1154,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItemE92b3cd16dPanel",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?\n                \n                \n                    \n   ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-e92b3cd16d-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1017,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_34",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1017,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "a6217b1854ec48089550c6c7e92e1c1d",
+      "tag": "div",
+      "text": "Global Atlantic offers a range of retirement and life insurance products including fixed annuities, ",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "a6217b1854ec48089550c6c7e92e1c1d",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1121,
+        "width": 1154,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_139cc6958a",
+      "tag": "div",
+      "text": "Where can I find my policy documents?\n                \n                \n                    \n       ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_3",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-139cc6958a\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-58c7b1680c\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-139cc6958a",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1121,
+        "width": 1154,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItem_139cc6958aPanel",
+      "tag": "div",
+      "text": "Where can I find my policy documents?\n                \n                \n                    \n       ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-139cc6958a-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1122,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_WhereCan_IFindMyPolicyDoc",
+      "tag": "div",
+      "text": "Where can I find my policy documents?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1122,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "el984f50c553d34ab4bcbac8d916612321",
+      "tag": "div",
+      "text": "Policy documents can be accessed through your online account portal. If you need assistance locating",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "984f50c553d34ab4bcbac8d916612321",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1226,
+        "width": 1154,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_40",
+      "tag": "div",
+      "text": "Corporate Pension Plans\n                \n                \n                    \n                     ",
+      "classes": [
+        "cmp-accordion__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1597,
+        "width": 1154,
+        "height": 421
+      }
+    },
+    {
+      "name": "accordionItemA3f45cd64a",
+      "tag": "div",
+      "text": "Corporate Pension Plans\n                \n                \n                    \n                     ",
+      "classes": [
+        "cmp-accordion__item",
+        "expanded"
+      ],
+      "attributes": {
+        "name": "item_0",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-a3f45cd64a\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-ac03bb0df9\"}}",
+        "data-cmp-expanded": ""
+      },
+      "testId": null,
+      "id": "accordion-item-a3f45cd64a",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1597,
+        "width": 1154,
+        "height": 211
+      }
+    },
+    {
+      "name": "accordionItemA3f45cd64aPanel",
+      "tag": "div",
+      "text": "Corporate Pension Plans\n                \n                \n                    \n                     ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-a3f45cd64a-panel",
+      "parentClasses": [
+        "cmp-accordion__item",
+        "expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1598,
+        "width": 1154,
+        "height": 210
+      }
+    },
+    {
+      "name": "div_Corporate_Pension_Plans",
+      "tag": "div",
+      "text": "Corporate Pension Plans",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1598,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "c3daa9b285b04d30999c8ec6bc5cb6bc",
+      "tag": "div",
+      "text": "We provide investment solutions and consultative advice to corporations who are considering the bene",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "false"
+      },
+      "testId": null,
+      "id": "c3daa9b285b04d30999c8ec6bc5cb6bc",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1702,
+        "width": 1154,
+        "height": 106
+      }
+    },
+    {
+      "name": "accordionItemCfae96c9ec",
+      "tag": "div",
+      "text": "Public Pension Plans\n                \n                \n                    \n                        ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_1",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-cfae96c9ec\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-ac03bb0df9\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-cfae96c9ec",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1808,
+        "width": 1154,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItemCfae96c9ecPanel",
+      "tag": "div",
+      "text": "Public Pension Plans\n                \n                \n                    \n                        ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-cfae96c9ec-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1809,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_Public_Pension_Plans",
+      "tag": "div",
+      "text": "Public Pension Plans",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1809,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "a8d9c60a644a435a93c1f273de726fd6",
+      "tag": "div",
+      "text": "We have an extensive history of working with public plans that rely on us to provide investment solu",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "a8d9c60a644a435a93c1f273de726fd6",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1913,
+        "width": 1154,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_0765808f57",
+      "tag": "div",
+      "text": "Sovereign Wealth Funds\n                \n                \n                    \n                      ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_2",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-0765808f57\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-ac03bb0df9\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-0765808f57",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1913,
+        "width": 1154,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItem_0765808f57Panel",
+      "tag": "div",
+      "text": "Sovereign Wealth Funds\n                \n                \n                    \n                      ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-0765808f57-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1914,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_Sovereign_Wealth_Funds",
+      "tag": "div",
+      "text": "Sovereign Wealth Funds",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1914,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "el54cdd17331a44f64a3166c849a6d8bb6",
+      "tag": "div",
+      "text": "We offer a diverse set of investment options across regions and asset classes to meet the distinct g",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "54cdd17331a44f64a3166c849a6d8bb6",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2018,
+        "width": 1154,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_53",
+      "tag": "div",
+      "text": "Insurance Companies\n                \n                \n                    \n                        \n",
+      "classes": [
+        "cmp-accordion__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2390,
+        "width": 1154,
+        "height": 315
+      }
+    },
+    {
+      "name": "accordionItem_769a592d51",
+      "tag": "div",
+      "text": "Insurance Companies\n                \n                \n                    \n                        \n",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_0",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-769a592d51\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-27b3bf7981\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-769a592d51",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2390,
+        "width": 1154,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItem_769a592d51Panel",
+      "tag": "div",
+      "text": "Insurance Companies\n                \n                \n                    \n                        \n",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-769a592d51-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2391,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_Insurance_Companies",
+      "tag": "div",
+      "text": "Insurance Companies",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2391,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "a985960babf44683b16a7315c5647e72",
+      "tag": "div",
+      "text": "Our global multi-disciplinary team is dedicated to supporting insurance companies with differentiate",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "a985960babf44683b16a7315c5647e72",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2495,
+        "width": 1154,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_2e8d31b3a6",
+      "tag": "div",
+      "text": "Endowments & Foundations\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_1",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-2e8d31b3a6\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-27b3bf7981\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-2e8d31b3a6",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2495,
+        "width": 1154,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItem_2e8d31b3a6Panel",
+      "tag": "div",
+      "text": "Endowments & Foundations\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-2e8d31b3a6-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2496,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_Endowments_Foundations",
+      "tag": "div",
+      "text": "Endowments & Foundations",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2496,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "el3330832fa2624965967c6c121cf8be2d",
+      "tag": "div",
+      "text": "We help endowments and foundations manage their assets to fulfill their mission, even in a changing ",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "3330832fa2624965967c6c121cf8be2d",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2600,
+        "width": 1154,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_590b2cc446",
+      "tag": "div",
+      "text": "Health Care Organizations\n                \n                \n                    \n                   ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_2",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-590b2cc446\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-27b3bf7981\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-590b2cc446",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2600,
+        "width": 1154,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItem_590b2cc446Panel",
+      "tag": "div",
+      "text": "Health Care Organizations\n                \n                \n                    \n                   ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-590b2cc446-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2601,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_Health_Care_Organizations",
+      "tag": "div",
+      "text": "Health Care Organizations",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2601,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "el6eaedad62732470d990fa5bc9531796e",
+      "tag": "div",
+      "text": "We understand the unique challenges and requirements that healthcare organizations face. We take a s",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "6eaedad62732470d990fa5bc9531796e",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2705,
+        "width": 1154,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Accordion",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

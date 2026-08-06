@@ -20,6 +20,8 @@
     "env:local": "cross-env env=local npx playwright test --project chromium",
     "env:dev": "cross-env env=dev npx playwright test --project chromium",
     "env:qa": "cross-env env=qa npx playwright test --project chromium",
+    "test": "cross-env env=local npx playwright test tests/specFiles/ga/ --project chromium",
+    "test:cross-browser": "cross-env env=local npx playwright test tests/specFiles/ga/ --project chromium --project firefox --project webkit --project Mobile-Chrome --project Mobile-WebKit",
     "cleanup:logs": "npx ts-node scripts/cleanup-logs.ts",
     "postinstall": "playwright install"
   }

@@ -36,9 +36,8 @@ test.describe('Form Text — State Matrix', () => {
     test(`[FORMTEXT-MATRIX-${viewport.name}] @matrix @regression Form text responsive (${viewport.name})`, async ({ page }) => {
       await page.setViewportSize({ width: viewport.width, height: 600 });
 
-      await loginToAEMAuthor(page);
       const url = resolveComponentUrl('form-text');
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
       const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
       if (await textInput.count() > 0) {

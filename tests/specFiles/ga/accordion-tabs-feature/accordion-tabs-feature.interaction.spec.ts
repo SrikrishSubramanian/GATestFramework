@@ -179,7 +179,7 @@ test.describe('AccordionTabsFeature — Accordion Behavior (Desktop) @interactio
     await tabs.nth(1).click();
     // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // Reload page
-    await page.reload({ waitUntil: 'networkidle' });
+    await page.reload({ waitUntil: 'domcontentloaded' });
     // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
     // After reload, first tab should be expanded again (default state)
     const firstTab = page.locator(ROOT).nth(0).locator(TAB).nth(0);

@@ -38,9 +38,8 @@ test.describe('Promo Banner — State Matrix', () => {
       test(`[PROMO-MATRIX-${layout}-${viewport.name}] @matrix @regression Promo Banner (${layout}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        await loginToAEMAuthor(page);
         const url = resolveComponentUrl('promo-banner');
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const root = page.locator('.cmp-promo-banner').first();
         await expect(root).toBeVisible();

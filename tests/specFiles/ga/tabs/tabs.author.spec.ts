@@ -386,8 +386,7 @@ test.describe('Tabs — Responsive', () => {
     const desktopFontSize = await page.locator(TAB).first().evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
     // Mobile font size
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.reload();
-    await page.waitForLoadState('networkidle');
+    await page.reload({ waitUntil: 'domcontentloaded' });
     const mobileFontSize = await page.locator(TAB).first().evaluate(el => parseFloat(getComputedStyle(el).fontSize)); // measurement: use measurement-utils for cleaner code
     expect(mobileFontSize).toBeLessThanOrEqual(desktopFontSize);
   });

@@ -84,14 +84,18 @@ export default defineConfig({
   /* Worker configuration
      FAST mode: 8 workers (smoke tests only, 30s timeout)
      Local: 4 workers (smoke + regression, 60s timeout)
-     CI: 1 worker (full suite, 5min timeout)
+     CI: 2 workers by default (full suite, 5min timeout) — override with CI_WORKERS=<n>.
+     globalSetup logs in once and shares storageState across all workers, so CI no
+     longer needs to serialize to 1 worker just to avoid concurrent logins. Raise
+     CI_WORKERS further if the AEM author instance in CI can take the load.
   */
-  workers: process.env.FAST ? 8 : process.env.CI ? 1 : 4,
+  workers: process.env.FAST ? 8 : process.env.CI ? Number(process.env.CI_WORKERS) || 2 : 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html', { outputFolder: reportDir }],
     ['line'],
     ['json', { outputFile: `${reportDir}/results.json` }],
+    ['./tests/utils/infra/hierarchical-test-reporter.ts'],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   globalSetup: "tests/utils/infra/globalSetup.ts",

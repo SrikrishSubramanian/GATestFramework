@@ -209,3 +209,31 @@ test.describe('FirmSelectionModal — AEM Dialog Configuration', () => {
     expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });
+
+test.describe('FirmSelectionModal — CSV Test Cases (GAAM-693)', () => {
+  // Epic ticket has no description/ACs beyond its title — assertions below are
+  // scoped to what's verifiable against the live modal's validation behavior.
+  test('[FSM-015] @smoke @regression Confirm CTA stays disabled until a firm is selected', async ({ page }) => {
+    const pom = new FirmSelectionModalPage(page);
+    await pom.navigate(BASE());
+    await page.locator('a[data-modal]').first().click();
+    const root = page.locator('.cmp-firm-selection-modal').first();
+    await expect(root).toBeVisible();
+
+    const cta = root.locator('.cmp-firm-selection-modal__cta').first();
+    await expect(cta).toHaveAttribute('aria-disabled', 'true');
+    await expect(cta).toBeDisabled();
+
+    const firmList = root.locator('.cmp-firm-selection-modal__firm-list');
+    await expect(firmList).toHaveAttribute('role', 'listbox');
+  });
+
+  test('[FSM-016] @regression Selecting a firm enables the Confirm CTA', async ({ page }) => {
+    // The firm list in this environment currently loads with zero options
+    // (no firm data returned by the backing service), so there's no option to
+    // select in order to verify the CTA becomes enabled. Needs test data/API
+    // stubbing for the firm list before this can be implemented without
+    // guessing at how a populated option renders.
+    test.fixme();
+  });
+});

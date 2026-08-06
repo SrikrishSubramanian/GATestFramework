@@ -1,6 +1,6 @@
 {
   "component": "content-highlight",
-  "generatedAt": "2026-07-14T15:04:17.658Z",
+  "generatedAt": "2026-08-06T07:43:04.094Z",
   "source": "dom",
   "entries": {
     "a_Product_Button": {
@@ -32,7 +32,8 @@
           "value": "Product Button",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "a_ReadTheRelease": {
       "name": "a_ReadTheRelease",
@@ -63,7 +64,8 @@
           "value": "Read the release",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "a_Contact_Us": {
       "name": "a_Contact_Us",
@@ -94,7 +96,8 @@
           "value": "Contact Us",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "a_GlobalBioLink": {
       "name": "a_GlobalBioLink",
@@ -125,7 +128,8 @@
           "value": "Global bio link",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "a_ProductButton": {
       "name": "a_ProductButton",
@@ -156,7 +160,8 @@
           "value": "Product button",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "h5_BarronsRecognizes_Global_Atla": {
       "name": "h5_BarronsRecognizes_Global_Atla",
@@ -177,7 +182,8 @@
           "value": "Barron’s recognizes Global Atlantic",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "h5_6": {
       "name": "h5_6",
@@ -198,7 +204,8 @@
           "value": "Proven success helping institutional clients",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "h5_7": {
       "name": "h5_7",
@@ -219,7 +226,8 @@
           "value": "What consumers are saying about retirement in 2026",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "imgImage_8": {
       "name": "imgImage_8",
@@ -235,7 +243,8 @@
           "value": "//img[contains(@class,'cmp-image__image')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "contentHighlightBannerMain": {
       "name": "contentHighlightBannerMain",
@@ -261,7 +270,8 @@
           "value": "//video[contains(@class,'cmp-content-highlight__brightcove-video')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "item1780302280431": {
       "name": "item1780302280431",
@@ -287,7 +297,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "Close": {
       "name": "Close",
@@ -308,7 +319,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__modal-close')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "item1780304577141": {
       "name": "item1780304577141",
@@ -334,7 +346,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "item1780304694932": {
       "name": "item1780304694932",
@@ -360,7 +373,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "Pause": {
       "name": "Pause",
@@ -381,7 +395,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__background-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "Play": {
       "name": "Play",
@@ -402,7 +417,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__background-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.093Z"
     },
     "div_16": {
       "name": "div_16",
@@ -418,7 +434,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_17": {
       "name": "div_17",
@@ -434,7 +451,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_18": {
       "name": "div_18",
@@ -450,7 +468,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__image-container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "figure_19": {
       "name": "figure_19",
@@ -466,7 +485,8 @@
           "value": "//figure[contains(@class,'cmp-image__figure')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "picture_20": {
       "name": "picture_20",
@@ -482,7 +502,8 @@
           "value": "//picture[contains(@class,'cmp-image__picture')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "section_21": {
       "name": "section_21",
@@ -498,7 +519,8 @@
           "value": "//section[contains(@class,'cmp-content-highlight__block')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_22": {
       "name": "div_22",
@@ -514,7 +536,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_23": {
       "name": "div_23",
@@ -530,7 +553,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__items')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_24": {
       "name": "div_24",
@@ -546,7 +570,8 @@
           "value": "//div[contains(@class,'cmp-content-block__description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_Product_Button": {
       "name": "div_Product_Button",
@@ -567,7 +592,8 @@
           "value": "Product Button",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "i_26": {
       "name": "i_26",
@@ -583,7 +609,8 @@
           "value": "//i[contains(@class,'cmp-button__icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "span_Product_Button": {
       "name": "span_Product_Button",
@@ -604,7 +631,8 @@
           "value": "Product Button",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "dialog_28": {
       "name": "dialog_28",
@@ -620,7 +648,8 @@
           "value": "//dialog[contains(@class,'cmp-content-highlight__modal')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_29": {
       "name": "div_29",
@@ -636,7 +665,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__modal-content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_30": {
       "name": "div_30",
@@ -652,7 +682,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__modal-video-container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_31": {
       "name": "div_31",
@@ -668,7 +699,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_ReadTheRelease": {
       "name": "div_ReadTheRelease",
@@ -689,7 +721,8 @@
           "value": "Read the release",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "i_33": {
       "name": "i_33",
@@ -705,7 +738,8 @@
           "value": "//i[contains(@class,'cmp-button__icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "span_ReadTheRelease": {
       "name": "span_ReadTheRelease",
@@ -726,7 +760,8 @@
           "value": "Read the release",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_35": {
       "name": "div_35",
@@ -742,7 +777,8 @@
           "value": "//div[contains(@class,'cmp-content-block__description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_Contact_Us": {
       "name": "div_Contact_Us",
@@ -763,7 +799,8 @@
           "value": "Contact Us",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "span_Contact_Us": {
       "name": "span_Contact_Us",
@@ -784,7 +821,8 @@
           "value": "Contact Us",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_38": {
       "name": "div_38",
@@ -800,7 +838,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_GlobalBioLink": {
       "name": "div_GlobalBioLink",
@@ -821,7 +860,8 @@
           "value": "Global bio link",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "span_GlobalBioLink": {
       "name": "span_GlobalBioLink",
@@ -842,7 +882,8 @@
           "value": "Global bio link",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_41": {
       "name": "div_41",
@@ -858,7 +899,8 @@
           "value": "//div[contains(@class,'cmp-content-block__description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_ProductButton": {
       "name": "div_ProductButton",
@@ -879,7 +921,8 @@
           "value": "Product button",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "span_ProductButton": {
       "name": "span_ProductButton",
@@ -900,7 +943,8 @@
           "value": "Product button",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_44": {
       "name": "div_44",
@@ -916,7 +960,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_45": {
       "name": "div_45",
@@ -932,7 +977,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_46": {
       "name": "div_46",
@@ -948,7 +994,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__video-container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_47": {
       "name": "div_47",
@@ -964,7 +1011,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__content-wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_48": {
       "name": "div_48",
@@ -980,7 +1028,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__content-container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "span_49": {
       "name": "span_49",
@@ -996,7 +1045,8 @@
           "value": "//span[contains(@class,'cmp-content-highlight__video-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_50": {
       "name": "div_50",
@@ -1012,7 +1062,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__video-caption')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "span_HonoredToBeRecognizedAgain": {
       "name": "span_HonoredToBeRecognizedAgain",
@@ -1033,7 +1084,8 @@
           "value": "Honored to be recognized again",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "span_52": {
       "name": "span_52",
@@ -1054,7 +1106,8 @@
           "value": "Income 150+ SE highlighted for new guaranted income design",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     },
     "div_53": {
       "name": "div_53",
@@ -1070,7 +1123,8 @@
           "value": "//div[contains(@class,'cmp-content-highlight__background-video-actions')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:04.094Z"
     }
   }
 }

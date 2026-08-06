@@ -38,9 +38,8 @@ test.describe('Image with Nested Content — State Matrix', () => {
       test(`[IMG-NESTED-${position}-${viewport.name}] @matrix @regression Image with Content (${position}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        await loginToAEMAuthor(page);
         const url = resolveComponentUrl('image-with-nested-content');
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const root = page.locator('.cmp-image-with-nested-content').first();
         await expect(root).toBeVisible();

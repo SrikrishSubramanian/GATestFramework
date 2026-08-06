@@ -38,9 +38,8 @@ test.describe('Text — State Matrix', () => {
       test(`[TEXT-MATRIX-${size}-${viewport.name}] @matrix @regression Text (${size}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        await loginToAEMAuthor(page);
         const url = resolveComponentUrl('text');
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const root = page.locator('.cmp-text').first();
         await expect(root).toBeVisible();

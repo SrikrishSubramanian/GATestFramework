@@ -1,6 +1,6 @@
 {
   "component": "detail-hero",
-  "generatedAt": "2026-07-14T14:49:22.722Z",
+  "generatedAt": "2026-08-06T07:42:19.966Z",
   "source": "dom",
   "entries": {
     "a_Style_Guide": {
@@ -22,7 +22,8 @@
           "value": "Style Guide",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "a_Component_Library": {
       "name": "a_Component_Library",
@@ -43,7 +44,8 @@
           "value": "Component Library",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "a_Primary_CTA": {
       "name": "a_Primary_CTA",
@@ -74,7 +76,8 @@
           "value": "Primary CTA",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "a_Secondary_CTA": {
       "name": "a_Secondary_CTA",
@@ -105,7 +108,8 @@
           "value": "Secondary CTA",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "h1_4": {
       "name": "h1_4",
@@ -126,7 +130,8 @@
           "value": "Lorem ipsum dolor sit amet consectetur adipiscing",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "Breadcrumb": {
       "name": "Breadcrumb",
@@ -147,7 +152,8 @@
           "value": "//nav[contains(@class,'cmp-detail-hero__breadcrumb')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "nav_6": {
       "name": "nav_6",
@@ -168,7 +174,8 @@
           "value": "//nav[contains(@class,'cmp-breadcrumb')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "ol_7": {
       "name": "ol_7",
@@ -184,7 +191,8 @@
           "value": "//ol[contains(@class,'cmp-breadcrumb__list')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "div_8": {
       "name": "div_8",
@@ -200,7 +208,8 @@
           "value": "//div[contains(@class,'cmp-detail-hero__wave-overlay')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "span_9": {
       "name": "span_9",
@@ -216,7 +225,8 @@
           "value": "//span[contains(@class,'cmp-detail-hero__wave-2')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "li_Style_Guide": {
       "name": "li_Style_Guide",
@@ -237,7 +247,8 @@
           "value": "Style Guide",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "li_Component_Library": {
       "name": "li_Component_Library",
@@ -258,7 +269,8 @@
           "value": "Component Library",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "li_Detail_Hero": {
       "name": "li_Detail_Hero",
@@ -279,7 +291,8 @@
           "value": "Detail Hero",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "div_13": {
       "name": "div_13",
@@ -295,7 +308,8 @@
           "value": "//div[contains(@class,'cmp-detail-hero__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "div_14": {
       "name": "div_14",
@@ -311,7 +325,8 @@
           "value": "//div[contains(@class,'cmp-detail-hero__eyebrow-headline')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "p_OptionalEyebrow": {
       "name": "p_OptionalEyebrow",
@@ -332,7 +347,8 @@
           "value": "Optional eyebrow",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "div_16": {
       "name": "div_16",
@@ -348,7 +364,8 @@
           "value": "//div[contains(@class,'cmp-detail-hero__description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "div_17": {
       "name": "div_17",
@@ -364,7 +381,8 @@
           "value": "//div[contains(@class,'cmp-detail-hero__buttons')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "i_18": {
       "name": "i_18",
@@ -380,7 +398,8 @@
           "value": "//i[contains(@class,'cmp-button__icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "span_Primary_CTA": {
       "name": "span_Primary_CTA",
@@ -401,7 +420,8 @@
           "value": "Primary CTA",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "span_Secondary_CTA": {
       "name": "span_Secondary_CTA",
@@ -422,7 +442,8 @@
           "value": "Secondary CTA",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.965Z"
     },
     "div_21": {
       "name": "div_21",
@@ -438,7 +459,8 @@
           "value": "//div[contains(@class,'cmp-detail-hero__description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:19.966Z"
     }
   }
 }

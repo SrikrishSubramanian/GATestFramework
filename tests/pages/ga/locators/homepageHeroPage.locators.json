@@ -1,4 +1,7 @@
 {
+  "component": "homepage-hero",
+  "generatedAt": "2026-08-06T07:45:35.977Z",
+  "source": "dom",
   "entries": {
     "homepageHeroPageRoot": {
       "strategies": [
@@ -14,6 +17,576 @@
         }
       ],
       "primary": "css"
+    },
+    "Explore_Now": {
+      "name": "Explore_Now",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Explore Now']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Now",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "WatchVideo": {
+      "name": "WatchVideo",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Watch video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Watch video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "CloseVideo": {
+      "name": "CloseVideo",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__video-modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-button__video-modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "PlayBackgroundVideo": {
+      "name": "PlayBackgroundVideo",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__video-control.cmp-homepage-hero__video-control--play",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play background video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-homepage-hero__video-control')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "PauseBackgroundVideo": {
+      "name": "PauseBackgroundVideo",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__video-control.cmp-homepage-hero__video-control--pause.hide",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Pause background video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-homepage-hero__video-control')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ExploreNow": {
+      "name": "ExploreNow",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Explore now']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore now",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h1_6": {
+      "name": "h1_6",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__headline--front.headline-h1-xl",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-homepage-hero__headline--front')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Solutions for real-life financial challenges",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2Captiion": {
+      "name": "h2Captiion",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__video-caption-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-homepage-hero__video-caption-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "captiion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "imgImage_8": {
+      "name": "imgImage_8",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-homepage-hero__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__animation",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-homepage-hero__animation')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_10": {
+      "name": "div_10",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__media",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-homepage-hero__media')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "cmpHomepageHeroPlayer_6365778310112": {
+      "name": "cmpHomepageHeroPlayer_6365778310112",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "cmp-homepage-hero-player-6365778310112",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__background-video.video-js",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//video-js[contains(@class,'cmp-homepage-hero__background-video')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-homepage-hero__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__sr-status",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-homepage-hero__sr-status')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_14": {
+      "name": "p_14",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__description.body-m",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-homepage-hero__description')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__cta-group",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-homepage-hero__cta-group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Explore_Now": {
+      "name": "span_Explore_Now",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore Now",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_17": {
+      "name": "span_17",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Down",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_WatchVideo": {
+      "name": "span_WatchVideo",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Watch video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_19": {
+      "name": "span_19",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Play",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "dialog_20": {
+      "name": "dialog_20",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__video-modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-button__video-modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__video-modal-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-button__video-modal-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_22": {
+      "name": "span_22",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.close.k",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_23": {
+      "name": "div_23",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__video-modal-inner",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-button__video-modal-inner')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "bcPlayer_6332012443112": {
+      "name": "bcPlayer_6332012443112",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "bc-player-6332012443112",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button__video-player.video-js",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//video-js[contains(@class,'cmp-button__video-player')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "divCaptiion": {
+      "name": "divCaptiion",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__video-caption",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-homepage-hero__video-caption')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "captiion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_26": {
+      "name": "span_26",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__video-icon.cmp-homepage-hero__video-icon--play",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-homepage-hero__video-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_27": {
+      "name": "span_27",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__video-icon.cmp-homepage-hero__video-icon--pause",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-homepage-hero__video-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ExploreNow": {
+      "name": "div_ExploreNow",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-homepage-hero__cta-group",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-homepage-hero__cta-group')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore now",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_ExploreNow": {
+      "name": "span_ExploreNow",
+      "component": "homepage-hero",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore now",
+          "confidence": 0.4
+        }
+      ]
     }
   }
 }

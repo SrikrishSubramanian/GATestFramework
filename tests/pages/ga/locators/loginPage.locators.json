@@ -1,4 +1,7 @@
 {
+  "component": "login",
+  "generatedAt": "2026-08-06T07:45:35.980Z",
+  "source": "dom",
   "entries": {
     "loginPageRoot": {
       "strategies": [
@@ -14,6 +17,862 @@
         }
       ],
       "primary": "css"
+    },
+    "a_ForgotUsername": {
+      "name": "a_ForgotUsername",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__forgot-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-login__forgot-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Forgot username?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_ForgotPassword": {
+      "name": "a_ForgotPassword",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__forgot-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-login__forgot-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Forgot password?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ShowPassword": {
+      "name": "ShowPassword",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__password-toggle",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Show password']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-login__password-toggle')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "button_Continue": {
+      "name": "button_Continue",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button.cmp-login__submit-btn",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Continue",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "cmpLoginUsername": {
+      "name": "cmpLoginUsername",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "cmp-login-username",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-login__input",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//input[contains(@class,'cmp-login__input')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "h1_WelcomeTo_Global_Atlantic": {
+      "name": "h1_WelcomeTo_Global_Atlantic",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h1[contains(@class,'cmp-login__headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Welcome to Global Atlantic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Login": {
+      "name": "h2_Login",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "cmp-login-form-heading",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-login__form-headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h2[contains(@class,'cmp-login__form-headline')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Login",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "KeyBenefits": {
+      "name": "KeyBenefits",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-points",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-login__key-points')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__alert.cmp-login__alert-hide",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__alert')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "cmpLoginUsernameError": {
+      "name": "cmpLoginUsernameError",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "cmp-login-username-error",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-login__error-msg",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__error-msg')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__wave-overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__wave-overlay')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__wave-1",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__wave-1')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__layout",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__layout')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__left-panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__left-panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__subheadline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__subheadline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_16": {
+      "name": "li_16",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-login__key-point')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Pending applications with real-time updates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_17": {
+      "name": "span_17",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__key-point-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_18": {
+      "name": "span_18",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__key-point-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Pending applications with real-time updates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_RunAPersonalizedIllustratio": {
+      "name": "li_RunAPersonalizedIllustratio",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-login__key-point')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Run a personalized illustration",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_RunAPersonalizedIllustratio": {
+      "name": "span_RunAPersonalizedIllustratio",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__key-point-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Run a personalized illustration",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_21": {
+      "name": "li_21",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-login__key-point')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Access policy documents and correspondence",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_22": {
+      "name": "span_22",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__key-point-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Access policy documents and correspondence",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_ExploreNewProducts": {
+      "name": "li_ExploreNewProducts",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-login__key-point')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore new products",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_ExploreNewProducts": {
+      "name": "span_ExploreNewProducts",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__key-point-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__key-point-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Explore new products",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_25": {
+      "name": "div_25",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__fine-print.cmp-login__fine-print--desktop",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__fine-print')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_26": {
+      "name": "div_26",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__right-panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__right-panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_27": {
+      "name": "div_27",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__card",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__card')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_28": {
+      "name": "span_28",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__alert-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__alert-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_29": {
+      "name": "span_29",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__alert-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__alert-text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "form_30": {
+      "name": "form_30",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__form",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//form[contains(@class,'cmp-login__form')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_31": {
+      "name": "div_31",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__field-row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__field-row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_32": {
+      "name": "div_32",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__field-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__field-header')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "label_33": {
+      "name": "label_33",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//label[contains(@class,'cmp-login__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Username\n                                *",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_34": {
+      "name": "span_34",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__required-indicator",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-login__required-indicator')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_35": {
+      "name": "div_35",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__field-row",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__field-row')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_36": {
+      "name": "div_36",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__field-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__field-header')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "label_37": {
+      "name": "label_37",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__label",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//label[contains(@class,'cmp-login__label')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Password\n                                *",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_38": {
+      "name": "div_38",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__password-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__password-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "svg_39": {
+      "name": "svg_39",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__eye-icon.cmp-login__eye-icon--hide",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//svg[contains(@class,'cmp-login__eye-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_40": {
+      "name": "i_40",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Continue": {
+      "name": "span_Continue",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Continue",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_42": {
+      "name": "div_42",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__footer",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__footer')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "p_FirstTimeUser": {
+      "name": "p_FirstTimeUser",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__register",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-login__register')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "First time user?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_44": {
+      "name": "p_44",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__assistance",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-login__assistance')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_45": {
+      "name": "div_45",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__fine-print.cmp-login__fine-print--mobile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__fine-print')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_WelcomeTo_Global_Atlantic": {
+      "name": "div_WelcomeTo_Global_Atlantic",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-login__left-panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-login__left-panel')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Welcome to Global Atlantic",
+          "confidence": 0.4
+        }
+      ]
     }
   }
 }

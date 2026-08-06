@@ -1,4 +1,7 @@
 {
+  "component": "navigation",
+  "generatedAt": "2026-08-06T07:45:35.985Z",
+  "source": "dom",
   "entries": {
     "navigationPageRoot": {
       "strategies": [
@@ -14,6 +17,6769 @@
         }
       ],
       "primary": "css"
+    },
+    "Style_Guide": {
+      "name": "Style_Guide",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Style Guide']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Templates": {
+      "name": "Templates",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Templates']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Templates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Freeform_Template": {
+      "name": "Freeform_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Freeform Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Freeform Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Insights_Detail_Template": {
+      "name": "Insights_Detail_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Insights Detail Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Detail Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Detail_Page_": {
+      "name": "Product_Detail_Page_",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Product Detail Page ']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Detail Page",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Rate_Page_ForeIncome_I": {
+      "name": "Product_Rate_Page_ForeIncome_I",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Product Rate Page — ForeIncome II WF']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Rate Page — ForeIncome II WF",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Homepage_Template": {
+      "name": "Homepage_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Homepage Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Admin_Template": {
+      "name": "Rate_Admin_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Rate Admin Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Admin Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Branding": {
+      "name": "Branding",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Branding']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Branding",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Component_Library": {
+      "name": "Component_Library",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Component Library']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion": {
+      "name": "Accordion",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Accordion']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_Feature": {
+      "name": "Accordion_Tabs_Feature",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Accordion Tabs Feature']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_FeatureWith_Sc": {
+      "name": "Accordion_Tabs_FeatureWith_Sc",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Accordion Tabs Feature with Scrolling Behaviour']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature with Scrolling Behaviour",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_FeatureWith_He": {
+      "name": "Accordion_Tabs_FeatureWith_He",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Accordion Tabs Feature with Headline']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature with Headline",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_FeatureWithout": {
+      "name": "Accordion_Tabs_FeatureWithout",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Accordion Tabs Feature without Headline']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature without Headline",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Alert_Banner": {
+      "name": "Alert_Banner",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Alert Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Alert Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Benefits_Table": {
+      "name": "Benefits_Table",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Benefits Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Benefits Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Bio_Card": {
+      "name": "Bio_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Bio Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Bio Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Brand_Relationship": {
+      "name": "Brand_Relationship",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Brand Relationship']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Brand Relationship",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Breadcrumb": {
+      "name": "Breadcrumb",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Breadcrumb']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Breadcrumb",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Button": {
+      "name": "Button",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Button']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Button_IllustrationsAnd_Login": {
+      "name": "Button_IllustrationsAnd_Login",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Button Illustrations and Login Type (Gated Content)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button Illustrations and Login Type (Gated Content)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Content_Highlight": {
+      "name": "Content_Highlight",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Content Highlight']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Highlight",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Content_Trail": {
+      "name": "Content_Trail",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Content Trail']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Trail",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Decision_Tree": {
+      "name": "Decision_Tree",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Decision Tree']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Decision Tree",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Detail_Hero": {
+      "name": "Detail_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Detail Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Detail Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Disclosure_List": {
+      "name": "Disclosure_List",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Disclosure List']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Disclosure List",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Enhanced_Related_Content": {
+      "name": "Enhanced_Related_Content",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Enhanced Related Content']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Enhanced Related Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Feature_Banner": {
+      "name": "Feature_Banner",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Feature Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Feature_Banner_5050_Layout": {
+      "name": "Feature_Banner_5050_Layout",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Feature Banner - 50/50 Layout']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner - 50/50 Layout",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Firm_Selection_Modal": {
+      "name": "Firm_Selection_Modal",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Firm Selection Modal']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Firm Selection Modal",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Footer_Disclosure": {
+      "name": "Footer_Disclosure",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Footer Disclosure']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Footer Disclosure",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Form_Options": {
+      "name": "Form_Options",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Form Options']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Form Options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Grid_Container": {
+      "name": "Grid_Container",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Grid Container']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Grid Container",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Headline_Block": {
+      "name": "Headline_Block",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Headline Block']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Headline Block",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Hero_5050": {
+      "name": "Hero_5050",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Hero 50/50']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Hero 50/50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Homepage_Hero": {
+      "name": "Homepage_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Homepage Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Image": {
+      "name": "Image",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Image']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Image_With_Nested_Content": {
+      "name": "Image_With_Nested_Content",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Image With Nested Content']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image With Nested Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "In_Brief": {
+      "name": "In_Brief",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='In Brief']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "In Brief",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Insights_Detail_Hero": {
+      "name": "Insights_Detail_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Insights Detail Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Detail Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Insights_Listing": {
+      "name": "Insights_Listing",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Insights Listing']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Listing",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Login": {
+      "name": "Login",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Login']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Login",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Navigation": {
+      "name": "Navigation",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Navigation']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Navigation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Comparison_Card": {
+      "name": "Product_Comparison_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Product Comparison Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Comparison Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Path_Detail_Card": {
+      "name": "Product_Path_Detail_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Product Path Detail Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Path Detail Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Path_Summary_Card": {
+      "name": "Product_Path_Summary_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Product Path Summary Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Path Summary Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Rate_Table": {
+      "name": "Product_Rate_Table",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Product Rate Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Rate Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeCertain_Income_Annuity": {
+      "name": "ForeCertain_Income_Annuity",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='ForeCertain Income Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCertain Income Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeIncome_II_Fixed_Index_Annu": {
+      "name": "ForeIncome_II_Fixed_Index_Annu",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='ForeIncome II Fixed Index Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeIncome II Fixed Index Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "SecureFore_II_Fixed_Annuity": {
+      "name": "SecureFore_II_Fixed_Annuity",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='SecureFore II Fixed Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SecureFore II Fixed Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "SecureFore_Rates": {
+      "name": "SecureFore_Rates",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='SecureFore Rates']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SecureFore Rates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "forestructuredgrowthii": {
+      "name": "forestructuredgrowthii",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='forestructured-growth-ii']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "forestructured-growth-ii",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Income_150_SE": {
+      "name": "Income_150_SE",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Income 150 SE']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Income 150 SE",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeCare_Fixed_Annuity": {
+      "name": "ForeCare_Fixed_Annuity",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='ForeCare Fixed Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCare Fixed Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeAccumulation_II_Fixed_Inde": {
+      "name": "ForeAccumulation_II_Fixed_Inde",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='ForeAccumulation II Fixed Index Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeAccumulation II Fixed Index Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeCertain_Advisory": {
+      "name": "ForeCertain_Advisory",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='ForeCertain Advisory']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCertain Advisory",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Promo_Banner": {
+      "name": "Promo_Banner",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Promo Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Promo Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Quote": {
+      "name": "Quote",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Quote']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Quote",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Details_Hero": {
+      "name": "Rate_Details_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Rate Details Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Details Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_List_Accordion": {
+      "name": "Rate_List_Accordion",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Rate List Accordion']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate List Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Sheet_Grid": {
+      "name": "Rate_Sheet_Grid",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Rate Sheet Grid']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Sheet Grid",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Ratings_Card": {
+      "name": "Ratings_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Ratings Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Ratings Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "RTE_Table": {
+      "name": "RTE_Table",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='RTE Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "RTE Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Section": {
+      "name": "Section",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Section']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Section",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Separator": {
+      "name": "Separator",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Separator']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Separator",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Site_Search": {
+      "name": "Site_Search",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Site Search']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Site Search",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Spacer": {
+      "name": "Spacer",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Spacer']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spacer",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Statistic": {
+      "name": "Statistic",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Statistic']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Statistic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Tabs": {
+      "name": "Tabs",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Tabs']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tabs",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Teaser_Card": {
+      "name": "Teaser_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Teaser Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Teaser Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Text": {
+      "name": "Text",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Text']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Text",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Video_External": {
+      "name": "Video_External",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Video (External)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Video (External)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Workbench": {
+      "name": "Workbench",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Workbench']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Workbench",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Corporate_Agnostic": {
+      "name": "Corporate_Agnostic",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Corporate (Agnostic)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate (Agnostic)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Main": {
+      "name": "Main",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Main']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Main",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "English": {
+      "name": "English",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='English']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "English",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Financial_Professionals": {
+      "name": "Financial_Professionals",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Financial Professionals']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Individuals": {
+      "name": "Individuals",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Individuals']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Preneed": {
+      "name": "Preneed",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item-link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menuitem[name='Preneed']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-navigation__item-link')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Preneed",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_80": {
+      "name": "ul_80",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_81": {
+      "name": "ul_81",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group.logo--present",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_82": {
+      "name": "ul_82",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_83": {
+      "name": "ul_83",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_84": {
+      "name": "ul_84",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_85": {
+      "name": "ul_85",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_86": {
+      "name": "ul_86",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group.logo--present",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_English": {
+      "name": "ul_English",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-navigation__group",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "menu",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-navigation__group')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "English",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_3dd3bf6e7a": {
+      "name": "navigationD95ec9c1a1Item_3dd3bf6e7a",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-3dd3bf6e7a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--active.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Style_Guide_89": {
+      "name": "Style_Guide_89",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Style Guide']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Style Guide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1ItemF52820d1fe": {
+      "name": "navigationD95ec9c1a1ItemF52820d1fe",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-f52820d1fe",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Templates_91": {
+      "name": "Templates_91",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Templates']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Templates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Freeform_Template": {
+      "name": "li_Freeform_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-bf0feb23aa",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Freeform Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Freeform_Template_93": {
+      "name": "Freeform_Template_93",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Freeform Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Freeform Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Insights_Detail_Template": {
+      "name": "li_Insights_Detail_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-3ca23d451e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Detail Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Insights_Detail_Template_95": {
+      "name": "Insights_Detail_Template_95",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Insights Detail Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Detail Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Product_Detail_Page": {
+      "name": "li_Product_Detail_Page",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-85f0c4901b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Detail Page",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Detail_Page__97": {
+      "name": "Product_Detail_Page__97",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Product Detail Page ']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Detail Page",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Product_Rate_Page_ForeIncome_I": {
+      "name": "li_Product_Rate_Page_ForeIncome_I",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6dc4570f96",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Rate Page — ForeIncome II WF",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Rate_Page_ForeIncome_I_99": {
+      "name": "Product_Rate_Page_ForeIncome_I_99",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Product Rate Page — ForeIncome II WF']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Rate Page — ForeIncome II WF",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Homepage_Template": {
+      "name": "li_Homepage_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-7fd03f3a1e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Homepage_Template_101": {
+      "name": "Homepage_Template_101",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Homepage Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Rate_Admin_Template": {
+      "name": "li_Rate_Admin_Template",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-9993dd6b92",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Admin Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Admin_Template_103": {
+      "name": "Rate_Admin_Template_103",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Rate Admin Template']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Admin Template",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Branding": {
+      "name": "li_Branding",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-bd4e658c81",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Branding",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Branding_105": {
+      "name": "Branding_105",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Branding']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Branding",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_2b248a5ea1": {
+      "name": "navigationD95ec9c1a1Item_2b248a5ea1",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-2b248a5ea1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1.cmp-navigation__item--active.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Component_Library_107": {
+      "name": "Component_Library_107",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Component Library']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Component Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Accordion": {
+      "name": "li_Accordion",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-106e51afa9",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_109": {
+      "name": "Accordion_109",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Accordion']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_7282c86477": {
+      "name": "navigationD95ec9c1a1Item_7282c86477",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-7282c86477",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Accordion_Tabs_Feature_111": {
+      "name": "Accordion_Tabs_Feature_111",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Accordion Tabs Feature']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_67f1c24b4b": {
+      "name": "navigationD95ec9c1a1Item_67f1c24b4b",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-67f1c24b4b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature with Scrolling Behaviour",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_FeatureWith_Sc_113": {
+      "name": "Accordion_Tabs_FeatureWith_Sc_113",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Accordion Tabs Feature with Scrolling Behaviour']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature with Scrolling Behaviour",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Accordion_Tabs_FeatureWith_He": {
+      "name": "li_Accordion_Tabs_FeatureWith_He",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-1be01b56ea",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature with Headline",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_FeatureWith_He_115": {
+      "name": "Accordion_Tabs_FeatureWith_He_115",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Accordion Tabs Feature with Headline']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature with Headline",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Accordion_Tabs_FeatureWithout": {
+      "name": "li_Accordion_Tabs_FeatureWithout",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-bc62eedd06",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature without Headline",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Accordion_Tabs_FeatureWithout_117": {
+      "name": "Accordion_Tabs_FeatureWithout_117",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Accordion Tabs Feature without Headline']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Accordion Tabs Feature without Headline",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Alert_Banner": {
+      "name": "li_Alert_Banner",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-231628c711",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Alert Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Alert_Banner_119": {
+      "name": "Alert_Banner_119",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Alert Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Alert Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Benefits_Table": {
+      "name": "li_Benefits_Table",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-835157a199",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Benefits Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Benefits_Table_121": {
+      "name": "Benefits_Table_121",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Benefits Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Benefits Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Bio_Card": {
+      "name": "li_Bio_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-635e1c9d2a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Bio Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Bio_Card_123": {
+      "name": "Bio_Card_123",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Bio Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Bio Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Brand_Relationship": {
+      "name": "li_Brand_Relationship",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-769211bf99",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Brand Relationship",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Brand_Relationship_125": {
+      "name": "Brand_Relationship_125",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Brand Relationship']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Brand Relationship",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Breadcrumb": {
+      "name": "li_Breadcrumb",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-18f4a4ad22",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Breadcrumb",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Breadcrumb_127": {
+      "name": "Breadcrumb_127",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Breadcrumb']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Breadcrumb",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Button": {
+      "name": "li_Button",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-04b7f5ce83",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Button_129": {
+      "name": "Button_129",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Button']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1ItemA2306335d1": {
+      "name": "navigationD95ec9c1a1ItemA2306335d1",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-a2306335d1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button Illustrations and Login Type (Gated Content)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Button_IllustrationsAnd_Login_131": {
+      "name": "Button_IllustrationsAnd_Login_131",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Button Illustrations and Login Type (Gated Content)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Button Illustrations and Login Type (Gated Content)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Content_Highlight": {
+      "name": "li_Content_Highlight",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-9ba04cea15",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Highlight",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Content_Highlight_133": {
+      "name": "Content_Highlight_133",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Content Highlight']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Highlight",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Content_Trail": {
+      "name": "li_Content_Trail",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-be460d42e5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Trail",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Content_Trail_135": {
+      "name": "Content_Trail_135",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Content Trail']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Content Trail",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Decision_Tree": {
+      "name": "li_Decision_Tree",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-bb16c7d29b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Decision Tree",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Decision_Tree_137": {
+      "name": "Decision_Tree_137",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Decision Tree']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Decision Tree",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Detail_Hero": {
+      "name": "li_Detail_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-88278e9d42",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Detail Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Detail_Hero_139": {
+      "name": "Detail_Hero_139",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Detail Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Detail Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Disclosure_List": {
+      "name": "li_Disclosure_List",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-aa7c4faa4e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Disclosure List",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Disclosure_List_141": {
+      "name": "Disclosure_List_141",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Disclosure List']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Disclosure List",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Enhanced_Related_Content": {
+      "name": "li_Enhanced_Related_Content",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-0efe53b480",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Enhanced Related Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Enhanced_Related_Content_143": {
+      "name": "Enhanced_Related_Content_143",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Enhanced Related Content']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Enhanced Related Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Feature_Banner": {
+      "name": "li_Feature_Banner",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-80dcc26317",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Feature_Banner_145": {
+      "name": "Feature_Banner_145",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Feature Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Feature_Banner_5050_Layout": {
+      "name": "li_Feature_Banner_5050_Layout",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-d08bea4397",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner - 50/50 Layout",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Feature_Banner_5050_Layout_147": {
+      "name": "Feature_Banner_5050_Layout_147",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Feature Banner - 50/50 Layout']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Feature Banner - 50/50 Layout",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Firm_Selection_Modal": {
+      "name": "li_Firm_Selection_Modal",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-3cff29564a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Firm Selection Modal",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Firm_Selection_Modal_149": {
+      "name": "Firm_Selection_Modal_149",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Firm Selection Modal']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Firm Selection Modal",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Footer_Disclosure": {
+      "name": "li_Footer_Disclosure",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-adf1a77c5e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Footer Disclosure",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Footer_Disclosure_151": {
+      "name": "Footer_Disclosure_151",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Footer Disclosure']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Footer Disclosure",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Form_Options": {
+      "name": "li_Form_Options",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-105bb71bd1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Form Options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Form_Options_153": {
+      "name": "Form_Options_153",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Form Options']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Form Options",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Grid_Container": {
+      "name": "li_Grid_Container",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-a87dd8e8c9",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Grid Container",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Grid_Container_155": {
+      "name": "Grid_Container_155",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Grid Container']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Grid Container",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Headline_Block": {
+      "name": "li_Headline_Block",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-8e3567709d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Headline Block",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Headline_Block_157": {
+      "name": "Headline_Block_157",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Headline Block']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Headline Block",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Hero_5050": {
+      "name": "li_Hero_5050",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6b3b0b94b5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Hero 50/50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Hero_5050_159": {
+      "name": "Hero_5050_159",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Hero 50/50']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Hero 50/50",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Homepage_Hero": {
+      "name": "li_Homepage_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-223eaddd53",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Homepage_Hero_161": {
+      "name": "Homepage_Hero_161",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Homepage Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Homepage Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Image": {
+      "name": "li_Image",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-8934e2e1de",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Image_163": {
+      "name": "Image_163",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Image']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Image_With_Nested_Content": {
+      "name": "li_Image_With_Nested_Content",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6cef0e71ad",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image With Nested Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Image_With_Nested_Content_165": {
+      "name": "Image_With_Nested_Content_165",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Image With Nested Content']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Image With Nested Content",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_In_Brief": {
+      "name": "li_In_Brief",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-554a3cc026",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "In Brief",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "In_Brief_167": {
+      "name": "In_Brief_167",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='In Brief']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "In Brief",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Insights_Detail_Hero": {
+      "name": "li_Insights_Detail_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-da5201e522",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Detail Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Insights_Detail_Hero_169": {
+      "name": "Insights_Detail_Hero_169",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Insights Detail Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Detail Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Insights_Listing": {
+      "name": "li_Insights_Listing",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-94726b38a0",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Listing",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Insights_Listing_171": {
+      "name": "Insights_Listing_171",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Insights Listing']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insights Listing",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Login": {
+      "name": "li_Login",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-468c894d80",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Login",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Login_173": {
+      "name": "Login_173",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Login']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Login",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Navigation": {
+      "name": "li_Navigation",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-50eebe3d65",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2.cmp-navigation__item--active",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Navigation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Navigation_175": {
+      "name": "Navigation_175",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Navigation']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Navigation",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Product_Comparison_Card": {
+      "name": "li_Product_Comparison_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-514d6afd68",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Comparison Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Comparison_Card_177": {
+      "name": "Product_Comparison_Card_177",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Product Comparison Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Comparison Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Product_Path_Detail_Card": {
+      "name": "li_Product_Path_Detail_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-7b2b069498",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Path Detail Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Path_Detail_Card_179": {
+      "name": "Product_Path_Detail_Card_179",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Product Path Detail Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Path Detail Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Product_Path_Summary_Card": {
+      "name": "li_Product_Path_Summary_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-4042d50674",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Path Summary Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Product_Path_Summary_Card_181": {
+      "name": "Product_Path_Summary_Card_181",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Product Path Summary Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Path Summary Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_8d21a80f63": {
+      "name": "navigationD95ec9c1a1Item_8d21a80f63",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-8d21a80f63",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Product_Rate_Table_183": {
+      "name": "Product_Rate_Table_183",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Product Rate Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Product Rate Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_ForeCertain_Income_Annuity": {
+      "name": "li_ForeCertain_Income_Annuity",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-50fbbff2c9",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCertain Income Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeCertain_Income_Annuity_185": {
+      "name": "ForeCertain_Income_Annuity_185",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='ForeCertain Income Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCertain Income Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_ForeIncome_II_Fixed_Index_Annu": {
+      "name": "li_ForeIncome_II_Fixed_Index_Annu",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-2eace0876a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeIncome II Fixed Index Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeIncome_II_Fixed_Index_Annu_187": {
+      "name": "ForeIncome_II_Fixed_Index_Annu_187",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='ForeIncome II Fixed Index Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeIncome II Fixed Index Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_SecureFore_II_Fixed_Annuity": {
+      "name": "li_SecureFore_II_Fixed_Annuity",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-27881dece8",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SecureFore II Fixed Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "SecureFore_II_Fixed_Annuity_189": {
+      "name": "SecureFore_II_Fixed_Annuity_189",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='SecureFore II Fixed Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SecureFore II Fixed Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_SecureFore_Rates": {
+      "name": "li_SecureFore_Rates",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6be27c6b4a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SecureFore Rates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "SecureFore_Rates_191": {
+      "name": "SecureFore_Rates_191",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='SecureFore Rates']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "SecureFore Rates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "liForestructuredgrowthii": {
+      "name": "liForestructuredgrowthii",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-042b5bb96a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "forestructured-growth-ii",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "forestructuredgrowthii_193": {
+      "name": "forestructuredgrowthii_193",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='forestructured-growth-ii']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "forestructured-growth-ii",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Income_150_SE": {
+      "name": "li_Income_150_SE",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-ccb4e5d868",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Income 150 SE",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Income_150_SE_195": {
+      "name": "Income_150_SE_195",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Income 150 SE']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Income 150 SE",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_ForeCare_Fixed_Annuity": {
+      "name": "li_ForeCare_Fixed_Annuity",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-962ff19763",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCare Fixed Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeCare_Fixed_Annuity_197": {
+      "name": "ForeCare_Fixed_Annuity_197",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='ForeCare Fixed Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCare Fixed Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_ForeAccumulation_II_Fixed_Inde": {
+      "name": "li_ForeAccumulation_II_Fixed_Inde",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-0e0b281ed1",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeAccumulation II Fixed Index Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeAccumulation_II_Fixed_Inde_199": {
+      "name": "ForeAccumulation_II_Fixed_Inde_199",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='ForeAccumulation II Fixed Index Annuity']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeAccumulation II Fixed Index Annuity",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_ForeCertain_Advisory": {
+      "name": "li_ForeCertain_Advisory",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-321b6373ba",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-3",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCertain Advisory",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ForeCertain_Advisory_201": {
+      "name": "ForeCertain_Advisory_201",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='ForeCertain Advisory']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "ForeCertain Advisory",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Promo_Banner": {
+      "name": "li_Promo_Banner",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-db0099b25f",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Promo Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Promo_Banner_203": {
+      "name": "Promo_Banner_203",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Promo Banner']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Promo Banner",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Quote": {
+      "name": "li_Quote",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-76a68f99bf",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Quote",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Quote_205": {
+      "name": "Quote_205",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Quote']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Quote",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Rate_Details_Hero": {
+      "name": "li_Rate_Details_Hero",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-160b61fae3",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Details Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Details_Hero_207": {
+      "name": "Rate_Details_Hero_207",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Rate Details Hero']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Details Hero",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Rate_List_Accordion": {
+      "name": "li_Rate_List_Accordion",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-885d017075",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate List Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_List_Accordion_209": {
+      "name": "Rate_List_Accordion_209",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Rate List Accordion']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate List Accordion",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Rate_Sheet_Grid": {
+      "name": "li_Rate_Sheet_Grid",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-3dac6658d6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Sheet Grid",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Rate_Sheet_Grid_211": {
+      "name": "Rate_Sheet_Grid_211",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Rate Sheet Grid']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Rate Sheet Grid",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Ratings_Card": {
+      "name": "li_Ratings_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-f5ac0afa4d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Ratings Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Ratings_Card_213": {
+      "name": "Ratings_Card_213",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Ratings Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Ratings Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_RTE_Table": {
+      "name": "li_RTE_Table",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-9b83b16ee6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "RTE Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "RTE_Table_215": {
+      "name": "RTE_Table_215",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='RTE Table']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "RTE Table",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Section": {
+      "name": "li_Section",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-6b635e8a49",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Section",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Section_217": {
+      "name": "Section_217",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Section']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Section",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Separator": {
+      "name": "li_Separator",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-f935003d88",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Separator",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Separator_219": {
+      "name": "Separator_219",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Separator']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Separator",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Site_Search": {
+      "name": "li_Site_Search",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-f85cd32973",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Site Search",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Site_Search_221": {
+      "name": "Site_Search_221",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Site Search']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Site Search",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Spacer": {
+      "name": "li_Spacer",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-63a9878b6e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spacer",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Spacer_223": {
+      "name": "Spacer_223",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Spacer']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Spacer",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Statistic": {
+      "name": "li_Statistic",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-72696c922f",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Statistic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Statistic_225": {
+      "name": "Statistic_225",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Statistic']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Statistic",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Tabs": {
+      "name": "li_Tabs",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-24dadcccb0",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tabs",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Tabs_227": {
+      "name": "Tabs_227",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Tabs']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Tabs",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Teaser_Card": {
+      "name": "li_Teaser_Card",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-ec8784002d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Teaser Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Teaser_Card_229": {
+      "name": "Teaser_Card_229",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Teaser Card']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Teaser Card",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Text": {
+      "name": "li_Text",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-66eaf01900",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Text",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Text_231": {
+      "name": "Text_231",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Text']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Text",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Video_External": {
+      "name": "li_Video_External",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-b3b79669a5",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Video (External)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Video_External_233": {
+      "name": "Video_External_233",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Video (External)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Video (External)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Workbench": {
+      "name": "li_Workbench",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-e08540556f",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Workbench",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Workbench_235": {
+      "name": "Workbench_235",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Workbench']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Workbench",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_83f7afdff6": {
+      "name": "navigationD95ec9c1a1Item_83f7afdff6",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-83f7afdff6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Corporate_Agnostic_237": {
+      "name": "Corporate_Agnostic_237",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Corporate (Agnostic)']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate (Agnostic)",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1ItemC131db0ef8": {
+      "name": "navigationD95ec9c1a1ItemC131db0ef8",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-c131db0ef8",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-1.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Main_239": {
+      "name": "Main_239",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Main']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Main",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_English": {
+      "name": "li_English",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-90a28c8cd7",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-2",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "English",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "English_241": {
+      "name": "English_241",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='English']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "English",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1ItemCc78444b86": {
+      "name": "navigationD95ec9c1a1ItemCc78444b86",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-cc78444b86",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Financial_Professionals_243": {
+      "name": "Financial_Professionals_243",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Financial Professionals']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Financial Professionals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_0e452ee23a": {
+      "name": "navigationD95ec9c1a1Item_0e452ee23a",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-0e452ee23a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Individuals_245": {
+      "name": "Individuals_245",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Individuals']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Individuals",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "navigationD95ec9c1a1Item_047745266e": {
+      "name": "navigationD95ec9c1a1Item_047745266e",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "navigation-d95ec9c1a1-item-047745266e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-navigation__item.cmp-navigation__item--level-0.cmp-navigation__item--dropdown",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "none",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-navigation__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Preneed_247": {
+      "name": "Preneed_247",
+      "component": "navigation",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".menu-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Preneed']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'menu-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Preneed",
+          "confidence": 0.4
+        }
+      ]
     }
   }
 }

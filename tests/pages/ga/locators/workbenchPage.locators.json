@@ -1,4 +1,7 @@
 {
+  "component": "workbench",
+  "generatedAt": "2026-08-06T07:45:36.001Z",
+  "source": "dom",
   "entries": {
     "workbenchPageRoot": {
       "strategies": [
@@ -14,6 +17,901 @@
         }
       ],
       "primary": "css"
+    },
+    "a_LoremIpsumDolorSitAmet": {
+      "name": "a_LoremIpsumDolorSitAmet",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_FindA_Form": {
+      "name": "a_FindA_Form",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Find a Form",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_FAQ_GlossaryAnd_Support": {
+      "name": "a_FAQ_GlossaryAnd_Support",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "FAQ, Glossary, and Support",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Pension_Annuitant_Information": {
+      "name": "a_Pension_Annuitant_Information",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Pension Annuitant Information",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_4": {
+      "name": "a_4",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Delegate or Firm with policy beginning with 5, 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_RunAn_Illustration": {
+      "name": "a_RunAn_Illustration",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Run an Illustration",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Forms_Library": {
+      "name": "a_Forms_Library",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Forms Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Manage_Existing_Policies": {
+      "name": "a_Manage_Existing_Policies",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Manage Existing Policies",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_View_Latest_Rates": {
+      "name": "a_View_Latest_Rates",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Latest Rates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_SalesAnd_Marketing_Materials": {
+      "name": "a_SalesAnd_Marketing_Materials",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sales and Marketing Materials",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_10": {
+      "name": "ul_10",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tiles",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-workbench__tiles')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_11": {
+      "name": "ul_11",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tiles",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-workbench__tiles')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_12": {
+      "name": "ul_12",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tiles",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-workbench__tiles')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_2_Tiles_Workbench": {
+      "name": "div_2_Tiles_Workbench",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "2 Tiles Workbench",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_LoremIpsumDolorSitAmet": {
+      "name": "li_LoremIpsumDolorSitAmet",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_16": {
+      "name": "span_16",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_LoremIpsumDolorSitAmet": {
+      "name": "span_LoremIpsumDolorSitAmet",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_3_Tiles_WorkbenchWith_Externa": {
+      "name": "div_3_Tiles_WorkbenchWith_Externa",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "3 Tiles Workbench with External Links",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_HowCanWeHelpYouToday": {
+      "name": "div_HowCanWeHelpYouToday",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How can we help you today?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_FindA_Form": {
+      "name": "li_FindA_Form",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Find a Form",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_FindA_Form": {
+      "name": "span_FindA_Form",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Find a Form",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_FAQ_GlossaryAnd_Support": {
+      "name": "li_FAQ_GlossaryAnd_Support",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "FAQ, Glossary, and Support",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_FAQ_GlossaryAnd_Support": {
+      "name": "span_FAQ_GlossaryAnd_Support",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "FAQ, Glossary, and Support",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Pension_Annuitant_Information": {
+      "name": "li_Pension_Annuitant_Information",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Pension Annuitant Information",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Pension_Annuitant_Information": {
+      "name": "span_Pension_Annuitant_Information",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Pension Annuitant Information",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_28": {
+      "name": "li_28",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Delegate or Firm with policy beginning with 5, 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_29": {
+      "name": "span_29",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Delegate or Firm with policy beginning with 5, 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_30": {
+      "name": "div_30",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_5_Tile_WorkbenchWith_External": {
+      "name": "div_5_Tile_WorkbenchWith_External",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "5 Tile Workbench with External Links",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_RunAn_Illustration": {
+      "name": "li_RunAn_Illustration",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Run an Illustration",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_RunAn_Illustration": {
+      "name": "span_RunAn_Illustration",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Run an Illustration",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Forms_Library": {
+      "name": "li_Forms_Library",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Forms Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Forms_Library": {
+      "name": "span_Forms_Library",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Forms Library",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_Manage_Existing_Policies": {
+      "name": "li_Manage_Existing_Policies",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Manage Existing Policies",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Manage_Existing_Policies": {
+      "name": "span_Manage_Existing_Policies",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Manage Existing Policies",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_View_Latest_Rates": {
+      "name": "li_View_Latest_Rates",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Latest Rates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_View_Latest_Rates": {
+      "name": "span_View_Latest_Rates",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "View Latest Rates",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "li_SalesAnd_Marketing_Materials": {
+      "name": "li_SalesAnd_Marketing_Materials",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sales and Marketing Materials",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_SalesAnd_Marketing_Materials": {
+      "name": "span_SalesAnd_Marketing_Materials",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sales and Marketing Materials",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_42": {
+      "name": "div_42",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6_Tile_Workbench": {
+      "name": "div_6_Tile_Workbench",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "6 Tile Workbench",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_44": {
+      "name": "div_44",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
     }
   }
 }

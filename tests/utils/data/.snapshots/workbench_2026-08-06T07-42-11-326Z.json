@@ -1,0 +1,1092 @@
+{
+  "component": "workbench",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/workbench.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:42:11.324Z",
+  "rootSelector": ".cmp-workbench",
+  "elements": [
+    {
+      "name": "a_LoremIpsumDolorSitAmet",
+      "tag": "a",
+      "text": "Lorem ipsum dolor sit amet",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "title": "Lorem ipsum dolor sit amet "
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 64,
+        "y": 465,
+        "width": 561,
+        "height": 42
+      }
+    },
+    {
+      "name": "a_FindA_Form",
+      "tag": "a",
+      "text": "Find a Form",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "title": "Find a Form"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 64,
+        "y": 1162,
+        "width": 266,
+        "height": 42
+      }
+    },
+    {
+      "name": "a_FAQ_GlossaryAnd_Support",
+      "tag": "a",
+      "text": "FAQ, Glossary, and Support",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "title": "FAQ, Glossary, and Support"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 360,
+        "y": 1162,
+        "width": 266,
+        "height": 58
+      }
+    },
+    {
+      "name": "a_Pension_Annuitant_Information",
+      "tag": "a",
+      "text": "Pension Annuitant Information",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "https://www.facebook.com/globalatlantic/",
+        "target": "_self",
+        "title": "Pension Annuitant Information"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 655,
+        "y": 1162,
+        "width": 266,
+        "height": 58
+      }
+    },
+    {
+      "name": "a_4",
+      "tag": "a",
+      "text": "Delegate or Firm with policy beginning with 5, 6",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "title": "Delegate or Firm with policy beginning with 5, 6"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 951,
+        "y": 1162,
+        "width": 266,
+        "height": 74
+      }
+    },
+    {
+      "name": "a_RunAn_Illustration",
+      "tag": "a",
+      "text": "Run an Illustration",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "https://www.facebook.com/globalatlantic/",
+        "target": "_self",
+        "title": "Run an Illustration"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 64,
+        "y": 1542,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "a_Forms_Library",
+      "tag": "a",
+      "text": "Forms Library",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "https://www.facebook.com/globalatlantic/",
+        "target": "_self",
+        "title": "Forms Library"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 458,
+        "y": 1542,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "a_Manage_Existing_Policies",
+      "tag": "a",
+      "text": "Manage Existing Policies",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "https://www.facebook.com/globalatlantic/",
+        "target": "_self",
+        "title": "Manage Existing Policies"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 852,
+        "y": 1542,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "a_View_Latest_Rates",
+      "tag": "a",
+      "text": "View Latest Rates",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "title": "View Latest Rates"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 64,
+        "y": 1614,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "a_SalesAnd_Marketing_Materials",
+      "tag": "a",
+      "text": "Sales and Marketing Materials",
+      "classes": [
+        "cmp-workbench__tile-item"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "title": "Sales and Marketing Materials"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 458,
+        "y": 1614,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "ul_10",
+      "tag": "ul",
+      "text": "Lorem ipsum dolor sit amet \n                            \n                        \n                  ",
+      "classes": [
+        "cmp-workbench__tiles"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 465,
+        "width": 1152,
+        "height": 42
+      }
+    },
+    {
+      "name": "ul_11",
+      "tag": "ul",
+      "text": "Find a Form\n                            \n                        \n                        \n         ",
+      "classes": [
+        "cmp-workbench__tiles"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1162,
+        "width": 1152,
+        "height": 74
+      }
+    },
+    {
+      "name": "ul_12",
+      "tag": "ul",
+      "text": "Run an Illustration\n                            \n                        \n                        \n ",
+      "classes": [
+        "cmp-workbench__tiles"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1542,
+        "width": 1152,
+        "height": 114
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "2 Tiles Workbench\n            \n\n            \n                \n                    \n                 ",
+      "classes": [
+        "cmp-workbench__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 425,
+        "width": 1152,
+        "height": 82
+      }
+    },
+    {
+      "name": "div_2_Tiles_Workbench",
+      "tag": "div",
+      "text": "2 Tiles Workbench",
+      "classes": [
+        "cmp-workbench__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 425,
+        "width": 1152,
+        "height": 24
+      }
+    },
+    {
+      "name": "li_LoremIpsumDolorSitAmet",
+      "tag": "li",
+      "text": "Lorem ipsum dolor sit amet",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 465,
+        "width": 561,
+        "height": 42
+      }
+    },
+    {
+      "name": "span_16",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-workbench__tile-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 81,
+        "y": 486,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_LoremIpsumDolorSitAmet",
+      "tag": "span",
+      "text": "Lorem ipsum dolor sit amet",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 93,
+        "y": 478,
+        "width": 196,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "3 Tiles Workbench with External Links\n            \n\n            \n                \n                  ",
+      "classes": [
+        "cmp-workbench__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 773,
+        "width": 1152,
+        "height": 82
+      }
+    },
+    {
+      "name": "div_3_Tiles_WorkbenchWith_Externa",
+      "tag": "div",
+      "text": "3 Tiles Workbench with External Links",
+      "classes": [
+        "cmp-workbench__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 773,
+        "width": 1152,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "How can we help you today?\n            \n\n            \n                \n                    \n        ",
+      "classes": [
+        "cmp-workbench__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1122,
+        "width": 1152,
+        "height": 114
+      }
+    },
+    {
+      "name": "div_HowCanWeHelpYouToday",
+      "tag": "div",
+      "text": "How can we help you today?",
+      "classes": [
+        "cmp-workbench__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1122,
+        "width": 1152,
+        "height": 24
+      }
+    },
+    {
+      "name": "li_FindA_Form",
+      "tag": "li",
+      "text": "Find a Form",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1162,
+        "width": 266,
+        "height": 74
+      }
+    },
+    {
+      "name": "span_FindA_Form",
+      "tag": "span",
+      "text": "Find a Form",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 93,
+        "y": 1175,
+        "width": 86,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_FAQ_GlossaryAnd_Support",
+      "tag": "li",
+      "text": "FAQ, Glossary, and Support",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 360,
+        "y": 1162,
+        "width": 266,
+        "height": 74
+      }
+    },
+    {
+      "name": "span_FAQ_GlossaryAnd_Support",
+      "tag": "span",
+      "text": "FAQ, Glossary, and Support",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 389,
+        "y": 1175,
+        "width": 156,
+        "height": 32
+      }
+    },
+    {
+      "name": "li_Pension_Annuitant_Information",
+      "tag": "li",
+      "text": "Pension Annuitant Information",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 655,
+        "y": 1162,
+        "width": 266,
+        "height": 74
+      }
+    },
+    {
+      "name": "span_Pension_Annuitant_Information",
+      "tag": "span",
+      "text": "Pension Annuitant Information",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 684,
+        "y": 1175,
+        "width": 156,
+        "height": 32
+      }
+    },
+    {
+      "name": "li_28",
+      "tag": "li",
+      "text": "Delegate or Firm with policy beginning with 5, 6",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 951,
+        "y": 1162,
+        "width": 266,
+        "height": 74
+      }
+    },
+    {
+      "name": "span_29",
+      "tag": "span",
+      "text": "Delegate or Firm with policy beginning with 5, 6",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 980,
+        "y": 1175,
+        "width": 156,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "5 Tile Workbench with External Links\n            \n\n            \n                \n                   ",
+      "classes": [
+        "cmp-workbench__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench",
+        "cmp-workbench--three-col"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1502,
+        "width": 1152,
+        "height": 154
+      }
+    },
+    {
+      "name": "div_5_Tile_WorkbenchWith_External",
+      "tag": "div",
+      "text": "5 Tile Workbench with External Links",
+      "classes": [
+        "cmp-workbench__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1502,
+        "width": 1152,
+        "height": 24
+      }
+    },
+    {
+      "name": "li_RunAn_Illustration",
+      "tag": "li",
+      "text": "Run an Illustration",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1542,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "span_RunAn_Illustration",
+      "tag": "span",
+      "text": "Run an Illustration",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 93,
+        "y": 1555,
+        "width": 132,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Forms_Library",
+      "tag": "li",
+      "text": "Forms Library",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 458,
+        "y": 1542,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "span_Forms_Library",
+      "tag": "span",
+      "text": "Forms Library",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 487,
+        "y": 1555,
+        "width": 101,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Manage_Existing_Policies",
+      "tag": "li",
+      "text": "Manage Existing Policies",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 852,
+        "y": 1542,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "span_Manage_Existing_Policies",
+      "tag": "span",
+      "text": "Manage Existing Policies",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 881,
+        "y": 1555,
+        "width": 180,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_View_Latest_Rates",
+      "tag": "li",
+      "text": "View Latest Rates",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1614,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "span_View_Latest_Rates",
+      "tag": "span",
+      "text": "View Latest Rates",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 93,
+        "y": 1627,
+        "width": 132,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_SalesAnd_Marketing_Materials",
+      "tag": "li",
+      "text": "Sales and Marketing Materials",
+      "classes": [
+        "cmp-workbench__tile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tiles"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 458,
+        "y": 1614,
+        "width": 364,
+        "height": 42
+      }
+    },
+    {
+      "name": "span_SalesAnd_Marketing_Materials",
+      "tag": "span",
+      "text": "Sales and Marketing Materials",
+      "classes": [
+        "cmp-workbench__tile-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__tile-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 487,
+        "y": 1627,
+        "width": 223,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_42",
+      "tag": "div",
+      "text": "6 Tile Workbench\n            \n\n            \n                \n                    \n                  ",
+      "classes": [
+        "cmp-workbench__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench",
+        "cmp-workbench--three-col"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1922,
+        "width": 1152,
+        "height": 154
+      }
+    },
+    {
+      "name": "div_6_Tile_Workbench",
+      "tag": "div",
+      "text": "6 Tile Workbench",
+      "classes": [
+        "cmp-workbench__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1922,
+        "width": 1152,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet \n                            \n                        \n                  ",
+      "classes": [
+        "cmp-workbench__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-workbench"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 2343,
+        "width": 1152,
+        "height": 42
+      }
+    }
+  ],
+  "pageTitle": "Workbench",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

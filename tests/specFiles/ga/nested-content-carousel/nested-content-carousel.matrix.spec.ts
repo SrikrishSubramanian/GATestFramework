@@ -38,7 +38,6 @@ test.describe('Nested Content Carousel — State Matrix', () => {
       test(`[CAROUSEL-MATRIX-autoplay-${play}-${viewport.name}] @matrix @regression Nested Carousel (autoplay=${play}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        await loginToAEMAuthor(page);
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
 

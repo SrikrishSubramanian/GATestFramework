@@ -199,3 +199,31 @@ test.describe('SiteSearch — AEM Dialog Configuration', () => {
     expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });
+
+test.describe('SiteSearch — CSV Test Cases (GAAM-2)', () => {
+  // Epic: Site Search reskin — Commonly Searched Terms and PDF Result Detection
+  // Ref: https://bounteous.jira.com/wiki/spaces/GAFGPL/pages/264469114322947/Site+Search+Commonly+Searched+Terms+and+PDF+Result+Detection
+  test('[SS-015] @smoke @regression Commonly Searched Terms chips trigger a search', async ({ page }) => {
+    const pom = new SiteSearchPage(page);
+    await pom.navigate(BASE());
+    const commonTerms = page.locator('.common-term');
+    await expect(commonTerms.first()).toBeVisible();
+    expect(await commonTerms.count()).toBeGreaterThan(0);
+
+    await commonTerms.first().click();
+
+    // Selecting a common term executes a search and populates the results list
+    await expect(page.locator('.cmp-site-search__results-list li').first()).toBeVisible({ timeout: 10000 });
+    expect(page.url()).toMatch(/[#&]q=/);
+  });
+
+  test('[SS-016] @regression PDF result type is visually distinguished from page results', async ({ page }) => {
+    // No PDF-indexed content exists in this environment to assert against a
+    // real "PDF" indicator/badge selector — the style guide page's own meta
+    // description references "PDF result types", but no search query returns
+    // an actual .pdf-linked result item to verify against. Needs a content
+    // fixture with an indexed PDF asset before this can be implemented
+    // without guessing at a selector.
+    test.fixme();
+  });
+});

@@ -38,9 +38,8 @@ test.describe('Spacer — State Matrix', () => {
       test(`[SPACER-MATRIX-${size}-${viewport.name}] @matrix @regression Spacer (${size}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        await loginToAEMAuthor(page);
         const url = resolveComponentUrl('spacer');
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const spacer = page.locator('.cmp-spacer').first();
         await expect(spacer).toBeVisible();

@@ -38,9 +38,8 @@ test.describe('Tabs — State Matrix', () => {
       test(`[TABS-MATRIX-${state}-${viewport.name}] @matrix @regression Tabs (${state}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        await loginToAEMAuthor(page);
         const url = resolveComponentUrl('tabs');
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const root = page.locator('.cmp-tabs').first();
         await expect(root).toBeVisible();

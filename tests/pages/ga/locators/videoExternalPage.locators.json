@@ -1,4 +1,7 @@
 {
+  "component": "video-external",
+  "generatedAt": "2026-08-06T07:45:35.998Z",
+  "source": "dom",
   "entries": {
     "videoExternalPageRoot": {
       "strategies": [
@@ -14,6 +17,748 @@
         }
       ],
       "primary": "css"
+    },
+    "a_0": {
+      "name": "a_0",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button--color-secondary",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button--color-secondary')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Play_Video": {
+      "name": "Play_Video",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button--color-secondary",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Play Video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button--color-secondary')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Play Video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Should_Not_Appear": {
+      "name": "Should_Not_Appear",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button--color-secondary",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Should Not Appear']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button--color-secondary')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Should Not Appear",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Brightcove_Overlay": {
+      "name": "h2_Brightcove_Overlay",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "Brightcove Overlay",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Text_Right_White": {
+      "name": "h2_Text_Right_White",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "Text Right, White",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Text_Left_White": {
+      "name": "h2_Text_Left_White",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "Text Left, White",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Should_Not_Appear": {
+      "name": "h2_Should_Not_Appear",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "Should Not Appear",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Text_Right_Dark": {
+      "name": "h2_Text_Right_Dark",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "Text Right, Dark",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h2_Text_Left_Dark": {
+      "name": "h2_Text_Left_Dark",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "text",
+          "value": "Text Left, Dark",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "imgImage_9": {
+      "name": "imgImage_9",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external_image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-video-external_image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "PlayVideo": {
+      "name": "PlayVideo",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__play-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__play-button')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "PlayVideo_11": {
+      "name": "PlayVideo_11",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__image-play-button.remove-overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__image-play-button')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Pause": {
+      "name": "Pause",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__background-icon.active.cmp-video-external__background-icon--pause",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Pause']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__background-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Play": {
+      "name": "Play",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__background-icon.cmp-video-external__background-icon--play",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__background-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Play_Video_14": {
+      "name": "Play_Video_14",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__play-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play Video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__play-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Play Video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "Play_Video_15": {
+      "name": "Play_Video_15",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__image-play-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Play Video']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__image-play-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Play Video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "player_NpEaa2P7qZI": {
+      "name": "player_NpEaa2P7qZI",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "player-NpEaa2P7qZI",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-video-external__video.cmp-video-external__video--youtube",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__video')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_17": {
+      "name": "div_17",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__overlay')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__image-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__image-box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_19": {
+      "name": "span_19",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__label-overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-video-external__label-overlay')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__background-video-actions",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__background-video-actions')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_21": {
+      "name": "div_21",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_22": {
+      "name": "div_22",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box-play",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box-play')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_23": {
+      "name": "span_23",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "dialog_24": {
+      "name": "dialog_24",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-video-external__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_25": {
+      "name": "div_25",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__modal--content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__modal--content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_26": {
+      "name": "span_26",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__modal--close-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-video-external__modal--close-button')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_27": {
+      "name": "div_27",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__inner",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__inner')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "videoExternal_596ebec56a": {
+      "name": "videoExternal_596ebec56a",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "video-external-596ebec56a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-video-external__video.cmp-video-external__video--brightcove.video-js",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//video-js[contains(@class,'cmp-video-external__video')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Play_Video": {
+      "name": "div_Play_Video",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__overlay')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Play Video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_30": {
+      "name": "div_30",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__image-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__image-box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_Play_Video": {
+      "name": "span_Play_Video",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__label-overlay",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-video-external__label-overlay')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Play Video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_32": {
+      "name": "div_32",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Play_Video_33": {
+      "name": "div_Play_Video_33",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box-play",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box-play')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Play Video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Play_Video_34": {
+      "name": "span_Play_Video_34",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Play Video",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_35": {
+      "name": "div_35",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_36": {
+      "name": "div_36",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_37": {
+      "name": "div_37",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Should_Not_Appear": {
+      "name": "div_Should_Not_Appear",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box-play",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box-play')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Should Not Appear",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Should_Not_Appear": {
+      "name": "span_Should_Not_Appear",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Should Not Appear",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_40": {
+      "name": "div_40",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_41": {
+      "name": "div_41",
+      "component": "video-external",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-video-external__text-box",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-video-external__text-box')]",
+          "confidence": 0.6
+        }
+      ]
     }
   }
 }

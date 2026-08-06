@@ -1,4 +1,7 @@
 {
+  "component": "accordion",
+  "generatedAt": "2026-08-06T07:45:35.940Z",
+  "source": "dom",
   "entries": {
     "accordionPageRoot": {
       "strategies": [
@@ -14,6 +17,1462 @@
         }
       ],
       "primary": "css"
+    },
+    "button_WhatIs_Global_Atlantic": {
+      "name": "button_WhatIs_Global_Atlantic",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "2df179da4fb7433589902e52b1f354d0",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What is Global Atlantic?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_HowDo_IContactCustomerServ": {
+      "name": "button_HowDo_IContactCustomerServ",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "8b6269fa2ca94453bb929acca878b512",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How do I contact customer service?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "d82a2104be224e5abef7d94815ab0b3b": {
+      "name": "d82a2104be224e5abef7d94815ab0b3b",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "d82a2104be224e5abef7d94815ab0b3b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What products does Global Atlantic offer?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_WhereCan_IFindMyPolicyDoc": {
+      "name": "button_WhereCan_IFindMyPolicyDoc",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "847de299c77646cab86c8bd5f81d1b3e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Where can I find my policy documents?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Corporate_Pension_Plans": {
+      "name": "button_Corporate_Pension_Plans",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "8581534067304bf2b3856a730a1d0098",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate Pension Plans",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Public_Pension_Plans": {
+      "name": "button_Public_Pension_Plans",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "ef9b65a687304255bd6d08491f2319ff",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Public Pension Plans",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Sovereign_Wealth_Funds": {
+      "name": "button_Sovereign_Wealth_Funds",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "e4b5681763ea4a00a8384ae213be5a08",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sovereign Wealth Funds",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Insurance_Companies": {
+      "name": "button_Insurance_Companies",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "5b2db5e4156e43f182d12f532ec80449",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insurance Companies",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Endowments_Foundations": {
+      "name": "button_Endowments_Foundations",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "b1941991db6547679ed526988619ddb2",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Endowments & Foundations",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "button_Health_Care_Organizations": {
+      "name": "button_Health_Care_Organizations",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "14692fa1f2e346f782770ffa67c51853",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Health Care Organizations",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_WhatIs_Global_Atlantic": {
+      "name": "span_WhatIs_Global_Atlantic",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What is Global Atlantic?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_HowDo_IContactCustomerServ": {
+      "name": "span_HowDo_IContactCustomerServ",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How do I contact customer service?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_12": {
+      "name": "span_12",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What products does Global Atlantic offer?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_WhereCan_IFindMyPolicyDoc": {
+      "name": "span_WhereCan_IFindMyPolicyDoc",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Where can I find my policy documents?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Corporate_Pension_Plans": {
+      "name": "span_Corporate_Pension_Plans",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate Pension Plans",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Public_Pension_Plans": {
+      "name": "span_Public_Pension_Plans",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Public Pension Plans",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Sovereign_Wealth_Funds": {
+      "name": "span_Sovereign_Wealth_Funds",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sovereign Wealth Funds",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Insurance_Companies": {
+      "name": "span_Insurance_Companies",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insurance Companies",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Endowments_Foundations": {
+      "name": "span_Endowments_Foundations",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Endowments & Foundations",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Health_Care_Organizations": {
+      "name": "span_Health_Care_Organizations",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-title",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "heading",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-accordion__item-title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Health Care Organizations",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_7bcebf78d9": {
+      "name": "accordionItem_7bcebf78d9",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-7bcebf78d9",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_7bcebf78d9Panel": {
+      "name": "accordionItem_7bcebf78d9Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-7bcebf78d9-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_WhatIs_Global_Atlantic": {
+      "name": "div_WhatIs_Global_Atlantic",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What is Global Atlantic?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_24": {
+      "name": "div_24",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-indicator.cmp-accordion__item-indicator--blog",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-indicator')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "svg_25": {
+      "name": "svg_25",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-icon.cmp-accordion__item-icon--blog.cmp-accordion__item-icon--plus",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//svg[contains(@class,'cmp-accordion__item-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_26": {
+      "name": "div_26",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-indicator.cmp-accordion__item-indicator--default",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-indicator')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el9dba8944fa0b4b4d829fc9e294fc0d46": {
+      "name": "el9dba8944fa0b4b4d829fc9e294fc0d46",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "9dba8944fa0b4b4d829fc9e294fc0d46",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemF96058c61b": {
+      "name": "accordionItemF96058c61b",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-f96058c61b",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item.expanded",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemF96058c61bPanel": {
+      "name": "accordionItemF96058c61bPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-f96058c61b-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--expanded",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_HowDo_IContactCustomerServ": {
+      "name": "div_HowDo_IContactCustomerServ",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "How do I contact customer service?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "el278bdf8944194dd7bf093cd84c4b234e": {
+      "name": "el278bdf8944194dd7bf093cd84c4b234e",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "278bdf8944194dd7bf093cd84c4b234e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemE92b3cd16d": {
+      "name": "accordionItemE92b3cd16d",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-e92b3cd16d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemE92b3cd16dPanel": {
+      "name": "accordionItemE92b3cd16dPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-e92b3cd16d-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_34": {
+      "name": "div_34",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What products does Global Atlantic offer?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a6217b1854ec48089550c6c7e92e1c1d": {
+      "name": "a6217b1854ec48089550c6c7e92e1c1d",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "a6217b1854ec48089550c6c7e92e1c1d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_139cc6958a": {
+      "name": "accordionItem_139cc6958a",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-139cc6958a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_139cc6958aPanel": {
+      "name": "accordionItem_139cc6958aPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-139cc6958a-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_WhereCan_IFindMyPolicyDoc": {
+      "name": "div_WhereCan_IFindMyPolicyDoc",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Where can I find my policy documents?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "el984f50c553d34ab4bcbac8d916612321": {
+      "name": "el984f50c553d34ab4bcbac8d916612321",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "984f50c553d34ab4bcbac8d916612321",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_40": {
+      "name": "div_40",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemA3f45cd64a": {
+      "name": "accordionItemA3f45cd64a",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-a3f45cd64a",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item.expanded",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemA3f45cd64aPanel": {
+      "name": "accordionItemA3f45cd64aPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-a3f45cd64a-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--expanded",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Corporate_Pension_Plans": {
+      "name": "div_Corporate_Pension_Plans",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Corporate Pension Plans",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "c3daa9b285b04d30999c8ec6bc5cb6bc": {
+      "name": "c3daa9b285b04d30999c8ec6bc5cb6bc",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "c3daa9b285b04d30999c8ec6bc5cb6bc",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemCfae96c9ec": {
+      "name": "accordionItemCfae96c9ec",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-cfae96c9ec",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItemCfae96c9ecPanel": {
+      "name": "accordionItemCfae96c9ecPanel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-cfae96c9ec-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Public_Pension_Plans": {
+      "name": "div_Public_Pension_Plans",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Public Pension Plans",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a8d9c60a644a435a93c1f273de726fd6": {
+      "name": "a8d9c60a644a435a93c1f273de726fd6",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "a8d9c60a644a435a93c1f273de726fd6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_0765808f57": {
+      "name": "accordionItem_0765808f57",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-0765808f57",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_0765808f57Panel": {
+      "name": "accordionItem_0765808f57Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-0765808f57-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Sovereign_Wealth_Funds": {
+      "name": "div_Sovereign_Wealth_Funds",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Sovereign Wealth Funds",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "el54cdd17331a44f64a3166c849a6d8bb6": {
+      "name": "el54cdd17331a44f64a3166c849a6d8bb6",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "54cdd17331a44f64a3166c849a6d8bb6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_53": {
+      "name": "div_53",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_769a592d51": {
+      "name": "accordionItem_769a592d51",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-769a592d51",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_769a592d51Panel": {
+      "name": "accordionItem_769a592d51Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-769a592d51-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Insurance_Companies": {
+      "name": "div_Insurance_Companies",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Insurance Companies",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a985960babf44683b16a7315c5647e72": {
+      "name": "a985960babf44683b16a7315c5647e72",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "a985960babf44683b16a7315c5647e72",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_2e8d31b3a6": {
+      "name": "accordionItem_2e8d31b3a6",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-2e8d31b3a6",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_2e8d31b3a6Panel": {
+      "name": "accordionItem_2e8d31b3a6Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-2e8d31b3a6-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Endowments_Foundations": {
+      "name": "div_Endowments_Foundations",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Endowments & Foundations",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "el3330832fa2624965967c6c121cf8be2d": {
+      "name": "el3330832fa2624965967c6c121cf8be2d",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "3330832fa2624965967c6c121cf8be2d",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_590b2cc446": {
+      "name": "accordionItem_590b2cc446",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-590b2cc446",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "accordionItem_590b2cc446Panel": {
+      "name": "accordionItem_590b2cc446Panel",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "accordion-item-590b2cc446-panel",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__panel.cmp-accordion__panel--hidden",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__panel')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_Health_Care_Organizations": {
+      "name": "div_Health_Care_Organizations",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-header",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-header')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Health Care Organizations",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "el6eaedad62732470d990fa5bc9531796e": {
+      "name": "el6eaedad62732470d990fa5bc9531796e",
+      "component": "accordion",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "6eaedad62732470d990fa5bc9531796e",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
     }
   }
 }

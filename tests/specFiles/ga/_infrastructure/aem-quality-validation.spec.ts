@@ -69,9 +69,6 @@ test.describe('Performance — Cumulative Layout Shift (CLS)', () => {
   for (const sg of STYLE_GUIDE_PAGES) {
     test(`@regression ${sg.component} style guide CLS is below 0.25`, async ({ page }) => {
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
-      // Wait for any late layout shifts (fonts, lazy images, JS injection)
-      // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
 
       const cls = // 📏 TODO: Replace with measurement-utils
     await page.evaluate(() => {
@@ -109,7 +106,6 @@ test.describe('Performance — Largest Contentful Paint (LCP)', () => {
       // Production threshold would be 2.5s on publish, but author mode has overlay rendering overhead
       const startTime = Date.now();
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const lcp = // 📏 TODO: Replace with measurement-utils
     await page.evaluate(() => {
@@ -164,7 +160,6 @@ test.describe('Performance — No Oversized Images (>500KB)', () => {
       });
 
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       expect(
         oversizedImages.map(i => `${(i.size / 1024).toFixed(0)}KB: ${i.url}`),
@@ -185,7 +180,6 @@ test.describe('Link Integrity — Style Guide Pages', () => {
   for (const sg of STYLE_GUIDE_PAGES) {
     test(`@regression ${sg.component} has no broken internal links`, async ({ page }) => {
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       // Extract all internal links (href starting with / or the base URL)
       const links = // 📏 TODO: Replace with measurement-utils
@@ -229,7 +223,6 @@ test.describe('DAM Asset Integrity — Image Sources', () => {
   for (const sg of STYLE_GUIDE_PAGES) {
     test(`@regression ${sg.component} has no broken image sources`, async ({ page }) => {
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       // Check all <img> src attributes that point to DAM or internal paths
       const imageResults = // 📏 TODO: Replace with measurement-utils
@@ -259,7 +252,6 @@ test.describe('DAM Asset Integrity — Image Sources', () => {
 
     test(`@regression ${sg.component} all images have alt attributes`, async ({ page }) => {
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       // Every <img> must have an alt attribute (empty alt="" is valid for decorative images)
       const missingAlt = // 📏 TODO: Replace with measurement-utils
@@ -292,7 +284,6 @@ test.describe('DAM Asset Integrity — Background Images', () => {
       });
 
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       expect(
         failedBgImages,
@@ -313,7 +304,6 @@ test.describe('SEO — Page Title', () => {
   for (const pg of GA_PAGES) {
     test(`@regression ${pg.name} has a non-empty <title> tag`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const title = await page.title();
       expect(title, `${pg.name}: <title> is empty`).toBeTruthy();
@@ -325,7 +315,6 @@ test.describe('SEO — Page Title', () => {
 
     test(`@regression ${pg.name} title does not contain "undefined" or template placeholders`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const title = await page.title();
       const badPatterns = ['undefined', 'null', '${', '{{', 'TITLE_HERE', 'Page Title'];
@@ -342,7 +331,6 @@ test.describe('SEO — Page Title', () => {
   for (const sg of STYLE_GUIDE_PAGES) {
     test(`@regression ${sg.component} style guide page has descriptive title`, async ({ page }) => {
       await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const title = await page.title();
       expect(title, `${sg.component} style guide: <title> is empty`).toBeTruthy();
@@ -354,7 +342,6 @@ test.describe('SEO — Meta Description', () => {
   for (const pg of GA_PAGES) {
     test(`@regression ${pg.name} has a meta description`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const description = await page.getAttribute('meta[name="description"]', 'content');
       expect(
@@ -365,7 +352,6 @@ test.describe('SEO — Meta Description', () => {
 
     test(`@regression ${pg.name} meta description has appropriate length`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const description = await page.getAttribute('meta[name="description"]', 'content');
       if (!description) { test.skip(); return; }
@@ -386,7 +372,6 @@ test.describe('SEO — Open Graph Tags', () => {
   for (const pg of GA_PAGES) {
     test(`@regression ${pg.name} has Open Graph title`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const ogTitle = await page.getAttribute('meta[property="og:title"]', 'content');
       expect(
@@ -397,7 +382,6 @@ test.describe('SEO — Open Graph Tags', () => {
 
     test(`@regression ${pg.name} has Open Graph type`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const ogType = await page.getAttribute('meta[property="og:type"]', 'content');
       // og:type is recommended but may not be on every page — soft check
@@ -408,7 +392,6 @@ test.describe('SEO — Open Graph Tags', () => {
 
     test(`@regression ${pg.name} has Open Graph image`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const ogImage = await page.getAttribute('meta[property="og:image"]', 'content');
       expect(
@@ -431,7 +414,6 @@ test.describe('SEO — Canonical URL', () => {
   for (const pg of GA_PAGES) {
     test(`@regression ${pg.name} has a canonical URL`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const canonical = await page.getAttribute('link[rel="canonical"]', 'href');
       expect(
@@ -442,7 +424,6 @@ test.describe('SEO — Canonical URL', () => {
 
     test(`@regression ${pg.name} canonical URL does not contain /content/`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const canonical = await page.getAttribute('link[rel="canonical"]', 'href');
       if (!canonical) { test.skip(); return; }
@@ -463,7 +444,6 @@ test.describe('SEO — HTML Lang & Charset', () => {
   for (const pg of GA_PAGES) {
     test(`@regression ${pg.name} has lang attribute on <html>`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const lang = await page.getAttribute('html', 'lang');
       expect(
@@ -474,7 +454,6 @@ test.describe('SEO — HTML Lang & Charset', () => {
 
     test(`@regression ${pg.name} has charset meta tag`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const charset = // 📏 TODO: Replace with measurement-utils
     await page.evaluate(() => {
@@ -493,7 +472,6 @@ test.describe('SEO — Heading Hierarchy', () => {
   for (const pg of GA_PAGES) {
     test(`@regression ${pg.name} has exactly one <h1> element`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const h1Count = await page.locator('h1').count();
       expect(
@@ -504,7 +482,6 @@ test.describe('SEO — Heading Hierarchy', () => {
 
     test(`@regression ${pg.name} heading hierarchy does not skip levels`, async ({ page }) => {
       await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
-      await page.waitForLoadState('networkidle');
 
       const headingLevels = // 📏 TODO: Replace with measurement-utils
     await page.evaluate(() => {

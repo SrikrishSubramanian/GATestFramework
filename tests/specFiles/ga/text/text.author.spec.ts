@@ -401,7 +401,7 @@ test.describe('Text — CSV Test Cases (GAAM-1231)', () => {
     await expect(page.locator('.cmp-text').first()).toBeVisible();
     // Mobile
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.reload({ waitUntil: 'networkidle' });
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await expect(page.locator('.cmp-text').first()).toBeVisible();
   });
 });
@@ -417,7 +417,7 @@ test.describe('Text — CSV Test Cases (GAAM-1230)', () => {
     await expect(page.locator('.cmp-text').first()).toBeVisible();
     // Mobile
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.reload({ waitUntil: 'networkidle' });
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await expect(page.locator('.cmp-text').first()).toBeVisible();
   });
 });

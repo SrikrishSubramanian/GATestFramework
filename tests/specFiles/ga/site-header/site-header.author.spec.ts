@@ -609,3 +609,284 @@ test.describe('SiteHeader — AEM Dialog Configuration', () => {
     expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });
+
+test.describe('SiteHeader — CSV Test Cases (GAAM-397)', () => {
+  test('[SH-063] @smoke @regression CMS FE: Site Header - Desktop — AC1', async ({ page }) => {
+    const pom = new SiteHeaderPage(page);
+    await pom.navigate(BASE());
+    // As a site visitor on desktop, I want the Site Header to display the correct navigation experience for my role and authentication state — Agnostic, Identified, or Authenticated — so that I can efficiently navigate to content relevant to me.
+    // 
+    // ----
+    // 
+    // *Acceptance Criteria*
+    // 
+    // *Style System*
+    // 
+    // * Panel Style 
+    // ** Standard
+    // ** Progressive Disclosure
+    // The Styles selected should apply to the Navigation component within the panel (though style system options are provided here, the actual panel rendering happens in GAAM-794)
+    // * Reference Figma for all color, typography, spacing, and shadow specifications across all states and variants
+    // 
+    // *Functionality –* 
+    // 
+    // *Top Navigation Bar*
+    // 
+    // * The Top Navigation bar renders across all role states at the top of the page
+    // * The GA logo is always present; clicking it navigates to authored link(For ex: agnostic users to the agnostic homepage and identified/authenticated users to their role's landing page)
+    // * If a top nav item is a Direct Link, clicking it navigates to the destination page
+    // * If a top nav item is a Category Dropdown, clicking it expands a dropdown of sub-links rendered by the Navigation child component (GAAM-403); hovering a sub-link applies a fill highlight; external link items display an arrow icon that shifts 4px on hover
+    // * The Top Navigation does not stick on downward scroll; it slides back into view when the user intentionally scrolls upward (peekaboo behaviour)
+    // 
+    // *Login/Account Tray (Unauthenticated)*
+    // 
+    // * The login trigger renders with the authored Login Label, a person icon, and a downward chevron (↓)
+    // * On hover and focus, a pill/capsule outline appears around the trigger
+    // * Activating the trigger expands the login tray dropdown below the top nav
+    // * The tray is organised into authored sections, each with an optional section heading and a list of login links
+    // * External links display with an external arrow indicator and open in a new tab
+    // * The tray closes on click outside or Escape key
+    // 
+    // *Login/Account Tray (Authenticated)*
+    // Out of scope Handled in [https://bounteous.jira.com/browse/GAAM-823|https://bounteous.jira.com/browse/GAAM-823|smart-link] 
+    // 
+    // *Agnostic State (Role Not Selected)*
+    // 
+    // * The Main Navigation bar is not present in the agnostic state (Main Nav does not have at least 1 panel authored indicates that FE should render the Agnostic State)
+    // * The Role Selector renders integrated with the hero below the Top Navigation; reference Figma for the full-width load-in variant
+    // * The Role Selector trigger displays the authored Help Text and a downward chevron (↓)
+    // * Activating the Role Selector expands a dropdown displaying all authored role options
+    // * Clicking outside the expanded Role Selector collapses it without selection
+    // * On role selection, the user is navigated to the selected role's landing page and the role cookie is set (GAAM-899)
+    // * On scroll down past the hero area, a compact sticky Role Selector variant slides in and fixes to the top of the viewport; a 1px border appears beneath it on scroll; reference Figma for compact variant and spacing
+    // 
+    // *Identified State (Role Selected, Unauthenticated)*
+    // 
+    // * The Main Navigation bar renders below the Top Navigation bar
+    // * The Main Navigation displays the authored L1 category labels and the CTA button (e.g. "Get in touch →") at the far right
+    // * The role changer trigger (e.g. "Financial Professional ↓") renders on the left side of the Main Navigation bar; activating it expands the Role panel
+    // * Search icon is shown in the Top Navigation for identified users; clicking it navigates to the authored search page with focus on the search bar
+    // * The Main Navigation bar fixes sticky to the top of the viewport on scroll; a 1px border appears at the bottom of the sticky nav bar
+    // 
+    // *Role Panel*
+    // 
+    // * Activating the role changer trigger expands the Role panel as a full-width dropdown below the Main Navigation bar
+    // * All authored roles are listed; the currently active role is marked with a filled checkmark indicator
+    // * Inactive roles render in a de-emphasised treatment; reference Figma for active vs inactive role label states
+    // * Selecting a different role navigates the user to that role's landing page and updates the role cookie
+    // * The panel closes on click outside or Escape key
+    // 
+    // *Main Navigation – L1 Category Trigger States (reference Figma* {{_PrimaryNavBarCategory}}*)*
+    // 
+    // * Default: plain text label + downward chevron (↓), no background
+    // * Hover: pill/capsule outline around label + chevron
+    // * Active/Expanded: bold label, chevron rotates upward (↑), pill outline persists
+    // * Inactive (another panel open): de-emphasised treatment
+    // * Focus: keyboard focus ring visible
+    // 
+    // 
+    // 
+    // *Responsive Behavior*
+    // 
+    // * This story covers desktop breakpoints only
+    // * Mobile behavior is covered in GAAM-393
+    // * Reference Figma node {{3516-3486}} for all layout specifications at desktop breakpoints
+    // 
+    // *Accessibility (WCAG 2.2 Level AA)*
+    // 
+    // * The Site Header uses a {{<header>}} landmark; the Top Navigation and Main Navigation are each wrapped in a {{<nav>}} element with distinct {{aria-label}} values (e.g. "Top navigation" and "Primary navigation")
+    // * A skip navigation link ("Skip to main content") is the first focusable element in the header
+    // * All nav links and triggers are keyboard-reachable in logical Tab order and activatable via Enter or Space
+    // * Dropdown triggers (top nav, role changer, L1 categories) expose {{aria-expanded}} (true/false), {{aria-haspopup="true"}}, and {{aria-controls}} pointing to their respective panel IDs
+    // * Open panels are visible to assistive technology; closed panels use {{aria-hidden="true"}} or equivalent
+    // * Escape key closes the active open panel or tray and returns focus to the triggering element
+    // * 
+    // * The active role in the Role panel is communicated via {{aria-current}} or equivalent
+    // * External links include visually hidden text indicating they open in a new tab
+    // * "→" arrow icons within links are decorative and hidden from assistive technology ({{aria-hidden="true"}})
+    // * All interactive elements have visible focus indicators meeting WCAG 2.2 focus appearance requirements (SC 2.4.11)
+    // * Color contrast meets WCAG 2.2 Level AA across all visual states: reference Figma
+    // * Ensure no critical or major issues are flagged by the [Level Access Extension|https://chromewebstore.google.com/detail/level-access-extension/kgbmnemfaellbfabmkmmilchbhiigpdi]
+    // 
+    // *Additional Requirements*
+    // 
+    // * Update the component to match the styles represented in the Figma link above.
+    // * Update the documentation for the authoring guide.
+    // * Create a style guide page with all the variations.
+    // 
+    // *Out of Scope*
+    // 
+    // * Dialog configuration — covered in GAAM-394
+    // * Role selection cookie logic — covered in [https://bounteous.jira.com/browse/GAAM-899|https://bounteous.jira.com/browse/GAAM-899|smart-link]
+    // * Main Navigation panel implementation - covered in  GAAM-794
+    // * Navigation child component (link columns) — covered in GAAM-403
+    // * Image with Nested Content child component — covered in GAAM-389
+    // * Mobile behaviour — covered in GAAM-393
+    // * XF setup — covered in GAAM-792
+    // 
+    // *QA Checklist*
+    // 
+    // * Styles match Figma
+    // * Authoring Guide exists and is updated with all style variations
+    // * Style Guide page exists and reflects all variations
+    // * Create test landing pages to test role change across all states (Agnostic, Identified, Authenticated)
+    test.fixme();
+  });
+});
+
+test.describe('SiteHeader — CSV Test Cases (GAAM-394)', () => {
+  test('[SH-064] @smoke @regression CMS BE: Site Header — AC1', async ({ page }) => {
+    const pom = new SiteHeaderPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: As a content author, I want to configure the Site Header component through a single AEM dialog — including top navigation links, role selector options, main navigation categories, mega-menu panel content, and login/search controls — so that the complete header experience can be managed.
+    // 
+    // ----
+    // 
+    // *Background / Context*
+    // 
+    // The component will be delivered inside an Experience Fragment (covered in GAAM-792) and shared sitewide. Each site context (agnostic, role-based) will have its own XF instance. 
+    // 
+    // ----
+    // 
+    // *Dialog Field Specifications*
+    // The dialog uses a tabbed layout with three tabs.
+    // 
+    // *_Tab 1:_* _Top Navigation_ 
+    // 
+    // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
+    // |Logo Image|DAM asset picker|Yes|Select the GA logo from the DAM| |
+    // |Logo Alt Text|Text field|Yes|Descriptive alt text for the logo. Used by screen readers. Max 100 characters.| |
+    // |Logo Link|Path field|Yes|Destination page the logo links to. For the agnostic site XF, point to the agnostic home page. For role-based site XFs, point to the relevant role landing page.| |
+    // |Top Nav Items|Multifield|Yes|Add one entry per top nav link or dropdown category. Supports add, remove, and reorder.| |
+    // |— Top Nav Label|Text field|Yes|Display label for this top nav item (e.g. "About Us"). Max 40 characters.| |
+    // |— Top Nav Type|Dropdown|Yes|Select "*Direct Link*" for a straight navigation link. 
+    // Select "*Category Dropdown*" if clicking reveals sub-links.|Drives conditional visibility of sub-fields|
+    // |— Top Nav Link|Path field|Conditional|Required when Item Type = Direct Link. Supports internal path picker and external URLs.|Hidden when Item Type = Dropdown Category|
+    // |— Secondary Nav Links|Multifield|Conditional|Only shown when Item Type = Dropdown Category. Add one entry per sub-link.|Hidden when Item Type = Direct Link|
+    // |— — Secondary Nav Link Label|Text field|Yes (within multifield)|Display label for this sub-link. Max 60 characters.| |
+    // |— — Secondary Nav  Link|Path field|Yes (within multifield)|Internal path or external URL| |
+    // |Search Page Path|Path field|Optional|Required when Search Enabled = On. Path to the search page.|Hidden when Search Enabled = Off|
+    // |Search Label|Text field|Optional|Accessible label for the search icon (e.g. "Search"). Max 40 characters.|Hidden when Search Enabled = Off|
+    // |Login Label|Text field|Yes|Label on the login trigger before authentication (e.g. "Login"). Max 40 characters. Default to “Login“|Default to “Login“|
+    // |Login Tray Sections|Multifield|Yes|Repeatable group. Each entry creates a labelled section within the login tray (e.g. "Individuals and Policyholders").| |
+    // |— Section Heading|Text field|No|Optional section heading label above the login links in this group. Max 80 characters.| |
+    // |— Section Links|Multifield|Yes (within section)|One entry per login link within this section| |
+    // |— — Link Label|Text field|Yes|Display label for this login link (e.g. "Annuity Policy Holder Login"). Max 80 characters.| |
+    // |— — Link URL|Path field|Yes|Internal path or external URL| |
+    // 
+    // Authenticated State section (within Tab 1): Authoring guidance to indicate that this section needs to be authored only if the header has authenticated state.
+    // 
+    // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
+    // |Welcome Back Label|Text field|No|Prefix label shown before the user's first name in the authenticated tray (e.g. "Welcome back,"). Max 40 characters.|Default to "Welcome back," when left blank|
+    // |Manage Account Label|Text field|No|Display label for the Manage Account link in the authenticated tray (e.g. "Manage Professional Account"). Max 60 characters.|Default to "Manage Professional Account" when left blank|
+    // |Manage Account URL|Path field|Conditional|Destination URL for the Manage Account link. Supports internal path picker and external URLs.
+    // Required if Manage Account Label is set| |
+    // |Logout Label|Text field|No|Display label for the logout trigger in the authenticated tray (e.g. "Log out"). Max 40 characters.|Default to "Log out" when left blank|
+    // |Post-Logout Redirect URL|Path field|No|Page the user is redirected to after logout completes (e.g. role landing page). Supports internal path picker and external URLs.|This field only controls the redirect destination.|
+    // 
+    // 
+    // 
+    // *_Tab 2:_* _Role Selector_ 
+    // 
+    // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
+    // |Mobile Headline|Text field|Yes|80 characters recommended
+    // Bold question or prompt displayed at the top of the Role Selector card on mobile (e.g. "Looking for specific solutions, resources, and tools?").| |
+    // |Mobile Description|Text field|No|150 characters recommended
+    // Supporting message displayed beneath the headline on mobile (e.g. "Select your role to access everything Global Atlantic has to offer."). Leave blank if no supporting message is needed.| |
+    // |Default Dropdown Text|Text field|No|Prompt text shown above the role options (e.g. "Select a role to explore more…"). Max 100 characters.|Default to Select a role to explore more…|
+    // |Role Items|Multifield|Yes|Add one entry per selectable role. Supports add, remove, and reorder. Min 1, max 5 entries.|Min/max validation per GAAM-308|
+    // |— Role Title|Text field|Yes|Display label for this role (e.g. "Financial Professional"). Max 60 characters.| |
+    // |— Role URL|Path field|Yes|Landing page destination for this role. Supports internal path picker and external URLs.|On selection, role cookie is set — see GAAM-899|
+    // 
+    // 
+    // 
+    // *_Tab 3:_* _Main Navigation_ 
+    // 
+    // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
+    // |CTA Label|Text field|No|Label for the "Get in touch" CTA button in the main nav bar. Max 40 characters.| |
+    // |CTA URL|Path field|No|Destination URL for the main nav CTA button.| |
+    // |Panels|Panel container|No|Add one panel per top-level navigation category (e.g. Solutions, Resources). Panels can be added, renamed, reordered, and removed via the Select Panel toolbar action on the component.|Implemented using the same panel-container pattern as the Accordion Tabs Feature component. Each panel is managed through the component toolbar Select Panel action.|
+    // |— Panel Label|Text field|Yes|Display label for this category shown in the nav bar and as the panel identifier in the Select Panel picker. Max 60 characters.| |
+    // 
+    // *Panel Dialog fields:*
+    // 
+    // |— Panel Headline|Text field|No|Optional headline shown at the top-left of the expanded panel. Max 120 characters.| |
+    // |— Panel CTA Label|Text field|No|Optional CTA label shown in the panel (e.g. "All Annuity Products"). Max 60 characters. Both Panel CTA Label and URL must be filled or both left empty.| |
+    // |— Panel CTA URL|Path field|No|Destination URL for the panel-level CTA. Both Panel CTA Label and URL must be filled or both left empty.| |
+    // |— Authenticated Only|Toggle / Checkbox|No|When enabled, this panel is shown only in the authenticated header state. Enable for panels like "My Business".| |
+    // |— Additional Login Subheadline|Text field|Not|When authored, some links in this panel require additional SSO login. A lock icon legend and subheadline will appear in the panel to indicate this to users. Only relevant when Authenticated Only is enabled.Explanatory label shown alongside the lock icon legend (e.g. "Indicates additional login required"). Max 80 characters. Only visible when Additional Login Required is enabled.| |
+    // 
+    // *Panel Child Referernces:*
+    // 
+    // |— Image with Nested Content|Child component reference|—|Right column of the Main menu panel - Reference to Image with Nested Content child for right column.|Delegates image authoring to Image with Nested Content component (GAAM-389)|
+    // |— Navigation Items|Child component reference|—|Left Column of the Main menu panel - Reference to Navigation component child for link columns.|Delegates link authoring to Navigation component (GAAM-403)|
+    // 
+    // *Note:* Layout variant (Standard vs Progressive Disclosure Panel style) will be handled as an FE styling option.
+    // 
+    // *Global properties:*
+    // 
+    // 
+    // |Cookie Duration|*Global property*
+    // Number field|Yes|Number of days the role selection cookie persists (e.g. 30). Confirm default value with architect/PO.|Carried forward from GAAM-308. Used by GAAM-899 cookie logic.|
+    // 
+    // ----
+    // 
+    // *Acceptance Criteria*
+    // 
+    // *Dialog Structure*
+    // 
+    // * The component dialog uses a tabbed layout with three tabs: Top Navigation, Role Selector, and Main Navigation
+    // * All multifield groups support add, remove, and reorder
+    // * Nested multifields (Dropdown Items, Login Tray Sections → Section Links) are supported within their parent multifield
+    // * An info (?) icon is present on complex fields (e.g. Panel Style, Cookie Duration) with authoring guidance text
+    // 
+    // *Field Behavior & Validation*
+    // 
+    // * Logo Alt Text, Logo Link, at least one Role Item, and at least one L1 Navigation Item are required — the dialog cannot be saved without them
+    // * Role Items multifield enforces a minimum of 1 and maximum of 5 entries, consistent with GAAM-308
+    // * Cookie Duration is a required number field; value represents days
+    // * Panel CTA Label and Panel CTA URL must both be filled or both left empty — partial completion surfaces a validation warning
+    // * All URL/path fields support the AEM path picker for internal pages and accept external URLs
+    // * External link auto-detection applies to all URL fields using the internal domains list established in the Workbench component implementation
+    // * All optional fields can be saved empty without errors
+    // 
+    // *Conditional Logic*
+    // 
+    // * Item Link and Open in New Tab (top level) are shown only when Item Type = Direct Link; Dropdown Items are shown only when Item Type = Dropdown Category
+    // * Search Page Path and Search Label are shown only when Search Enabled = On
+    // * Additional Login Required toggle is only relevant when Authenticated Only is enabled
+    // * Additional Login Sub headline field is shown only when Additional Login Required is on; hidden and not rendered when off
+    // * Manage Account URL is required when Manage Account Label is filled
+    // 
+    // *Developer Instructions*
+    // 
+    // * Component available only for GA
+    // * Available in only in XF Template
+    // * Each L1 panel exposes a dedicated reference for the *Navigation component* (GAAM-403) and a dedicated reference for the *Image with Nested Content component* (GAAM-389).
+    // * Refer to the Accordion Tabs Feature component for the L1 panel organization
+    // * Use the internal domains generic list (established in Workbench implementation) for external link auto-detection on all URL fields
+    // * Logout endpoint{color:#bf2600} {color}to be configure in OSGI  - See [https://bounteous.jira.com/browse/GAAM-728?search_id=90a4bb8d-c32c-4438-bf54-e1981fdd29aa|https://bounteous.jira.com/browse/GAAM-728?search_id=90a4bb8d-c32c-4438-bf54-e1981fdd29aa|smart-link] 
+    // ** SAML 2.0 SLO endpoint for our PingOne Test environment: [https://login-test.globalatlantic.com/saml20/idp/slo|https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin-test.globalatlantic.com%2Fsaml20%2Fidp%2Fslo&data=05%7C02%7Crashmi.donthi%40bounteous.com%7C7b50fcf3e595412442d508dea47e9b4a%7C9d343c00481447ebabcde3a0761d628b%7C1%7C0%7C639129060900261923%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bX1lnN9HUXxbaQOeJLu6jKyg%2BdPMadVvzsMj%2F%2FpJVYc%3D&reserved=0]
+    // * Cookie Duration field feeds the role selection cookie expiry logic in GAAM-899
+    // * Create Author Documentation
+    // * Write JUnit tests
+    // 
+    // *Out of Scope*
+    // 
+    // * FE rendering, interaction states, animation, and responsive behaviour — covered in GAAM-397 (Desktop) and GAAM-393 (Mobile)
+    // * Role state cookie creation and management logic — covered in GAAM-899
+    // * XF setup, template policy, and header region locking — covered in GAAM-792
+    // * Navigation child component (link columns) — authored via parsys within each panel container; covered in GAAM-403
+    // * Image with Nested Content child component — authored via optional parsys within each panel container; covered in GAAM-389
+    // * Authenticated state dialog fields (Welcome Back, Manage Account, Logout) — covered in GAAM-827
+    // 
+    // *QA Checklist*
+    // 
+    // * Authors can create/add the component on any applicable page template
+    // * All mandatory fields must be completed before clicking "Done"
+    // * All optional fields can be left empty without errors
+    // * Character guidance is included in information areas / Author Guide
+    // * Author Documentation can be accessed by clicking the ? on the component dialog and covers all required details for authoring
+    test.fixme();
+  });
+});

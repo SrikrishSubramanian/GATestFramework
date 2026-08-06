@@ -38,9 +38,8 @@ test.describe('Hero Fifty-Fifty — State Matrix', () => {
       test(`[H5050-MATRIX-${layout}-${viewport.name}] @matrix @regression Hero 50/50 (${layout}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        await loginToAEMAuthor(page);
         const url = resolveComponentUrl('hero-fifty-fifty');
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const hero = page.locator('.cmp-hero-fifty-fifty').first();
         await expect(hero).toBeVisible();

@@ -11,7 +11,6 @@ import * as path from 'path';
 
 interface ComponentSummary {
   component: string;
-  jiraTicket?: string;
   totalTests: number;
   passed: number;
   failed: number;
@@ -44,18 +43,15 @@ export class HierarchicalTestReporter implements Reporter {
 
   onTestEnd(test: TestCase, result: TestResult): void {
     // Extract component from test path
-    const component = this.extractComponent(test.file);
-    const jiraTicket = this.extractJiraTicket(test.title);
-
-    // Create key for grouping
-    const componentKey = jiraTicket || component;
+    const component = this.extractComponent(test.location.file);
+    // Group by component — ticket/test IDs already appear in each test's title
+    const componentKey = component;
 
     // Get or create component summary
     let summary = this.componentSummaries.get(componentKey);
     if (!summary) {
       summary = {
         component,
-        jiraTicket,
         totalTests: 0,
         passed: 0,
         failed: 0,
@@ -75,7 +71,7 @@ export class HierarchicalTestReporter implements Reporter {
       name: test.title,
       status: result.status as 'passed' | 'failed' | 'skipped',
       duration: result.duration,
-      error: result.errors?.[0]?.message,
+      error: this.stripAnsi(result.errors?.[0]?.message),
       what,
       condition
     });
@@ -119,7 +115,7 @@ export class HierarchicalTestReporter implements Reporter {
         if (a.status !== b.status) {
           return a.status === 'failed' ? -1 : 1;
         }
-        return (a.jiraTicket || a.component).localeCompare(b.jiraTicket || b.component);
+        return a.component.localeCompare(b.component);
       }
     );
 
@@ -431,7 +427,7 @@ export class HierarchicalTestReporter implements Reporter {
         <div class="component-section" id="component-${index}">
           <div class="component-header ${comp.status}" onclick="toggleComponent(${index})">
             <div class="component-title">
-              <h2>${comp.jiraTicket ? `[${comp.jiraTicket}] ` : ''}${comp.component}</h2>
+              <h2>${comp.component}</h2>
               <p>${comp.passed}/${comp.totalTests} tests passed</p>
             </div>
             <div class="component-stats">
@@ -448,18 +444,18 @@ export class HierarchicalTestReporter implements Reporter {
                 test => `
               <div class="test-item ${test.status}">
                 <div class="test-name">
-                  ${test.name}
+                  ${this.escapeHtml(test.name)}
                   <span class="status-badge ${test.status}">${test.status.toUpperCase()}</span>
                 </div>
 
                 <div class="test-details">
                   <div class="test-detail-item">
                     <label>🎯 What it tests:</label>
-                    <value>${test.what}</value>
+                    <value>${this.escapeHtml(test.what)}</value>
                   </div>
                   <div class="test-detail-item">
                     <label>✓ Condition checked:</label>
-                    <value>${test.condition}</value>
+                    <value>${this.escapeHtml(test.condition)}</value>
                   </div>
                   <div class="test-detail-item">
                     <label>⏱️ Duration:</label>
@@ -469,7 +465,7 @@ export class HierarchicalTestReporter implements Reporter {
 
                 ${
                   test.error
-                    ? `<div class="test-error"><strong>Error:</strong> ${test.error}</div>`
+                    ? `<div class="test-error"><strong>Error:</strong> ${this.escapeHtml(test.error)}</div>`
                     : ''
                 }
               </div>
@@ -516,15 +512,21 @@ export class HierarchicalTestReporter implements Reporter {
   }
 
   private extractComponent(filePath: string): string {
-    const match = filePath.match(/\/ga\/([^/]+)\//);
+    const match = filePath.match(/[\\/]ga[\\/]([^\\/]+)[\\/]/);
     if (match) return match[1];
     return 'unknown';
   }
 
-  private extractJiraTicket(testTitle: string): string | undefined {
-    const match = testTitle.match(/\[(.*?-\d+)\]/);
-    if (match) return match[1];
-    return undefined;
+  private stripAnsi(text?: string): string | undefined {
+    if (!text) return text;
+    return text.replace(/\x1b\[[0-9;]*m/g, '');
+  }
+
+  private escapeHtml(text: string): string {
+    return text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
   }
 
   private parseTestTitle(

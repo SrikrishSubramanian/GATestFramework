@@ -1,6 +1,6 @@
 {
   "component": "insights-listing",
-  "generatedAt": "2026-07-14T15:05:17.616Z",
+  "generatedAt": "2026-08-06T07:42:28.442Z",
   "source": "dom",
   "entries": {
     "button_Professionals": {
@@ -22,7 +22,8 @@
           "value": "Professionals",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.441Z"
     },
     "button_Individuals": {
       "name": "button_Individuals",
@@ -43,7 +44,8 @@
           "value": "Individuals",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.441Z"
     },
     "button_Corp": {
       "name": "button_Corp",
@@ -64,7 +66,8 @@
           "value": "Corp",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.441Z"
     },
     "button_Corporate_Agnostic": {
       "name": "button_Corporate_Agnostic",
@@ -85,7 +88,8 @@
           "value": "Corporate (Agnostic)",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.441Z"
     },
     "button_Financial_Professionals": {
       "name": "button_Financial_Professionals",
@@ -106,7 +110,8 @@
           "value": "Financial Professionals",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.441Z"
     },
     "CloseFilterPanel": {
       "name": "CloseFilterPanel",
@@ -127,7 +132,8 @@
           "value": "//button[contains(@class,'cmp-insights-listing__filter-close')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.441Z"
     },
     "ApplySelectedFilters": {
       "name": "ApplySelectedFilters",
@@ -153,7 +159,8 @@
           "value": "Apply Filters",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "ClearAllFilters": {
       "name": "ClearAllFilters",
@@ -179,7 +186,8 @@
           "value": "Clear All Filters",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "OpenFilters": {
       "name": "OpenFilters",
@@ -205,7 +213,8 @@
           "value": "Filter",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "ClearAllActiveFilters": {
       "name": "ClearAllActiveFilters",
@@ -231,7 +240,8 @@
           "value": "Clear All Filters",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "Prev": {
       "name": "Prev",
@@ -257,7 +267,8 @@
           "value": "Prev",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "Next": {
       "name": "Next",
@@ -283,7 +294,8 @@
           "value": "Next",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "h2_Explore_All_Insights": {
       "name": "h2_Explore_All_Insights",
@@ -304,7 +316,8 @@
           "value": "Explore All Insights",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "InsightsPagination": {
       "name": "InsightsPagination",
@@ -325,7 +338,8 @@
           "value": "//nav[contains(@class,'cmp-insights-listing__pagination')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "ul_14": {
       "name": "ul_14",
@@ -346,7 +360,8 @@
           "value": "//ul[contains(@class,'cmp-insights-listing__featured-topics-list')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "ul_15": {
       "name": "ul_15",
@@ -367,7 +382,8 @@
           "value": "//ul[contains(@class,'cmp-insights-listing__cards')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "ul_16": {
       "name": "ul_16",
@@ -388,7 +404,8 @@
           "value": "//ul[contains(@class,'cmp-insights-listing__pagination-pages')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "FilterInsights": {
       "name": "FilterInsights",
@@ -414,7 +431,8 @@
           "value": "//div[contains(@class,'cmp-insights-listing__filter-panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "div_18": {
       "name": "div_18",
@@ -430,7 +448,8 @@
           "value": "//div[contains(@class,'cmp-insights-listing__featured-topics')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "p_JumpToA_Featured_Topic": {
       "name": "p_JumpToA_Featured_Topic",
@@ -451,7 +470,8 @@
           "value": "Jump to a Featured Topic",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "li_Professionals": {
       "name": "li_Professionals",
@@ -472,7 +492,8 @@
           "value": "Professionals",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "span_21": {
       "name": "span_21",
@@ -488,7 +509,8 @@
           "value": "//span[contains(@class,'cmp-insights-listing__featured-topic-btn-check')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "li_Individuals": {
       "name": "li_Individuals",
@@ -509,7 +531,8 @@
           "value": "Individuals",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "li_Corp": {
       "name": "li_Corp",
@@ -530,7 +553,8 @@
           "value": "Corp",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "li_Corporate_Agnostic": {
       "name": "li_Corporate_Agnostic",
@@ -551,7 +575,8 @@
           "value": "Corporate (Agnostic)",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "li_Financial_Professionals": {
       "name": "li_Financial_Professionals",
@@ -572,7 +597,8 @@
           "value": "Financial Professionals",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "div_26": {
       "name": "div_26",
@@ -588,7 +614,8 @@
           "value": "//div[contains(@class,'cmp-insights-listing__body')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "aside_27": {
       "name": "aside_27",
@@ -604,7 +631,8 @@
           "value": "//aside[contains(@class,'cmp-insights-listing__sidebar')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "div_FilterBy_Topics": {
       "name": "div_FilterBy_Topics",
@@ -625,7 +653,8 @@
           "value": "Filter by Topics",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "p_FilterBy_Topics": {
       "name": "p_FilterBy_Topics",
@@ -646,7 +675,8 @@
           "value": "Filter by Topics",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "p_FilterBy_Topics_30": {
       "name": "p_FilterBy_Topics_30",
@@ -667,7 +697,8 @@
           "value": "Filter by Topics",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "div_31": {
       "name": "div_31",
@@ -683,7 +714,8 @@
           "value": "//div[contains(@class,'cmp-insights-listing__filter-panel-footer')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "main_32": {
       "name": "main_32",
@@ -699,7 +731,8 @@
           "value": "//main[contains(@class,'cmp-insights-listing__main')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "div_33": {
       "name": "div_33",
@@ -715,7 +748,8 @@
           "value": "//div[contains(@class,'cmp-insights-listing__summary-bar')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "p_0_Insights": {
       "name": "p_0_Insights",
@@ -736,7 +770,8 @@
           "value": "0 Insights",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "span_Filter": {
       "name": "span_Filter",
@@ -757,7 +792,8 @@
           "value": "Filter",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "span_36": {
       "name": "span_36",
@@ -773,7 +809,8 @@
           "value": "//span[contains(@class,'cmp-insights-listing__filter-trigger-badge')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "div_37": {
       "name": "div_37",
@@ -794,7 +831,8 @@
           "value": "No insights were found. Please try a different filter.",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "span_38": {
       "name": "span_38",
@@ -810,7 +848,8 @@
           "value": "//span[contains(@class,'cmp-insights-listing__empty-state-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     },
     "p_39": {
       "name": "p_39",
@@ -831,7 +870,8 @@
           "value": "No insights were found. Please try a different filter.",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:28.442Z"
     }
   }
 }

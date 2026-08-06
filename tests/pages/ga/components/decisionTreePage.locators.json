@@ -1,6 +1,6 @@
 {
   "component": "decision-tree",
-  "generatedAt": "2026-07-14T15:04:28.772Z",
+  "generatedAt": "2026-08-06T07:43:35.322Z",
   "source": "dom",
   "entries": {
     "a_Optional_CTA": {
@@ -32,7 +32,8 @@
           "value": "Optional CTA",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "ShowOrHideOptions": {
       "name": "ShowOrHideOptions",
@@ -53,7 +54,8 @@
           "value": "//button[contains(@class,'cmp-decision-tree-step__toggle')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Spouse": {
       "name": "Spouse",
@@ -79,7 +81,8 @@
           "value": "Spouse\n            Optional Description",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Traditional": {
       "name": "Traditional",
@@ -105,7 +108,8 @@
           "value": "Traditional",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Roth": {
       "name": "Roth",
@@ -131,7 +135,8 @@
           "value": "Roth",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "MoreInformationAbout_DeathO": {
       "name": "MoreInformationAbout_DeathO",
@@ -152,7 +157,8 @@
           "value": "//button[contains(@class,'cmp-decision-tree-step__info-trigger')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Close": {
       "name": "Close",
@@ -173,7 +179,8 @@
           "value": "//button[contains(@class,'cmp-decision-tree-step__modal-close')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Today": {
       "name": "Today",
@@ -199,7 +206,8 @@
           "value": "Today",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Before_1120": {
       "name": "Before_1120",
@@ -225,7 +233,8 @@
           "value": "Before 1/1/20",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "el1120OrLater": {
       "name": "el1120OrLater",
@@ -251,7 +260,8 @@
           "value": "1/1/20 or later",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "NonSpouse": {
       "name": "NonSpouse",
@@ -277,7 +287,8 @@
           "value": "Non-Spouse",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "SeeThrough_Trust": {
       "name": "SeeThrough_Trust",
@@ -303,7 +314,8 @@
           "value": "See-Through Trust",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Successor_Beneficiary": {
       "name": "Successor_Beneficiary",
@@ -329,7 +341,8 @@
           "value": "Successor Beneficiary",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "h3_RequiredBeginningDate": {
       "name": "h3_RequiredBeginningDate",
@@ -355,7 +368,8 @@
           "value": "Required beginning date",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Step_1_Select_RelationshipTo_": {
       "name": "Step_1_Select_RelationshipTo_",
@@ -381,7 +395,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-step__options')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "Select_Market_Type": {
       "name": "Select_Market_Type",
@@ -407,7 +422,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-step__options')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "decisionTreeStep_62fd22cd19Modal": {
       "name": "decisionTreeStep_62fd22cd19Modal",
@@ -433,7 +449,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-step__modal')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "DeathOf_Original_IRA_Owner": {
       "name": "DeathOf_Original_IRA_Owner",
@@ -459,7 +476,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-step__options')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "p_Select_RelationshipTo_IRA_Own": {
       "name": "p_Select_RelationshipTo_IRA_Own",
@@ -485,7 +503,8 @@
           "value": "Select Relationship to IRA Owner",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "p_Select_Market_Type": {
       "name": "p_Select_Market_Type",
@@ -511,7 +530,8 @@
           "value": "Select Market Type",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "p_DeathOf_Original_IRA_Owner": {
       "name": "p_DeathOf_Original_IRA_Owner",
@@ -537,7 +557,8 @@
           "value": "Death of Original IRA Owner",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_21": {
       "name": "div_21",
@@ -558,7 +579,8 @@
           "value": "Step 1\n                Select Relationship to IRA Owner",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_22": {
       "name": "div_22",
@@ -579,7 +601,8 @@
           "value": "Step 1\n                Select Relationship to IRA Owner",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Step_1": {
       "name": "span_Step_1",
@@ -605,7 +628,8 @@
           "value": "Step 1",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Spouse": {
       "name": "span_Spouse",
@@ -626,7 +650,8 @@
           "value": "Spouse",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Optional_Description": {
       "name": "span_Optional_Description",
@@ -647,7 +672,8 @@
           "value": "Optional Description",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_26": {
       "name": "span_26",
@@ -663,7 +689,8 @@
           "value": "//span[contains(@class,'cmp-decision-tree-option__check')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_27": {
       "name": "div_27",
@@ -679,7 +706,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_28": {
       "name": "div_28",
@@ -700,7 +728,8 @@
           "value": "Step 2\n                Select Market Type",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_29": {
       "name": "div_29",
@@ -721,7 +750,8 @@
           "value": "Step 2\n                Select Market Type",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Step_2": {
       "name": "span_Step_2",
@@ -747,7 +777,8 @@
           "value": "Step 2",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Traditional": {
       "name": "span_Traditional",
@@ -768,7 +799,8 @@
           "value": "Traditional",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_32": {
       "name": "div_32",
@@ -784,7 +816,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Roth": {
       "name": "span_Roth",
@@ -805,7 +838,8 @@
           "value": "Roth",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_34": {
       "name": "div_34",
@@ -821,7 +855,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_35": {
       "name": "div_35",
@@ -842,7 +877,8 @@
           "value": "Step 3\n                Death of Original IRA Owner",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_36": {
       "name": "div_36",
@@ -863,7 +899,8 @@
           "value": "Step 3\n                Death of Original IRA Owner",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Step_3": {
       "name": "span_Step_3",
@@ -889,7 +926,8 @@
           "value": "Step 3",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_38": {
       "name": "div_38",
@@ -905,7 +943,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-step__modal-dialog')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_39": {
       "name": "div_39",
@@ -921,7 +960,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-step__modal-body')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Today": {
       "name": "span_Today",
@@ -942,7 +982,8 @@
           "value": "Today",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_41": {
       "name": "div_41",
@@ -958,7 +999,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_42": {
       "name": "div_42",
@@ -974,7 +1016,8 @@
           "value": "//div[contains(@class,'cmp-feature-banner__wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_43": {
       "name": "div_43",
@@ -990,7 +1033,8 @@
           "value": "//div[contains(@class,'cmp-feature-banner__media')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_44": {
       "name": "div_44",
@@ -1006,7 +1050,8 @@
           "value": "//div[contains(@class,'cmp-feature-banner__image')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_45": {
       "name": "div_45",
@@ -1022,7 +1067,8 @@
           "value": "//div[contains(@class,'cmp-feature-banner__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_46": {
       "name": "div_46",
@@ -1038,7 +1084,8 @@
           "value": "//div[contains(@class,'cmp-feature-banner__content-wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_47": {
       "name": "div_47",
@@ -1054,7 +1101,8 @@
           "value": "//div[contains(@class,'cmp-feature-banner__headline-block')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_OptionalEyebrow": {
       "name": "div_OptionalEyebrow",
@@ -1075,7 +1123,8 @@
           "value": "Optional eyebrow",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_LoremIpsumDolorSitAmetCon": {
       "name": "div_LoremIpsumDolorSitAmetCon",
@@ -1096,7 +1145,8 @@
           "value": "Lorem ipsum dolor sit amet consectetur.",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_50": {
       "name": "div_50",
@@ -1112,7 +1162,8 @@
           "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_51": {
       "name": "div_51",
@@ -1128,7 +1179,8 @@
           "value": "//div[contains(@class,'cmp-headline-block__cta-wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "i_52": {
       "name": "i_52",
@@ -1144,7 +1196,8 @@
           "value": "//i[contains(@class,'cmp-button__icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Optional_CTA": {
       "name": "span_Optional_CTA",
@@ -1165,7 +1218,8 @@
           "value": "Optional CTA",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_54": {
       "name": "div_54",
@@ -1181,7 +1235,8 @@
           "value": "//div[contains(@class,'cmp-feature-banner__component-parsys')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Before_1120": {
       "name": "span_Before_1120",
@@ -1202,7 +1257,8 @@
           "value": "Before 1/1/20",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_ThisIs_Before_1120SectionAr": {
       "name": "div_ThisIs_Before_1120SectionAr",
@@ -1223,7 +1279,8 @@
           "value": "This is Before 1/1/20 section area",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_1120OrLater": {
       "name": "span_1120OrLater",
@@ -1244,7 +1301,8 @@
           "value": "1/1/20 or later",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_ThisIs_1120OrLaterSection_": {
       "name": "div_ThisIs_1120OrLaterSection_",
@@ -1265,7 +1323,8 @@
           "value": "This is 1/1/20 or later section area",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_NonSpouse": {
       "name": "span_NonSpouse",
@@ -1286,7 +1345,8 @@
           "value": "Non-Spouse",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_60": {
       "name": "div_60",
@@ -1302,7 +1362,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_SeeThrough_Trust": {
       "name": "span_SeeThrough_Trust",
@@ -1323,7 +1384,8 @@
           "value": "See-Through Trust",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_62": {
       "name": "div_62",
@@ -1339,7 +1401,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "span_Successor_Beneficiary": {
       "name": "span_Successor_Beneficiary",
@@ -1360,7 +1423,8 @@
           "value": "Successor Beneficiary",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     },
     "div_64": {
       "name": "div_64",
@@ -1376,7 +1440,8 @@
           "value": "//div[contains(@class,'cmp-decision-tree-option__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:43:35.322Z"
     }
   }
 }

@@ -1,4 +1,7 @@
 {
+  "component": "brand-relationship",
+  "generatedAt": "2026-08-06T07:45:35.953Z",
+  "source": "dom",
   "entries": {
     "brandRelationshipPageRoot": {
       "strategies": [
@@ -14,6 +17,350 @@
         }
       ],
       "primary": "css"
+    },
+    "a_KKR_Ownership": {
+      "name": "a_KKR_Ownership",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-e3f79c6c24",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "KKR Ownership",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "a_Meet_KKR": {
+      "name": "a_Meet_KKR",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "button-0909c67772",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Meet KKR",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "h3_2": {
+      "name": "h3_2",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//h3[contains(@class,'cmp-brand-relationship__headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_3": {
+      "name": "div_3",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__top-arcs",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__top-arcs')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_4": {
+      "name": "div_4",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__top-arc.cmp-brand-relationship__arc-one",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__top-arc')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_5": {
+      "name": "div_5",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__top-arc.cmp-brand-relationship__arc-two",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__top-arc')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__desktop-arcs",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__desktop-arcs')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_7": {
+      "name": "div_7",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__desktop-arc.cmp-brand-relationship__desktop-arc--one",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__desktop-arc')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__desktop-arc.cmp-brand-relationship__desktop-arc--two",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__desktop-arc')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__desktop-arc.cmp-brand-relationship__desktop-arc--three",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__desktop-arc')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_10": {
+      "name": "div_10",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__desktop-arc.cmp-brand-relationship__desktop-arc--four",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__desktop-arc')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__images",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__images')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__brand-image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__brand-image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_13": {
+      "name": "div_13",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__logo",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__logo')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-brand-relationship__cta-wrapper.cta-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-brand-relationship__cta-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "i_16": {
+      "name": "i_16",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.arrow-right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_KKR_Ownership": {
+      "name": "span_KKR_Ownership",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "KKR Ownership",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_Meet_KKR": {
+      "name": "span_Meet_KKR",
+      "component": "brand-relationship",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Meet KKR",
+          "confidence": 0.4
+        }
+      ]
     }
   }
 }

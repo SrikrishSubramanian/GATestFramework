@@ -1,6 +1,6 @@
 {
   "component": "product-path-detail-card",
-  "generatedAt": "2026-07-14T14:49:44.184Z",
+  "generatedAt": "2026-08-06T07:42:55.410Z",
   "source": "dom",
   "entries": {
     "a_FindAn_Advisor": {
@@ -22,7 +22,8 @@
           "value": "Find an Advisor",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "a_1": {
       "name": "a_1",
@@ -43,7 +44,8 @@
           "value": "Download Sales Guide\n                    Opens in a new tab",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "a_Learn_More": {
       "name": "a_Learn_More",
@@ -64,7 +66,8 @@
           "value": "Learn More",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "img_PersonReviewingFin": {
       "name": "img_PersonReviewingFin",
@@ -80,7 +83,8 @@
           "value": "//img[contains(@class,'cmp-product-path-detail-card__image')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "img_PortraitOf_Sarah_R": {
       "name": "img_PortraitOf_Sarah_R",
@@ -96,7 +100,8 @@
           "value": "//img[contains(@class,'cmp-image__image')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "ul_5": {
       "name": "ul_5",
@@ -112,7 +117,8 @@
           "value": "//ul[contains(@class,'cmp-product-path-detail-card__list-items')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "ul_6": {
       "name": "ul_6",
@@ -128,7 +134,8 @@
           "value": "//ul[contains(@class,'cmp-product-path-detail-card__list-items')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_Path_A": {
       "name": "div_Path_A",
@@ -149,7 +156,8 @@
           "value": "Path A",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_8": {
       "name": "div_8",
@@ -165,7 +173,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_9": {
       "name": "div_9",
@@ -181,7 +190,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_10": {
       "name": "div_10",
@@ -197,7 +207,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__header')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_Maximize_My_Reliability": {
       "name": "div_Maximize_My_Reliability",
@@ -218,7 +229,8 @@
           "value": "Maximize My Reliability",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_12": {
       "name": "div_12",
@@ -234,7 +246,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__sub-headline')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_13": {
       "name": "div_13",
@@ -250,7 +263,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_14": {
       "name": "div_14",
@@ -266,7 +280,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_15": {
       "name": "div_15",
@@ -282,7 +297,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--list')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_HowItWorks": {
       "name": "div_HowItWorks",
@@ -303,7 +319,8 @@
           "value": "How it works",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "li_17": {
       "name": "li_17",
@@ -319,7 +336,8 @@
           "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_Guaranteed_Rollup": {
       "name": "div_Guaranteed_Rollup",
@@ -340,7 +358,8 @@
           "value": "Guaranteed Roll-up",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_19": {
       "name": "div_19",
@@ -356,7 +375,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "li_20": {
       "name": "li_20",
@@ -372,7 +392,8 @@
           "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_Flexible_Income_Options": {
       "name": "div_Flexible_Income_Options",
@@ -393,7 +414,8 @@
           "value": "Flexible Income Options",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_22": {
       "name": "div_22",
@@ -409,7 +431,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "li_23": {
       "name": "li_23",
@@ -425,7 +448,8 @@
           "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_Principal_Protection": {
       "name": "div_Principal_Protection",
@@ -446,7 +470,8 @@
           "value": "Principal Protection",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_25": {
       "name": "div_25",
@@ -462,7 +487,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_26": {
       "name": "div_26",
@@ -478,7 +504,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_27": {
       "name": "div_27",
@@ -494,7 +521,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--image-only')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_Path_B": {
       "name": "div_Path_B",
@@ -515,7 +543,8 @@
           "value": "Path B",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_29": {
       "name": "div_29",
@@ -531,7 +560,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_30": {
       "name": "div_30",
@@ -547,7 +577,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_31": {
       "name": "div_31",
@@ -563,7 +594,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__header')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_Build_Guaranteed_Income": {
       "name": "div_Build_Guaranteed_Income",
@@ -584,7 +616,8 @@
           "value": "Build Guaranteed Income",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_33": {
       "name": "div_33",
@@ -600,7 +633,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__sub-headline')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_34": {
       "name": "div_34",
@@ -616,7 +650,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_35": {
       "name": "div_35",
@@ -632,7 +667,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_36": {
       "name": "div_36",
@@ -648,7 +684,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--descriptor')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_IncomeYouCanCountOn": {
       "name": "div_IncomeYouCanCountOn",
@@ -669,7 +706,8 @@
           "value": "Income you can count on",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_38": {
       "name": "div_38",
@@ -685,7 +723,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_Path_C": {
       "name": "div_Path_C",
@@ -706,7 +745,8 @@
           "value": "Path C",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_40": {
       "name": "div_40",
@@ -722,7 +762,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_41": {
       "name": "div_41",
@@ -738,7 +779,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_42": {
       "name": "div_42",
@@ -754,7 +796,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__header')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_SecureA_Higher_Starting_Check": {
       "name": "div_SecureA_Higher_Starting_Check",
@@ -775,7 +818,8 @@
           "value": "Secure a Higher Starting Check",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_44": {
       "name": "div_44",
@@ -796,7 +840,8 @@
           "value": "Maximise your guaranteed monthly income from day one.",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.408Z"
     },
     "div_45": {
       "name": "div_45",
@@ -812,7 +857,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_46": {
       "name": "div_46",
@@ -828,7 +874,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_47": {
       "name": "div_47",
@@ -844,7 +891,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--cta-callout')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_ReadyToGetStarted": {
       "name": "div_ReadyToGetStarted",
@@ -865,7 +913,8 @@
           "value": "Ready to get started?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_49": {
       "name": "div_49",
@@ -881,7 +930,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__cta-callout-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_50": {
       "name": "div_50",
@@ -897,7 +947,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__sub-headline')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_51": {
       "name": "div_51",
@@ -913,7 +964,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_52": {
       "name": "div_52",
@@ -929,7 +981,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_53": {
       "name": "div_53",
@@ -945,7 +998,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--list')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_KeyBenefits": {
       "name": "div_KeyBenefits",
@@ -966,7 +1020,8 @@
           "value": "Key benefits",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_55": {
       "name": "div_55",
@@ -987,7 +1042,8 @@
           "value": "Annual credited interest, guaranteed for 10 years.1",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_56": {
       "name": "div_56",
@@ -1008,7 +1064,8 @@
           "value": "No market downside risk on your initial premium.",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "li_57": {
       "name": "li_57",
@@ -1024,7 +1081,8 @@
           "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Flexible_Riders": {
       "name": "div_Flexible_Riders",
@@ -1045,7 +1103,8 @@
           "value": "Flexible Riders",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_59": {
       "name": "div_59",
@@ -1066,7 +1125,8 @@
           "value": "Optional income rider available at no additional base cost.",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_60": {
       "name": "div_60",
@@ -1082,7 +1142,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_61": {
       "name": "div_61",
@@ -1098,7 +1159,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--cta-callout')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_ReadyToLearnMore": {
       "name": "div_ReadyToLearnMore",
@@ -1119,7 +1181,8 @@
           "value": "Ready to learn more?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_63": {
       "name": "div_63",
@@ -1135,7 +1198,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__cta-callout-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Path_D": {
       "name": "div_Path_D",
@@ -1156,7 +1220,8 @@
           "value": "Path D",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Protect_What_Matters_Most": {
       "name": "div_Protect_What_Matters_Most",
@@ -1177,7 +1242,8 @@
           "value": "Protect What Matters Most",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Protect_What_Matters_Most_66": {
       "name": "div_Protect_What_Matters_Most_66",
@@ -1198,7 +1264,8 @@
           "value": "Protect What Matters Most",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Protect_What_Matters_Most_67": {
       "name": "div_Protect_What_Matters_Most_67",
@@ -1219,7 +1286,8 @@
           "value": "Protect What Matters Most",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Protect_What_Matters_Most_68": {
       "name": "div_Protect_What_Matters_Most_68",
@@ -1240,7 +1308,8 @@
           "value": "Protect What Matters Most",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_69": {
       "name": "div_69",
@@ -1256,7 +1325,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_70": {
       "name": "div_70",
@@ -1272,7 +1342,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--featured-case-study')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Client_Case_Study": {
       "name": "div_Client_Case_Study",
@@ -1293,7 +1364,8 @@
           "value": "Client Case Study",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_72": {
       "name": "div_72",
@@ -1309,7 +1381,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__featured-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_73": {
       "name": "div_73",
@@ -1325,7 +1398,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_74": {
       "name": "div_74",
@@ -1341,7 +1415,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_75": {
       "name": "div_75",
@@ -1357,7 +1432,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--descriptor')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_IncomeForLife": {
       "name": "div_IncomeForLife",
@@ -1378,7 +1454,8 @@
           "value": "Income for life",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_77": {
       "name": "div_77",
@@ -1394,7 +1471,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_78": {
       "name": "div_78",
@@ -1410,7 +1488,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_79": {
       "name": "div_79",
@@ -1426,7 +1505,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--featured-case-study')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_80": {
       "name": "div_80",
@@ -1442,7 +1522,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__featured-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_81": {
       "name": "div_81",
@@ -1458,7 +1539,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_82": {
       "name": "div_82",
@@ -1474,7 +1556,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_83": {
       "name": "div_83",
@@ -1490,7 +1573,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--list')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_WhyThisPathWorks": {
       "name": "div_WhyThisPathWorks",
@@ -1511,7 +1595,8 @@
           "value": "Why this path works",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "li_85": {
       "name": "li_85",
@@ -1527,7 +1612,8 @@
           "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Inflation_Protection": {
       "name": "div_Inflation_Protection",
@@ -1548,7 +1634,8 @@
           "value": "Inflation Protection",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_87": {
       "name": "div_87",
@@ -1564,7 +1651,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__list-item-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "li_88": {
       "name": "li_88",
@@ -1580,7 +1668,8 @@
           "value": "//li[contains(@class,'cmp-product-path-detail-card__list-item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Lifetime_Guarantee": {
       "name": "div_Lifetime_Guarantee",
@@ -1601,7 +1690,8 @@
           "value": "Lifetime Guarantee",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_90": {
       "name": "div_90",
@@ -1622,7 +1712,8 @@
           "value": "Payments continue for as long as you live, no matter what.",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_91": {
       "name": "div_91",
@@ -1638,7 +1729,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_92": {
       "name": "div_92",
@@ -1654,7 +1746,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--quote')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "figure_93": {
       "name": "figure_93",
@@ -1670,7 +1763,8 @@
           "value": "//figure[contains(@class,'cmp-image__figure')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "picture_94": {
       "name": "picture_94",
@@ -1686,7 +1780,8 @@
           "value": "//picture[contains(@class,'cmp-image__picture')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "blockquote_95": {
       "name": "blockquote_95",
@@ -1702,7 +1797,8 @@
           "value": "//blockquote[contains(@class,'cmp-product-path-detail-card__quote')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_Sarah_M_Retired_Teacher": {
       "name": "div_Sarah_M_Retired_Teacher",
@@ -1723,7 +1819,8 @@
           "value": "Sarah M., Retired Teacher",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_97": {
       "name": "div_97",
@@ -1744,7 +1841,8 @@
           "value": "Guaranteed protection that keeps pace with your needs.",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_98": {
       "name": "div_98",
@@ -1760,7 +1858,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-elements')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_99": {
       "name": "div_99",
@@ -1776,7 +1875,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_100": {
       "name": "div_100",
@@ -1792,7 +1892,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__text-element--descriptor')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_BuiltForReliability": {
       "name": "div_BuiltForReliability",
@@ -1813,7 +1914,8 @@
           "value": "Built for reliability",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_102": {
       "name": "div_102",
@@ -1829,7 +1931,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__descriptor-description')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "div_103": {
       "name": "div_103",
@@ -1845,7 +1948,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--quote')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.409Z"
     },
     "blockquote_104": {
       "name": "blockquote_104",
@@ -1861,7 +1965,8 @@
           "value": "//blockquote[contains(@class,'cmp-product-path-detail-card__quote')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.410Z"
     },
     "div_105": {
       "name": "div_105",
@@ -1877,7 +1982,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.410Z"
     },
     "div_106": {
       "name": "div_106",
@@ -1893,7 +1999,8 @@
           "value": "//div[contains(@class,'cmp-product-path-detail-card__image-element--quote')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.410Z"
     },
     "blockquote_107": {
       "name": "blockquote_107",
@@ -1909,7 +2016,8 @@
           "value": "//blockquote[contains(@class,'cmp-product-path-detail-card__quote')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.410Z"
     },
     "div_James_T_Retired_Firefighter": {
       "name": "div_James_T_Retired_Firefighter",
@@ -1930,7 +2038,8 @@
           "value": "James T., Retired Firefighter",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:55.410Z"
     }
   }
 }

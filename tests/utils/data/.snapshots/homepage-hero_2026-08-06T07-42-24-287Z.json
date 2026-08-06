@@ -1,0 +1,781 @@
+{
+  "component": "homepage-hero",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:42:24.287Z",
+  "rootSelector": ".cmp-homepage-hero",
+  "elements": [
+    {
+      "name": "Explore_Now",
+      "tag": "button",
+      "text": "Explore Now",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Explore Now"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "ga-button--theme-dark",
+        "ga-button--primary"
+      ],
+      "role": null,
+      "ariaLabel": "Explore Now",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 27,
+        "y": 1163,
+        "width": 164,
+        "height": 50
+      }
+    },
+    {
+      "name": "WatchVideo",
+      "tag": "button",
+      "text": "Watch video",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Watch video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "ga-button--theme-dark",
+        "ga-button--secondary",
+        "cmp-button-video"
+      ],
+      "role": null,
+      "ariaLabel": "Watch video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 207,
+        "y": 1163,
+        "width": 162,
+        "height": 50
+      }
+    },
+    {
+      "name": "CloseVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-button__video-modal-close"
+      ],
+      "attributes": {
+        "aria-label": "Close video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button__video-modal-content"
+      ],
+      "role": null,
+      "ariaLabel": "Close video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "PlayBackgroundVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-homepage-hero__video-control",
+        "cmp-homepage-hero__video-control--play"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Play background video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__animation"
+      ],
+      "role": null,
+      "ariaLabel": "Play background video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1213,
+        "y": 1173,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "name": "PauseBackgroundVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-homepage-hero__video-control",
+        "cmp-homepage-hero__video-control--pause",
+        "hide"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Pause background video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__animation"
+      ],
+      "role": null,
+      "ariaLabel": "Pause background video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ExploreNow",
+      "tag": "button",
+      "text": "Explore now",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Explore now"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "ga-button--theme-dark",
+        "ga-button--primary"
+      ],
+      "role": null,
+      "ariaLabel": "Explore now",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 27,
+        "y": 2944,
+        "width": 161,
+        "height": 50
+      }
+    },
+    {
+      "name": "h1_6",
+      "tag": "h1",
+      "text": "Solutions for real-life financial challenges",
+      "classes": [
+        "cmp-homepage-hero__headline--front",
+        "headline-h1-xl"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 340,
+        "y": 736,
+        "width": 600,
+        "height": 182
+      }
+    },
+    {
+      "name": "h2Captiion",
+      "tag": "h2",
+      "text": "captiion",
+      "classes": [
+        "cmp-homepage-hero__video-caption-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__video-caption"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "imgImage_8",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-homepage-hero__image"
+      ],
+      "attributes": {
+        "src": "/content/dam/ga/test-assets/hero/KFIT-Hero-1320x470_V1a.jpg",
+        "${model.isdecorative": "",
+        "?": "aria-hidden=\"true\"",
+        ":": "",
+        "}": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 2284,
+        "width": 1280,
+        "height": 740
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "Solutions for real-life financial challenges\n                        \n                    \n         ",
+      "classes": [
+        "cmp-homepage-hero__animation"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero",
+        "cmp-homepage-hero--video"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 503,
+        "width": 1280,
+        "height": 740
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-homepage-hero__media"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__animation"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 503,
+        "width": 1280,
+        "height": 740
+      }
+    },
+    {
+      "name": "cmpHomepageHeroPlayer_6365778310112",
+      "tag": "video-js",
+      "text": "",
+      "classes": [
+        "cmp-homepage-hero__background-video",
+        "video-js"
+      ],
+      "attributes": {
+        "data-loop-start": "24",
+        "data-loop-end": "58",
+        "data-video-id": "6365778310112",
+        "data-embed": "default",
+        "autoplay": "",
+        "muted": "",
+        "playsinline": ""
+      },
+      "testId": null,
+      "id": "cmp-homepage-hero-player-6365778310112",
+      "parentClasses": [
+        "cmp-homepage-hero__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 503,
+        "width": 1280,
+        "height": 740
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "Solutions for real-life financial challenges\n                        \n                    \n         ",
+      "classes": [
+        "cmp-homepage-hero__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__animation"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 503,
+        "width": 1280,
+        "height": 740
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-homepage-hero__sr-status"
+      ],
+      "attributes": {
+        "aria-live": "polite",
+        "aria-atomic": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": -1,
+        "y": 502,
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "name": "p_14",
+      "tag": "p",
+      "text": "Everyone has different goals for their financial futures. Let us help match the right strategy to re",
+      "classes": [
+        "cmp-homepage-hero__description",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 27,
+        "y": 1045,
+        "width": 350,
+        "height": 76
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "Explore Now\n                                        \n                                    \n          ",
+      "classes": [
+        "cmp-homepage-hero__cta-group"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 27,
+        "y": 1163,
+        "width": 343,
+        "height": 50
+      }
+    },
+    {
+      "name": "span_Explore_Now",
+      "tag": "span",
+      "text": "Explore Now",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 49,
+        "y": 1180,
+        "width": 92,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_17",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Down"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 153,
+        "y": 1180,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_WatchVideo",
+      "tag": "span",
+      "text": "Watch video",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 229,
+        "y": 1180,
+        "width": 90,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_19",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Play"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 332,
+        "y": 1180,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "dialog_20",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-button__video-modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "ga-button--theme-dark",
+        "ga-button--secondary",
+        "cmp-button-video"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-button__video-modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button__video-modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_22",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "close",
+        "k"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button__video-modal-close"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-button__video-modal-inner"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button__video-modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "bcPlayer_6332012443112",
+      "tag": "video-js",
+      "text": "",
+      "classes": [
+        "cmp-button__video-player",
+        "video-js"
+      ],
+      "attributes": {
+        "data-video-id": "6332012443112",
+        "data-embed": "default",
+        "controls": ""
+      },
+      "testId": null,
+      "id": "bc-player-6332012443112",
+      "parentClasses": [
+        "cmp-button__video-modal-inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "divCaptiion",
+      "tag": "div",
+      "text": "captiion",
+      "classes": [
+        "cmp-homepage-hero__video-caption"
+      ],
+      "attributes": {
+        "data-video-id": "6332012443112",
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_26",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-homepage-hero__video-icon",
+        "cmp-homepage-hero__video-icon--play"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__video-control",
+        "cmp-homepage-hero__video-control--play"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1213,
+        "y": 1173,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "name": "span_27",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-homepage-hero__video-icon",
+        "cmp-homepage-hero__video-icon--pause"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__video-control",
+        "cmp-homepage-hero__video-control--pause",
+        "hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_ExploreNow",
+      "tag": "div",
+      "text": "Explore now",
+      "classes": [
+        "cmp-homepage-hero__cta-group"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-homepage-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 27,
+        "y": 2944,
+        "width": 161,
+        "height": 50
+      }
+    },
+    {
+      "name": "span_ExploreNow",
+      "tag": "span",
+      "text": "Explore now",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 49,
+        "y": 2961,
+        "width": 89,
+        "height": 16
+      }
+    }
+  ],
+  "pageTitle": "Homepage Hero",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

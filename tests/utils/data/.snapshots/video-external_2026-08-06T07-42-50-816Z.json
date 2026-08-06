@@ -1,0 +1,1041 @@
+{
+  "component": "video-external",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/video-external.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:42:50.816Z",
+  "rootSelector": ".cmp-video-external",
+  "elements": [
+    {
+      "name": "a_0",
+      "tag": "a",
+      "text": "",
+      "classes": [
+        "cmp-button--color-secondary"
+      ],
+      "attributes": {
+        "href": "#"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box-play"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Play_Video",
+      "tag": "a",
+      "text": "Play Video",
+      "classes": [
+        "cmp-button--color-secondary"
+      ],
+      "attributes": {
+        "href": "#",
+        "aria-label": "Play Video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box-play"
+      ],
+      "role": null,
+      "ariaLabel": "Play Video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 843,
+        "y": 1640,
+        "width": 82,
+        "height": 14
+      }
+    },
+    {
+      "name": "Should_Not_Appear",
+      "tag": "a",
+      "text": "Should Not Appear",
+      "classes": [
+        "cmp-button--color-secondary"
+      ],
+      "attributes": {
+        "href": "#",
+        "aria-label": "Should Not Appear"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box-play"
+      ],
+      "role": null,
+      "ariaLabel": "Should Not Appear",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h2_Brightcove_Overlay",
+      "tag": "h2",
+      "text": "Brightcove Overlay",
+      "classes": [],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 787,
+        "y": 1569,
+        "width": 334,
+        "height": 42
+      }
+    },
+    {
+      "name": "h2_Text_Right_White",
+      "tag": "h2",
+      "text": "Text Right, White",
+      "classes": [],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 803,
+        "y": 2385,
+        "width": 318,
+        "height": 42
+      }
+    },
+    {
+      "name": "h2_Text_Left_White",
+      "tag": "h2",
+      "text": "Text Left, White",
+      "classes": [],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 159,
+        "y": 3208,
+        "width": 306,
+        "height": 42
+      }
+    },
+    {
+      "name": "h2_Should_Not_Appear",
+      "tag": "h2",
+      "text": "Should Not Appear",
+      "classes": [],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h2_Text_Right_Dark",
+      "tag": "h2",
+      "text": "Text Right, Dark",
+      "classes": [],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 813,
+        "y": 5157,
+        "width": 308,
+        "height": 42
+      }
+    },
+    {
+      "name": "h2_Text_Left_Dark",
+      "tag": "h2",
+      "text": "Text Left, Dark",
+      "classes": [],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 159,
+        "y": 5986,
+        "width": 296,
+        "height": 42
+      }
+    },
+    {
+      "name": "imgImage_9",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-video-external_image"
+      ],
+      "attributes": {
+        "alt": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 521,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "PlayVideo",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__play-button"
+      ],
+      "attributes": {
+        "data-ga-video-external-keyboard-bound": "true",
+        "aria-label": "Play video",
+        "role": "button",
+        "tabindex": "0"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__overlay"
+      ],
+      "role": "button",
+      "ariaLabel": "Play video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "PlayVideo_11",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__image-play-button",
+        "remove-overlay"
+      ],
+      "attributes": {
+        "data-ga-video-external-keyboard-bound": "true",
+        "aria-label": "Play video",
+        "role": "button",
+        "tabindex": "0"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": "button",
+      "ariaLabel": "Play video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 87,
+        "y": 521,
+        "width": 1106,
+        "height": 48
+      }
+    },
+    {
+      "name": "Pause",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__background-icon",
+        "active",
+        "cmp-video-external__background-icon--pause"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "data-action": "pause",
+        "role": "button",
+        "data-cta": "1",
+        "aria-label": "Pause",
+        "aria-pressed": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__background-video-actions"
+      ],
+      "role": "button",
+      "ariaLabel": "Pause",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 87,
+        "y": 521,
+        "width": 1106,
+        "height": 0
+      }
+    },
+    {
+      "name": "Play",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__background-icon",
+        "cmp-video-external__background-icon--play"
+      ],
+      "attributes": {
+        "tabindex": "0",
+        "data-action": "play",
+        "role": "button",
+        "data-cta": "1",
+        "aria-label": "Play",
+        "aria-pressed": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__background-video-actions"
+      ],
+      "role": "button",
+      "ariaLabel": "Play",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 87,
+        "y": 521,
+        "width": 1106,
+        "height": 0
+      }
+    },
+    {
+      "name": "Play_Video_14",
+      "tag": "div",
+      "text": "Play Video",
+      "classes": [
+        "cmp-video-external__play-button"
+      ],
+      "attributes": {
+        "data-ga-video-external-keyboard-bound": "true",
+        "aria-label": "Play Video",
+        "role": "button",
+        "tabindex": "0"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__overlay"
+      ],
+      "role": "button",
+      "ariaLabel": "Play Video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Play_Video_15",
+      "tag": "div",
+      "text": "Play Video",
+      "classes": [
+        "cmp-video-external__image-play-button"
+      ],
+      "attributes": {
+        "data-ga-video-external-keyboard-bound": "true",
+        "aria-label": "Play Video",
+        "role": "button",
+        "tabindex": "0"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": "button",
+      "ariaLabel": "Play Video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "player_NpEaa2P7qZI",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__video",
+        "cmp-video-external__video--youtube"
+      ],
+      "attributes": {
+        "frameborder": "0",
+        "allowfullscreen": "",
+        "allow": "autoplay; encrypted-media",
+        "src": "https://www.youtube.com/embed/NpEaa2P7qZI?autoplay=0&mute=0&rel=0&controls=1&enablejsapi=1",
+        "tabindex": "0"
+      },
+      "testId": null,
+      "id": "player-NpEaa2P7qZI",
+      "parentClasses": [
+        "cmp-video-external__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__overlay"
+      ],
+      "attributes": {
+        "data-background-image": "false",
+        "data-dynamic-media-image": "false",
+        "data-lazy-loaded": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__image-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 521,
+        "width": 1106,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_19",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-video-external__label-overlay"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-play-button",
+        "remove-overlay"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1169,
+        "y": 545,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__background-video-actions"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 521,
+        "width": 1106,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__text-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__text-box-play"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_23",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button--color-secondary"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "dialog_24",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-video-external__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_25",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__modal--content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_26",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-video-external__modal--close-button"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__modal--content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_27",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-video-external__inner"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__modal--content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "videoExternal_596ebec56a",
+      "tag": "video-js",
+      "text": "",
+      "classes": [
+        "cmp-video-external__video",
+        "cmp-video-external__video--brightcove",
+        "video-js"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "data-video-id": "6136579892001",
+        "data-player": "default",
+        "data-embed": "default",
+        "data-application-id": "",
+        "controls": ""
+      },
+      "testId": null,
+      "id": "video-external-596ebec56a",
+      "parentClasses": [
+        "cmp-video-external__inner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Play_Video",
+      "tag": "div",
+      "text": "Play Video",
+      "classes": [
+        "cmp-video-external__overlay"
+      ],
+      "attributes": {
+        "data-background-image": "true",
+        "data-dynamic-media-image": "false",
+        "data-lazy-loaded": "true",
+        "data-src": "/content/global-atlantic/style-guide/components/video-external/_jcr_content/root/main-par/section_bc_overlay/section-par/video_bc_overlay/image.coreimg{.width}.png/1784039966579/background-image.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "Play Video\n                \n                \n                \n                    Brightcove Overlay",
+      "classes": [
+        "cmp-video-external__image-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 127,
+        "y": 1437,
+        "width": 1026,
+        "height": 353
+      }
+    },
+    {
+      "name": "span_Play_Video",
+      "tag": "span",
+      "text": "Play Video",
+      "classes": [
+        "cmp-video-external__label-overlay"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-play-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_32",
+      "tag": "div",
+      "text": "Brightcove Overlay\n                    \n                        \n                            \n      ",
+      "classes": [
+        "cmp-video-external__text-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 755,
+        "y": 1437,
+        "width": 398,
+        "height": 353
+      }
+    },
+    {
+      "name": "div_Play_Video_33",
+      "tag": "div",
+      "text": "Play Video",
+      "classes": [
+        "cmp-video-external__text-box-play"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 811,
+        "y": 1635,
+        "width": 130,
+        "height": 24
+      }
+    },
+    {
+      "name": "span_Play_Video_34",
+      "tag": "span",
+      "text": "Play Video",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button--color-secondary"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 843,
+        "y": 1640,
+        "width": 67,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_35",
+      "tag": "div",
+      "text": "Text Right, White\n                    \n                        \n                            \n       ",
+      "classes": [
+        "cmp-video-external__text-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 771,
+        "y": 2249,
+        "width": 382,
+        "height": 362
+      }
+    },
+    {
+      "name": "div_36",
+      "tag": "div",
+      "text": "Text Left, White\n                    \n                        \n                            \n        ",
+      "classes": [
+        "cmp-video-external__text-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 127,
+        "y": 3069,
+        "width": 370,
+        "height": 369
+      }
+    },
+    {
+      "name": "div_37",
+      "tag": "div",
+      "text": "Should Not Appear\n                    \n                        \n                            \n       ",
+      "classes": [
+        "cmp-video-external__text-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Should_Not_Appear",
+      "tag": "div",
+      "text": "Should Not Appear",
+      "classes": [
+        "cmp-video-external__text-box-play"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__text-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Should_Not_Appear",
+      "tag": "span",
+      "text": "Should Not Appear",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button--color-secondary"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_40",
+      "tag": "div",
+      "text": "Text Right, Dark\n                    \n                        \n                            \n        ",
+      "classes": [
+        "cmp-video-external__text-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 781,
+        "y": 5018,
+        "width": 372,
+        "height": 368
+      }
+    },
+    {
+      "name": "div_41",
+      "tag": "div",
+      "text": "Text Left, Dark\n                    \n                        \n                            \n         ",
+      "classes": [
+        "cmp-video-external__text-box"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-video-external__image-box"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 127,
+        "y": 5844,
+        "width": 360,
+        "height": 374
+      }
+    }
+  ],
+  "pageTitle": "Video (External)",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

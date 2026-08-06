@@ -1,0 +1,1257 @@
+{
+  "component": "section",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/section.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:43:08.638Z",
+  "rootSelector": ".cmp-section",
+  "elements": [
+    {
+      "name": "a_Optional_CTA",
+      "tag": "a",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-7df725f0f1",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-7df725f0f1\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Optional CTA\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"parentId\":\"headline-block-ac1e594b28\"}}"
+      },
+      "testId": null,
+      "id": "button-7df725f0f1",
+      "parentClasses": [
+        "button",
+        "ga-button--secondary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 650,
+        "width": 161,
+        "height": 50
+      }
+    },
+    {
+      "name": "a_LearnMore",
+      "tag": "a",
+      "text": "Learn more",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-596d625e39",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-596d625e39\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Learn more\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"parentId\":\"headline-block-b978c0a63c\"}}"
+      },
+      "testId": null,
+      "id": "button-596d625e39",
+      "parentClasses": [
+        "button",
+        "ga-button--icon-text",
+        "ga-button--sm"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 655,
+        "y": 1162,
+        "width": 117,
+        "height": 32
+      }
+    },
+    {
+      "name": "button_WhatIs_Global_Atlantic",
+      "tag": "button",
+      "text": "What is Global Atlantic?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "6f0aeb24473f486bacf93df6d9d5f670"
+      },
+      "testId": null,
+      "id": "6df14506b1cc4325acd75142bc6a3b9a",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 126,
+        "y": 1664,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_HowDo_IContactCustomerServ",
+      "tag": "button",
+      "text": "How do I contact customer service?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "true",
+        "aria-controls": "195b111404d34c2b8fe46e2b03f1a9eb"
+      },
+      "testId": null,
+      "id": "92bb681e59344300afb0878bbd2fb72c",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 126,
+        "y": 1769,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "e518cdb674514cb48e90766a094ec251",
+      "tag": "button",
+      "text": "What products does Global Atlantic offer?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "a6c82c0692ff4ef3b2d0525b509f165d"
+      },
+      "testId": null,
+      "id": "e518cdb674514cb48e90766a094ec251",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 126,
+        "y": 1981,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "button_WhereCan_IFindMyPolicyDoc",
+      "tag": "button",
+      "text": "Where can I find my policy documents?",
+      "classes": [
+        "cmp-accordion__item-button"
+      ],
+      "attributes": {
+        "aria-expanded": "false",
+        "aria-controls": "8cb142805c7e490abd8a0a610218ac91"
+      },
+      "testId": null,
+      "id": "9cd4abdac49e462980d441c959798fa7",
+      "parentClasses": [],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 126,
+        "y": 2086,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_WhatIs_Global_Atlantic",
+      "tag": "span",
+      "text": "What is Global Atlantic?",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1699,
+        "width": 976,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_HowDo_IContactCustomerServ",
+      "tag": "span",
+      "text": "How do I contact customer service?",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1804,
+        "width": 976,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_9",
+      "tag": "span",
+      "text": "What products does Global Atlantic offer?",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 2015,
+        "width": 976,
+        "height": 35
+      }
+    },
+    {
+      "name": "span_WhereCan_IFindMyPolicyDoc",
+      "tag": "span",
+      "text": "Where can I find my policy documents?",
+      "classes": [
+        "cmp-accordion__item-title"
+      ],
+      "attributes": {
+        "role": "heading",
+        "aria-level": "3"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": "heading",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 2120,
+        "width": 976,
+        "height": 35
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolo",
+      "classes": [
+        "cmp-section__container"
+      ],
+      "attributes": {
+        "data-background-image": "false",
+        "data-dynamic-media-image": "false",
+        "data-lazy-loaded": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-section"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 466,
+        "width": 1154,
+        "height": 281
+      }
+    },
+    {
+      "name": "div_OptionalEyebrow",
+      "tag": "div",
+      "text": "Optional eyebrow",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 514,
+        "width": 1032,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet consequat adipscing.",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 545,
+        "width": 1032,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscin",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 575,
+        "width": 1032,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "Optional CTA\n                \n                \n                    \n                    \n           ",
+      "classes": [
+        "cmp-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 650,
+        "width": 1032,
+        "height": 50
+      }
+    },
+    {
+      "name": "i_16",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 186,
+        "y": 667,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Optional_CTA",
+      "tag": "span",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 85,
+        "y": 667,
+        "width": 97,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 931,
+        "width": 1028,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet\n    \n\n    \n      Lorem ipsum dolor si",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 979,
+        "width": 1028,
+        "height": 263
+      }
+    },
+    {
+      "name": "dialog_20",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-image__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "image",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-image-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_LoremIpsumDolorSitAmet",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 655,
+        "y": 1058,
+        "width": 499,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est a orci pharetra pretium at a n",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 655,
+        "y": 1088,
+        "width": 499,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_LearnMore",
+      "tag": "div",
+      "text": "Learn more",
+      "classes": [
+        "cmp-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 655,
+        "y": 1162,
+        "width": 499,
+        "height": 32
+      }
+    },
+    {
+      "name": "span_LearnMore",
+      "tag": "span",
+      "text": "Learn more",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 691,
+        "y": 1171,
+        "width": 73,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_27",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1663,
+        "width": 1028,
+        "height": 526
+      }
+    },
+    {
+      "name": "accordionItem_9ab625d0cc",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_0",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-9ab625d0cc\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-1fbffb8d10\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-9ab625d0cc",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1663,
+        "width": 1028,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItem_9ab625d0ccPanel",
+      "tag": "div",
+      "text": "What is Global Atlantic?\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-9ab625d0cc-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1664,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_WhatIs_Global_Atlantic",
+      "tag": "div",
+      "text": "What is Global Atlantic?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1664,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_31",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--blog"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "svg_32",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-icon",
+        "cmp-accordion__item-icon--blog",
+        "cmp-accordion__item-icon--plus"
+      ],
+      "attributes": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16",
+        "fill": "none",
+        "xmlns": "http://www.w3.org/2000/svg"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--blog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_33",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion__item-indicator",
+        "cmp-accordion__item-indicator--default"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__item-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1114,
+        "y": 1696,
+        "width": 40,
+        "height": 40
+      }
+    },
+    {
+      "name": "el6f0aeb24473f486bacf93df6d9d5f670",
+      "tag": "div",
+      "text": "Global Atlantic Financial Group is a leading insurance company meeting the retirement and life insur",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "6f0aeb24473f486bacf93df6d9d5f670",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1768,
+        "width": 1028,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItemF25ed5b41f",
+      "tag": "div",
+      "text": "How do I contact customer service?\n                \n                \n                    \n          ",
+      "classes": [
+        "cmp-accordion__item",
+        "expanded"
+      ],
+      "attributes": {
+        "name": "item_1",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-f25ed5b41f\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-1fbffb8d10\"}}",
+        "data-cmp-expanded": ""
+      },
+      "testId": null,
+      "id": "accordion-item-f25ed5b41f",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1768,
+        "width": 1028,
+        "height": 211
+      }
+    },
+    {
+      "name": "accordionItemF25ed5b41fPanel",
+      "tag": "div",
+      "text": "How do I contact customer service?\n                \n                \n                    \n          ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-f25ed5b41f-panel",
+      "parentClasses": [
+        "cmp-accordion__item",
+        "expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1769,
+        "width": 1028,
+        "height": 210
+      }
+    },
+    {
+      "name": "div_HowDo_IContactCustomerServ",
+      "tag": "div",
+      "text": "How do I contact customer service?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1769,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "el195b111404d34c2b8fe46e2b03f1a9eb",
+      "tag": "div",
+      "text": "You can reach our customer service team by calling 1-800-555-0100 during business hours, Monday thro",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "false"
+      },
+      "testId": null,
+      "id": "195b111404d34c2b8fe46e2b03f1a9eb",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--expanded"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1873,
+        "width": 1028,
+        "height": 106
+      }
+    },
+    {
+      "name": "accordionItemEd68e63c0a",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?\n                \n                \n                    \n   ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_2",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-ed68e63c0a\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-1fbffb8d10\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-ed68e63c0a",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1980,
+        "width": 1028,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItemEd68e63c0aPanel",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?\n                \n                \n                    \n   ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-ed68e63c0a-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1981,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_41",
+      "tag": "div",
+      "text": "What products does Global Atlantic offer?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 1981,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "a6c82c0692ff4ef3b2d0525b509f165d",
+      "tag": "div",
+      "text": "Global Atlantic offers a range of retirement and life insurance products including fixed annuities, ",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "a6c82c0692ff4ef3b2d0525b509f165d",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 2085,
+        "width": 1028,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionItem_7dabeb331d",
+      "tag": "div",
+      "text": "Where can I find my policy documents?\n                \n                \n                    \n       ",
+      "classes": [
+        "cmp-accordion__item"
+      ],
+      "attributes": {
+        "name": "item_3",
+        "data-cmp-hook-accordion": "item",
+        "data-cmp-data-layer": "{\"accordion-item-7dabeb331d\":{\"@type\":\"ga/components/content/accordion/accordion-item\",\"parentId\":\"accordion-1fbffb8d10\"}}"
+      },
+      "testId": null,
+      "id": "accordion-item-7dabeb331d",
+      "parentClasses": [
+        "cmp-accordion__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 2085,
+        "width": 1028,
+        "height": 105
+      }
+    },
+    {
+      "name": "accordionItem_7dabeb331dPanel",
+      "tag": "div",
+      "text": "Where can I find my policy documents?\n                \n                \n                    \n       ",
+      "classes": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion": "panel"
+      },
+      "testId": null,
+      "id": "accordion-item-7dabeb331d-panel",
+      "parentClasses": [
+        "cmp-accordion__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 2086,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_WhereCan_IFindMyPolicyDoc",
+      "tag": "div",
+      "text": "Where can I find my policy documents?",
+      "classes": [
+        "cmp-accordion__item-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 2086,
+        "width": 1028,
+        "height": 104
+      }
+    },
+    {
+      "name": "el8cb142805c7e490abd8a0a610218ac91",
+      "tag": "div",
+      "text": "Policy documents can be accessed through your online account portal. If you need assistance locating",
+      "classes": [
+        "cmp-accordion__item-content"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": "true"
+      },
+      "testId": null,
+      "id": "8cb142805c7e490abd8a0a610218ac91",
+      "parentClasses": [
+        "cmp-accordion__panel",
+        "cmp-accordion__panel--hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 2190,
+        "width": 1028,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-section__container"
+      ],
+      "attributes": {
+        "data-background-image": "false",
+        "data-dynamic-media-image": "false",
+        "data-lazy-loaded": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-section"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4683,
+        "width": 1154,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_48",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4683,
+        "width": 1154,
+        "height": 20
+      }
+    }
+  ],
+  "pageTitle": "Section",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

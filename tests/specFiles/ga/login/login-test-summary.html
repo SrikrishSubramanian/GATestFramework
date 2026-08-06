@@ -137,13 +137,12 @@
     
     <div class="meta-bar">
       <div class="meta-item"><strong>Spec Files</strong>login.author.spec.ts, login.edge-cases.spec.ts, login.images.spec.ts, login.interaction.spec.ts, login.matrix.spec.ts, login.publish.spec.ts, login.visual.spec.ts</div>
-      <div class="meta-item"><strong>Sources</strong><span class="source-tag">DOM scan + framework categories</span><span class="source-tag">Image health generator</span><span class="source-tag">Interaction generator</span><span class="source-tag">State matrix generator</span><span class="source-tag">Visual assertion generator</span></div>
     </div>
   </div>
 
   <div class="stats">
-    <div class="stat-box"><div class="num">243</div><div class="label">Total Tests</div></div>
-    <div class="stat-box"><div class="num">37</div><div class="label">Sections</div></div>
+    <div class="stat-box"><div class="num">213</div><div class="label">Total Tests</div></div>
+    <div class="stat-box"><div class="num">33</div><div class="label">Sections</div></div>
     <div class="stat-box"><div class="num">7</div><div class="label">Spec Files</div></div>
     <div class="stat-box"><div class="num">16</div><div class="label">Tag Types</div></div>
   </div>
@@ -724,397 +723,7 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Image Health</h2>
-        <span class="section-count">7</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">LGN-IMG-001</td>
-              <td>Login hero image has alt attribute</td>
-              
-              <td>Login hero image has alt attribute</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-IMG-002</td>
-              <td>Login hero image is not broken (naturalWidth &gt; 0)</td>
-              
-              <td>Login hero image is not broken (naturalWidth &gt; 0)</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-IMG-003</td>
-              <td>All images in login component have alt attributes</td>
-              
-              <td>All images in login component have alt attributes</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-IMG-004</td>
-              <td>No images in login component are oversized (&gt;500KB)</td>
-              
-              <td>No images in login component are oversized (&gt;500KB)</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-IMG-005</td>
-              <td>Login hero image has explicit width/height attributes (CLS prevention)</td>
-              
-              <td>Login hero image has explicit width/height attributes (CLS prevention)</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-IMG-006</td>
-              <td>Password toggle icon (SVG) has accessible title or aria-label</td>
-              
-              <td>Password toggle icon (SVG) has accessible title or aria-label</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-IMG-007</td>
-              <td>No broken image requests during login page load</td>
-              
-              <td>No broken image requests during login page load</td>
-              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Password Toggle Interaction</h2>
-        <span class="section-count">5</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">LGN-I-001</td>
-              <td>Password is masked by default (input type=&quot;password&quot;)</td>
-              
-              <td>Password is masked by default (input type=&quot;password&quot;)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-002</td>
-              <td>Clicking toggle reveals password (type changes to &quot;text&quot;)</td>
-              
-              <td>Clicking toggle reveals password (type changes to &quot;text&quot;)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-003</td>
-              <td>Second toggle click re-masks password (type returns to &quot;password&quot;)</td>
-              
-              <td>Second toggle click re-masks password (type returns to &quot;password&quot;)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-004</td>
-              <td>Toggle button aria-label or aria-pressed changes when activated</td>
-              
-              <td>Toggle button aria-label or aria-pressed changes when activated</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-005</td>
-              <td>Toggle is keyboard-accessible (Enter key triggers it)</td>
-              
-              <td>Toggle is keyboard-accessible (Enter key triggers it)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Modal Open/Close</h2>
-        <span class="section-count">7</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">LGN-I-006</td>
-              <td>Forgot-username modal is hidden on page load</td>
-              
-              <td>Forgot-username modal is hidden on page load</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-007</td>
-              <td>Clicking &quot;Forgot Username&quot; link makes modal visible</td>
-              
-              <td>Clicking &quot;Forgot Username&quot; link makes modal visible</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-008</td>
-              <td>Clicking modal close dismisses forgot-username modal</td>
-              
-              <td>Clicking modal close dismisses forgot-username modal</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-009</td>
-              <td>Pressing Escape closes the forgot-username modal</td>
-              
-              <td>Pressing Escape closes the forgot-username modal</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-010</td>
-              <td>Forgot-password modal is hidden on page load</td>
-              
-              <td>Forgot-password modal is hidden on page load</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-011</td>
-              <td>Clicking &quot;Forgot Password&quot; link makes modal visible</td>
-              
-              <td>Clicking &quot;Forgot Password&quot; link makes modal visible</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-012</td>
-              <td>Clicking modal close dismisses forgot-password modal</td>
-              
-              <td>Clicking modal close dismisses forgot-password modal</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Form Focus &amp; Keyboard Navigation</h2>
-        <span class="section-count">5</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">LGN-I-013</td>
-              <td>Username input receives focus on Tab into form</td>
-              
-              <td>Username input receives focus on Tab into form</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-014</td>
-              <td>Password input receives focus on Tab after username</td>
-              
-              <td>Password input receives focus on Tab after username</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-015</td>
-              <td>Submit button is reachable via Tab navigation</td>
-              
-              <td>Submit button is reachable via Tab navigation</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-016</td>
-              <td>Focus indicator is visible on username input (box-shadow or outline not &quot;none&quot;)</td>
-              
-              <td>Focus indicator is visible on username input (box-shadow or outline not &quot;none&quot;)</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-017</td>
-              <td>Focus indicator is visible on password input</td>
-              
-              <td>Focus indicator is visible on password input</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Form State</h2>
-        <span class="section-count">3</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">LGN-I-018</td>
-              <td>Submit button has CSS transition property</td>
-              
-              <td>Submit button has CSS transition property</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-019</td>
-              <td>Username input border changes on focus</td>
-              
-              <td>Username input border changes on focus</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-I-020</td>
-              <td>Typing in username field reflects value in the input</td>
-              
-              <td>Typing in username field reflects value in the input</td>
-              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Viewport Matrix</h2>
-        <span class="section-count">9</span>
-        <span class="chevron">&#9660;</span>
-      </div>
-      <div class="section-body">
-        <table>
-          <thead>
-            <tr>
-              <th style="width:90px">ID</th>
-              <th>Test Scenario</th>
-              <th style="width:100px">Viewport</th>
-              <th>What It Checks</th>
-              <th style="width:140px">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="test-id">LGN-M-001</td>
-              <td>Login form visible at mobile-390</td>
-              <td class="viewport">Mobile</td>
-              <td>Login form visible at mobile-390</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-M-002</td>
-              <td>Login form visible at tablet-768</td>
-              <td class="viewport">Tablet</td>
-              <td>Login form visible at tablet-768</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-M-003</td>
-              <td>Login form visible at desktop-1440</td>
-              <td class="viewport">1440 x 900</td>
-              <td>Login form visible at desktop-1440</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-M-004</td>
-              <td>Username input visible at mobile-390</td>
-              <td class="viewport">Mobile</td>
-              <td>Username input visible at mobile-390</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-M-005</td>
-              <td>Username input visible at tablet-768</td>
-              <td class="viewport">Tablet</td>
-              <td>Username input visible at tablet-768</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-M-006</td>
-              <td>Username input visible at desktop-1440</td>
-              <td class="viewport">1440 x 900</td>
-              <td>Username input visible at desktop-1440</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-M-007</td>
-              <td>Submit button visible at mobile-390</td>
-              <td class="viewport">Mobile</td>
-              <td>Submit button visible at mobile-390</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-M-008</td>
-              <td>Submit button visible at tablet-768</td>
-              <td class="viewport">Tablet</td>
-              <td>Submit button visible at tablet-768</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-M-009</td>
-              <td>Submit button visible at desktop-1440</td>
-              <td class="viewport">1440 x 900</td>
-              <td>Submit button visible at desktop-1440</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Background Color Variants</h2>
+        <h2>Login — Image Health</h2>
         <span class="section-count">4</span>
         <span class="chevron">&#9660;</span>
       </div>
@@ -1131,31 +740,147 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">LGN-M-010</td>
-              <td>Login component renders on white background section</td>
+              <td class="test-id"></td>
+              <td>No broken images</td>
               
-              <td>Login component renders on white background section</td>
+              <td>No broken images</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have alt text</td>
+              
+              <td>All images have alt text</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>No oversized images (&gt;500KB)</td>
+              
+              <td>No oversized images (&gt;500KB)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              
+              <td>All images have explicit dimensions (CLS prevention)</td>
+              <td><div class="tags"><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — Component Interactions</h2>
+        <span class="section-count">2</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id"></td>
+              <td>login adapts to unknown parent (#1)</td>
+              
+              <td>login adapts to unknown parent (#1)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id"></td>
+              <td>login adapts to unknown parent (#2)</td>
+              
+              <td>login adapts to unknown parent (#2)</td>
+              <td><div class="tags"><span class="tag" style="background:#D6EAF8;color:#1B4F72">interaction</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <h2>Login — State Matrix (Valid)</h2>
+        <span class="section-count">8</span>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px">ID</th>
+              <th>Test Scenario</th>
+              
+              <th>What It Checks</th>
+              <th style="width:140px">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="test-id">LOGIN-V</td>
+              <td>default + light-theme in granite section</td>
+              
+              <td>default + light-theme in granite section</td>
               <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-011</td>
-              <td>Login component renders on slate background section</td>
+              <td class="test-id">LOGIN-V</td>
+              <td>default + light-theme in azul section</td>
               
-              <td>Login component renders on slate background section</td>
+              <td>default + light-theme in azul section</td>
               <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-012</td>
-              <td>Login component renders on granite (dark) background section</td>
+              <td class="test-id">LOGIN-V</td>
+              <td>default + dark-theme in white section</td>
               
-              <td>Login component renders on granite (dark) background section</td>
+              <td>default + dark-theme in white section</td>
               <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-013</td>
-              <td>Login component renders on azul background section</td>
+              <td class="test-id">LOGIN-V</td>
+              <td>default + dark-theme in slate section</td>
               
-              <td>Login component renders on azul background section</td>
+              <td>default + dark-theme in slate section</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LOGIN-V</td>
+              <td>default + auto-theme in white section</td>
+              
+              <td>default + auto-theme in white section</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LOGIN-V</td>
+              <td>default + auto-theme in slate section</td>
+              
+              <td>default + auto-theme in slate section</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LOGIN-V</td>
+              <td>default + auto-theme in granite section</td>
+              
+              <td>default + auto-theme in granite section</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+            </tr>
+            <tr>
+              <td class="test-id">LOGIN-V</td>
+              <td>default + auto-theme in azul section</td>
+              
+              <td>default + auto-theme in azul section</td>
               <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
@@ -1165,7 +890,7 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Viewport Ã— Background Combined</h2>
+        <h2>Login — State Matrix (Responsive)</h2>
         <span class="section-count">4</span>
         <span class="chevron">&#9660;</span>
       </div>
@@ -1182,32 +907,32 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">LGN-M-014</td>
-              <td>Login form visible on mobile with white background</td>
+              <td class="test-id">LOGIN-R</td>
+              <td>login in white section @ mobile-390</td>
               <td class="viewport">Mobile</td>
-              <td>Login form visible on mobile with white background</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>login in white section @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-015</td>
-              <td>Login form visible on mobile with granite background</td>
+              <td class="test-id">LOGIN-R</td>
+              <td>login in slate section @ mobile-390</td>
               <td class="viewport">Mobile</td>
-              <td>Login form visible on mobile with granite background</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>login in slate section @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-016</td>
-              <td>Login form visible on desktop with granite background</td>
-              <td class="viewport">Desktop</td>
-              <td>Login form visible on desktop with granite background</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td class="test-id">LOGIN-R</td>
+              <td>login in granite section @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>login in granite section @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-017</td>
-              <td>Login form visible on desktop with azul background</td>
-              <td class="viewport">Desktop</td>
-              <td>Login form visible on desktop with azul background</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td class="test-id">LOGIN-R</td>
+              <td>login in azul section @ mobile-390</td>
+              <td class="viewport">Mobile</td>
+              <td>login in azul section @ mobile-390</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
             </tr>
           </tbody>
         </table>
@@ -1216,7 +941,7 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login â€” Input State Matrix</h2>
+        <h2>Login — State Matrix (Invalid Combos)</h2>
         <span class="section-count">4</span>
         <span class="chevron">&#9660;</span>
       </div>
@@ -1233,32 +958,32 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">LGN-M-018</td>
-              <td>Password input masked state renders correctly across all 3 viewports</td>
+              <td class="test-id">LOGIN-N</td>
+              <td>default + light-theme on white (light-on-light)</td>
               
-              <td>Password input masked state renders correctly across all 3 viewports</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>default + light-theme on white (light-on-light)</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-019</td>
-              <td>Password revealed state (after toggle) visible across all 3 viewports</td>
+              <td class="test-id">LOGIN-N</td>
+              <td>default + light-theme on slate (light-on-light)</td>
               
-              <td>Password revealed state (after toggle) visible across all 3 viewports</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>default + light-theme on slate (light-on-light)</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-020</td>
-              <td>Submit button enabled state across all 3 viewports</td>
+              <td class="test-id">LOGIN-N</td>
+              <td>default + dark-theme on granite (dark-on-dark)</td>
               
-              <td>Submit button enabled state across all 3 viewports</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>default + dark-theme on granite (dark-on-dark)</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-M-021</td>
-              <td>Forgot-username and forgot-password links visible across all 3 viewports</td>
+              <td class="test-id">LOGIN-N</td>
+              <td>default + dark-theme on azul (dark-on-dark)</td>
               
-              <td>Forgot-username and forgot-password links visible across all 3 viewports</td>
-              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
+              <td>default + dark-theme on azul (dark-on-dark)</td>
+              <td><div class="tags"><span class="tag" style="background:#FADBD8;color:#78281F">matrix</span><span class="tag" style="background:#F8D7DA;color:#721C24">negative</span></div></td>
             </tr>
           </tbody>
         </table>
@@ -2632,8 +2357,8 @@
 
     <div class="section">
       <div class="section-header" onclick="this.parentElement.classList.toggle('collapsed')">
-        <h2>Login - Visual Regression</h2>
-        <span class="section-count">7</span>
+        <h2>Login — Visual Regression</h2>
+        <span class="section-count">3</span>
         <span class="chevron">&#9660;</span>
       </div>
       <div class="section-body">
@@ -2649,53 +2374,25 @@
           </thead>
           <tbody>
             <tr>
-              <td class="test-id">LGN-V-001</td>
-              <td>Login component desktop screenshot matches baseline</td>
+              <td class="test-id"></td>
+              <td>Desktop screenshot matches baseline</td>
               <td class="viewport">Desktop</td>
-              <td>Login component desktop screenshot matches baseline</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+              <td>Desktop screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-V-002</td>
-              <td>Login component mobile screenshot matches baseline</td>
+              <td class="test-id"></td>
+              <td>Mobile screenshot matches baseline</td>
               <td class="viewport">Mobile</td>
-              <td>Login component mobile screenshot matches baseline</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+              <td>Mobile screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span><span class="tag" style="background:#D1ECF1;color:#0C5460">mobile</span></div></td>
             </tr>
             <tr>
-              <td class="test-id">LGN-V-003</td>
-              <td>Login component tablet screenshot matches baseline</td>
+              <td class="test-id"></td>
+              <td>Tablet screenshot matches baseline</td>
               <td class="viewport">Tablet</td>
-              <td>Login component tablet screenshot matches baseline</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-V-004</td>
-              <td>Login hero section screenshot matches baseline at desktop</td>
-              <td class="viewport">Desktop</td>
-              <td>Login hero section screenshot matches baseline at desktop</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-V-005</td>
-              <td>Login form section screenshot matches baseline at desktop</td>
-              <td class="viewport">Desktop</td>
-              <td>Login form section screenshot matches baseline at desktop</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-V-006</td>
-              <td>Password field in masked state screenshot matches baseline</td>
-              <td class="viewport">Desktop</td>
-              <td>Password field in masked state screenshot matches baseline</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
-            </tr>
-            <tr>
-              <td class="test-id">LGN-V-007</td>
-              <td>Password field in revealed state (after toggle) screenshot matches baseline</td>
-              <td class="viewport">Desktop</td>
-              <td>Password field in revealed state (after toggle) screenshot matches baseline</td>
-              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span></div></td>
+              <td>Tablet screenshot matches baseline</td>
+              <td><div class="tags"><span class="tag" style="background:#E8DAEF;color:#6C3483">visual</span><span class="tag" style="background:#E2E3F1;color:#383D6E">regression</span></div></td>
             </tr>
           </tbody>
         </table>

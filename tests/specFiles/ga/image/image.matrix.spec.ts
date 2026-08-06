@@ -38,9 +38,8 @@ test.describe('Image — State Matrix', () => {
       test(`[IMG-MATRIX-${variation}-${viewport.name}] @matrix @regression Image (${variation}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        await loginToAEMAuthor(page);
         const url = resolveComponentUrl('image');
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const root = page.locator('.cmp-image').first();
         await expect(root).toBeVisible();

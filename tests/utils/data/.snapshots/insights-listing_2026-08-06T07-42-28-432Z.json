@@ -1,0 +1,1004 @@
+{
+  "component": "insights-listing",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/insights-listing.html?wcmmode=disabled",
+  "scannedAt": "2026-08-06T07:42:28.431Z",
+  "rootSelector": ".cmp-insights-listing",
+  "elements": [
+    {
+      "name": "button_Professionals",
+      "tag": "button",
+      "text": "Professionals",
+      "classes": [
+        "cmp-insights-listing__featured-topic-btn"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-pressed": "false",
+        "data-topic": "Professionals"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "button_Individuals",
+      "tag": "button",
+      "text": "Individuals",
+      "classes": [
+        "cmp-insights-listing__featured-topic-btn"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-pressed": "false",
+        "data-topic": "Individuals"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 298,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "button_Corp",
+      "tag": "button",
+      "text": "Corp",
+      "classes": [
+        "cmp-insights-listing__featured-topic-btn"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-pressed": "false",
+        "data-topic": "Corp"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 533,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "button_Corporate_Agnostic",
+      "tag": "button",
+      "text": "Corporate (Agnostic)",
+      "classes": [
+        "cmp-insights-listing__featured-topic-btn"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-pressed": "false",
+        "data-topic": "Corporate (Agnostic)"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 769,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "button_Financial_Professionals",
+      "tag": "button",
+      "text": "Financial Professionals",
+      "classes": [
+        "cmp-insights-listing__featured-topic-btn"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-pressed": "false",
+        "data-topic": "Financial Professionals"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1004,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "CloseFilterPanel",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-insights-listing__filter-close"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Close filter panel"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-panel-header"
+      ],
+      "role": null,
+      "ariaLabel": "Close filter panel",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ApplySelectedFilters",
+      "tag": "button",
+      "text": "Apply Filters",
+      "classes": [
+        "cmp-insights-listing__filter-apply"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Apply selected filters"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-panel-footer"
+      ],
+      "role": null,
+      "ariaLabel": "Apply selected filters",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ClearAllFilters",
+      "tag": "button",
+      "text": "Clear All Filters",
+      "classes": [
+        "cmp-insights-listing__filter-clear-panel"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Clear all filters",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-panel-footer"
+      ],
+      "role": null,
+      "ariaLabel": "Clear all filters",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "OpenFilters",
+      "tag": "button",
+      "text": "Filter",
+      "classes": [
+        "cmp-insights-listing__filter-trigger"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-expanded": "false",
+        "aria-controls": "cmp-insights-listing-filter-panel",
+        "aria-label": "Open filters"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__summary-bar"
+      ],
+      "role": null,
+      "ariaLabel": "Open filters",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ClearAllActiveFilters",
+      "tag": "button",
+      "text": "Clear All Filters",
+      "classes": [
+        "cmp-insights-listing__clear-all"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Clear all active filters",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__summary-bar"
+      ],
+      "role": null,
+      "ariaLabel": "Clear all active filters",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Prev",
+      "tag": "button",
+      "text": "Prev",
+      "classes": [
+        "cmp-insights-listing__pagination-prev"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Prev",
+        "disabled": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__pagination"
+      ],
+      "role": null,
+      "ariaLabel": "Prev",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Next",
+      "tag": "button",
+      "text": "Next",
+      "classes": [
+        "cmp-insights-listing__pagination-next"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Next"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__pagination"
+      ],
+      "role": null,
+      "ariaLabel": "Next",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h2_Explore_All_Insights",
+      "tag": "h2",
+      "text": "Explore All Insights",
+      "classes": [
+        "cmp-insights-listing__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 322,
+        "width": 1154,
+        "height": 75
+      }
+    },
+    {
+      "name": "InsightsPagination",
+      "tag": "nav",
+      "text": "Prev\n                        \n                    \n\n                    \n                    \n\n     ",
+      "classes": [
+        "cmp-insights-listing__pagination"
+      ],
+      "attributes": {
+        "aria-label": "Insights pagination",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__main"
+      ],
+      "role": null,
+      "ariaLabel": "Insights pagination",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "ul_14",
+      "tag": "ul",
+      "text": "Professionals\n                                \n                                    \n                ",
+      "classes": [
+        "cmp-insights-listing__featured-topics-list"
+      ],
+      "attributes": {
+        "role": "list"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topics"
+      ],
+      "role": "list",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 467,
+        "width": 1154,
+        "height": 113
+      }
+    },
+    {
+      "name": "ul_15",
+      "tag": "ul",
+      "text": "",
+      "classes": [
+        "cmp-insights-listing__cards"
+      ],
+      "attributes": {
+        "role": "list"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__main"
+      ],
+      "role": "list",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 387,
+        "y": 749,
+        "width": 830,
+        "height": 0
+      }
+    },
+    {
+      "name": "ul_16",
+      "tag": "ul",
+      "text": "",
+      "classes": [
+        "cmp-insights-listing__pagination-pages"
+      ],
+      "attributes": {
+        "role": "list"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__pagination"
+      ],
+      "role": "list",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "FilterInsights",
+      "tag": "div",
+      "text": "Filter by Topics\n                        \n                            \n                             ",
+      "classes": [
+        "cmp-insights-listing__filter-panel"
+      ],
+      "attributes": {
+        "role": "dialog",
+        "aria-label": "Filter insights",
+        "aria-modal": "true"
+      },
+      "testId": null,
+      "id": "cmp-insights-listing-filter-panel",
+      "parentClasses": [
+        "cmp-insights-listing__sidebar"
+      ],
+      "role": "dialog",
+      "ariaLabel": "Filter insights",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 668,
+        "width": 220,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Jump to a Featured Topic\n                \n                \n                    \n                    ",
+      "classes": [
+        "cmp-insights-listing__featured-topics"
+      ],
+      "attributes": {
+        "aria-hidden": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 421,
+        "width": 1154,
+        "height": 159
+      }
+    },
+    {
+      "name": "p_JumpToA_Featured_Topic",
+      "tag": "p",
+      "text": "Jump to a Featured Topic",
+      "classes": [
+        "cmp-insights-listing__featured-topics-heading"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topics"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 421,
+        "width": 1154,
+        "height": 22
+      }
+    },
+    {
+      "name": "li_Professionals",
+      "tag": "li",
+      "text": "Professionals",
+      "classes": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topics-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "span_21",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-insights-listing__featured-topic-btn-check"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topic-btn"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "li_Individuals",
+      "tag": "li",
+      "text": "Individuals",
+      "classes": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topics-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 298,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "li_Corp",
+      "tag": "li",
+      "text": "Corp",
+      "classes": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topics-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 533,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "li_Corporate_Agnostic",
+      "tag": "li",
+      "text": "Corporate (Agnostic)",
+      "classes": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topics-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 769,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "li_Financial_Professionals",
+      "tag": "li",
+      "text": "Financial Professionals",
+      "classes": [
+        "cmp-insights-listing__featured-topic-item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__featured-topics-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1004,
+        "y": 467,
+        "width": 213,
+        "height": 113
+      }
+    },
+    {
+      "name": "div_26",
+      "tag": "div",
+      "text": "Filter by Topics\n                        \n                            \n                             ",
+      "classes": [
+        "cmp-insights-listing__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 668,
+        "width": 1154,
+        "height": 415
+      }
+    },
+    {
+      "name": "aside_27",
+      "tag": "aside",
+      "text": "Filter by Topics\n                        \n                            \n                             ",
+      "classes": [
+        "cmp-insights-listing__sidebar"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 668,
+        "width": 220,
+        "height": 415
+      }
+    },
+    {
+      "name": "div_FilterBy_Topics",
+      "tag": "div",
+      "text": "Filter by Topics",
+      "classes": [
+        "cmp-insights-listing__filter-panel-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "p_FilterBy_Topics",
+      "tag": "p",
+      "text": "Filter by Topics",
+      "classes": [
+        "cmp-insights-listing__filter-panel-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-panel-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "p_FilterBy_Topics_30",
+      "tag": "p",
+      "text": "Filter by Topics",
+      "classes": [
+        "cmp-insights-listing__filter-by-topics"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 668,
+        "width": 220,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_31",
+      "tag": "div",
+      "text": "Apply Filters\n                            \n                                \n                        ",
+      "classes": [
+        "cmp-insights-listing__filter-panel-footer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "main_32",
+      "tag": "main",
+      "text": "0 Insights\n                    \n                        \n                            \n              ",
+      "classes": [
+        "cmp-insights-listing__main"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 387,
+        "y": 668,
+        "width": 830,
+        "height": 415
+      }
+    },
+    {
+      "name": "div_33",
+      "tag": "div",
+      "text": "0 Insights\n                    \n                        \n                            \n              ",
+      "classes": [
+        "cmp-insights-listing__summary-bar"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__main"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 387,
+        "y": 668,
+        "width": 830,
+        "height": 49
+      }
+    },
+    {
+      "name": "p_0_Insights",
+      "tag": "p",
+      "text": "0 Insights",
+      "classes": [
+        "cmp-insights-listing__summary-text"
+      ],
+      "attributes": {
+        "aria-live": "polite",
+        "aria-atomic": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__summary-bar"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 387,
+        "y": 675,
+        "width": 62,
+        "height": 18
+      }
+    },
+    {
+      "name": "span_Filter",
+      "tag": "span",
+      "text": "Filter",
+      "classes": [
+        "cmp-insights-listing__filter-trigger-label"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-trigger"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_36",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-insights-listing__filter-trigger-badge"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__filter-trigger"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_37",
+      "tag": "div",
+      "text": "No insights were found. Please try a different filter.",
+      "classes": [
+        "cmp-insights-listing__empty-state"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__main"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 652,
+        "y": 749,
+        "width": 300,
+        "height": 334
+      }
+    },
+    {
+      "name": "span_38",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-insights-listing__empty-state-icon"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__empty-state"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 752,
+        "y": 813,
+        "width": 100,
+        "height": 100
+      }
+    },
+    {
+      "name": "p_39",
+      "tag": "p",
+      "text": "No insights were found. Please try a different filter.",
+      "classes": [
+        "cmp-insights-listing__empty-state-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-insights-listing__empty-state"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 672,
+        "y": 933,
+        "width": 260,
+        "height": 86
+      }
+    }
+  ],
+  "pageTitle": "Insights Listing",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

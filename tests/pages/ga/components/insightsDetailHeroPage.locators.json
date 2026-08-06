@@ -1,6 +1,6 @@
 {
   "component": "insights-detail-hero",
-  "generatedAt": "2026-07-14T15:05:07.622Z",
+  "generatedAt": "2026-08-06T07:42:42.126Z",
   "source": "dom",
   "entries": {
     "PlayVideo": {
@@ -22,7 +22,8 @@
           "value": "//button[contains(@class,'cmp-insights-detail-hero__play-btn')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "CloseVideo": {
       "name": "CloseVideo",
@@ -43,7 +44,8 @@
           "value": "//button[contains(@class,'cmp-insights-detail-hero__modal-close')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "h1_2": {
       "name": "h1_2",
@@ -59,7 +61,8 @@
           "value": "//h1[contains(@class,'cmp-insights-detail-hero__headline')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "div_3": {
       "name": "div_3",
@@ -75,7 +78,8 @@
           "value": "//div[contains(@class,'cmp-insights-detail-hero__left')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "div_4": {
       "name": "div_4",
@@ -91,7 +95,8 @@
           "value": "//div[contains(@class,'cmp-insights-detail-hero__right')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "div_5": {
       "name": "div_5",
@@ -107,7 +112,8 @@
           "value": "//div[contains(@class,'cmp-insights-detail-hero__info')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "div_6": {
       "name": "div_6",
@@ -123,7 +129,8 @@
           "value": "//div[contains(@class,'cmp-insights-detail-hero__info-item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "span_7": {
       "name": "span_7",
@@ -139,7 +146,8 @@
           "value": "//span[contains(@class,'cmp-insights-detail-hero__read-time')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "div_8": {
       "name": "div_8",
@@ -155,7 +163,8 @@
           "value": "//div[contains(@class,'cmp-insights-detail-hero__media')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "span_9": {
       "name": "span_9",
@@ -171,7 +180,8 @@
           "value": "//span[contains(@class,'cmp-insights-detail-hero__watch-time')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "div_10": {
       "name": "div_10",
@@ -187,7 +197,8 @@
           "value": "//div[contains(@class,'cmp-insights-detail-hero__video-container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "div_11": {
       "name": "div_11",
@@ -203,7 +214,8 @@
           "value": "//div[contains(@class,'cmp-insights-detail-hero__video-overlay')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "VideoPlayer": {
       "name": "VideoPlayer",
@@ -219,7 +231,8 @@
           "value": "//dialog[contains(@class,'cmp-insights-detail-hero__modal')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     },
     "insightsDetailHero_66ffcfaa31": {
       "name": "insightsDetailHero_66ffcfaa31",
@@ -240,7 +253,8 @@
           "value": "//video-js[contains(@class,'cmp-insights-detail-hero__modal-video')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-06T07:42:42.126Z"
     }
   }
 }

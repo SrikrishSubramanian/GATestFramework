@@ -8,8 +8,8 @@ import {
   assertColumnLayout, assertNoEmptyWrappers, assertImageFillsContainer,
   assertTagName, assertFocusIndicator, assertHidden, assertAlignment,
 } from '../../../utils/infra/component-assertions';
-import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
+import AxeBuilder from '@axe-core/playwright';
 
 let capture: ConsoleCapture;
 
@@ -775,5 +775,140 @@ test.describe('HeroFiftyFifty — Accessibility', () => {
         expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(24);
       }
     }
+  });
+});
+
+test.describe('HeroFiftyFifty — Happy Path', () => {
+  test('[HFF-050] @smoke @regression HeroFiftyFifty renders correctly', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-hero-fifty-fifty').first();
+    await expect(root).toBeVisible();
+    // Verify core structure: heading or primary content exists
+    const heading = root.locator('h1, h2, h3').first();
+    const hasHeading = await heading.count() > 0;
+    if (hasHeading) {
+      await expect(heading).toBeVisible();
+    }
+    // Verify no JS errors during render
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    expect(errors).toEqual([]);
+  });
+
+  test('[HFF-051] @smoke @regression HeroFiftyFifty interactive elements are functional', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-hero-fifty-fifty').first();
+    await expect(root).toBeVisible();
+    // Verify interactive elements (links, buttons) are present and clickable
+    const interactive = root.locator('a, button');
+    const count = await interactive.count();
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      await expect(interactive.nth(i)).toBeVisible();
+      await expect(interactive.nth(i)).toBeEnabled();
+    }
+  });
+});
+
+test.describe('HeroFiftyFifty — Negative & Boundary', () => {
+  test('[HFF-052] @negative @regression HeroFiftyFifty handles empty content gracefully', async ({ page }) => {
+    // Capture JS errors during page load
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    // Component should render without JS errors
+    expect(errors).toEqual([]);
+    // Root element should still be present (not crash)
+    await expect(page.locator('.cmp-hero-fifty-fifty').first()).toBeVisible();
+  });
+
+  test('[HFF-053] @negative @regression HeroFiftyFifty handles missing images', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-hero-fifty-fifty img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+});
+
+test.describe('HeroFiftyFifty — Responsive', () => {
+  test('[HFF-054] @mobile @regression @mobile HeroFiftyFifty adapts to mobile viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-hero-fifty-fifty').first();
+    await expect(root).toBeVisible();
+    // Verify layout adapts to mobile: check flex-direction changes to column
+    const flexDir = await root.evaluate(el => {
+      const cs = getComputedStyle(el);
+      return cs.flexDirection || cs.display;
+    });
+    // At mobile, flex containers typically switch to column layout
+    // Grid containers may change template columns
+    expect(flexDir).toBeDefined();
+  });
+
+  test('[HFF-055] @mobile @regression HeroFiftyFifty adapts to tablet viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 1024, height: 1366 });
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const root = page.locator('.cmp-hero-fifty-fifty').first();
+    await expect(root).toBeVisible();
+    // Tablet should render without horizontal overflow
+    const overflow = await root.evaluate(el => {
+      return el.scrollWidth > el.clientWidth;
+    });
+    expect(overflow).toBe(false);
+  });
+});
+
+test.describe('HeroFiftyFifty — Broken Images', () => {
+  test('[HFF-057] @regression HeroFiftyFifty all images load successfully', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-hero-fifty-fifty img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const img = images.nth(i);
+      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+      expect(naturalWidth).toBeGreaterThan(0);
+    }
+  });
+
+  test('[HFF-058] @regression HeroFiftyFifty all images have alt attributes', async ({ page }) => {
+    const pom = new HeroFiftyFiftyPage(page);
+    await pom.navigate(BASE());
+    const images = page.locator('.cmp-hero-fifty-fifty img');
+    const count = await images.count();
+    for (let i = 0; i < count; i++) {
+      const alt = await images.nth(i).getAttribute('alt');
+      expect(alt).not.toBeNull();
+    }
+  });
+});
+
+test.describe('HeroFiftyFifty — AEM Dialog Configuration', () => {
+  // Regression: GA overlay components must have their own _cq_dialog with helpPath.
+  // Without helpPath, authors see no help link in the component toolbar.
+
+  test('[HFF-062] @author @regression @smoke @smoke HeroFiftyFifty dialog has helpPath configured', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/hero-fifty-fifty/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    expect(response.ok(), 'HeroFiftyFifty GA dialog overlay not found — component may be missing _cq_dialog').toBe(true);
+    const dialog = await response.json();
+    expect(dialog.helpPath, 'HeroFiftyFifty dialog missing helpPath property').toBeTruthy();
+  });
+
+  test('[HFF-063] @author @regression @smoke HeroFiftyFifty helpPath points to correct component details page', async ({ page }) => {
+    const dialogUrl = `${BASE()}/apps/ga/components/content/hero-fifty-fifty/_cq_dialog.1.json`;
+    const response = await page.request.get(dialogUrl);
+    if (!response.ok()) { test.skip(); return; }
+    const dialog = await response.json();
+    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
   });
 });

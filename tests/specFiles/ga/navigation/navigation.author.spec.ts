@@ -1129,7 +1129,7 @@ test.describe('Navigation — CSV Test Cases (GAAM-1233)', () => {
     await expect(page.locator('.cmp-navigation').first()).toBeVisible();
     // Mobile
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.reload({ waitUntil: 'networkidle' });
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await expect(page.locator('.cmp-navigation').first()).toBeVisible();
   });
 });
@@ -1157,6 +1157,15 @@ test.describe('Navigation — CSV Test Cases (GAAM-549)', () => {
     const pom = new NavigationPage(page);
     await pom.navigate(BASE());
     // TODO: Implement assertion for: Functionality*
+    test.fixme();
+  });
+});
+
+test.describe('Navigation — CSV Test Cases (GAAM-794)', () => {
+  test('[NVGT-072] @smoke @regression CMS FE: Main Nav - MegaMenu Panel layouts — AC1', async ({ page }) => {
+    const pom = new NavigationPage(page);
+    await pom.navigate(BASE());
+    // TODO: Implement assertion for: Style System*
     test.fixme();
   });
 });
