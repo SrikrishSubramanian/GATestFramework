@@ -1,0 +1,445 @@
+{
+  "component": "nested-content-carousel",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:07:43.610Z",
+  "rootSelector": ".cmp-nested-content-carousel",
+  "elements": [
+    {
+      "name": "a_LearnMore",
+      "tag": "a",
+      "text": "Learn more",
+      "classes": [
+        "nested-carousel-button"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_self"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "cmp-nested-content-carousel__cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 723,
+        "y": 1087,
+        "width": 107,
+        "height": 26
+      }
+    },
+    {
+      "name": "PauseCarousel",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-nested-content-carousel__toggle"
+      ],
+      "attributes": {
+        "aria-label": "Pause carousel"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "controls-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Pause carousel",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1177,
+        "y": 1154,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "name": "swiperWrapperDf2fe1a3266b74af",
+      "tag": "ul",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel-cards",
+        "swiper-wrapper"
+      ],
+      "attributes": {
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": "swiper-wrapper-df2fe1a3266b74af",
+      "parentClasses": [
+        "cmp-nested-content-carousel__swiper",
+        "swiper",
+        "swiper-fade",
+        "swiper-initialized",
+        "swiper-horizontal",
+        "swiper-watch-progress",
+        "swiper-backface-hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "el1_2",
+      "tag": "li",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel-card",
+        "swiper-slide",
+        "swiper-slide-visible",
+        "swiper-slide-active"
+      ],
+      "attributes": {
+        "role": "group",
+        "aria-label": "1 / 2"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel-cards",
+        "swiper-wrapper"
+      ],
+      "role": "group",
+      "ariaLabel": "1 / 2",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "el2_2",
+      "tag": "li",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel-card",
+        "swiper-slide",
+        "swiper-slide-next"
+      ],
+      "attributes": {
+        "role": "group",
+        "aria-label": "2 / 2"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel-cards",
+        "swiper-wrapper"
+      ],
+      "role": "group",
+      "ariaLabel": "2 / 2",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 174
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel__swiper",
+        "swiper",
+        "swiper-fade",
+        "swiper-initialized",
+        "swiper-horizontal",
+        "swiper-watch-progress",
+        "swiper-backface-hidden"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "div_7",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel-card",
+        "swiper-slide",
+        "swiper-slide-visible",
+        "swiper-slide-active"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1040,
+        "width": 474,
+        "height": 73
+      }
+    },
+    {
+      "name": "div_LearnMore",
+      "tag": "div",
+      "text": "Learn more",
+      "classes": [
+        "button",
+        "cmp-nested-content-carousel__cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__text"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1087,
+        "width": 474,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_10",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "nested-carousel-button__icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "nested-carousel-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1087,
+        "width": 26,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_LearnMore",
+      "tag": "span",
+      "text": "Learn more",
+      "classes": [
+        "nested-carousel-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "nested-carousel-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 757,
+        "y": 1093,
+        "width": 73,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "01 /\n                \n                    02\n                \n\n                Slide 1 of 2",
+      "classes": [
+        "cmp-nested-content-carousel__controls"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1134,
+        "width": 514,
+        "height": 60
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "01 /\n                \n                    02\n                \n\n                Slide 1 of 2",
+      "classes": [
+        "cmp-nested-content-carousel__counter"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__controls"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1157,
+        "width": 50,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_01",
+      "tag": "span",
+      "text": "01",
+      "classes": [
+        "cmp-nested-content-carousel__current"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__counter"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1156,
+        "width": 16,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_02",
+      "tag": "span",
+      "text": "02",
+      "classes": [
+        "cmp-nested-content-carousel__total"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__counter"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 749,
+        "y": 1156,
+        "width": 16,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_Slide_1Of_2",
+      "tag": "span",
+      "text": "Slide 1 of 2",
+      "classes": [
+        "sr-only",
+        "cmp-nested-content-carousel__sr-counter"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__counter"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 764,
+        "y": 1156,
+        "width": 1,
+        "height": 1
+      }
+    }
+  ],
+  "pageTitle": "Hero 50/50",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

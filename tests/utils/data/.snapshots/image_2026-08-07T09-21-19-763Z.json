@@ -1,0 +1,1310 @@
+{
+  "component": "image",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/image.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:21:19.760Z",
+  "rootSelector": ".cmp-image",
+  "elements": [
+    {
+      "name": "ImageInWhiteBackground",
+      "tag": "a",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__link"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Image in white background",
+        "data-cmp-hook-image": "link",
+        "data-link-location": "image-a0c4fe3c63"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": "Image in white background",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 818,
+        "width": 1145,
+        "height": 706
+      }
+    },
+    {
+      "name": "ImageInWhiteBackground_1",
+      "tag": "a",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__link"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Image in white background",
+        "data-cmp-hook-image": "link",
+        "data-link-location": "image-e77a719e49"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": "Image in white background",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 2669,
+        "width": 1145,
+        "height": 706
+      }
+    },
+    {
+      "name": "ImageInWhiteBackground_2",
+      "tag": "a",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__link"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Image in white background",
+        "data-cmp-hook-image": "link",
+        "data-link-location": "image-8489b9b747"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": "Image in white background",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 68,
+        "y": 4456,
+        "width": 1145,
+        "height": 175
+      }
+    },
+    {
+      "name": "img_ImageInWhiteBackg",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758_c/section-par/image.coreimg.png/1784039966579/background-image.png",
+        "width": "944",
+        "height": "532",
+        "itemprop": "contentUrl",
+        "alt": "Image in white background",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758_c/section-par/image.coreimg{.width}.png/1784039966579/background-image.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 818,
+        "width": 1145,
+        "height": 645
+      }
+    },
+    {
+      "name": "img_FullWidthImageIn_",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758_c/section-par/image_691851970.coreimg.png/1784039970064/image-component-wide.png",
+        "width": "1400",
+        "height": "200",
+        "itemprop": "contentUrl",
+        "alt": "Full width image in white bg",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758_c/section-par/image_691851970.coreimg{.width}.png/1784039970064/image-component-wide.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1818,
+        "width": 1154,
+        "height": 164
+      }
+    },
+    {
+      "name": "img_ImageInWhiteBackg_5",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758/section-par/image.coreimg.png/1784039966579/background-image.png",
+        "width": "944",
+        "height": "532",
+        "itemprop": "contentUrl",
+        "alt": "Image in white background",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758/section-par/image.coreimg{.width}.png/1784039966579/background-image.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 2669,
+        "width": 1145,
+        "height": 645
+      }
+    },
+    {
+      "name": "img_FullWidthImageIn__6",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758/section-par/image_691851970.coreimg.png/1784039970064/image-component-wide.png",
+        "width": "1400",
+        "height": "200",
+        "itemprop": "contentUrl",
+        "alt": "Full width image in white bg",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/section_1970262758/section-par/image_691851970.coreimg{.width}.png/1784039970064/image-component-wide.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3668,
+        "width": 1154,
+        "height": 164
+      }
+    },
+    {
+      "name": "img_ImageInWhiteBackg_7",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/image_copy.coreimg.png/1784039971049/image-component-extra-wide.png",
+        "width": "2000",
+        "height": "200",
+        "itemprop": "contentUrl",
+        "alt": "Image in white background",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/image_copy.coreimg{.width}.png/1784039971049/image-component-extra-wide.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 4456,
+        "width": 1145,
+        "height": 115
+      }
+    },
+    {
+      "name": "img_FullWidthImageIn__8",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/image_691851970_copy.coreimg.png/1784039966579/background-image.png",
+        "width": "944",
+        "height": "532",
+        "itemprop": "contentUrl",
+        "alt": "Full width image in white bg",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/image_691851970_copy.coreimg{.width}.png/1784039966579/background-image.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 4860,
+        "width": 1280,
+        "height": 721
+      }
+    },
+    {
+      "name": "imgImage_9",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/grid_container_35508/grid/image.coreimg.png/1784039971049/image-component-extra-wide.png",
+        "width": "2000",
+        "height": "200",
+        "itemprop": "contentUrl",
+        "alt": "",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/grid_container_35508/grid/image.coreimg{.width}.png/1784039971049/image-component-extra-wide.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 5920,
+        "width": 407,
+        "height": 41
+      }
+    },
+    {
+      "name": "imgImage_10",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/grid_container_35508/grid/image_copy.coreimg.png/1784039970064/image-component-wide.png",
+        "width": "1400",
+        "height": "200",
+        "itemprop": "contentUrl",
+        "alt": "",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/grid_container_35508/grid/image_copy.coreimg{.width}.png/1784039970064/image-component-wide.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 437,
+        "y": 5936,
+        "width": 407,
+        "height": 58
+      }
+    },
+    {
+      "name": "img_CaptionFrom_Metadat",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/grid_container_35508/grid/image_copy_1525968583.coreimg.png/1784039968373/image-component.png",
+        "width": "500",
+        "height": "200",
+        "itemprop": "contentUrl",
+        "alt": "Caption from Metadata Title",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/grid_container/grid/grid_container_35508/grid/image_copy_1525968583.coreimg{.width}.png/1784039968373/image-component.png",
+        "title": "Caption from Metadata Title"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 873,
+        "y": 5920,
+        "width": 407,
+        "height": 163
+      }
+    },
+    {
+      "name": "img_ImageInWhiteBackg_12",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/image_copy_copy.coreimg.png/1784039966579/background-image.png",
+        "width": "944",
+        "height": "532",
+        "itemprop": "contentUrl",
+        "alt": "Image in white background",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/image_copy_copy.coreimg{.width}.png/1784039966579/background-image.png",
+        "title": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for their unique investment needs.Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for their unique investment needs."
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 6451,
+        "width": 1280,
+        "height": 721
+      }
+    },
+    {
+      "name": "img_FullWidthImageIn__13",
+      "tag": "img",
+      "text": "",
+      "classes": [
+        "cmp-image__image"
+      ],
+      "attributes": {
+        "src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/image_691851970_copy.coreimg.png/1784039970064/image-component-wide.png",
+        "width": "1400",
+        "height": "200",
+        "itemprop": "contentUrl",
+        "alt": "Full width image in white bg",
+        "data-src": "/content/global-atlantic/style-guide/components/image/_jcr_content/root/main-par/image_691851970_copy.coreimg{.width}.png/1784039970064/image-component-wide.png"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__picture"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 7359,
+        "width": 1280,
+        "height": 182
+      }
+    },
+    {
+      "name": "figure_14",
+      "tag": "figure",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 818,
+        "width": 1145,
+        "height": 706
+      }
+    },
+    {
+      "name": "picture_15",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 818,
+        "width": 1145,
+        "height": 645
+      }
+    },
+    {
+      "name": "div_16",
+      "tag": "div",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1463,
+        "width": 1145,
+        "height": 60
+      }
+    },
+    {
+      "name": "figcaption_17",
+      "tag": "figcaption",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__title-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 1463,
+        "width": 1145,
+        "height": 60
+      }
+    },
+    {
+      "name": "figure_18",
+      "tag": "figure",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1818,
+        "width": 1154,
+        "height": 243
+      }
+    },
+    {
+      "name": "picture_19",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1818,
+        "width": 1154,
+        "height": 164
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1982,
+        "width": 1154,
+        "height": 79
+      }
+    },
+    {
+      "name": "figcaption_21",
+      "tag": "figcaption",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__title-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1982,
+        "width": 1154,
+        "height": 79
+      }
+    },
+    {
+      "name": "figure_22",
+      "tag": "figure",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 2669,
+        "width": 1145,
+        "height": 706
+      }
+    },
+    {
+      "name": "picture_23",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 2669,
+        "width": 1145,
+        "height": 645
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 3314,
+        "width": 1145,
+        "height": 60
+      }
+    },
+    {
+      "name": "figcaption_25",
+      "tag": "figcaption",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__title-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 3314,
+        "width": 1145,
+        "height": 60
+      }
+    },
+    {
+      "name": "figure_26",
+      "tag": "figure",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3668,
+        "width": 1154,
+        "height": 243
+      }
+    },
+    {
+      "name": "picture_27",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3668,
+        "width": 1154,
+        "height": 164
+      }
+    },
+    {
+      "name": "div_28",
+      "tag": "div",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3833,
+        "width": 1154,
+        "height": 79
+      }
+    },
+    {
+      "name": "figcaption_29",
+      "tag": "figcaption",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__title-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3833,
+        "width": 1154,
+        "height": 79
+      }
+    },
+    {
+      "name": "figure_30",
+      "tag": "figure",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 4456,
+        "width": 1145,
+        "height": 175
+      }
+    },
+    {
+      "name": "picture_31",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 4456,
+        "width": 1145,
+        "height": 115
+      }
+    },
+    {
+      "name": "div_32",
+      "tag": "div",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 4570,
+        "width": 1145,
+        "height": 60
+      }
+    },
+    {
+      "name": "figcaption_33",
+      "tag": "figcaption",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__title-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 4570,
+        "width": 1145,
+        "height": 60
+      }
+    },
+    {
+      "name": "figure_34",
+      "tag": "figure",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 4860,
+        "width": 1280,
+        "height": 782
+      }
+    },
+    {
+      "name": "picture_35",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 4860,
+        "width": 1280,
+        "height": 721
+      }
+    },
+    {
+      "name": "div_36",
+      "tag": "div",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 5582,
+        "width": 1280,
+        "height": 60
+      }
+    },
+    {
+      "name": "figcaption_37",
+      "tag": "figcaption",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__title-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 5582,
+        "width": 1280,
+        "height": 60
+      }
+    },
+    {
+      "name": "figure_38",
+      "tag": "figure",
+      "text": "",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 5920,
+        "width": 407,
+        "height": 41
+      }
+    },
+    {
+      "name": "picture_39",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 5920,
+        "width": 407,
+        "height": 41
+      }
+    },
+    {
+      "name": "figure_40",
+      "tag": "figure",
+      "text": "",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 437,
+        "y": 5936,
+        "width": 407,
+        "height": 58
+      }
+    },
+    {
+      "name": "picture_41",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 437,
+        "y": 5936,
+        "width": 407,
+        "height": 58
+      }
+    },
+    {
+      "name": "figure_42",
+      "tag": "figure",
+      "text": "",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 873,
+        "y": 5920,
+        "width": 407,
+        "height": 163
+      }
+    },
+    {
+      "name": "picture_43",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 873,
+        "y": 5920,
+        "width": 407,
+        "height": 163
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 873,
+        "y": 6083,
+        "width": 407,
+        "height": 0
+      }
+    },
+    {
+      "name": "figure_45",
+      "tag": "figure",
+      "text": "",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image",
+        "hide-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 6451,
+        "width": 1280,
+        "height": 726
+      }
+    },
+    {
+      "name": "picture_46",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 7159,
+        "width": 1280,
+        "height": 17
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 7177,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "figure_48",
+      "tag": "figure",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__figure"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 7359,
+        "width": 1280,
+        "height": 223
+      }
+    },
+    {
+      "name": "picture_49",
+      "tag": "picture",
+      "text": "",
+      "classes": [
+        "cmp-image__picture"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 7527,
+        "width": 1280,
+        "height": 17
+      }
+    },
+    {
+      "name": "div_50",
+      "tag": "div",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__figure"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 7545,
+        "width": 1280,
+        "height": 37
+      }
+    },
+    {
+      "name": "figcaption_51",
+      "tag": "figcaption",
+      "text": "Our global Family Capital team is dedicated to helping families and entrepreneurs find solutions for",
+      "classes": [
+        "cmp-image__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__title-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 7545,
+        "width": 1145,
+        "height": 37
+      }
+    }
+  ],
+  "pageTitle": "Image",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

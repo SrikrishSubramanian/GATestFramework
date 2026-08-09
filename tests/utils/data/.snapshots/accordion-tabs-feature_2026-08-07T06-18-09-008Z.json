@@ -1,0 +1,5622 @@
+{
+  "component": "accordion-tabs-feature",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/accordion-tabs-feature.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:18:09.007Z",
+  "rootSelector": ".cmp-accordion-tabs-feature",
+  "elements": [
+    {
+      "name": "Learn_More",
+      "tag": "a",
+      "text": "Learn More",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Learn More"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Learn More",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 486,
+        "width": 106,
+        "height": 24
+      }
+    },
+    {
+      "name": "Plan_Ahead",
+      "tag": "a",
+      "text": "Plan Ahead",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Plan Ahead"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Plan Ahead",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "View_Products",
+      "tag": "a",
+      "text": "View Products",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "View Products"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "View Products",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Explore_Markets",
+      "tag": "a",
+      "text": "Explore Markets",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Explore Markets"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Explore Markets",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 1644,
+        "width": 136,
+        "height": 24
+      }
+    },
+    {
+      "name": "Our_Approach",
+      "tag": "a",
+      "text": "Our Approach",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Our Approach"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Our Approach",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "View_Portfolio",
+      "tag": "a",
+      "text": "View Portfolio",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "View Portfolio"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "View Portfolio",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Read_More",
+      "tag": "a",
+      "text": "Read More",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Read More"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Read More",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Start_Exploring",
+      "tag": "a",
+      "text": "Start Exploring",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Start Exploring"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Start Exploring",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 4171,
+        "width": 128,
+        "height": 24
+      }
+    },
+    {
+      "name": "Learn_Process",
+      "tag": "a",
+      "text": "Learn Process",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Learn Process"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Learn Process",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "View_Success_Stories",
+      "tag": "a",
+      "text": "View Success Stories",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "View Success Stories"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "View Success Stories",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Our_Strength",
+      "tag": "a",
+      "text": "Our Strength",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Our Strength"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Our Strength",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 5306,
+        "width": 114,
+        "height": 24
+      }
+    },
+    {
+      "name": "MeetThe_Team",
+      "tag": "a",
+      "text": "Meet the Team",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Meet the Team"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Meet the Team",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Our_Innovation",
+      "tag": "a",
+      "text": "Our Innovation",
+      "classes": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-is-link-external": "false",
+        "aria-label": "Our Innovation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Our Innovation",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Wealth_Management",
+      "tag": "button",
+      "text": "Wealth Management",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "true",
+        "aria-expanded": "true",
+        "aria-controls": "accordion-tab-f26cac7ae1",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-f26cac7ae1--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 331,
+        "width": 328,
+        "height": 56
+      }
+    },
+    {
+      "name": "button_Retirement_Planning",
+      "tag": "button",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-77723d07bb",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-77723d07bb--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 869,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Insurance_Solutions",
+      "tag": "button",
+      "text": "Insurance Solutions",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-9e14c1f6be",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-9e14c1f6be--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 950,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Global_Reach",
+      "tag": "button",
+      "text": "Global Reach",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "true",
+        "aria-expanded": "true",
+        "aria-controls": "accordion-tab-85a8815f97",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-85a8815f97--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 1489,
+        "width": 328,
+        "height": 56
+      }
+    },
+    {
+      "name": "button_Innovation",
+      "tag": "button",
+      "text": "Innovation",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-c78a78f9cc",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-c78a78f9cc--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 2027,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Sustainability",
+      "tag": "button",
+      "text": "Sustainability",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-cd427f0aef",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-cd427f0aef--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 2108,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Investment_Strategy",
+      "tag": "button",
+      "text": "Investment Strategy",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "true",
+        "aria-expanded": "true",
+        "aria-controls": "accordion-tab-cbe058cfe6",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-cbe058cfe6--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 2858,
+        "width": 328,
+        "height": 56
+      }
+    },
+    {
+      "name": "button_Portfolio_Management",
+      "tag": "button",
+      "text": "Portfolio Management",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-b58b139277",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-b58b139277--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 3396,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Risk_Assessment",
+      "tag": "button",
+      "text": "Risk Assessment",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-2cb0f20a56",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-2cb0f20a56--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 3477,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Discover",
+      "tag": "button",
+      "text": "Discover",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "true",
+        "aria-expanded": "true",
+        "aria-controls": "accordion-tab-247651daa6",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-247651daa6--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 4016,
+        "width": 328,
+        "height": 56
+      }
+    },
+    {
+      "name": "button_Evaluate",
+      "tag": "button",
+      "text": "Evaluate",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-358981e219",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-358981e219--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 4554,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Execute",
+      "tag": "button",
+      "text": "Execute",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-1c86a17c0e",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-1c86a17c0e--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 4635,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Financial_Strength",
+      "tag": "button",
+      "text": "Financial Strength",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "true",
+        "aria-expanded": "true",
+        "aria-controls": "accordion-tab-684bf12147",
+        "tabindex": "0",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-684bf12147--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 5174,
+        "width": 328,
+        "height": 56
+      }
+    },
+    {
+      "name": "button_Expert_Team",
+      "tag": "button",
+      "text": "Expert Team",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-4030f728d5",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-4030f728d5--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 5712,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "button_Innovation_Focus",
+      "tag": "button",
+      "text": "Innovation Focus",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "attributes": {
+        "role": "tab",
+        "aria-selected": "false",
+        "aria-expanded": "false",
+        "aria-controls": "accordion-tab-d3a71b7036",
+        "tabindex": "-1",
+        "data-cmp-hook-accordion-tabs-feature": "tab"
+      },
+      "testId": null,
+      "id": "accordion-tab-d3a71b7036--tab",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 5793,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "h3_Wealth_Management",
+      "tag": "h3",
+      "text": "Wealth Management",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Retirement_Planning",
+      "tag": "h3",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Insurance_Solutions",
+      "tag": "h3",
+      "text": "Insurance Solutions",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Global_Reach",
+      "tag": "h3",
+      "text": "Global Reach",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Innovation",
+      "tag": "h3",
+      "text": "Innovation",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Sustainability",
+      "tag": "h3",
+      "text": "Sustainability",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Investment_Strategy",
+      "tag": "h3",
+      "text": "Investment Strategy",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Portfolio_Management",
+      "tag": "h3",
+      "text": "Portfolio Management",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Risk_Assessment",
+      "tag": "h3",
+      "text": "Risk Assessment",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Discover",
+      "tag": "h3",
+      "text": "Discover",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Evaluate",
+      "tag": "h3",
+      "text": "Evaluate",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Execute",
+      "tag": "h3",
+      "text": "Execute",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Financial_Strength",
+      "tag": "h3",
+      "text": "Financial Strength",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Expert_Team",
+      "tag": "h3",
+      "text": "Expert Team",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h3_Innovation_Focus",
+      "tag": "h3",
+      "text": "Innovation Focus",
+      "classes": [
+        "cmp-accordion-tab__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_43",
+      "tag": "div",
+      "text": "Wealth Management\n                            \n                            \n                        ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "attributes": {
+        "role": "tablist"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 330,
+        "width": 328,
+        "height": 700
+      }
+    },
+    {
+      "name": "accordionTabF26cac7ae1",
+      "tag": "div",
+      "text": "Wealth Management\n            \n        \n\n        \n            \n                Comprehensive wealth ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-f26cac7ae1--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-f26cac7ae1\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-395d8bdcb5\"}}"
+      },
+      "testId": null,
+      "id": "accordion-tab-f26cac7ae1",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 387,
+        "width": 328,
+        "height": 481
+      }
+    },
+    {
+      "name": "div_45",
+      "tag": "div",
+      "text": "Wealth Management\n            \n        \n\n        \n            \n                Comprehensive wealth ",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-f26cac7ae1--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 403,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "accordionTab_77723d07bb",
+      "tag": "div",
+      "text": "Retirement Planning\n            \n        \n\n        \n            \n                Secure your future ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-77723d07bb--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-77723d07bb\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-395d8bdcb5\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-77723d07bb",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "Retirement Planning\n            \n        \n\n        \n            \n                Secure your future ",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-77723d07bb--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionTab_9e14c1f6be",
+      "tag": "div",
+      "text": "Insurance Solutions\n            \n        \n\n        \n            \n                Protecting what mat",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-9e14c1f6be--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-9e14c1f6be\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-395d8bdcb5\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-9e14c1f6be",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_49",
+      "tag": "div",
+      "text": "Insurance Solutions\n            \n        \n\n        \n            \n                Protecting what mat",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-9e14c1f6be--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_50",
+      "tag": "div",
+      "text": "Global Reach\n                            \n                            \n                             ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "attributes": {
+        "role": "tablist"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1488,
+        "width": 328,
+        "height": 700
+      }
+    },
+    {
+      "name": "accordionTab_85a8815f97",
+      "tag": "div",
+      "text": "Global Reach\n            \n        \n\n        \n            \n                Our worldwide network conn",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-85a8815f97--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-85a8815f97\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-771e99aea7\"}}"
+      },
+      "testId": null,
+      "id": "accordion-tab-85a8815f97",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1545,
+        "width": 328,
+        "height": 481
+      }
+    },
+    {
+      "name": "div_52",
+      "tag": "div",
+      "text": "Global Reach\n            \n        \n\n        \n            \n                Our worldwide network conn",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-85a8815f97--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1561,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "accordionTabC78a78f9cc",
+      "tag": "div",
+      "text": "Innovation\n            \n        \n\n        \n            \n                Leveraging cutting-edge tech",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-c78a78f9cc--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-c78a78f9cc\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-771e99aea7\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-c78a78f9cc",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_54",
+      "tag": "div",
+      "text": "Innovation\n            \n        \n\n        \n            \n                Leveraging cutting-edge tech",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-c78a78f9cc--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionTabCd427f0aef",
+      "tag": "div",
+      "text": "Sustainability\n            \n        \n\n        \n            \n                Committed to responsible",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-cd427f0aef--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-cd427f0aef\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-771e99aea7\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-cd427f0aef",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_56",
+      "tag": "div",
+      "text": "Sustainability\n            \n        \n\n        \n            \n                Committed to responsible",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-cd427f0aef--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_57",
+      "tag": "div",
+      "text": "Investment Strategy\n                            \n                            \n                      ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "attributes": {
+        "role": "tablist"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2857,
+        "width": 328,
+        "height": 700
+      }
+    },
+    {
+      "name": "accordionTabCbe058cfe6",
+      "tag": "div",
+      "text": "Investment Strategy\n            \n        \n\n        \n            \n                Our investment appr",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-cbe058cfe6--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-cbe058cfe6\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-343d70ab92\"}}"
+      },
+      "testId": null,
+      "id": "accordion-tab-cbe058cfe6",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2914,
+        "width": 328,
+        "height": 481
+      }
+    },
+    {
+      "name": "div_59",
+      "tag": "div",
+      "text": "Investment Strategy\n            \n        \n\n        \n            \n                Our investment appr",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-cbe058cfe6--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2930,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "accordionTabB58b139277",
+      "tag": "div",
+      "text": "Portfolio Management\n            \n        \n\n        \n            \n                We actively manage",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-b58b139277--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-b58b139277\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-343d70ab92\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-b58b139277",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_61",
+      "tag": "div",
+      "text": "Portfolio Management\n            \n        \n\n        \n            \n                We actively manage",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-b58b139277--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionTab_2cb0f20a56",
+      "tag": "div",
+      "text": "Risk Assessment\n            \n        \n\n        \n            \n                Our comprehensive risk ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-2cb0f20a56--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-2cb0f20a56\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-343d70ab92\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-2cb0f20a56",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_63",
+      "tag": "div",
+      "text": "Risk Assessment\n            \n        \n\n        \n            \n                Our comprehensive risk ",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-2cb0f20a56--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_64",
+      "tag": "div",
+      "text": "Discover\n                            \n                            \n                                \n",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "attributes": {
+        "role": "tablist"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4015,
+        "width": 328,
+        "height": 700
+      }
+    },
+    {
+      "name": "accordionTab_247651daa6",
+      "tag": "div",
+      "text": "Discover\n            \n        \n\n        \n            \n                Explore investment opportuniti",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-247651daa6--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-247651daa6\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-1d7cb6f7bf\"}}"
+      },
+      "testId": null,
+      "id": "accordion-tab-247651daa6",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4072,
+        "width": 328,
+        "height": 481
+      }
+    },
+    {
+      "name": "div_66",
+      "tag": "div",
+      "text": "Discover\n            \n        \n\n        \n            \n                Explore investment opportuniti",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-247651daa6--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4088,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "accordionTab_358981e219",
+      "tag": "div",
+      "text": "Evaluate\n            \n        \n\n        \n            \n                Assess potential investments u",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-358981e219--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-358981e219\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-1d7cb6f7bf\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-358981e219",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_68",
+      "tag": "div",
+      "text": "Evaluate\n            \n        \n\n        \n            \n                Assess potential investments u",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-358981e219--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionTab_1c86a17c0e",
+      "tag": "div",
+      "text": "Execute\n            \n        \n\n        \n            \n                Complete transactions with prec",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-1c86a17c0e--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-1c86a17c0e\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-1d7cb6f7bf\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-1c86a17c0e",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_70",
+      "tag": "div",
+      "text": "Execute\n            \n        \n\n        \n            \n                Complete transactions with prec",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-1c86a17c0e--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_71",
+      "tag": "div",
+      "text": "Financial Strength\n                            \n                            \n                       ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "attributes": {
+        "role": "tablist"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5173,
+        "width": 328,
+        "height": 700
+      }
+    },
+    {
+      "name": "accordionTab_684bf12147",
+      "tag": "div",
+      "text": "Financial Strength\n            \n        \n\n        \n            \n                Backed by KKR, we of",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-684bf12147--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-684bf12147\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-7ccf1b6142\"}}"
+      },
+      "testId": null,
+      "id": "accordion-tab-684bf12147",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5230,
+        "width": 328,
+        "height": 481
+      }
+    },
+    {
+      "name": "div_73",
+      "tag": "div",
+      "text": "Financial Strength\n            \n        \n\n        \n            \n                Backed by KKR, we of",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-684bf12147--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5246,
+        "width": 328,
+        "height": 88
+      }
+    },
+    {
+      "name": "accordionTab_4030f728d5",
+      "tag": "div",
+      "text": "Expert Team\n            \n        \n\n        \n            \n                Our team of seasoned profes",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-4030f728d5--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-4030f728d5\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-7ccf1b6142\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-4030f728d5",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_75",
+      "tag": "div",
+      "text": "Expert Team\n            \n        \n\n        \n            \n                Our team of seasoned profes",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-4030f728d5--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "accordionTabD3a71b7036",
+      "tag": "div",
+      "text": "Innovation Focus\n            \n        \n\n        \n            \n                We continuously innova",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "aria-labelledby": "accordion-tab-d3a71b7036--tab",
+        "data-cmp-hook-accordion-tabs-feature": "accordionBody",
+        "data-cmp-data-layer": "{\"accordion-tab-d3a71b7036\":{\"@type\":\"kkr-aem-base/components/content/accordion-tabs-feature/accordion-tab\",\"parentId\":\"accordion-tabs-feature-7ccf1b6142\"}}",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": "accordion-tab-d3a71b7036",
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_77",
+      "tag": "div",
+      "text": "Innovation Focus\n            \n        \n\n        \n            \n                We continuously innova",
+      "classes": [
+        "cmp-accordion-tab"
+      ],
+      "attributes": {
+        "role": "region",
+        "aria-labelledby": "accordion-tab-d3a71b7036--tab"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "accordion-tab",
+        "responsivegrid"
+      ],
+      "role": "region",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_78",
+      "tag": "div",
+      "text": "Wealth Management\n                            \n                            \n                        ",
+      "classes": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 330,
+        "width": 1154,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_79",
+      "tag": "div",
+      "text": "Wealth Management\n                            \n                            \n                        ",
+      "classes": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 330,
+        "width": 477,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_80",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tabs-feature__headline-block"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_81",
+      "tag": "div",
+      "text": "Wealth Management\n                            \n                            \n                        ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 330,
+        "width": 328,
+        "height": 539
+      }
+    },
+    {
+      "name": "span_Wealth_Management",
+      "tag": "span",
+      "text": "Wealth Management",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 358,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_83",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 359,
+        "y": 355,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "svg_84",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tabs-feature__icon-plus"
+      ],
+      "attributes": {
+        "width": "12",
+        "height": "12",
+        "viewBox": "0 0 12 12",
+        "fill": "none",
+        "xmlns": "http://www.w3.org/2000/svg"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-icon"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_85",
+      "tag": "div",
+      "text": "Wealth Management\n            \n        \n\n        \n            \n                Comprehensive wealth ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 403,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_86",
+      "tag": "div",
+      "text": "Wealth Management\n            \n        \n\n        \n            \n                Comprehensive wealth ",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 403,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_Wealth_Management",
+      "tag": "div",
+      "text": "Wealth Management",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_88",
+      "tag": "div",
+      "text": "Comprehensive wealth management solutions tailored to help you achieve your long-term financial goal",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 403,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_89",
+      "tag": "div",
+      "text": "Comprehensive wealth management solutions tailored to help you achieve your long-term financial goal",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 403,
+        "width": 328,
+        "height": 67
+      }
+    },
+    {
+      "name": "div_Learn_More",
+      "tag": "div",
+      "text": "Learn More",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 486,
+        "width": 328,
+        "height": 27
+      }
+    },
+    {
+      "name": "span_91",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tab__cta-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 486,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "name": "span_Learn_More",
+      "tag": "span",
+      "text": "Learn More",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 95,
+        "y": 491,
+        "width": 74,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_93",
+      "tag": "div",
+      "text": "Retirement Planning\n                            \n                            \n                      ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 869,
+        "width": 328,
+        "height": 81
+      }
+    },
+    {
+      "name": "span_Retirement_Planning",
+      "tag": "span",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 896,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_95",
+      "tag": "div",
+      "text": "Retirement Planning\n            \n        \n\n        \n            \n                Secure your future ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_96",
+      "tag": "div",
+      "text": "Retirement Planning\n            \n        \n\n        \n            \n                Secure your future ",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Retirement_Planning",
+      "tag": "div",
+      "text": "Retirement Planning",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_98",
+      "tag": "div",
+      "text": "Secure your future with our innovative retirement planning products and expert guidance.\n           ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_99",
+      "tag": "div",
+      "text": "Secure your future with our innovative retirement planning products and expert guidance.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Plan_Ahead",
+      "tag": "div",
+      "text": "Plan Ahead",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Plan_Ahead",
+      "tag": "span",
+      "text": "Plan Ahead",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_102",
+      "tag": "div",
+      "text": "Insurance Solutions\n                            \n                            \n                      ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 950,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "span_Insurance_Solutions",
+      "tag": "span",
+      "text": "Insurance Solutions",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 977,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_104",
+      "tag": "div",
+      "text": "Insurance Solutions\n            \n        \n\n        \n            \n                Protecting what mat",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_105",
+      "tag": "div",
+      "text": "Insurance Solutions\n            \n        \n\n        \n            \n                Protecting what mat",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Insurance_Solutions",
+      "tag": "div",
+      "text": "Insurance Solutions",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_107",
+      "tag": "div",
+      "text": "Protecting what matters most with flexible insurance products designed for modern needs.\n           ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_108",
+      "tag": "div",
+      "text": "Protecting what matters most with flexible insurance products designed for modern needs.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_View_Products",
+      "tag": "div",
+      "text": "View Products",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_View_Products",
+      "tag": "span",
+      "text": "View Products",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_111",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 540,
+        "y": 330,
+        "width": 677,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_112",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tabs-feature__image-panel",
+        "cmp-accordion-tabs-feature__image-panel--active"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "imagePanel"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 540,
+        "y": 330,
+        "width": 677,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_113",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image-with-nested-content__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image-with-nested-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 540,
+        "y": 330,
+        "width": 677,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_114",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-accordion-tabs-feature__image-panel"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "imagePanel",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_115",
+      "tag": "div",
+      "text": "Global Reach\n                            \n                            \n                             ",
+      "classes": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1488,
+        "width": 1154,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_116",
+      "tag": "div",
+      "text": "Global Reach\n                            \n                            \n                             ",
+      "classes": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1488,
+        "width": 477,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_117",
+      "tag": "div",
+      "text": "Global Reach\n                            \n                            \n                             ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1488,
+        "width": 328,
+        "height": 539
+      }
+    },
+    {
+      "name": "span_Global_Reach",
+      "tag": "span",
+      "text": "Global Reach",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1516,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_119",
+      "tag": "div",
+      "text": "Global Reach\n            \n        \n\n        \n            \n                Our worldwide network conn",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1561,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_120",
+      "tag": "div",
+      "text": "Global Reach\n            \n        \n\n        \n            \n                Our worldwide network conn",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1561,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_Global_Reach",
+      "tag": "div",
+      "text": "Global Reach",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_122",
+      "tag": "div",
+      "text": "Our worldwide network connects investors with opportunities across emerging and developed markets.\n ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1561,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_123",
+      "tag": "div",
+      "text": "Our worldwide network connects investors with opportunities across emerging and developed markets.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1561,
+        "width": 328,
+        "height": 67
+      }
+    },
+    {
+      "name": "div_Explore_Markets",
+      "tag": "div",
+      "text": "Explore Markets",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1644,
+        "width": 328,
+        "height": 27
+      }
+    },
+    {
+      "name": "span_Explore_Markets",
+      "tag": "span",
+      "text": "Explore Markets",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 95,
+        "y": 1649,
+        "width": 104,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_126",
+      "tag": "div",
+      "text": "Innovation\n                            \n                            \n                               ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2027,
+        "width": 328,
+        "height": 81
+      }
+    },
+    {
+      "name": "span_Innovation",
+      "tag": "span",
+      "text": "Innovation",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2054,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_128",
+      "tag": "div",
+      "text": "Innovation\n            \n        \n\n        \n            \n                Leveraging cutting-edge tech",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_129",
+      "tag": "div",
+      "text": "Innovation\n            \n        \n\n        \n            \n                Leveraging cutting-edge tech",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Innovation",
+      "tag": "div",
+      "text": "Innovation",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_131",
+      "tag": "div",
+      "text": "Leveraging cutting-edge technology and data analytics to drive superior investment outcomes.\n       ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_132",
+      "tag": "div",
+      "text": "Leveraging cutting-edge technology and data analytics to drive superior investment outcomes.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_133",
+      "tag": "div",
+      "text": "Sustainability\n                            \n                            \n                           ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2108,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "span_Sustainability",
+      "tag": "span",
+      "text": "Sustainability",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2135,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_135",
+      "tag": "div",
+      "text": "Sustainability\n            \n        \n\n        \n            \n                Committed to responsible",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_136",
+      "tag": "div",
+      "text": "Sustainability\n            \n        \n\n        \n            \n                Committed to responsible",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Sustainability",
+      "tag": "div",
+      "text": "Sustainability",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_138",
+      "tag": "div",
+      "text": "Committed to responsible investing that creates lasting value for communities and stakeholders.\n    ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_139",
+      "tag": "div",
+      "text": "Committed to responsible investing that creates lasting value for communities and stakeholders.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Our_Approach",
+      "tag": "div",
+      "text": "Our Approach",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Our_Approach",
+      "tag": "span",
+      "text": "Our Approach",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_142",
+      "tag": "div",
+      "text": "Investment Strategy\n                            \n                            \n                      ",
+      "classes": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2857,
+        "width": 1154,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_143",
+      "tag": "div",
+      "text": "Investment Strategy\n                            \n                            \n                      ",
+      "classes": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2857,
+        "width": 477,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_144",
+      "tag": "div",
+      "text": "Investment Strategy\n                            \n                            \n                      ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2857,
+        "width": 328,
+        "height": 539
+      }
+    },
+    {
+      "name": "span_Investment_Strategy",
+      "tag": "span",
+      "text": "Investment Strategy",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2884,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_146",
+      "tag": "div",
+      "text": "Investment Strategy\n            \n        \n\n        \n            \n                Our investment appr",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2930,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_147",
+      "tag": "div",
+      "text": "Investment Strategy\n            \n        \n\n        \n            \n                Our investment appr",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2930,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_Investment_Strategy",
+      "tag": "div",
+      "text": "Investment Strategy",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_149",
+      "tag": "div",
+      "text": "Our investment approach focuses on long-term value creation through strategic partnerships and opera",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2930,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_150",
+      "tag": "div",
+      "text": "Our investment approach focuses on long-term value creation through strategic partnerships and opera",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2930,
+        "width": 328,
+        "height": 67
+      }
+    },
+    {
+      "name": "div_151",
+      "tag": "div",
+      "text": "Portfolio Management\n                            \n                            \n                     ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3396,
+        "width": 328,
+        "height": 81
+      }
+    },
+    {
+      "name": "span_Portfolio_Management",
+      "tag": "span",
+      "text": "Portfolio Management",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3422,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_153",
+      "tag": "div",
+      "text": "Portfolio Management\n            \n        \n\n        \n            \n                We actively manage",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_154",
+      "tag": "div",
+      "text": "Portfolio Management\n            \n        \n\n        \n            \n                We actively manage",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Portfolio_Management",
+      "tag": "div",
+      "text": "Portfolio Management",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_156",
+      "tag": "div",
+      "text": "We actively manage a diverse portfolio of companies across multiple sectors, providing strategic gui",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_157",
+      "tag": "div",
+      "text": "We actively manage a diverse portfolio of companies across multiple sectors, providing strategic gui",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_View_Portfolio",
+      "tag": "div",
+      "text": "View Portfolio",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_View_Portfolio",
+      "tag": "span",
+      "text": "View Portfolio",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_160",
+      "tag": "div",
+      "text": "Risk Assessment\n                            \n                            \n                          ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3477,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "span_Risk_Assessment",
+      "tag": "span",
+      "text": "Risk Assessment",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3503,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_162",
+      "tag": "div",
+      "text": "Risk Assessment\n            \n        \n\n        \n            \n                Our comprehensive risk ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_163",
+      "tag": "div",
+      "text": "Risk Assessment\n            \n        \n\n        \n            \n                Our comprehensive risk ",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Risk_Assessment",
+      "tag": "div",
+      "text": "Risk Assessment",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_165",
+      "tag": "div",
+      "text": "Our comprehensive risk management framework ensures sustainable growth while protecting stakeholder ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_166",
+      "tag": "div",
+      "text": "Our comprehensive risk management framework ensures sustainable growth while protecting stakeholder ",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Read_More",
+      "tag": "div",
+      "text": "Read More",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Read_More",
+      "tag": "span",
+      "text": "Read More",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_169",
+      "tag": "div",
+      "text": "Discover\n                            \n                            \n                                \n",
+      "classes": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4015,
+        "width": 1154,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_170",
+      "tag": "div",
+      "text": "Discover\n                            \n                            \n                                \n",
+      "classes": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4015,
+        "width": 477,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_171",
+      "tag": "div",
+      "text": "Discover\n                            \n                            \n                                \n",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4015,
+        "width": 328,
+        "height": 539
+      }
+    },
+    {
+      "name": "span_Discover",
+      "tag": "span",
+      "text": "Discover",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4042,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_173",
+      "tag": "div",
+      "text": "Discover\n            \n        \n\n        \n            \n                Explore investment opportuniti",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4088,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_174",
+      "tag": "div",
+      "text": "Discover\n            \n        \n\n        \n            \n                Explore investment opportuniti",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4088,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_Discover",
+      "tag": "div",
+      "text": "Discover",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_176",
+      "tag": "div",
+      "text": "Explore investment opportunities through comprehensive market research and analysis.\n            \n\n ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4088,
+        "width": 328,
+        "height": 111
+      }
+    },
+    {
+      "name": "div_177",
+      "tag": "div",
+      "text": "Explore investment opportunities through comprehensive market research and analysis.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4088,
+        "width": 328,
+        "height": 67
+      }
+    },
+    {
+      "name": "div_Start_Exploring",
+      "tag": "div",
+      "text": "Start Exploring",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4171,
+        "width": 328,
+        "height": 27
+      }
+    },
+    {
+      "name": "span_Start_Exploring",
+      "tag": "span",
+      "text": "Start Exploring",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 95,
+        "y": 4176,
+        "width": 96,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_180",
+      "tag": "div",
+      "text": "Evaluate\n                            \n                            \n                                \n",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4554,
+        "width": 328,
+        "height": 81
+      }
+    },
+    {
+      "name": "span_Evaluate",
+      "tag": "span",
+      "text": "Evaluate",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4580,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_182",
+      "tag": "div",
+      "text": "Evaluate\n            \n        \n\n        \n            \n                Assess potential investments u",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_183",
+      "tag": "div",
+      "text": "Evaluate\n            \n        \n\n        \n            \n                Assess potential investments u",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Evaluate",
+      "tag": "div",
+      "text": "Evaluate",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_185",
+      "tag": "div",
+      "text": "Assess potential investments using our proprietary evaluation framework and due diligence process.\n ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_186",
+      "tag": "div",
+      "text": "Assess potential investments using our proprietary evaluation framework and due diligence process.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Learn_Process",
+      "tag": "div",
+      "text": "Learn Process",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Learn_Process",
+      "tag": "span",
+      "text": "Learn Process",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_189",
+      "tag": "div",
+      "text": "Execute\n                            \n                            \n                                \n ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4635,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "span_Execute",
+      "tag": "span",
+      "text": "Execute",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4661,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_191",
+      "tag": "div",
+      "text": "Execute\n            \n        \n\n        \n            \n                Complete transactions with prec",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_192",
+      "tag": "div",
+      "text": "Execute\n            \n        \n\n        \n            \n                Complete transactions with prec",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Execute",
+      "tag": "div",
+      "text": "Execute",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_194",
+      "tag": "div",
+      "text": "Complete transactions with precision and efficiency, ensuring optimal outcomes for all stakeholders.",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_195",
+      "tag": "div",
+      "text": "Complete transactions with precision and efficiency, ensuring optimal outcomes for all stakeholders.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_View_Success_Stories",
+      "tag": "div",
+      "text": "View Success Stories",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_View_Success_Stories",
+      "tag": "span",
+      "text": "View Success Stories",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_198",
+      "tag": "div",
+      "text": "Financial Strength\n                            \n                            \n                       ",
+      "classes": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5173,
+        "width": 1154,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_199",
+      "tag": "div",
+      "text": "Financial Strength\n                            \n                            \n                       ",
+      "classes": [
+        "cmp-accordion-tabs-feature__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5173,
+        "width": 477,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_200",
+      "tag": "div",
+      "text": "Financial Strength\n                            \n                            \n                       ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item",
+        "cmp-accordion-tabs-feature__accordion-item--active"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5173,
+        "width": 328,
+        "height": 539
+      }
+    },
+    {
+      "name": "span_Financial_Strength",
+      "tag": "span",
+      "text": "Financial Strength",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5200,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_202",
+      "tag": "div",
+      "text": "Financial Strength\n            \n        \n\n        \n            \n                Backed by KKR, we of",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5246,
+        "width": 328,
+        "height": 88
+      }
+    },
+    {
+      "name": "div_203",
+      "tag": "div",
+      "text": "Financial Strength\n            \n        \n\n        \n            \n                Backed by KKR, we of",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5246,
+        "width": 328,
+        "height": 88
+      }
+    },
+    {
+      "name": "div_Financial_Strength",
+      "tag": "div",
+      "text": "Financial Strength",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_205",
+      "tag": "div",
+      "text": "Backed by KKR, we offer the stability and resources of a world-class investment firm.\n            \n\n",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5246,
+        "width": 328,
+        "height": 88
+      }
+    },
+    {
+      "name": "div_206",
+      "tag": "div",
+      "text": "Backed by KKR, we offer the stability and resources of a world-class investment firm.",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5246,
+        "width": 328,
+        "height": 45
+      }
+    },
+    {
+      "name": "div_Our_Strength",
+      "tag": "div",
+      "text": "Our Strength",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5306,
+        "width": 328,
+        "height": 27
+      }
+    },
+    {
+      "name": "span_Our_Strength",
+      "tag": "span",
+      "text": "Our Strength",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 95,
+        "y": 5311,
+        "width": 82,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_209",
+      "tag": "div",
+      "text": "Expert Team\n                            \n                            \n                              ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5712,
+        "width": 328,
+        "height": 81
+      }
+    },
+    {
+      "name": "span_Expert_Team",
+      "tag": "span",
+      "text": "Expert Team",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5738,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_211",
+      "tag": "div",
+      "text": "Expert Team\n            \n        \n\n        \n            \n                Our team of seasoned profes",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_212",
+      "tag": "div",
+      "text": "Expert Team\n            \n        \n\n        \n            \n                Our team of seasoned profes",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Expert_Team",
+      "tag": "div",
+      "text": "Expert Team",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_214",
+      "tag": "div",
+      "text": "Our team of seasoned professionals brings decades of combined experience in insurance and investment",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_215",
+      "tag": "div",
+      "text": "Our team of seasoned professionals brings decades of combined experience in insurance and investment",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_MeetThe_Team",
+      "tag": "div",
+      "text": "Meet the Team",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_MeetThe_Team",
+      "tag": "span",
+      "text": "Meet the Team",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_218",
+      "tag": "div",
+      "text": "Innovation Focus\n                            \n                            \n                         ",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-item"
+      ],
+      "attributes": {
+        "data-cmp-hook-accordion-tabs-feature": "accordionItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5793,
+        "width": 328,
+        "height": 80
+      }
+    },
+    {
+      "name": "span_Innovation_Focus",
+      "tag": "span",
+      "text": "Innovation Focus",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5819,
+        "width": 276,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_220",
+      "tag": "div",
+      "text": "Innovation Focus\n            \n        \n\n        \n            \n                We continuously innova",
+      "classes": [
+        "cmp-accordion-tabs-feature__accordion-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tabs-feature__accordion-body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_221",
+      "tag": "div",
+      "text": "Innovation Focus\n            \n        \n\n        \n            \n                We continuously innova",
+      "classes": [
+        "cmp-accordion-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Innovation_Focus",
+      "tag": "div",
+      "text": "Innovation Focus",
+      "classes": [
+        "cmp-accordion-tab__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_223",
+      "tag": "div",
+      "text": "We continuously innovate our products and services to deliver better outcomes for policyholders and ",
+      "classes": [
+        "cmp-accordion-tab__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_224",
+      "tag": "div",
+      "text": "We continuously innovate our products and services to deliver better outcomes for policyholders and ",
+      "classes": [
+        "cmp-accordion-tab__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Our_Innovation",
+      "tag": "div",
+      "text": "Our Innovation",
+      "classes": [
+        "cmp-accordion-tab__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Our_Innovation",
+      "tag": "span",
+      "text": "Our Innovation",
+      "classes": [
+        "cmp-accordion-tab__cta-label"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-accordion-tab__cta-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Accordion Tabs Feature",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

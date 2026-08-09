@@ -156,8 +156,15 @@ export function generateMatrixSpec(
   // Determine locator strategy for each variant
   function variantLocator(variant: string, bg: string): string {
     if (bgStrategy === 'component') {
-      // For component-scoped backgrounds, the component IS the background container
+      // For component-scoped backgrounds, the component IS the background container.
+      // When there's no distinct wrapper (wrapperSelector defaults to the same
+      // selector as innerSelector), `container` already IS the element to check —
+      // searching for it again *inside itself* would never match.
       const inner = known?.innerSelector || `.cmp-${comp}`;
+      const wrapper = known?.wrapperSelector || `.cmp-${comp}`;
+      if (inner === wrapper) {
+        return `container`;
+      }
       return `container.locator('${inner}').first()`;
     }
     const wrapperClass = known?.variantClasses?.[variant];
@@ -356,10 +363,19 @@ export const KNOWN_VARIANTS: Record<string, {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
   },
+  // No .cmp-section--background-color-* wrapper exists anywhere on this
+  // component's style-guide page (verified live) — it's never demoed inside
+  // a colored section, so background is not a real variation axis. Use the
+  // 'component' strategy with a single 'white' entry so exactly one
+  // (non-redundant) background case is generated instead of 4 that all
+  // point at a section wrapper that doesn't exist.
   'ratings-card': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-rating-card',
+    wrapperSelector: '.cmp-rating-card',
+    backgroundStrategy: 'component',
+    availableBackgrounds: ['white'],
   },
   'benefits-table': {
     variants: ['default'],
@@ -370,11 +386,15 @@ export const KNOWN_VARIANTS: Record<string, {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-brand-relationship',
+    backgroundStrategy: 'component',
+    availableBackgrounds: ['white'],
   },
+  // Verified live: only slate + granite sections exist on this page.
   'content-highlight': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-content-highlight',
+    availableBackgrounds: ['slate', 'granite'],
   },
   'decision-tree': {
     variants: ['default'],
@@ -385,80 +405,112 @@ export const KNOWN_VARIANTS: Record<string, {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-detail-hero',
+    backgroundStrategy: 'component',
+    availableBackgrounds: ['white'],
   },
+  // Verified live: only a granite section exists on this page.
   'enhanced-related-content': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-enhanced-related-content',
+    availableBackgrounds: ['granite'],
   },
   'homepage-hero': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-homepage-hero',
+    backgroundStrategy: 'component',
+    availableBackgrounds: ['white'],
   },
   'in-brief': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-in-brief',
   },
+  // Verified live: only a slate section exists on this page.
   'insights-detail-hero': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-insights-detail-hero',
+    availableBackgrounds: ['slate'],
   },
   'insights-listing': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-insights-listing',
+    backgroundStrategy: 'component',
+    availableBackgrounds: ['white'],
   },
   login: {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-login',
+    backgroundStrategy: 'component',
+    availableBackgrounds: ['white'],
   },
+  // Verified live: only a granite section exists on this page.
   'product-comparison-card': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-product-comparison-card',
+    availableBackgrounds: ['granite'],
   },
+  // Verified live: only a white section exists on this page.
   'product-path-detail-card': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-product-path-detail-card',
+    availableBackgrounds: ['white'],
   },
   'product-path-summary-card': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-product-path-summary-card',
+    availableBackgrounds: ['white'],
   },
+  // Verified live: only white + slate sections exist on this page.
   quote: {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-quote',
+    availableBackgrounds: ['white', 'slate'],
   },
   separator: {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-separator',
   },
+  // Verified live: only white + granite sections exist on this page.
+  // Multiple instances exist per section; some are hidden until an ancestor
+  // tab/accordion panel is activated — :visible picks the one actually shown.
   'video-external': {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-video-external',
+    disabledFilter: ':visible:not([aria-disabled="true"])',
+    availableBackgrounds: ['white', 'granite'],
   },
   workbench: {
     variants: ['default'],
     themes: ['light-theme', 'dark-theme', 'auto-theme'],
     innerSelector: '.cmp-workbench',
+    backgroundStrategy: 'component',
+    availableBackgrounds: ['white'],
   },
+  // Verified live: only slate/granite/azul sections exist on this page (no
+  // plain white section demo).
   section: {
     variants: ['default'],
     themes: ['default'],
+    availableBackgrounds: ['slate', 'granite', 'azul'],
   },
   'form-options': {
     variants: ['drop-down', 'multi-drop-down'],
     themes: ['light-theme', 'dark-theme'],
   },
+  // Verified live: only a white section exists on this page.
+  // Multiple instances exist per section; some are inside inactive tab/accordion
+  // panels and hidden until toggled — :visible picks the one actually shown.
   'accordion-tabs-feature': {
     variants: ['behavior-accordion', 'behavior-scroll'],
     themes: ['default'],
@@ -467,6 +519,8 @@ export const KNOWN_VARIANTS: Record<string, {
       'behavior-scroll': '.cmp-accordion-tabs-feature',
     },
     innerSelector: '.cmp-accordion-tabs-feature',
+    disabledFilter: ':visible:not([aria-disabled="true"])',
+    availableBackgrounds: ['white'],
   },
   'content-trail': {
     variants: ['default-transparent', 'light-mode', 'dark-mode', 'dark-mode-granite'],

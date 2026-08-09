@@ -21,8 +21,13 @@
     "env:dev": "cross-env env=dev npx playwright test --project chromium",
     "env:qa": "cross-env env=qa npx playwright test --project chromium",
     "test": "cross-env env=local npx playwright test tests/specFiles/ga/ --project chromium",
-    "test:cross-browser": "cross-env env=local npx playwright test tests/specFiles/ga/ --project chromium --project firefox --project webkit --project Mobile-Chrome --project Mobile-WebKit",
+    "test:desktop": "cross-env env=local npx playwright test tests/specFiles/ga/ --project chromium --project firefox --project webkit --project Desktop-Edge",
+    "test:mobile": "cross-env env=local npx playwright test tests/specFiles/ga/ --project \"Mobile-Pixel4XL-Chrome\" --project \"Mobile-GalaxyS9-Chrome\" --project \"Mobile-GalaxyNote10-Firefox\" --project \"Mobile-iPhone8-Safari\"",
+    "test:tablet": "cross-env env=local npx playwright test tests/specFiles/ga/ --project \"Tablet-GalaxyTabS6-Chrome\" --project \"Tablet-iPad7-Safari\"",
+    "test:cross-browser": "cross-env env=local npx playwright test tests/specFiles/ga/ --project chromium --project firefox --project webkit --project Desktop-Edge --project \"Mobile-Pixel4XL-Chrome\" --project \"Mobile-GalaxyS9-Chrome\" --project \"Mobile-GalaxyNote10-Firefox\" --project \"Mobile-iPhone8-Safari\" --project \"Tablet-GalaxyTabS6-Chrome\" --project \"Tablet-iPad7-Safari\"",
     "cleanup:logs": "npx ts-node scripts/cleanup-logs.ts",
+    "auth:generate": "npx ts-node scripts/generate-auth-state.ts",
+    "check:locators": "node scripts/check-locator-sync.js",
     "postinstall": "playwright install"
   }
 }

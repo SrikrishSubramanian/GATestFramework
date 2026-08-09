@@ -1,0 +1,12 @@
+{
+  "component": "site-header",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/site-header.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:23:57.610Z",
+  "rootSelector": "header, .cmp-site-header, .header",
+  "elements": [],
+  "pageTitle": "",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

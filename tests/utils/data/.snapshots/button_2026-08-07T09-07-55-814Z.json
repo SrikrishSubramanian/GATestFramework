@@ -1,0 +1,131 @@
+{
+  "component": "button",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:07:55.813Z",
+  "rootSelector": ".cmp-button",
+  "elements": [
+    {
+      "name": "i_0",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-down"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 260,
+        "y": 824,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Button",
+      "tag": "span",
+      "text": "Button",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 199,
+        "y": 824,
+        "width": 49,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Watch_Video",
+      "tag": "span",
+      "text": "Watch Video",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 677,
+        "y": 824,
+        "width": 93,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_LearnMore",
+      "tag": "span",
+      "text": "Learn more",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 126,
+        "y": 976,
+        "width": 73,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_Button_Icon_Text",
+      "tag": "span",
+      "text": "Button Icon Text",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 20,
+        "y": 1233,
+        "width": 118,
+        "height": 16
+      }
+    }
+  ],
+  "pageTitle": "Button",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

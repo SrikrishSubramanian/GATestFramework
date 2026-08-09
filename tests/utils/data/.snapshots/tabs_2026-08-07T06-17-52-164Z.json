@@ -1,0 +1,1173 @@
+{
+  "component": "tabs",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/tabs.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:17:52.164Z",
+  "rootSelector": ".cmp-tabs",
+  "elements": [
+    {
+      "name": "ol_0",
+      "tag": "ol",
+      "text": "Defer your taxes\n            \n                \n                Grow your money\n            \n        ",
+      "classes": [
+        "cmp-tabs__tablist"
+      ],
+      "attributes": {
+        "role": "tablist",
+        "aria-multiselectable": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs__left"
+      ],
+      "role": "tablist",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 65,
+        "y": 498,
+        "width": 1151,
+        "height": 54
+      }
+    },
+    {
+      "name": "li_DeferYourTaxes",
+      "tag": "li",
+      "text": "Defer your taxes",
+      "classes": [
+        "cmp-tabs__tab",
+        "cmp-tabs__tab--active"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "true"
+      },
+      "testId": null,
+      "id": "tab-798200ac18-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 69,
+        "y": 502,
+        "width": 161,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_GrowYourMoney",
+      "tag": "li",
+      "text": "Grow your money",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "tab-73bb9869e7-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 246,
+        "y": 502,
+        "width": 166,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_IncomeOpportunities",
+      "tag": "li",
+      "text": "Income opportunities",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "tab-577552c67d-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 427,
+        "y": 502,
+        "width": 193,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_LongtermCareNeeds",
+      "tag": "li",
+      "text": "Long-term care needs",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "tab-b6f94f8223-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 636,
+        "y": 502,
+        "width": 199,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_LeaveYourLegacy",
+      "tag": "li",
+      "text": "Leave your legacy",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "tab-217d69c8b3-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 851,
+        "y": 502,
+        "width": 170,
+        "height": 46
+      }
+    },
+    {
+      "name": "li_LoremIpsumDolor",
+      "tag": "li",
+      "text": "Lorem ipsum dolor",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "tab-f1a75538be-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1037,
+        "y": 502,
+        "width": 174,
+        "height": 46
+      }
+    },
+    {
+      "name": "image_7f7d722407Tab",
+      "tag": "li",
+      "text": "",
+      "classes": [
+        "cmp-tabs__tab"
+      ],
+      "attributes": {
+        "role": "tab",
+        "data-cta": "1",
+        "tabindex": "-1",
+        "data-cmp-hook-tabs": "tab",
+        "aria-selected": "false"
+      },
+      "testId": null,
+      "id": "image-7f7d722407-tab",
+      "parentClasses": [
+        "cmp-tabs__tablist"
+      ],
+      "role": "tab",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolo",
+      "classes": [
+        "cmp-tabs__tabpanel",
+        "cmp-tabs__tabpanel--active"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "data-title": "Defer your taxes",
+        "data-cmp-data-layer": "{\"tab-798200ac18\":{\"@type\":\"ga/components/content/tabs/tab\",\"dc:title\":\"Defer your taxes\",\"parentId\":\"tabs-0f7f8aa456\"}}"
+      },
+      "testId": null,
+      "id": "tab-798200ac18",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 600,
+        "width": 1154,
+        "height": 231
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "HB2\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet co",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "data-title": "Grow your money",
+        "data-cmp-data-layer": "{\"tab-73bb9869e7\":{\"@type\":\"ga/components/content/tabs/tab\",\"dc:title\":\"Grow your money\",\"parentId\":\"tabs-0f7f8aa456\"}}"
+      },
+      "testId": null,
+      "id": "tab-73bb9869e7",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "Test 3\n    \n\n    \n        Test 3\n    \n\n    \n      Test 3",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "data-title": "Income opportunities",
+        "data-cmp-data-layer": "{\"tab-577552c67d\":{\"@type\":\"ga/components/content/tabs/tab\",\"dc:title\":\"Income opportunities\",\"parentId\":\"tabs-0f7f8aa456\"}}"
+      },
+      "testId": null,
+      "id": "tab-577552c67d",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "Test 4\n    \n\n    \n        Test 4\n    \n\n    \n      Test 4",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "data-title": "Long-term care needs",
+        "data-cmp-data-layer": "{\"tab-b6f94f8223\":{\"@type\":\"ga/components/content/tabs/tab\",\"dc:title\":\"Long-term care needs\",\"parentId\":\"tabs-0f7f8aa456\"}}"
+      },
+      "testId": null,
+      "id": "tab-b6f94f8223",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "Test 5\n    \n\n    \n        Test 5\n    \n\n    \n      Test 5",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "data-title": "Leave your legacy",
+        "data-cmp-data-layer": "{\"tab-217d69c8b3\":{\"@type\":\"ga/components/content/tabs/tab\",\"dc:title\":\"Leave your legacy\",\"parentId\":\"tabs-0f7f8aa456\"}}"
+      },
+      "testId": null,
+      "id": "tab-217d69c8b3",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "Test 6\n    \n\n    \n        Test 6\n    \n\n    \n      Test 6",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "data-title": "Lorem ipsum dolor",
+        "data-cmp-data-layer": "{\"tab-f1a75538be\":{\"@type\":\"ga/components/content/tabs/tab\",\"dc:title\":\"Lorem ipsum dolor\",\"parentId\":\"tabs-0f7f8aa456\"}}"
+      },
+      "testId": null,
+      "id": "tab-f1a75538be",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-tabs__tabpanel"
+      ],
+      "attributes": {
+        "role": "tabpanel",
+        "tabindex": "0",
+        "data-cmp-hook-tabs": "tabpanel",
+        "data-cmp-data-layer": "{\"image-7f7d722407\":{\"@type\":\"kkr-aem-base/components/content/image\",\"parentId\":\"tabs-0f7f8aa456\"}}"
+      },
+      "testId": null,
+      "id": "image-7f7d722407",
+      "parentClasses": [
+        "cmp-tabs__right"
+      ],
+      "role": "tabpanel",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_16",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-tabs__background-image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "Defer your taxes\n            \n                \n                Grow your money\n            \n        ",
+      "classes": [
+        "cmp-tabs__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 498,
+        "width": 1154,
+        "height": 333
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Defer your taxes\n            \n                \n                Grow your money\n            \n        ",
+      "classes": [
+        "cmp-tabs__left"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 498,
+        "width": 1154,
+        "height": 54
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolo",
+      "classes": [
+        "cmp-tabs__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tabs__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 552,
+        "width": 1154,
+        "height": 279
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolo",
+      "classes": [
+        "cmp-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 600,
+        "width": 1154,
+        "height": 231
+      }
+    },
+    {
+      "name": "div_OptionalEyebrow",
+      "tag": "div",
+      "text": "Optional eyebrow",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 648,
+        "width": 1145,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet consequat adipscing.",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 679,
+        "width": 1145,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscin",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 709,
+        "width": 1145,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 68,
+        "y": 784,
+        "width": 1145,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_25",
+      "tag": "div",
+      "text": "HB2\n    \n\n    \n        Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet co",
+      "classes": [
+        "cmp-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_HB2",
+      "tag": "div",
+      "text": "HB2",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_27",
+      "tag": "div",
+      "text": "Test 3\n    \n\n    \n        Test 3\n    \n\n    \n      Test 3",
+      "classes": [
+        "cmp-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_3",
+      "tag": "div",
+      "text": "Test 3",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_3_29",
+      "tag": "div",
+      "text": "Test 3",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_3_30",
+      "tag": "div",
+      "text": "Test 3",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_31",
+      "tag": "div",
+      "text": "Test 4\n    \n\n    \n        Test 4\n    \n\n    \n      Test 4",
+      "classes": [
+        "cmp-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_4",
+      "tag": "div",
+      "text": "Test 4",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_4_33",
+      "tag": "div",
+      "text": "Test 4",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_4_34",
+      "tag": "div",
+      "text": "Test 4",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_35",
+      "tag": "div",
+      "text": "Test 5\n    \n\n    \n        Test 5\n    \n\n    \n      Test 5",
+      "classes": [
+        "cmp-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_5",
+      "tag": "div",
+      "text": "Test 5",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_5_37",
+      "tag": "div",
+      "text": "Test 5",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_5_38",
+      "tag": "div",
+      "text": "Test 5",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_39",
+      "tag": "div",
+      "text": "Test 6\n    \n\n    \n        Test 6\n    \n\n    \n      Test 6",
+      "classes": [
+        "cmp-tab__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-tab"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_6",
+      "tag": "div",
+      "text": "Test 6",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_6_41",
+      "tag": "div",
+      "text": "Test 6",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Test_6_42",
+      "tag": "div",
+      "text": "Test 6",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "dialog_43",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-image__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "image"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_45",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-image__modal-image-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-image__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Tabs",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "component": "promo-banner",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/promo-banner.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:07:48.553Z",
+  "rootSelector": ".cmp-promo-banner",
+  "elements": [
+    {
+      "name": "Learn_More",
+      "tag": "a",
+      "text": "Learn More",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide",
+        "aria-label": "Learn More"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "cmp-promo-banner-button--secondary",
+        "cmp-promo-banner-button--theme-dark",
+        "cmp-promo-banner-button--md"
+      ],
+      "role": null,
+      "ariaLabel": "Learn More",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 937,
+        "y": 531,
+        "width": 149,
+        "height": 50
+      }
+    },
+    {
+      "name": "a_1",
+      "tag": "a",
+      "text": "",
+      "classes": [],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__links-social"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 934,
+        "y": 2005,
+        "width": 42,
+        "height": 42
+      }
+    },
+    {
+      "name": "GetIn_Touch",
+      "tag": "a",
+      "text": "Get in Touch",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide",
+        "aria-label": "Get in Touch"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "cmp-promo-banner-button--primary",
+        "cmp-promo-banner-button--theme-dark",
+        "cmp-promo-banner-button--md"
+      ],
+      "role": null,
+      "ariaLabel": "Get in Touch",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1096,
+        "y": 2001,
+        "width": 152,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "Lorem Ipsum Dolor Sit Amet\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis",
+      "classes": [
+        "cmp-promo-banner__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 528,
+        "width": 865,
+        "height": 55
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "Lorem Ipsum Dolor Sit Amet\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis",
+      "classes": [
+        "cmp-promo-banner__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 528,
+        "width": 865,
+        "height": 55
+      }
+    },
+    {
+      "name": "p_Lorem_Ipsum_Dolor_Sit_Amet",
+      "tag": "p",
+      "text": "Lorem Ipsum Dolor Sit Amet",
+      "classes": [
+        "cmp-promo-banner__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__text"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 528,
+        "width": 865,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "Learn More\n                \n              \n            \n          \n            \n              \n     ",
+      "classes": [
+        "cmp-promo-banner__links"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 937,
+        "y": 531,
+        "width": 311,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_7",
+      "tag": "div",
+      "text": "Learn More\n                \n              \n            \n          \n            \n              \n     ",
+      "classes": [
+        "cmp-promo-banner__links-cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__links"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 937,
+        "y": 531,
+        "width": 311,
+        "height": 50
+      }
+    },
+    {
+      "name": "span_Learn_More",
+      "tag": "span",
+      "text": "Learn More",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 959,
+        "y": 548,
+        "width": 85,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_9",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1049,
+        "y": 548,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "A leading provider of retirement security and investment solutions for real-life financial challenge",
+      "classes": [
+        "cmp-promo-banner__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 1975,
+        "width": 862,
+        "height": 101
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "A leading provider of retirement security and investment solutions for real-life financial challenge",
+      "classes": [
+        "cmp-promo-banner__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 1975,
+        "width": 862,
+        "height": 101
+      }
+    },
+    {
+      "name": "p_12",
+      "tag": "p",
+      "text": "A leading provider of retirement security and investment solutions for real-life financial challenge",
+      "classes": [
+        "cmp-promo-banner__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__text"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 1975,
+        "width": 862,
+        "height": 101
+      }
+    },
+    {
+      "name": "div_GetIn_Touch",
+      "tag": "div",
+      "text": "Get in Touch",
+      "classes": [
+        "cmp-promo-banner__links"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 934,
+        "y": 2001,
+        "width": 314,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-promo-banner__links-social"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__links"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 934,
+        "y": 2005,
+        "width": 150,
+        "height": 42
+      }
+    },
+    {
+      "name": "div_GetIn_Touch_15",
+      "tag": "div",
+      "text": "Get in Touch",
+      "classes": [
+        "cmp-promo-banner__links-cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__links"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1096,
+        "y": 2001,
+        "width": 152,
+        "height": 50
+      }
+    },
+    {
+      "name": "span_GetIn_Touch",
+      "tag": "span",
+      "text": "Get in Touch",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1118,
+        "y": 2018,
+        "width": 88,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_Lorem_Ipsum_Dolor_Sit_Amet",
+      "tag": "div",
+      "text": "Lorem Ipsum Dolor Sit Amet",
+      "classes": [
+        "cmp-promo-banner__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 2502,
+        "width": 1027,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_Lorem_Ipsum_Dolor_Sit_Amet_18",
+      "tag": "div",
+      "text": "Lorem Ipsum Dolor Sit Amet",
+      "classes": [
+        "cmp-promo-banner__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 24,
+        "y": 2502,
+        "width": 1027,
+        "height": 26
+      }
+    },
+    {
+      "name": "div_Learn_More",
+      "tag": "div",
+      "text": "Learn More",
+      "classes": [
+        "cmp-promo-banner__links"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1099,
+        "y": 2491,
+        "width": 149,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_Learn_More_20",
+      "tag": "div",
+      "text": "Learn More",
+      "classes": [
+        "cmp-promo-banner__links-cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-promo-banner__links"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1099,
+        "y": 2491,
+        "width": 149,
+        "height": 50
+      }
+    }
+  ],
+  "pageTitle": "Promo Banner",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

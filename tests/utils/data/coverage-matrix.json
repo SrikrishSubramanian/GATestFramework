@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-29T18:22:06.115Z",
+  "lastUpdated": "2026-08-07T14:08:24.076Z",
   "components": {
     "form-options": {
       "component": "form-options",
@@ -125,7 +125,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 8,
+          "testCount": 6,
           "specFile": "section.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -142,8 +142,8 @@
           ]
         }
       },
-      "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:19:20.657Z"
+      "totalTests": 6,
+      "lastUpdated": "2026-08-07T13:58:49.579Z"
     },
     "text": {
       "component": "text",
@@ -1071,7 +1071,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "login.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1139,7 +1139,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:18:25.929Z"
+      "lastUpdated": "2026-08-07T14:02:15.482Z"
     },
     "footer": {
       "component": "footer",
@@ -1274,7 +1274,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 34,
+          "testCount": 3,
           "specFile": "accordion-tabs-feature.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1299,8 +1299,8 @@
           ]
         }
       },
-      "totalTests": 114,
-      "lastUpdated": "2026-05-05T00:00:00.000Z"
+      "totalTests": 3,
+      "lastUpdated": "2026-08-07T14:08:24.062Z"
     },
     "general": {
       "component": "general",
@@ -1417,7 +1417,7 @@
       "categories": {
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "ratings-card.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1452,7 +1452,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-16T08:57:45.345Z"
+      "lastUpdated": "2026-08-07T14:04:30.143Z"
     },
     "benefits-table": {
       "component": "benefits-table",
@@ -1510,7 +1510,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "brand-relationship.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1536,7 +1536,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:16:36.616Z"
+      "lastUpdated": "2026-08-07T14:02:15.283Z"
     },
     "content-highlight": {
       "component": "content-highlight",
@@ -1552,7 +1552,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 8,
           "specFile": "content-highlight.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1577,8 +1577,8 @@
           ]
         }
       },
-      "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:16:49.296Z"
+      "totalTests": 8,
+      "lastUpdated": "2026-08-07T13:58:49.133Z"
     },
     "decision-tree": {
       "component": "decision-tree",
@@ -1636,7 +1636,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "detail-hero.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1662,7 +1662,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:17:14.641Z"
+      "lastUpdated": "2026-08-07T14:02:15.331Z"
     },
     "enhanced-related-content": {
       "component": "enhanced-related-content",
@@ -1678,7 +1678,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "enhanced-related-content.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1704,7 +1704,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:17:30.458Z"
+      "lastUpdated": "2026-08-07T13:58:49.219Z"
     },
     "homepage-hero": {
       "component": "homepage-hero",
@@ -1720,7 +1720,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "homepage-hero.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1746,7 +1746,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:17:42.592Z"
+      "lastUpdated": "2026-08-07T14:02:15.362Z"
     },
     "in-brief": {
       "component": "in-brief",
@@ -1804,7 +1804,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "insights-detail-hero.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1830,7 +1830,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:18:04.799Z"
+      "lastUpdated": "2026-08-07T13:58:49.275Z"
     },
     "insights-listing": {
       "component": "insights-listing",
@@ -1846,7 +1846,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "insights-listing.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1872,7 +1872,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:18:15.206Z"
+      "lastUpdated": "2026-08-07T14:02:15.397Z"
     },
     "product-comparison-card": {
       "component": "product-comparison-card",
@@ -1888,7 +1888,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "product-comparison-card.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1914,7 +1914,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:18:36.831Z"
+      "lastUpdated": "2026-08-07T13:58:49.378Z"
     },
     "product-path-detail-card": {
       "component": "product-path-detail-card",
@@ -1930,7 +1930,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "product-path-detail-card.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1956,7 +1956,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:18:47.827Z"
+      "lastUpdated": "2026-08-07T13:58:49.412Z"
     },
     "product-path-summary-card": {
       "component": "product-path-summary-card",
@@ -1972,7 +1972,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "product-path-summary-card.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -1998,7 +1998,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:18:58.960Z"
+      "lastUpdated": "2026-08-07T13:58:49.442Z"
     },
     "quote": {
       "component": "quote",
@@ -2014,7 +2014,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 8,
           "specFile": "quote.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -2039,8 +2039,8 @@
           ]
         }
       },
-      "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:19:09.420Z"
+      "totalTests": 8,
+      "lastUpdated": "2026-08-07T13:58:49.512Z"
     },
     "separator": {
       "component": "separator",
@@ -2098,7 +2098,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 8,
           "specFile": "video-external.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -2123,8 +2123,8 @@
           ]
         }
       },
-      "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:19:43.585Z"
+      "totalTests": 8,
+      "lastUpdated": "2026-08-07T14:08:24.076Z"
     },
     "workbench": {
       "component": "workbench",
@@ -2140,7 +2140,7 @@
         },
         "state-matrix": {
           "category": "state-matrix",
-          "testCount": 16,
+          "testCount": 4,
           "specFile": "workbench.matrix.spec.ts",
           "tags": [
             "@matrix",
@@ -2166,7 +2166,7 @@
         }
       },
       "totalTests": 4,
-      "lastUpdated": "2026-07-20T07:19:51.644Z"
+      "lastUpdated": "2026-08-07T14:02:15.525Z"
     },
     "alert-banner": {
       "component": "alert-banner",

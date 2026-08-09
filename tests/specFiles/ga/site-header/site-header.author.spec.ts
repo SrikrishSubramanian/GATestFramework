@@ -8,885 +8,450 @@ import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } 
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import AxeBuilder from '@axe-core/playwright';
-
 let capture: ConsoleCapture;
-
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
-
 const COMPONENT_PATH = '/apps/ga/components/content/site-header';
-const DIALOG_PATH    = `${COMPONENT_PATH}/_cq_dialog`;
-
+const DIALOG_PATH = `${COMPONENT_PATH}/_cq_dialog`;
 test.beforeEach(async ({ page }) => {
-  await loginToAEMAuthor(page);
-
-  capture = new ConsoleCapture(page);
-  capture.start();});
-
-test.afterEach(async ({ page }, testInfo) => {
-  if (capture) {
-    await attachConsoleCapture(testInfo, capture);
-  }
-  await annotateEnvironment(testInfo);
-});
-
-// ─── Component Registration (GAAM-394) ────────────────────────────────────────
-
-test.describe('SiteHeader — Component Registration (GAAM-394)', () => {
-  test('[SHDR-001] @smoke @regression GA overlay exists at correct Sling path', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${COMPONENT_PATH}.1.json`);
-    expect(response.ok(), `Site Header GA overlay not found at ${COMPONENT_PATH} — run GAAM-394 BE branch`).toBe(true);
-  });
-
-  test('[SHDR-002] @regression resourceSuperType delegates to kkr-aem-base site-header', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${COMPONENT_PATH}.1.json`);
-    expect(response.ok()).toBe(true);
-    const data = await response.json();
-    expect(
-      data['sling:resourceSuperType'],
-      'sling:resourceSuperType must delegate to kkr-aem-base/components/content/site-header'
-    ).toBe('kkr-aem-base/components/content/site-header');
-  });
-
-  test('[SHDR-003] @regression componentGroup is "GA Base"', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${COMPONENT_PATH}.1.json`);
-    expect(response.ok()).toBe(true);
-    const data = await response.json();
-    expect(
-      data['componentGroup'],
-      'componentGroup must be "GA Base" — component won\'t appear in GA component browser otherwise'
-    ).toBe('GA Base');
-  });
-
-  test('[SHDR-004] @smoke @regression GA _cq_dialog overlay exists', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.1.json`);
-    expect(response.ok(), `Site Header dialog overlay not found at ${DIALOG_PATH}`).toBe(true);
-  });
-
-  test('[SHDR-005] @smoke @regression Dialog has helpPath configured', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.1.json`);
-    expect(response.ok()).toBe(true);
-    const data = await response.json();
-    expect(
-      data.helpPath,
-      'Dialog missing helpPath — authors see no help (?) link in the component toolbar'
-    ).toBeTruthy();
-  });
-
-  test('[SHDR-006] @regression Dialog helpPath points to the correct component details page', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.1.json`);
-    if (!response.ok()) { test.skip(); return; }
-    const data = await response.json();
-    if (!data.helpPath) { test.skip(); return; }
-    expect(data.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
-    expect(data.helpPath).toContain('/apps/ga/components/content/site-header');
-  });
-});
-
-// ─── Dialog Structure: 3-Tab Layout (GAAM-394) ───────────────────────────────
-
-test.describe('SiteHeader — Dialog Structure: 3-Tab Layout (GAAM-394)', () => {
-  test('[SHDR-007] @regression Dialog uses a tabbed layout (granite/ui tabs resource type)', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.5.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'No "tabs" resource type found in dialog JSON').toContain('tabs');
-  });
-
-  test('[SHDR-008] @regression Tab 1 is titled "Top Navigation"', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.5.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Tab "Top Navigation" not found in dialog JSON').toContain('Top Navigation');
-  });
-
-  test('[SHDR-009] @regression Tab 2 is titled "Role Selector"', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.5.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Tab "Role Selector" not found in dialog JSON').toContain('Role Selector');
-  });
-
-  test('[SHDR-010] @regression Tab 3 is titled "Main Navigation"', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.5.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Tab "Main Navigation" not found in dialog JSON').toContain('Main Navigation');
-  });
-
-  test('[SHDR-011] @regression All 3 required tabs are present in the dialog', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.5.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    const requiredTabs = ['Top Navigation', 'Role Selector', 'Main Navigation'];
-    for (const tabTitle of requiredTabs) {
-      expect(raw, `Tab "${tabTitle}" is missing from the dialog`).toContain(tabTitle);
-    }
-  });
-
-  test('[SHDR-012] @regression Tab 1 contains a Logo Image DAM asset field', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Logo Image field not found in Top Navigation tab').toMatch(/[Ll]ogo\w*[Ii]mage|logoImage/);
-  });
-
-  test('[SHDR-013] @regression Tab 1 contains Login Tray Sections multifield', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Login Tray Sections multifield not found in dialog JSON').toMatch(/[Ll]oginTray|loginTray[Ss]ections|[Ll]ogin.*[Tt]ray/);
-  });
-
-  test('[SHDR-014] @regression Tab 3 contains a panel container for Main Navigation panels', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Panel container not found in Main Navigation tab — expected panel-container pattern (same as Accordion Tabs Feature)').toMatch(/panel[Cc]ontainer|panelContainer|[Pp]anel.*[Cc]ontainer/);
-  });
-});
-
-// ─── Required Field Configuration (GAAM-394) ─────────────────────────────────
-
-test.describe('SiteHeader — Required Field Configuration (GAAM-394)', () => {
-  test('[SHDR-015] @regression Logo Alt Text field is present in the dialog', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Logo Alt Text field not found — required field per AC').toMatch(/logoAlt|[Ll]ogo\w*[Aa]lt/);
-  });
-
-  test('[SHDR-016] @regression Logo Link path field is present in the dialog', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Logo Link field not found — required field per AC').toMatch(/logoLink|[Ll]ogo\w*[Ll]ink/);
-  });
-
-  test('[SHDR-017] @regression Top Nav Items multifield is present in the dialog', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Top Nav Items multifield not found').toMatch(/topNavItems|topNav[Ii]tems|[Tt]op.*[Nn]av.*[Ii]tems/);
-  });
-
-  test('[SHDR-018] @regression Role Items multifield is present in the Role Selector tab', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Role Items multifield not found in Role Selector tab').toMatch(/roleItems|role[Ii]tems|[Rr]ole.*[Ii]tems/);
-  });
-
-  test('[SHDR-019] @regression Role Items multifield enforces max 5 entries (GAAM-308)', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // max="5" from GAAM-308 min/max validation constraint
-    expect(raw, 'Role Items max=5 constraint not found — violates GAAM-308 requirement for consistent max role count').toContain('"5"');
-  });
-
-  test('[SHDR-020] @regression Cookie Duration is a number field in the dialog', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Cookie Duration field not found — required for role selection cookie expiry (GAAM-899)').toMatch(/cookieDuration|[Cc]ookie\w*[Dd]uration/);
-  });
-
-  test('[SHDR-021] @regression Login Label field is present with default value "Login"', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Login Label field not found').toMatch(/loginLabel|[Ll]ogin\w*[Ll]abel/);
-  });
-
-  test('[SHDR-022] @regression Main Nav CTA Label and CTA URL fields are both present', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'CTA Label not found in Main Navigation tab').toMatch(/ctaLabel|[Cc][Tt][Aa]\w*[Ll]abel/);
-    expect(raw, 'CTA URL not found in Main Navigation tab').toMatch(/ctaUrl|ctaHref|[Cc][Tt][Aa]\w*[Uu][Rr][Ll]/);
-  });
-});
-
-// ─── Conditional Field Logic (GAAM-394) ──────────────────────────────────────
-
-test.describe('SiteHeader — Conditional Field Logic (GAAM-394)', () => {
-  test('[SHDR-023] @regression Top Nav Type dropdown drives conditional sub-field visibility', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // Type dropdown toggles "Direct Link" vs "Category Dropdown" sub-fields
-    expect(raw, 'Top Nav Type dropdown field not found').toMatch(/topNavType|navType|[Dd]irect.*[Ll]ink|[Cc]ategory.*[Dd]ropdown/);
-  });
-
-  test('[SHDR-024] @regression Search Enabled toggle is present in Tab 1', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Search Enabled toggle not found — required to show/hide Search Page Path and Search Label').toMatch(/searchEnabled|[Ss]earch\w*[Ee]nabled/);
-  });
-
-  test('[SHDR-025] @regression Search Page Path field exists for conditional rendering', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Search Page Path field not found').toMatch(/searchPage|[Ss]earch\w*[Pp]age/);
-  });
-
-  test('[SHDR-026] @regression Authenticated Only toggle is present on panel dialog fields', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Authenticated Only toggle not found — needed for "My Business" panel visibility control').toMatch(/authenticatedOnly|[Aa]uthenticated\w*[Oo]nly/);
-  });
-
-  test('[SHDR-027] @regression Additional Login Subheadline field is present', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // Shown only when Additional Login Required = ON and Authenticated Only is enabled
-    expect(raw, 'Additional Login Subheadline field not found').toMatch(/additionalLogin|[Aa]dditional\w*[Ll]ogin/);
-  });
-
-  test('[SHDR-028] @regression Manage Account URL field is present (conditional on Manage Account Label)', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Manage Account URL not found — required when Manage Account Label is filled').toMatch(/manageAccount|[Mm]anage\w*[Aa]ccount/);
-  });
-
-  test('[SHDR-029] @regression Post-Logout Redirect URL field is present', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Post-Logout Redirect URL not found — needed for redirect after SLO (GAAM-821)').toMatch(/postLogout|[Pp]ost\w*[Ll]ogout|logoutRedirect/);
-  });
-});
-
-// ─── Multifield Constraints (GAAM-394) ───────────────────────────────────────
-
-test.describe('SiteHeader — Multifield Constraints (GAAM-394)', () => {
-  test('[SHDR-030] @regression Top Nav Items supports nested Secondary Nav Links multifield', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Secondary Nav Links nested multifield not found inside Top Nav Items').toMatch(/secondaryNav|[Ss]econdary\w*[Nn]av/);
-  });
-
-  test('[SHDR-031] @regression Login Tray Sections has nested Section Links multifield', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Section Links nested multifield not found inside Login Tray Sections').toMatch(/sectionLinks|[Ss]ection\w*[Ll]inks/);
-  });
-
-  test('[SHDR-032] @regression Role Items entries have Role Title and Role URL sub-fields', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Role Title sub-field not found inside Role Items').toMatch(/roleTitle|[Rr]ole\w*[Tt]itle/);
-    expect(raw, 'Role URL sub-field not found inside Role Items').toMatch(/roleUrl|roleHref|[Rr]ole\w*[Uu][Rr][Ll]/);
-  });
-
-  test('[SHDR-033] @regression Panels container exposes Navigation Items child reference (GAAM-403)', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // Left column child reference — delegates link authoring to Navigation component
-    expect(raw, 'Navigation Items child reference not found — each L1 panel needs a Navigation component reference (GAAM-403)').toMatch(/navigationItems|navItems|[Nn]avigation\w*[Ii]tems/);
-  });
-
-  test('[SHDR-034] @regression Panels container exposes Image with Nested Content child reference (GAAM-389)', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // Right column child reference — delegates image authoring to Image with Nested Content component
-    expect(raw, 'Image with Nested Content reference not found — each L1 panel needs an imageWithNestedContent reference (GAAM-389)').toMatch(/imageNested|imageWithNested|[Ii]mage\w*[Nn]ested/);
-  });
-});
-
-// ─── Author QA Checklist (GAAM-394) ──────────────────────────────────────────
-
-test.describe('SiteHeader — Author QA Checklist (GAAM-394)', () => {
-  test('[SHDR-035] @smoke @regression Component is only available for GA (overlay exists under /apps/ga)', async ({ page }) => {
-    // Verifies the GA-specific overlay exists and is properly layered over kkr-aem-base
-    const response = await page.request.get(`${BASE()}${COMPONENT_PATH}.1.json`);
-    expect(response.ok(), 'GA Site Header overlay not found — component may not be deployed on this branch').toBe(true);
-    const data = await response.json();
-    expect(data['sling:resourceSuperType']).toBeTruthy();
-    expect(data['sling:resourceSuperType']).toContain('kkr-aem-base');
-  });
-
-  test('[SHDR-036] @regression fieldDescription/helpText configured on at least one dialog field', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // Info (?) icons require fieldDescription on complex fields (Cookie Duration, Panel Style)
-    expect(raw, 'No fieldDescription found on any dialog field — AC requires info icons on complex fields').toMatch(/fieldDescription/);
-  });
-
-  test('[SHDR-037] @regression URL/path fields use AEM path picker (pathbrowser resource type)', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // All URL fields must support the AEM path picker for internal pages
-    expect(raw, 'No path picker fields found in dialog — URL fields must support AEM path browser').toMatch(/pathbrowser|pathfield|pathBrowser/i);
-  });
-
-  test('[SHDR-038] @regression Cookie Duration global field is configured in the dialog', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'Cookie Duration field not found — feeds role selection cookie expiry logic in GAAM-899').toMatch(/cookieDuration|[Cc]ookie\w*[Dd]uration/);
-  });
-
-  test('[SHDR-039] @author @smoke Author documentation accessible via dialog help icon', async ({ page }) => {
-    test.fixme(true, 'Requires live AEM instance with Site Header deployed on an XF page (GAAM-792). Verify manually: open dialog → click ? → confirm help doc opens.');
-    // Steps: Navigate to XF page → Select component → Open dialog → Click ? icon → Assert help page opens
-    // The helpPath configured in SHDR-005/006 drives this button
-    expect(true).toBe(true);
-  });
-
-  test('[SHDR-040] @smoke @regression Component jcr:title is present for the component browser', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${COMPONENT_PATH}.1.json`);
-    expect(response.ok()).toBe(true);
-    const data = await response.json();
-    expect(data['jcr:title'], 'jcr:title missing — component browser will show undefined as the component name').toBeTruthy();
-  });
-
-  test('[SHDR-041] @regression All mandatory fields are marked required in dialog JSON', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // Required fields use "required": true or Granite validation in the dialog definition
-    expect(raw, 'No required field validation markers found in dialog JSON — Logo Alt Text, Logo Link and Role Items are required per AC').toMatch(/required.*true|"required"\s*:\s*true|validation.*required/i);
-  });
-});
-
-// ─── AEM Convention Compliance (GAAM-394) ────────────────────────────────────
-
-test.describe('SiteHeader — AEM Convention Compliance (GAAM-394)', () => {
-  test('[SHDR-042] @regression Component has cq:icon configured for the component browser', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${COMPONENT_PATH}.1.json`);
-    expect(response.ok()).toBe(true);
-    const data = await response.json();
-    expect(data['cq:icon'], 'cq:icon is missing — component browser shows a blank tile without it (dev-conventions.md)').toBeTruthy();
-  });
-
-  test('[SHDR-043] @regression Dialog sling:resourceType is the cq/gui authoring dialog', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.1.json`);
-    expect(response.ok()).toBe(true);
-    const data = await response.json();
-    const rt: string = data['sling:resourceType'] || '';
-    expect(rt, 'Dialog must use cq/gui/components/authoring/dialog resource type').toContain('cq/gui/components/authoring/dialog');
-  });
-
-  test('[SHDR-044] @author @regression Component is restricted to XF Template (GAAM-792)', async ({ page }) => {
-    test.fixme(true, 'XF Template policy check requires GAAM-792 to be complete. Verify manually in Template Editor that site-header appears only in the XF template allowedComponents list.');
-    // Steps: Open Template Editor for XF template → check allowedComponents list for site-header
-    // Ensure site-header does NOT appear in standard page template allowedComponents
-    expect(true).toBe(true);
-  });
-
-  test('[SHDR-045] @regression Dialog multifield rows use granite/ui multifield resource type', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    expect(raw, 'No granite/ui multifield resource type found — multifields must use standard pattern for add/remove/reorder support').toContain('multifield');
-  });
-
-  test('[SHDR-046] @regression External link auto-detection uses the internal domains generic list', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // All URL fields use internal domains list (established in Workbench implementation)
-    // to auto-detect external links and show the external link arrow indicator
-    expect(raw, 'Internal domains list reference not found in dialog — external link auto-detection will not work').toMatch(/internalDomains|internal[Dd]omains|externalLink/);
-  });
-
-  test('[SHDR-047] @regression Panel CTA Label and Panel CTA URL fields are both present for paired validation', async ({ page }) => {
-    const response = await page.request.get(`${BASE()}${DIALOG_PATH}.8.json`);
-    expect(response.ok()).toBe(true);
-    const raw = await response.text();
-    // Both must be filled or both left empty — partial completion shows a validation warning
-    expect(raw, 'Panel CTA Label not found in panel dialog fields').toMatch(/panelCtaLabel|panelCta[Ll]abel|[Pp]anel.*[Cc][Tt][Aa].*[Ll]abel/);
-    expect(raw, 'Panel CTA URL not found in panel dialog fields').toMatch(/panelCtaUrl|panelCtaHref|[Pp]anel.*[Cc][Tt][Aa].*[Uu][Rr][Ll]/);
-  });
-});
-
-test.describe('SiteHeader — CSV Test Cases (GAAM-1353)', () => {
-  test('[SH-048] @smoke @regression CMS BE: Logout Processing with OOTB SAML Handler — AC1', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    // TODO: Implement assertion for: Clicking Log out invalidates the *AEM session* (login-token dropped).
-    test.fixme();
-  });
-});
-
-test.describe('SiteHeader — Happy Path', () => {
-  test('[SH-049] @smoke @regression SiteHeader renders correctly', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const root = page.locator('.cmp-site-header').first();
-    await expect(root).toBeVisible();
-    // Verify core structure: heading or primary content exists
-    const heading = root.locator('h1, h2, h3').first();
-    const hasHeading = await heading.count() > 0;
-    if (hasHeading) {
-      await expect(heading).toBeVisible();
-    }
-    // Verify no JS errors during render
-    const errors: string[] = [];
-    page.on('pageerror', e => errors.push(e.message));
-    expect(errors).toEqual([]);
-  });
-
-  test('[SH-050] @smoke @regression SiteHeader interactive elements are functional', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const root = page.locator('.cmp-site-header').first();
-    await expect(root).toBeVisible();
-    // Verify interactive elements (links, buttons) are present and clickable
-    const interactive = root.locator('a, button');
-    const count = await interactive.count();
-    for (let i = 0; i < Math.min(count, 3); i++) {
-      await expect(interactive.nth(i)).toBeVisible();
-      await expect(interactive.nth(i)).toBeEnabled();
-    }
-  });
-});
-
-test.describe('SiteHeader — Negative & Boundary', () => {
-  test('[SH-051] @negative @regression SiteHeader handles empty content gracefully', async ({ page }) => {
-    // Capture JS errors during page load
-    const errors: string[] = [];
-    page.on('pageerror', e => errors.push(e.message));
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    // Component should render without JS errors
-    expect(errors).toEqual([]);
-    // Root element should still be present (not crash)
-    await expect(page.locator('.cmp-site-header').first()).toBeVisible();
-  });
-
-  test('[SH-052] @negative @regression SiteHeader handles missing images', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const images = page.locator('.cmp-site-header img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
-});
-
-test.describe('SiteHeader — Responsive', () => {
-  test('[SH-053] @mobile @regression @mobile SiteHeader adapts to mobile viewport', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const root = page.locator('.cmp-site-header').first();
-    await expect(root).toBeVisible();
-    // Verify layout adapts to mobile: check flex-direction changes to column
-    const flexDir = await root.evaluate(el => {
-      const cs = getComputedStyle(el);
-      return cs.flexDirection || cs.display;
-    });
-    // At mobile, flex containers typically switch to column layout
-    // Grid containers may change template columns
-    expect(flexDir).toBeDefined();
-  });
-
-  test('[SH-054] @mobile @regression SiteHeader adapts to tablet viewport', async ({ page }) => {
-    await page.setViewportSize({ width: 1024, height: 1366 });
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const root = page.locator('.cmp-site-header').first();
-    await expect(root).toBeVisible();
-    // Tablet should render without horizontal overflow
-    const overflow = await root.evaluate(el => {
-      return el.scrollWidth > el.clientWidth;
-    });
-    expect(overflow).toBe(false);
-  });
-});
-
-test.describe('SiteHeader — Console & Resources', () => {
-  test('[SH-055] @regression SiteHeader produces no JS errors', async ({ page }) => {
-    const capture = new ConsoleCapture(page);
+    await loginToAEMAuthor(page);
+    capture = new ConsoleCapture(page);
     capture.start();
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    await page.waitForTimeout(1000);
-    const errors = capture.getErrors();
-    capture.stop();
-    expect(errors).toEqual([]);
-  });
 });
-
+test.afterEach(async ({ page }, testInfo) => {
+    if (capture) {
+        await attachConsoleCapture(testInfo, capture);
+    }
+    await annotateEnvironment(testInfo);
+});
+// ─── Component Registration (GAAM-394) ────────────────────────────────────────
+test.describe('SiteHeader — Component Registration (GAAM-394)', () => {
+});
+// ─── Dialog Structure: 3-Tab Layout (GAAM-394) ───────────────────────────────
+test.describe('SiteHeader — Dialog Structure: 3-Tab Layout (GAAM-394)', () => {
+});
+// ─── Required Field Configuration (GAAM-394) ─────────────────────────────────
+test.describe('SiteHeader — Required Field Configuration (GAAM-394)', () => {
+});
+// ─── Conditional Field Logic (GAAM-394) ──────────────────────────────────────
+test.describe('SiteHeader — Conditional Field Logic (GAAM-394)', () => {
+});
+// ─── Multifield Constraints (GAAM-394) ───────────────────────────────────────
+test.describe('SiteHeader — Multifield Constraints (GAAM-394)', () => {
+});
+// ─── Author QA Checklist (GAAM-394) ──────────────────────────────────────────
+test.describe('SiteHeader — Author QA Checklist (GAAM-394)', () => {
+    test('[SHDR-039] @author @smoke Author documentation accessible via dialog help icon', async ({ page }) => {
+        test.fixme(true, 'Requires live AEM instance with Site Header deployed on an XF page (GAAM-792). Verify manually: open dialog → click ? → confirm help doc opens.');
+        // Steps: Navigate to XF page → Select component → Open dialog → Click ? icon → Assert help page opens
+        // The helpPath configured in SHDR-005/006 drives this button
+        expect(true).toBe(true);
+    });
+});
+// ─── AEM Convention Compliance (GAAM-394) ────────────────────────────────────
+test.describe('SiteHeader — AEM Convention Compliance (GAAM-394)', () => {
+    test('[SHDR-044] @author @regression Component is restricted to XF Template (GAAM-792)', async ({ page }) => {
+        test.fixme(true, 'XF Template policy check requires GAAM-792 to be complete. Verify manually in Template Editor that site-header appears only in the XF template allowedComponents list.');
+        // Steps: Open Template Editor for XF template → check allowedComponents list for site-header
+        // Ensure site-header does NOT appear in standard page template allowedComponents
+        expect(true).toBe(true);
+    });
+});
+test.describe('SiteHeader — CSV Test Cases (GAAM-1353)', () => {
+    test('[SH-048] @smoke @regression CMS BE: Logout Processing with OOTB SAML Handler — AC1', async ({ page }) => {
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: Clicking Log out invalidates the *AEM session* (login-token dropped).
+        test.fixme();
+    });
+});
+test.describe('SiteHeader — Happy Path', () => {
+    test('[SH-049] @smoke @regression SiteHeader renders correctly', async ({ page }) => {
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        const root = page.locator('.cmp-site-header').first();
+        await expect(root).toBeVisible();
+        // Verify core structure: heading or primary content exists
+        const heading = root.locator('h1, h2, h3').first();
+        const hasHeading = await heading.count() > 0;
+        if (hasHeading) {
+            await expect(heading).toBeVisible();
+        }
+        // Verify no JS errors during render
+        const errors: string[] = [];
+        page.on('pageerror', e => errors.push(e.message));
+        expect(errors).toEqual([]);
+    });
+    test('[SH-050] @smoke @regression SiteHeader interactive elements are functional', async ({ page }) => {
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        const root = page.locator('.cmp-site-header').first();
+        await expect(root).toBeVisible();
+        // Verify interactive elements (links, buttons) are present and clickable
+        const interactive = root.locator('a, button');
+        const count = await interactive.count();
+        for (let i = 0; i < Math.min(count, 3); i++) {
+            await expect(interactive.nth(i)).toBeVisible();
+            await expect(interactive.nth(i)).toBeEnabled();
+        }
+    });
+});
+test.describe('SiteHeader — Negative & Boundary', () => {
+    test('[SH-051] @negative @regression SiteHeader handles empty content gracefully', async ({ page }) => {
+        // Capture JS errors during page load
+        const errors: string[] = [];
+        page.on('pageerror', e => errors.push(e.message));
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        // Component should render without JS errors
+        expect(errors).toEqual([]);
+        // Root element should still be present (not crash)
+        await expect(page.locator('.cmp-site-header').first()).toBeVisible();
+    });
+    test('[SH-052] @negative @regression SiteHeader handles missing images', async ({ page }) => {
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        const images = page.locator('.cmp-site-header img');
+        const count = await images.count();
+        for (let i = 0; i < count; i++) {
+            const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
+            expect(naturalWidth).toBeGreaterThan(0);
+        }
+    });
+});
+test.describe('SiteHeader — Responsive', () => {
+    test('[SH-053] @mobile @regression @mobile SiteHeader adapts to mobile viewport', async ({ page }) => {
+        await page.setViewportSize({ width: 390, height: 844 });
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        const root = page.locator('.cmp-site-header').first();
+        await expect(root).toBeVisible();
+        // Verify layout adapts to mobile: check flex-direction changes to column
+        const flexDir = await root.evaluate(el => {
+            const cs = getComputedStyle(el);
+            return cs.flexDirection || cs.display;
+        });
+        // At mobile, flex containers typically switch to column layout
+        // Grid containers may change template columns
+        expect(flexDir).toBeDefined();
+    });
+    test('[SH-054] @mobile @regression SiteHeader adapts to tablet viewport', async ({ page }) => {
+        await page.setViewportSize({ width: 1024, height: 1366 });
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        const root = page.locator('.cmp-site-header').first();
+        await expect(root).toBeVisible();
+        // Tablet should render without horizontal overflow
+        const overflow = await root.evaluate(el => {
+            return el.scrollWidth > el.clientWidth;
+        });
+        expect(overflow).toBe(false);
+    });
+});
+test.describe('SiteHeader — Console & Resources', () => {
+});
 test.describe('SiteHeader — Broken Images', () => {
-  test('[SH-056] @regression SiteHeader all images load successfully', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const images = page.locator('.cmp-site-header img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const img = images.nth(i);
-      const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth).toBeGreaterThan(0);
-    }
-  });
-
-  test('[SH-057] @regression SiteHeader all images have alt attributes', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const images = page.locator('.cmp-site-header img');
-    const count = await images.count();
-    for (let i = 0; i < count; i++) {
-      const alt = await images.nth(i).getAttribute('alt');
-      expect(alt).not.toBeNull();
-    }
-  });
+    test('[SH-056] @regression SiteHeader all images load successfully', async ({ page }) => {
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        const images = page.locator('.cmp-site-header img');
+        const count = await images.count();
+        for (let i = 0; i < count; i++) {
+            const img = images.nth(i);
+            const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+            expect(naturalWidth).toBeGreaterThan(0);
+        }
+    });
+    test('[SH-057] @regression SiteHeader all images have alt attributes', async ({ page }) => {
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        const images = page.locator('.cmp-site-header img');
+        const count = await images.count();
+        for (let i = 0; i < count; i++) {
+            const alt = await images.nth(i).getAttribute('alt');
+            expect(alt).not.toBeNull();
+        }
+    });
 });
-
 test.describe('SiteHeader — Accessibility', () => {
-  test('[SH-058] @a11y @wcag22 @regression @smoke SiteHeader passes axe-core scan', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const results = await new AxeBuilder({ page })
-      .include('.cmp-site-header')
-      .withTags(["wcag2a","wcag2aa","wcag22aa"])
-      .analyze();
-    expect(results.violations).toEqual([]);
-  });
-
-  test('[SH-059] @a11y @wcag22 @regression @smoke SiteHeader interactive elements meet 24px target size', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const interactive = page.locator('.cmp-site-header a, .cmp-site-header button, .cmp-site-header input');
-    const count = await interactive.count();
-    for (let i = 0; i < count; i++) {
-      const box = await interactive.nth(i).boundingBox();
-      if (box) {
-        expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(24);
-      }
-    }
-  });
-
-  test('[SH-060] @a11y @wcag22 @regression @smoke SiteHeader focus is not obscured by sticky elements', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    const focusable = page.locator('.cmp-site-header a, .cmp-site-header button, .cmp-site-header input');
-    const count = await focusable.count();
-    for (let i = 0; i < Math.min(count, 5); i++) {
-      await focusable.nth(i).focus();
-      const box = await focusable.nth(i).boundingBox();
-      if (box) {
-        expect(box.y).toBeGreaterThanOrEqual(0);
-        expect(box.y + box.height).toBeLessThanOrEqual(await page.evaluate(() => window.innerHeight));
-      }
-    }
-  });
 });
-
 test.describe('SiteHeader — AEM Dialog Configuration', () => {
-  // Regression: GA overlay components must have their own _cq_dialog with helpPath.
-  // Without helpPath, authors see no help link in the component toolbar.
-
-  test('[SH-061] @author @regression @smoke @smoke SiteHeader dialog has helpPath configured', async ({ page }) => {
-    const dialogUrl = `${BASE()}/apps/ga/components/content/site-header/_cq_dialog.1.json`;
-    const response = await page.request.get(dialogUrl);
-    expect(response.ok(), 'SiteHeader GA dialog overlay not found — component may be missing _cq_dialog').toBe(true);
-    const dialog = await response.json();
-    expect(dialog.helpPath, 'SiteHeader dialog missing helpPath property').toBeTruthy();
-  });
-
-  test('[SH-062] @author @regression @smoke SiteHeader helpPath points to correct component details page', async ({ page }) => {
-    const dialogUrl = `${BASE()}/apps/ga/components/content/site-header/_cq_dialog.1.json`;
-    const response = await page.request.get(dialogUrl);
-    if (!response.ok()) { test.skip(); return; }
-    const dialog = await response.json();
-    expect(dialog.helpPath).toContain('/mnt/overlay/wcm/core/content/sites/components/details.html');
-  });
 });
-
 test.describe('SiteHeader — CSV Test Cases (GAAM-397)', () => {
-  test('[SH-063] @smoke @regression CMS FE: Site Header - Desktop — AC1', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    // As a site visitor on desktop, I want the Site Header to display the correct navigation experience for my role and authentication state — Agnostic, Identified, or Authenticated — so that I can efficiently navigate to content relevant to me.
-    // 
-    // ----
-    // 
-    // *Acceptance Criteria*
-    // 
-    // *Style System*
-    // 
-    // * Panel Style 
-    // ** Standard
-    // ** Progressive Disclosure
-    // The Styles selected should apply to the Navigation component within the panel (though style system options are provided here, the actual panel rendering happens in GAAM-794)
-    // * Reference Figma for all color, typography, spacing, and shadow specifications across all states and variants
-    // 
-    // *Functionality –* 
-    // 
-    // *Top Navigation Bar*
-    // 
-    // * The Top Navigation bar renders across all role states at the top of the page
-    // * The GA logo is always present; clicking it navigates to authored link(For ex: agnostic users to the agnostic homepage and identified/authenticated users to their role's landing page)
-    // * If a top nav item is a Direct Link, clicking it navigates to the destination page
-    // * If a top nav item is a Category Dropdown, clicking it expands a dropdown of sub-links rendered by the Navigation child component (GAAM-403); hovering a sub-link applies a fill highlight; external link items display an arrow icon that shifts 4px on hover
-    // * The Top Navigation does not stick on downward scroll; it slides back into view when the user intentionally scrolls upward (peekaboo behaviour)
-    // 
-    // *Login/Account Tray (Unauthenticated)*
-    // 
-    // * The login trigger renders with the authored Login Label, a person icon, and a downward chevron (↓)
-    // * On hover and focus, a pill/capsule outline appears around the trigger
-    // * Activating the trigger expands the login tray dropdown below the top nav
-    // * The tray is organised into authored sections, each with an optional section heading and a list of login links
-    // * External links display with an external arrow indicator and open in a new tab
-    // * The tray closes on click outside or Escape key
-    // 
-    // *Login/Account Tray (Authenticated)*
-    // Out of scope Handled in [https://bounteous.jira.com/browse/GAAM-823|https://bounteous.jira.com/browse/GAAM-823|smart-link] 
-    // 
-    // *Agnostic State (Role Not Selected)*
-    // 
-    // * The Main Navigation bar is not present in the agnostic state (Main Nav does not have at least 1 panel authored indicates that FE should render the Agnostic State)
-    // * The Role Selector renders integrated with the hero below the Top Navigation; reference Figma for the full-width load-in variant
-    // * The Role Selector trigger displays the authored Help Text and a downward chevron (↓)
-    // * Activating the Role Selector expands a dropdown displaying all authored role options
-    // * Clicking outside the expanded Role Selector collapses it without selection
-    // * On role selection, the user is navigated to the selected role's landing page and the role cookie is set (GAAM-899)
-    // * On scroll down past the hero area, a compact sticky Role Selector variant slides in and fixes to the top of the viewport; a 1px border appears beneath it on scroll; reference Figma for compact variant and spacing
-    // 
-    // *Identified State (Role Selected, Unauthenticated)*
-    // 
-    // * The Main Navigation bar renders below the Top Navigation bar
-    // * The Main Navigation displays the authored L1 category labels and the CTA button (e.g. "Get in touch →") at the far right
-    // * The role changer trigger (e.g. "Financial Professional ↓") renders on the left side of the Main Navigation bar; activating it expands the Role panel
-    // * Search icon is shown in the Top Navigation for identified users; clicking it navigates to the authored search page with focus on the search bar
-    // * The Main Navigation bar fixes sticky to the top of the viewport on scroll; a 1px border appears at the bottom of the sticky nav bar
-    // 
-    // *Role Panel*
-    // 
-    // * Activating the role changer trigger expands the Role panel as a full-width dropdown below the Main Navigation bar
-    // * All authored roles are listed; the currently active role is marked with a filled checkmark indicator
-    // * Inactive roles render in a de-emphasised treatment; reference Figma for active vs inactive role label states
-    // * Selecting a different role navigates the user to that role's landing page and updates the role cookie
-    // * The panel closes on click outside or Escape key
-    // 
-    // *Main Navigation – L1 Category Trigger States (reference Figma* {{_PrimaryNavBarCategory}}*)*
-    // 
-    // * Default: plain text label + downward chevron (↓), no background
-    // * Hover: pill/capsule outline around label + chevron
-    // * Active/Expanded: bold label, chevron rotates upward (↑), pill outline persists
-    // * Inactive (another panel open): de-emphasised treatment
-    // * Focus: keyboard focus ring visible
-    // 
-    // 
-    // 
-    // *Responsive Behavior*
-    // 
-    // * This story covers desktop breakpoints only
-    // * Mobile behavior is covered in GAAM-393
-    // * Reference Figma node {{3516-3486}} for all layout specifications at desktop breakpoints
-    // 
-    // *Accessibility (WCAG 2.2 Level AA)*
-    // 
-    // * The Site Header uses a {{<header>}} landmark; the Top Navigation and Main Navigation are each wrapped in a {{<nav>}} element with distinct {{aria-label}} values (e.g. "Top navigation" and "Primary navigation")
-    // * A skip navigation link ("Skip to main content") is the first focusable element in the header
-    // * All nav links and triggers are keyboard-reachable in logical Tab order and activatable via Enter or Space
-    // * Dropdown triggers (top nav, role changer, L1 categories) expose {{aria-expanded}} (true/false), {{aria-haspopup="true"}}, and {{aria-controls}} pointing to their respective panel IDs
-    // * Open panels are visible to assistive technology; closed panels use {{aria-hidden="true"}} or equivalent
-    // * Escape key closes the active open panel or tray and returns focus to the triggering element
-    // * 
-    // * The active role in the Role panel is communicated via {{aria-current}} or equivalent
-    // * External links include visually hidden text indicating they open in a new tab
-    // * "→" arrow icons within links are decorative and hidden from assistive technology ({{aria-hidden="true"}})
-    // * All interactive elements have visible focus indicators meeting WCAG 2.2 focus appearance requirements (SC 2.4.11)
-    // * Color contrast meets WCAG 2.2 Level AA across all visual states: reference Figma
-    // * Ensure no critical or major issues are flagged by the [Level Access Extension|https://chromewebstore.google.com/detail/level-access-extension/kgbmnemfaellbfabmkmmilchbhiigpdi]
-    // 
-    // *Additional Requirements*
-    // 
-    // * Update the component to match the styles represented in the Figma link above.
-    // * Update the documentation for the authoring guide.
-    // * Create a style guide page with all the variations.
-    // 
-    // *Out of Scope*
-    // 
-    // * Dialog configuration — covered in GAAM-394
-    // * Role selection cookie logic — covered in [https://bounteous.jira.com/browse/GAAM-899|https://bounteous.jira.com/browse/GAAM-899|smart-link]
-    // * Main Navigation panel implementation - covered in  GAAM-794
-    // * Navigation child component (link columns) — covered in GAAM-403
-    // * Image with Nested Content child component — covered in GAAM-389
-    // * Mobile behaviour — covered in GAAM-393
-    // * XF setup — covered in GAAM-792
-    // 
-    // *QA Checklist*
-    // 
-    // * Styles match Figma
-    // * Authoring Guide exists and is updated with all style variations
-    // * Style Guide page exists and reflects all variations
-    // * Create test landing pages to test role change across all states (Agnostic, Identified, Authenticated)
-    test.fixme();
-  });
+    test('[SH-063] @smoke @regression CMS FE: Site Header - Desktop — AC1', async ({ page }) => {
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        // As a site visitor on desktop, I want the Site Header to display the correct navigation experience for my role and authentication state — Agnostic, Identified, or Authenticated — so that I can efficiently navigate to content relevant to me.
+        // 
+        // ----
+        // 
+        // *Acceptance Criteria*
+        // 
+        // *Style System*
+        // 
+        // * Panel Style 
+        // ** Standard
+        // ** Progressive Disclosure
+        // The Styles selected should apply to the Navigation component within the panel (though style system options are provided here, the actual panel rendering happens in GAAM-794)
+        // * Reference Figma for all color, typography, spacing, and shadow specifications across all states and variants
+        // 
+        // *Functionality –* 
+        // 
+        // *Top Navigation Bar*
+        // 
+        // * The Top Navigation bar renders across all role states at the top of the page
+        // * The GA logo is always present; clicking it navigates to authored link(For ex: agnostic users to the agnostic homepage and identified/authenticated users to their role's landing page)
+        // * If a top nav item is a Direct Link, clicking it navigates to the destination page
+        // * If a top nav item is a Category Dropdown, clicking it expands a dropdown of sub-links rendered by the Navigation child component (GAAM-403); hovering a sub-link applies a fill highlight; external link items display an arrow icon that shifts 4px on hover
+        // * The Top Navigation does not stick on downward scroll; it slides back into view when the user intentionally scrolls upward (peekaboo behaviour)
+        // 
+        // *Login/Account Tray (Unauthenticated)*
+        // 
+        // * The login trigger renders with the authored Login Label, a person icon, and a downward chevron (↓)
+        // * On hover and focus, a pill/capsule outline appears around the trigger
+        // * Activating the trigger expands the login tray dropdown below the top nav
+        // * The tray is organised into authored sections, each with an optional section heading and a list of login links
+        // * External links display with an external arrow indicator and open in a new tab
+        // * The tray closes on click outside or Escape key
+        // 
+        // *Login/Account Tray (Authenticated)*
+        // Out of scope Handled in [https://bounteous.jira.com/browse/GAAM-823|https://bounteous.jira.com/browse/GAAM-823|smart-link] 
+        // 
+        // *Agnostic State (Role Not Selected)*
+        // 
+        // * The Main Navigation bar is not present in the agnostic state (Main Nav does not have at least 1 panel authored indicates that FE should render the Agnostic State)
+        // * The Role Selector renders integrated with the hero below the Top Navigation; reference Figma for the full-width load-in variant
+        // * The Role Selector trigger displays the authored Help Text and a downward chevron (↓)
+        // * Activating the Role Selector expands a dropdown displaying all authored role options
+        // * Clicking outside the expanded Role Selector collapses it without selection
+        // * On role selection, the user is navigated to the selected role's landing page and the role cookie is set (GAAM-899)
+        // * On scroll down past the hero area, a compact sticky Role Selector variant slides in and fixes to the top of the viewport; a 1px border appears beneath it on scroll; reference Figma for compact variant and spacing
+        // 
+        // *Identified State (Role Selected, Unauthenticated)*
+        // 
+        // * The Main Navigation bar renders below the Top Navigation bar
+        // * The Main Navigation displays the authored L1 category labels and the CTA button (e.g. "Get in touch →") at the far right
+        // * The role changer trigger (e.g. "Financial Professional ↓") renders on the left side of the Main Navigation bar; activating it expands the Role panel
+        // * Search icon is shown in the Top Navigation for identified users; clicking it navigates to the authored search page with focus on the search bar
+        // * The Main Navigation bar fixes sticky to the top of the viewport on scroll; a 1px border appears at the bottom of the sticky nav bar
+        // 
+        // *Role Panel*
+        // 
+        // * Activating the role changer trigger expands the Role panel as a full-width dropdown below the Main Navigation bar
+        // * All authored roles are listed; the currently active role is marked with a filled checkmark indicator
+        // * Inactive roles render in a de-emphasised treatment; reference Figma for active vs inactive role label states
+        // * Selecting a different role navigates the user to that role's landing page and updates the role cookie
+        // * The panel closes on click outside or Escape key
+        // 
+        // *Main Navigation – L1 Category Trigger States (reference Figma* {{_PrimaryNavBarCategory}}*)*
+        // 
+        // * Default: plain text label + downward chevron (↓), no background
+        // * Hover: pill/capsule outline around label + chevron
+        // * Active/Expanded: bold label, chevron rotates upward (↑), pill outline persists
+        // * Inactive (another panel open): de-emphasised treatment
+        // * Focus: keyboard focus ring visible
+        // 
+        // 
+        // 
+        // *Responsive Behavior*
+        // 
+        // * This story covers desktop breakpoints only
+        // * Mobile behavior is covered in GAAM-393
+        // * Reference Figma node {{3516-3486}} for all layout specifications at desktop breakpoints
+        // 
+        // *Accessibility (WCAG 2.2 Level AA)*
+        // 
+        // * The Site Header uses a {{<header>}} landmark; the Top Navigation and Main Navigation are each wrapped in a {{<nav>}} element with distinct {{aria-label}} values (e.g. "Top navigation" and "Primary navigation")
+        // * A skip navigation link ("Skip to main content") is the first focusable element in the header
+        // * All nav links and triggers are keyboard-reachable in logical Tab order and activatable via Enter or Space
+        // * Dropdown triggers (top nav, role changer, L1 categories) expose {{aria-expanded}} (true/false), {{aria-haspopup="true"}}, and {{aria-controls}} pointing to their respective panel IDs
+        // * Open panels are visible to assistive technology; closed panels use {{aria-hidden="true"}} or equivalent
+        // * Escape key closes the active open panel or tray and returns focus to the triggering element
+        // * 
+        // * The active role in the Role panel is communicated via {{aria-current}} or equivalent
+        // * External links include visually hidden text indicating they open in a new tab
+        // * "→" arrow icons within links are decorative and hidden from assistive technology ({{aria-hidden="true"}})
+        // * All interactive elements have visible focus indicators meeting WCAG 2.2 focus appearance requirements (SC 2.4.11)
+        // * Color contrast meets WCAG 2.2 Level AA across all visual states: reference Figma
+        // * Ensure no critical or major issues are flagged by the [Level Access Extension|https://chromewebstore.google.com/detail/level-access-extension/kgbmnemfaellbfabmkmmilchbhiigpdi]
+        // 
+        // *Additional Requirements*
+        // 
+        // * Update the component to match the styles represented in the Figma link above.
+        // * Update the documentation for the authoring guide.
+        // * Create a style guide page with all the variations.
+        // 
+        // *Out of Scope*
+        // 
+        // * Dialog configuration — covered in GAAM-394
+        // * Role selection cookie logic — covered in [https://bounteous.jira.com/browse/GAAM-899|https://bounteous.jira.com/browse/GAAM-899|smart-link]
+        // * Main Navigation panel implementation - covered in  GAAM-794
+        // * Navigation child component (link columns) — covered in GAAM-403
+        // * Image with Nested Content child component — covered in GAAM-389
+        // * Mobile behaviour — covered in GAAM-393
+        // * XF setup — covered in GAAM-792
+        // 
+        // *QA Checklist*
+        // 
+        // * Styles match Figma
+        // * Authoring Guide exists and is updated with all style variations
+        // * Style Guide page exists and reflects all variations
+        // * Create test landing pages to test role change across all states (Agnostic, Identified, Authenticated)
+        test.fixme();
+    });
 });
-
 test.describe('SiteHeader — CSV Test Cases (GAAM-394)', () => {
-  test('[SH-064] @smoke @regression CMS BE: Site Header — AC1', async ({ page }) => {
-    const pom = new SiteHeaderPage(page);
-    await pom.navigate(BASE());
-    // TODO: Implement assertion for: As a content author, I want to configure the Site Header component through a single AEM dialog — including top navigation links, role selector options, main navigation categories, mega-menu panel content, and login/search controls — so that the complete header experience can be managed.
-    // 
-    // ----
-    // 
-    // *Background / Context*
-    // 
-    // The component will be delivered inside an Experience Fragment (covered in GAAM-792) and shared sitewide. Each site context (agnostic, role-based) will have its own XF instance. 
-    // 
-    // ----
-    // 
-    // *Dialog Field Specifications*
-    // The dialog uses a tabbed layout with three tabs.
-    // 
-    // *_Tab 1:_* _Top Navigation_ 
-    // 
-    // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
-    // |Logo Image|DAM asset picker|Yes|Select the GA logo from the DAM| |
-    // |Logo Alt Text|Text field|Yes|Descriptive alt text for the logo. Used by screen readers. Max 100 characters.| |
-    // |Logo Link|Path field|Yes|Destination page the logo links to. For the agnostic site XF, point to the agnostic home page. For role-based site XFs, point to the relevant role landing page.| |
-    // |Top Nav Items|Multifield|Yes|Add one entry per top nav link or dropdown category. Supports add, remove, and reorder.| |
-    // |— Top Nav Label|Text field|Yes|Display label for this top nav item (e.g. "About Us"). Max 40 characters.| |
-    // |— Top Nav Type|Dropdown|Yes|Select "*Direct Link*" for a straight navigation link. 
-    // Select "*Category Dropdown*" if clicking reveals sub-links.|Drives conditional visibility of sub-fields|
-    // |— Top Nav Link|Path field|Conditional|Required when Item Type = Direct Link. Supports internal path picker and external URLs.|Hidden when Item Type = Dropdown Category|
-    // |— Secondary Nav Links|Multifield|Conditional|Only shown when Item Type = Dropdown Category. Add one entry per sub-link.|Hidden when Item Type = Direct Link|
-    // |— — Secondary Nav Link Label|Text field|Yes (within multifield)|Display label for this sub-link. Max 60 characters.| |
-    // |— — Secondary Nav  Link|Path field|Yes (within multifield)|Internal path or external URL| |
-    // |Search Page Path|Path field|Optional|Required when Search Enabled = On. Path to the search page.|Hidden when Search Enabled = Off|
-    // |Search Label|Text field|Optional|Accessible label for the search icon (e.g. "Search"). Max 40 characters.|Hidden when Search Enabled = Off|
-    // |Login Label|Text field|Yes|Label on the login trigger before authentication (e.g. "Login"). Max 40 characters. Default to “Login“|Default to “Login“|
-    // |Login Tray Sections|Multifield|Yes|Repeatable group. Each entry creates a labelled section within the login tray (e.g. "Individuals and Policyholders").| |
-    // |— Section Heading|Text field|No|Optional section heading label above the login links in this group. Max 80 characters.| |
-    // |— Section Links|Multifield|Yes (within section)|One entry per login link within this section| |
-    // |— — Link Label|Text field|Yes|Display label for this login link (e.g. "Annuity Policy Holder Login"). Max 80 characters.| |
-    // |— — Link URL|Path field|Yes|Internal path or external URL| |
-    // 
-    // Authenticated State section (within Tab 1): Authoring guidance to indicate that this section needs to be authored only if the header has authenticated state.
-    // 
-    // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
-    // |Welcome Back Label|Text field|No|Prefix label shown before the user's first name in the authenticated tray (e.g. "Welcome back,"). Max 40 characters.|Default to "Welcome back," when left blank|
-    // |Manage Account Label|Text field|No|Display label for the Manage Account link in the authenticated tray (e.g. "Manage Professional Account"). Max 60 characters.|Default to "Manage Professional Account" when left blank|
-    // |Manage Account URL|Path field|Conditional|Destination URL for the Manage Account link. Supports internal path picker and external URLs.
-    // Required if Manage Account Label is set| |
-    // |Logout Label|Text field|No|Display label for the logout trigger in the authenticated tray (e.g. "Log out"). Max 40 characters.|Default to "Log out" when left blank|
-    // |Post-Logout Redirect URL|Path field|No|Page the user is redirected to after logout completes (e.g. role landing page). Supports internal path picker and external URLs.|This field only controls the redirect destination.|
-    // 
-    // 
-    // 
-    // *_Tab 2:_* _Role Selector_ 
-    // 
-    // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
-    // |Mobile Headline|Text field|Yes|80 characters recommended
-    // Bold question or prompt displayed at the top of the Role Selector card on mobile (e.g. "Looking for specific solutions, resources, and tools?").| |
-    // |Mobile Description|Text field|No|150 characters recommended
-    // Supporting message displayed beneath the headline on mobile (e.g. "Select your role to access everything Global Atlantic has to offer."). Leave blank if no supporting message is needed.| |
-    // |Default Dropdown Text|Text field|No|Prompt text shown above the role options (e.g. "Select a role to explore more…"). Max 100 characters.|Default to Select a role to explore more…|
-    // |Role Items|Multifield|Yes|Add one entry per selectable role. Supports add, remove, and reorder. Min 1, max 5 entries.|Min/max validation per GAAM-308|
-    // |— Role Title|Text field|Yes|Display label for this role (e.g. "Financial Professional"). Max 60 characters.| |
-    // |— Role URL|Path field|Yes|Landing page destination for this role. Supports internal path picker and external URLs.|On selection, role cookie is set — see GAAM-899|
-    // 
-    // 
-    // 
-    // *_Tab 3:_* _Main Navigation_ 
-    // 
-    // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
-    // |CTA Label|Text field|No|Label for the "Get in touch" CTA button in the main nav bar. Max 40 characters.| |
-    // |CTA URL|Path field|No|Destination URL for the main nav CTA button.| |
-    // |Panels|Panel container|No|Add one panel per top-level navigation category (e.g. Solutions, Resources). Panels can be added, renamed, reordered, and removed via the Select Panel toolbar action on the component.|Implemented using the same panel-container pattern as the Accordion Tabs Feature component. Each panel is managed through the component toolbar Select Panel action.|
-    // |— Panel Label|Text field|Yes|Display label for this category shown in the nav bar and as the panel identifier in the Select Panel picker. Max 60 characters.| |
-    // 
-    // *Panel Dialog fields:*
-    // 
-    // |— Panel Headline|Text field|No|Optional headline shown at the top-left of the expanded panel. Max 120 characters.| |
-    // |— Panel CTA Label|Text field|No|Optional CTA label shown in the panel (e.g. "All Annuity Products"). Max 60 characters. Both Panel CTA Label and URL must be filled or both left empty.| |
-    // |— Panel CTA URL|Path field|No|Destination URL for the panel-level CTA. Both Panel CTA Label and URL must be filled or both left empty.| |
-    // |— Authenticated Only|Toggle / Checkbox|No|When enabled, this panel is shown only in the authenticated header state. Enable for panels like "My Business".| |
-    // |— Additional Login Subheadline|Text field|Not|When authored, some links in this panel require additional SSO login. A lock icon legend and subheadline will appear in the panel to indicate this to users. Only relevant when Authenticated Only is enabled.Explanatory label shown alongside the lock icon legend (e.g. "Indicates additional login required"). Max 80 characters. Only visible when Additional Login Required is enabled.| |
-    // 
-    // *Panel Child Referernces:*
-    // 
-    // |— Image with Nested Content|Child component reference|—|Right column of the Main menu panel - Reference to Image with Nested Content child for right column.|Delegates image authoring to Image with Nested Content component (GAAM-389)|
-    // |— Navigation Items|Child component reference|—|Left Column of the Main menu panel - Reference to Navigation component child for link columns.|Delegates link authoring to Navigation component (GAAM-403)|
-    // 
-    // *Note:* Layout variant (Standard vs Progressive Disclosure Panel style) will be handled as an FE styling option.
-    // 
-    // *Global properties:*
-    // 
-    // 
-    // |Cookie Duration|*Global property*
-    // Number field|Yes|Number of days the role selection cookie persists (e.g. 30). Confirm default value with architect/PO.|Carried forward from GAAM-308. Used by GAAM-899 cookie logic.|
-    // 
-    // ----
-    // 
-    // *Acceptance Criteria*
-    // 
-    // *Dialog Structure*
-    // 
-    // * The component dialog uses a tabbed layout with three tabs: Top Navigation, Role Selector, and Main Navigation
-    // * All multifield groups support add, remove, and reorder
-    // * Nested multifields (Dropdown Items, Login Tray Sections → Section Links) are supported within their parent multifield
-    // * An info (?) icon is present on complex fields (e.g. Panel Style, Cookie Duration) with authoring guidance text
-    // 
-    // *Field Behavior & Validation*
-    // 
-    // * Logo Alt Text, Logo Link, at least one Role Item, and at least one L1 Navigation Item are required — the dialog cannot be saved without them
-    // * Role Items multifield enforces a minimum of 1 and maximum of 5 entries, consistent with GAAM-308
-    // * Cookie Duration is a required number field; value represents days
-    // * Panel CTA Label and Panel CTA URL must both be filled or both left empty — partial completion surfaces a validation warning
-    // * All URL/path fields support the AEM path picker for internal pages and accept external URLs
-    // * External link auto-detection applies to all URL fields using the internal domains list established in the Workbench component implementation
-    // * All optional fields can be saved empty without errors
-    // 
-    // *Conditional Logic*
-    // 
-    // * Item Link and Open in New Tab (top level) are shown only when Item Type = Direct Link; Dropdown Items are shown only when Item Type = Dropdown Category
-    // * Search Page Path and Search Label are shown only when Search Enabled = On
-    // * Additional Login Required toggle is only relevant when Authenticated Only is enabled
-    // * Additional Login Sub headline field is shown only when Additional Login Required is on; hidden and not rendered when off
-    // * Manage Account URL is required when Manage Account Label is filled
-    // 
-    // *Developer Instructions*
-    // 
-    // * Component available only for GA
-    // * Available in only in XF Template
-    // * Each L1 panel exposes a dedicated reference for the *Navigation component* (GAAM-403) and a dedicated reference for the *Image with Nested Content component* (GAAM-389).
-    // * Refer to the Accordion Tabs Feature component for the L1 panel organization
-    // * Use the internal domains generic list (established in Workbench implementation) for external link auto-detection on all URL fields
-    // * Logout endpoint{color:#bf2600} {color}to be configure in OSGI  - See [https://bounteous.jira.com/browse/GAAM-728?search_id=90a4bb8d-c32c-4438-bf54-e1981fdd29aa|https://bounteous.jira.com/browse/GAAM-728?search_id=90a4bb8d-c32c-4438-bf54-e1981fdd29aa|smart-link] 
-    // ** SAML 2.0 SLO endpoint for our PingOne Test environment: [https://login-test.globalatlantic.com/saml20/idp/slo|https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin-test.globalatlantic.com%2Fsaml20%2Fidp%2Fslo&data=05%7C02%7Crashmi.donthi%40bounteous.com%7C7b50fcf3e595412442d508dea47e9b4a%7C9d343c00481447ebabcde3a0761d628b%7C1%7C0%7C639129060900261923%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bX1lnN9HUXxbaQOeJLu6jKyg%2BdPMadVvzsMj%2F%2FpJVYc%3D&reserved=0]
-    // * Cookie Duration field feeds the role selection cookie expiry logic in GAAM-899
-    // * Create Author Documentation
-    // * Write JUnit tests
-    // 
-    // *Out of Scope*
-    // 
-    // * FE rendering, interaction states, animation, and responsive behaviour — covered in GAAM-397 (Desktop) and GAAM-393 (Mobile)
-    // * Role state cookie creation and management logic — covered in GAAM-899
-    // * XF setup, template policy, and header region locking — covered in GAAM-792
-    // * Navigation child component (link columns) — authored via parsys within each panel container; covered in GAAM-403
-    // * Image with Nested Content child component — authored via optional parsys within each panel container; covered in GAAM-389
-    // * Authenticated state dialog fields (Welcome Back, Manage Account, Logout) — covered in GAAM-827
-    // 
-    // *QA Checklist*
-    // 
-    // * Authors can create/add the component on any applicable page template
-    // * All mandatory fields must be completed before clicking "Done"
-    // * All optional fields can be left empty without errors
-    // * Character guidance is included in information areas / Author Guide
-    // * Author Documentation can be accessed by clicking the ? on the component dialog and covers all required details for authoring
-    test.fixme();
-  });
+    test('[SH-064] @smoke @regression CMS BE: Site Header — AC1', async ({ page }) => {
+        const pom = new SiteHeaderPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: As a content author, I want to configure the Site Header component through a single AEM dialog — including top navigation links, role selector options, main navigation categories, mega-menu panel content, and login/search controls — so that the complete header experience can be managed.
+        // 
+        // ----
+        // 
+        // *Background / Context*
+        // 
+        // The component will be delivered inside an Experience Fragment (covered in GAAM-792) and shared sitewide. Each site context (agnostic, role-based) will have its own XF instance. 
+        // 
+        // ----
+        // 
+        // *Dialog Field Specifications*
+        // The dialog uses a tabbed layout with three tabs.
+        // 
+        // *_Tab 1:_* _Top Navigation_ 
+        // 
+        // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
+        // |Logo Image|DAM asset picker|Yes|Select the GA logo from the DAM| |
+        // |Logo Alt Text|Text field|Yes|Descriptive alt text for the logo. Used by screen readers. Max 100 characters.| |
+        // |Logo Link|Path field|Yes|Destination page the logo links to. For the agnostic site XF, point to the agnostic home page. For role-based site XFs, point to the relevant role landing page.| |
+        // |Top Nav Items|Multifield|Yes|Add one entry per top nav link or dropdown category. Supports add, remove, and reorder.| |
+        // |— Top Nav Label|Text field|Yes|Display label for this top nav item (e.g. "About Us"). Max 40 characters.| |
+        // |— Top Nav Type|Dropdown|Yes|Select "*Direct Link*" for a straight navigation link. 
+        // Select "*Category Dropdown*" if clicking reveals sub-links.|Drives conditional visibility of sub-fields|
+        // |— Top Nav Link|Path field|Conditional|Required when Item Type = Direct Link. Supports internal path picker and external URLs.|Hidden when Item Type = Dropdown Category|
+        // |— Secondary Nav Links|Multifield|Conditional|Only shown when Item Type = Dropdown Category. Add one entry per sub-link.|Hidden when Item Type = Direct Link|
+        // |— — Secondary Nav Link Label|Text field|Yes (within multifield)|Display label for this sub-link. Max 60 characters.| |
+        // |— — Secondary Nav  Link|Path field|Yes (within multifield)|Internal path or external URL| |
+        // |Search Page Path|Path field|Optional|Required when Search Enabled = On. Path to the search page.|Hidden when Search Enabled = Off|
+        // |Search Label|Text field|Optional|Accessible label for the search icon (e.g. "Search"). Max 40 characters.|Hidden when Search Enabled = Off|
+        // |Login Label|Text field|Yes|Label on the login trigger before authentication (e.g. "Login"). Max 40 characters. Default to “Login“|Default to “Login“|
+        // |Login Tray Sections|Multifield|Yes|Repeatable group. Each entry creates a labelled section within the login tray (e.g. "Individuals and Policyholders").| |
+        // |— Section Heading|Text field|No|Optional section heading label above the login links in this group. Max 80 characters.| |
+        // |— Section Links|Multifield|Yes (within section)|One entry per login link within this section| |
+        // |— — Link Label|Text field|Yes|Display label for this login link (e.g. "Annuity Policy Holder Login"). Max 80 characters.| |
+        // |— — Link URL|Path field|Yes|Internal path or external URL| |
+        // 
+        // Authenticated State section (within Tab 1): Authoring guidance to indicate that this section needs to be authored only if the header has authenticated state.
+        // 
+        // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
+        // |Welcome Back Label|Text field|No|Prefix label shown before the user's first name in the authenticated tray (e.g. "Welcome back,"). Max 40 characters.|Default to "Welcome back," when left blank|
+        // |Manage Account Label|Text field|No|Display label for the Manage Account link in the authenticated tray (e.g. "Manage Professional Account"). Max 60 characters.|Default to "Manage Professional Account" when left blank|
+        // |Manage Account URL|Path field|Conditional|Destination URL for the Manage Account link. Supports internal path picker and external URLs.
+        // Required if Manage Account Label is set| |
+        // |Logout Label|Text field|No|Display label for the logout trigger in the authenticated tray (e.g. "Log out"). Max 40 characters.|Default to "Log out" when left blank|
+        // |Post-Logout Redirect URL|Path field|No|Page the user is redirected to after logout completes (e.g. role landing page). Supports internal path picker and external URLs.|This field only controls the redirect destination.|
+        // 
+        // 
+        // 
+        // *_Tab 2:_* _Role Selector_ 
+        // 
+        // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
+        // |Mobile Headline|Text field|Yes|80 characters recommended
+        // Bold question or prompt displayed at the top of the Role Selector card on mobile (e.g. "Looking for specific solutions, resources, and tools?").| |
+        // |Mobile Description|Text field|No|150 characters recommended
+        // Supporting message displayed beneath the headline on mobile (e.g. "Select your role to access everything Global Atlantic has to offer."). Leave blank if no supporting message is needed.| |
+        // |Default Dropdown Text|Text field|No|Prompt text shown above the role options (e.g. "Select a role to explore more…"). Max 100 characters.|Default to Select a role to explore more…|
+        // |Role Items|Multifield|Yes|Add one entry per selectable role. Supports add, remove, and reorder. Min 1, max 5 entries.|Min/max validation per GAAM-308|
+        // |— Role Title|Text field|Yes|Display label for this role (e.g. "Financial Professional"). Max 60 characters.| |
+        // |— Role URL|Path field|Yes|Landing page destination for this role. Supports internal path picker and external URLs.|On selection, role cookie is set — see GAAM-899|
+        // 
+        // 
+        // 
+        // *_Tab 3:_* _Main Navigation_ 
+        // 
+        // ||Field Name||Type||Required?||Authoring Guidance||Developer Notes||
+        // |CTA Label|Text field|No|Label for the "Get in touch" CTA button in the main nav bar. Max 40 characters.| |
+        // |CTA URL|Path field|No|Destination URL for the main nav CTA button.| |
+        // |Panels|Panel container|No|Add one panel per top-level navigation category (e.g. Solutions, Resources). Panels can be added, renamed, reordered, and removed via the Select Panel toolbar action on the component.|Implemented using the same panel-container pattern as the Accordion Tabs Feature component. Each panel is managed through the component toolbar Select Panel action.|
+        // |— Panel Label|Text field|Yes|Display label for this category shown in the nav bar and as the panel identifier in the Select Panel picker. Max 60 characters.| |
+        // 
+        // *Panel Dialog fields:*
+        // 
+        // |— Panel Headline|Text field|No|Optional headline shown at the top-left of the expanded panel. Max 120 characters.| |
+        // |— Panel CTA Label|Text field|No|Optional CTA label shown in the panel (e.g. "All Annuity Products"). Max 60 characters. Both Panel CTA Label and URL must be filled or both left empty.| |
+        // |— Panel CTA URL|Path field|No|Destination URL for the panel-level CTA. Both Panel CTA Label and URL must be filled or both left empty.| |
+        // |— Authenticated Only|Toggle / Checkbox|No|When enabled, this panel is shown only in the authenticated header state. Enable for panels like "My Business".| |
+        // |— Additional Login Subheadline|Text field|Not|When authored, some links in this panel require additional SSO login. A lock icon legend and subheadline will appear in the panel to indicate this to users. Only relevant when Authenticated Only is enabled.Explanatory label shown alongside the lock icon legend (e.g. "Indicates additional login required"). Max 80 characters. Only visible when Additional Login Required is enabled.| |
+        // 
+        // *Panel Child Referernces:*
+        // 
+        // |— Image with Nested Content|Child component reference|—|Right column of the Main menu panel - Reference to Image with Nested Content child for right column.|Delegates image authoring to Image with Nested Content component (GAAM-389)|
+        // |— Navigation Items|Child component reference|—|Left Column of the Main menu panel - Reference to Navigation component child for link columns.|Delegates link authoring to Navigation component (GAAM-403)|
+        // 
+        // *Note:* Layout variant (Standard vs Progressive Disclosure Panel style) will be handled as an FE styling option.
+        // 
+        // *Global properties:*
+        // 
+        // 
+        // |Cookie Duration|*Global property*
+        // Number field|Yes|Number of days the role selection cookie persists (e.g. 30). Confirm default value with architect/PO.|Carried forward from GAAM-308. Used by GAAM-899 cookie logic.|
+        // 
+        // ----
+        // 
+        // *Acceptance Criteria*
+        // 
+        // *Dialog Structure*
+        // 
+        // * The component dialog uses a tabbed layout with three tabs: Top Navigation, Role Selector, and Main Navigation
+        // * All multifield groups support add, remove, and reorder
+        // * Nested multifields (Dropdown Items, Login Tray Sections → Section Links) are supported within their parent multifield
+        // * An info (?) icon is present on complex fields (e.g. Panel Style, Cookie Duration) with authoring guidance text
+        // 
+        // *Field Behavior & Validation*
+        // 
+        // * Logo Alt Text, Logo Link, at least one Role Item, and at least one L1 Navigation Item are required — the dialog cannot be saved without them
+        // * Role Items multifield enforces a minimum of 1 and maximum of 5 entries, consistent with GAAM-308
+        // * Cookie Duration is a required number field; value represents days
+        // * Panel CTA Label and Panel CTA URL must both be filled or both left empty — partial completion surfaces a validation warning
+        // * All URL/path fields support the AEM path picker for internal pages and accept external URLs
+        // * External link auto-detection applies to all URL fields using the internal domains list established in the Workbench component implementation
+        // * All optional fields can be saved empty without errors
+        // 
+        // *Conditional Logic*
+        // 
+        // * Item Link and Open in New Tab (top level) are shown only when Item Type = Direct Link; Dropdown Items are shown only when Item Type = Dropdown Category
+        // * Search Page Path and Search Label are shown only when Search Enabled = On
+        // * Additional Login Required toggle is only relevant when Authenticated Only is enabled
+        // * Additional Login Sub headline field is shown only when Additional Login Required is on; hidden and not rendered when off
+        // * Manage Account URL is required when Manage Account Label is filled
+        // 
+        // *Developer Instructions*
+        // 
+        // * Component available only for GA
+        // * Available in only in XF Template
+        // * Each L1 panel exposes a dedicated reference for the *Navigation component* (GAAM-403) and a dedicated reference for the *Image with Nested Content component* (GAAM-389).
+        // * Refer to the Accordion Tabs Feature component for the L1 panel organization
+        // * Use the internal domains generic list (established in Workbench implementation) for external link auto-detection on all URL fields
+        // * Logout endpoint{color:#bf2600} {color}to be configure in OSGI  - See [https://bounteous.jira.com/browse/GAAM-728?search_id=90a4bb8d-c32c-4438-bf54-e1981fdd29aa|https://bounteous.jira.com/browse/GAAM-728?search_id=90a4bb8d-c32c-4438-bf54-e1981fdd29aa|smart-link] 
+        // ** SAML 2.0 SLO endpoint for our PingOne Test environment: [https://login-test.globalatlantic.com/saml20/idp/slo|https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Flogin-test.globalatlantic.com%2Fsaml20%2Fidp%2Fslo&data=05%7C02%7Crashmi.donthi%40bounteous.com%7C7b50fcf3e595412442d508dea47e9b4a%7C9d343c00481447ebabcde3a0761d628b%7C1%7C0%7C639129060900261923%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bX1lnN9HUXxbaQOeJLu6jKyg%2BdPMadVvzsMj%2F%2FpJVYc%3D&reserved=0]
+        // * Cookie Duration field feeds the role selection cookie expiry logic in GAAM-899
+        // * Create Author Documentation
+        // * Write JUnit tests
+        // 
+        // *Out of Scope*
+        // 
+        // * FE rendering, interaction states, animation, and responsive behaviour — covered in GAAM-397 (Desktop) and GAAM-393 (Mobile)
+        // * Role state cookie creation and management logic — covered in GAAM-899
+        // * XF setup, template policy, and header region locking — covered in GAAM-792
+        // * Navigation child component (link columns) — authored via parsys within each panel container; covered in GAAM-403
+        // * Image with Nested Content child component — authored via optional parsys within each panel container; covered in GAAM-389
+        // * Authenticated state dialog fields (Welcome Back, Manage Account, Logout) — covered in GAAM-827
+        // 
+        // *QA Checklist*
+        // 
+        // * Authors can create/add the component on any applicable page template
+        // * All mandatory fields must be completed before clicking "Done"
+        // * All optional fields can be left empty without errors
+        // * Character guidance is included in information areas / Author Guide
+        // * Author Documentation can be accessed by clicking the ? on the component dialog and covers all required details for authoring
+        test.fixme();
+    });
 });

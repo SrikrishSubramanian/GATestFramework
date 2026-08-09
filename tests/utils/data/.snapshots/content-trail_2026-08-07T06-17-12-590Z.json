@@ -1,0 +1,297 @@
+{
+  "component": "content-trail",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/content-trail.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:17:12.590Z",
+  "rootSelector": ".cmp-content-trail",
+  "elements": [
+    {
+      "name": "ComeGrowWithUs",
+      "tag": "a",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__video"
+      ],
+      "attributes": {
+        "aria-label": "Come grow with us",
+        "data-cta": "1",
+        "data-link-location": "content-trail-4e1a9b049c",
+        "data-content-type": "video",
+        "role": "button",
+        "tabindex": "0"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": "button",
+      "ariaLabel": "Come grow with us",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 424,
+        "width": 1280,
+        "height": 83
+      }
+    },
+    {
+      "name": "ComeGrowWithUs_1",
+      "tag": "a",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__written"
+      ],
+      "attributes": {
+        "target": "_self",
+        "href": "/content/global-atlantic/style-guide.html",
+        "aria-label": "Come grow with us",
+        "data-cta": "1",
+        "data-link-location": "content-trail-b76bd00846",
+        "data-content-type": "written"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": "Come grow with us",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 692,
+        "width": 1280,
+        "height": 82
+      }
+    },
+    {
+      "name": "ComeGrowWithUs_2",
+      "tag": "a",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "attributes": {
+        "target": "_self",
+        "href": "/content/global-atlantic/style-guide.html",
+        "aria-label": "Come grow with us",
+        "data-cta": "1",
+        "data-link-location": "content-trail-75bc26c4cb",
+        "data-content-type": "link"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": "Come grow with us",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 1010,
+        "width": 1280,
+        "height": 82
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-content-trail__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__video"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 17,
+        "y": 441,
+        "width": 493,
+        "height": 49
+      }
+    },
+    {
+      "name": "div_ComeGrowWithUs",
+      "tag": "div",
+      "text": "Come grow with us",
+      "classes": [
+        "cmp-content-trail__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 17,
+        "y": 441,
+        "width": 493,
+        "height": 22
+      }
+    },
+    {
+      "name": "p_6",
+      "tag": "p",
+      "text": "We’re looking for passionate, success-focused individuals to collaborate with",
+      "classes": [
+        "cmp-content-trail__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 17,
+        "y": 468,
+        "width": 493,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_7",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__video-wrapper"
+      ],
+      "attributes": {
+        "data-brightcove-video-id": "6365778310112"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 17,
+        "y": 490,
+        "width": 493,
+        "height": 0
+      }
+    },
+    {
+      "name": "dialog_8",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-video-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Content Trail",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

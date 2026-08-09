@@ -1,0 +1,200 @@
+{
+  "component": "teaser-card",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/teaser-card.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:17:58.168Z",
+  "rootSelector": ".cmp-teaser-card",
+  "elements": [
+    {
+      "name": "div_0",
+      "tag": "div",
+      "text": "Optional eyebrow\n        \n        \n            \n                Lorem ipsum dolor sit amet consequat",
+      "classes": [
+        "cmp-teaser-card__content-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-teaser-card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 537,
+        "width": 299,
+        "height": 490
+      }
+    },
+    {
+      "name": "span_OptionalEyebrow",
+      "tag": "span",
+      "text": "Optional eyebrow",
+      "classes": [
+        "cmp-teaser-card__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-teaser-card__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 733,
+        "width": 299,
+        "height": 25
+      }
+    },
+    {
+      "name": "span_2",
+      "tag": "span",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit",
+      "classes": [
+        "cmp-teaser-card__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-teaser-card__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 762,
+        "width": 299,
+        "height": 79
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "Optional additional descriptor providing context about this teaser. Lorem ipsum dolor sit amet, cons",
+      "classes": [
+        "cmp-teaser-card__descriptor"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-teaser-card__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 849,
+        "width": 299,
+        "height": 126
+      }
+    },
+    {
+      "name": "span_LearnMore",
+      "tag": "span",
+      "text": "Learn more",
+      "classes": [
+        "cmp-teaser-card__cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-teaser-card__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 995,
+        "width": 117,
+        "height": 32
+      }
+    },
+    {
+      "name": "i_5",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-teaser-card__cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 100,
+        "y": 999,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "name": "span_LearnMore_6",
+      "tag": "span",
+      "text": "Learn more",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-teaser-card__cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 132,
+        "y": 1004,
+        "width": 73,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_7",
+      "tag": "span",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing",
+      "classes": [
+        "cmp-teaser-card__title"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-teaser-card__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 96,
+        "y": 1305,
+        "width": 299,
+        "height": 53
+      }
+    }
+  ],
+  "pageTitle": "Teaser Card",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

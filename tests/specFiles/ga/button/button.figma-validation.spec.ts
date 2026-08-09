@@ -21,10 +21,9 @@ import { assertLayout, assertSpacing, assertTypography } from '../../../utils/in
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 
 let capture: ConsoleCapture;
-
-const BASE_URL = 'http://localhost:4503';
 
 // Load Figma design spec
 const figmaSpec = {
@@ -63,7 +62,7 @@ function rgbToHex(rgb: string): string {
 // ═══════════════════════════════════════════════════════════════════════════
 
 test('[BTN-FIGMA-001] Primary button color matches Figma', async ({ page }) => {
-  await page.goto(`${BASE_URL}/button.html`);
+  await page.goto(resolveComponentUrl('button'));
 
   const button = page.locator('.button.primary').first();
   const expectedColor = figmaSpec.primary.default.backgroundColor;
@@ -91,7 +90,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 test('[BTN-FIGMA-002] Button hover color matches Figma', async ({ page }) => {
-  await page.goto(`${BASE_URL}/button.html`);
+  await page.goto(resolveComponentUrl('button'));
 
   const button = page.locator('.button.primary').first();
   const expectedHoverColor = figmaSpec.primary.hover.backgroundColor;
@@ -117,7 +116,7 @@ test('[BTN-FIGMA-002] Button hover color matches Figma', async ({ page }) => {
 });
 
 test('[BTN-FIGMA-003] Button text color matches Figma', async ({ page }) => {
-  await page.goto(`${BASE_URL}/button.html`);
+  await page.goto(resolveComponentUrl('button'));
 
   const button = page.locator('.button.primary').first();
   const expectedTextColor = figmaSpec.primary.default.textColor;
@@ -142,7 +141,7 @@ test('[BTN-FIGMA-003] Button text color matches Figma', async ({ page }) => {
 // ═══════════════════════════════════════════════════════════════════════════
 
 test('[BTN-FIGMA-004] Button height matches Figma', async ({ page }) => {
-  await page.goto(`${BASE_URL}/button.html`);
+  await page.goto(resolveComponentUrl('button'));
 
   const button = page.locator('.button.primary').first();
   const expectedHeight = figmaSpec.primary.default.height;
@@ -161,7 +160,7 @@ test('[BTN-FIGMA-004] Button height matches Figma', async ({ page }) => {
 });
 
 test('[BTN-FIGMA-005] Button border radius matches Figma', async ({ page }) => {
-  await page.goto(`${BASE_URL}/button.html`);
+  await page.goto(resolveComponentUrl('button'));
 
   const button = page.locator('.button.primary').first();
   const expectedRadius = figmaSpec.primary.default.borderRadius;
@@ -184,7 +183,7 @@ test('[BTN-FIGMA-005] Button border radius matches Figma', async ({ page }) => {
 // ═══════════════════════════════════════════════════════════════════════════
 
 test('[BTN-FIGMA-006] Button font size matches Figma', async ({ page }) => {
-  await page.goto(`${BASE_URL}/button.html`);
+  await page.goto(resolveComponentUrl('button'));
 
   const button = page.locator('.button.primary').first();
   const expectedSize = figmaSpec.primary.default.fontSize;
@@ -203,7 +202,7 @@ test('[BTN-FIGMA-006] Button font size matches Figma', async ({ page }) => {
 });
 
 test('[BTN-FIGMA-007] Button font weight matches Figma', async ({ page }) => {
-  await page.goto(`${BASE_URL}/button.html`);
+  await page.goto(resolveComponentUrl('button'));
 
   const button = page.locator('.button.primary').first();
   const expectedWeight = figmaSpec.primary.default.fontWeight;
@@ -226,7 +225,7 @@ test('[BTN-FIGMA-007] Button font weight matches Figma', async ({ page }) => {
 // ═══════════════════════════════════════════════════════════════════════════
 
 test('[BTN-FIGMA-008] Button visual appearance matches Figma screenshot', async ({ page }) => {
-  await page.goto(`${BASE_URL}/button.html`);
+  await page.goto(resolveComponentUrl('button'));
 
   const button = page.locator('.button.primary').first();
 

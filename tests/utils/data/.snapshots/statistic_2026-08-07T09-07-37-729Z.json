@@ -1,0 +1,496 @@
+{
+  "component": "statistic",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/statistic.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:07:37.729Z",
+  "rootSelector": ".cmp-statistic",
+  "elements": [
+    {
+      "name": "div_0",
+      "tag": "div",
+      "text": "$96M\n    \n\n    \n      Assets under management",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 428,
+        "width": 1154,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_96M",
+      "tag": "div",
+      "text": "$96M",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 460,
+        "width": 169,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_AssetsUnderManagement",
+      "tag": "div",
+      "text": "Assets under management",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 272,
+        "y": 482,
+        "width": 176,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "150+\n    \n\n    \n      Years of combined experience",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 684,
+        "width": 1154,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_150",
+      "tag": "div",
+      "text": "150+",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 716,
+        "width": 151,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_YearsOfCombinedExperience",
+      "tag": "div",
+      "text": "Years of combined experience",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 254,
+        "y": 738,
+        "width": 196,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "4.8/5\n    \n\n    \n      Customer satisfaction rating",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 940,
+        "width": 1154,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_485",
+      "tag": "div",
+      "text": "4.8/5",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 972,
+        "width": 147,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_CustomerSatisfactionRating",
+      "tag": "div",
+      "text": "Customer satisfaction rating",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 250,
+        "y": 994,
+        "width": 183,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "68%\n    \n\n    \n      Client retention rate",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1196,
+        "width": 1154,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_68",
+      "tag": "div",
+      "text": "68%",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 1228,
+        "width": 120,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_ClientRetentionRate",
+      "tag": "div",
+      "text": "Client retention rate",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 223,
+        "y": 1250,
+        "width": 130,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "20K\n    \n\n    \n      Clients served nationwide",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1452,
+        "width": 1154,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_20K",
+      "tag": "div",
+      "text": "20K",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 1484,
+        "width": 112,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_ClientsServedNationwide",
+      "tag": "div",
+      "text": "Clients served nationwide",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 215,
+        "y": 1506,
+        "width": 166,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "$42B\n    \n\n    \n      Total revenue generated",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2695,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_42B",
+      "tag": "div",
+      "text": "$42B",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 2727,
+        "width": 94,
+        "height": 40
+      }
+    },
+    {
+      "name": "div_TotalRevenueGenerated",
+      "tag": "div",
+      "text": "Total revenue generated",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 197,
+        "y": 2737,
+        "width": 160,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "500+\n    \n\n    \n      Team members worldwide",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2927,
+        "width": 1154,
+        "height": 104
+      }
+    },
+    {
+      "name": "div_500",
+      "tag": "div",
+      "text": "500+",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 87,
+        "y": 2959,
+        "width": 94,
+        "height": 40
+      }
+    },
+    {
+      "name": "div_TeamMembersWorldwide",
+      "tag": "div",
+      "text": "Team members worldwide",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 197,
+        "y": 2969,
+        "width": 170,
+        "height": 20
+      }
+    }
+  ],
+  "pageTitle": "Statistic",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

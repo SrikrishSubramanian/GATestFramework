@@ -14,7 +14,11 @@ import { Page } from '@playwright/test';
 import ENV from './env';
 import { loginToAEMAuthor } from './auth-fixture';
 
-const GA_FIXTURES_DIR = path.resolve(__dirname, '..', 'data', 'content-fixtures');
+// __dirname is tests/utils/infra — fixtures live at tests/data/content-fixtures,
+// not tests/utils/data/content-fixtures. This was off by one directory level,
+// which silently made deployFixture() and checkFixtureSync() no-op against a
+// nonexistent directory for every component.
+const GA_FIXTURES_DIR = path.resolve(__dirname, '..', '..', 'data', 'content-fixtures');
 
 /** Environments where fixtures are auto-deployed to AEM */
 const AUTO_DEPLOY_ENVS = ['local', 'dev'];

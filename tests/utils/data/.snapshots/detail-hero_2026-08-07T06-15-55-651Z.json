@@ -1,0 +1,581 @@
+{
+  "component": "detail-hero",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/detail-hero.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:15:55.650Z",
+  "rootSelector": ".cmp-detail-hero",
+  "elements": [
+    {
+      "name": "a_Style_Guide",
+      "tag": "a",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Style Guide",
+        "data-cmp-clickable": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 413,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "a_Component_Library",
+      "tag": "a",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Component Library",
+        "data-cmp-clickable": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 163,
+        "y": 413,
+        "width": 127,
+        "height": 18
+      }
+    },
+    {
+      "name": "a_Primary_CTA",
+      "tag": "a",
+      "text": "Primary CTA",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-8992ccbd6a",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-8992ccbd6a\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Primary CTA\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"parentId\":\"detail-hero-f6f6aa9365\"}}"
+      },
+      "testId": null,
+      "id": "button-8992ccbd6a",
+      "parentClasses": [
+        "button_primary",
+        "button",
+        "ga-button--primary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 697,
+        "width": 164,
+        "height": 50
+      }
+    },
+    {
+      "name": "a_Secondary_CTA",
+      "tag": "a",
+      "text": "Secondary CTA",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-f9be0967af",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-f9be0967af\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Secondary CTA\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"parentId\":\"detail-hero-f6f6aa9365\"}}"
+      },
+      "testId": null,
+      "id": "button-f9be0967af",
+      "parentClasses": [
+        "button_secondary",
+        "button",
+        "ga-button--secondary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 239,
+        "y": 697,
+        "width": 183,
+        "height": 50
+      }
+    },
+    {
+      "name": "h1_4",
+      "tag": "h1",
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing",
+      "classes": [
+        "cmp-detail-hero__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 514,
+        "width": 914,
+        "height": 122
+      }
+    },
+    {
+      "name": "Breadcrumb",
+      "tag": "nav",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-detail-hero__breadcrumb"
+      ],
+      "attributes": {
+        "aria-label": "Breadcrumb"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero"
+      ],
+      "role": null,
+      "ariaLabel": "Breadcrumb",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 484,
+        "width": 1154,
+        "height": 0
+      }
+    },
+    {
+      "name": "nav_6",
+      "tag": "nav",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-f8ef86cf78\":{\"@type\":\"ga/components/content/breadcrumb\",\"parentId\":\"detail-hero-f6f6aa9365\"}}"
+      },
+      "testId": null,
+      "id": "breadcrumb-f8ef86cf78",
+      "parentClasses": [
+        "breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 393,
+        "width": 327,
+        "height": 58
+      }
+    },
+    {
+      "name": "ol_7",
+      "tag": "ol",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb__list"
+      ],
+      "attributes": {
+        "itemscope": "",
+        "itemtype": "http://schema.org/BreadcrumbList"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 413,
+        "width": 327,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-detail-hero__wave-overlay"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 364,
+        "width": 1280,
+        "height": 431
+      }
+    },
+    {
+      "name": "span_9",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-detail-hero__wave-2"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero__wave-overlay"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 364,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "li_Style_Guide",
+      "tag": "li",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-f8ef86cf78-item-3dd3bf6e7a\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Style Guide\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"breadcrumb-f8ef86cf78\"}}",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 413,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Component_Library",
+      "tag": "li",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-f8ef86cf78-item-2b248a5ea1\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Component Library\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"breadcrumb-f8ef86cf78\"}}",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 145,
+        "y": 413,
+        "width": 145,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Detail_Hero",
+      "tag": "li",
+      "text": "Detail Hero",
+      "classes": [
+        "cmp-breadcrumb__item",
+        "cmp-breadcrumb__item--active"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-f8ef86cf78-item-88278e9d42\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Detail Hero\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/detail-hero.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"breadcrumb-f8ef86cf78\"}}",
+        "aria-current": "page",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 298,
+        "y": 413,
+        "width": 92,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "Optional eyebrow\n                Lorem ipsum dolor sit amet consectetur adipiscing\n            \n\n   ",
+      "classes": [
+        "cmp-detail-hero__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 484,
+        "width": 1154,
+        "height": 263
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "Optional eyebrow\n                Lorem ipsum dolor sit amet consectetur adipiscing",
+      "classes": [
+        "cmp-detail-hero__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 484,
+        "width": 914,
+        "height": 152
+      }
+    },
+    {
+      "name": "p_OptionalEyebrow",
+      "tag": "p",
+      "text": "Optional eyebrow",
+      "classes": [
+        "cmp-detail-hero__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 484,
+        "width": 914,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_16",
+      "tag": "div",
+      "text": "Optional supporting copy. Lorem ipsum dolor sit amet consequat adipscing elit. Lorem ipsum dolor sit",
+      "classes": [
+        "cmp-detail-hero__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 635,
+        "width": 914,
+        "height": 37
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "Primary CTA\n                \n                \n                    \n                    \n            ",
+      "classes": [
+        "cmp-detail-hero__buttons"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 673,
+        "width": 914,
+        "height": 74
+      }
+    },
+    {
+      "name": "i_18",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 189,
+        "y": 714,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Primary_CTA",
+      "tag": "span",
+      "text": "Primary CTA",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 85,
+        "y": 714,
+        "width": 92,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Secondary_CTA",
+      "tag": "span",
+      "text": "Secondary CTA",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 261,
+        "y": 714,
+        "width": 111,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "Optional supporting copy rendered in Body L. Lorem ipsum dolor sit amet consequat adipscing elit. Lo",
+      "classes": [
+        "cmp-detail-hero__description",
+        "cmp-detail-hero__description--body-l"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-detail-hero__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5700,
+        "width": 914,
+        "height": 74
+      }
+    }
+  ],
+  "pageTitle": "Detail Hero",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -13,7 +13,8 @@ import * as path from 'path';
 import * as crypto from 'crypto';
 
 const KKR_AEM_ROOT = path.resolve(__dirname, '..', '..', '..', 'kkr-aem');
-const GA_FIXTURES_DIR = path.resolve(__dirname, '..', 'data', 'content-fixtures');
+// __dirname is tests/utils/infra — fixtures live at tests/data/content-fixtures.
+const GA_FIXTURES_DIR = path.resolve(__dirname, '..', '..', 'data', 'content-fixtures');
 const SYNC_RESULTS_PATH = path.resolve(__dirname, '..', 'data', '.fixture-sync-results.json');
 
 export interface FixtureMeta {
@@ -77,6 +78,15 @@ export function checkFixtureSync(): SyncReport {
         component: comp,
         status: 'meta-missing',
         message: `Could not parse fixture-meta.json`,
+      });
+      continue;
+    }
+
+    if (!meta.source) {
+      results.push({
+        component: comp,
+        status: 'meta-missing',
+        message: `fixture-meta.json is missing the "source" field`,
       });
       continue;
     }

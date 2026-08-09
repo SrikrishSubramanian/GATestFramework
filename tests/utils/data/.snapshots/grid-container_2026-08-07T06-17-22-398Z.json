@@ -1,0 +1,266 @@
+{
+  "component": "grid-container",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/grid-container.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:17:22.397Z",
+  "rootSelector": ".cmp-grid-container",
+  "elements": [
+    {
+      "name": "div_0",
+      "tag": "div",
+      "text": "Column 1 content — 50% width\n\n\n\n    \n\n\n\n\n    Column 1 content — 50% width\n\n\n\n    \n\n\n\n\n    Column 1 c",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 328,
+        "width": 1280,
+        "height": 122
+      }
+    },
+    {
+      "name": "div_1",
+      "tag": "div",
+      "text": "Column 1 — 25% width\n\n\n    \n\n\n\n\n    Column 2 — 75% width",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1200,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_2",
+      "tag": "div",
+      "text": "Column 1 — 40% width\n\n\n    \n\n\n\n\n    Column 2 — 60% width",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1668,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "Column 1 — 1 Column Gap spacing\n\n\n    \n\n\n\n\n    Column 2 — 1 Column Gap spacing",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2135,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "Column 1\n\n\n    \n\n\n\n\n    Column 2\n\n\n    \n\n\n\n\n    Column 3",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2602,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "Column 1 — 33% width\n\n\n    \n\n\n\n\n    Column 2 — 67% width",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3536,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "Column 1 — 67% width\n\n\n    \n\n\n\n\n    Column 2 — 33% width",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4004,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_Column_1With_3Column_InsetLa",
+      "tag": "div",
+      "text": "Column 1 with 3-Column Inset layout",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4471,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_Column_1With_2Column_InsetLa",
+      "tag": "div",
+      "text": "Column 1 with 2-Column Inset layout",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4938,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "Column 1 — stays visible on mobile\n\n\n    \n\n\n\n\n    Column 2 — stays visible on mobile",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5405,
+        "width": 1154,
+        "height": 137
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-grid-container__items"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-grid-container"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5746,
+        "width": 1154,
+        "height": 20
+      }
+    }
+  ],
+  "pageTitle": "Grid Container",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

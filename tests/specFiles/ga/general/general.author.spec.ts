@@ -8,6 +8,12 @@ import { getElementMeasurements, getComputedStyles, getElementVisibility } from 
 
 let capture: ConsoleCapture;
 
+// All 68 cases below came from a CSV import for GAAM-989 with no actual steps or
+// expected-results filled in, and no real component identified ("general" is not
+// a real GA component) — hence the placeholder page.goto('/') with no baseURL
+// configured, which fails outright rather than testing anything. Marked fixme
+// rather than patched to "pass", since a passing assertion here would be fake
+// coverage. Needs a proper CSV/Jira re-import with real content before dev work.
 test.describe('general - GAAM-989', () => {
   test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
@@ -23,6 +29,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-1: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -37,6 +44,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-2: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -51,6 +59,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-3: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -65,6 +74,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-4: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -79,6 +89,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-5: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -93,6 +104,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-6: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -107,6 +119,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-7: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -121,6 +134,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-8: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -135,6 +149,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-9: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -149,6 +164,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-10: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -163,6 +179,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-11: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -177,6 +194,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-12: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -191,6 +209,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-13: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -205,6 +224,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-14: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -219,6 +239,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-15: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -233,6 +254,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-16: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -247,6 +269,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-17: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -261,6 +284,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-18: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -275,6 +299,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-19: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -289,6 +314,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-20: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -303,6 +329,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-21: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -317,6 +344,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-22: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -331,6 +359,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-23: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -345,6 +374,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-24: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -359,6 +389,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-25: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -373,6 +404,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-26: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -387,6 +419,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-27: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -401,6 +434,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-28: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -415,6 +449,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-29: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -429,6 +464,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-30: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -443,6 +479,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-31: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -457,6 +494,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-32: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -471,6 +509,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-33: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -485,6 +524,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-34: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -499,6 +539,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-35: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -513,6 +554,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-36: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -527,6 +569,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-37: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -541,6 +584,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-38: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -555,6 +599,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-39: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -569,6 +614,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-40: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -583,6 +629,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-41: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -597,6 +644,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-42: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -611,6 +659,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-43: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -625,6 +674,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-44: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -639,6 +689,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-45: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -653,6 +704,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-46: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -667,6 +719,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-47: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -681,6 +734,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-48: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -695,6 +749,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-49: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -709,6 +764,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-50: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -723,6 +779,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-51: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -737,6 +794,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-52: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -751,6 +809,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-53: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -765,6 +824,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-54: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -779,6 +839,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-55: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -793,6 +854,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-56: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -807,6 +869,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-57: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -821,6 +884,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-58: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -835,6 +899,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-59: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -849,6 +914,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-60: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -863,6 +929,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-61: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -877,6 +944,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-62: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -891,6 +959,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-63: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -905,6 +974,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-64: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -919,6 +989,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-65: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -933,6 +1004,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-66: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -947,6 +1019,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-67: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 
@@ -961,6 +1034,7 @@ test.describe('general - GAAM-989', () => {
   });
 
   test('TC-68: Test', async ({ page }) => {
+    test.fixme();
     // Navigate to component
     await page.goto('/');
 

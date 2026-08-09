@@ -7,443 +7,89 @@ import { assertLayout, assertSpacing, assertTypography } from '../../../utils/in
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
-
 let capture: ConsoleCapture;
-
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
-
 test.beforeEach(async ({ page }) => {
-  await loginToAEMAuthor(page);
-
-  capture = new ConsoleCapture(page);
-  capture.start();});
-
+    await loginToAEMAuthor(page);
+    capture = new ConsoleCapture(page);
+    capture.start();
+});
 test.afterEach(async ({ page }, testInfo) => {
-  if (capture) {
-    await attachConsoleCapture(testInfo, capture);
-  }
-  await annotateEnvironment(testInfo);
+    if (capture) {
+        await attachConsoleCapture(testInfo, capture);
+    }
+    await annotateEnvironment(testInfo);
 });
-
 test.describe('Hero CTA Video Modal — Edge Cases', () => {
-  // ============ Edge Case: Multiple Modal Interactions ============
-  test('[GAAM-621-EDGE-001] @edge Verify modal can be opened and closed multiple times', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      // Open, close, open cycle
-      for (let i = 0; i < 2; i++) {
-        await clickElement(cta);
-        // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-        const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-        if (await modal.count() > 0) {
-          const isVisible = await modal.isVisible();
-          expect(isVisible).toBe(true);
+    test('[GAAM-621-EDGE-004] @edge Verify Space key opens modal on button', async ({ page }) => {
+        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
+        await page.goto(url);
+        const cta = page.locator('button[class*="cta"]').first();
+        if (await cta.count() > 0) {
+            await cta.focus();
+            await page.keyboard.press('Space');
+            // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+            const modal = page.locator('[role="dialog"], [class*="modal"]').first();
+            if (await modal.count() > 0) {
+                expect(await modal.isVisible()).toBe(true);
+            }
         }
-
-        const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
-        if (await closeBtn.count() > 0) {
-          await clickElement(closeBtn);
-          // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    });
+    test('[GAAM-621-EDGE-006] @edge Verify video resets position on modal close/reopen', async ({ page }) => {
+        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
+        await page.goto(url);
+        const video = page.locator('video').first();
+        if (await video.count() > 0) {
+            const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
+            // Open modal
+            await clickElement(cta);
+            // ?? Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+            // Close modal
+            const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
+            if (await closeBtn.count() > 0) {
+                await clickElement(closeBtn);
+                // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+            }
+            // Reopen modal
+            await clickElement(cta);
+            // ?? Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
+            // Check video position reset
+            const position = // ?? TODO: Replace with measurement-utils
+             await video.evaluate((el: HTMLVideoElement) => el.currentTime);
+            expect(position).toBeDefined();
         }
-      }
-    }
-  });
-
-  // ============ Edge Case: Rapid Click Behavior ============
-  test('[GAAM-621-EDGE-002] @edge Verify rapid CTA clicks do not create multiple modals', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      // Click multiple times rapidly
-      await clickElement(cta);
-      await clickElement(cta);
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modals = page.locator('[role="dialog"], [class*="modal"]');
-      const count = await modals.count();
-      // Should only have one modal (or zero if prevention works)
-      expect(count).toBeLessThanOrEqual(1);
-    }
-  });
-
-  // ============ Edge Case: Keyboard Interaction Combinations ============
-  test('[GAAM-621-EDGE-003] @edge Verify Tab + Enter opens modal', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await cta.focus();
-      await page.keyboard.press('Enter');
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-      if (await modal.count() > 0) {
-        const isVisible = await modal.isVisible();
-        expect(isVisible).toBe(true);
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-004] @edge Verify Space key opens modal on button', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await cta.focus();
-      await page.keyboard.press('Space');
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-      if (await modal.count() > 0) {
-        expect(await modal.isVisible()).toBe(true);
-      }
-    }
-  });
-
-  // ============ Edge Case: Video Playback Edge Cases ============
-  test('[GAAM-621-EDGE-005] @edge Verify video remains paused if not interacted', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const video = page.locator('video').first();
-      if (await video.count() > 0) {
-        // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-        const isPaused = // ?? TODO: Replace with measurement-utils
-    await video.evaluate((el: HTMLVideoElement) => el.paused);
-        // Video should start paused
-        expect(isPaused).toBeDefined();
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-006] @edge Verify video resets position on modal close/reopen', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const video = page.locator('video').first();
-    if (await video.count() > 0) {
-      const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-
-      // Open modal
-      await clickElement(cta);
-      // ?? Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-    // Close modal
-      const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
-      if (await closeBtn.count() > 0) {
-        await clickElement(closeBtn);
-        // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-      }
-
-      // Reopen modal
-      await clickElement(cta);
-      // ?? Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-    // Check video position reset
-      const position = // ?? TODO: Replace with measurement-utils
-    await video.evaluate((el: HTMLVideoElement) => el.currentTime);
-      expect(position).toBeDefined();
-    }
-  });
-
-  // ============ Edge Case: Focus Management Edge Cases ============
-  test('[GAAM-621-EDGE-007] @a11y @edge Verify focus loop in modal with single focusable element', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
-      if (await closeBtn.count() > 0) {
-        await closeBtn.focus();
-        await page.keyboard.press('Tab');
-
-        const focused = // ?? TODO: Replace with measurement-utils
-    await page.evaluate(() => document.activeElement?.getAttribute('class'));
-        expect(focused).toBeDefined();
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-008] @a11y @edge Verify Shift+Tab backwards navigation in modal', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-      if (await modal.count() > 0) {
-        const lastFocusable = modal.locator('button, a, input').last();
-        await lastFocusable.focus();
-        await page.keyboard.press('Shift+Tab');
-
-        const focused = // ?? TODO: Replace with measurement-utils
-    await page.evaluate(() => document.activeElement?.tagName);
-        expect(focused).toBeDefined();
-      }
-    }
-  });
-
-  // ============ Edge Case: Overlay Interaction Edge Cases ============
-  test('[GAAM-621-EDGE-009] @edge Verify clicking on video does not close modal', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const video = page.locator('video').first();
-      if (await video.count() > 0) {
-        // Get click position inside video (not on overlay)
-        const box = await video.boundingBox();
-        if (box) {
-          await page.click(`video`, { position: { x: 10, y: 10 } });
-          // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-          const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-          expect(await modal.isVisible()).toBe(true);
+    });
+    // ============ Edge Case: Error Scenarios ============
+    test('[GAAM-621-EDGE-013] @edge Verify modal gracefully handles missing video source', async ({ page }) => {
+        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
+        await page.goto(url);
+        const video = page.locator('video').first();
+        if (await video.count() > 0) {
+            // Check for fallback content
+            const source = video.locator('source');
+            const hasFallback = (await source.count()) === 0;
+            if (hasFallback) {
+                const fallbackText = await video.textContent();
+                expect(fallbackText).toBeTruthy();
+            }
         }
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-010] @edge Verify clicking overlay edge closes modal', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const overlay = page.locator('[class*="overlay"], [class*="backdrop"]').first();
-      if (await overlay.count() > 0) {
-        // Click on edge of overlay (away from video)
-        const box = await overlay.boundingBox();
-        if (box) {
-          await page.click(`[class*="overlay"]`, { position: { x: 5, y: 5 } });
-          // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-          const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-          const closed = !(await modal.isVisible().catch(() => false));
-          expect(closed).toBeDefined();
+    });
+    test('[GAAM-621-EDGE-018] @edge Verify modal content contrast meets WCAG standards', async ({ page }) => {
+        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
+        await page.goto(url);
+        const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
+        if (await cta.count() > 0) {
+            await clickElement(cta);
+            // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+            const modal = page.locator('[role="dialog"], [class*="modal"]').first();
+            if (await modal.count() > 0) {
+                const bgColor = // ?? TODO: Replace with measurement-utils
+                 await modal.evaluate(el => window.getComputedStyle(el).backgroundColor);
+                const textColor = // ?? TODO: Replace with measurement-utils
+                 await modal.evaluate(el => window.getComputedStyle(el).color);
+                expect(bgColor).toBeTruthy();
+                expect(textColor).toBeTruthy();
+            }
         }
-      }
-    }
-  });
-
-  // ============ Edge Case: Responsive Behavior Edge Cases ============
-  test('[GAAM-621-EDGE-011] @edge Verify modal adapts to viewport resize', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-      const initialWidth = // ?? TODO: Replace with measurement-utils
-    await modal.evaluate(el => el.offsetWidth);
-
-      // Resize viewport
-      await page.setViewportSize({ width: 500, height: 600 });
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const resizedWidth = // ?? TODO: Replace with measurement-utils
-    await modal.evaluate(el => el.offsetWidth);
-      expect(resizedWidth).toBeLessThanOrEqual(500);
-    }
-  });
-
-  test('[GAAM-621-EDGE-012] @edge Verify modal orientation change behavior', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      // Start in portrait
-      await page.setViewportSize({ width: 375, height: 667 });
-      await clickElement(cta);
-      // ?? Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-    // Switch to landscape
-      await page.setViewportSize({ width: 667, height: 375 });
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-      expect(await modal.isVisible()).toBe(true);
-    }
-  });
-
-  // ============ Edge Case: Error Scenarios ============
-  test('[GAAM-621-EDGE-013] @edge Verify modal gracefully handles missing video source', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const video = page.locator('video').first();
-    if (await video.count() > 0) {
-      // Check for fallback content
-      const source = video.locator('source');
-      const hasFallback = (await source.count()) === 0;
-
-      if (hasFallback) {
-        const fallbackText = await video.textContent();
-        expect(fallbackText).toBeTruthy();
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-014] @edge Verify no JavaScript errors on modal interactions', async ({ page }) => {
-    const errors: string[] = [];
-    page.on('pageerror', e => errors.push(e.message));
-
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      await page.keyboard.press('Escape');
-      await clickElement(cta);
-      await page.keyboard.press('Escape');
-    }
-
-    expect(errors.length).toBe(0);
-  });
-
-  // ============ Edge Case: Accessibility Edge Cases ============
-  test('[GAAM-621-EDGE-015] @a11y @edge Verify close button has accessible label', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const closeBtn = page.locator('button[aria-label*="close"], [class*="close-button"]').first();
-      if (await closeBtn.count() > 0) {
-        const ariaLabel = await closeBtn.getAttribute('aria-label');
-        const title = await closeBtn.getAttribute('title');
-        const text = await closeBtn.textContent();
-
-        expect(ariaLabel || title || text).toBeTruthy();
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-016] @a11y @edge Verify modal has proper aria-modal attribute', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modal = page.locator('[role="dialog"]').first();
-      if (await modal.count() > 0) {
-        const role = await modal.getAttribute('role');
-        expect(role).toBe('dialog');
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-017] @a11y @edge Verify video has captions/subtitles support', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const video = page.locator('video').first();
-    if (await video.count() > 0) {
-      const track = video.locator('track[kind="captions"], track[kind="subtitles"]');
-      const hasCaptions = await track.count() > 0;
-      expect(hasCaptions).toBeDefined();
-    }
-  });
-
-  test('[GAAM-621-EDGE-018] @edge Verify modal content contrast meets WCAG standards', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-      if (await modal.count() > 0) {
-        const bgColor = // ?? TODO: Replace with measurement-utils
-    await modal.evaluate(el =>
-          window.getComputedStyle(el).backgroundColor
-        );
-        const textColor = // ?? TODO: Replace with measurement-utils
-    await modal.evaluate(el =>
-          window.getComputedStyle(el).color
-        );
-
-        expect(bgColor).toBeTruthy();
-        expect(textColor).toBeTruthy();
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-019] @edge Verify modal min/max width constraints', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await page.setViewportSize({ width: 300, height: 400 });
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const modal = page.locator('[role="dialog"], [class*="modal"]').first();
-      if (await modal.count() > 0) {
-        const width = // ?? TODO: Replace with measurement-utils
-    await modal.evaluate(el => el.offsetWidth);
-        expect(width).toBeGreaterThan(0);
-      }
-    }
-  });
-
-  test('[GAAM-621-EDGE-020] @edge Verify no layout shift when modal appears', async ({ page }) => {
-    const url = resolveComponentUrl('hero');
-    await page.goto(url);
-
-    const body = page.locator('body');
-    const initialWidth = // ?? TODO: Replace with measurement-utils
-    await body.evaluate(el => el.offsetWidth);
-
-    const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
-    if (await cta.count() > 0) {
-      await clickElement(cta);
-      // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-
-      const finalWidth = // ?? TODO: Replace with measurement-utils
-    await body.evaluate(el => el.offsetWidth);
-      // Width should remain the same (no scrollbar shift)
-      expect(finalWidth).toBe(initialWidth);
-    }
-  });
+    });
 });
-

@@ -1,0 +1,482 @@
+{
+  "component": "brand-relationship",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/brand-relationship.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:15:50.391Z",
+  "rootSelector": ".cmp-brand-relationship",
+  "elements": [
+    {
+      "name": "a_KKR_Ownership",
+      "tag": "a",
+      "text": "KKR Ownership",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-e3f79c6c24",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-e3f79c6c24\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"KKR Ownership\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"parentId\":\"brand-relationship-8c55fd8bca\"}}"
+      },
+      "testId": null,
+      "id": "button-e3f79c6c24",
+      "parentClasses": [
+        "buttonprimary",
+        "button",
+        "ga-button--primary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 474,
+        "y": 739,
+        "width": 177,
+        "height": 50
+      }
+    },
+    {
+      "name": "a_Meet_KKR",
+      "tag": "a",
+      "text": "Meet KKR",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-0909c67772",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-0909c67772\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Meet KKR\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"parentId\":\"brand-relationship-8c55fd8bca\"}}"
+      },
+      "testId": null,
+      "id": "button-0909c67772",
+      "parentClasses": [
+        "buttonsecondary",
+        "button",
+        "ga-button--secondary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 667,
+        "y": 739,
+        "width": 139,
+        "height": 50
+      }
+    },
+    {
+      "name": "h3_2",
+      "tag": "h3",
+      "text": "We are a leading provider of retirement security and investment solutions, and a wholly owned subsid",
+      "classes": [
+        "cmp-brand-relationship__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 237,
+        "y": 505,
+        "width": 806,
+        "height": 168
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__top-arcs"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__top-arc",
+        "cmp-brand-relationship__arc-one"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__top-arcs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__top-arc",
+        "cmp-brand-relationship__arc-two"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__top-arcs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__desktop-arcs"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 239,
+        "width": 1280,
+        "height": 729
+      }
+    },
+    {
+      "name": "div_7",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__desktop-arc",
+        "cmp-brand-relationship__desktop-arc--one"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__desktop-arcs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 150,
+        "y": -11,
+        "width": 475,
+        "height": 1399
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__desktop-arc",
+        "cmp-brand-relationship__desktop-arc--two"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__desktop-arcs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": -76,
+        "y": 169,
+        "width": 967,
+        "height": 876
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__desktop-arc",
+        "cmp-brand-relationship__desktop-arc--three"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__desktop-arcs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 698,
+        "y": -261,
+        "width": 432,
+        "height": 1524
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__desktop-arc",
+        "cmp-brand-relationship__desktop-arc--four"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__desktop-arcs"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 339,
+        "y": -422,
+        "width": 1066,
+        "height": 1540
+      }
+    },
+    {
+      "name": "div_11",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__images"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 239,
+        "width": 1280,
+        "height": 729
+      }
+    },
+    {
+      "name": "div_12",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__brand-image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__images"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 139,
+        "y": 465,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "We are a leading provider of retirement security and investment solutions, and a wholly owned subsid",
+      "classes": [
+        "cmp-brand-relationship__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 469,
+        "width": 1216,
+        "height": 320
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-brand-relationship__logo"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 469,
+        "width": 1216,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_15",
+      "tag": "div",
+      "text": "KKR Ownership\n                \n                \n                    \n                    \n          ",
+      "classes": [
+        "cmp-brand-relationship__cta-wrapper",
+        "cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-brand-relationship__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 32,
+        "y": 739,
+        "width": 1216,
+        "height": 50
+      }
+    },
+    {
+      "name": "i_16",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 613,
+        "y": 756,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_KKR_Ownership",
+      "tag": "span",
+      "text": "KKR Ownership",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 496,
+        "y": 756,
+        "width": 113,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Meet_KKR",
+      "tag": "span",
+      "text": "Meet KKR",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 689,
+        "y": 756,
+        "width": 75,
+        "height": 16
+      }
+    }
+  ],
+  "pageTitle": "Brand Relationship",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

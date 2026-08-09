@@ -1,0 +1,208 @@
+{
+  "component": "spacer",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:27:50.901Z",
+  "rootSelector": ".cmp-spacer, div.spacer",
+  "elements": [
+    {
+      "name": "div_0",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-spacer"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "spacer",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 351,
+        "width": 1280,
+        "height": 48
+      }
+    },
+    {
+      "name": "div_1",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-spacer"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "spacer",
+        "cmp-spacer--3xsmall",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 674,
+        "width": 1280,
+        "height": 6
+      }
+    },
+    {
+      "name": "div_2",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-spacer"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "spacer",
+        "cmp-spacer--xxsmall",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 954,
+        "width": 1280,
+        "height": 12
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-spacer"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "spacer",
+        "cmp-spacer--xsmall",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1240,
+        "width": 1280,
+        "height": 20
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-spacer"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "spacer",
+        "cmp-spacer--small",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1535,
+        "width": 1280,
+        "height": 32
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-spacer"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "spacer",
+        "cmp-spacer--large",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1841,
+        "width": 1280,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-spacer"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "spacer",
+        "cmp-spacer--xlarge",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 2180,
+        "width": 1280,
+        "height": 112
+      }
+    }
+  ],
+  "pageTitle": "Spacer",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

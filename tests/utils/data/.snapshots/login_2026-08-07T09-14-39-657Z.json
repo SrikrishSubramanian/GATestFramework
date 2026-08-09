@@ -1,0 +1,2303 @@
+{
+  "component": "login",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:14:39.652Z",
+  "rootSelector": ".cmp-login",
+  "elements": [
+    {
+      "name": "a_ForgotUsername",
+      "tag": "a",
+      "text": "Forgot username?",
+      "classes": [
+        "cmp-login__forgot-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion.html"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1063,
+        "y": 782,
+        "width": 114,
+        "height": 20
+      }
+    },
+    {
+      "name": "a_ForgotPassword",
+      "tag": "a",
+      "text": "Forgot password?",
+      "classes": [
+        "cmp-login__forgot-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion.html"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1064,
+        "y": 885,
+        "width": 113,
+        "height": 20
+      }
+    },
+    {
+      "name": "a_ForgotUsername_2",
+      "tag": "a",
+      "text": "Forgot username?",
+      "classes": [
+        "cmp-login__forgot-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion.html"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1063,
+        "y": 1839,
+        "width": 114,
+        "height": 20
+      }
+    },
+    {
+      "name": "a_ForgotPassword_3",
+      "tag": "a",
+      "text": "Forgot password?",
+      "classes": [
+        "cmp-login__forgot-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion.html"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1064,
+        "y": 1941,
+        "width": 113,
+        "height": 20
+      }
+    },
+    {
+      "name": "ShowPassword",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-login__password-toggle"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Show password",
+        "data-show-label": "Show password",
+        "data-hide-label": "Hide password",
+        "data-showing": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__password-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Show password",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1133,
+        "y": 920,
+        "width": 36,
+        "height": 36
+      }
+    },
+    {
+      "name": "button_Continue",
+      "tag": "button",
+      "text": "Continue",
+      "classes": [
+        "cmp-button",
+        "cmp-login__submit-btn"
+      ],
+      "attributes": {
+        "type": "submit"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "ga-button--primary"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 760,
+        "y": 986,
+        "width": 137,
+        "height": 50
+      }
+    },
+    {
+      "name": "ShowPassword_6",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-login__password-toggle"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Show password",
+        "data-show-label": "Show password",
+        "data-hide-label": "Hide password",
+        "data-showing": "false"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__password-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Show password",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1133,
+        "y": 1976,
+        "width": 36,
+        "height": 36
+      }
+    },
+    {
+      "name": "button_Continue_7",
+      "tag": "button",
+      "text": "Continue",
+      "classes": [
+        "cmp-button",
+        "cmp-login__submit-btn"
+      ],
+      "attributes": {
+        "type": "submit"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "ga-button--primary"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 760,
+        "y": 2042,
+        "width": 137,
+        "height": 50
+      }
+    },
+    {
+      "name": "input_8",
+      "tag": "input",
+      "text": "",
+      "classes": [],
+      "attributes": {
+        "type": "hidden",
+        "name": "resource",
+        "value": "/content/global-atlantic/style-guide/components/accordion.html"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "cmpLoginUsername",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-login__input"
+      ],
+      "attributes": {
+        "type": "text",
+        "name": "username",
+        "autocomplete": "username",
+        "aria-required": "true",
+        "aria-describedby": "cmp-login-username-error"
+      },
+      "testId": null,
+      "id": "cmp-login-username",
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 760,
+        "y": 811,
+        "width": 417,
+        "height": 48
+      }
+    },
+    {
+      "name": "cmpLoginPassword",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-login__input"
+      ],
+      "attributes": {
+        "type": "password",
+        "name": "password",
+        "autocomplete": "current-password",
+        "aria-required": "true",
+        "aria-describedby": "cmp-login-password-error"
+      },
+      "testId": null,
+      "id": "cmp-login-password",
+      "parentClasses": [
+        "cmp-login__password-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 760,
+        "y": 914,
+        "width": 417,
+        "height": 48
+      }
+    },
+    {
+      "name": "input_11",
+      "tag": "input",
+      "text": "",
+      "classes": [],
+      "attributes": {
+        "type": "hidden",
+        "name": "resource",
+        "value": "/content/global-atlantic/style-guide/components/accordion.html"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "cmpLoginUsername_12",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-login__input"
+      ],
+      "attributes": {
+        "type": "text",
+        "name": "username",
+        "autocomplete": "username",
+        "aria-required": "true",
+        "aria-describedby": "cmp-login-username-error"
+      },
+      "testId": null,
+      "id": "cmp-login-username",
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 760,
+        "y": 1868,
+        "width": 417,
+        "height": 48
+      }
+    },
+    {
+      "name": "cmpLoginPassword_13",
+      "tag": "input",
+      "text": "",
+      "classes": [
+        "cmp-login__input"
+      ],
+      "attributes": {
+        "type": "password",
+        "name": "password",
+        "autocomplete": "current-password",
+        "aria-required": "true",
+        "aria-describedby": "cmp-login-password-error"
+      },
+      "testId": null,
+      "id": "cmp-login-password",
+      "parentClasses": [
+        "cmp-login__password-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 760,
+        "y": 1970,
+        "width": 417,
+        "height": 48
+      }
+    },
+    {
+      "name": "h1_WelcomeTo_Global_Atlantic",
+      "tag": "h1",
+      "text": "Welcome to Global Atlantic",
+      "classes": [
+        "cmp-login__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__left-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 611,
+        "width": 497,
+        "height": 228
+      }
+    },
+    {
+      "name": "h1_WelcomeTo_Global_Atlantic_15",
+      "tag": "h1",
+      "text": "Welcome to Global Atlantic",
+      "classes": [
+        "cmp-login__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__left-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1725,
+        "width": 497,
+        "height": 228
+      }
+    },
+    {
+      "name": "h2_Login",
+      "tag": "h2",
+      "text": "Login",
+      "classes": [
+        "cmp-login__form-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": "cmp-login-form-heading",
+      "parentClasses": [
+        "cmp-login__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 717,
+        "width": 417,
+        "height": 40
+      }
+    },
+    {
+      "name": "h2_Login_17",
+      "tag": "h2",
+      "text": "Login",
+      "classes": [
+        "cmp-login__form-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": "cmp-login-form-heading",
+      "parentClasses": [
+        "cmp-login__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1773,
+        "width": 417,
+        "height": 40
+      }
+    },
+    {
+      "name": "KeyBenefits",
+      "tag": "ul",
+      "text": "Pending applications with real-time updates\n\n                    \n                \n            \n\n   ",
+      "classes": [
+        "cmp-login__key-points"
+      ],
+      "attributes": {
+        "aria-label": "Key benefits"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__left-panel"
+      ],
+      "role": null,
+      "ariaLabel": "Key benefits",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 934,
+        "width": 328,
+        "height": 197
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "The username or password you entered is incorrect. Please try again.",
+      "classes": [
+        "cmp-login__alert",
+        "cmp-login__alert-hide"
+      ],
+      "attributes": {
+        "role": "alert",
+        "aria-live": "assertive",
+        "aria-atomic": "true",
+        "data-required-msg": "Required fields are missing. Please enter your username and password.",
+        "data-auth-fail-msg": "The username or password you entered is incorrect. Please try again.",
+        "data-system-error-msg": "System Error Message",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__card"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "cmpLoginUsernameError",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__error-msg"
+      ],
+      "attributes": {
+        "role": "alert",
+        "aria-live": "polite",
+        "aria-atomic": "true",
+        "data-error-msg": "Enter Username"
+      },
+      "testId": null,
+      "id": "cmp-login-username-error",
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "cmpLoginPasswordError",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__error-msg"
+      ],
+      "attributes": {
+        "role": "alert",
+        "aria-live": "polite",
+        "aria-atomic": "true",
+        "data-error-msg": "Enter Password"
+      },
+      "testId": null,
+      "id": "cmp-login-password-error",
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "The username or password you entered is incorrect. Please try again.",
+      "classes": [
+        "cmp-login__alert",
+        "cmp-login__alert-hide"
+      ],
+      "attributes": {
+        "role": "alert",
+        "aria-live": "assertive",
+        "aria-atomic": "true",
+        "data-required-msg": "Required fields are missing. Please enter your username and password.",
+        "data-auth-fail-msg": "The username or password you entered is incorrect. Please try again.",
+        "data-system-error-msg": "System Error Message",
+        "tabindex": "-1"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__card"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "cmpLoginUsernameError_23",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__error-msg"
+      ],
+      "attributes": {
+        "role": "alert",
+        "aria-live": "polite",
+        "aria-atomic": "true",
+        "data-error-msg": "Enter Username"
+      },
+      "testId": null,
+      "id": "cmp-login-username-error",
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "cmpLoginPasswordError_24",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__error-msg"
+      ],
+      "attributes": {
+        "role": "alert",
+        "aria-live": "polite",
+        "aria-atomic": "true",
+        "data-error-msg": "Enter Password"
+      },
+      "testId": null,
+      "id": "cmp-login-password-error",
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_25",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-login__wave-overlay"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 547,
+        "width": 1280,
+        "height": 726
+      }
+    },
+    {
+      "name": "div_26",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-login__wave-1"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__wave-overlay"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 547,
+        "width": 1280,
+        "height": 726
+      }
+    },
+    {
+      "name": "div_27",
+      "tag": "div",
+      "text": "Welcome to Global Atlantic\n            \n\n            \n                Use one login to access, manag",
+      "classes": [
+        "cmp-login__layout"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 611,
+        "width": 1154,
+        "height": 598
+      }
+    },
+    {
+      "name": "div_28",
+      "tag": "div",
+      "text": "Welcome to Global Atlantic\n            \n\n            \n                Use one login to access, manag",
+      "classes": [
+        "cmp-login__left-panel"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__layout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 611,
+        "width": 497,
+        "height": 598
+      }
+    },
+    {
+      "name": "div_29",
+      "tag": "div",
+      "text": "Use one login to access, manage and maintain your annuity business*.",
+      "classes": [
+        "cmp-login__subheadline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__left-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 851,
+        "width": 497,
+        "height": 50
+      }
+    },
+    {
+      "name": "li_30",
+      "tag": "li",
+      "text": "Pending applications with real-time updates",
+      "classes": [
+        "cmp-login__key-point"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-points"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 934,
+        "width": 328,
+        "height": 49
+      }
+    },
+    {
+      "name": "span_31",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__key-point-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-point"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 950,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_32",
+      "tag": "span",
+      "text": "Pending applications with real-time updates",
+      "classes": [
+        "cmp-login__key-point-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-point"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 89,
+        "y": 949,
+        "width": 286,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_RunAPersonalizedIllustratio",
+      "tag": "li",
+      "text": "Run a personalized illustration",
+      "classes": [
+        "cmp-login__key-point"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-points"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 983,
+        "width": 328,
+        "height": 49
+      }
+    },
+    {
+      "name": "span_34",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__key-point-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-point"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 999,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_RunAPersonalizedIllustratio",
+      "tag": "span",
+      "text": "Run a personalized illustration",
+      "classes": [
+        "cmp-login__key-point-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-point"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 89,
+        "y": 998,
+        "width": 195,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_36",
+      "tag": "li",
+      "text": "Access policy documents and correspondence",
+      "classes": [
+        "cmp-login__key-point"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-points"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1032,
+        "width": 328,
+        "height": 49
+      }
+    },
+    {
+      "name": "span_37",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__key-point-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-point"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1048,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_38",
+      "tag": "span",
+      "text": "Access policy documents and correspondence",
+      "classes": [
+        "cmp-login__key-point-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-point"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 89,
+        "y": 1047,
+        "width": 299,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_ExploreNewProducts",
+      "tag": "li",
+      "text": "Explore new products",
+      "classes": [
+        "cmp-login__key-point"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-points"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1081,
+        "width": 328,
+        "height": 49
+      }
+    },
+    {
+      "name": "span_40",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__key-point-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-point"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1097,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_ExploreNewProducts",
+      "tag": "span",
+      "text": "Explore new products",
+      "classes": [
+        "cmp-login__key-point-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__key-point"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 89,
+        "y": 1096,
+        "width": 141,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_42",
+      "tag": "div",
+      "text": "*Use this option to work with policies beginning with A, B, C, D, or E or if you are a financial pro",
+      "classes": [
+        "cmp-login__fine-print",
+        "cmp-login__fine-print--desktop"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__left-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1178,
+        "width": 497,
+        "height": 31
+      }
+    },
+    {
+      "name": "div_43",
+      "tag": "div",
+      "text": "Login\n                \n\n                \n                    \n                        \n             ",
+      "classes": [
+        "cmp-login__right-panel"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__layout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 720,
+        "y": 611,
+        "width": 497,
+        "height": 598
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "Login\n                \n\n                \n                    \n                        \n             ",
+      "classes": [
+        "cmp-login__card"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__right-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 720,
+        "y": 669,
+        "width": 497,
+        "height": 482
+      }
+    },
+    {
+      "name": "span_45",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__alert-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__alert",
+        "cmp-login__alert-hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_46",
+      "tag": "span",
+      "text": "The username or password you entered is incorrect. Please try again.",
+      "classes": [
+        "cmp-login__alert-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__alert",
+        "cmp-login__alert-hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "form_47",
+      "tag": "form",
+      "text": "Username\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__form"
+      ],
+      "attributes": {
+        "method": "POST",
+        "action": "/content/global-atlantic/style-guide/components/login/_jcr_content/root/main-par/login_authfailed_cop.submit.json",
+        "aria-labelledby": "cmp-login-form-heading",
+        "novalidate": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 781,
+        "width": 417,
+        "height": 322
+      }
+    },
+    {
+      "name": "div_48",
+      "tag": "div",
+      "text": "Username\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__field-row"
+      ],
+      "attributes": {
+        "data-field": "username"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 781,
+        "width": 417,
+        "height": 78
+      }
+    },
+    {
+      "name": "div_49",
+      "tag": "div",
+      "text": "Username\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__field-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 781,
+        "width": 417,
+        "height": 22
+      }
+    },
+    {
+      "name": "label_50",
+      "tag": "label",
+      "text": "Username\n                                *",
+      "classes": [
+        "cmp-login__label"
+      ],
+      "attributes": {
+        "for": "cmp-login-username"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 781,
+        "width": 83,
+        "height": 22
+      }
+    },
+    {
+      "name": "span_51",
+      "tag": "span",
+      "text": "*",
+      "classes": [
+        "cmp-login__required-indicator"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 835,
+        "y": 784,
+        "width": 7,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_52",
+      "tag": "div",
+      "text": "Password\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__field-row"
+      ],
+      "attributes": {
+        "data-field": "password"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 883,
+        "width": 417,
+        "height": 78
+      }
+    },
+    {
+      "name": "div_53",
+      "tag": "div",
+      "text": "Password\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__field-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 883,
+        "width": 417,
+        "height": 22
+      }
+    },
+    {
+      "name": "label_54",
+      "tag": "label",
+      "text": "Password\n                                *",
+      "classes": [
+        "cmp-login__label"
+      ],
+      "attributes": {
+        "for": "cmp-login-password"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 883,
+        "width": 80,
+        "height": 22
+      }
+    },
+    {
+      "name": "span_55",
+      "tag": "span",
+      "text": "*",
+      "classes": [
+        "cmp-login__required-indicator"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 832,
+        "y": 887,
+        "width": 7,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_56",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-login__password-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 914,
+        "width": 417,
+        "height": 48
+      }
+    },
+    {
+      "name": "svg_57",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-login__eye-icon",
+        "cmp-login__eye-icon--hide"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "focusable": "false",
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "stroke-width": "2",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__password-toggle"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "svg_58",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-login__eye-icon",
+        "cmp-login__eye-icon--show"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "focusable": "false",
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "stroke-width": "2",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__password-toggle"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1141,
+        "y": 928,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "name": "i_59",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-login__submit-btn"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 859,
+        "y": 1003,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Continue",
+      "tag": "span",
+      "text": "Continue",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-login__submit-btn"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 782,
+        "y": 1003,
+        "width": 65,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_61",
+      "tag": "div",
+      "text": "First time user?\n                            \n                            \n                        \n",
+      "classes": [
+        "cmp-login__footer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1036,
+        "width": 417,
+        "height": 68
+      }
+    },
+    {
+      "name": "p_FirstTimeUser",
+      "tag": "p",
+      "text": "First time user?",
+      "classes": [
+        "cmp-login__register"
+      ],
+      "attributes": {
+        "datal-sly-set.registerlinklabel": "Register now"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__footer"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1060,
+        "width": 417,
+        "height": 21
+      }
+    },
+    {
+      "name": "p_63",
+      "tag": "p",
+      "text": "For additional assistance, call (833) ASK-GA4U or (833) 275-4248",
+      "classes": [
+        "cmp-login__assistance"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__footer"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1087,
+        "width": 417,
+        "height": 17
+      }
+    },
+    {
+      "name": "div_64",
+      "tag": "div",
+      "text": "*Use this option to work with policies beginning with A, B, C, D, or E or if you are a financial pro",
+      "classes": [
+        "cmp-login__fine-print",
+        "cmp-login__fine-print--mobile"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_65",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-login__wave-overlay"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1661,
+        "width": 1280,
+        "height": 610
+      }
+    },
+    {
+      "name": "div_66",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-login__wave-1"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__wave-overlay"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1661,
+        "width": 1280,
+        "height": 610
+      }
+    },
+    {
+      "name": "div_67",
+      "tag": "div",
+      "text": "Welcome to Global Atlantic\n            \n\n            \n\n            \n            \n\n        \n\n        ",
+      "classes": [
+        "cmp-login__layout"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1725,
+        "width": 1154,
+        "height": 482
+      }
+    },
+    {
+      "name": "div_WelcomeTo_Global_Atlantic",
+      "tag": "div",
+      "text": "Welcome to Global Atlantic",
+      "classes": [
+        "cmp-login__left-panel"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__layout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1725,
+        "width": 497,
+        "height": 482
+      }
+    },
+    {
+      "name": "div_69",
+      "tag": "div",
+      "text": "Login\n                \n\n                \n                    \n                        \n             ",
+      "classes": [
+        "cmp-login__right-panel"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__layout"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 720,
+        "y": 1725,
+        "width": 497,
+        "height": 482
+      }
+    },
+    {
+      "name": "div_70",
+      "tag": "div",
+      "text": "Login\n                \n\n                \n                    \n                        \n             ",
+      "classes": [
+        "cmp-login__card"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__right-panel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 720,
+        "y": 1725,
+        "width": 497,
+        "height": 482
+      }
+    },
+    {
+      "name": "span_71",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-login__alert-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__alert",
+        "cmp-login__alert-hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_72",
+      "tag": "span",
+      "text": "The username or password you entered is incorrect. Please try again.",
+      "classes": [
+        "cmp-login__alert-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__alert",
+        "cmp-login__alert-hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "form_73",
+      "tag": "form",
+      "text": "Username\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__form"
+      ],
+      "attributes": {
+        "method": "POST",
+        "action": "/content/global-atlantic/style-guide/components/login/_jcr_content/root/main-par/login_authfailed.submit.json",
+        "aria-labelledby": "cmp-login-form-heading",
+        "novalidate": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__card"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1837,
+        "width": 417,
+        "height": 322
+      }
+    },
+    {
+      "name": "div_74",
+      "tag": "div",
+      "text": "Username\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__field-row"
+      ],
+      "attributes": {
+        "data-field": "username"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1837,
+        "width": 417,
+        "height": 78
+      }
+    },
+    {
+      "name": "div_75",
+      "tag": "div",
+      "text": "Username\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__field-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1837,
+        "width": 417,
+        "height": 22
+      }
+    },
+    {
+      "name": "label_76",
+      "tag": "label",
+      "text": "Username\n                                *",
+      "classes": [
+        "cmp-login__label"
+      ],
+      "attributes": {
+        "for": "cmp-login-username"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1837,
+        "width": 83,
+        "height": 22
+      }
+    },
+    {
+      "name": "span_77",
+      "tag": "span",
+      "text": "*",
+      "classes": [
+        "cmp-login__required-indicator"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 835,
+        "y": 1840,
+        "width": 7,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_78",
+      "tag": "div",
+      "text": "Password\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__field-row"
+      ],
+      "attributes": {
+        "data-field": "password"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1940,
+        "width": 417,
+        "height": 78
+      }
+    },
+    {
+      "name": "div_79",
+      "tag": "div",
+      "text": "Password\n                                *\n                            \n                            ",
+      "classes": [
+        "cmp-login__field-header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1940,
+        "width": 417,
+        "height": 22
+      }
+    },
+    {
+      "name": "label_80",
+      "tag": "label",
+      "text": "Password\n                                *",
+      "classes": [
+        "cmp-login__label"
+      ],
+      "attributes": {
+        "for": "cmp-login-password"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1940,
+        "width": 80,
+        "height": 22
+      }
+    },
+    {
+      "name": "span_81",
+      "tag": "span",
+      "text": "*",
+      "classes": [
+        "cmp-login__required-indicator"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__label"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 832,
+        "y": 1943,
+        "width": 7,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_82",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-login__password-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__field-row"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 1970,
+        "width": 417,
+        "height": 48
+      }
+    },
+    {
+      "name": "svg_83",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-login__eye-icon",
+        "cmp-login__eye-icon--hide"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "focusable": "false",
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "stroke-width": "2",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__password-toggle"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "svg_84",
+      "tag": "svg",
+      "text": "",
+      "classes": [
+        "cmp-login__eye-icon",
+        "cmp-login__eye-icon--show"
+      ],
+      "attributes": {
+        "aria-hidden": "true",
+        "focusable": "false",
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "stroke-width": "2",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__password-toggle"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1141,
+        "y": 1984,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "name": "i_85",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-login__submit-btn"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 859,
+        "y": 2059,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Continue_86",
+      "tag": "span",
+      "text": "Continue",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-login__submit-btn"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 782,
+        "y": 2059,
+        "width": 65,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_87",
+      "tag": "div",
+      "text": "First time user?\n                            \n                            \n                        \n",
+      "classes": [
+        "cmp-login__footer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__form"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 2092,
+        "width": 417,
+        "height": 68
+      }
+    },
+    {
+      "name": "p_FirstTimeUser_88",
+      "tag": "p",
+      "text": "First time user?",
+      "classes": [
+        "cmp-login__register"
+      ],
+      "attributes": {
+        "datal-sly-set.registerlinklabel": "Register now"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__footer"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 2116,
+        "width": 417,
+        "height": 21
+      }
+    },
+    {
+      "name": "p_89",
+      "tag": "p",
+      "text": "For additional assistance, call (833) ASK-GA4U or (833) 275-4248",
+      "classes": [
+        "cmp-login__assistance"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-login__footer"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 760,
+        "y": 2143,
+        "width": 417,
+        "height": 17
+      }
+    }
+  ],
+  "pageTitle": "Login",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

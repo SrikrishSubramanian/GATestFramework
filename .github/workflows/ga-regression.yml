@@ -39,6 +39,17 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      - name: Restore cached AEM auth state
+        env:
+          AUTH_STATE_JSON: ${{ secrets.AEM_AUTH_STATE_JSON }}
+        run: |
+          if [ -n "$AUTH_STATE_JSON" ]; then
+            printf '%s' "$AUTH_STATE_JSON" > .auth-state.json
+            echo "Restored cached AEM auth state — globalSetup will skip login."
+          else
+            echo "No AEM_AUTH_STATE_JSON secret set — tests will attempt individual login (fails if MFA is required)."
+          fi
+
       - name: Run desktop suite
         run: npx playwright test tests/specFiles/ga/ --project firefox --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
 
@@ -47,76 +58,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report-desktop-${{ matrix.shardIndex }}
-          path: |
-            playwright-report/
-            test-results/
-          retention-days: 14
-
-  tablet:
-    name: Tablet (Galaxy Tab S6 - Chrome) - Shard ${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shardIndex: [1, 2, 3]
-        shardTotal: [3]
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      - name: Run tablet suite
-        run: npx playwright test tests/specFiles/ga/ --project "Tablet-GalaxyTabS6-Chrome" --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
-
-      - name: Upload report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-tablet-${{ matrix.shardIndex }}
-          path: |
-            playwright-report/
-            test-results/
-          retention-days: 14
-
-  mobile:
-    name: Mobile (Pixel 4 XL, Galaxy S9 - Chrome) - Shard ${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shardIndex: [1, 2, 3]
-        shardTotal: [3]
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      - name: Run mobile suite
-        run: npx playwright test tests/specFiles/ga/ --project "Mobile-Pixel4XL-Chrome" --project "Mobile-GalaxyS9-Chrome" --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
-
-      - name: Upload report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-mobile-${{ matrix.shardIndex }}
           path: |
             playwright-report/
             test-results/

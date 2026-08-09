@@ -1,0 +1,243 @@
+{
+  "component": "headline-block",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/headline-block.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:09:10.017Z",
+  "rootSelector": ".cmp-headline-block",
+  "elements": [
+    {
+      "name": "a_Optional_CTA",
+      "tag": "a",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-d773e2966f",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-d773e2966f\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Optional CTA\",\"xdm:linkURL\":\"#\",\"parentId\":\"headline-block-1b0358d129\"}}"
+      },
+      "testId": null,
+      "id": "button-d773e2966f",
+      "parentClasses": [
+        "button",
+        "ga-button--primary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 401,
+        "width": 161,
+        "height": 50
+      }
+    },
+    {
+      "name": "a_Link_Label",
+      "tag": "a",
+      "text": "Link Label",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-fdf3e4782f",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-fdf3e4782f\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Link Label\",\"xdm:linkURL\":\"#\",\"parentId\":\"headline-block-1b0358d129\"}}"
+      },
+      "testId": null,
+      "id": "button-fdf3e4782f",
+      "parentClasses": [
+        "button",
+        "ga-button--secondary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 401,
+        "width": 139,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_EyeBrow",
+      "tag": "div",
+      "text": "Eye brow",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 266,
+        "width": 1032,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_3",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing. Lorem ipsum dolor sit amet consequat adipscing.",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 296,
+        "width": 1032,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_4",
+      "tag": "div",
+      "text": "Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscin",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 327,
+        "width": 1032,
+        "height": 50
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "Optional CTA\n                \n                \n                    \n                    \n           ",
+      "classes": [
+        "cmp-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 401,
+        "width": 1032,
+        "height": 50
+      }
+    },
+    {
+      "name": "i_6",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-down"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 186,
+        "y": 418,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Optional_CTA",
+      "tag": "span",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 85,
+        "y": 418,
+        "width": 97,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Link_Label",
+      "tag": "span",
+      "text": "Link Label",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 258,
+        "y": 418,
+        "width": 75,
+        "height": 16
+      }
+    }
+  ],
+  "pageTitle": "Headline Block",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -1,0 +1,654 @@
+{
+  "component": "firm-selection-modal",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/firm-selection-modal.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:17:17.368Z",
+  "rootSelector": ".cmp-firm-selection-modal",
+  "elements": [
+    {
+      "name": "Close",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-firm-selection-modal__close"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__dialog"
+      ],
+      "role": null,
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Confirm",
+      "tag": "button",
+      "text": "Confirm",
+      "classes": [
+        "cmp-button",
+        "cmp-firm-selection-modal__cta"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-disabled": "true",
+        "disabled": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "ga-button--primary",
+        "cmp-firm-selection-modal__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "button_Continue",
+      "tag": "button",
+      "text": "Continue",
+      "classes": [
+        "cmp-button",
+        "cmp-firm-selection-modal__cta"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-disabled": "true",
+        "disabled": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "ga-button--primary",
+        "cmp-firm-selection-modal__cta-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "h2_SelectYourFirm",
+      "tag": "h2",
+      "text": "Select your firm",
+      "classes": [
+        "cmp-firm-selection-modal__heading"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": "cmp-fsm-heading",
+      "parentClasses": [
+        "cmp-firm-selection-modal__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "SelectAFirm",
+      "tag": "ul",
+      "text": "",
+      "classes": [
+        "cmp-firm-selection-modal__firm-list"
+      ],
+      "attributes": {
+        "role": "listbox",
+        "aria-label": "Select a firm"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__body"
+      ],
+      "role": "listbox",
+      "ariaLabel": "Select a firm",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-firm-selection-modal__error"
+      ],
+      "attributes": {
+        "role": "alert",
+        "aria-live": "assertive",
+        "aria-atomic": "true",
+        "hidden": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__footer"
+      ],
+      "role": "alert",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-firm-selection-modal__backdrop"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_7",
+      "tag": "div",
+      "text": "Illustrations\n      \n      \n        Select your firm\n      \n    \n\n    \n\n      \n        \n        Load",
+      "classes": [
+        "cmp-firm-selection-modal__dialog"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "Illustrations\n      \n      \n        Select your firm",
+      "classes": [
+        "cmp-firm-selection-modal__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__dialog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "p_Illustrations",
+      "tag": "p",
+      "text": "Illustrations",
+      "classes": [
+        "cmp-firm-selection-modal__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_LoadingYourFirms",
+      "tag": "div",
+      "text": "Loading your firms...",
+      "classes": [
+        "cmp-firm-selection-modal__body"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__dialog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_LoadingYourFirms_11",
+      "tag": "div",
+      "text": "Loading your firms...",
+      "classes": [
+        "cmp-firm-selection-modal__loading"
+      ],
+      "attributes": {
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__body"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_12",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-firm-selection-modal__spinner"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__loading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_LoadingYourFirms",
+      "tag": "span",
+      "text": "Loading your firms...",
+      "classes": [
+        "cmp-firm-selection-modal__loading-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__loading"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Confirm",
+      "tag": "div",
+      "text": "Confirm",
+      "classes": [
+        "cmp-firm-selection-modal__footer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__dialog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_15",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-firm-selection-modal__error-icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__error"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_16",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-firm-selection-modal__error-text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__error"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Confirm_17",
+      "tag": "div",
+      "text": "Confirm",
+      "classes": [
+        "button",
+        "ga-button--primary",
+        "cmp-firm-selection-modal__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__footer"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "i_18",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "Arrow-Right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-firm-selection-modal__cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Confirm",
+      "tag": "span",
+      "text": "Confirm",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-firm-selection-modal__cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_20",
+      "tag": "div",
+      "text": "SnapApp\n      \n      \n        Select your firm\n      \n    \n\n    \n\n      \n        \n        Loading yo",
+      "classes": [
+        "cmp-firm-selection-modal__dialog"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_21",
+      "tag": "div",
+      "text": "SnapApp\n      \n      \n        Select your firm",
+      "classes": [
+        "cmp-firm-selection-modal__header"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__dialog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "p_SnapApp",
+      "tag": "p",
+      "text": "SnapApp",
+      "classes": [
+        "cmp-firm-selection-modal__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__header"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Continue",
+      "tag": "div",
+      "text": "Continue",
+      "classes": [
+        "cmp-firm-selection-modal__footer"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__dialog"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_Continue_24",
+      "tag": "div",
+      "text": "Continue",
+      "classes": [
+        "button",
+        "ga-button--primary",
+        "cmp-firm-selection-modal__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-firm-selection-modal__footer"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "span_Continue",
+      "tag": "span",
+      "text": "Continue",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button",
+        "cmp-firm-selection-modal__cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "pageTitle": "Firm Selection Modal",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

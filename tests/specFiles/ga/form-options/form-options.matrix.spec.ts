@@ -41,8 +41,15 @@ test.describe('Form Options — State Matrix', () => {
           const root = page.locator('.cmp-form-options').first();
           await expect(root).toBeVisible();
 
-          // Find elements matching the field type
-          const selector = `.cmp-form-options input[type="${fieldType}"], .cmp-form-options ${fieldType}`;
+          // Find elements matching the field type.
+          // "select" is special-cased: this component uses the Choices.js
+          // library, which hides the native <select> and renders a custom
+          // widget (.choices > .choices__inner) in its place — the native
+          // element is intentionally never visible/focusable, so state
+          // checks must target the widget instead (verified against live DOM).
+          const selector = fieldType === 'select'
+            ? '.cmp-form-options .choices'
+            : `.cmp-form-options input[type="${fieldType}"], .cmp-form-options ${fieldType}`;
           const elements = page.locator(selector);
           const elementCount = await elements.count();
 

@@ -1,0 +1,6898 @@
+{
+  "component": "navigation",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/navigation.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T06:16:45.173Z",
+  "rootSelector": ".cmp-navigation",
+  "elements": [
+    {
+      "name": "Style_Guide",
+      "tag": "a",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-current": "page",
+        "aria-label": "Style Guide",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Style Guide",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 143,
+        "y": 510,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "Templates",
+      "tag": "a",
+      "text": "Templates",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Templates",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Templates",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 140,
+        "y": 546,
+        "width": 79,
+        "height": 26
+      }
+    },
+    {
+      "name": "Freeform_Template",
+      "tag": "a",
+      "text": "Freeform Template",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates/freeform-template.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Freeform Template",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Freeform Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 577,
+        "width": 136,
+        "height": 26
+      }
+    },
+    {
+      "name": "Insights_Detail_Template",
+      "tag": "a",
+      "text": "Insights Detail Template",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates/insights-detail-template.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Insights Detail Template",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Insights Detail Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 613,
+        "width": 168,
+        "height": 26
+      }
+    },
+    {
+      "name": "Product_Detail_Page_",
+      "tag": "a",
+      "text": "Product Detail Page",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates/product-detail-page.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Product Detail Page ",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Product Detail Page ",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 649,
+        "width": 143,
+        "height": 26
+      }
+    },
+    {
+      "name": "Product_Rate_Page_ForeIncome_I",
+      "tag": "a",
+      "text": "Product Rate Page — ForeIncome II WF",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates/product-rate-page.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Product Rate Page — ForeIncome II WF",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Product Rate Page — ForeIncome II WF",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 685,
+        "width": 271,
+        "height": 26
+      }
+    },
+    {
+      "name": "Homepage_Template",
+      "tag": "a",
+      "text": "Homepage Template",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates/homepage-template.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Homepage Template",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Homepage Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 722,
+        "width": 149,
+        "height": 26
+      }
+    },
+    {
+      "name": "Rate_Admin_Template",
+      "tag": "a",
+      "text": "Rate Admin Template",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/templates/rate-admin-page.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Rate Admin Template",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Rate Admin Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 758,
+        "width": 154,
+        "height": 26
+      }
+    },
+    {
+      "name": "Branding",
+      "tag": "a",
+      "text": "Branding",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/branding.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Branding",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Branding",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 140,
+        "y": 800,
+        "width": 71,
+        "height": 26
+      }
+    },
+    {
+      "name": "Component_Library",
+      "tag": "a",
+      "text": "Component Library",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-current": "page",
+        "aria-label": "Component Library",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Component Library",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 140,
+        "y": 837,
+        "width": 138,
+        "height": 26
+      }
+    },
+    {
+      "name": "Accordion",
+      "tag": "a",
+      "text": "Accordion",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Accordion",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Accordion",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 868,
+        "width": 78,
+        "height": 26
+      }
+    },
+    {
+      "name": "Accordion_Tabs_Feature",
+      "tag": "a",
+      "text": "Accordion Tabs Feature",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion-tabs-feature.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Accordion Tabs Feature",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Accordion Tabs Feature",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 904,
+        "width": 167,
+        "height": 26
+      }
+    },
+    {
+      "name": "Accordion_Tabs_FeatureWith_Sc",
+      "tag": "a",
+      "text": "Accordion Tabs Feature with Scrolling Behaviour",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion-tabs-feature/accordion-tabs-feature-scrolling-tabs.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Accordion Tabs Feature with Scrolling Behaviour",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Accordion Tabs Feature with Scrolling Behaviour",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 936,
+        "width": 325,
+        "height": 26
+      }
+    },
+    {
+      "name": "Accordion_Tabs_FeatureWith_He",
+      "tag": "a",
+      "text": "Accordion Tabs Feature with Headline",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion-tabs-feature/accordion-tabs-feature-with-headline.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Accordion Tabs Feature with Headline",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Accordion Tabs Feature with Headline",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 972,
+        "width": 259,
+        "height": 26
+      }
+    },
+    {
+      "name": "Accordion_Tabs_FeatureWithout",
+      "tag": "a",
+      "text": "Accordion Tabs Feature without Headline",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/accordion-tabs-feature/accordion-tabs-feature-without-headline.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Accordion Tabs Feature without Headline",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Accordion Tabs Feature without Headline",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 1008,
+        "width": 281,
+        "height": 26
+      }
+    },
+    {
+      "name": "Alert_Banner",
+      "tag": "a",
+      "text": "Alert Banner",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/alert-banner.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Alert Banner",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Alert Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1049,
+        "width": 95,
+        "height": 26
+      }
+    },
+    {
+      "name": "Benefits_Table",
+      "tag": "a",
+      "text": "Benefits Table",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/benefits-table.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Benefits Table",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Benefits Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1085,
+        "width": 104,
+        "height": 26
+      }
+    },
+    {
+      "name": "Bio_Card",
+      "tag": "a",
+      "text": "Bio Card",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/bio-card.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Bio Card",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Bio Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1122,
+        "width": 68,
+        "height": 26
+      }
+    },
+    {
+      "name": "Brand_Relationship",
+      "tag": "a",
+      "text": "Brand Relationship",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/brand-relationship.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Brand Relationship",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Brand Relationship",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1158,
+        "width": 135,
+        "height": 26
+      }
+    },
+    {
+      "name": "Breadcrumb",
+      "tag": "a",
+      "text": "Breadcrumb",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/breadcrumb.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Breadcrumb",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Breadcrumb",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1194,
+        "width": 93,
+        "height": 26
+      }
+    },
+    {
+      "name": "Button",
+      "tag": "a",
+      "text": "Button",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/button.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Button",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Button",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1230,
+        "width": 56,
+        "height": 26
+      }
+    },
+    {
+      "name": "Button_IllustrationsAnd_Login",
+      "tag": "a",
+      "text": "Button Illustrations and Login Type (Gated Content)",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/button-illustrations-and-login-type.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Button Illustrations and Login Type (Gated Content)",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Button Illustrations and Login Type (Gated Content)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1266,
+        "width": 347,
+        "height": 26
+      }
+    },
+    {
+      "name": "Content_Highlight",
+      "tag": "a",
+      "text": "Content Highlight",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/content-highlight.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Content Highlight",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Content Highlight",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1303,
+        "width": 127,
+        "height": 26
+      }
+    },
+    {
+      "name": "Content_Trail",
+      "tag": "a",
+      "text": "Content Trail",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/content-trail.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Content Trail",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Content Trail",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1339,
+        "width": 96,
+        "height": 26
+      }
+    },
+    {
+      "name": "Decision_Tree",
+      "tag": "a",
+      "text": "Decision Tree",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/decision-tree.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Decision Tree",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Decision Tree",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1375,
+        "width": 99,
+        "height": 26
+      }
+    },
+    {
+      "name": "Detail_Hero",
+      "tag": "a",
+      "text": "Detail Hero",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/detail-hero.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Detail Hero",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Detail Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1411,
+        "width": 86,
+        "height": 26
+      }
+    },
+    {
+      "name": "Disclosure_List",
+      "tag": "a",
+      "text": "Disclosure List",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/disclosure-list.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Disclosure List",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Disclosure List",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1447,
+        "width": 104,
+        "height": 26
+      }
+    },
+    {
+      "name": "Enhanced_Related_Content",
+      "tag": "a",
+      "text": "Enhanced Related Content",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/enhanced-related-content.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Enhanced Related Content",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Enhanced Related Content",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1483,
+        "width": 188,
+        "height": 26
+      }
+    },
+    {
+      "name": "Feature_Banner",
+      "tag": "a",
+      "text": "Feature Banner",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/feature-banner.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Feature Banner",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Feature Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1520,
+        "width": 114,
+        "height": 26
+      }
+    },
+    {
+      "name": "Feature_Banner_5050_Layout",
+      "tag": "a",
+      "text": "Feature Banner - 50/50 Layout",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/feature-banner-fifty-fifty.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Feature Banner - 50/50 Layout",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Feature Banner - 50/50 Layout",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1556,
+        "width": 219,
+        "height": 26
+      }
+    },
+    {
+      "name": "Firm_Selection_Modal",
+      "tag": "a",
+      "text": "Firm Selection Modal",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/firm-selection-modal.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Firm Selection Modal",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Firm Selection Modal",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1592,
+        "width": 150,
+        "height": 26
+      }
+    },
+    {
+      "name": "Footer_Disclosure",
+      "tag": "a",
+      "text": "Footer Disclosure",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/footer-disclosure.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Footer Disclosure",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Footer Disclosure",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1628,
+        "width": 124,
+        "height": 26
+      }
+    },
+    {
+      "name": "Form_Options",
+      "tag": "a",
+      "text": "Form Options",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/form-options.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Form Options",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Form Options",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1664,
+        "width": 100,
+        "height": 26
+      }
+    },
+    {
+      "name": "Grid_Container",
+      "tag": "a",
+      "text": "Grid Container",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/grid-container.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Grid Container",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Grid Container",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1701,
+        "width": 107,
+        "height": 26
+      }
+    },
+    {
+      "name": "Headline_Block",
+      "tag": "a",
+      "text": "Headline Block",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/headline-block.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Headline Block",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Headline Block",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1737,
+        "width": 108,
+        "height": 26
+      }
+    },
+    {
+      "name": "Hero_5050",
+      "tag": "a",
+      "text": "Hero 50/50",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/hero-fifty-fifty.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Hero 50/50",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Hero 50/50",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1773,
+        "width": 91,
+        "height": 26
+      }
+    },
+    {
+      "name": "Homepage_Hero",
+      "tag": "a",
+      "text": "Homepage Hero",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/homepage-hero.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Homepage Hero",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Homepage Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1809,
+        "width": 120,
+        "height": 26
+      }
+    },
+    {
+      "name": "Image",
+      "tag": "a",
+      "text": "Image",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/image.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Image",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Image",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1845,
+        "width": 53,
+        "height": 26
+      }
+    },
+    {
+      "name": "Image_With_Nested_Content",
+      "tag": "a",
+      "text": "Image With Nested Content",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/image-with-nested-content.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Image With Nested Content",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Image With Nested Content",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1882,
+        "width": 193,
+        "height": 26
+      }
+    },
+    {
+      "name": "In_Brief",
+      "tag": "a",
+      "text": "In Brief",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/in-brief.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "In Brief",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "In Brief",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1918,
+        "width": 58,
+        "height": 26
+      }
+    },
+    {
+      "name": "Insights_Detail_Hero",
+      "tag": "a",
+      "text": "Insights Detail Hero",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/insights-detail-hero.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Insights Detail Hero",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Insights Detail Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1954,
+        "width": 139,
+        "height": 26
+      }
+    },
+    {
+      "name": "Insights_Listing",
+      "tag": "a",
+      "text": "Insights Listing",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/insights-listing.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Insights Listing",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Insights Listing",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 1990,
+        "width": 108,
+        "height": 26
+      }
+    },
+    {
+      "name": "Login",
+      "tag": "a",
+      "text": "Login",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/login.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Login",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Login",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2026,
+        "width": 48,
+        "height": 26
+      }
+    },
+    {
+      "name": "Navigation",
+      "tag": "a",
+      "text": "Navigation",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/navigation.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-current": "page",
+        "aria-label": "Navigation",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2",
+        "cmp-navigation__item--active"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Navigation",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2062,
+        "width": 84,
+        "height": 26
+      }
+    },
+    {
+      "name": "Product_Comparison_Card",
+      "tag": "a",
+      "text": "Product Comparison Card",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-comparison-card.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Product Comparison Card",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Product Comparison Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2099,
+        "width": 181,
+        "height": 26
+      }
+    },
+    {
+      "name": "Product_Path_Detail_Card",
+      "tag": "a",
+      "text": "Product Path Detail Card",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-path-detail-card.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Product Path Detail Card",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Product Path Detail Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2135,
+        "width": 175,
+        "height": 26
+      }
+    },
+    {
+      "name": "Product_Path_Summary_Card",
+      "tag": "a",
+      "text": "Product Path Summary Card",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-path-summary-card.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Product Path Summary Card",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Product Path Summary Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2171,
+        "width": 199,
+        "height": 26
+      }
+    },
+    {
+      "name": "Product_Rate_Table",
+      "tag": "a",
+      "text": "Product Rate Table",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Product Rate Table",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Product Rate Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2207,
+        "width": 137,
+        "height": 26
+      }
+    },
+    {
+      "name": "ForeCertain_Income_Annuity",
+      "tag": "a",
+      "text": "ForeCertain Income Annuity",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/forecertain-income-annuity.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "ForeCertain Income Annuity",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "ForeCertain Income Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2238,
+        "width": 194,
+        "height": 26
+      }
+    },
+    {
+      "name": "ForeIncome_II_Fixed_Index_Annu",
+      "tag": "a",
+      "text": "ForeIncome II Fixed Index Annuity",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/foreincome-ii-fixed-index-annuity.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "ForeIncome II Fixed Index Annuity",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "ForeIncome II Fixed Index Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2275,
+        "width": 231,
+        "height": 26
+      }
+    },
+    {
+      "name": "SecureFore_II_Fixed_Annuity",
+      "tag": "a",
+      "text": "SecureFore II Fixed Annuity",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/securefore-ii-fixed-annuity.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "SecureFore II Fixed Annuity",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "SecureFore II Fixed Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2311,
+        "width": 189,
+        "height": 26
+      }
+    },
+    {
+      "name": "SecureFore_Rates",
+      "tag": "a",
+      "text": "SecureFore Rates",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/securefore-rate.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "SecureFore Rates",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "SecureFore Rates",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2347,
+        "width": 127,
+        "height": 26
+      }
+    },
+    {
+      "name": "forestructuredgrowthii",
+      "tag": "a",
+      "text": "forestructured-growth-ii",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/forestructured-growth-ii.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "forestructured-growth-ii",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "forestructured-growth-ii",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2383,
+        "width": 169,
+        "height": 26
+      }
+    },
+    {
+      "name": "Income_150_SE",
+      "tag": "a",
+      "text": "Income 150 SE",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/income-150-se.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Income 150 SE",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Income 150 SE",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2419,
+        "width": 111,
+        "height": 26
+      }
+    },
+    {
+      "name": "ForeCare_Fixed_Annuity",
+      "tag": "a",
+      "text": "ForeCare Fixed Annuity",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/forecare-fixed-annuity.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "ForeCare Fixed Annuity",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "ForeCare Fixed Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2456,
+        "width": 165,
+        "height": 26
+      }
+    },
+    {
+      "name": "ForeAccumulation_II_Fixed_Inde",
+      "tag": "a",
+      "text": "ForeAccumulation II Fixed Index Annuity",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/foreaccumulation-ii-fixed-index-annuity.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "ForeAccumulation II Fixed Index Annuity",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "ForeAccumulation II Fixed Index Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2492,
+        "width": 273,
+        "height": 26
+      }
+    },
+    {
+      "name": "ForeCertain_Advisory",
+      "tag": "a",
+      "text": "ForeCertain Advisory",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/product-rate-table/forecertain-advisory.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "ForeCertain Advisory",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "ForeCertain Advisory",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 230,
+        "y": 2528,
+        "width": 149,
+        "height": 26
+      }
+    },
+    {
+      "name": "Promo_Banner",
+      "tag": "a",
+      "text": "Promo Banner",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/promo-banner.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Promo Banner",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Promo Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2569,
+        "width": 106,
+        "height": 26
+      }
+    },
+    {
+      "name": "Quote",
+      "tag": "a",
+      "text": "Quote",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/quote.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Quote",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Quote",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2605,
+        "width": 52,
+        "height": 26
+      }
+    },
+    {
+      "name": "Rate_Details_Hero",
+      "tag": "a",
+      "text": "Rate Details Hero",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/rate-details-hero.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Rate Details Hero",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Rate Details Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2641,
+        "width": 127,
+        "height": 26
+      }
+    },
+    {
+      "name": "Rate_List_Accordion",
+      "tag": "a",
+      "text": "Rate List Accordion",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/rate-list-accordion.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Rate List Accordion",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Rate List Accordion",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2678,
+        "width": 139,
+        "height": 26
+      }
+    },
+    {
+      "name": "Rate_Sheet_Grid",
+      "tag": "a",
+      "text": "Rate Sheet Grid",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/rate-sheet-grid.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Rate Sheet Grid",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Rate Sheet Grid",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2714,
+        "width": 115,
+        "height": 26
+      }
+    },
+    {
+      "name": "Ratings_Card",
+      "tag": "a",
+      "text": "Ratings Card",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/ratings-card.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Ratings Card",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Ratings Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2750,
+        "width": 97,
+        "height": 26
+      }
+    },
+    {
+      "name": "RTE_Table",
+      "tag": "a",
+      "text": "RTE Table",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/rte-table.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "RTE Table",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "RTE Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2786,
+        "width": 77,
+        "height": 26
+      }
+    },
+    {
+      "name": "Section",
+      "tag": "a",
+      "text": "Section",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/section.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Section",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Section",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2822,
+        "width": 60,
+        "height": 26
+      }
+    },
+    {
+      "name": "Separator",
+      "tag": "a",
+      "text": "Separator",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/separator.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Separator",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Separator",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2859,
+        "width": 78,
+        "height": 26
+      }
+    },
+    {
+      "name": "Site_Search",
+      "tag": "a",
+      "text": "Site Search",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/site-search.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Site Search",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Site Search",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2895,
+        "width": 86,
+        "height": 26
+      }
+    },
+    {
+      "name": "Spacer",
+      "tag": "a",
+      "text": "Spacer",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/spacer.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Spacer",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Spacer",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2931,
+        "width": 58,
+        "height": 26
+      }
+    },
+    {
+      "name": "Statistic",
+      "tag": "a",
+      "text": "Statistic",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/statistic.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Statistic",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Statistic",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 2967,
+        "width": 65,
+        "height": 26
+      }
+    },
+    {
+      "name": "Tabs",
+      "tag": "a",
+      "text": "Tabs",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/tabs.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Tabs",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Tabs",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 3003,
+        "width": 43,
+        "height": 26
+      }
+    },
+    {
+      "name": "Teaser_Card",
+      "tag": "a",
+      "text": "Teaser Card",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/teaser-card.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Teaser Card",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Teaser Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 3040,
+        "width": 91,
+        "height": 26
+      }
+    },
+    {
+      "name": "Text",
+      "tag": "a",
+      "text": "Text",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/text.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Text",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Text",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 3076,
+        "width": 40,
+        "height": 26
+      }
+    },
+    {
+      "name": "Video_External",
+      "tag": "a",
+      "text": "Video (External)",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/video-external.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Video (External)",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Video (External)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 3112,
+        "width": 119,
+        "height": 26
+      }
+    },
+    {
+      "name": "Workbench",
+      "tag": "a",
+      "text": "Workbench",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components/workbench.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Workbench",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Workbench",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 185,
+        "y": 3148,
+        "width": 86,
+        "height": 26
+      }
+    },
+    {
+      "name": "Corporate_Agnostic",
+      "tag": "a",
+      "text": "Corporate (Agnostic)",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/corporate-agnostic.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Corporate (Agnostic)",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Corporate (Agnostic)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 628,
+        "y": 510,
+        "width": 140,
+        "height": 18
+      }
+    },
+    {
+      "name": "Main",
+      "tag": "a",
+      "text": "Main",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/corporate-agnostic/main.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Main",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Main",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 625,
+        "y": 546,
+        "width": 45,
+        "height": 26
+      }
+    },
+    {
+      "name": "English",
+      "tag": "a",
+      "text": "English",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/corporate-agnostic/main/en.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "English",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "English",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 670,
+        "y": 577,
+        "width": 58,
+        "height": 26
+      }
+    },
+    {
+      "name": "Financial_Professionals",
+      "tag": "a",
+      "text": "Financial Professionals",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/financial-professionals.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Financial Professionals",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Financial Professionals",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 827,
+        "y": 510,
+        "width": 149,
+        "height": 18
+      }
+    },
+    {
+      "name": "Individuals",
+      "tag": "a",
+      "text": "Individuals",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/individuals.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Individuals",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Individuals",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1035,
+        "y": 510,
+        "width": 70,
+        "height": 18
+      }
+    },
+    {
+      "name": "Preneed",
+      "tag": "a",
+      "text": "Preneed",
+      "classes": [
+        "cmp-navigation__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/preneed.html",
+        "target": "_self",
+        "data-cmp-clickable": "",
+        "aria-label": "Preneed",
+        "role": "menuitem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menuitem",
+      "ariaLabel": "Preneed",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 143,
+        "y": 3218,
+        "width": 55,
+        "height": 18
+      }
+    },
+    {
+      "name": "ul_80",
+      "tag": "ul",
+      "text": "Style Guide\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Templates\n    \n    \n\n        \n ",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 505,
+        "width": 1154,
+        "height": 2821
+      }
+    },
+    {
+      "name": "ul_81",
+      "tag": "ul",
+      "text": "Templates\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Freeform Template\n    \n    \n\n    ",
+      "classes": [
+        "cmp-navigation__group",
+        "logo--present"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 135,
+        "y": 529,
+        "width": 435,
+        "height": 2656
+      }
+    },
+    {
+      "name": "ul_82",
+      "tag": "ul",
+      "text": "Freeform Template\n    \n    \n\n        \n    \n\n    \n        \n    \n        \n    \n    Insights Detail Tem",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 140,
+        "y": 572,
+        "width": 465,
+        "height": 217
+      }
+    },
+    {
+      "name": "ul_83",
+      "tag": "ul",
+      "text": "Accordion\n    \n    \n\n        \n    \n\n    \n        \n    \n        \n    \n    Accordion Tabs Feature\n    ",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 140,
+        "y": 863,
+        "width": 465,
+        "height": 2316
+      }
+    },
+    {
+      "name": "ul_84",
+      "tag": "ul",
+      "text": "Accordion Tabs Feature with Scrolling Behaviour\n    \n    \n\n        \n    \n\n    \n        \n    \n       ",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 185,
+        "y": 931,
+        "width": 455,
+        "height": 109
+      }
+    },
+    {
+      "name": "ul_85",
+      "tag": "ul",
+      "text": "ForeCertain Income Annuity\n    \n    \n\n        \n    \n\n    \n        \n    \n        \n    \n    ForeIncome",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 185,
+        "y": 2233,
+        "width": 455,
+        "height": 326
+      }
+    },
+    {
+      "name": "ul_86",
+      "tag": "ul",
+      "text": "Main\n    \n    \n\n        \n    \n        \n    \n        \n    \n    English",
+      "classes": [
+        "cmp-navigation__group",
+        "logo--present"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 620,
+        "y": 529,
+        "width": 148,
+        "height": 84
+      }
+    },
+    {
+      "name": "ul_English",
+      "tag": "ul",
+      "text": "English",
+      "classes": [
+        "cmp-navigation__group"
+      ],
+      "attributes": {
+        "role": "menu"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "role": "menu",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 625,
+        "y": 572,
+        "width": 178,
+        "height": 36
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_3dd3bf6e7a",
+      "tag": "li",
+      "text": "Style Guide\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Templates\n    \n    \n\n        \n ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-3dd3bf6e7a\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Style Guide\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-3dd3bf6e7a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 130,
+        "y": 505,
+        "width": 445,
+        "height": 2684
+      }
+    },
+    {
+      "name": "Style_Guide_89",
+      "tag": "span",
+      "text": "Style Guide",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Style Guide"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Style Guide",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 143,
+        "y": 511,
+        "width": 74,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1ItemF52820d1fe",
+      "tag": "li",
+      "text": "Templates\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Freeform Template\n    \n    \n\n    ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-f52820d1fe\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Templates\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/templates.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-3dd3bf6e7a\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-f52820d1fe",
+      "parentClasses": [
+        "cmp-navigation__group",
+        "logo--present"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 135,
+        "y": 541,
+        "width": 435,
+        "height": 253
+      }
+    },
+    {
+      "name": "Templates_91",
+      "tag": "span",
+      "text": "Templates",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Templates"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Templates",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 146,
+        "y": 551,
+        "width": 67,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Freeform_Template",
+      "tag": "li",
+      "text": "Freeform Template",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-bf0feb23aa\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Freeform Template\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/templates/freeform-template.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-f52820d1fe\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-bf0feb23aa",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 572,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Freeform_Template_93",
+      "tag": "span",
+      "text": "Freeform Template",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Freeform Template"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Freeform Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 582,
+        "width": 124,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Insights_Detail_Template",
+      "tag": "li",
+      "text": "Insights Detail Template",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-3ca23d451e\":{\"@type\":\"ga/components/structure/page/insightsdetailpage\",\"dc:title\":\"Insights Detail Template\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/templates/insights-detail-template.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/insights-detail-page\",\"parentId\":\"navigation-d95ec9c1a1-item-f52820d1fe\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-3ca23d451e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 608,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Insights_Detail_Template_95",
+      "tag": "span",
+      "text": "Insights Detail Template",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Insights Detail Template"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Insights Detail Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 618,
+        "width": 156,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Product_Detail_Page",
+      "tag": "li",
+      "text": "Product Detail Page",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-85f0c4901b\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Product Detail Page \",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/templates/product-detail-page.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-detail-page\",\"parentId\":\"navigation-d95ec9c1a1-item-f52820d1fe\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-85f0c4901b",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 644,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Product_Detail_Page__97",
+      "tag": "span",
+      "text": "Product Detail Page",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Product Detail Page "
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Product Detail Page ",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 654,
+        "width": 131,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Product_Rate_Page_ForeIncome_I",
+      "tag": "li",
+      "text": "Product Rate Page — ForeIncome II WF",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-6dc4570f96\":{\"@type\":\"ga/components/structure/page/productratepage\",\"dc:title\":\"Product Rate Page — ForeIncome II WF\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/templates/product-rate-page.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-f52820d1fe\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6dc4570f96",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 680,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Product_Rate_Page_ForeIncome_I_99",
+      "tag": "span",
+      "text": "Product Rate Page — ForeIncome II WF",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Product Rate Page — ForeIncome II WF"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Product Rate Page — ForeIncome II WF",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 690,
+        "width": 259,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Homepage_Template",
+      "tag": "li",
+      "text": "Homepage Template",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-7fd03f3a1e\":{\"@type\":\"ga/components/structure/page/homepage\",\"dc:title\":\"Homepage Template\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/templates/homepage-template.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/homepage\",\"parentId\":\"navigation-d95ec9c1a1-item-f52820d1fe\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-7fd03f3a1e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 717,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Homepage_Template_101",
+      "tag": "span",
+      "text": "Homepage Template",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Homepage Template"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Homepage Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 727,
+        "width": 137,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Rate_Admin_Template",
+      "tag": "li",
+      "text": "Rate Admin Template",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-9993dd6b92\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Rate Admin Template\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/templates/rate-admin-page.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/rate-admin-page\",\"parentId\":\"navigation-d95ec9c1a1-item-f52820d1fe\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-9993dd6b92",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 753,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Rate_Admin_Template_103",
+      "tag": "span",
+      "text": "Rate Admin Template",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Rate Admin Template"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Rate Admin Template",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 763,
+        "width": 142,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Branding",
+      "tag": "li",
+      "text": "Branding",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-bd4e658c81\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Branding\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/branding.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-3dd3bf6e7a\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-bd4e658c81",
+      "parentClasses": [
+        "cmp-navigation__group",
+        "logo--present"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 135,
+        "y": 795,
+        "width": 435,
+        "height": 36
+      }
+    },
+    {
+      "name": "Branding_105",
+      "tag": "span",
+      "text": "Branding",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Branding"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Branding",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 146,
+        "y": 805,
+        "width": 59,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_2b248a5ea1",
+      "tag": "li",
+      "text": "Component Library\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Accordion\n    \n    \n\n    ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--active",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-2b248a5ea1\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Component Library\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-3dd3bf6e7a\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-2b248a5ea1",
+      "parentClasses": [
+        "cmp-navigation__group",
+        "logo--present"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 135,
+        "y": 832,
+        "width": 435,
+        "height": 2352
+      }
+    },
+    {
+      "name": "Component_Library_107",
+      "tag": "span",
+      "text": "Component Library",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Component Library"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Component Library",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 146,
+        "y": 842,
+        "width": 126,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Accordion",
+      "tag": "li",
+      "text": "Accordion",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-106e51afa9\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Accordion\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/accordion.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-106e51afa9",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 863,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Accordion_109",
+      "tag": "span",
+      "text": "Accordion",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Accordion"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Accordion",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 873,
+        "width": 66,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_7282c86477",
+      "tag": "li",
+      "text": "Accordion Tabs Feature\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Accordion Tabs Featu",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-7282c86477\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Accordion Tabs Feature\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/accordion-tabs-feature.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-7282c86477",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 899,
+        "width": 425,
+        "height": 145
+      }
+    },
+    {
+      "name": "Accordion_Tabs_Feature_111",
+      "tag": "span",
+      "text": "Accordion Tabs Feature",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Accordion Tabs Feature"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Accordion Tabs Feature",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 909,
+        "width": 155,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_67f1c24b4b",
+      "tag": "li",
+      "text": "Accordion Tabs Feature with Scrolling Behaviour",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-67f1c24b4b\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Accordion Tabs Feature with Scrolling Behaviour\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/accordion-tabs-feature/accordion-tabs-feature-scrolling-tabs.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-7282c86477\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-67f1c24b4b",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 931,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "Accordion_Tabs_FeatureWith_Sc_113",
+      "tag": "span",
+      "text": "Accordion Tabs Feature with Scrolling Behaviour",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Accordion Tabs Feature with Scrolling Behaviour"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Accordion Tabs Feature with Scrolling Behaviour",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 941,
+        "width": 313,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Accordion_Tabs_FeatureWith_He",
+      "tag": "li",
+      "text": "Accordion Tabs Feature with Headline",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-1be01b56ea\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Accordion Tabs Feature with Headline\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/accordion-tabs-feature/accordion-tabs-feature-with-headline.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-7282c86477\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-1be01b56ea",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 967,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "Accordion_Tabs_FeatureWith_He_115",
+      "tag": "span",
+      "text": "Accordion Tabs Feature with Headline",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Accordion Tabs Feature with Headline"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Accordion Tabs Feature with Headline",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 977,
+        "width": 247,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Accordion_Tabs_FeatureWithout",
+      "tag": "li",
+      "text": "Accordion Tabs Feature without Headline",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-bc62eedd06\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Accordion Tabs Feature without Headline\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/accordion-tabs-feature/accordion-tabs-feature-without-headline.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-7282c86477\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-bc62eedd06",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 1003,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "Accordion_Tabs_FeatureWithout_117",
+      "tag": "span",
+      "text": "Accordion Tabs Feature without Headline",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Accordion Tabs Feature without Headline"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Accordion Tabs Feature without Headline",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 1013,
+        "width": 269,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Alert_Banner",
+      "tag": "li",
+      "text": "Alert Banner",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-231628c711\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Alert Banner\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/alert-banner.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-231628c711",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1044,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Alert_Banner_119",
+      "tag": "span",
+      "text": "Alert Banner",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Alert Banner"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Alert Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1054,
+        "width": 83,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Benefits_Table",
+      "tag": "li",
+      "text": "Benefits Table",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-835157a199\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Benefits Table\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/benefits-table.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-835157a199",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1080,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Benefits_Table_121",
+      "tag": "span",
+      "text": "Benefits Table",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Benefits Table"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Benefits Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1090,
+        "width": 92,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Bio_Card",
+      "tag": "li",
+      "text": "Bio Card",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-635e1c9d2a\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Bio Card\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/bio-card.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-635e1c9d2a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1117,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Bio_Card_123",
+      "tag": "span",
+      "text": "Bio Card",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Bio Card"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Bio Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1127,
+        "width": 56,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Brand_Relationship",
+      "tag": "li",
+      "text": "Brand Relationship",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-769211bf99\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Brand Relationship\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/brand-relationship.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-769211bf99",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1153,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Brand_Relationship_125",
+      "tag": "span",
+      "text": "Brand Relationship",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Brand Relationship"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Brand Relationship",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1163,
+        "width": 123,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Breadcrumb",
+      "tag": "li",
+      "text": "Breadcrumb",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-18f4a4ad22\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Breadcrumb\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/breadcrumb.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-18f4a4ad22",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1189,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Breadcrumb_127",
+      "tag": "span",
+      "text": "Breadcrumb",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Breadcrumb"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Breadcrumb",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1199,
+        "width": 81,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Button",
+      "tag": "li",
+      "text": "Button",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-04b7f5ce83\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Button\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/button.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-04b7f5ce83",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1225,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Button_129",
+      "tag": "span",
+      "text": "Button",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Button"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Button",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1235,
+        "width": 44,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1ItemA2306335d1",
+      "tag": "li",
+      "text": "Button Illustrations and Login Type (Gated Content)",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-a2306335d1\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Button Illustrations and Login Type (Gated Content)\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/button-illustrations-and-login-type.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-a2306335d1",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1261,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Button_IllustrationsAnd_Login_131",
+      "tag": "span",
+      "text": "Button Illustrations and Login Type (Gated Content)",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Button Illustrations and Login Type (Gated Content)"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Button Illustrations and Login Type (Gated Content)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1271,
+        "width": 335,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Content_Highlight",
+      "tag": "li",
+      "text": "Content Highlight",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-9ba04cea15\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Content Highlight\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/content-highlight.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-9ba04cea15",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1298,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Content_Highlight_133",
+      "tag": "span",
+      "text": "Content Highlight",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Content Highlight"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Content Highlight",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1308,
+        "width": 115,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Content_Trail",
+      "tag": "li",
+      "text": "Content Trail",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-be460d42e5\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Content Trail\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/content-trail.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-be460d42e5",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1334,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Content_Trail_135",
+      "tag": "span",
+      "text": "Content Trail",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Content Trail"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Content Trail",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1344,
+        "width": 84,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Decision_Tree",
+      "tag": "li",
+      "text": "Decision Tree",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-bb16c7d29b\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Decision Tree\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/decision-tree.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-bb16c7d29b",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1370,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Decision_Tree_137",
+      "tag": "span",
+      "text": "Decision Tree",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Decision Tree"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Decision Tree",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1380,
+        "width": 87,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Detail_Hero",
+      "tag": "li",
+      "text": "Detail Hero",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-88278e9d42\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Detail Hero\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/detail-hero.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-88278e9d42",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1406,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Detail_Hero_139",
+      "tag": "span",
+      "text": "Detail Hero",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Detail Hero"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Detail Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1416,
+        "width": 74,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Disclosure_List",
+      "tag": "li",
+      "text": "Disclosure List",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-aa7c4faa4e\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Disclosure List\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/disclosure-list.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-aa7c4faa4e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1442,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Disclosure_List_141",
+      "tag": "span",
+      "text": "Disclosure List",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Disclosure List"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Disclosure List",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1452,
+        "width": 92,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Enhanced_Related_Content",
+      "tag": "li",
+      "text": "Enhanced Related Content",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-0efe53b480\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Enhanced Related Content\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/enhanced-related-content.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-0efe53b480",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1478,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Enhanced_Related_Content_143",
+      "tag": "span",
+      "text": "Enhanced Related Content",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Enhanced Related Content"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Enhanced Related Content",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1488,
+        "width": 176,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Feature_Banner",
+      "tag": "li",
+      "text": "Feature Banner",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-80dcc26317\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Feature Banner\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/feature-banner.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-80dcc26317",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1515,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Feature_Banner_145",
+      "tag": "span",
+      "text": "Feature Banner",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Feature Banner"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Feature Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1525,
+        "width": 102,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Feature_Banner_5050_Layout",
+      "tag": "li",
+      "text": "Feature Banner - 50/50 Layout",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-d08bea4397\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Feature Banner - 50/50 Layout\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/feature-banner-fifty-fifty.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-d08bea4397",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1551,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Feature_Banner_5050_Layout_147",
+      "tag": "span",
+      "text": "Feature Banner - 50/50 Layout",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Feature Banner - 50/50 Layout"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Feature Banner - 50/50 Layout",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1561,
+        "width": 207,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Firm_Selection_Modal",
+      "tag": "li",
+      "text": "Firm Selection Modal",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-3cff29564a\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Firm Selection Modal\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/firm-selection-modal.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-3cff29564a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1587,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Firm_Selection_Modal_149",
+      "tag": "span",
+      "text": "Firm Selection Modal",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Firm Selection Modal"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Firm Selection Modal",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1597,
+        "width": 138,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Footer_Disclosure",
+      "tag": "li",
+      "text": "Footer Disclosure",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-adf1a77c5e\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Footer Disclosure\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/footer-disclosure.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-adf1a77c5e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1623,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Footer_Disclosure_151",
+      "tag": "span",
+      "text": "Footer Disclosure",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Footer Disclosure"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Footer Disclosure",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1633,
+        "width": 112,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Form_Options",
+      "tag": "li",
+      "text": "Form Options",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-105bb71bd1\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Form Options\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/form-options.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-105bb71bd1",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1659,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Form_Options_153",
+      "tag": "span",
+      "text": "Form Options",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Form Options"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Form Options",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1669,
+        "width": 88,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Grid_Container",
+      "tag": "li",
+      "text": "Grid Container",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-a87dd8e8c9\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Grid Container\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/grid-container.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-a87dd8e8c9",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1696,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Grid_Container_155",
+      "tag": "span",
+      "text": "Grid Container",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Grid Container"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Grid Container",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1706,
+        "width": 95,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Headline_Block",
+      "tag": "li",
+      "text": "Headline Block",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-8e3567709d\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Headline Block\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/headline-block.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-8e3567709d",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1732,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Headline_Block_157",
+      "tag": "span",
+      "text": "Headline Block",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Headline Block"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Headline Block",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1742,
+        "width": 96,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Hero_5050",
+      "tag": "li",
+      "text": "Hero 50/50",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-6b3b0b94b5\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Hero 50/50\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/hero-fifty-fifty.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6b3b0b94b5",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1768,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Hero_5050_159",
+      "tag": "span",
+      "text": "Hero 50/50",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Hero 50/50"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Hero 50/50",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1778,
+        "width": 79,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Homepage_Hero",
+      "tag": "li",
+      "text": "Homepage Hero",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-223eaddd53\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Homepage Hero\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/homepage-hero.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-223eaddd53",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1804,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Homepage_Hero_161",
+      "tag": "span",
+      "text": "Homepage Hero",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Homepage Hero"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Homepage Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1814,
+        "width": 108,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Image",
+      "tag": "li",
+      "text": "Image",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-8934e2e1de\":{\"@type\":\"ga/components/structure/page/basepage\",\"repo:modifyDate\":\"2026-04-06T12:00:32Z\",\"dc:title\":\"Image\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/image.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-8934e2e1de",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1840,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Image_163",
+      "tag": "span",
+      "text": "Image",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Image"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Image",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1850,
+        "width": 41,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Image_With_Nested_Content",
+      "tag": "li",
+      "text": "Image With Nested Content",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-6cef0e71ad\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Image With Nested Content\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/image-with-nested-content.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6cef0e71ad",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1877,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Image_With_Nested_Content_165",
+      "tag": "span",
+      "text": "Image With Nested Content",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Image With Nested Content"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Image With Nested Content",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1887,
+        "width": 181,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_In_Brief",
+      "tag": "li",
+      "text": "In Brief",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-554a3cc026\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"In Brief\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/in-brief.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-554a3cc026",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1913,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "In_Brief_167",
+      "tag": "span",
+      "text": "In Brief",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "In Brief"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "In Brief",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1923,
+        "width": 46,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Insights_Detail_Hero",
+      "tag": "li",
+      "text": "Insights Detail Hero",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-da5201e522\":{\"@type\":\"ga/components/structure/page/insightsdetailpage\",\"dc:title\":\"Insights Detail Hero\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/insights-detail-hero.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/insights-detail-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-da5201e522",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1949,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Insights_Detail_Hero_169",
+      "tag": "span",
+      "text": "Insights Detail Hero",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Insights Detail Hero"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Insights Detail Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1959,
+        "width": 127,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Insights_Listing",
+      "tag": "li",
+      "text": "Insights Listing",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-94726b38a0\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Insights Listing\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/insights-listing.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-94726b38a0",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 1985,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Insights_Listing_171",
+      "tag": "span",
+      "text": "Insights Listing",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Insights Listing"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Insights Listing",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 1995,
+        "width": 96,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Login",
+      "tag": "li",
+      "text": "Login",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-468c894d80\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Login\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/login.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-468c894d80",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2021,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Login_173",
+      "tag": "span",
+      "text": "Login",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Login"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Login",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2031,
+        "width": 36,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Navigation",
+      "tag": "li",
+      "text": "Navigation",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2",
+        "cmp-navigation__item--active"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-50eebe3d65\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Navigation\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/navigation.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-50eebe3d65",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2057,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Navigation_175",
+      "tag": "span",
+      "text": "Navigation",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Navigation"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Navigation",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2067,
+        "width": 72,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Product_Comparison_Card",
+      "tag": "li",
+      "text": "Product Comparison Card",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-514d6afd68\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Product Comparison Card\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-comparison-card.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-514d6afd68",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2094,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Product_Comparison_Card_177",
+      "tag": "span",
+      "text": "Product Comparison Card",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Product Comparison Card"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Product Comparison Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2104,
+        "width": 169,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Product_Path_Detail_Card",
+      "tag": "li",
+      "text": "Product Path Detail Card",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-7b2b069498\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Product Path Detail Card\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-path-detail-card.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-7b2b069498",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2130,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Product_Path_Detail_Card_179",
+      "tag": "span",
+      "text": "Product Path Detail Card",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Product Path Detail Card"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Product Path Detail Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2140,
+        "width": 163,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Product_Path_Summary_Card",
+      "tag": "li",
+      "text": "Product Path Summary Card",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-4042d50674\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Product Path Summary Card\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-path-summary-card.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-4042d50674",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2166,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Product_Path_Summary_Card_181",
+      "tag": "span",
+      "text": "Product Path Summary Card",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Product Path Summary Card"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Product Path Summary Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2176,
+        "width": 187,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_8d21a80f63",
+      "tag": "li",
+      "text": "Product Rate Table\n    \n    \n\n        \n    \n        \n    \n        \n    \n    ForeCertain Income Annui",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-8d21a80f63\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Product Rate Table\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-8d21a80f63",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2202,
+        "width": 425,
+        "height": 362
+      }
+    },
+    {
+      "name": "Product_Rate_Table_183",
+      "tag": "span",
+      "text": "Product Rate Table",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Product Rate Table"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Product Rate Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2212,
+        "width": 125,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_ForeCertain_Income_Annuity",
+      "tag": "li",
+      "text": "ForeCertain Income Annuity",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-50fbbff2c9\":{\"@type\":\"ga/components/structure/page/productratepage\",\"repo:modifyDate\":\"2026-05-22T08:46:18Z\",\"dc:title\":\"ForeCertain Income Annuity\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/forecertain-income-annuity.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-50fbbff2c9",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2233,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "ForeCertain_Income_Annuity_185",
+      "tag": "span",
+      "text": "ForeCertain Income Annuity",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "ForeCertain Income Annuity"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "ForeCertain Income Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2243,
+        "width": 182,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_ForeIncome_II_Fixed_Index_Annu",
+      "tag": "li",
+      "text": "ForeIncome II Fixed Index Annuity",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-2eace0876a\":{\"@type\":\"ga/components/structure/page/productratepage\",\"dc:title\":\"ForeIncome II Fixed Index Annuity\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/foreincome-ii-fixed-index-annuity.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-2eace0876a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2270,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "ForeIncome_II_Fixed_Index_Annu_187",
+      "tag": "span",
+      "text": "ForeIncome II Fixed Index Annuity",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "ForeIncome II Fixed Index Annuity"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "ForeIncome II Fixed Index Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2280,
+        "width": 219,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_SecureFore_II_Fixed_Annuity",
+      "tag": "li",
+      "text": "SecureFore II Fixed Annuity",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-27881dece8\":{\"@type\":\"ga/components/structure/page/productratepage\",\"dc:title\":\"SecureFore II Fixed Annuity\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/securefore-ii-fixed-annuity.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-27881dece8",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2306,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "SecureFore_II_Fixed_Annuity_189",
+      "tag": "span",
+      "text": "SecureFore II Fixed Annuity",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "SecureFore II Fixed Annuity"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "SecureFore II Fixed Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2316,
+        "width": 177,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_SecureFore_Rates",
+      "tag": "li",
+      "text": "SecureFore Rates",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-6be27c6b4a\":{\"@type\":\"ga/components/structure/page/productratepage\",\"dc:title\":\"SecureFore Rates\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/securefore-rate.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6be27c6b4a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2342,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "SecureFore_Rates_191",
+      "tag": "span",
+      "text": "SecureFore Rates",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "SecureFore Rates"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "SecureFore Rates",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2352,
+        "width": 115,
+        "height": 16
+      }
+    },
+    {
+      "name": "liForestructuredgrowthii",
+      "tag": "li",
+      "text": "forestructured-growth-ii",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-042b5bb96a\":{\"@type\":\"ga/components/structure/page/productratepage\",\"dc:title\":\"forestructured-growth-ii\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/forestructured-growth-ii.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-042b5bb96a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2378,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "forestructuredgrowthii_193",
+      "tag": "span",
+      "text": "forestructured-growth-ii",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "forestructured-growth-ii"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "forestructured-growth-ii",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2388,
+        "width": 157,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Income_150_SE",
+      "tag": "li",
+      "text": "Income 150 SE",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-ccb4e5d868\":{\"@type\":\"ga/components/structure/page/productratepage\",\"dc:title\":\"Income 150 SE\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/income-150-se.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-ccb4e5d868",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2414,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "Income_150_SE_195",
+      "tag": "span",
+      "text": "Income 150 SE",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Income 150 SE"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Income 150 SE",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2424,
+        "width": 99,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_ForeCare_Fixed_Annuity",
+      "tag": "li",
+      "text": "ForeCare Fixed Annuity",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-962ff19763\":{\"@type\":\"ga/components/structure/page/productratepage\",\"dc:title\":\"ForeCare Fixed Annuity\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/forecare-fixed-annuity.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-962ff19763",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2451,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "ForeCare_Fixed_Annuity_197",
+      "tag": "span",
+      "text": "ForeCare Fixed Annuity",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "ForeCare Fixed Annuity"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "ForeCare Fixed Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2461,
+        "width": 153,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_ForeAccumulation_II_Fixed_Inde",
+      "tag": "li",
+      "text": "ForeAccumulation II Fixed Index Annuity",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-0e0b281ed1\":{\"@type\":\"ga/components/structure/page/productratepage\",\"dc:title\":\"ForeAccumulation II Fixed Index Annuity\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/foreaccumulation-ii-fixed-index-annuity.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-0e0b281ed1",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2487,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "ForeAccumulation_II_Fixed_Inde_199",
+      "tag": "span",
+      "text": "ForeAccumulation II Fixed Index Annuity",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "ForeAccumulation II Fixed Index Annuity"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "ForeAccumulation II Fixed Index Annuity",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2497,
+        "width": 261,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_ForeCertain_Advisory",
+      "tag": "li",
+      "text": "ForeCertain Advisory",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-3"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-321b6373ba\":{\"@type\":\"ga/components/structure/page/productratepage\",\"repo:modifyDate\":\"2026-05-22T11:18:44Z\",\"dc:title\":\"ForeCertain Advisory\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/product-rate-table/forecertain-advisory.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-8d21a80f63\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-321b6373ba",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 225,
+        "y": 2523,
+        "width": 415,
+        "height": 36
+      }
+    },
+    {
+      "name": "ForeCertain_Advisory_201",
+      "tag": "span",
+      "text": "ForeCertain Advisory",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "ForeCertain Advisory"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "ForeCertain Advisory",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 236,
+        "y": 2533,
+        "width": 137,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Promo_Banner",
+      "tag": "li",
+      "text": "Promo Banner",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-db0099b25f\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Promo Banner\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/promo-banner.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-db0099b25f",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2564,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Promo_Banner_203",
+      "tag": "span",
+      "text": "Promo Banner",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Promo Banner"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Promo Banner",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2574,
+        "width": 94,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Quote",
+      "tag": "li",
+      "text": "Quote",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-76a68f99bf\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Quote\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/quote.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-76a68f99bf",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2600,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Quote_205",
+      "tag": "span",
+      "text": "Quote",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Quote"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Quote",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2610,
+        "width": 40,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Rate_Details_Hero",
+      "tag": "li",
+      "text": "Rate Details Hero",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-160b61fae3\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Rate Details Hero\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/rate-details-hero.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/product-rate-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-160b61fae3",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2636,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Rate_Details_Hero_207",
+      "tag": "span",
+      "text": "Rate Details Hero",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Rate Details Hero"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Rate Details Hero",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2646,
+        "width": 115,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Rate_List_Accordion",
+      "tag": "li",
+      "text": "Rate List Accordion",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-885d017075\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Rate List Accordion\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/rate-list-accordion.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-885d017075",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2673,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Rate_List_Accordion_209",
+      "tag": "span",
+      "text": "Rate List Accordion",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Rate List Accordion"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Rate List Accordion",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2683,
+        "width": 127,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Rate_Sheet_Grid",
+      "tag": "li",
+      "text": "Rate Sheet Grid",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-3dac6658d6\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Rate Sheet Grid\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/rate-sheet-grid.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-3dac6658d6",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2709,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Rate_Sheet_Grid_211",
+      "tag": "span",
+      "text": "Rate Sheet Grid",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Rate Sheet Grid"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Rate Sheet Grid",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2719,
+        "width": 103,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Ratings_Card",
+      "tag": "li",
+      "text": "Ratings Card",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-f5ac0afa4d\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Ratings Card\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/ratings-card.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-f5ac0afa4d",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2745,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Ratings_Card_213",
+      "tag": "span",
+      "text": "Ratings Card",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Ratings Card"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Ratings Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2755,
+        "width": 85,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_RTE_Table",
+      "tag": "li",
+      "text": "RTE Table",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-9b83b16ee6\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"RTE Table\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/rte-table.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-9b83b16ee6",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2781,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "RTE_Table_215",
+      "tag": "span",
+      "text": "RTE Table",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "RTE Table"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "RTE Table",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2791,
+        "width": 65,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Section",
+      "tag": "li",
+      "text": "Section",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-6b635e8a49\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Section\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/section.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-6b635e8a49",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2817,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Section_217",
+      "tag": "span",
+      "text": "Section",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Section"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Section",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2827,
+        "width": 48,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Separator",
+      "tag": "li",
+      "text": "Separator",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-f935003d88\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Separator\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/separator.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-f935003d88",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2854,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Separator_219",
+      "tag": "span",
+      "text": "Separator",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Separator"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Separator",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2864,
+        "width": 66,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Site_Search",
+      "tag": "li",
+      "text": "Site Search",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-f85cd32973\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Site Search\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/site-search.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-f85cd32973",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2890,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Site_Search_221",
+      "tag": "span",
+      "text": "Site Search",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Site Search"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Site Search",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2900,
+        "width": 74,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Spacer",
+      "tag": "li",
+      "text": "Spacer",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-63a9878b6e\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Spacer\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/spacer.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-63a9878b6e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2926,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Spacer_223",
+      "tag": "span",
+      "text": "Spacer",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Spacer"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Spacer",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2936,
+        "width": 46,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Statistic",
+      "tag": "li",
+      "text": "Statistic",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-72696c922f\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Statistic\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/statistic.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-72696c922f",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2962,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Statistic_225",
+      "tag": "span",
+      "text": "Statistic",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Statistic"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Statistic",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 2972,
+        "width": 53,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Tabs",
+      "tag": "li",
+      "text": "Tabs",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-24dadcccb0\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Tabs\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/tabs.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-24dadcccb0",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 2998,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Tabs_227",
+      "tag": "span",
+      "text": "Tabs",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Tabs"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Tabs",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 3008,
+        "width": 31,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Teaser_Card",
+      "tag": "li",
+      "text": "Teaser Card",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-ec8784002d\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Teaser Card\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/teaser-card.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-ec8784002d",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 3035,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Teaser_Card_229",
+      "tag": "span",
+      "text": "Teaser Card",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Teaser Card"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Teaser Card",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 3045,
+        "width": 79,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Text",
+      "tag": "li",
+      "text": "Text",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-66eaf01900\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Text\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/text.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-66eaf01900",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 3071,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Text_231",
+      "tag": "span",
+      "text": "Text",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Text"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Text",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 3081,
+        "width": 28,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Video_External",
+      "tag": "li",
+      "text": "Video (External)",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-b3b79669a5\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Video (External)\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/video-external.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-b3b79669a5",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 3107,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Video_External_233",
+      "tag": "span",
+      "text": "Video (External)",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Video (External)"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Video (External)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 3117,
+        "width": 107,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_Workbench",
+      "tag": "li",
+      "text": "Workbench",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-e08540556f\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Workbench\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/workbench.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"navigation-d95ec9c1a1-item-2b248a5ea1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-e08540556f",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 180,
+        "y": 3143,
+        "width": 425,
+        "height": 36
+      }
+    },
+    {
+      "name": "Workbench_235",
+      "tag": "span",
+      "text": "Workbench",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Workbench"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Workbench",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 191,
+        "y": 3153,
+        "width": 74,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_83f7afdff6",
+      "tag": "li",
+      "text": "Corporate (Agnostic)\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Main\n    \n    \n\n      ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-83f7afdff6\":{\"@type\":\"foundation/components/redirect\",\"dc:title\":\"Corporate (Agnostic)\",\"xdm:linkURL\":\"/content/global-atlantic/corporate-agnostic.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/redirectpage\",\"parentId\":\"navigation-d95ec9c1a1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-83f7afdff6",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 615,
+        "y": 505,
+        "width": 158,
+        "height": 2684
+      }
+    },
+    {
+      "name": "Corporate_Agnostic_237",
+      "tag": "span",
+      "text": "Corporate (Agnostic)",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Corporate (Agnostic)"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Corporate (Agnostic)",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 628,
+        "y": 511,
+        "width": 140,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1ItemC131db0ef8",
+      "tag": "li",
+      "text": "Main\n    \n    \n\n        \n    \n        \n    \n        \n    \n    English",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-1",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-c131db0ef8\":{\"@type\":\"foundation/components/redirect\",\"dc:title\":\"Main\",\"xdm:linkURL\":\"/content/global-atlantic/corporate-agnostic/main.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/redirectpage\",\"parentId\":\"navigation-d95ec9c1a1-item-83f7afdff6\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-c131db0ef8",
+      "parentClasses": [
+        "cmp-navigation__group",
+        "logo--present"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 620,
+        "y": 541,
+        "width": 148,
+        "height": 72
+      }
+    },
+    {
+      "name": "Main_239",
+      "tag": "span",
+      "text": "Main",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Main"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Main",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 631,
+        "y": 551,
+        "width": 33,
+        "height": 16
+      }
+    },
+    {
+      "name": "li_English",
+      "tag": "li",
+      "text": "English",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-2"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-90a28c8cd7\":{\"@type\":\"ga/components/structure/page/homepage\",\"dc:title\":\"English\",\"xdm:linkURL\":\"/content/global-atlantic/corporate-agnostic/main/en.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/homepage\",\"parentId\":\"navigation-d95ec9c1a1-item-c131db0ef8\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-90a28c8cd7",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 665,
+        "y": 572,
+        "width": 138,
+        "height": 36
+      }
+    },
+    {
+      "name": "English_241",
+      "tag": "span",
+      "text": "English",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "English"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "English",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 676,
+        "y": 582,
+        "width": 46,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1ItemCc78444b86",
+      "tag": "li",
+      "text": "Financial Professionals\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Main\n    \n    \n\n   ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-cc78444b86\":{\"@type\":\"foundation/components/redirect\",\"dc:title\":\"Financial Professionals\",\"xdm:linkURL\":\"/content/global-atlantic/financial-professionals.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/redirectpage\",\"parentId\":\"navigation-d95ec9c1a1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-cc78444b86",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 814,
+        "y": 505,
+        "width": 167,
+        "height": 2684
+      }
+    },
+    {
+      "name": "Financial_Professionals_243",
+      "tag": "span",
+      "text": "Financial Professionals",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Financial Professionals"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Financial Professionals",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 827,
+        "y": 511,
+        "width": 149,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_0e452ee23a",
+      "tag": "li",
+      "text": "Individuals\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Main\n    \n    \n\n        \n    \n ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-0e452ee23a\":{\"@type\":\"foundation/components/redirect\",\"dc:title\":\"Individuals\",\"xdm:linkURL\":\"/content/global-atlantic/individuals.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/redirectpage\",\"parentId\":\"navigation-d95ec9c1a1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-0e452ee23a",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 1022,
+        "y": 505,
+        "width": 128,
+        "height": 2684
+      }
+    },
+    {
+      "name": "Individuals_245",
+      "tag": "span",
+      "text": "Individuals",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Individuals"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Individuals",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1035,
+        "y": 511,
+        "width": 70,
+        "height": 16
+      }
+    },
+    {
+      "name": "navigationD95ec9c1a1Item_047745266e",
+      "tag": "li",
+      "text": "Preneed\n    \n    \n\n        \n    \n        \n    \n        \n    \n    Main\n    \n    \n\n        \n    \n     ",
+      "classes": [
+        "cmp-navigation__item",
+        "cmp-navigation__item--level-0",
+        "cmp-navigation__item--dropdown"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"navigation-d95ec9c1a1-item-047745266e\":{\"@type\":\"foundation/components/redirect\",\"dc:title\":\"Preneed\",\"xdm:linkURL\":\"/content/global-atlantic/preneed.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/redirectpage\",\"parentId\":\"navigation-d95ec9c1a1\"}}",
+        "role": "none"
+      },
+      "testId": null,
+      "id": "navigation-d95ec9c1a1-item-047745266e",
+      "parentClasses": [
+        "cmp-navigation__group"
+      ],
+      "role": "none",
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 130,
+        "y": 3213,
+        "width": 128,
+        "height": 113
+      }
+    },
+    {
+      "name": "Preneed_247",
+      "tag": "span",
+      "text": "Preneed",
+      "classes": [
+        "menu-title"
+      ],
+      "attributes": {
+        "role": "link",
+        "aria-label": "Preneed"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-navigation__item-link"
+      ],
+      "role": "link",
+      "ariaLabel": "Preneed",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 143,
+        "y": 3219,
+        "width": 55,
+        "height": 16
+      }
+    }
+  ],
+  "pageTitle": "Navigation",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

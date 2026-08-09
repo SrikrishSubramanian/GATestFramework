@@ -1,0 +1,1823 @@
+{
+  "component": "hero-fifty-fifty",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/hero-fifty-fifty.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:07:25.796Z",
+  "rootSelector": ".cmp-hero-fifty-fifty",
+  "elements": [
+    {
+      "name": "a_Style_Guide",
+      "tag": "a",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Style Guide",
+        "data-cmp-clickable": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 532,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "a_Component_Library",
+      "tag": "a",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item-link"
+      ],
+      "attributes": {
+        "href": "/content/global-atlantic/style-guide/components.html",
+        "target": "_self",
+        "itemprop": "item",
+        "title": "Component Library",
+        "data-cmp-clickable": ""
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 163,
+        "y": 532,
+        "width": 127,
+        "height": 18
+      }
+    },
+    {
+      "name": "a_Optional_CTA",
+      "tag": "a",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-569f9eb4a9",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-569f9eb4a9\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Optional CTA\",\"xdm:linkURL\":\"#\",\"parentId\":\"hero-fifty-fifty-44d87349d6\"}}"
+      },
+      "testId": null,
+      "id": "button-569f9eb4a9",
+      "parentClasses": [
+        "button",
+        "ga-button--primary",
+        "ga-button--md"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 982,
+        "width": 169,
+        "height": 50
+      }
+    },
+    {
+      "name": "a_LearnMore",
+      "tag": "a",
+      "text": "Learn more",
+      "classes": [
+        "nested-carousel-button"
+      ],
+      "attributes": {
+        "href": "#",
+        "target": "_self"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "button",
+        "cmp-nested-content-carousel__cta"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 723,
+        "y": 1087,
+        "width": 107,
+        "height": 26
+      }
+    },
+    {
+      "name": "ComeGrowWithUs",
+      "tag": "a",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "attributes": {
+        "target": "_self",
+        "href": "#",
+        "aria-label": "Come grow with us",
+        "data-cta": "1",
+        "data-link-location": "content-trail-00d262e6d5",
+        "data-content-type": "link"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": "Come grow with us",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 703,
+        "y": 3129,
+        "width": 514,
+        "height": 97
+      }
+    },
+    {
+      "name": "a_Plan_Your_Future_Today",
+      "tag": "a",
+      "text": "Plan Your Future Today",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "#",
+        "target": "_self",
+        "data-link-location": "button-76d13c030b",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-76d13c030b\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Plan Your Future Today\",\"xdm:linkURL\":\"#\",\"parentId\":\"hero-fifty-fifty-201d5ea420\"}}"
+      },
+      "testId": null,
+      "id": "button-76d13c030b",
+      "parentClasses": [
+        "button",
+        "ga-button--primary",
+        "ga-button--md"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 63,
+        "y": 3952,
+        "width": 241,
+        "height": 50
+      }
+    },
+    {
+      "name": "PauseCarousel",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-nested-content-carousel__toggle"
+      ],
+      "attributes": {
+        "aria-label": "Pause carousel"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "controls-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Pause carousel",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 1177,
+        "y": 1154,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "name": "h1_7",
+      "tag": "h1",
+      "text": "Tools, products, and partnership to power your practice",
+      "classes": [
+        "cmp-hero-fifty-fifty__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 715,
+        "width": 514,
+        "height": 243
+      }
+    },
+    {
+      "name": "h1_8",
+      "tag": "h1",
+      "text": "ForeIncome II\nPlan for guaranteed income that lasts",
+      "classes": [
+        "cmp-hero-fifty-fifty__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1662,
+        "width": 514,
+        "height": 243
+      }
+    },
+    {
+      "name": "h1_9",
+      "tag": "h1",
+      "text": "Security and support for your financial future",
+      "classes": [
+        "cmp-hero-fifty-fifty__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3745,
+        "width": 514,
+        "height": 182
+      }
+    },
+    {
+      "name": "h1_10",
+      "tag": "h1",
+      "text": "Lorem ipsum dolorsit amet consequat adipscing",
+      "classes": [
+        "cmp-hero-fifty-fifty__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4688,
+        "width": 514,
+        "height": 243
+      }
+    },
+    {
+      "name": "nav_11",
+      "tag": "nav",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-092e0cc614\":{\"@type\":\"ga/components/content/breadcrumb\",\"parentId\":\"hero-fifty-fifty-44d87349d6\"}}"
+      },
+      "testId": null,
+      "id": "breadcrumb-092e0cc614",
+      "parentClasses": [
+        "breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 532,
+        "width": 514,
+        "height": 18
+      }
+    },
+    {
+      "name": "swiperWrapper_0c50ece3dbe6d25d",
+      "tag": "ul",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel-cards",
+        "swiper-wrapper"
+      ],
+      "attributes": {
+        "aria-live": "polite"
+      },
+      "testId": null,
+      "id": "swiper-wrapper-0c50ece3dbe6d25d",
+      "parentClasses": [
+        "cmp-nested-content-carousel__swiper",
+        "swiper",
+        "swiper-fade",
+        "swiper-initialized",
+        "swiper-horizontal",
+        "swiper-watch-progress",
+        "swiper-backface-hidden"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "ol_13",
+      "tag": "ol",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-breadcrumb__list"
+      ],
+      "attributes": {
+        "itemscope": "",
+        "itemtype": "http://schema.org/BreadcrumbList"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 532,
+        "width": 514,
+        "height": 18
+      }
+    },
+    {
+      "name": "Story_Cards",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel"
+      ],
+      "attributes": {
+        "aria-label": "Story Cards",
+        "role": "region",
+        "data-cmp-component": "nested-content-carousel",
+        "data-slide-list": "2",
+        "data-cmp-data-layer": "{\"nested-content-carousel-f8123ff5b7\":{\"@type\":\"ga/components/content/nested-content-carousel\",\"parentId\":\"hero-fifty-fifty-44d87349d6\"}}"
+      },
+      "testId": null,
+      "id": "nested-content-carousel-f8123ff5b7",
+      "parentClasses": [
+        "nested-content-carousel",
+        "aem-GridColumn",
+        "aem-GridColumn--default--12"
+      ],
+      "role": "region",
+      "ariaLabel": "Story Cards",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 174
+      }
+    },
+    {
+      "name": "el1_2",
+      "tag": "li",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel-card",
+        "swiper-slide",
+        "swiper-slide-visible",
+        "swiper-slide-active"
+      ],
+      "attributes": {
+        "role": "group",
+        "aria-label": "1 / 2"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel-cards",
+        "swiper-wrapper"
+      ],
+      "role": "group",
+      "ariaLabel": "1 / 2",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "el2_2",
+      "tag": "li",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel-card",
+        "swiper-slide",
+        "swiper-slide-next"
+      ],
+      "attributes": {
+        "role": "group",
+        "aria-label": "2 / 2"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel-cards",
+        "swiper-wrapper"
+      ],
+      "role": "group",
+      "ariaLabel": "2 / 2",
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-hero-fifty-fifty__left",
+        "cmp-section--background-color-granite"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 508,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_19",
+      "tag": "div",
+      "text": "Style Guide\n            \n            \n        \n    \n        \n            \n                Component ",
+      "classes": [
+        "cmp-hero-fifty-fifty__breadcrumb"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left",
+        "cmp-section--background-color-granite"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 532,
+        "width": 514,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Style_Guide",
+      "tag": "li",
+      "text": "Style Guide",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-092e0cc614-item-3dd3bf6e7a\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Style Guide\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"breadcrumb-092e0cc614\"}}",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 532,
+        "width": 74,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Component_Library",
+      "tag": "li",
+      "text": "Component Library",
+      "classes": [
+        "cmp-breadcrumb__item"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-092e0cc614-item-2b248a5ea1\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Component Library\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"breadcrumb-092e0cc614\"}}",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 145,
+        "y": 532,
+        "width": 145,
+        "height": 18
+      }
+    },
+    {
+      "name": "li_Hero_5050",
+      "tag": "li",
+      "text": "Hero 50/50",
+      "classes": [
+        "cmp-breadcrumb__item",
+        "cmp-breadcrumb__item--active"
+      ],
+      "attributes": {
+        "data-cmp-data-layer": "{\"breadcrumb-092e0cc614-item-6b3b0b94b5\":{\"@type\":\"ga/components/structure/page/basepage\",\"dc:title\":\"Hero 50/50\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide/components/hero-fifty-fifty.html\",\"xdm:template\":\"/conf/global-atlantic/settings/wcm/templates/ga-freeform-page\",\"parentId\":\"breadcrumb-092e0cc614\"}}",
+        "aria-current": "page",
+        "itemprop": "itemListElement",
+        "itemscope": "",
+        "itemtype": "http://schema.org/ListItem"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-breadcrumb__list"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 298,
+        "y": 532,
+        "width": 97,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "Tools, products, and partnership to power your practice\n                \n\n                \n         ",
+      "classes": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left",
+        "cmp-section--background-color-granite"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 554,
+        "width": 514,
+        "height": 640
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "Tools, products, and partnership to power your practice",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 715,
+        "width": 514,
+        "height": 243
+      }
+    },
+    {
+      "name": "div_25",
+      "tag": "div",
+      "text": "Optional CTA\n                \n                \n                    \n                    \n           ",
+      "classes": [
+        "cmp-hero-fifty-fifty__buttons"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 982,
+        "width": 349,
+        "height": 50
+      }
+    },
+    {
+      "name": "i_26",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-down"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 194,
+        "y": 999,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Optional_CTA",
+      "tag": "span",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 85,
+        "y": 999,
+        "width": 97,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_28",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 508,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_29",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-hero-fifty-fifty__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 508,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-hero-fifty-fifty__secondary-slot"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 956,
+        "width": 640,
+        "height": 302
+      }
+    },
+    {
+      "name": "div_31",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 174
+      }
+    },
+    {
+      "name": "div_32",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel__swiper",
+        "swiper",
+        "swiper-fade",
+        "swiper-initialized",
+        "swiper-horizontal",
+        "swiper-watch-progress",
+        "swiper-backface-hidden"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "div_33",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel-card",
+        "swiper-slide",
+        "swiper-slide-visible",
+        "swiper-slide-active"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1020,
+        "width": 514,
+        "height": 113
+      }
+    },
+    {
+      "name": "div_34",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consequat adipscing elit, lorem ipsum dolor sit amet\n                    ",
+      "classes": [
+        "cmp-nested-content-carousel__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1040,
+        "width": 474,
+        "height": 73
+      }
+    },
+    {
+      "name": "div_LearnMore",
+      "tag": "div",
+      "text": "Learn more",
+      "classes": [
+        "button",
+        "cmp-nested-content-carousel__cta"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__text"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1087,
+        "width": 474,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_36",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "nested-carousel-button__icon"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "nested-carousel-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1087,
+        "width": 26,
+        "height": 26
+      }
+    },
+    {
+      "name": "span_LearnMore",
+      "tag": "span",
+      "text": "Learn more",
+      "classes": [
+        "nested-carousel-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "nested-carousel-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 757,
+        "y": 1093,
+        "width": 73,
+        "height": 14
+      }
+    },
+    {
+      "name": "div_38",
+      "tag": "div",
+      "text": "01 /\n                \n                    02\n                \n\n                Slide 1 of 2",
+      "classes": [
+        "cmp-nested-content-carousel__controls"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 1134,
+        "width": 514,
+        "height": 60
+      }
+    },
+    {
+      "name": "div_39",
+      "tag": "div",
+      "text": "01 /\n                \n                    02\n                \n\n                Slide 1 of 2",
+      "classes": [
+        "cmp-nested-content-carousel__counter"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__controls"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1157,
+        "width": 50,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_01",
+      "tag": "span",
+      "text": "01",
+      "classes": [
+        "cmp-nested-content-carousel__current"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__counter"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 723,
+        "y": 1156,
+        "width": 16,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_02",
+      "tag": "span",
+      "text": "02",
+      "classes": [
+        "cmp-nested-content-carousel__total"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__counter"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 749,
+        "y": 1156,
+        "width": 16,
+        "height": 14
+      }
+    },
+    {
+      "name": "span_Slide_1Of_2",
+      "tag": "span",
+      "text": "Slide 1 of 2",
+      "classes": [
+        "sr-only",
+        "cmp-nested-content-carousel__sr-counter"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-nested-content-carousel__counter"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 764,
+        "y": 1156,
+        "width": 1,
+        "height": 1
+      }
+    },
+    {
+      "name": "div_43",
+      "tag": "div",
+      "text": "ForeIncome II\nPlan for guaranteed income that lasts\n\n                \n\n                \n            ",
+      "classes": [
+        "cmp-hero-fifty-fifty__content",
+        "cmp-hero-fifty-fifty__content--has-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left",
+        "cmp-section--background-color-granite"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1570,
+        "width": 514,
+        "height": 640
+      }
+    },
+    {
+      "name": "div_44",
+      "tag": "div",
+      "text": "ForeIncome II\nPlan for guaranteed income that lasts",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content",
+        "cmp-hero-fifty-fifty__content--has-description"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 1662,
+        "width": 514,
+        "height": 243
+      }
+    },
+    {
+      "name": "div_45",
+      "tag": "div",
+      "text": "With advancements in healthcare, life expectancies are longer than ever, and so is the possibility o",
+      "classes": [
+        "cmp-hero-fifty-fifty__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content",
+        "cmp-hero-fifty-fifty__content--has-description"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 2010,
+        "width": 514,
+        "height": 126
+      }
+    },
+    {
+      "name": "div_46",
+      "tag": "div",
+      "text": "90%\n\n    \n\n    \n      Probability that at least one member of a 65-year-old couple will live to age ",
+      "classes": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 1524,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_47",
+      "tag": "div",
+      "text": "90%\n\n    \n\n    \n      Probability that at least one member of a 65-year-old couple will live to age ",
+      "classes": [
+        "cmp-hero-fifty-fifty__secondary-slot"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2018,
+        "width": 640,
+        "height": 256
+      }
+    },
+    {
+      "name": "div_48",
+      "tag": "div",
+      "text": "90%\n\n    \n\n    \n      Probability that at least one member of a 65-year-old couple will live to age ",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 2082,
+        "width": 514,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_90",
+      "tag": "div",
+      "text": "90%",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 727,
+        "y": 2114,
+        "width": 120,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_50",
+      "tag": "div",
+      "text": "Probability that at least one member of a 65-year-old couple will live to age 85.1",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 863,
+        "y": 2126,
+        "width": 330,
+        "height": 39
+      }
+    },
+    {
+      "name": "div_51",
+      "tag": "div",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 2540,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_52",
+      "tag": "div",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-hero-fifty-fifty__secondary-slot"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 3065,
+        "width": 640,
+        "height": 225
+      }
+    },
+    {
+      "name": "div_53",
+      "tag": "div",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-content-trail__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 720,
+        "y": 3146,
+        "width": 423,
+        "height": 63
+      }
+    },
+    {
+      "name": "div_ComeGrowWithUs",
+      "tag": "div",
+      "text": "Come grow with us",
+      "classes": [
+        "cmp-content-trail__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 720,
+        "y": 3146,
+        "width": 423,
+        "height": 22
+      }
+    },
+    {
+      "name": "p_55",
+      "tag": "p",
+      "text": "We’re looking for passionate, success-focused individuals to collaborate with",
+      "classes": [
+        "cmp-content-trail__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 720,
+        "y": 3172,
+        "width": 423,
+        "height": 36
+      }
+    },
+    {
+      "name": "dialog_56",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_57",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_58",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-video-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_59",
+      "tag": "div",
+      "text": "Security and support for your financial future\n                \n\n                \n                \n\n",
+      "classes": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left",
+        "cmp-section--background-color-granite"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3554,
+        "width": 514,
+        "height": 640
+      }
+    },
+    {
+      "name": "div_60",
+      "tag": "div",
+      "text": "Security and support for your financial future",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3745,
+        "width": 514,
+        "height": 182
+      }
+    },
+    {
+      "name": "div_Plan_Your_Future_Today",
+      "tag": "div",
+      "text": "Plan Your Future Today",
+      "classes": [
+        "cmp-hero-fifty-fifty__buttons"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 3952,
+        "width": 253,
+        "height": 50
+      }
+    },
+    {
+      "name": "span_Plan_Your_Future_Today",
+      "tag": "span",
+      "text": "Plan Your Future Today",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 85,
+        "y": 3969,
+        "width": 169,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_63",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 3508,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_64",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-hero-fifty-fifty__secondary-slot"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 4130,
+        "width": 640,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_65",
+      "tag": "div",
+      "text": "Optional eyebrow\n                    Lorem ipsum dolorsit amet consequat adipscing\n                \n",
+      "classes": [
+        "cmp-hero-fifty-fifty__content",
+        "cmp-hero-fifty-fifty__content--has-description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__left",
+        "cmp-section--background-color-granite"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4564,
+        "width": 514,
+        "height": 640
+      }
+    },
+    {
+      "name": "div_66",
+      "tag": "div",
+      "text": "Optional eyebrow\n                    Lorem ipsum dolorsit amet consequat adipscing",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content",
+        "cmp-hero-fifty-fifty__content--has-description"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4658,
+        "width": 514,
+        "height": 273
+      }
+    },
+    {
+      "name": "p_OptionalEyebrow",
+      "tag": "p",
+      "text": "Optional eyebrow",
+      "classes": [
+        "cmp-hero-fifty-fifty__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__eyebrow-headline"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 4658,
+        "width": 514,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_68",
+      "tag": "div",
+      "text": "We partner with leading companies across industries to drive long-term value creation and sustainabl",
+      "classes": [
+        "cmp-hero-fifty-fifty__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__content",
+        "cmp-hero-fifty-fifty__content--has-description"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 63,
+        "y": 5037,
+        "width": 514,
+        "height": 92
+      }
+    },
+    {
+      "name": "div_69",
+      "tag": "div",
+      "text": "90 %\n\n    \n\n    \n      Probability that at least one member of a 65-year-old couple will live to age",
+      "classes": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 4518,
+        "width": 640,
+        "height": 750
+      }
+    },
+    {
+      "name": "div_70",
+      "tag": "div",
+      "text": "90 %\n\n    \n\n    \n      Probability that at least one member of a 65-year-old couple will live to age",
+      "classes": [
+        "cmp-hero-fifty-fifty__secondary-slot"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-hero-fifty-fifty__right"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 640,
+        "y": 5012,
+        "width": 640,
+        "height": 256
+      }
+    },
+    {
+      "name": "div_71",
+      "tag": "div",
+      "text": "90 %\n\n    \n\n    \n      Probability that at least one member of a 65-year-old couple will live to age",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 703,
+        "y": 5076,
+        "width": 514,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_90_",
+      "tag": "div",
+      "text": "90 %",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 727,
+        "y": 5108,
+        "width": 130,
+        "height": 64
+      }
+    }
+  ],
+  "pageTitle": "Hero 50/50",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

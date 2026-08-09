@@ -1,0 +1,829 @@
+{
+  "component": "feature-banner",
+  "url": "http://localhost:4502/content/global-atlantic/style-guide/components/feature-banner.html?wcmmode=disabled",
+  "scannedAt": "2026-08-07T09:07:14.523Z",
+  "rootSelector": ".cmp-feature-banner",
+  "elements": [
+    {
+      "name": "a_Optional_CTA",
+      "tag": "a",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button"
+      ],
+      "attributes": {
+        "role": "button",
+        "href": "/content/global-atlantic/style-guide.html",
+        "target": "_self",
+        "data-link-location": "button-86fc7b1137",
+        "data-cta": "1",
+        "data-cmp-clickable": "",
+        "data-cmp-data-layer": "{\"button-86fc7b1137\":{\"@type\":\"ga/components/content/button\",\"dc:title\":\"Optional CTA\",\"xdm:linkURL\":\"/content/global-atlantic/style-guide.html\",\"parentId\":\"headline-block-1532706466\"}}"
+      },
+      "testId": null,
+      "id": "button-86fc7b1137",
+      "parentClasses": [
+        "button",
+        "ga-button--primary"
+      ],
+      "role": "button",
+      "ariaLabel": null,
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 603,
+        "y": 658,
+        "width": 161,
+        "height": 50
+      }
+    },
+    {
+      "name": "ComeGrowWithUs",
+      "tag": "a",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "attributes": {
+        "target": "_self",
+        "href": "/content/global-atlantic/style-guide.html",
+        "aria-label": "Come grow with us",
+        "data-cta": "1",
+        "data-link-location": "content-trail-312c0e1d2f",
+        "data-content-type": "link"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": "Come grow with us",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 603,
+        "y": 748,
+        "width": 549,
+        "height": 145
+      }
+    },
+    {
+      "name": "PlayBackgroundVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-control",
+        "cmp-feature-banner__video-control--play"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Play background video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Play background video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 64,
+        "y": 1898,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "name": "PauseBackgroundVideo",
+      "tag": "button",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-control",
+        "cmp-feature-banner__video-control--pause",
+        "hide"
+      ],
+      "attributes": {
+        "type": "button",
+        "aria-label": "Pause background video"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": "Pause background video",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "Close",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-close"
+      ],
+      "attributes": {
+        "autofocus": "",
+        "role": "button",
+        "aria-label": "Close"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": "button",
+      "ariaLabel": "Close",
+      "isInteractive": true,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_5",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 376,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "div_6",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__media"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 376,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_7",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 376,
+        "width": 1280,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_8",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 539,
+        "y": 408,
+        "width": 677,
+        "height": 548
+      }
+    },
+    {
+      "name": "div_9",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 539,
+        "y": 408,
+        "width": 677,
+        "height": 548
+      }
+    },
+    {
+      "name": "div_10",
+      "tag": "div",
+      "text": "Optional eyebrow\n    \n\n    \n        Lorem ipsum dolor sit amet consectetur.\n    \n\n    \n      Optiona",
+      "classes": [
+        "cmp-feature-banner__headline-block"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 472,
+        "width": 549,
+        "height": 236
+      }
+    },
+    {
+      "name": "div_OptionalEyebrow",
+      "tag": "div",
+      "text": "Optional eyebrow",
+      "classes": [
+        "cmp-headline-block__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 472,
+        "width": 549,
+        "height": 24
+      }
+    },
+    {
+      "name": "div_LoremIpsumDolorSitAmetCon",
+      "tag": "div",
+      "text": "Lorem ipsum dolor sit amet consectetur.",
+      "classes": [
+        "cmp-headline-block__title",
+        "headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 503,
+        "width": 549,
+        "height": 18
+      }
+    },
+    {
+      "name": "div_13",
+      "tag": "div",
+      "text": "Optional additional descriptor if more text is needed. Lorem ipsum dolor sit amet consequat adipscin",
+      "classes": [
+        "cmp-headline-block__descriptor",
+        "body-m"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 533,
+        "width": 549,
+        "height": 101
+      }
+    },
+    {
+      "name": "div_14",
+      "tag": "div",
+      "text": "Optional CTA\n                \n                \n                    \n                    \n           ",
+      "classes": [
+        "cmp-headline-block__cta-wrapper"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-headline-block"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 658,
+        "width": 549,
+        "height": 50
+      }
+    },
+    {
+      "name": "i_15",
+      "tag": "i",
+      "text": "",
+      "classes": [
+        "cmp-button__icon",
+        "arrow-right"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 726,
+        "y": 675,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "span_Optional_CTA",
+      "tag": "span",
+      "text": "Optional CTA",
+      "classes": [
+        "cmp-button__text"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-button"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 625,
+        "y": 675,
+        "width": 97,
+        "height": 16
+      }
+    },
+    {
+      "name": "div_17",
+      "tag": "div",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-feature-banner__component-parsys"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 748,
+        "width": 549,
+        "height": 145
+      }
+    },
+    {
+      "name": "div_18",
+      "tag": "div",
+      "text": "Come grow with us\n                \n            \n            We’re looking for passionate, success-fo",
+      "classes": [
+        "cmp-content-trail__content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__container",
+        "cmp-content-trail__link"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 628,
+        "y": 781,
+        "width": 441,
+        "height": 79
+      }
+    },
+    {
+      "name": "div_ComeGrowWithUs",
+      "tag": "div",
+      "text": "Come grow with us",
+      "classes": [
+        "cmp-content-trail__eyebrow"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 628,
+        "y": 781,
+        "width": 441,
+        "height": 24
+      }
+    },
+    {
+      "name": "p_20",
+      "tag": "p",
+      "text": "We’re looking for passionate, success-focused individuals to collaborate with",
+      "classes": [
+        "cmp-content-trail__headline"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 628,
+        "y": 809,
+        "width": 441,
+        "height": 50
+      }
+    },
+    {
+      "name": "dialog_21",
+      "tag": "dialog",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_22",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-content"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_23",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-content-trail__modal-video-container"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-content-trail__modal-content"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_24",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "attributes": {
+        "data-brightcove-player-id": "default",
+        "data-brightcove-video-id": "6365778310112"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1278,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "bcPlayerFeatureBanner_4d061201c3",
+      "tag": "video-js",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-player",
+        "video-js"
+      ],
+      "attributes": {
+        "data-video-id": "6365778310112",
+        "data-player": "default",
+        "data-loop-start": "0",
+        "data-loop-end": "10",
+        "data-embed": "default",
+        "muted": "",
+        "playsinline": ""
+      },
+      "testId": null,
+      "id": "bc-player-feature-banner-4d061201c3",
+      "parentClasses": [
+        "cmp-feature-banner__video-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 1278,
+        "width": 1280,
+        "height": 700
+      }
+    },
+    {
+      "name": "span_26",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-icon",
+        "cmp-feature-banner__video-icon--play"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-control",
+        "cmp-feature-banner__video-control--play"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 64,
+        "y": 1898,
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "name": "span_27",
+      "tag": "span",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__video-icon",
+        "cmp-feature-banner__video-icon--pause"
+      ],
+      "attributes": {
+        "aria-hidden": "true"
+      },
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__video-control",
+        "cmp-feature-banner__video-control--pause",
+        "hide"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_28",
+      "tag": "div",
+      "text": "",
+      "classes": [
+        "cmp-feature-banner__mobile-image"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__media"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "name": "div_29",
+      "tag": "div",
+      "text": "$100M\n\n    \n\n    \n      in transactions since 2014, as of Oct 1, 2020",
+      "classes": [
+        "cmp-feature-banner__component-parsys"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-feature-banner__content-wrapper"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 1649,
+        "width": 549,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_30",
+      "tag": "div",
+      "text": "$100M\n\n    \n\n    \n      in transactions since 2014, as of Oct 1, 2020",
+      "classes": [
+        "cmp-statistic__item"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 603,
+        "y": 1649,
+        "width": 549,
+        "height": 128
+      }
+    },
+    {
+      "name": "div_100M",
+      "tag": "div",
+      "text": "$100M",
+      "classes": [
+        "cmp-statistic__value"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 627,
+        "y": 1681,
+        "width": 207,
+        "height": 64
+      }
+    },
+    {
+      "name": "div_32",
+      "tag": "div",
+      "text": "in transactions since 2014, as of Oct 1, 2020",
+      "classes": [
+        "cmp-statistic__description"
+      ],
+      "attributes": {},
+      "testId": null,
+      "id": null,
+      "parentClasses": [
+        "cmp-statistic__item"
+      ],
+      "role": null,
+      "ariaLabel": null,
+      "isInteractive": false,
+      "boundingBox": {
+        "x": 850,
+        "y": 1694,
+        "width": 278,
+        "height": 39
+      }
+    }
+  ],
+  "pageTitle": "Feature Banner",
+  "viewportSize": {
+    "width": 1280,
+    "height": 720
+  }
+}

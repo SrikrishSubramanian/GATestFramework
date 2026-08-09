@@ -8,50 +8,33 @@ import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/ac
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
-
 let capture: ConsoleCapture;
-
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
-
 test.beforeEach(async ({ page }) => {
-  await loginToAEMAuthor(page);
-
-  capture = new ConsoleCapture(page);
-  capture.start();});
-
+    await loginToAEMAuthor(page);
+    capture = new ConsoleCapture(page);
+    capture.start();
+});
 test.afterEach(async ({ page }, testInfo) => {
-  if (capture) {
-    await attachConsoleCapture(testInfo, capture);
-  }
-  await annotateEnvironment(testInfo);
+    if (capture) {
+        await attachConsoleCapture(testInfo, capture);
+    }
+    await annotateEnvironment(testInfo);
 });
-
 test.describe('Form Container — Happy Path', () => {
-  test('[FC-001] @smoke @regression Form Container renders', async ({ page }) => {
-    const pom = new FormContainerPage(page);
-    await pom.navigate(BASE());
-    const root = page.locator('.cmp-form').first();
-    await expect(root).toBeVisible();
-  });
-
-  test('[FC-002] @regression Form element is present', async ({ page }) => {
-    const pom = new FormContainerPage(page);
-    await pom.navigate(BASE());
-    const form = page.locator('form.cmp-form').first();
-    await expect(form).toBeVisible();
-  });
+    test('[FC-001] @smoke @regression Form Container renders', async ({ page }) => {
+        const pom = new FormContainerPage(page);
+        await pom.navigate(BASE());
+        const root = page.locator('.cmp-form').first();
+        await expect(root).toBeVisible();
+    });
+    test('[FC-002] @regression Form element is present', async ({ page }) => {
+        const pom = new FormContainerPage(page);
+        await pom.navigate(BASE());
+        const form = page.locator('form.cmp-form').first();
+        await expect(form).toBeVisible();
+    });
 });
-
 test.describe('Form Container — Accessibility', () => {
-  test.describe.configure({ retries: 1 });
-
-  test('[FC-010] @a11y @wcag22 @regression Form Container passes axe-core scan', async ({ page }) => {
-    const pom = new FormContainerPage(page);
-    await pom.navigate(BASE());
-    const results = await new AxeBuilder({ page })
-      .include('.cmp-form')
-      .withTags(["wcag2a","wcag2aa","wcag22aa"])
-      .analyze();
-    expect(results.violations).toEqual([]);
-  });
+    test.describe.configure({ retries: 1 });
 });

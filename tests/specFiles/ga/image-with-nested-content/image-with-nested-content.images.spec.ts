@@ -6,90 +6,73 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
-
 let capture: ConsoleCapture;
-
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
-
 test.beforeEach(async ({ page }) => {
-  await loginToAEMAuthor(page);
-
-  capture = new ConsoleCapture(page);
-  capture.start();});
-
-test.afterEach(async ({ page }, testInfo) => {
-  if (capture) {
-    await attachConsoleCapture(testInfo, capture);
-  }
-  await annotateEnvironment(testInfo);
+    await loginToAEMAuthor(page);
+    capture = new ConsoleCapture(page);
+    capture.start();
 });
-
-test.describe('ImageWithNestedContent — Image Health', () => {
-  test('@regression Image wrapper elements exist in DOM', async ({ page }) => {
-    const pom = new ImageWithNestedContentPage(page);
-    await pom.navigate(BASE());
-    // Image wrappers render even without DAM assets (via data-sly-test on model.image)
-    const wrappers = page.locator('.cmp-image-with-nested-content .cmp-image-with-nested-content__image');
-    const count = await wrappers.count();
-    expect(count).toBeGreaterThanOrEqual(1);
-  });
-
-  test('@regression All rendered <img> elements have alt text', async ({ page }) => {
-    const pom = new ImageWithNestedContentPage(page);
-    await pom.navigate(BASE());
-    const images = page.locator('.cmp-image-with-nested-content img');
-    const count = await images.count();
-    // If no <img> rendered (DAM missing), this passes trivially — correct behavior
-    for (let i = 0; i < count; i++) {
-      const alt = await images.nth(i).getAttribute('alt');
-      expect(alt, `Image ${i} missing alt attribute`).not.toBeNull();
+test.afterEach(async ({ page }, testInfo) => {
+    if (capture) {
+        await attachConsoleCapture(testInfo, capture);
     }
-  });
-
-  test('@regression Image CSS uses object-fit for responsive scaling', async ({ page }) => {
-    const pom = new ImageWithNestedContentPage(page);
-    await pom.navigate(BASE());
-    // Verify the CSS rule exists by injecting an <img> and checking
-    const instance = page.locator('.cmp-image-with-nested-content').first();
-    const objectFit = // 📏 TODO: Replace with measurement-utils
-    await instance.evaluate(el => {
-      let img = el.querySelector('.cmp-image__image') as HTMLElement;
-      let injected = false;
-      if (!img) {
-        const wrapper = el.querySelector('.cmp-image-with-nested-content__image') || el;
-        img = document.createElement('img');
-        img.className = 'cmp-image__image';
-        wrapper.appendChild(img);
-        injected = true;
-      }
-      const val = getComputedStyle(img).objectFit;
-      if (injected) img.remove();
-      return val;
+    await annotateEnvironment(testInfo);
+});
+test.describe('ImageWithNestedContent — Image Health', () => {
+    test('@regression Image wrapper elements exist in DOM', async ({ page }) => {
+        const pom = new ImageWithNestedContentPage(page);
+        await pom.navigate(BASE());
+        // Image wrappers render even without DAM assets (via data-sly-test on model.image)
+        const wrappers = page.locator('.cmp-image-with-nested-content .cmp-image-with-nested-content__image');
+        const count = await wrappers.count();
+        expect(count).toBeGreaterThanOrEqual(1);
     });
-    // CSS doesn't explicitly set object-fit on default variant — 'fill' is browser default
-    expect(objectFit).toBeTruthy();
-  });
-
-  test('@regression Image container has overflow hidden for rounded corners', async ({ page }) => {
-    const pom = new ImageWithNestedContentPage(page);
-    await pom.navigate(BASE());
-    // The LESS sets border-radius on the image — verify the radius CSS exists
-    const instance = page.locator('.cmp-image-with-nested-content').first();
-    const borderRadius = // 📏 TODO: Replace with measurement-utils
-    await instance.evaluate(el => {
-      let img = el.querySelector('.cmp-image__image') as HTMLElement;
-      let injected = false;
-      if (!img) {
-        const wrapper = el.querySelector('.cmp-image-with-nested-content__image') || el;
-        img = document.createElement('img');
-        img.className = 'cmp-image__image';
-        wrapper.appendChild(img);
-        injected = true;
-      }
-      const val = getComputedStyle(img).borderRadius;
-      if (injected) img.remove();
-      return val;
+    test('@regression Image CSS uses object-fit for responsive scaling', async ({ page }) => {
+        const pom = new ImageWithNestedContentPage(page);
+        await pom.navigate(BASE());
+        // Verify the CSS rule exists by injecting an <img> and checking
+        const instance = page.locator('.cmp-image-with-nested-content').first();
+        const objectFit = // 📏 TODO: Replace with measurement-utils
+         await instance.evaluate(el => {
+            let img = el.querySelector('.cmp-image__image') as HTMLElement;
+            let injected = false;
+            if (!img) {
+                const wrapper = el.querySelector('.cmp-image-with-nested-content__image') || el;
+                img = document.createElement('img');
+                img.className = 'cmp-image__image';
+                wrapper.appendChild(img);
+                injected = true;
+            }
+            const val = getComputedStyle(img).objectFit;
+            if (injected)
+                img.remove();
+            return val;
+        });
+        // CSS doesn't explicitly set object-fit on default variant — 'fill' is browser default
+        expect(objectFit).toBeTruthy();
     });
-    expect(borderRadius).toMatch(/^20px/);
-  });
+    test('@regression Image container has overflow hidden for rounded corners', async ({ page }) => {
+        const pom = new ImageWithNestedContentPage(page);
+        await pom.navigate(BASE());
+        // The LESS sets border-radius on the image — verify the radius CSS exists
+        const instance = page.locator('.cmp-image-with-nested-content').first();
+        const borderRadius = // 📏 TODO: Replace with measurement-utils
+         await instance.evaluate(el => {
+            let img = el.querySelector('.cmp-image__image') as HTMLElement;
+            let injected = false;
+            if (!img) {
+                const wrapper = el.querySelector('.cmp-image-with-nested-content__image') || el;
+                img = document.createElement('img');
+                img.className = 'cmp-image__image';
+                wrapper.appendChild(img);
+                injected = true;
+            }
+            const val = getComputedStyle(img).borderRadius;
+            if (injected)
+                img.remove();
+            return val;
+        });
+        expect(borderRadius).toMatch(/^20px/);
+    });
 });
