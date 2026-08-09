@@ -18,29 +18,8 @@ env:
 
 jobs:
   desktop:
-    name: Desktop (${{ matrix.os }} / ${{ matrix.project }})
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          # Windows — Chrome, Firefox, Edge (no Safari: Windows Safari was
-          # discontinued by Apple in 2012 and cannot run on any current OS)
-          - os: windows-latest
-            project: chromium
-          - os: windows-latest
-            project: firefox
-          - os: windows-latest
-            project: Desktop-Edge
-          # Mac — Safari, Chrome, Firefox, Edge
-          - os: macos-latest
-            project: webkit
-          - os: macos-latest
-            project: chromium
-          - os: macos-latest
-            project: firefox
-          - os: macos-latest
-            project: Desktop-Edge
+    name: Desktop (Chrome, Firefox, Safari, Edge)
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -56,13 +35,13 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run desktop suite
-        run: npx playwright test tests/specFiles/ga/ --project "${{ matrix.project }}"
+        run: npx playwright test tests/specFiles/ga/ --project chromium --project firefox --project webkit --project Desktop-Edge
 
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-desktop-${{ matrix.os }}-${{ matrix.project }}
+          name: playwright-report-desktop
           path: |
             playwright-report/
             test-results/
