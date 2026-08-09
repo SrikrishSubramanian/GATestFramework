@@ -148,24 +148,83 @@ export default defineConfig({
         // viewport: null,
       },
     },
+    // --- Mobile device matrix (real devices from the provided test matrix) ---
     {
-      name: 'Mobile-Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
-    //     {
-    //   name: 'Mobile-Firefox',
-    //  use: {
-    //     browserName: 'firefox',
-    //     viewport: { width: 390, height: 844 },
-    //     // isMobile: true,
-    //     // hasTouch: true,
-    //   },
-    // },
-    {
-      name: 'Mobile-WebKit',
+      // Google Pixel 4 XL — Chrome, Android 10/11. No exact Playwright preset;
+      // built from Google's published spec (412x869 CSS px @ 3.5 DPR).
+      name: 'Mobile-Pixel4XL-Chrome',
       use: {
-        ...devices['iPhone 13'],
+        ...devices['Pixel 4'],
+        viewport: { width: 412, height: 869 },
+        screen: { width: 412, height: 869 },
+        deviceScaleFactor: 3.5,
+      },
+    },
+    {
+      // Samsung Galaxy S9 — "Mobile Browser" read as Chrome, Android 10/11.
+      // No exact Playwright preset; built from Samsung's published spec
+      // (360x740 CSS px @ 4x DPR — matches the 1440x2960 physical resolution).
+      name: 'Mobile-GalaxyS9-Chrome',
+      use: {
+        ...devices['Galaxy S9+'],
+        viewport: { width: 360, height: 740 },
+        screen: { width: 360, height: 740 },
+        deviceScaleFactor: 4,
+      },
+    },
+    {
+      // Samsung Galaxy Note 10 — Firefox, Android 10/11. Playwright's Firefox
+      // is desktop Firefox with viewport/touch overrides (no genuine Android
+      // Firefox engine exists in Playwright). Viewport from published spec
+      // (360x760 CSS px @ 3x DPR — matches the 1080x2280 physical resolution).
+      name: 'Mobile-GalaxyNote10-Firefox',
+      use: {
+        browserName: 'firefox',
+        viewport: { width: 360, height: 760 },
+        screen: { width: 360, height: 760 },
+        deviceScaleFactor: 3,
+        isMobile: true,
+        hasTouch: true,
+      },
+    },
+    {
+      // Apple iPhone 8 — Safari, iOS 13. Exact Playwright preset available.
+      name: 'Mobile-iPhone8-Safari',
+      use: {
+        ...devices['iPhone 8'],
         browserName: 'webkit',
+      },
+    },
+
+    // --- Tablet device matrix (real devices from the provided test matrix) ---
+    {
+      // Samsung Galaxy Tab S6 — Chrome, Android 10/11. No exact Playwright
+      // preset; built from Samsung's published spec (1280x800 CSS px @ 2x DPR
+      // — matches the 2560x1600 physical resolution, 16:10 aspect).
+      name: 'Tablet-GalaxyTabS6-Chrome',
+      use: {
+        ...devices['Galaxy Tab S4'],
+        viewport: { width: 1280, height: 800 },
+        screen: { width: 1280, height: 800 },
+        deviceScaleFactor: 2,
+      },
+    },
+    {
+      // Apple iPad (7th gen) — Safari, iOS 13. Exact Playwright preset available.
+      name: 'Tablet-iPad7-Safari',
+      use: {
+        ...devices['iPad (gen 7)'],
+        browserName: 'webkit',
+      },
+    },
+
+    // --- Desktop Edge (Chromium-based; runs the real installed Edge browser
+    // via the 'msedge' channel, available on GitHub-hosted Windows/Mac runners) ---
+    {
+      name: 'Desktop-Edge',
+      use: {
+        ...devices['Desktop Edge'],
+        channel: 'msedge',
       },
     },
 

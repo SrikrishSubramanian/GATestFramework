@@ -1,0 +1,217 @@
+name: GA Regression Suite
+
+# Manual trigger (Actions tab → "Run workflow") and push-to-branch are active.
+# Cron is commented out for now — uncomment when ready. Cron is always UTC —
+# 0 1 * * * = 1:00 AM UTC = 6:30 AM IST daily.
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - ga_automation_testing
+  # schedule:
+  #   - cron: '0 1 * * *'
+
+env:
+  env: dev
+  AEM_AUTHOR_USERNAME: ${{ secrets.AEM_AUTHOR_USERNAME }}
+  AEM_AUTHOR_PASSWORD: ${{ secrets.AEM_AUTHOR_PASSWORD }}
+
+# Component sharding: the 68 GA components are split into 3 groups (A/B/C),
+# balanced by test count (~858 tests each, verified to sum to the full 2573
+# with no overlap or gaps). Each device job runs all 3 groups in parallel as
+# a third matrix dimension, on top of the device/browser split.
+jobs:
+  desktop:
+    name: Desktop (${{ matrix.os }} / ${{ matrix.project }} / Group ${{ matrix.group }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            project: chromium
+            group: A
+          - os: windows-latest
+            project: chromium
+            group: B
+          - os: windows-latest
+            project: chromium
+            group: C
+          - os: windows-latest
+            project: firefox
+            group: A
+          - os: windows-latest
+            project: firefox
+            group: B
+          - os: windows-latest
+            project: firefox
+            group: C
+          - os: windows-latest
+            project: Desktop-Edge
+            group: A
+          - os: windows-latest
+            project: Desktop-Edge
+            group: B
+          - os: windows-latest
+            project: Desktop-Edge
+            group: C
+          - os: macos-latest
+            project: webkit
+            group: A
+          - os: macos-latest
+            project: webkit
+            group: B
+          - os: macos-latest
+            project: webkit
+            group: C
+          - os: macos-latest
+            project: chromium
+            group: A
+          - os: macos-latest
+            project: chromium
+            group: B
+          - os: macos-latest
+            project: chromium
+            group: C
+          - os: macos-latest
+            project: firefox
+            group: A
+          - os: macos-latest
+            project: firefox
+            group: B
+          - os: macos-latest
+            project: firefox
+            group: C
+          - os: macos-latest
+            project: Desktop-Edge
+            group: A
+          - os: macos-latest
+            project: Desktop-Edge
+            group: B
+          - os: macos-latest
+            project: Desktop-Edge
+            group: C
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Resolve component paths for group ${{ matrix.group }}
+        id: paths
+        shell: bash
+        run: |
+          case "${{ matrix.group }}" in
+            A) echo "paths=tests/specFiles/ga/_legacy/ tests/specFiles/ga/accordion/ tests/specFiles/ga/alert-banner/ tests/specFiles/ga/bio-card/ tests/specFiles/ga/button/ tests/specFiles/ga/detail-hero/ tests/specFiles/ga/enhanced-related-content/ tests/specFiles/ga/form-container/ tests/specFiles/ga/form-field-dropdown/ tests/specFiles/ga/form-hidden/ tests/specFiles/ga/formatted-rte-frontend/ tests/specFiles/ga/general/ tests/specFiles/ga/headline-block/ tests/specFiles/ga/hero-fifty-fifty/ tests/specFiles/ga/homepage-hero/ tests/specFiles/ga/image-with-nested-content/ tests/specFiles/ga/login/ tests/specFiles/ga/rate-details-hero/ tests/specFiles/ga/ratings-card/ tests/specFiles/ga/saml-login/ tests/specFiles/ga/separator/ tests/specFiles/ga/site-search/ tests/specFiles/ga/statistic/ tests/specFiles/ga/api-mock.spec.ts tests/specFiles/ga/dispatcher.spec.ts" >> "$GITHUB_OUTPUT" ;;
+            B) echo "paths=tests/specFiles/ga/accordion-tabs-feature/ tests/specFiles/ga/benefits-table/ tests/specFiles/ga/brand-relationship/ tests/specFiles/ga/content-highlight/ tests/specFiles/ga/disclaimers/ tests/specFiles/ga/firm-selection-modal/ tests/specFiles/ga/footer/ tests/specFiles/ga/form-field-text/ tests/specFiles/ga/form-options/ tests/specFiles/ga/form-recaptcha/ tests/specFiles/ga/form-text/ tests/specFiles/ga/image/ tests/specFiles/ga/in-brief/ tests/specFiles/ga/marketo-forms/ tests/specFiles/ga/nested-content-carousel/ tests/specFiles/ga/product-comparison-card/ tests/specFiles/ga/rate-table/ tests/specFiles/ga/role-selector/ tests/specFiles/ga/site-header/ tests/specFiles/ga/spacer/ tests/specFiles/ga/tabs/ tests/specFiles/ga/top-nav/ tests/specFiles/ga/video-external/" >> "$GITHUB_OUTPUT" ;;
+            C) echo "paths=tests/specFiles/ga/_infrastructure/ tests/specFiles/ga/breadcrumb/ tests/specFiles/ga/content-trail/ tests/specFiles/ga/decision-tree/ tests/specFiles/ga/feature-banner/ tests/specFiles/ga/formatted-rte/ tests/specFiles/ga/gated-section/ tests/specFiles/ga/grid-container/ tests/specFiles/ga/header/ tests/specFiles/ga/hero-cta-video-modal/ tests/specFiles/ga/insights-detail-hero/ tests/specFiles/ga/insights-listing/ tests/specFiles/ga/navigation/ tests/specFiles/ga/product-path-detail-card/ tests/specFiles/ga/product-path-summary-card/ tests/specFiles/ga/promo-banner/ tests/specFiles/ga/quote/ tests/specFiles/ga/section/ tests/specFiles/ga/teaser-card/ tests/specFiles/ga/text/ tests/specFiles/ga/workbench/" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - name: Run desktop suite
+        run: npx playwright test ${{ steps.paths.outputs.paths }} --project "${{ matrix.project }}"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-desktop-${{ matrix.os }}-${{ matrix.project }}-${{ matrix.group }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+  tablet:
+    name: Tablet (Galaxy Tab S6, iPad 7 / Group ${{ matrix.group }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [A, B, C]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Resolve component paths for group ${{ matrix.group }}
+        id: paths
+        shell: bash
+        run: |
+          case "${{ matrix.group }}" in
+            A) echo "paths=tests/specFiles/ga/_legacy/ tests/specFiles/ga/accordion/ tests/specFiles/ga/alert-banner/ tests/specFiles/ga/bio-card/ tests/specFiles/ga/button/ tests/specFiles/ga/detail-hero/ tests/specFiles/ga/enhanced-related-content/ tests/specFiles/ga/form-container/ tests/specFiles/ga/form-field-dropdown/ tests/specFiles/ga/form-hidden/ tests/specFiles/ga/formatted-rte-frontend/ tests/specFiles/ga/general/ tests/specFiles/ga/headline-block/ tests/specFiles/ga/hero-fifty-fifty/ tests/specFiles/ga/homepage-hero/ tests/specFiles/ga/image-with-nested-content/ tests/specFiles/ga/login/ tests/specFiles/ga/rate-details-hero/ tests/specFiles/ga/ratings-card/ tests/specFiles/ga/saml-login/ tests/specFiles/ga/separator/ tests/specFiles/ga/site-search/ tests/specFiles/ga/statistic/ tests/specFiles/ga/api-mock.spec.ts tests/specFiles/ga/dispatcher.spec.ts" >> "$GITHUB_OUTPUT" ;;
+            B) echo "paths=tests/specFiles/ga/accordion-tabs-feature/ tests/specFiles/ga/benefits-table/ tests/specFiles/ga/brand-relationship/ tests/specFiles/ga/content-highlight/ tests/specFiles/ga/disclaimers/ tests/specFiles/ga/firm-selection-modal/ tests/specFiles/ga/footer/ tests/specFiles/ga/form-field-text/ tests/specFiles/ga/form-options/ tests/specFiles/ga/form-recaptcha/ tests/specFiles/ga/form-text/ tests/specFiles/ga/image/ tests/specFiles/ga/in-brief/ tests/specFiles/ga/marketo-forms/ tests/specFiles/ga/nested-content-carousel/ tests/specFiles/ga/product-comparison-card/ tests/specFiles/ga/rate-table/ tests/specFiles/ga/role-selector/ tests/specFiles/ga/site-header/ tests/specFiles/ga/spacer/ tests/specFiles/ga/tabs/ tests/specFiles/ga/top-nav/ tests/specFiles/ga/video-external/" >> "$GITHUB_OUTPUT" ;;
+            C) echo "paths=tests/specFiles/ga/_infrastructure/ tests/specFiles/ga/breadcrumb/ tests/specFiles/ga/content-trail/ tests/specFiles/ga/decision-tree/ tests/specFiles/ga/feature-banner/ tests/specFiles/ga/formatted-rte/ tests/specFiles/ga/gated-section/ tests/specFiles/ga/grid-container/ tests/specFiles/ga/header/ tests/specFiles/ga/hero-cta-video-modal/ tests/specFiles/ga/insights-detail-hero/ tests/specFiles/ga/insights-listing/ tests/specFiles/ga/navigation/ tests/specFiles/ga/product-path-detail-card/ tests/specFiles/ga/product-path-summary-card/ tests/specFiles/ga/promo-banner/ tests/specFiles/ga/quote/ tests/specFiles/ga/section/ tests/specFiles/ga/teaser-card/ tests/specFiles/ga/text/ tests/specFiles/ga/workbench/" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - name: Run tablet suite
+        run: npx playwright test ${{ steps.paths.outputs.paths }} --project "Tablet-GalaxyTabS6-Chrome" --project "Tablet-iPad7-Safari"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-tablet-${{ matrix.group }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+  mobile:
+    name: Mobile (Pixel 4 XL, Galaxy S9, Galaxy Note 10, iPhone 8 / Group ${{ matrix.group }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [A, B, C]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Resolve component paths for group ${{ matrix.group }}
+        id: paths
+        shell: bash
+        run: |
+          case "${{ matrix.group }}" in
+            A) echo "paths=tests/specFiles/ga/_legacy/ tests/specFiles/ga/accordion/ tests/specFiles/ga/alert-banner/ tests/specFiles/ga/bio-card/ tests/specFiles/ga/button/ tests/specFiles/ga/detail-hero/ tests/specFiles/ga/enhanced-related-content/ tests/specFiles/ga/form-container/ tests/specFiles/ga/form-field-dropdown/ tests/specFiles/ga/form-hidden/ tests/specFiles/ga/formatted-rte-frontend/ tests/specFiles/ga/general/ tests/specFiles/ga/headline-block/ tests/specFiles/ga/hero-fifty-fifty/ tests/specFiles/ga/homepage-hero/ tests/specFiles/ga/image-with-nested-content/ tests/specFiles/ga/login/ tests/specFiles/ga/rate-details-hero/ tests/specFiles/ga/ratings-card/ tests/specFiles/ga/saml-login/ tests/specFiles/ga/separator/ tests/specFiles/ga/site-search/ tests/specFiles/ga/statistic/ tests/specFiles/ga/api-mock.spec.ts tests/specFiles/ga/dispatcher.spec.ts" >> "$GITHUB_OUTPUT" ;;
+            B) echo "paths=tests/specFiles/ga/accordion-tabs-feature/ tests/specFiles/ga/benefits-table/ tests/specFiles/ga/brand-relationship/ tests/specFiles/ga/content-highlight/ tests/specFiles/ga/disclaimers/ tests/specFiles/ga/firm-selection-modal/ tests/specFiles/ga/footer/ tests/specFiles/ga/form-field-text/ tests/specFiles/ga/form-options/ tests/specFiles/ga/form-recaptcha/ tests/specFiles/ga/form-text/ tests/specFiles/ga/image/ tests/specFiles/ga/in-brief/ tests/specFiles/ga/marketo-forms/ tests/specFiles/ga/nested-content-carousel/ tests/specFiles/ga/product-comparison-card/ tests/specFiles/ga/rate-table/ tests/specFiles/ga/role-selector/ tests/specFiles/ga/site-header/ tests/specFiles/ga/spacer/ tests/specFiles/ga/tabs/ tests/specFiles/ga/top-nav/ tests/specFiles/ga/video-external/" >> "$GITHUB_OUTPUT" ;;
+            C) echo "paths=tests/specFiles/ga/_infrastructure/ tests/specFiles/ga/breadcrumb/ tests/specFiles/ga/content-trail/ tests/specFiles/ga/decision-tree/ tests/specFiles/ga/feature-banner/ tests/specFiles/ga/formatted-rte/ tests/specFiles/ga/gated-section/ tests/specFiles/ga/grid-container/ tests/specFiles/ga/header/ tests/specFiles/ga/hero-cta-video-modal/ tests/specFiles/ga/insights-detail-hero/ tests/specFiles/ga/insights-listing/ tests/specFiles/ga/navigation/ tests/specFiles/ga/product-path-detail-card/ tests/specFiles/ga/product-path-summary-card/ tests/specFiles/ga/promo-banner/ tests/specFiles/ga/quote/ tests/specFiles/ga/section/ tests/specFiles/ga/teaser-card/ tests/specFiles/ga/text/ tests/specFiles/ga/workbench/" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - name: Run mobile suite
+        run: npx playwright test ${{ steps.paths.outputs.paths }} --project "Mobile-Pixel4XL-Chrome" --project "Mobile-GalaxyS9-Chrome" --project "Mobile-GalaxyNote10-Firefox" --project "Mobile-iPhone8-Safari"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-mobile-${{ matrix.group }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
