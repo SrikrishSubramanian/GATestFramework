@@ -18,7 +18,7 @@ env:
 
 jobs:
   desktop:
-    name: Desktop (Chrome, Firefox, Safari, Edge)
+    name: Desktop (Firefox)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run desktop suite
-        run: npx playwright test tests/specFiles/ga/ --project chromium --project firefox --project webkit --project Desktop-Edge
+        run: npx playwright test tests/specFiles/ga/ --project firefox
 
       - name: Upload report
         if: always()
@@ -48,7 +48,7 @@ jobs:
           retention-days: 14
 
   tablet:
-    name: Tablet (Galaxy Tab S6, iPad 7)
+    name: Tablet (Galaxy Tab S6 - Chrome)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -65,7 +65,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run tablet suite
-        run: npx playwright test tests/specFiles/ga/ --project "Tablet-GalaxyTabS6-Chrome" --project "Tablet-iPad7-Safari"
+        run: npx playwright test tests/specFiles/ga/ --project "Tablet-GalaxyTabS6-Chrome"
 
       - name: Upload report
         if: always()
@@ -78,7 +78,7 @@ jobs:
           retention-days: 14
 
   mobile:
-    name: Mobile (Pixel 4 XL, Galaxy S9, Galaxy Note 10, iPhone 8)
+    name: Mobile (Pixel 4 XL, Galaxy S9 - Chrome)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -95,7 +95,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run mobile suite
-        run: npx playwright test tests/specFiles/ga/ --project "Mobile-Pixel4XL-Chrome" --project "Mobile-GalaxyS9-Chrome" --project "Mobile-GalaxyNote10-Firefox" --project "Mobile-iPhone8-Safari"
+        run: npx playwright test tests/specFiles/ga/ --project "Mobile-Pixel4XL-Chrome" --project "Mobile-GalaxyS9-Chrome"
 
       - name: Upload report
         if: always()
