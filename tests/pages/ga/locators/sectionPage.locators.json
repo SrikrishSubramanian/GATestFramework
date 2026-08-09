@@ -1,6 +1,6 @@
 {
   "component": "section",
-  "generatedAt": "2026-08-06T07:45:35.992Z",
+  "generatedAt": "2026-08-07T06:17:41.242Z",
   "source": "dom",
   "entries": {
     "sectionPageRoot": {
@@ -47,7 +47,8 @@
           "value": "Optional CTA",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.240Z"
     },
     "a_LearnMore": {
       "name": "a_LearnMore",
@@ -78,7 +79,8 @@
           "value": "Learn more",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "button_WhatIs_Global_Atlantic": {
       "name": "button_WhatIs_Global_Atlantic",
@@ -86,7 +88,7 @@
       "strategies": [
         {
           "type": "id",
-          "value": "6df14506b1cc4325acd75142bc6a3b9a",
+          "value": "68cb72a3d2854399a09260992abcf29d",
           "confidence": 0.95
         },
         {
@@ -104,7 +106,8 @@
           "value": "What is Global Atlantic?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "button_HowDo_IContactCustomerServ": {
       "name": "button_HowDo_IContactCustomerServ",
@@ -112,7 +115,7 @@
       "strategies": [
         {
           "type": "id",
-          "value": "92bb681e59344300afb0878bbd2fb72c",
+          "value": "7bc68600e5754667a540c177003d5960",
           "confidence": 0.95
         },
         {
@@ -130,7 +133,8 @@
           "value": "How do I contact customer service?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "e518cdb674514cb48e90766a094ec251": {
       "name": "e518cdb674514cb48e90766a094ec251",
@@ -164,7 +168,7 @@
       "strategies": [
         {
           "type": "id",
-          "value": "9cd4abdac49e462980d441c959798fa7",
+          "value": "6bd38351b9b64e7abc9bbce748174faa",
           "confidence": 0.95
         },
         {
@@ -182,7 +186,8 @@
           "value": "Where can I find my policy documents?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "Close": {
       "name": "Close",
@@ -203,7 +208,8 @@
           "value": "//div[contains(@class,'cmp-image__modal-close')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "span_WhatIs_Global_Atlantic": {
       "name": "span_WhatIs_Global_Atlantic",
@@ -229,7 +235,8 @@
           "value": "What is Global Atlantic?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "span_HowDo_IContactCustomerServ": {
       "name": "span_HowDo_IContactCustomerServ",
@@ -255,7 +262,8 @@
           "value": "How do I contact customer service?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "span_9": {
       "name": "span_9",
@@ -281,7 +289,8 @@
           "value": "What products does Global Atlantic offer?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "span_WhereCan_IFindMyPolicyDoc": {
       "name": "span_WhereCan_IFindMyPolicyDoc",
@@ -307,7 +316,8 @@
           "value": "Where can I find my policy documents?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_11": {
       "name": "div_11",
@@ -323,7 +333,8 @@
           "value": "//div[contains(@class,'cmp-section__container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_OptionalEyebrow": {
       "name": "div_OptionalEyebrow",
@@ -344,7 +355,8 @@
           "value": "Optional eyebrow",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_13": {
       "name": "div_13",
@@ -360,7 +372,8 @@
           "value": "//div[contains(@class,'cmp-headline-block__title')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_14": {
       "name": "div_14",
@@ -376,7 +389,8 @@
           "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_15": {
       "name": "div_15",
@@ -392,7 +406,8 @@
           "value": "//div[contains(@class,'cmp-headline-block__cta-wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "i_16": {
       "name": "i_16",
@@ -408,7 +423,8 @@
           "value": "//i[contains(@class,'cmp-button__icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "span_Optional_CTA": {
       "name": "span_Optional_CTA",
@@ -429,7 +445,8 @@
           "value": "Optional CTA",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_18": {
       "name": "div_18",
@@ -445,7 +462,8 @@
           "value": "//div[contains(@class,'cmp-headline-block__cta-wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_19": {
       "name": "div_19",
@@ -461,7 +479,8 @@
           "value": "//div[contains(@class,'cmp-grid-container__items')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "dialog_20": {
       "name": "dialog_20",
@@ -477,7 +496,8 @@
           "value": "//dialog[contains(@class,'cmp-image__modal')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_21": {
       "name": "div_21",
@@ -493,7 +513,8 @@
           "value": "//div[contains(@class,'cmp-image__modal-content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_22": {
       "name": "div_22",
@@ -509,7 +530,8 @@
           "value": "//div[contains(@class,'cmp-image__modal-image-container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_LoremIpsumDolorSitAmet": {
       "name": "div_LoremIpsumDolorSitAmet",
@@ -530,7 +552,8 @@
           "value": "Lorem ipsum dolor sit amet",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_24": {
       "name": "div_24",
@@ -546,7 +569,8 @@
           "value": "//div[contains(@class,'cmp-headline-block__descriptor')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_LearnMore": {
       "name": "div_LearnMore",
@@ -567,7 +591,8 @@
           "value": "Learn more",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "span_LearnMore": {
       "name": "span_LearnMore",
@@ -588,7 +613,8 @@
           "value": "Learn more",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_27": {
       "name": "div_27",
@@ -604,7 +630,8 @@
           "value": "//div[contains(@class,'cmp-accordion__wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "accordionItem_9ab625d0cc": {
       "name": "accordionItem_9ab625d0cc",
@@ -625,7 +652,8 @@
           "value": "//div[contains(@class,'cmp-accordion__item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "accordionItem_9ab625d0ccPanel": {
       "name": "accordionItem_9ab625d0ccPanel",
@@ -646,7 +674,8 @@
           "value": "//div[contains(@class,'cmp-accordion__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.241Z"
     },
     "div_WhatIs_Global_Atlantic": {
       "name": "div_WhatIs_Global_Atlantic",
@@ -667,7 +696,8 @@
           "value": "What is Global Atlantic?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "div_31": {
       "name": "div_31",
@@ -683,7 +713,8 @@
           "value": "//div[contains(@class,'cmp-accordion__item-indicator')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "svg_32": {
       "name": "svg_32",
@@ -699,7 +730,8 @@
           "value": "//svg[contains(@class,'cmp-accordion__item-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "div_33": {
       "name": "div_33",
@@ -715,7 +747,8 @@
           "value": "//div[contains(@class,'cmp-accordion__item-indicator')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "el6f0aeb24473f486bacf93df6d9d5f670": {
       "name": "el6f0aeb24473f486bacf93df6d9d5f670",
@@ -757,7 +790,8 @@
           "value": "//div[contains(@class,'cmp-accordion__item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "accordionItemF25ed5b41fPanel": {
       "name": "accordionItemF25ed5b41fPanel",
@@ -778,7 +812,8 @@
           "value": "//div[contains(@class,'cmp-accordion__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "div_HowDo_IContactCustomerServ": {
       "name": "div_HowDo_IContactCustomerServ",
@@ -799,7 +834,8 @@
           "value": "How do I contact customer service?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "el195b111404d34c2b8fe46e2b03f1a9eb": {
       "name": "el195b111404d34c2b8fe46e2b03f1a9eb",
@@ -841,7 +877,8 @@
           "value": "//div[contains(@class,'cmp-accordion__item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "accordionItemEd68e63c0aPanel": {
       "name": "accordionItemEd68e63c0aPanel",
@@ -862,7 +899,8 @@
           "value": "//div[contains(@class,'cmp-accordion__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "div_41": {
       "name": "div_41",
@@ -883,7 +921,8 @@
           "value": "What products does Global Atlantic offer?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "a6c82c0692ff4ef3b2d0525b509f165d": {
       "name": "a6c82c0692ff4ef3b2d0525b509f165d",
@@ -925,7 +964,8 @@
           "value": "//div[contains(@class,'cmp-accordion__item')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "accordionItem_7dabeb331dPanel": {
       "name": "accordionItem_7dabeb331dPanel",
@@ -946,7 +986,8 @@
           "value": "//div[contains(@class,'cmp-accordion__panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "div_WhereCan_IFindMyPolicyDoc": {
       "name": "div_WhereCan_IFindMyPolicyDoc",
@@ -967,7 +1008,8 @@
           "value": "Where can I find my policy documents?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "el8cb142805c7e490abd8a0a610218ac91": {
       "name": "el8cb142805c7e490abd8a0a610218ac91",
@@ -1004,7 +1046,8 @@
           "value": "//div[contains(@class,'cmp-section__container')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
     },
     "div_48": {
       "name": "div_48",
@@ -1018,6 +1061,117 @@
         {
           "type": "xpath",
           "value": "//div[contains(@class,'cmp-grid-container__items')]",
+          "confidence": 0.6
+        }
+      ],
+      "lastVerified": "2026-08-07T06:17:41.242Z"
+    },
+    "el2bc56c4bd2884c22814b591526ca3533": {
+      "name": "el2bc56c4bd2884c22814b591526ca3533",
+      "component": "section",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "2bc56c4bd2884c22814b591526ca3533",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-button",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//button[contains(@class,'cmp-accordion__item-button')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "What products does Global Atlantic offer?",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "el0af3f9cfca2541f6b26666e4a0f0b8fa": {
+      "name": "el0af3f9cfca2541f6b26666e4a0f0b8fa",
+      "component": "section",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "0af3f9cfca2541f6b26666e4a0f0b8fa",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el2c5db73f34004868a54869f8f8f2ec41": {
+      "name": "el2c5db73f34004868a54869f8f8f2ec41",
+      "component": "section",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "2c5db73f34004868a54869f8f8f2ec41",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "c85d13d01cbb4c03a32f4ad9c6d7cd93": {
+      "name": "c85d13d01cbb4c03a32f4ad9c6d7cd93",
+      "component": "section",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "c85d13d01cbb4c03a32f4ad9c6d7cd93",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "el4070848ae5ed4545970d5ecf385c5606": {
+      "name": "el4070848ae5ed4545970d5ecf385c5606",
+      "component": "section",
+      "strategies": [
+        {
+          "type": "id",
+          "value": "4070848ae5ed4545970d5ecf385c5606",
+          "confidence": 0.95
+        },
+        {
+          "type": "css",
+          "value": ".cmp-accordion__item-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-accordion__item-content')]",
           "confidence": 0.6
         }
       ]

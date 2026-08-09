@@ -1,19 +1,854 @@
 {
+  "component": "image",
+  "generatedAt": "2026-08-07T09:21:19.768Z",
+  "source": "dom",
   "entries": {
-    "imagePageRoot": {
+    "ImageInWhiteBackground": {
+      "name": "ImageInWhiteBackground",
+      "component": "image",
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-image",
+          "value": ".cmp-image__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Image in white background']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-image__link')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ImageInWhiteBackground_1": {
+      "name": "ImageInWhiteBackground_1",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Image in white background']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-image__link')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ImageInWhiteBackground_2": {
+      "name": "ImageInWhiteBackground_2",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Image in white background']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-image__link')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_ImageInWhiteBackg": {
+      "name": "img_ImageInWhiteBackg",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "selector": "//div[@class='cmp-image']",
-          "confidence": 0.7
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
         }
-      ],
-      "primary": "css"
+      ]
+    },
+    "img_FullWidthImageIn_": {
+      "name": "img_FullWidthImageIn_",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_ImageInWhiteBackg_5": {
+      "name": "img_ImageInWhiteBackg_5",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_FullWidthImageIn__6": {
+      "name": "img_FullWidthImageIn__6",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_ImageInWhiteBackg_7": {
+      "name": "img_ImageInWhiteBackg_7",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_FullWidthImageIn__8": {
+      "name": "img_FullWidthImageIn__8",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "imgImage_9": {
+      "name": "imgImage_9",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "imgImage_10": {
+      "name": "imgImage_10",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_CaptionFrom_Metadat": {
+      "name": "img_CaptionFrom_Metadat",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_ImageInWhiteBackg_12": {
+      "name": "img_ImageInWhiteBackg_12",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "img_FullWidthImageIn__13": {
+      "name": "img_FullWidthImageIn__13",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__image",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//img[contains(@class,'cmp-image__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_14": {
+      "name": "figure_14",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_15": {
+      "name": "picture_15",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_16": {
+      "name": "div_16",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figcaption_17": {
+      "name": "figcaption_17",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figcaption[contains(@class,'cmp-image__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_18": {
+      "name": "figure_18",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_19": {
+      "name": "picture_19",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_20": {
+      "name": "div_20",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figcaption_21": {
+      "name": "figcaption_21",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figcaption[contains(@class,'cmp-image__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_22": {
+      "name": "figure_22",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_23": {
+      "name": "picture_23",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_24": {
+      "name": "div_24",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figcaption_25": {
+      "name": "figcaption_25",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figcaption[contains(@class,'cmp-image__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_26": {
+      "name": "figure_26",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_27": {
+      "name": "picture_27",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_28": {
+      "name": "div_28",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figcaption_29": {
+      "name": "figcaption_29",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figcaption[contains(@class,'cmp-image__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_30": {
+      "name": "figure_30",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_31": {
+      "name": "picture_31",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_32": {
+      "name": "div_32",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figcaption_33": {
+      "name": "figcaption_33",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figcaption[contains(@class,'cmp-image__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_34": {
+      "name": "figure_34",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_35": {
+      "name": "picture_35",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_36": {
+      "name": "div_36",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figcaption_37": {
+      "name": "figcaption_37",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figcaption[contains(@class,'cmp-image__title')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_38": {
+      "name": "figure_38",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_39": {
+      "name": "picture_39",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_40": {
+      "name": "figure_40",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_41": {
+      "name": "picture_41",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_42": {
+      "name": "figure_42",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_43": {
+      "name": "picture_43",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_44": {
+      "name": "div_44",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_45": {
+      "name": "figure_45",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_46": {
+      "name": "picture_46",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_47": {
+      "name": "div_47",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figure_48": {
+      "name": "figure_48",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__figure",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figure[contains(@class,'cmp-image__figure')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "picture_49": {
+      "name": "picture_49",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__picture",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//picture[contains(@class,'cmp-image__picture')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_50": {
+      "name": "div_50",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image__title-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "figcaption_51": {
+      "name": "figcaption_51",
+      "component": "image",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-image__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//figcaption[contains(@class,'cmp-image__title')]",
+          "confidence": 0.6
+        }
+      ]
     }
   }
 }

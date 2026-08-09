@@ -1,6 +1,6 @@
 {
   "component": "content-highlight",
-  "generatedAt": "2026-08-06T07:43:04.094Z",
+  "generatedAt": "2026-08-07T06:16:38.247Z",
   "source": "dom",
   "entries": {
     "a_Product_Button": {
@@ -33,7 +33,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "a_ReadTheRelease": {
       "name": "a_ReadTheRelease",
@@ -65,7 +65,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "a_Contact_Us": {
       "name": "a_Contact_Us",
@@ -97,7 +97,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "a_GlobalBioLink": {
       "name": "a_GlobalBioLink",
@@ -129,7 +129,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "a_ProductButton": {
       "name": "a_ProductButton",
@@ -161,7 +161,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "h5_BarronsRecognizes_Global_Atla": {
       "name": "h5_BarronsRecognizes_Global_Atla",
@@ -183,7 +183,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "h5_6": {
       "name": "h5_6",
@@ -205,7 +205,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "h5_7": {
       "name": "h5_7",
@@ -227,7 +227,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "imgImage_8": {
       "name": "imgImage_8",
@@ -244,7 +244,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "contentHighlightBannerMain": {
       "name": "contentHighlightBannerMain",
@@ -271,7 +271,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "item1780302280431": {
       "name": "item1780302280431",
@@ -298,7 +298,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "Close": {
       "name": "Close",
@@ -320,7 +320,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "item1780304577141": {
       "name": "item1780304577141",
@@ -347,7 +347,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "item1780304694932": {
       "name": "item1780304694932",
@@ -374,7 +374,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "Pause": {
       "name": "Pause",
@@ -396,7 +396,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "Play": {
       "name": "Play",
@@ -418,7 +418,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.093Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_16": {
       "name": "div_16",
@@ -435,7 +435,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_17": {
       "name": "div_17",
@@ -452,7 +452,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_18": {
       "name": "div_18",
@@ -469,7 +469,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "figure_19": {
       "name": "figure_19",
@@ -486,7 +486,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "picture_20": {
       "name": "picture_20",
@@ -503,7 +503,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "section_21": {
       "name": "section_21",
@@ -520,7 +520,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_22": {
       "name": "div_22",
@@ -537,7 +537,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_23": {
       "name": "div_23",
@@ -554,7 +554,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_24": {
       "name": "div_24",
@@ -571,7 +571,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_Product_Button": {
       "name": "div_Product_Button",
@@ -593,7 +593,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "i_26": {
       "name": "i_26",
@@ -610,7 +610,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "span_Product_Button": {
       "name": "span_Product_Button",
@@ -632,7 +632,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "dialog_28": {
       "name": "dialog_28",
@@ -649,7 +649,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_29": {
       "name": "div_29",
@@ -666,7 +666,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_30": {
       "name": "div_30",
@@ -683,7 +683,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_31": {
       "name": "div_31",
@@ -700,7 +700,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_ReadTheRelease": {
       "name": "div_ReadTheRelease",
@@ -722,7 +722,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "i_33": {
       "name": "i_33",
@@ -739,7 +739,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "span_ReadTheRelease": {
       "name": "span_ReadTheRelease",
@@ -761,7 +761,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_35": {
       "name": "div_35",
@@ -778,7 +778,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_Contact_Us": {
       "name": "div_Contact_Us",
@@ -800,7 +800,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "span_Contact_Us": {
       "name": "span_Contact_Us",
@@ -822,7 +822,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_38": {
       "name": "div_38",
@@ -839,7 +839,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_GlobalBioLink": {
       "name": "div_GlobalBioLink",
@@ -861,7 +861,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "span_GlobalBioLink": {
       "name": "span_GlobalBioLink",
@@ -883,7 +883,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_41": {
       "name": "div_41",
@@ -900,7 +900,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "div_ProductButton": {
       "name": "div_ProductButton",
@@ -922,7 +922,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.246Z"
     },
     "span_ProductButton": {
       "name": "span_ProductButton",
@@ -944,7 +944,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "div_44": {
       "name": "div_44",
@@ -961,7 +961,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "div_45": {
       "name": "div_45",
@@ -978,7 +978,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "div_46": {
       "name": "div_46",
@@ -995,7 +995,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "div_47": {
       "name": "div_47",
@@ -1012,7 +1012,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "div_48": {
       "name": "div_48",
@@ -1029,7 +1029,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "span_49": {
       "name": "span_49",
@@ -1046,7 +1046,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "div_50": {
       "name": "div_50",
@@ -1063,7 +1063,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "span_HonoredToBeRecognizedAgain": {
       "name": "span_HonoredToBeRecognizedAgain",
@@ -1085,7 +1085,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "span_52": {
       "name": "span_52",
@@ -1107,7 +1107,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     },
     "div_53": {
       "name": "div_53",
@@ -1124,7 +1124,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:04.094Z"
+      "lastVerified": "2026-08-07T06:16:38.247Z"
     }
   }
 }

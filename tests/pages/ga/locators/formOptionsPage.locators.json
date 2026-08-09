@@ -1,23 +1,8 @@
 {
   "component": "form-options",
-  "generatedAt": "2026-08-06T07:45:35.966Z",
+  "generatedAt": "2026-08-07T09:08:08.488Z",
   "source": "dom",
   "entries": {
-    "formOptionsPageRoot": {
-      "strategies": [
-        {
-          "type": "css",
-          "selector": ".cmp-formoptions",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-formoptions']",
-          "confidence": 0.7
-        }
-      ],
-      "primary": "css"
-    },
     "Option_ARadioButton": {
       "name": "Option_ARadioButton",
       "component": "form-options",

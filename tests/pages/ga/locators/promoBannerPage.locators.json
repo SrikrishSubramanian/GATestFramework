@@ -1,23 +1,8 @@
 {
   "component": "promo-banner",
-  "generatedAt": "2026-08-06T07:45:35.989Z",
+  "generatedAt": "2026-08-07T09:07:48.564Z",
   "source": "dom",
   "entries": {
-    "promoBannerPageRoot": {
-      "strategies": [
-        {
-          "type": "css",
-          "selector": ".cmp-promobanner",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-promobanner']",
-          "confidence": 0.7
-        }
-      ],
-      "primary": "css"
-    },
     "Learn_More": {
       "name": "Learn_More",
       "component": "promo-banner",

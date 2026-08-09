@@ -1,19 +1,448 @@
 {
+  "component": "statistic",
+  "generatedAt": "2026-08-07T09:07:37.739Z",
+  "source": "dom",
   "entries": {
-    "statisticPageRoot": {
+    "div_0": {
+      "name": "div_0",
+      "component": "statistic",
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-statistic",
+          "value": ".cmp-statistic__item",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "selector": "//div[@class='cmp-statistic']",
-          "confidence": 0.7
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$96M\n    \n\n    \n      Assets under management",
+          "confidence": 0.4
         }
-      ],
-      "primary": "css"
+      ]
+    },
+    "div_96M": {
+      "name": "div_96M",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$96M",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_AssetsUnderManagement": {
+      "name": "div_AssetsUnderManagement",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Assets under management",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_3": {
+      "name": "div_3",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "150+\n    \n\n    \n      Years of combined experience",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_150": {
+      "name": "div_150",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "150+",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_YearsOfCombinedExperience": {
+      "name": "div_YearsOfCombinedExperience",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Years of combined experience",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_6": {
+      "name": "div_6",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4.8/5\n    \n\n    \n      Customer satisfaction rating",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_485": {
+      "name": "div_485",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "4.8/5",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_CustomerSatisfactionRating": {
+      "name": "div_CustomerSatisfactionRating",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Customer satisfaction rating",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "68%\n    \n\n    \n      Client retention rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_68": {
+      "name": "div_68",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "68%",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_ClientRetentionRate": {
+      "name": "div_ClientRetentionRate",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Client retention rate",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_12": {
+      "name": "div_12",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "20K\n    \n\n    \n      Clients served nationwide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_20K": {
+      "name": "div_20K",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "20K",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_ClientsServedNationwide": {
+      "name": "div_ClientsServedNationwide",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Clients served nationwide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_15": {
+      "name": "div_15",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$42B\n    \n\n    \n      Total revenue generated",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_42B": {
+      "name": "div_42B",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$42B",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_TotalRevenueGenerated": {
+      "name": "div_TotalRevenueGenerated",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Total revenue generated",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_18": {
+      "name": "div_18",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "500+\n    \n\n    \n      Team members worldwide",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_500": {
+      "name": "div_500",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "500+",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_TeamMembersWorldwide": {
+      "name": "div_TeamMembersWorldwide",
+      "component": "statistic",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Team members worldwide",
+          "confidence": 0.4
+        }
+      ]
     }
   }
 }

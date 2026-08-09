@@ -1,6 +1,6 @@
 {
   "component": "product-path-summary-card",
-  "generatedAt": "2026-08-06T07:42:59.723Z",
+  "generatedAt": "2026-08-07T06:16:24.277Z",
   "source": "dom",
   "entries": {
     "aLinks": {
@@ -13,7 +13,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "ul_1": {
       "name": "ul_1",
@@ -30,7 +30,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "ul_2": {
       "name": "ul_2",
@@ -47,7 +47,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "ul_3": {
       "name": "ul_3",
@@ -64,7 +64,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "ul_4": {
       "name": "ul_4",
@@ -86,7 +86,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "ul_5": {
       "name": "ul_5",
@@ -103,7 +103,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_6": {
       "name": "div_6",
@@ -120,7 +120,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_Path_A": {
       "name": "div_Path_A",
@@ -142,7 +142,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_8": {
       "name": "div_8",
@@ -164,7 +164,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_9": {
       "name": "div_9",
@@ -181,7 +181,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_10": {
       "name": "div_10",
@@ -198,7 +198,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_30_": {
       "name": "div_30_",
@@ -220,7 +220,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_12": {
       "name": "div_12",
@@ -237,7 +237,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_Guaranteed_Rollup1": {
       "name": "div_Guaranteed_Rollup1",
@@ -259,7 +259,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_14": {
       "name": "div_14",
@@ -281,7 +281,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "div_15": {
       "name": "div_15",
@@ -298,7 +298,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.276Z"
     },
     "li_IncludedAtNoAdditionalCost": {
       "name": "li_IncludedAtNoAdditionalCost",
@@ -320,7 +320,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_Available_247WithDedicatedS": {
       "name": "li_Available_247WithDedicatedS",
@@ -342,7 +342,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_18": {
       "name": "li_18",
@@ -364,7 +364,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_FlexiblePremiumPaymentOptio": {
       "name": "li_FlexiblePremiumPaymentOptio",
@@ -386,7 +386,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Path_B": {
       "name": "div_Path_B",
@@ -408,7 +408,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Path_B_21": {
       "name": "div_Path_B_21",
@@ -430,7 +430,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_22": {
       "name": "div_22",
@@ -447,7 +447,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_23": {
       "name": "div_23",
@@ -464,7 +464,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_65": {
       "name": "div_65",
@@ -486,7 +486,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_25": {
       "name": "div_25",
@@ -503,7 +503,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Annual_Yield": {
       "name": "div_Annual_Yield",
@@ -525,7 +525,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_SubjectToMarketConditions": {
       "name": "div_SubjectToMarketConditions",
@@ -547,7 +547,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_28": {
       "name": "div_28",
@@ -564,7 +564,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_Minimum_1GuaranteedFloor": {
       "name": "li_Minimum_1GuaranteedFloor",
@@ -586,7 +586,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_NoSurrenderChargesAfterYea": {
       "name": "li_NoSurrenderChargesAfterYea",
@@ -608,7 +608,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_SupportsInlineLinksAndSupe": {
       "name": "li_SupportsInlineLinksAndSupe",
@@ -630,7 +630,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_32": {
       "name": "div_32",
@@ -647,7 +647,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.722Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Path_C": {
       "name": "div_Path_C",
@@ -669,7 +669,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_34": {
       "name": "div_34",
@@ -691,7 +691,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_35": {
       "name": "div_35",
@@ -708,7 +708,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_36": {
       "name": "div_36",
@@ -725,7 +725,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_4": {
       "name": "div_4",
@@ -742,7 +742,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Fixed_Rate": {
       "name": "div_Fixed_Rate",
@@ -764,7 +764,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Fixed_Rate_39": {
       "name": "div_Fixed_Rate_39",
@@ -786,7 +786,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_40": {
       "name": "div_40",
@@ -803,7 +803,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_PrincipalProtectionGuarantee": {
       "name": "li_PrincipalProtectionGuarantee",
@@ -825,7 +825,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_PredictableStableReturns": {
       "name": "li_PredictableStableReturns",
@@ -847,7 +847,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_NoMarketRiskExposure": {
       "name": "li_NoMarketRiskExposure",
@@ -869,7 +869,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_AnnualLiquidityProvisionsAv": {
       "name": "li_AnnualLiquidityProvisionsAv",
@@ -891,7 +891,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_45": {
       "name": "div_45",
@@ -908,7 +908,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Guaranteed_Income_Builder_Bene": {
       "name": "div_Guaranteed_Income_Builder_Bene",
@@ -930,7 +930,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_47": {
       "name": "div_47",
@@ -947,7 +947,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_48": {
       "name": "div_48",
@@ -964,7 +964,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_15_": {
       "name": "div_15_",
@@ -986,7 +986,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Guaranteed_Rollup": {
       "name": "div_Guaranteed_Rollup",
@@ -1008,7 +1008,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_Guaranteed_Rollup_51": {
       "name": "div_Guaranteed_Rollup_51",
@@ -1030,7 +1030,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_52": {
       "name": "div_52",
@@ -1052,7 +1052,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_53": {
       "name": "li_53",
@@ -1074,7 +1074,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_54": {
       "name": "div_54",
@@ -1091,7 +1091,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_55": {
       "name": "div_55",
@@ -1113,7 +1113,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_56": {
       "name": "div_56",
@@ -1130,7 +1130,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_57": {
       "name": "div_57",
@@ -1147,7 +1147,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_150_": {
       "name": "div_150_",
@@ -1169,7 +1169,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_59": {
       "name": "div_59",
@@ -1186,7 +1186,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_60": {
       "name": "div_60",
@@ -1208,7 +1208,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_61": {
       "name": "div_61",
@@ -1230,7 +1230,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "div_62": {
       "name": "div_62",
@@ -1247,7 +1247,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_63": {
       "name": "li_63",
@@ -1264,7 +1264,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     },
     "li_64": {
       "name": "li_64",
@@ -1286,7 +1286,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:59.723Z"
+      "lastVerified": "2026-08-07T06:16:24.277Z"
     }
   }
 }

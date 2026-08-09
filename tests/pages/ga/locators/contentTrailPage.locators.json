@@ -1,19 +1,208 @@
 {
+  "component": "content-trail",
+  "generatedAt": "2026-08-07T09:08:01.039Z",
+  "source": "dom",
   "entries": {
-    "contentTrailPageRoot": {
+    "ComeGrowWithUs": {
+      "name": "ComeGrowWithUs",
+      "component": "content-trail",
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-contenttrail",
+          "value": ".cmp-content-trail__container.cmp-content-trail__video",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Come grow with us']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ComeGrowWithUs_1": {
+      "name": "ComeGrowWithUs_1",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__container.cmp-content-trail__written",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Come grow with us']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ComeGrowWithUs_2": {
+      "name": "ComeGrowWithUs_2",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__container.cmp-content-trail__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Come grow with us']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "Close": {
+      "name": "Close",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_4": {
+      "name": "div_4",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__content",
           "confidence": 0.8
         },
         {
           "type": "xpath",
-          "selector": "//div[@class='cmp-contenttrail']",
-          "confidence": 0.7
+          "value": "//div[contains(@class,'cmp-content-trail__content')]",
+          "confidence": 0.6
         }
-      ],
-      "primary": "css"
+      ]
+    },
+    "div_ComeGrowWithUs": {
+      "name": "div_ComeGrowWithUs",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Come grow with us",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_6": {
+      "name": "p_6",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-content-trail__headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_7": {
+      "name": "div_7",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__video-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__video-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "dialog_8": {
+      "name": "dialog_8",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-content-trail__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_10": {
+      "name": "div_10",
+      "component": "content-trail",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-video-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-video-container')]",
+          "confidence": 0.6
+        }
+      ]
     }
   }
 }

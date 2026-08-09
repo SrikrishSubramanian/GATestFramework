@@ -22,14 +22,14 @@ export class HeadlineBlockPage {
     return resolveLocator(this.page, registry.entries.a_Link_Label);
   }
 
-  /** Locator for h2_2 */
-  get h2_2(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.h2_2);
-  }
-
   /** Locator for div_EyeBrow */
   get div_EyeBrow(): Promise<Locator> {
     return resolveLocator(this.page, registry.entries.div_EyeBrow);
+  }
+
+  /** Locator for div_3 */
+  get div_3(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_3);
   }
 
   /** Locator for div_4 */
@@ -71,15 +71,15 @@ export class HeadlineBlockPage {
     await el.click();
   }
 
-  /** Click h2_2 */
-  async clickH22() {
-    const el = await this.h2_2;
-    await el.click();
-  }
-
   /** Click div_EyeBrow */
   async clickDivEyebrow() {
     const el = await this.div_EyeBrow;
+    await el.click();
+  }
+
+  /** Click div_3 */
+  async clickDiv3() {
+    const el = await this.div_3;
     await el.click();
   }
 

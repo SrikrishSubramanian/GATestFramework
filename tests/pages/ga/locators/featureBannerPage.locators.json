@@ -1,32 +1,12 @@
 {
   "component": "feature-banner",
-  "generatedAt": "2026-08-06T07:45:35.962Z",
+  "generatedAt": "2026-08-07T09:07:14.551Z",
   "source": "dom",
   "entries": {
-    "featureBannerPageRoot": {
-      "strategies": [
-        {
-          "type": "css",
-          "selector": ".cmp-featurebanner",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-featurebanner']",
-          "confidence": 0.7
-        }
-      ],
-      "primary": "css"
-    },
     "a_Optional_CTA": {
       "name": "a_Optional_CTA",
       "component": "feature-banner",
       "strategies": [
-        {
-          "type": "id",
-          "value": "button-86fc7b1137",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-button",
@@ -46,6 +26,11 @@
           "type": "text",
           "value": "Optional CTA",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "button-86fc7b1137",
+          "confidence": 0.3
         }
       ]
     },

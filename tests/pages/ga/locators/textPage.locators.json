@@ -14,6 +14,271 @@
         }
       ],
       "primary": "css"
+    },
+    "textRoot": {
+      "name": "textRoot",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "table": {
+      "name": "table",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text table",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "tableWithDividers": {
+      "name": "tableWithDividers",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text table.table-dividers",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "caption": {
+      "name": "caption",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text table caption",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "thead": {
+      "name": "thead",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text thead",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "tbody": {
+      "name": "tbody",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text tbody",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "headerCell": {
+      "name": "headerCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text th, .cmp-text td.table-cell-header",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "subheaderCell": {
+      "name": "subheaderCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text td.table-cell-subheader",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "stripeCell": {
+      "name": "stripeCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text td.table-cell-stripe",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "blankCell": {
+      "name": "blankCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text td.table-cell-blank",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "blankStripeCell": {
+      "name": "blankStripeCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text td.table-cell-blank-stripe",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "highlightCell": {
+      "name": "highlightCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text td.table-cell-highlight",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "iconLeftCell": {
+      "name": "iconLeftCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text td.icon-left",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "iconRightCell": {
+      "name": "iconRightCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text td.icon-right",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "bodyCell": {
+      "name": "bodyCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text td",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "scopedHeader": {
+      "name": "scopedHeader",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text th[scope]",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "ariaHiddenImg": {
+      "name": "ariaHiddenImg",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text img[aria-hidden=\"true\"]",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "focusableScrollContainer": {
+      "name": "focusableScrollContainer",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-text[tabindex=\"0\"]",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "darkModeSection": {
+      "name": "darkModeSection",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-section--background-color-granite",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "darkModeTable": {
+      "name": "darkModeTable",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-section--background-color-granite .cmp-text table",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "darkModeHeaderCell": {
+      "name": "darkModeHeaderCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-section--background-color-granite .cmp-text th",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
+    },
+    "darkModeBodyCell": {
+      "name": "darkModeBodyCell",
+      "component": "text",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-section--background-color-granite .cmp-text td",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:24:36.439Z"
     }
-  }
+  },
+  "generatedAt": "2026-08-07T09:24:36.439Z"
 }

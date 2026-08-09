@@ -1,23 +1,8 @@
 {
   "component": "tabs",
-  "generatedAt": "2026-08-06T07:45:35.995Z",
+  "generatedAt": "2026-08-07T09:07:32.377Z",
   "source": "dom",
   "entries": {
-    "tabsPageRoot": {
-      "strategies": [
-        {
-          "type": "css",
-          "selector": ".cmp-tabs",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-tabs']",
-          "confidence": 0.7
-        }
-      ],
-      "primary": "css"
-    },
     "ol_0": {
       "name": "ol_0",
       "component": "tabs",
@@ -256,11 +241,6 @@
       "component": "tabs",
       "strategies": [
         {
-          "type": "id",
-          "value": "tab-798200ac18",
-          "confidence": 0.95
-        },
-        {
           "type": "css",
           "value": ".cmp-tabs__tabpanel.cmp-tabs__tabpanel--active",
           "confidence": 0.8
@@ -274,6 +254,11 @@
           "type": "xpath",
           "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
           "confidence": 0.6
+        },
+        {
+          "type": "id",
+          "value": "tab-798200ac18",
+          "confidence": 0.3
         }
       ]
     },
@@ -281,11 +266,6 @@
       "name": "div_9",
       "component": "tabs",
       "strategies": [
-        {
-          "type": "id",
-          "value": "tab-73bb9869e7",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-tabs__tabpanel",
@@ -300,6 +280,11 @@
           "type": "xpath",
           "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
           "confidence": 0.6
+        },
+        {
+          "type": "id",
+          "value": "tab-73bb9869e7",
+          "confidence": 0.3
         }
       ]
     },
@@ -307,11 +292,6 @@
       "name": "div_10",
       "component": "tabs",
       "strategies": [
-        {
-          "type": "id",
-          "value": "tab-577552c67d",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-tabs__tabpanel",
@@ -331,6 +311,11 @@
           "type": "text",
           "value": "Test 3\n    \n\n    \n        Test 3\n    \n\n    \n      Test 3",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "tab-577552c67d",
+          "confidence": 0.3
         }
       ]
     },
@@ -338,11 +323,6 @@
       "name": "div_11",
       "component": "tabs",
       "strategies": [
-        {
-          "type": "id",
-          "value": "tab-b6f94f8223",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-tabs__tabpanel",
@@ -362,6 +342,11 @@
           "type": "text",
           "value": "Test 4\n    \n\n    \n        Test 4\n    \n\n    \n      Test 4",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "tab-b6f94f8223",
+          "confidence": 0.3
         }
       ]
     },
@@ -369,11 +354,6 @@
       "name": "div_12",
       "component": "tabs",
       "strategies": [
-        {
-          "type": "id",
-          "value": "tab-217d69c8b3",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-tabs__tabpanel",
@@ -393,6 +373,11 @@
           "type": "text",
           "value": "Test 5\n    \n\n    \n        Test 5\n    \n\n    \n      Test 5",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "tab-217d69c8b3",
+          "confidence": 0.3
         }
       ]
     },
@@ -400,11 +385,6 @@
       "name": "div_13",
       "component": "tabs",
       "strategies": [
-        {
-          "type": "id",
-          "value": "tab-f1a75538be",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-tabs__tabpanel",
@@ -424,6 +404,11 @@
           "type": "text",
           "value": "Test 6\n    \n\n    \n        Test 6\n    \n\n    \n      Test 6",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "tab-f1a75538be",
+          "confidence": 0.3
         }
       ]
     },
@@ -431,11 +416,6 @@
       "name": "div_14",
       "component": "tabs",
       "strategies": [
-        {
-          "type": "id",
-          "value": "image-7f7d722407",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-tabs__tabpanel",
@@ -450,6 +430,11 @@
           "type": "xpath",
           "value": "//div[contains(@class,'cmp-tabs__tabpanel')]",
           "confidence": 0.6
+        },
+        {
+          "type": "id",
+          "value": "image-7f7d722407",
+          "confidence": 0.3
         }
       ]
     },

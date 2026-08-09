@@ -12,19 +12,19 @@ export class StatisticPage {
     await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/statistic.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
-  /** Locator for div_42M_GrowthIn_Sales */
-  get div_42M_GrowthIn_Sales(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_42M_GrowthIn_Sales);
+  /** Locator for div_0 */
+  get div_0(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_0);
   }
 
-  /** Locator for div_42M */
-  get div_42M(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_42M);
+  /** Locator for div_96M */
+  get div_96M(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_96M);
   }
 
-  /** Locator for div_GrowthIn_Sales */
-  get div_GrowthIn_Sales(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_GrowthIn_Sales);
+  /** Locator for div_AssetsUnderManagement */
+  get div_AssetsUnderManagement(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_AssetsUnderManagement);
   }
 
   /** Locator for div_3 */
@@ -32,14 +32,14 @@ export class StatisticPage {
     return resolveLocator(this.page, registry.entries.div_3);
   }
 
-  /** Locator for div_5B */
-  get div_5B(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_5B);
+  /** Locator for div_150 */
+  get div_150(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_150);
   }
 
-  /** Locator for div_Assets_Under_Management */
-  get div_Assets_Under_Management(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Assets_Under_Management);
+  /** Locator for div_YearsOfCombinedExperience */
+  get div_YearsOfCombinedExperience(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_YearsOfCombinedExperience);
   }
 
   /** Locator for div_6 */
@@ -47,14 +47,14 @@ export class StatisticPage {
     return resolveLocator(this.page, registry.entries.div_6);
   }
 
-  /** Locator for div_25K */
-  get div_25K(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_25K);
+  /** Locator for div_485 */
+  get div_485(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_485);
   }
 
-  /** Locator for div_Investment_Professionals */
-  get div_Investment_Professionals(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Investment_Professionals);
+  /** Locator for div_CustomerSatisfactionRating */
+  get div_CustomerSatisfactionRating(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_CustomerSatisfactionRating);
   }
 
   /** Locator for div_9 */
@@ -62,14 +62,14 @@ export class StatisticPage {
     return resolveLocator(this.page, registry.entries.div_9);
   }
 
-  /** Locator for div_89 */
-  get div_89(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_89);
+  /** Locator for div_68 */
+  get div_68(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_68);
   }
 
-  /** Locator for div_Customer_Satisfaction */
-  get div_Customer_Satisfaction(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Customer_Satisfaction);
+  /** Locator for div_ClientRetentionRate */
+  get div_ClientRetentionRate(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_ClientRetentionRate);
   }
 
   /** Locator for div_12 */
@@ -77,29 +77,29 @@ export class StatisticPage {
     return resolveLocator(this.page, registry.entries.div_12);
   }
 
-  /** Locator for div_150 */
-  get div_150(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_150);
+  /** Locator for div_20K */
+  get div_20K(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_20K);
   }
 
-  /** Locator for div_Portfolio_Companies */
-  get div_Portfolio_Companies(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Portfolio_Companies);
+  /** Locator for div_ClientsServedNationwide */
+  get div_ClientsServedNationwide(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_ClientsServedNationwide);
   }
 
-  /** Locator for div_30T_Global_Capital */
-  get div_30T_Global_Capital(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_30T_Global_Capital);
+  /** Locator for div_15 */
+  get div_15(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_15);
   }
 
-  /** Locator for div_30T */
-  get div_30T(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_30T);
+  /** Locator for div_42B */
+  get div_42B(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_42B);
   }
 
-  /** Locator for div_Global_Capital */
-  get div_Global_Capital(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Global_Capital);
+  /** Locator for div_TotalRevenueGenerated */
+  get div_TotalRevenueGenerated(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_TotalRevenueGenerated);
   }
 
   /** Locator for div_18 */
@@ -107,48 +107,33 @@ export class StatisticPage {
     return resolveLocator(this.page, registry.entries.div_18);
   }
 
-  /** Locator for div_750M */
-  get div_750M(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_750M);
+  /** Locator for div_500 */
+  get div_500(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_500);
   }
 
-  /** Locator for div_Private_Equity_Dry_Powder */
-  get div_Private_Equity_Dry_Powder(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Private_Equity_Dry_Powder);
-  }
-
-  /** Locator for div_500K_People_Impacted */
-  get div_500K_People_Impacted(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_500K_People_Impacted);
-  }
-
-  /** Locator for div_500K */
-  get div_500K(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_500K);
-  }
-
-  /** Locator for div_People_Impacted */
-  get div_People_Impacted(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_People_Impacted);
+  /** Locator for div_TeamMembersWorldwide */
+  get div_TeamMembersWorldwide(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_TeamMembersWorldwide);
   }
 
   // --- Actions ---
 
-  /** Click div_42M_GrowthIn_Sales */
-  async clickDiv42mGrowthinSales() {
-    const el = await this.div_42M_GrowthIn_Sales;
+  /** Click div_0 */
+  async clickDiv0() {
+    const el = await this.div_0;
     await el.click();
   }
 
-  /** Click div_42M */
-  async clickDiv42m() {
-    const el = await this.div_42M;
+  /** Click div_96M */
+  async clickDiv96m() {
+    const el = await this.div_96M;
     await el.click();
   }
 
-  /** Click div_GrowthIn_Sales */
-  async clickDivGrowthinSales() {
-    const el = await this.div_GrowthIn_Sales;
+  /** Click div_AssetsUnderManagement */
+  async clickDivAssetsundermanagement() {
+    const el = await this.div_AssetsUnderManagement;
     await el.click();
   }
 
@@ -158,15 +143,15 @@ export class StatisticPage {
     await el.click();
   }
 
-  /** Click div_5B */
-  async clickDiv5b() {
-    const el = await this.div_5B;
+  /** Click div_150 */
+  async clickDiv150() {
+    const el = await this.div_150;
     await el.click();
   }
 
-  /** Click div_Assets_Under_Management */
-  async clickDivAssetsUnderManagement() {
-    const el = await this.div_Assets_Under_Management;
+  /** Click div_YearsOfCombinedExperience */
+  async clickDivYearsofcombinedexperience() {
+    const el = await this.div_YearsOfCombinedExperience;
     await el.click();
   }
 
@@ -176,15 +161,15 @@ export class StatisticPage {
     await el.click();
   }
 
-  /** Click div_25K */
-  async clickDiv25k() {
-    const el = await this.div_25K;
+  /** Click div_485 */
+  async clickDiv485() {
+    const el = await this.div_485;
     await el.click();
   }
 
-  /** Click div_Investment_Professionals */
-  async clickDivInvestmentProfessionals() {
-    const el = await this.div_Investment_Professionals;
+  /** Click div_CustomerSatisfactionRating */
+  async clickDivCustomersatisfactionrating() {
+    const el = await this.div_CustomerSatisfactionRating;
     await el.click();
   }
 

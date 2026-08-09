@@ -22,9 +22,9 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.button_HowDo_IContactCustomerServ);
   }
 
-  /** Locator for f5a1a9051a8d4c52bf83deaacfb86401 */
-  get f5a1a9051a8d4c52bf83deaacfb86401(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.f5a1a9051a8d4c52bf83deaacfb86401);
+  /** Locator for button_2 */
+  get button_2(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.button_2);
   }
 
   /** Locator for button_WhereCan_IFindMyPolicyDoc */
@@ -32,169 +32,89 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.button_WhereCan_IFindMyPolicyDoc);
   }
 
-  /** Locator for button_SingleExpansionModeExample */
-  get button_SingleExpansionModeExample(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.button_SingleExpansionModeExample);
+  /** Locator for button_Corporate_Pension_Plans */
+  get button_Corporate_Pension_Plans(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.button_Corporate_Pension_Plans);
   }
 
-  /** Locator for button_HowDoesSingleExpansionWork */
-  get button_HowDoesSingleExpansionWork(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.button_HowDoesSingleExpansionWork);
+  /** Locator for button_Public_Pension_Plans */
+  get button_Public_Pension_Plans(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.button_Public_Pension_Plans);
   }
 
-  /** Locator for el2667027661d04d6682d7782a3c576df4 */
-  get el2667027661d04d6682d7782a3c576df4(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.el2667027661d04d6682d7782a3c576df4);
+  /** Locator for button_Sovereign_Wealth_Funds */
+  get button_Sovereign_Wealth_Funds(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.button_Sovereign_Wealth_Funds);
   }
 
-  /** Locator for button_DarkBackgroundAccordionItem */
-  get button_DarkBackgroundAccordionItem(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.button_DarkBackgroundAccordionItem);
+  /** Locator for button_Insurance_Companies */
+  get button_Insurance_Companies(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.button_Insurance_Companies);
   }
 
-  /** Locator for button_HowDoDarkBackgroundStyles_ */
-  get button_HowDoDarkBackgroundStyles_(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.button_HowDoDarkBackgroundStyles_);
+  /** Locator for button_Endowments_Foundations */
+  get button_Endowments_Foundations(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.button_Endowments_Foundations);
   }
 
-  /** Locator for button_IsTheIconAnimationTheSame */
-  get button_IsTheIconAnimationTheSame(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.button_IsTheIconAnimationTheSame);
+  /** Locator for button_Health_Care_Organizations */
+  get button_Health_Care_Organizations(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.button_Health_Care_Organizations);
   }
 
-  /** Locator for button_AzulBackgroundAccordionItem */
-  get button_AzulBackgroundAccordionItem(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.button_AzulBackgroundAccordionItem);
+  /** Locator for span_WhatIs_Global_Atlantic */
+  get span_WhatIs_Global_Atlantic(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_WhatIs_Global_Atlantic);
   }
 
-  /** Locator for button_AnotherAccordionItemOnAzul */
-  get button_AnotherAccordionItemOnAzul(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.button_AnotherAccordionItemOnAzul);
+  /** Locator for span_HowDo_IContactCustomerServ */
+  get span_HowDo_IContactCustomerServ(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_HowDo_IContactCustomerServ);
   }
 
-  /** Locator for accordionItem_7bcebf78d9Panel */
-  get accordionItem_7bcebf78d9Panel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItem_7bcebf78d9Panel);
+  /** Locator for span_12 */
+  get span_12(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_12);
   }
 
-  /** Locator for fd8b24fd82984d84904e505e54ca5327 */
-  get fd8b24fd82984d84904e505e54ca5327(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.fd8b24fd82984d84904e505e54ca5327);
+  /** Locator for span_WhereCan_IFindMyPolicyDoc */
+  get span_WhereCan_IFindMyPolicyDoc(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_WhereCan_IFindMyPolicyDoc);
   }
 
-  /** Locator for accordionItemF96058c61bPanel */
-  get accordionItemF96058c61bPanel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItemF96058c61bPanel);
+  /** Locator for span_Corporate_Pension_Plans */
+  get span_Corporate_Pension_Plans(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_Corporate_Pension_Plans);
   }
 
-  /** Locator for el2c73a685e6c14760b7875fe7ab447cd8 */
-  get el2c73a685e6c14760b7875fe7ab447cd8(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.el2c73a685e6c14760b7875fe7ab447cd8);
+  /** Locator for span_Public_Pension_Plans */
+  get span_Public_Pension_Plans(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_Public_Pension_Plans);
   }
 
-  /** Locator for accordionItemE92b3cd16dPanel */
-  get accordionItemE92b3cd16dPanel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItemE92b3cd16dPanel);
+  /** Locator for span_Sovereign_Wealth_Funds */
+  get span_Sovereign_Wealth_Funds(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_Sovereign_Wealth_Funds);
   }
 
-  /** Locator for el531fd91b5b464ef091b4a24043ec0b9b */
-  get el531fd91b5b464ef091b4a24043ec0b9b(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.el531fd91b5b464ef091b4a24043ec0b9b);
+  /** Locator for span_Insurance_Companies */
+  get span_Insurance_Companies(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_Insurance_Companies);
   }
 
-  /** Locator for accordionItem_139cc6958aPanel */
-  get accordionItem_139cc6958aPanel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItem_139cc6958aPanel);
+  /** Locator for span_Endowments_Foundations */
+  get span_Endowments_Foundations(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_Endowments_Foundations);
   }
 
-  /** Locator for el1c0c5c9513fb4b5b97e97c0c543c69e1 */
-  get el1c0c5c9513fb4b5b97e97c0c543c69e1(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.el1c0c5c9513fb4b5b97e97c0c543c69e1);
+  /** Locator for span_Health_Care_Organizations */
+  get span_Health_Care_Organizations(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.span_Health_Care_Organizations);
   }
 
-  /** Locator for accordionItemA3f45cd64aPanel */
-  get accordionItemA3f45cd64aPanel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItemA3f45cd64aPanel);
-  }
-
-  /** Locator for b36d86405f5b49d48080eb0195066610 */
-  get b36d86405f5b49d48080eb0195066610(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.b36d86405f5b49d48080eb0195066610);
-  }
-
-  /** Locator for accordionItemCfae96c9ecPanel */
-  get accordionItemCfae96c9ecPanel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItemCfae96c9ecPanel);
-  }
-
-  /** Locator for e091e79310e8414ba2b38615833cf056 */
-  get e091e79310e8414ba2b38615833cf056(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.e091e79310e8414ba2b38615833cf056);
-  }
-
-  /** Locator for accordionItem_0765808f57Panel */
-  get accordionItem_0765808f57Panel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItem_0765808f57Panel);
-  }
-
-  /** Locator for el060da03dc95c4fb2884d72efc391b9dc */
-  get el060da03dc95c4fb2884d72efc391b9dc(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.el060da03dc95c4fb2884d72efc391b9dc);
-  }
-
-  /** Locator for accordionItem_769a592d51Panel */
-  get accordionItem_769a592d51Panel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItem_769a592d51Panel);
-  }
-
-  /** Locator for el2a9b45692f2c43a7b1da2189387308ee */
-  get el2a9b45692f2c43a7b1da2189387308ee(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.el2a9b45692f2c43a7b1da2189387308ee);
-  }
-
-  /** Locator for accordionItem_2e8d31b3a6Panel */
-  get accordionItem_2e8d31b3a6Panel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItem_2e8d31b3a6Panel);
-  }
-
-  /** Locator for c2f9114a542a478eae5fcab39451ddd6 */
-  get c2f9114a542a478eae5fcab39451ddd6(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.c2f9114a542a478eae5fcab39451ddd6);
-  }
-
-  /** Locator for accordionItem_590b2cc446Panel */
-  get accordionItem_590b2cc446Panel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItem_590b2cc446Panel);
-  }
-
-  /** Locator for el371c1276b2da4216a20c39e8ce107e11 */
-  get el371c1276b2da4216a20c39e8ce107e11(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.el371c1276b2da4216a20c39e8ce107e11);
-  }
-
-  /** Locator for accordionItem_60d74c83b5Panel */
-  get accordionItem_60d74c83b5Panel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItem_60d74c83b5Panel);
-  }
-
-  /** Locator for el9658c6dfe3dd470aa51dc8fbb2c00996 */
-  get el9658c6dfe3dd470aa51dc8fbb2c00996(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.el9658c6dfe3dd470aa51dc8fbb2c00996);
-  }
-
-  /** Locator for accordionItemF44480987fPanel */
-  get accordionItemF44480987fPanel(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItemF44480987fPanel);
-  }
-
-  /** Locator for c4e15c23df484fcaaffec099c42cc6e5 */
-  get c4e15c23df484fcaaffec099c42cc6e5(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.c4e15c23df484fcaaffec099c42cc6e5);
-  }
-
-  /** Locator for div_36 */
-  get div_36(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_36);
+  /** Locator for div_20 */
+  get div_20(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_20);
   }
 
   /** Locator for accordionItem_7bcebf78d9 */
@@ -202,24 +122,34 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItem_7bcebf78d9);
   }
 
+  /** Locator for accordionItem_7bcebf78d9Panel */
+  get accordionItem_7bcebf78d9Panel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItem_7bcebf78d9Panel);
+  }
+
   /** Locator for div_WhatIs_Global_Atlantic */
   get div_WhatIs_Global_Atlantic(): Promise<Locator> {
     return resolveLocator(this.page, registry.entries.div_WhatIs_Global_Atlantic);
   }
 
-  /** Locator for span_39 */
-  get span_39(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_39);
+  /** Locator for div_24 */
+  get div_24(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_24);
   }
 
-  /** Locator for span_40 */
-  get span_40(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_40);
+  /** Locator for svg_25 */
+  get svg_25(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.svg_25);
   }
 
-  /** Locator for span_41 */
-  get span_41(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.span_41);
+  /** Locator for div_26 */
+  get div_26(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_26);
+  }
+
+  /** Locator for div_27 */
+  get div_27(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_27);
   }
 
   /** Locator for accordionItemF96058c61b */
@@ -227,9 +157,19 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItemF96058c61b);
   }
 
+  /** Locator for accordionItemF96058c61bPanel */
+  get accordionItemF96058c61bPanel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItemF96058c61bPanel);
+  }
+
   /** Locator for div_HowDo_IContactCustomerServ */
   get div_HowDo_IContactCustomerServ(): Promise<Locator> {
     return resolveLocator(this.page, registry.entries.div_HowDo_IContactCustomerServ);
+  }
+
+  /** Locator for div_31 */
+  get div_31(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_31);
   }
 
   /** Locator for accordionItemE92b3cd16d */
@@ -237,9 +177,19 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItemE92b3cd16d);
   }
 
-  /** Locator for div_45 */
-  get div_45(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_45);
+  /** Locator for accordionItemE92b3cd16dPanel */
+  get accordionItemE92b3cd16dPanel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItemE92b3cd16dPanel);
+  }
+
+  /** Locator for div_34 */
+  get div_34(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_34);
+  }
+
+  /** Locator for div_35 */
+  get div_35(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_35);
   }
 
   /** Locator for accordionItem_139cc6958a */
@@ -247,14 +197,24 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItem_139cc6958a);
   }
 
+  /** Locator for accordionItem_139cc6958aPanel */
+  get accordionItem_139cc6958aPanel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItem_139cc6958aPanel);
+  }
+
   /** Locator for div_WhereCan_IFindMyPolicyDoc */
   get div_WhereCan_IFindMyPolicyDoc(): Promise<Locator> {
     return resolveLocator(this.page, registry.entries.div_WhereCan_IFindMyPolicyDoc);
   }
 
-  /** Locator for div_48 */
-  get div_48(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_48);
+  /** Locator for div_39 */
+  get div_39(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_39);
+  }
+
+  /** Locator for div_40 */
+  get div_40(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_40);
   }
 
   /** Locator for accordionItemA3f45cd64a */
@@ -262,9 +222,19 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItemA3f45cd64a);
   }
 
-  /** Locator for div_SingleExpansionModeExample */
-  get div_SingleExpansionModeExample(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_SingleExpansionModeExample);
+  /** Locator for accordionItemA3f45cd64aPanel */
+  get accordionItemA3f45cd64aPanel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItemA3f45cd64aPanel);
+  }
+
+  /** Locator for div_Corporate_Pension_Plans */
+  get div_Corporate_Pension_Plans(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Corporate_Pension_Plans);
+  }
+
+  /** Locator for div_44 */
+  get div_44(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_44);
   }
 
   /** Locator for accordionItemCfae96c9ec */
@@ -272,9 +242,19 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItemCfae96c9ec);
   }
 
-  /** Locator for div_HowDoesSingleExpansionWork */
-  get div_HowDoesSingleExpansionWork(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_HowDoesSingleExpansionWork);
+  /** Locator for accordionItemCfae96c9ecPanel */
+  get accordionItemCfae96c9ecPanel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItemCfae96c9ecPanel);
+  }
+
+  /** Locator for div_Public_Pension_Plans */
+  get div_Public_Pension_Plans(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Public_Pension_Plans);
+  }
+
+  /** Locator for div_48 */
+  get div_48(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_48);
   }
 
   /** Locator for accordionItem_0765808f57 */
@@ -282,14 +262,24 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItem_0765808f57);
   }
 
-  /** Locator for div_54 */
-  get div_54(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_54);
+  /** Locator for accordionItem_0765808f57Panel */
+  get accordionItem_0765808f57Panel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItem_0765808f57Panel);
   }
 
-  /** Locator for div_55 */
-  get div_55(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_55);
+  /** Locator for div_Sovereign_Wealth_Funds */
+  get div_Sovereign_Wealth_Funds(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Sovereign_Wealth_Funds);
+  }
+
+  /** Locator for div_52 */
+  get div_52(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_52);
+  }
+
+  /** Locator for div_53 */
+  get div_53(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_53);
   }
 
   /** Locator for accordionItem_769a592d51 */
@@ -297,9 +287,19 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItem_769a592d51);
   }
 
-  /** Locator for div_DarkBackgroundAccordionItem */
-  get div_DarkBackgroundAccordionItem(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_DarkBackgroundAccordionItem);
+  /** Locator for accordionItem_769a592d51Panel */
+  get accordionItem_769a592d51Panel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItem_769a592d51Panel);
+  }
+
+  /** Locator for div_Insurance_Companies */
+  get div_Insurance_Companies(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Insurance_Companies);
+  }
+
+  /** Locator for div_57 */
+  get div_57(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_57);
   }
 
   /** Locator for accordionItem_2e8d31b3a6 */
@@ -307,9 +307,19 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItem_2e8d31b3a6);
   }
 
-  /** Locator for div_HowDoDarkBackgroundStyles_ */
-  get div_HowDoDarkBackgroundStyles_(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_HowDoDarkBackgroundStyles_);
+  /** Locator for accordionItem_2e8d31b3a6Panel */
+  get accordionItem_2e8d31b3a6Panel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItem_2e8d31b3a6Panel);
+  }
+
+  /** Locator for div_Endowments_Foundations */
+  get div_Endowments_Foundations(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Endowments_Foundations);
+  }
+
+  /** Locator for div_61 */
+  get div_61(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_61);
   }
 
   /** Locator for accordionItem_590b2cc446 */
@@ -317,34 +327,19 @@ export class AccordionPage {
     return resolveLocator(this.page, registry.entries.accordionItem_590b2cc446);
   }
 
-  /** Locator for div_IsTheIconAnimationTheSame */
-  get div_IsTheIconAnimationTheSame(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_IsTheIconAnimationTheSame);
+  /** Locator for accordionItem_590b2cc446Panel */
+  get accordionItem_590b2cc446Panel(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.accordionItem_590b2cc446Panel);
   }
 
-  /** Locator for div_62 */
-  get div_62(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_62);
+  /** Locator for div_Health_Care_Organizations */
+  get div_Health_Care_Organizations(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Health_Care_Organizations);
   }
 
-  /** Locator for accordionItem_60d74c83b5 */
-  get accordionItem_60d74c83b5(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItem_60d74c83b5);
-  }
-
-  /** Locator for div_AzulBackgroundAccordionItem */
-  get div_AzulBackgroundAccordionItem(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_AzulBackgroundAccordionItem);
-  }
-
-  /** Locator for accordionItemF44480987f */
-  get accordionItemF44480987f(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.accordionItemF44480987f);
-  }
-
-  /** Locator for div_AnotherAccordionItemOnAzul */
-  get div_AnotherAccordionItemOnAzul(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_AnotherAccordionItemOnAzul);
+  /** Locator for div_65 */
+  get div_65(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_65);
   }
 
   // --- Actions ---
@@ -361,9 +356,9 @@ export class AccordionPage {
     await el.click();
   }
 
-  /** Click f5a1a9051a8d4c52bf83deaacfb86401 */
-  async clickF5a1a9051a8d4c52bf83deaacfb86401() {
-    const el = await this.f5a1a9051a8d4c52bf83deaacfb86401;
+  /** Click button_2 */
+  async clickButton2() {
+    const el = await this.button_2;
     await el.click();
   }
 
@@ -373,39 +368,39 @@ export class AccordionPage {
     await el.click();
   }
 
-  /** Click button_SingleExpansionModeExample */
-  async clickButtonSingleexpansionmodeexample() {
-    const el = await this.button_SingleExpansionModeExample;
+  /** Click button_Corporate_Pension_Plans */
+  async clickButtonCorporatePensionPlans() {
+    const el = await this.button_Corporate_Pension_Plans;
     await el.click();
   }
 
-  /** Click button_HowDoesSingleExpansionWork */
-  async clickButtonHowdoessingleexpansionwork() {
-    const el = await this.button_HowDoesSingleExpansionWork;
+  /** Click button_Public_Pension_Plans */
+  async clickButtonPublicPensionPlans() {
+    const el = await this.button_Public_Pension_Plans;
     await el.click();
   }
 
-  /** Click el2667027661d04d6682d7782a3c576df4 */
-  async clickEl2667027661d04d6682d7782a3c576df4() {
-    const el = await this.el2667027661d04d6682d7782a3c576df4;
+  /** Click button_Sovereign_Wealth_Funds */
+  async clickButtonSovereignWealthFunds() {
+    const el = await this.button_Sovereign_Wealth_Funds;
     await el.click();
   }
 
-  /** Click button_DarkBackgroundAccordionItem */
-  async clickButtonDarkbackgroundaccordionitem() {
-    const el = await this.button_DarkBackgroundAccordionItem;
+  /** Click button_Insurance_Companies */
+  async clickButtonInsuranceCompanies() {
+    const el = await this.button_Insurance_Companies;
     await el.click();
   }
 
-  /** Click button_HowDoDarkBackgroundStyles_ */
-  async clickButtonHowdodarkbackgroundstyles() {
-    const el = await this.button_HowDoDarkBackgroundStyles_;
+  /** Click button_Endowments_Foundations */
+  async clickButtonEndowmentsFoundations() {
+    const el = await this.button_Endowments_Foundations;
     await el.click();
   }
 
-  /** Click button_IsTheIconAnimationTheSame */
-  async clickButtonIstheiconanimationthesame() {
-    const el = await this.button_IsTheIconAnimationTheSame;
+  /** Click button_Health_Care_Organizations */
+  async clickButtonHealthCareOrganizations() {
+    const el = await this.button_Health_Care_Organizations;
     await el.click();
   }
 }

@@ -1,6 +1,6 @@
 {
   "component": "video-external",
-  "generatedAt": "2026-08-06T07:45:35.998Z",
+  "generatedAt": "2026-08-07T06:16:34.045Z",
   "source": "dom",
   "entries": {
     "videoExternalPageRoot": {
@@ -32,7 +32,8 @@
           "value": "//a[contains(@class,'cmp-button--color-secondary')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "Play_Video": {
       "name": "Play_Video",
@@ -58,7 +59,8 @@
           "value": "Play Video",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "Should_Not_Appear": {
       "name": "Should_Not_Appear",
@@ -84,7 +86,8 @@
           "value": "Should Not Appear",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "h2_Brightcove_Overlay": {
       "name": "h2_Brightcove_Overlay",
@@ -95,7 +98,8 @@
           "value": "Brightcove Overlay",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "h2_Text_Right_White": {
       "name": "h2_Text_Right_White",
@@ -106,7 +110,8 @@
           "value": "Text Right, White",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "h2_Text_Left_White": {
       "name": "h2_Text_Left_White",
@@ -117,7 +122,8 @@
           "value": "Text Left, White",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "h2_Should_Not_Appear": {
       "name": "h2_Should_Not_Appear",
@@ -128,7 +134,8 @@
           "value": "Should Not Appear",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "h2_Text_Right_Dark": {
       "name": "h2_Text_Right_Dark",
@@ -139,7 +146,8 @@
           "value": "Text Right, Dark",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "h2_Text_Left_Dark": {
       "name": "h2_Text_Left_Dark",
@@ -150,7 +158,8 @@
           "value": "Text Left, Dark",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "imgImage_9": {
       "name": "imgImage_9",
@@ -166,7 +175,8 @@
           "value": "//img[contains(@class,'cmp-video-external_image')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "PlayVideo": {
       "name": "PlayVideo",
@@ -187,7 +197,8 @@
           "value": "//div[contains(@class,'cmp-video-external__play-button')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "PlayVideo_11": {
       "name": "PlayVideo_11",
@@ -208,7 +219,8 @@
           "value": "//div[contains(@class,'cmp-video-external__image-play-button')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "Pause": {
       "name": "Pause",
@@ -229,7 +241,8 @@
           "value": "//div[contains(@class,'cmp-video-external__background-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "Play": {
       "name": "Play",
@@ -250,7 +263,8 @@
           "value": "//div[contains(@class,'cmp-video-external__background-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "Play_Video_14": {
       "name": "Play_Video_14",
@@ -276,7 +290,8 @@
           "value": "Play Video",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "Play_Video_15": {
       "name": "Play_Video_15",
@@ -302,7 +317,8 @@
           "value": "Play Video",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "player_NpEaa2P7qZI": {
       "name": "player_NpEaa2P7qZI",
@@ -323,7 +339,8 @@
           "value": "//div[contains(@class,'cmp-video-external__video')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_17": {
       "name": "div_17",
@@ -339,7 +356,8 @@
           "value": "//div[contains(@class,'cmp-video-external__overlay')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_18": {
       "name": "div_18",
@@ -355,7 +373,8 @@
           "value": "//div[contains(@class,'cmp-video-external__image-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "span_19": {
       "name": "span_19",
@@ -371,7 +390,8 @@
           "value": "//span[contains(@class,'cmp-video-external__label-overlay')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_20": {
       "name": "div_20",
@@ -387,7 +407,8 @@
           "value": "//div[contains(@class,'cmp-video-external__background-video-actions')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_21": {
       "name": "div_21",
@@ -403,7 +424,8 @@
           "value": "//div[contains(@class,'cmp-video-external__text-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_22": {
       "name": "div_22",
@@ -419,7 +441,8 @@
           "value": "//div[contains(@class,'cmp-video-external__text-box-play')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "span_23": {
       "name": "span_23",
@@ -435,7 +458,8 @@
           "value": "//span[contains(@class,'cmp-button__text')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "dialog_24": {
       "name": "dialog_24",
@@ -451,7 +475,8 @@
           "value": "//dialog[contains(@class,'cmp-video-external__modal')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_25": {
       "name": "div_25",
@@ -467,7 +492,8 @@
           "value": "//div[contains(@class,'cmp-video-external__modal--content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "span_26": {
       "name": "span_26",
@@ -483,7 +509,8 @@
           "value": "//span[contains(@class,'cmp-video-external__modal--close-button')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_27": {
       "name": "div_27",
@@ -499,7 +526,8 @@
           "value": "//div[contains(@class,'cmp-video-external__inner')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "videoExternal_596ebec56a": {
       "name": "videoExternal_596ebec56a",
@@ -520,7 +548,8 @@
           "value": "//video-js[contains(@class,'cmp-video-external__video')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_Play_Video": {
       "name": "div_Play_Video",
@@ -541,7 +570,8 @@
           "value": "Play Video",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_30": {
       "name": "div_30",
@@ -557,7 +587,8 @@
           "value": "//div[contains(@class,'cmp-video-external__image-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "span_Play_Video": {
       "name": "span_Play_Video",
@@ -578,7 +609,8 @@
           "value": "Play Video",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_32": {
       "name": "div_32",
@@ -594,7 +626,8 @@
           "value": "//div[contains(@class,'cmp-video-external__text-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "div_Play_Video_33": {
       "name": "div_Play_Video_33",
@@ -615,7 +648,8 @@
           "value": "Play Video",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.044Z"
     },
     "span_Play_Video_34": {
       "name": "span_Play_Video_34",
@@ -636,7 +670,8 @@
           "value": "Play Video",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.045Z"
     },
     "div_35": {
       "name": "div_35",
@@ -652,7 +687,8 @@
           "value": "//div[contains(@class,'cmp-video-external__text-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.045Z"
     },
     "div_36": {
       "name": "div_36",
@@ -668,7 +704,8 @@
           "value": "//div[contains(@class,'cmp-video-external__text-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.045Z"
     },
     "div_37": {
       "name": "div_37",
@@ -684,7 +721,8 @@
           "value": "//div[contains(@class,'cmp-video-external__text-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.045Z"
     },
     "div_Should_Not_Appear": {
       "name": "div_Should_Not_Appear",
@@ -705,7 +743,8 @@
           "value": "Should Not Appear",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.045Z"
     },
     "span_Should_Not_Appear": {
       "name": "span_Should_Not_Appear",
@@ -726,7 +765,8 @@
           "value": "Should Not Appear",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.045Z"
     },
     "div_40": {
       "name": "div_40",
@@ -742,7 +782,8 @@
           "value": "//div[contains(@class,'cmp-video-external__text-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.045Z"
     },
     "div_41": {
       "name": "div_41",
@@ -758,7 +799,8 @@
           "value": "//div[contains(@class,'cmp-video-external__text-box')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:34.045Z"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "component": "decision-tree",
-  "generatedAt": "2026-08-06T07:43:35.322Z",
+  "generatedAt": "2026-08-07T06:18:04.062Z",
   "source": "dom",
   "entries": {
     "a_Optional_CTA": {
@@ -33,7 +33,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "ShowOrHideOptions": {
       "name": "ShowOrHideOptions",
@@ -55,7 +55,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Spouse": {
       "name": "Spouse",
@@ -82,7 +82,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Traditional": {
       "name": "Traditional",
@@ -109,7 +109,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Roth": {
       "name": "Roth",
@@ -136,7 +136,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "MoreInformationAbout_DeathO": {
       "name": "MoreInformationAbout_DeathO",
@@ -158,7 +158,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Close": {
       "name": "Close",
@@ -180,7 +180,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Today": {
       "name": "Today",
@@ -207,7 +207,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Before_1120": {
       "name": "Before_1120",
@@ -234,7 +234,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "el1120OrLater": {
       "name": "el1120OrLater",
@@ -261,7 +261,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "NonSpouse": {
       "name": "NonSpouse",
@@ -288,7 +288,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "SeeThrough_Trust": {
       "name": "SeeThrough_Trust",
@@ -315,7 +315,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Successor_Beneficiary": {
       "name": "Successor_Beneficiary",
@@ -342,7 +342,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "h3_RequiredBeginningDate": {
       "name": "h3_RequiredBeginningDate",
@@ -369,7 +369,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Step_1_Select_RelationshipTo_": {
       "name": "Step_1_Select_RelationshipTo_",
@@ -396,7 +396,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "Select_Market_Type": {
       "name": "Select_Market_Type",
@@ -423,7 +423,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "decisionTreeStep_62fd22cd19Modal": {
       "name": "decisionTreeStep_62fd22cd19Modal",
@@ -450,7 +450,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "DeathOf_Original_IRA_Owner": {
       "name": "DeathOf_Original_IRA_Owner",
@@ -477,7 +477,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.061Z"
     },
     "p_Select_RelationshipTo_IRA_Own": {
       "name": "p_Select_RelationshipTo_IRA_Own",
@@ -504,7 +504,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "p_Select_Market_Type": {
       "name": "p_Select_Market_Type",
@@ -531,7 +531,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "p_DeathOf_Original_IRA_Owner": {
       "name": "p_DeathOf_Original_IRA_Owner",
@@ -558,7 +558,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_21": {
       "name": "div_21",
@@ -580,7 +580,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_22": {
       "name": "div_22",
@@ -602,7 +602,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Step_1": {
       "name": "span_Step_1",
@@ -629,7 +629,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Spouse": {
       "name": "span_Spouse",
@@ -651,7 +651,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Optional_Description": {
       "name": "span_Optional_Description",
@@ -673,7 +673,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_26": {
       "name": "span_26",
@@ -690,7 +690,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_27": {
       "name": "div_27",
@@ -707,7 +707,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_28": {
       "name": "div_28",
@@ -729,7 +729,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_29": {
       "name": "div_29",
@@ -751,7 +751,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Step_2": {
       "name": "span_Step_2",
@@ -778,7 +778,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Traditional": {
       "name": "span_Traditional",
@@ -800,7 +800,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_32": {
       "name": "div_32",
@@ -817,7 +817,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Roth": {
       "name": "span_Roth",
@@ -839,7 +839,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_34": {
       "name": "div_34",
@@ -856,7 +856,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_35": {
       "name": "div_35",
@@ -878,7 +878,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_36": {
       "name": "div_36",
@@ -900,7 +900,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Step_3": {
       "name": "span_Step_3",
@@ -927,7 +927,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_38": {
       "name": "div_38",
@@ -944,7 +944,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_39": {
       "name": "div_39",
@@ -961,7 +961,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Today": {
       "name": "span_Today",
@@ -983,7 +983,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_41": {
       "name": "div_41",
@@ -1000,7 +1000,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_42": {
       "name": "div_42",
@@ -1017,7 +1017,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_43": {
       "name": "div_43",
@@ -1034,7 +1034,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_44": {
       "name": "div_44",
@@ -1051,7 +1051,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_45": {
       "name": "div_45",
@@ -1068,7 +1068,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_46": {
       "name": "div_46",
@@ -1085,7 +1085,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_47": {
       "name": "div_47",
@@ -1102,7 +1102,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_OptionalEyebrow": {
       "name": "div_OptionalEyebrow",
@@ -1124,7 +1124,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_LoremIpsumDolorSitAmetCon": {
       "name": "div_LoremIpsumDolorSitAmetCon",
@@ -1146,7 +1146,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_50": {
       "name": "div_50",
@@ -1163,7 +1163,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_51": {
       "name": "div_51",
@@ -1180,7 +1180,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "i_52": {
       "name": "i_52",
@@ -1197,7 +1197,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Optional_CTA": {
       "name": "span_Optional_CTA",
@@ -1219,7 +1219,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_54": {
       "name": "div_54",
@@ -1236,7 +1236,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Before_1120": {
       "name": "span_Before_1120",
@@ -1258,7 +1258,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_ThisIs_Before_1120SectionAr": {
       "name": "div_ThisIs_Before_1120SectionAr",
@@ -1280,7 +1280,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_1120OrLater": {
       "name": "span_1120OrLater",
@@ -1302,7 +1302,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_ThisIs_1120OrLaterSection_": {
       "name": "div_ThisIs_1120OrLaterSection_",
@@ -1324,7 +1324,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_NonSpouse": {
       "name": "span_NonSpouse",
@@ -1346,7 +1346,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_60": {
       "name": "div_60",
@@ -1363,7 +1363,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_SeeThrough_Trust": {
       "name": "span_SeeThrough_Trust",
@@ -1385,7 +1385,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_62": {
       "name": "div_62",
@@ -1402,7 +1402,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "span_Successor_Beneficiary": {
       "name": "span_Successor_Beneficiary",
@@ -1424,7 +1424,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     },
     "div_64": {
       "name": "div_64",
@@ -1441,7 +1441,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:43:35.322Z"
+      "lastVerified": "2026-08-07T06:18:04.062Z"
     }
   }
 }

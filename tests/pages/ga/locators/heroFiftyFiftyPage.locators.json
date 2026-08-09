@@ -1,23 +1,8 @@
 {
   "component": "hero-fifty-fifty",
-  "generatedAt": "2026-08-06T07:45:35.972Z",
+  "generatedAt": "2026-08-07T09:07:25.807Z",
   "source": "dom",
   "entries": {
-    "heroFiftyFiftyPageRoot": {
-      "strategies": [
-        {
-          "type": "css",
-          "selector": ".cmp-herofiftyfifty",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-herofiftyfifty']",
-          "confidence": 0.7
-        }
-      ],
-      "primary": "css"
-    },
     "a_Style_Guide": {
       "name": "a_Style_Guide",
       "component": "hero-fifty-fifty",
@@ -65,11 +50,6 @@
       "component": "hero-fifty-fifty",
       "strategies": [
         {
-          "type": "id",
-          "value": "button-569f9eb4a9",
-          "confidence": 0.95
-        },
-        {
           "type": "css",
           "value": ".cmp-button",
           "confidence": 0.8
@@ -88,6 +68,11 @@
           "type": "text",
           "value": "Optional CTA",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "button-569f9eb4a9",
+          "confidence": 0.3
         }
       ]
     },
@@ -138,11 +123,6 @@
       "component": "hero-fifty-fifty",
       "strategies": [
         {
-          "type": "id",
-          "value": "button-76d13c030b",
-          "confidence": 0.95
-        },
-        {
           "type": "css",
           "value": ".cmp-button",
           "confidence": 0.8
@@ -161,6 +141,11 @@
           "type": "text",
           "value": "Plan Your Future Today",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "button-76d13c030b",
+          "confidence": 0.3
         }
       ]
     },
@@ -274,11 +259,6 @@
       "component": "hero-fifty-fifty",
       "strategies": [
         {
-          "type": "id",
-          "value": "breadcrumb-092e0cc614",
-          "confidence": 0.95
-        },
-        {
           "type": "css",
           "value": ".cmp-breadcrumb",
           "confidence": 0.8
@@ -287,16 +267,21 @@
           "type": "xpath",
           "value": "//nav[contains(@class,'cmp-breadcrumb')]",
           "confidence": 0.6
+        },
+        {
+          "type": "id",
+          "value": "breadcrumb-092e0cc614",
+          "confidence": 0.3
         }
       ]
     },
-    "swiperWrapper_95e10ccf9211675bd": {
-      "name": "swiperWrapper_95e10ccf9211675bd",
+    "swiperWrapper_0c50ece3dbe6d25d": {
+      "name": "swiperWrapper_0c50ece3dbe6d25d",
       "component": "hero-fifty-fifty",
       "strategies": [
         {
           "type": "id",
-          "value": "swiper-wrapper-95e10ccf9211675bd",
+          "value": "swiper-wrapper-0c50ece3dbe6d25d",
           "confidence": 0.95
         },
         {

@@ -1,6 +1,6 @@
 {
   "component": "firm-selection-modal",
-  "generatedAt": "2026-07-29T16:08:38.188Z",
+  "generatedAt": "2026-08-07T06:17:17.378Z",
   "source": "dom",
   "entries": {
     "Close": {
@@ -22,7 +22,8 @@
           "value": "//button[contains(@class,'cmp-firm-selection-modal__close')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "button_Confirm": {
       "name": "button_Confirm",
@@ -43,7 +44,8 @@
           "value": "Confirm",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "button_Continue": {
       "name": "button_Continue",
@@ -64,7 +66,8 @@
           "value": "Continue",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "h2_SelectYourFirm": {
       "name": "h2_SelectYourFirm",
@@ -90,7 +93,8 @@
           "value": "Select your firm",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "SelectAFirm": {
       "name": "SelectAFirm",
@@ -111,7 +115,8 @@
           "value": "//ul[contains(@class,'cmp-firm-selection-modal__firm-list')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_5": {
       "name": "div_5",
@@ -132,7 +137,8 @@
           "value": "//div[contains(@class,'cmp-firm-selection-modal__error')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_6": {
       "name": "div_6",
@@ -148,7 +154,8 @@
           "value": "//div[contains(@class,'cmp-firm-selection-modal__backdrop')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_7": {
       "name": "div_7",
@@ -164,7 +171,8 @@
           "value": "//div[contains(@class,'cmp-firm-selection-modal__dialog')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_8": {
       "name": "div_8",
@@ -185,7 +193,8 @@
           "value": "Illustrations\n      \n      \n        Select your firm",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "p_Illustrations": {
       "name": "p_Illustrations",
@@ -206,7 +215,8 @@
           "value": "Illustrations",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_LoadingYourFirms": {
       "name": "div_LoadingYourFirms",
@@ -227,7 +237,8 @@
           "value": "Loading your firms...",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_LoadingYourFirms_11": {
       "name": "div_LoadingYourFirms_11",
@@ -248,7 +259,8 @@
           "value": "Loading your firms...",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "span_12": {
       "name": "span_12",
@@ -264,7 +276,8 @@
           "value": "//span[contains(@class,'cmp-firm-selection-modal__spinner')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "span_LoadingYourFirms": {
       "name": "span_LoadingYourFirms",
@@ -285,7 +298,8 @@
           "value": "Loading your firms...",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_Confirm": {
       "name": "div_Confirm",
@@ -306,7 +320,8 @@
           "value": "Confirm",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "span_15": {
       "name": "span_15",
@@ -322,7 +337,8 @@
           "value": "//span[contains(@class,'cmp-firm-selection-modal__error-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "span_16": {
       "name": "span_16",
@@ -338,7 +354,8 @@
           "value": "//span[contains(@class,'cmp-firm-selection-modal__error-text')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_Confirm_17": {
       "name": "div_Confirm_17",
@@ -359,7 +376,8 @@
           "value": "Confirm",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "i_18": {
       "name": "i_18",
@@ -375,7 +393,8 @@
           "value": "//i[contains(@class,'cmp-button__icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "span_Confirm": {
       "name": "span_Confirm",
@@ -396,7 +415,8 @@
           "value": "Confirm",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_20": {
       "name": "div_20",
@@ -412,7 +432,8 @@
           "value": "//div[contains(@class,'cmp-firm-selection-modal__dialog')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_21": {
       "name": "div_21",
@@ -433,7 +454,8 @@
           "value": "SnapApp\n      \n      \n        Select your firm",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "p_SnapApp": {
       "name": "p_SnapApp",
@@ -454,7 +476,8 @@
           "value": "SnapApp",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_Continue": {
       "name": "div_Continue",
@@ -475,7 +498,8 @@
           "value": "Continue",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "div_Continue_24": {
       "name": "div_Continue_24",
@@ -496,7 +520,8 @@
           "value": "Continue",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     },
     "span_Continue": {
       "name": "span_Continue",
@@ -517,7 +542,8 @@
           "value": "Continue",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:17.378Z"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "component": "breadcrumb",
-  "generatedAt": "2026-08-06T07:45:35.956Z",
+  "generatedAt": "2026-08-07T06:16:53.935Z",
   "source": "dom",
   "entries": {
     "breadcrumbPageRoot": {
@@ -37,7 +37,8 @@
           "value": "Style Guide",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:53.934Z"
     },
     "a_Component_Library": {
       "name": "a_Component_Library",
@@ -58,7 +59,8 @@
           "value": "Component Library",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:53.934Z"
     },
     "ol_2": {
       "name": "ol_2",
@@ -74,7 +76,8 @@
           "value": "//ol[contains(@class,'cmp-breadcrumb__list')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:53.935Z"
     },
     "li_Style_Guide": {
       "name": "li_Style_Guide",
@@ -95,7 +98,8 @@
           "value": "Style Guide",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:53.935Z"
     },
     "li_Component_Library": {
       "name": "li_Component_Library",
@@ -116,7 +120,8 @@
           "value": "Component Library",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:53.935Z"
     },
     "li_Breadcrumb": {
       "name": "li_Breadcrumb",
@@ -137,7 +142,8 @@
           "value": "Breadcrumb",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:16:53.935Z"
     }
   }
 }

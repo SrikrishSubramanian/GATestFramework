@@ -14,6 +14,103 @@
         }
       ],
       "primary": "css"
+    },
+    "div_spacer": {
+      "name": "div_spacer",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-spacer",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:28:55.958Z"
+    },
+    "div_spacer_wrapper": {
+      "name": "div_spacer_wrapper",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-spacer",
+          "confidence": 0.6
+        }
+      ],
+      "lastVerified": "2026-08-07T09:28:55.958Z"
+    },
+    "div_spacer_default": {
+      "name": "div_spacer_default",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-spacer, 1)",
+          "confidence": 0.8
+        }
+      ],
+      "lastVerified": "2026-08-07T09:28:55.958Z"
+    },
+    "div_spacer_xxsmall": {
+      "name": "div_spacer_xxsmall",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-spacer, 3)",
+          "confidence": 0.8
+        }
+      ],
+      "lastVerified": "2026-08-07T09:28:55.958Z"
+    },
+    "div_spacer_xsmall": {
+      "name": "div_spacer_xsmall",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-spacer, 4)",
+          "confidence": 0.8
+        }
+      ],
+      "lastVerified": "2026-08-07T09:28:55.958Z"
+    },
+    "div_spacer_small": {
+      "name": "div_spacer_small",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-spacer, 5)",
+          "confidence": 0.8
+        }
+      ],
+      "lastVerified": "2026-08-07T09:28:55.958Z"
+    },
+    "div_spacer_large": {
+      "name": "div_spacer_large",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-spacer, 6)",
+          "confidence": 0.8
+        }
+      ],
+      "lastVerified": "2026-08-07T09:28:55.958Z"
+    },
+    "div_spacer_xlarge": {
+      "name": "div_spacer_xlarge",
+      "component": "spacer",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-spacer, 7)",
+          "confidence": 0.8
+        }
+      ],
+      "lastVerified": "2026-08-07T09:28:55.958Z"
     }
-  }
+  },
+  "generatedAt": "2026-08-07T09:28:55.958Z"
 }

@@ -1,6 +1,6 @@
 {
   "component": "workbench",
-  "generatedAt": "2026-08-06T07:45:36.001Z",
+  "generatedAt": "2026-08-07T06:15:45.420Z",
   "source": "dom",
   "entries": {
     "workbenchPageRoot": {
@@ -37,7 +37,8 @@
           "value": "Lorem ipsum dolor sit amet",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.419Z"
     },
     "a_FindA_Form": {
       "name": "a_FindA_Form",
@@ -58,7 +59,8 @@
           "value": "Find a Form",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.419Z"
     },
     "a_FAQ_GlossaryAnd_Support": {
       "name": "a_FAQ_GlossaryAnd_Support",
@@ -79,7 +81,8 @@
           "value": "FAQ, Glossary, and Support",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.419Z"
     },
     "a_Pension_Annuitant_Information": {
       "name": "a_Pension_Annuitant_Information",
@@ -205,7 +208,8 @@
           "value": "View Latest Rates",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.419Z"
     },
     "a_SalesAnd_Marketing_Materials": {
       "name": "a_SalesAnd_Marketing_Materials",
@@ -226,7 +230,8 @@
           "value": "Sales and Marketing Materials",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.419Z"
     },
     "ul_10": {
       "name": "ul_10",
@@ -311,7 +316,8 @@
           "value": "2 Tiles Workbench",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.419Z"
     },
     "li_LoremIpsumDolorSitAmet": {
       "name": "li_LoremIpsumDolorSitAmet",
@@ -332,7 +338,8 @@
           "value": "Lorem ipsum dolor sit amet",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_16": {
       "name": "span_16",
@@ -369,7 +376,8 @@
           "value": "Lorem ipsum dolor sit amet",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "div_18": {
       "name": "div_18",
@@ -406,7 +414,8 @@
           "value": "3 Tiles Workbench with External Links",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "div_20": {
       "name": "div_20",
@@ -443,7 +452,8 @@
           "value": "How can we help you today?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_FindA_Form": {
       "name": "li_FindA_Form",
@@ -464,7 +474,8 @@
           "value": "Find a Form",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_FindA_Form": {
       "name": "span_FindA_Form",
@@ -485,7 +496,8 @@
           "value": "Find a Form",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_FAQ_GlossaryAnd_Support": {
       "name": "li_FAQ_GlossaryAnd_Support",
@@ -506,7 +518,8 @@
           "value": "FAQ, Glossary, and Support",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_FAQ_GlossaryAnd_Support": {
       "name": "span_FAQ_GlossaryAnd_Support",
@@ -527,7 +540,8 @@
           "value": "FAQ, Glossary, and Support",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_Pension_Annuitant_Information": {
       "name": "li_Pension_Annuitant_Information",
@@ -548,7 +562,8 @@
           "value": "Pension Annuitant Information",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_Pension_Annuitant_Information": {
       "name": "span_Pension_Annuitant_Information",
@@ -569,7 +584,8 @@
           "value": "Pension Annuitant Information",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_28": {
       "name": "li_28",
@@ -648,7 +664,8 @@
           "value": "5 Tile Workbench with External Links",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_RunAn_Illustration": {
       "name": "li_RunAn_Illustration",
@@ -669,7 +686,8 @@
           "value": "Run an Illustration",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_RunAn_Illustration": {
       "name": "span_RunAn_Illustration",
@@ -690,7 +708,8 @@
           "value": "Run an Illustration",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_Forms_Library": {
       "name": "li_Forms_Library",
@@ -711,7 +730,8 @@
           "value": "Forms Library",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_Forms_Library": {
       "name": "span_Forms_Library",
@@ -732,7 +752,8 @@
           "value": "Forms Library",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_Manage_Existing_Policies": {
       "name": "li_Manage_Existing_Policies",
@@ -753,7 +774,8 @@
           "value": "Manage Existing Policies",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_Manage_Existing_Policies": {
       "name": "span_Manage_Existing_Policies",
@@ -774,7 +796,8 @@
           "value": "Manage Existing Policies",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_View_Latest_Rates": {
       "name": "li_View_Latest_Rates",
@@ -795,7 +818,8 @@
           "value": "View Latest Rates",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_View_Latest_Rates": {
       "name": "span_View_Latest_Rates",
@@ -816,7 +840,8 @@
           "value": "View Latest Rates",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "li_SalesAnd_Marketing_Materials": {
       "name": "li_SalesAnd_Marketing_Materials",
@@ -837,7 +862,8 @@
           "value": "Sales and Marketing Materials",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "span_SalesAnd_Marketing_Materials": {
       "name": "span_SalesAnd_Marketing_Materials",
@@ -858,7 +884,8 @@
           "value": "Sales and Marketing Materials",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "div_42": {
       "name": "div_42",
@@ -895,10 +922,234 @@
           "value": "6 Tile Workbench",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:45.420Z"
     },
     "div_44": {
       "name": "div_44",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "a_3": {
+      "name": "a_3",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//a[contains(@class,'cmp-workbench__tile-item')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Delegate or Firm with policy beginning with 5, 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "ul_6": {
+      "name": "ul_6",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tiles",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-workbench__tiles')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_7": {
+      "name": "ul_7",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tiles",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-workbench__tiles')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "ul_8": {
+      "name": "ul_8",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tiles",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//ul[contains(@class,'cmp-workbench__tiles')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_12": {
+      "name": "span_12",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-icon",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_14": {
+      "name": "div_14",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_16": {
+      "name": "div_16",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "li_24": {
+      "name": "li_24",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//li[contains(@class,'cmp-workbench__tile')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Delegate or Firm with policy beginning with 5, 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_25": {
+      "name": "span_25",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__tile-text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-workbench__tile-text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Delegate or Firm with policy beginning with 5, 6",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_26": {
+      "name": "div_26",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_38": {
+      "name": "div_38",
+      "component": "workbench",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-workbench__wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-workbench__wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_40": {
+      "name": "div_40",
       "component": "workbench",
       "strategies": [
         {

@@ -1,6 +1,6 @@
 {
   "component": "product-path-detail-card",
-  "generatedAt": "2026-08-06T07:42:55.410Z",
+  "generatedAt": "2026-08-07T06:16:19.587Z",
   "source": "dom",
   "entries": {
     "a_FindAn_Advisor": {
@@ -23,7 +23,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "a_1": {
       "name": "a_1",
@@ -45,7 +45,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "a_Learn_More": {
       "name": "a_Learn_More",
@@ -67,7 +67,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "img_PersonReviewingFin": {
       "name": "img_PersonReviewingFin",
@@ -84,7 +84,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "img_PortraitOf_Sarah_R": {
       "name": "img_PortraitOf_Sarah_R",
@@ -101,7 +101,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "ul_5": {
       "name": "ul_5",
@@ -118,7 +118,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "ul_6": {
       "name": "ul_6",
@@ -135,7 +135,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_Path_A": {
       "name": "div_Path_A",
@@ -157,7 +157,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_8": {
       "name": "div_8",
@@ -174,7 +174,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_9": {
       "name": "div_9",
@@ -191,7 +191,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_10": {
       "name": "div_10",
@@ -208,7 +208,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_Maximize_My_Reliability": {
       "name": "div_Maximize_My_Reliability",
@@ -230,7 +230,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_12": {
       "name": "div_12",
@@ -247,7 +247,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_13": {
       "name": "div_13",
@@ -264,7 +264,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_14": {
       "name": "div_14",
@@ -281,7 +281,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_15": {
       "name": "div_15",
@@ -298,7 +298,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.584Z"
     },
     "div_HowItWorks": {
       "name": "div_HowItWorks",
@@ -320,7 +320,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "li_17": {
       "name": "li_17",
@@ -337,7 +337,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_Guaranteed_Rollup": {
       "name": "div_Guaranteed_Rollup",
@@ -359,7 +359,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_19": {
       "name": "div_19",
@@ -376,7 +376,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "li_20": {
       "name": "li_20",
@@ -393,7 +393,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_Flexible_Income_Options": {
       "name": "div_Flexible_Income_Options",
@@ -415,7 +415,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_22": {
       "name": "div_22",
@@ -432,7 +432,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "li_23": {
       "name": "li_23",
@@ -449,7 +449,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_Principal_Protection": {
       "name": "div_Principal_Protection",
@@ -471,7 +471,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_25": {
       "name": "div_25",
@@ -488,7 +488,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_26": {
       "name": "div_26",
@@ -505,7 +505,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_27": {
       "name": "div_27",
@@ -522,7 +522,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_Path_B": {
       "name": "div_Path_B",
@@ -544,7 +544,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_29": {
       "name": "div_29",
@@ -561,7 +561,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_30": {
       "name": "div_30",
@@ -578,7 +578,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_31": {
       "name": "div_31",
@@ -595,7 +595,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_Build_Guaranteed_Income": {
       "name": "div_Build_Guaranteed_Income",
@@ -617,7 +617,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_33": {
       "name": "div_33",
@@ -634,7 +634,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_34": {
       "name": "div_34",
@@ -651,7 +651,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_35": {
       "name": "div_35",
@@ -668,7 +668,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_36": {
       "name": "div_36",
@@ -685,7 +685,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_IncomeYouCanCountOn": {
       "name": "div_IncomeYouCanCountOn",
@@ -707,7 +707,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_38": {
       "name": "div_38",
@@ -724,7 +724,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_Path_C": {
       "name": "div_Path_C",
@@ -746,7 +746,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_40": {
       "name": "div_40",
@@ -763,7 +763,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_41": {
       "name": "div_41",
@@ -780,7 +780,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_42": {
       "name": "div_42",
@@ -797,7 +797,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_SecureA_Higher_Starting_Check": {
       "name": "div_SecureA_Higher_Starting_Check",
@@ -819,7 +819,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_44": {
       "name": "div_44",
@@ -841,7 +841,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.408Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_45": {
       "name": "div_45",
@@ -858,7 +858,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_46": {
       "name": "div_46",
@@ -875,7 +875,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_47": {
       "name": "div_47",
@@ -892,7 +892,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_ReadyToGetStarted": {
       "name": "div_ReadyToGetStarted",
@@ -914,7 +914,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_49": {
       "name": "div_49",
@@ -931,7 +931,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_50": {
       "name": "div_50",
@@ -948,7 +948,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_51": {
       "name": "div_51",
@@ -965,7 +965,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_52": {
       "name": "div_52",
@@ -982,7 +982,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_53": {
       "name": "div_53",
@@ -999,7 +999,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_KeyBenefits": {
       "name": "div_KeyBenefits",
@@ -1021,7 +1021,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.585Z"
     },
     "div_55": {
       "name": "div_55",
@@ -1043,7 +1043,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_56": {
       "name": "div_56",
@@ -1065,7 +1065,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "li_57": {
       "name": "li_57",
@@ -1082,7 +1082,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Flexible_Riders": {
       "name": "div_Flexible_Riders",
@@ -1104,7 +1104,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_59": {
       "name": "div_59",
@@ -1126,7 +1126,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_60": {
       "name": "div_60",
@@ -1143,7 +1143,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_61": {
       "name": "div_61",
@@ -1160,7 +1160,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_ReadyToLearnMore": {
       "name": "div_ReadyToLearnMore",
@@ -1182,7 +1182,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_63": {
       "name": "div_63",
@@ -1199,7 +1199,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Path_D": {
       "name": "div_Path_D",
@@ -1221,7 +1221,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Protect_What_Matters_Most": {
       "name": "div_Protect_What_Matters_Most",
@@ -1243,7 +1243,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Protect_What_Matters_Most_66": {
       "name": "div_Protect_What_Matters_Most_66",
@@ -1265,7 +1265,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Protect_What_Matters_Most_67": {
       "name": "div_Protect_What_Matters_Most_67",
@@ -1287,7 +1287,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Protect_What_Matters_Most_68": {
       "name": "div_Protect_What_Matters_Most_68",
@@ -1309,7 +1309,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_69": {
       "name": "div_69",
@@ -1326,7 +1326,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_70": {
       "name": "div_70",
@@ -1343,7 +1343,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Client_Case_Study": {
       "name": "div_Client_Case_Study",
@@ -1365,7 +1365,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_72": {
       "name": "div_72",
@@ -1382,7 +1382,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_73": {
       "name": "div_73",
@@ -1399,7 +1399,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_74": {
       "name": "div_74",
@@ -1416,7 +1416,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_75": {
       "name": "div_75",
@@ -1433,7 +1433,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_IncomeForLife": {
       "name": "div_IncomeForLife",
@@ -1455,7 +1455,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_77": {
       "name": "div_77",
@@ -1472,7 +1472,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_78": {
       "name": "div_78",
@@ -1489,7 +1489,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_79": {
       "name": "div_79",
@@ -1506,7 +1506,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_80": {
       "name": "div_80",
@@ -1523,7 +1523,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_81": {
       "name": "div_81",
@@ -1540,7 +1540,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_82": {
       "name": "div_82",
@@ -1557,7 +1557,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_83": {
       "name": "div_83",
@@ -1574,7 +1574,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_WhyThisPathWorks": {
       "name": "div_WhyThisPathWorks",
@@ -1596,7 +1596,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "li_85": {
       "name": "li_85",
@@ -1613,7 +1613,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Inflation_Protection": {
       "name": "div_Inflation_Protection",
@@ -1635,7 +1635,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_87": {
       "name": "div_87",
@@ -1652,7 +1652,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "li_88": {
       "name": "li_88",
@@ -1669,7 +1669,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_Lifetime_Guarantee": {
       "name": "div_Lifetime_Guarantee",
@@ -1691,7 +1691,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_90": {
       "name": "div_90",
@@ -1713,7 +1713,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_91": {
       "name": "div_91",
@@ -1730,7 +1730,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "div_92": {
       "name": "div_92",
@@ -1747,7 +1747,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "figure_93": {
       "name": "figure_93",
@@ -1764,7 +1764,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.586Z"
     },
     "picture_94": {
       "name": "picture_94",
@@ -1781,7 +1781,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "blockquote_95": {
       "name": "blockquote_95",
@@ -1798,7 +1798,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_Sarah_M_Retired_Teacher": {
       "name": "div_Sarah_M_Retired_Teacher",
@@ -1820,7 +1820,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_97": {
       "name": "div_97",
@@ -1842,7 +1842,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_98": {
       "name": "div_98",
@@ -1859,7 +1859,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_99": {
       "name": "div_99",
@@ -1876,7 +1876,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_100": {
       "name": "div_100",
@@ -1893,7 +1893,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_BuiltForReliability": {
       "name": "div_BuiltForReliability",
@@ -1915,7 +1915,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_102": {
       "name": "div_102",
@@ -1932,7 +1932,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_103": {
       "name": "div_103",
@@ -1949,7 +1949,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.409Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "blockquote_104": {
       "name": "blockquote_104",
@@ -1966,7 +1966,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.410Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_105": {
       "name": "div_105",
@@ -1983,7 +1983,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.410Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_106": {
       "name": "div_106",
@@ -2000,7 +2000,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.410Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "blockquote_107": {
       "name": "blockquote_107",
@@ -2017,7 +2017,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.410Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     },
     "div_James_T_Retired_Firefighter": {
       "name": "div_James_T_Retired_Firefighter",
@@ -2039,7 +2039,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:55.410Z"
+      "lastVerified": "2026-08-07T06:16:19.587Z"
     }
   }
 }

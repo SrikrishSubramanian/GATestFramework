@@ -12,19 +12,19 @@ export class ContentTrailPage {
     await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/content-trail.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
-  /** Locator for a_0 */
-  get a_0(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_0);
+  /** Locator for ComeGrowWithUs */
+  get ComeGrowWithUs(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.ComeGrowWithUs);
   }
 
-  /** Locator for a_1 */
-  get a_1(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_1);
+  /** Locator for ComeGrowWithUs_1 */
+  get ComeGrowWithUs_1(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.ComeGrowWithUs_1);
   }
 
-  /** Locator for a_2 */
-  get a_2(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.a_2);
+  /** Locator for ComeGrowWithUs_2 */
+  get ComeGrowWithUs_2(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.ComeGrowWithUs_2);
   }
 
   /** Locator for Close */
@@ -32,14 +32,9 @@ export class ContentTrailPage {
     return resolveLocator(this.page, registry.entries.Close);
   }
 
-  /** Locator for div_5 */
-  get div_5(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_5);
-  }
-
-  /** Locator for div_6 */
-  get div_6(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_6);
+  /** Locator for div_4 */
+  get div_4(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_4);
   }
 
   /** Locator for div_ComeGrowWithUs */
@@ -47,14 +42,24 @@ export class ContentTrailPage {
     return resolveLocator(this.page, registry.entries.div_ComeGrowWithUs);
   }
 
-  /** Locator for svg_8 */
-  get svg_8(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.svg_8);
+  /** Locator for p_6 */
+  get p_6(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.p_6);
   }
 
-  /** Locator for p_9 */
-  get p_9(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.p_9);
+  /** Locator for div_7 */
+  get div_7(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_7);
+  }
+
+  /** Locator for dialog_8 */
+  get dialog_8(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.dialog_8);
+  }
+
+  /** Locator for div_9 */
+  get div_9(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_9);
   }
 
   /** Locator for div_10 */
@@ -62,38 +67,23 @@ export class ContentTrailPage {
     return resolveLocator(this.page, registry.entries.div_10);
   }
 
-  /** Locator for dialog_11 */
-  get dialog_11(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.dialog_11);
-  }
-
-  /** Locator for div_12 */
-  get div_12(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_12);
-  }
-
-  /** Locator for div_13 */
-  get div_13(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_13);
-  }
-
   // --- Actions ---
 
-  /** Click a_0 */
-  async clickA0() {
-    const el = await this.a_0;
+  /** Click ComeGrowWithUs */
+  async clickComegrowwithus() {
+    const el = await this.ComeGrowWithUs;
     await el.click();
   }
 
-  /** Click a_1 */
-  async clickA1() {
-    const el = await this.a_1;
+  /** Click ComeGrowWithUs_1 */
+  async clickComegrowwithus1() {
+    const el = await this.ComeGrowWithUs_1;
     await el.click();
   }
 
-  /** Click a_2 */
-  async clickA2() {
-    const el = await this.a_2;
+  /** Click ComeGrowWithUs_2 */
+  async clickComegrowwithus2() {
+    const el = await this.ComeGrowWithUs_2;
     await el.click();
   }
 
@@ -103,15 +93,9 @@ export class ContentTrailPage {
     await el.click();
   }
 
-  /** Click div_5 */
-  async clickDiv5() {
-    const el = await this.div_5;
-    await el.click();
-  }
-
-  /** Click div_6 */
-  async clickDiv6() {
-    const el = await this.div_6;
+  /** Click div_4 */
+  async clickDiv4() {
+    const el = await this.div_4;
     await el.click();
   }
 
@@ -121,21 +105,27 @@ export class ContentTrailPage {
     await el.click();
   }
 
-  /** Click svg_8 */
-  async clickSvg8() {
-    const el = await this.svg_8;
+  /** Click p_6 */
+  async clickP6() {
+    const el = await this.p_6;
     await el.click();
   }
 
-  /** Click p_9 */
-  async clickP9() {
-    const el = await this.p_9;
+  /** Click div_7 */
+  async clickDiv7() {
+    const el = await this.div_7;
     await el.click();
   }
 
-  /** Click div_10 */
-  async clickDiv10() {
-    const el = await this.div_10;
+  /** Click dialog_8 */
+  async clickDialog8() {
+    const el = await this.dialog_8;
+    await el.click();
+  }
+
+  /** Click div_9 */
+  async clickDiv9() {
+    const el = await this.div_9;
     await el.click();
   }
 }

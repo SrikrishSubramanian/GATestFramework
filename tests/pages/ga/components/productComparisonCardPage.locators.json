@@ -1,6 +1,6 @@
 {
   "component": "product-comparison-card",
-  "generatedAt": "2026-08-06T07:42:46.303Z",
+  "generatedAt": "2026-08-07T06:16:15.075Z",
   "source": "dom",
   "entries": {
     "Explore_Forge_Accumulation": {
@@ -28,7 +28,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.073Z"
     },
     "Explore_Heritage_Income": {
       "name": "Explore_Heritage_Income",
@@ -55,7 +55,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.073Z"
     },
     "Explore_Foundation_Plus": {
       "name": "Explore_Foundation_Plus",
@@ -82,7 +82,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "h3_Forge_Accumulation": {
       "name": "h3_Forge_Accumulation",
@@ -104,7 +104,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "h3_Heritage_Income": {
       "name": "h3_Heritage_Income",
@@ -126,7 +126,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "h3_Foundation_Plus": {
       "name": "h3_Foundation_Plus",
@@ -148,7 +148,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "ul_7": {
       "name": "ul_7",
@@ -165,7 +165,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "ul_8": {
       "name": "ul_8",
@@ -182,7 +182,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "ul_9": {
       "name": "ul_9",
@@ -199,7 +199,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "ul_10": {
       "name": "ul_10",
@@ -216,7 +216,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_11": {
       "name": "div_11",
@@ -233,7 +233,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "li_12": {
       "name": "li_12",
@@ -250,7 +250,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_Forge_Accumulation": {
       "name": "div_Forge_Accumulation",
@@ -272,7 +272,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_Forge_Accumulation_14": {
       "name": "div_Forge_Accumulation_14",
@@ -294,7 +294,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_15": {
       "name": "div_15",
@@ -311,7 +311,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_16": {
       "name": "div_16",
@@ -328,7 +328,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_17": {
       "name": "div_17",
@@ -345,7 +345,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_18": {
       "name": "div_18",
@@ -362,7 +362,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_Issue_Ages": {
       "name": "span_Issue_Ages",
@@ -384,7 +384,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_1880": {
       "name": "span_1880",
@@ -406,7 +406,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_21": {
       "name": "div_21",
@@ -423,7 +423,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_22": {
       "name": "div_22",
@@ -440,7 +440,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_Withdrawal_Charge_Period": {
       "name": "span_Withdrawal_Charge_Period",
@@ -462,7 +462,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_7_Years": {
       "name": "span_7_Years",
@@ -484,7 +484,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_25": {
       "name": "div_25",
@@ -501,7 +501,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_26": {
       "name": "div_26",
@@ -518,7 +518,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_Key_Features": {
       "name": "span_Key_Features",
@@ -540,7 +540,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "li_IndexlinkedGrowthPotential": {
       "name": "li_IndexlinkedGrowthPotential",
@@ -562,7 +562,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "li_PrincipalProtectionFromMark": {
       "name": "li_PrincipalProtectionFromMark",
@@ -584,7 +584,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "li_TaxdeferredAccumulation": {
       "name": "li_TaxdeferredAccumulation",
@@ -606,7 +606,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_31": {
       "name": "div_31",
@@ -623,7 +623,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_32": {
       "name": "div_32",
@@ -640,7 +640,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_Best_For": {
       "name": "span_Best_For",
@@ -662,7 +662,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_34": {
       "name": "span_34",
@@ -679,7 +679,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "div_Explore_Forge_Accumulation": {
       "name": "div_Explore_Forge_Accumulation",
@@ -701,7 +701,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_Explore_Forge_Accumulation": {
       "name": "span_Explore_Forge_Accumulation",
@@ -723,7 +723,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "span_37": {
       "name": "span_37",
@@ -740,7 +740,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.074Z"
     },
     "li_38": {
       "name": "li_38",
@@ -757,7 +757,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_Heritage_Income": {
       "name": "div_Heritage_Income",
@@ -779,7 +779,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.302Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_Heritage_Income_40": {
       "name": "div_Heritage_Income_40",
@@ -801,7 +801,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_4585": {
       "name": "span_4585",
@@ -823,7 +823,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_10_Years": {
       "name": "span_10_Years",
@@ -845,7 +845,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "li_GuaranteedIncomeForLife": {
       "name": "li_GuaranteedIncomeForLife",
@@ -867,7 +867,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "li_MultiplePayoutOptions": {
       "name": "li_MultiplePayoutOptions",
@@ -889,7 +889,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "li_SpousalContinuationFeature": {
       "name": "li_SpousalContinuationFeature",
@@ -911,7 +911,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_46": {
       "name": "span_46",
@@ -928,7 +928,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_Explore_Heritage_Income": {
       "name": "div_Explore_Heritage_Income",
@@ -950,7 +950,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_Explore_Heritage_Income": {
       "name": "span_Explore_Heritage_Income",
@@ -972,7 +972,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_01_": {
       "name": "div_01_",
@@ -994,7 +994,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_01__50": {
       "name": "div_01__50",
@@ -1016,7 +1016,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_01": {
       "name": "span_01",
@@ -1033,7 +1033,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_52": {
       "name": "span_52",
@@ -1050,7 +1050,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_53": {
       "name": "span_53",
@@ -1067,7 +1067,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_54": {
       "name": "div_54",
@@ -1084,7 +1084,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_55": {
       "name": "div_55",
@@ -1101,7 +1101,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "li_56": {
       "name": "li_56",
@@ -1118,7 +1118,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_Foundation_Plus": {
       "name": "div_Foundation_Plus",
@@ -1140,7 +1140,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_Foundation_Plus_58": {
       "name": "div_Foundation_Plus_58",
@@ -1162,7 +1162,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_085": {
       "name": "span_085",
@@ -1184,7 +1184,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_5_Years": {
       "name": "span_5_Years",
@@ -1206,7 +1206,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "li_GuaranteedFixedInterestRate": {
       "name": "li_GuaranteedFixedInterestRate",
@@ -1228,7 +1228,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "li_FullPrincipalProtection": {
       "name": "li_FullPrincipalProtection",
@@ -1250,7 +1250,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "li_FlexibleWithdrawalOptions": {
       "name": "li_FlexibleWithdrawalOptions",
@@ -1272,7 +1272,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_64": {
       "name": "span_64",
@@ -1289,7 +1289,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "div_Explore_Foundation_Plus": {
       "name": "div_Explore_Foundation_Plus",
@@ -1311,7 +1311,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     },
     "span_Explore_Foundation_Plus": {
       "name": "span_Explore_Foundation_Plus",
@@ -1333,7 +1333,7 @@
           "confidence": 0.4
         }
       ],
-      "lastVerified": "2026-08-06T07:42:46.303Z"
+      "lastVerified": "2026-08-07T06:16:15.075Z"
     }
   }
 }

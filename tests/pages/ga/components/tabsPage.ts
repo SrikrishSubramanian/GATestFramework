@@ -12,34 +12,9 @@ export class TabsPage {
     await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/tabs.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
-  /** Locator for h2_0 */
-  get h2_0(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.h2_0);
-  }
-
-  /** Locator for h2_Test_3 */
-  get h2_Test_3(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.h2_Test_3);
-  }
-
-  /** Locator for h2_Test_4 */
-  get h2_Test_4(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.h2_Test_4);
-  }
-
-  /** Locator for h2_Test_5 */
-  get h2_Test_5(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.h2_Test_5);
-  }
-
-  /** Locator for h2_Test_6 */
-  get h2_Test_6(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.h2_Test_6);
-  }
-
-  /** Locator for ol_5 */
-  get ol_5(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.ol_5);
+  /** Locator for ol_0 */
+  get ol_0(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.ol_0);
   }
 
   /** Locator for li_DeferYourTaxes */
@@ -52,14 +27,14 @@ export class TabsPage {
     return resolveLocator(this.page, registry.entries.li_GrowYourMoney);
   }
 
-  /** Locator for li_ProvideIncomeOpportunities */
-  get li_ProvideIncomeOpportunities(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.li_ProvideIncomeOpportunities);
+  /** Locator for li_IncomeOpportunities */
+  get li_IncomeOpportunities(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.li_IncomeOpportunities);
   }
 
-  /** Locator for li_PrepareForYourLongtermCare */
-  get li_PrepareForYourLongtermCare(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.li_PrepareForYourLongtermCare);
+  /** Locator for li_LongtermCareNeeds */
+  get li_LongtermCareNeeds(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.li_LongtermCareNeeds);
   }
 
   /** Locator for li_LeaveYourLegacy */
@@ -72,34 +47,59 @@ export class TabsPage {
     return resolveLocator(this.page, registry.entries.li_LoremIpsumDolor);
   }
 
-  /** Locator for headlineBlock_2308fada47 */
-  get headlineBlock_2308fada47(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.headlineBlock_2308fada47);
+  /** Locator for image_7f7d722407Tab */
+  get image_7f7d722407Tab(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.image_7f7d722407Tab);
   }
 
-  /** Locator for headlineBlock_0f17881bfa */
-  get headlineBlock_0f17881bfa(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.headlineBlock_0f17881bfa);
+  /** Locator for div_8 */
+  get div_8(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_8);
   }
 
-  /** Locator for headlineBlockE4a7e0874b */
-  get headlineBlockE4a7e0874b(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.headlineBlockE4a7e0874b);
+  /** Locator for div_9 */
+  get div_9(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_9);
   }
 
-  /** Locator for headlineBlock_21426baa55 */
-  get headlineBlock_21426baa55(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.headlineBlock_21426baa55);
+  /** Locator for div_10 */
+  get div_10(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_10);
   }
 
-  /** Locator for headlineBlockB70d6e0cc4 */
-  get headlineBlockB70d6e0cc4(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.headlineBlockB70d6e0cc4);
+  /** Locator for div_11 */
+  get div_11(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_11);
   }
 
-  /** Locator for headlineBlock_35351ea611 */
-  get headlineBlock_35351ea611(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.headlineBlock_35351ea611);
+  /** Locator for div_12 */
+  get div_12(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_12);
+  }
+
+  /** Locator for div_13 */
+  get div_13(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_13);
+  }
+
+  /** Locator for div_14 */
+  get div_14(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_14);
+  }
+
+  /** Locator for Close */
+  get Close(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.Close);
+  }
+
+  /** Locator for div_16 */
+  get div_16(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_16);
+  }
+
+  /** Locator for div_17 */
+  get div_17(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_17);
   }
 
   /** Locator for div_18 */
@@ -117,14 +117,14 @@ export class TabsPage {
     return resolveLocator(this.page, registry.entries.div_20);
   }
 
-  /** Locator for div_21 */
-  get div_21(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_21);
-  }
-
   /** Locator for div_OptionalEyebrow */
   get div_OptionalEyebrow(): Promise<Locator> {
     return resolveLocator(this.page, registry.entries.div_OptionalEyebrow);
+  }
+
+  /** Locator for div_22 */
+  get div_22(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_22);
   }
 
   /** Locator for div_23 */
@@ -137,9 +137,19 @@ export class TabsPage {
     return resolveLocator(this.page, registry.entries.div_24);
   }
 
+  /** Locator for div_25 */
+  get div_25(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_25);
+  }
+
   /** Locator for div_HB2 */
   get div_HB2(): Promise<Locator> {
     return resolveLocator(this.page, registry.entries.div_HB2);
+  }
+
+  /** Locator for div_27 */
+  get div_27(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_27);
   }
 
   /** Locator for div_Test_3 */
@@ -147,9 +157,19 @@ export class TabsPage {
     return resolveLocator(this.page, registry.entries.div_Test_3);
   }
 
-  /** Locator for div_Test_3_27 */
-  get div_Test_3_27(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Test_3_27);
+  /** Locator for div_Test_3_29 */
+  get div_Test_3_29(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Test_3_29);
+  }
+
+  /** Locator for div_Test_3_30 */
+  get div_Test_3_30(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Test_3_30);
+  }
+
+  /** Locator for div_31 */
+  get div_31(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_31);
   }
 
   /** Locator for div_Test_4 */
@@ -157,9 +177,19 @@ export class TabsPage {
     return resolveLocator(this.page, registry.entries.div_Test_4);
   }
 
-  /** Locator for div_Test_4_29 */
-  get div_Test_4_29(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Test_4_29);
+  /** Locator for div_Test_4_33 */
+  get div_Test_4_33(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Test_4_33);
+  }
+
+  /** Locator for div_Test_4_34 */
+  get div_Test_4_34(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Test_4_34);
+  }
+
+  /** Locator for div_35 */
+  get div_35(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_35);
   }
 
   /** Locator for div_Test_5 */
@@ -167,9 +197,19 @@ export class TabsPage {
     return resolveLocator(this.page, registry.entries.div_Test_5);
   }
 
-  /** Locator for div_Test_5_31 */
-  get div_Test_5_31(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Test_5_31);
+  /** Locator for div_Test_5_37 */
+  get div_Test_5_37(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Test_5_37);
+  }
+
+  /** Locator for div_Test_5_38 */
+  get div_Test_5_38(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Test_5_38);
+  }
+
+  /** Locator for div_39 */
+  get div_39(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_39);
   }
 
   /** Locator for div_Test_6 */
@@ -177,46 +217,36 @@ export class TabsPage {
     return resolveLocator(this.page, registry.entries.div_Test_6);
   }
 
-  /** Locator for div_Test_6_33 */
-  get div_Test_6_33(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.div_Test_6_33);
+  /** Locator for div_Test_6_41 */
+  get div_Test_6_41(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Test_6_41);
+  }
+
+  /** Locator for div_Test_6_42 */
+  get div_Test_6_42(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_Test_6_42);
+  }
+
+  /** Locator for dialog_43 */
+  get dialog_43(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.dialog_43);
+  }
+
+  /** Locator for div_44 */
+  get div_44(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_44);
+  }
+
+  /** Locator for div_45 */
+  get div_45(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.div_45);
   }
 
   // --- Actions ---
 
-  /** Click h2_0 */
-  async clickH20() {
-    const el = await this.h2_0;
-    await el.click();
-  }
-
-  /** Click h2_Test_3 */
-  async clickH2Test3() {
-    const el = await this.h2_Test_3;
-    await el.click();
-  }
-
-  /** Click h2_Test_4 */
-  async clickH2Test4() {
-    const el = await this.h2_Test_4;
-    await el.click();
-  }
-
-  /** Click h2_Test_5 */
-  async clickH2Test5() {
-    const el = await this.h2_Test_5;
-    await el.click();
-  }
-
-  /** Click h2_Test_6 */
-  async clickH2Test6() {
-    const el = await this.h2_Test_6;
-    await el.click();
-  }
-
-  /** Click ol_5 */
-  async clickOl5() {
-    const el = await this.ol_5;
+  /** Click ol_0 */
+  async clickOl0() {
+    const el = await this.ol_0;
     await el.click();
   }
 
@@ -232,15 +262,45 @@ export class TabsPage {
     await el.click();
   }
 
-  /** Click li_ProvideIncomeOpportunities */
-  async clickLiProvideincomeopportunities() {
-    const el = await this.li_ProvideIncomeOpportunities;
+  /** Click li_IncomeOpportunities */
+  async clickLiIncomeopportunities() {
+    const el = await this.li_IncomeOpportunities;
     await el.click();
   }
 
-  /** Click li_PrepareForYourLongtermCare */
-  async clickLiPrepareforyourlongtermcare() {
-    const el = await this.li_PrepareForYourLongtermCare;
+  /** Click li_LongtermCareNeeds */
+  async clickLiLongtermcareneeds() {
+    const el = await this.li_LongtermCareNeeds;
+    await el.click();
+  }
+
+  /** Click li_LeaveYourLegacy */
+  async clickLiLeaveyourlegacy() {
+    const el = await this.li_LeaveYourLegacy;
+    await el.click();
+  }
+
+  /** Click li_LoremIpsumDolor */
+  async clickLiLoremipsumdolor() {
+    const el = await this.li_LoremIpsumDolor;
+    await el.click();
+  }
+
+  /** Click image_7f7d722407Tab */
+  async clickImage7f7d722407tab() {
+    const el = await this.image_7f7d722407Tab;
+    await el.click();
+  }
+
+  /** Click div_8 */
+  async clickDiv8() {
+    const el = await this.div_8;
+    await el.click();
+  }
+
+  /** Click div_9 */
+  async clickDiv9() {
+    const el = await this.div_9;
     await el.click();
   }
 }

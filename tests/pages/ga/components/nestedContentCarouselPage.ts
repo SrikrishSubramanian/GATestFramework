@@ -22,9 +22,9 @@ export class NestedContentCarouselPage {
     return resolveLocator(this.page, registry.entries.PauseCarousel);
   }
 
-  /** Locator for swiperWrapper_851ccdb1b2fe7312 */
-  get swiperWrapper_851ccdb1b2fe7312(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.swiperWrapper_851ccdb1b2fe7312);
+  /** Locator for swiperWrapperDf2fe1a3266b74af */
+  get swiperWrapperDf2fe1a3266b74af(): Promise<Locator> {
+    return resolveLocator(this.page, registry.entries.swiperWrapperDf2fe1a3266b74af);
   }
 
   /** Locator for el1_2 */
@@ -111,9 +111,9 @@ export class NestedContentCarouselPage {
     await el.click();
   }
 
-  /** Click swiperWrapper_851ccdb1b2fe7312 */
-  async clickSwiperwrapper851ccdb1b2fe7312() {
-    const el = await this.swiperWrapper_851ccdb1b2fe7312;
+  /** Click swiperWrapperDf2fe1a3266b74af */
+  async clickSwiperwrapperdf2fe1a3266b74af() {
+    const el = await this.swiperWrapperDf2fe1a3266b74af;
     await el.click();
   }
 

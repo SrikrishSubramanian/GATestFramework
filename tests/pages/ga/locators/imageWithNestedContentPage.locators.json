@@ -1,25 +1,222 @@
 {
+  "component": "image-with-nested-content",
+  "generatedAt": "2026-08-07T09:08:13.003Z",
+  "source": "dom",
   "entries": {
-    "root": {
+    "ComeGrowWithUs": {
+      "name": "ComeGrowWithUs",
+      "component": "image-with-nested-content",
       "strategies": [
         {
           "type": "css",
-          "value": ".cmp-image-with-nested-content",
-          "confidence": 0.95
+          "value": ".cmp-content-trail__container.cmp-content-trail__link",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "link[name='Come grow with us']",
+          "confidence": 0.7
         },
         {
           "type": "xpath",
-          "value": "//div[contains(@class,'cmp-image-with-nested-content')]",
-          "confidence": 0.7
+          "value": "//a[contains(@class,'cmp-content-trail__container')]",
+          "confidence": 0.6
         }
       ]
     },
-    "image": {
+    "Close": {
+      "name": "Close",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-close",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Close']",
+          "confidence": 0.7
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-close')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_2": {
+      "name": "div_2",
+      "component": "image-with-nested-content",
       "strategies": [
         {
           "type": "css",
           "value": ".cmp-image-with-nested-content__image",
-          "confidence": 0.95
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-image-with-nested-content__image')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_3": {
+      "name": "div_3",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_ComeGrowWithUs": {
+      "name": "div_ComeGrowWithUs",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Come grow with us",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "p_5": {
+      "name": "p_5",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__headline",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//p[contains(@class,'cmp-content-trail__headline')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "dialog_6": {
+      "name": "dialog_6",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//dialog[contains(@class,'cmp-content-trail__modal')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_7": {
+      "name": "div_7",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-content",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-content')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_8": {
+      "name": "div_8",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-content-trail__modal-video-container",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-content-trail__modal-video-container')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_9": {
+      "name": "div_9",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__item",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__item')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "div_100M": {
+      "name": "div_100M",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__value",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__value')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "$100M",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_11": {
+      "name": "div_11",
+      "component": "image-with-nested-content",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-statistic__description",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-statistic__description')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "in transactions since 2014, as of Oct 1, 2020",
+          "confidence": 0.4
         }
       ]
     }

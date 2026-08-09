@@ -1,6 +1,6 @@
 {
   "component": "rate-details-hero",
-  "generatedAt": "2026-07-29T16:08:19.177Z",
+  "generatedAt": "2026-08-07T06:17:36.408Z",
   "source": "dom",
   "entries": {
     "a_Style_Guide": {
@@ -22,7 +22,8 @@
           "value": "Style Guide",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "a_Component_Library": {
       "name": "a_Component_Library",
@@ -43,7 +44,8 @@
           "value": "Component Library",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "h1_ForeStructured_Growth_II_Rates": {
       "name": "h1_ForeStructured_Growth_II_Rates",
@@ -64,7 +66,8 @@
           "value": "ForeStructured Growth II Rates",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "Breadcrumb": {
       "name": "Breadcrumb",
@@ -85,7 +88,8 @@
           "value": "//nav[contains(@class,'cmp-rate-details-hero__breadcrumb')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "nav_4": {
       "name": "nav_4",
@@ -106,7 +110,8 @@
           "value": "//nav[contains(@class,'cmp-breadcrumb')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "ol_5": {
       "name": "ol_5",
@@ -122,7 +127,8 @@
           "value": "//ol[contains(@class,'cmp-breadcrumb__list')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "div_6": {
       "name": "div_6",
@@ -138,7 +144,8 @@
           "value": "//div[contains(@class,'cmp-rate-details-hero__wave-overlay')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "span_7": {
       "name": "span_7",
@@ -154,7 +161,8 @@
           "value": "//span[contains(@class,'cmp-rate-details-hero__wave-2')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "li_Style_Guide": {
       "name": "li_Style_Guide",
@@ -175,7 +183,8 @@
           "value": "Style Guide",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "li_Component_Library": {
       "name": "li_Component_Library",
@@ -196,7 +205,8 @@
           "value": "Component Library",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "li_Rate_Details_Hero": {
       "name": "li_Rate_Details_Hero",
@@ -217,7 +227,8 @@
           "value": "Rate Details Hero",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "div_11": {
       "name": "div_11",
@@ -233,7 +244,8 @@
           "value": "//div[contains(@class,'cmp-rate-details-hero__content')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "div_12": {
       "name": "div_12",
@@ -249,7 +261,8 @@
           "value": "//div[contains(@class,'cmp-rate-details-hero__meta')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "span_Fixed_Index_Annuity": {
       "name": "span_Fixed_Index_Annuity",
@@ -270,7 +283,8 @@
           "value": "Fixed Index Annuity",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "span_14": {
       "name": "span_14",
@@ -286,7 +300,8 @@
           "value": "//span[contains(@class,'cmp-rate-details-hero__divider')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "span_BShare": {
       "name": "span_BShare",
@@ -307,7 +322,8 @@
           "value": "B-Share",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     },
     "p_16": {
       "name": "p_16",
@@ -328,7 +344,8 @@
           "value": "Issued by Forethought Life Insurance Company",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:17:36.408Z"
     }
   }
 }

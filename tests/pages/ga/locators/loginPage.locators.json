@@ -1,6 +1,6 @@
 {
   "component": "login",
-  "generatedAt": "2026-08-06T07:45:35.980Z",
+  "generatedAt": "2026-08-07T09:16:49.335Z",
   "source": "dom",
   "entries": {
     "loginPageRoot": {
@@ -37,7 +37,8 @@
           "value": "Forgot username?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "a_ForgotPassword": {
       "name": "a_ForgotPassword",
@@ -58,7 +59,8 @@
           "value": "Forgot password?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "ShowPassword": {
       "name": "ShowPassword",
@@ -79,7 +81,8 @@
           "value": "//button[contains(@class,'cmp-login__password-toggle')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "button_Continue": {
       "name": "button_Continue",
@@ -100,7 +103,8 @@
           "value": "Continue",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "cmpLoginUsername": {
       "name": "cmpLoginUsername",
@@ -121,7 +125,8 @@
           "value": "//input[contains(@class,'cmp-login__input')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "h1_WelcomeTo_Global_Atlantic": {
       "name": "h1_WelcomeTo_Global_Atlantic",
@@ -142,7 +147,8 @@
           "value": "Welcome to Global Atlantic",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "h2_Login": {
       "name": "h2_Login",
@@ -168,7 +174,8 @@
           "value": "Login",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "KeyBenefits": {
       "name": "KeyBenefits",
@@ -184,7 +191,8 @@
           "value": "//ul[contains(@class,'cmp-login__key-points')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_9": {
       "name": "div_9",
@@ -205,7 +213,8 @@
           "value": "//div[contains(@class,'cmp-login__alert')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "cmpLoginUsernameError": {
       "name": "cmpLoginUsernameError",
@@ -231,7 +240,8 @@
           "value": "//span[contains(@class,'cmp-login__error-msg')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_11": {
       "name": "div_11",
@@ -247,7 +257,8 @@
           "value": "//div[contains(@class,'cmp-login__wave-overlay')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_12": {
       "name": "div_12",
@@ -263,7 +274,8 @@
           "value": "//div[contains(@class,'cmp-login__wave-1')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_13": {
       "name": "div_13",
@@ -279,7 +291,8 @@
           "value": "//div[contains(@class,'cmp-login__layout')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_14": {
       "name": "div_14",
@@ -295,7 +308,8 @@
           "value": "//div[contains(@class,'cmp-login__left-panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_15": {
       "name": "div_15",
@@ -311,7 +325,8 @@
           "value": "//div[contains(@class,'cmp-login__subheadline')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "li_16": {
       "name": "li_16",
@@ -332,7 +347,8 @@
           "value": "Pending applications with real-time updates",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_17": {
       "name": "span_17",
@@ -348,7 +364,8 @@
           "value": "//span[contains(@class,'cmp-login__key-point-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_18": {
       "name": "span_18",
@@ -369,7 +386,8 @@
           "value": "Pending applications with real-time updates",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "li_RunAPersonalizedIllustratio": {
       "name": "li_RunAPersonalizedIllustratio",
@@ -390,7 +408,8 @@
           "value": "Run a personalized illustration",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_RunAPersonalizedIllustratio": {
       "name": "span_RunAPersonalizedIllustratio",
@@ -411,7 +430,8 @@
           "value": "Run a personalized illustration",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "li_21": {
       "name": "li_21",
@@ -432,7 +452,8 @@
           "value": "Access policy documents and correspondence",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_22": {
       "name": "span_22",
@@ -453,7 +474,8 @@
           "value": "Access policy documents and correspondence",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "li_ExploreNewProducts": {
       "name": "li_ExploreNewProducts",
@@ -474,7 +496,8 @@
           "value": "Explore new products",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_ExploreNewProducts": {
       "name": "span_ExploreNewProducts",
@@ -495,7 +518,8 @@
           "value": "Explore new products",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_25": {
       "name": "div_25",
@@ -511,7 +535,8 @@
           "value": "//div[contains(@class,'cmp-login__fine-print')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_26": {
       "name": "div_26",
@@ -527,7 +552,8 @@
           "value": "//div[contains(@class,'cmp-login__right-panel')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_27": {
       "name": "div_27",
@@ -543,7 +569,8 @@
           "value": "//div[contains(@class,'cmp-login__card')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_28": {
       "name": "span_28",
@@ -559,7 +586,8 @@
           "value": "//span[contains(@class,'cmp-login__alert-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_29": {
       "name": "span_29",
@@ -575,7 +603,8 @@
           "value": "//span[contains(@class,'cmp-login__alert-text')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "form_30": {
       "name": "form_30",
@@ -591,7 +620,8 @@
           "value": "//form[contains(@class,'cmp-login__form')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_31": {
       "name": "div_31",
@@ -607,7 +637,8 @@
           "value": "//div[contains(@class,'cmp-login__field-row')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_32": {
       "name": "div_32",
@@ -623,7 +654,8 @@
           "value": "//div[contains(@class,'cmp-login__field-header')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "label_33": {
       "name": "label_33",
@@ -644,7 +676,8 @@
           "value": "Username\n                                *",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_34": {
       "name": "span_34",
@@ -660,7 +693,8 @@
           "value": "//span[contains(@class,'cmp-login__required-indicator')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_35": {
       "name": "div_35",
@@ -676,7 +710,8 @@
           "value": "//div[contains(@class,'cmp-login__field-row')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_36": {
       "name": "div_36",
@@ -692,7 +727,8 @@
           "value": "//div[contains(@class,'cmp-login__field-header')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "label_37": {
       "name": "label_37",
@@ -713,7 +749,8 @@
           "value": "Password\n                                *",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_38": {
       "name": "div_38",
@@ -729,7 +766,8 @@
           "value": "//div[contains(@class,'cmp-login__password-wrapper')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "svg_39": {
       "name": "svg_39",
@@ -745,7 +783,8 @@
           "value": "//svg[contains(@class,'cmp-login__eye-icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "i_40": {
       "name": "i_40",
@@ -761,7 +800,8 @@
           "value": "//i[contains(@class,'cmp-button__icon')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "span_Continue": {
       "name": "span_Continue",
@@ -782,7 +822,8 @@
           "value": "Continue",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_42": {
       "name": "div_42",
@@ -798,7 +839,8 @@
           "value": "//div[contains(@class,'cmp-login__footer')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "p_FirstTimeUser": {
       "name": "p_FirstTimeUser",
@@ -819,7 +861,8 @@
           "value": "First time user?",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "p_44": {
       "name": "p_44",
@@ -835,7 +878,8 @@
           "value": "//p[contains(@class,'cmp-login__assistance')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_45": {
       "name": "div_45",
@@ -851,7 +895,8 @@
           "value": "//div[contains(@class,'cmp-login__fine-print')]",
           "confidence": 0.6
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
     },
     "div_WelcomeTo_Global_Atlantic": {
       "name": "div_WelcomeTo_Global_Atlantic",
@@ -872,7 +917,188 @@
           "value": "Welcome to Global Atlantic",
           "confidence": 0.4
         }
-      ]
+      ],
+      "lastVerified": "2026-08-07T06:15:32.415Z"
+    },
+    "usernameInput": {
+      "name": "usernameInput",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(#cmp-login-username, 1)",
+          "confidence": 0.9
+        },
+        {
+          "type": "css",
+          "value": "input[name='username']",
+          "confidence": 0.6
+        },
+        {
+          "type": "xpath",
+          "value": "(//input[@name='username'])[1]",
+          "confidence": 0.5
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "passwordInput": {
+      "name": "passwordInput",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(#cmp-login-password, 1)",
+          "confidence": 0.9
+        },
+        {
+          "type": "css",
+          "value": "input[name='password']",
+          "confidence": 0.6
+        },
+        {
+          "type": "xpath",
+          "value": "(//input[@name='password'])[1]",
+          "confidence": 0.5
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "passwordToggle": {
+      "name": "passwordToggle",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-login__password-toggle, 1)",
+          "confidence": 0.9
+        },
+        {
+          "type": "role",
+          "value": "button[name='Show password']",
+          "confidence": 0.6
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "submitButton": {
+      "name": "submitButton",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-login__submit-btn, 1)",
+          "confidence": 0.9
+        },
+        {
+          "type": "text",
+          "value": "Continue",
+          "confidence": 0.4
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "loginForm": {
+      "name": "loginForm",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-login__form, 1)",
+          "confidence": 0.85
+        },
+        {
+          "type": "role",
+          "value": "form",
+          "confidence": 0.5
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "loginHero": {
+      "name": "loginHero",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-login__left-panel, 1)",
+          "confidence": 0.85
+        },
+        {
+          "type": "text",
+          "value": "Welcome to Global Atlantic",
+          "confidence": 0.4
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "forgotUsernameLink": {
+      "name": "forgotUsernameLink",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-login__forgot-link, 1)",
+          "confidence": 0.85
+        },
+        {
+          "type": "text",
+          "value": "Forgot username?",
+          "confidence": 0.6
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "forgotPasswordLink": {
+      "name": "forgotPasswordLink",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-login__forgot-link, 2)",
+          "confidence": 0.85
+        },
+        {
+          "type": "text",
+          "value": "Forgot password?",
+          "confidence": 0.6
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "alertBanner": {
+      "name": "alertBanner",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-login__alert, 1)",
+          "confidence": 0.85
+        },
+        {
+          "type": "role",
+          "value": "alert",
+          "confidence": 0.6
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
+    },
+    "assistanceText": {
+      "name": "assistanceText",
+      "component": "login",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-login__assistance, 1)",
+          "confidence": 0.8
+        },
+        {
+          "type": "text",
+          "value": "For additional assistance, call",
+          "confidence": 0.4
+        }
+      ],
+      "lastVerified": "2026-08-07T09:16:49.335Z"
     }
   }
 }

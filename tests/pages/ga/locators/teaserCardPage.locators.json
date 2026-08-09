@@ -1,4 +1,7 @@
 {
+  "component": "teaser-card",
+  "generatedAt": "2026-08-07T09:23:03.279Z",
+  "source": "dom",
   "entries": {
     "teaserCardPageRoot": {
       "strategies": [
@@ -14,6 +17,224 @@
         }
       ],
       "primary": "css"
+    },
+    "div_0": {
+      "name": "div_0",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-teaser-card__content-wrapper",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-teaser-card__content-wrapper')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_OptionalEyebrow": {
+      "name": "span_OptionalEyebrow",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-teaser-card__eyebrow",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-teaser-card__eyebrow')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Optional eyebrow",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_2": {
+      "name": "span_2",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-teaser-card__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-teaser-card__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet consequat adipscing elit",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "div_3": {
+      "name": "div_3",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-teaser-card__descriptor",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//div[contains(@class,'cmp-teaser-card__descriptor')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_LearnMore": {
+      "name": "span_LearnMore",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-teaser-card__cta",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-teaser-card__cta')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "i_5": {
+      "name": "i_5",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__icon.Arrow-Right",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//i[contains(@class,'cmp-button__icon')]",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "span_LearnMore_6": {
+      "name": "span_LearnMore_6",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-button__text",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-button__text')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Learn more",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "span_7": {
+      "name": "span_7",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-teaser-card__title",
+          "confidence": 0.8
+        },
+        {
+          "type": "xpath",
+          "value": "//span[contains(@class,'cmp-teaser-card__title')]",
+          "confidence": 0.6
+        },
+        {
+          "type": "text",
+          "value": "Lorem ipsum dolor sit amet consequat adipscing",
+          "confidence": 0.4
+        }
+      ]
+    },
+    "cardRoot": {
+      "name": "cardRoot",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-teaser-card, 1)",
+          "confidence": 0.9
+        }
+      ],
+      "lastVerified": "2026-08-07T09:23:03.279Z"
+    },
+    "cardEyebrow": {
+      "name": "cardEyebrow",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-teaser-card__eyebrow, 1)",
+          "confidence": 0.85
+        },
+        {
+          "type": "text",
+          "value": "Optional eyebrow",
+          "confidence": 0.4
+        }
+      ],
+      "lastVerified": "2026-08-07T09:23:03.279Z"
+    },
+    "cardTitle": {
+      "name": "cardTitle",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-teaser-card__title, 1)",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:23:03.279Z"
+    },
+    "cardDescriptor": {
+      "name": "cardDescriptor",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-teaser-card__descriptor, 1)",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:23:03.279Z"
+    },
+    "cardContent": {
+      "name": "cardContent",
+      "component": "teaser-card",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ":nth-match(.cmp-teaser-card__content-wrapper, 1)",
+          "confidence": 0.85
+        }
+      ],
+      "lastVerified": "2026-08-07T09:23:03.279Z"
     }
   }
 }

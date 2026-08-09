@@ -1,6 +1,6 @@
 {
   "component": "insights-detail-hero",
-  "generatedAt": "2026-08-06T07:42:42.126Z",
+  "generatedAt": "2026-08-07T06:15:59.746Z",
   "source": "dom",
   "entries": {
     "PlayVideo": {
@@ -23,7 +23,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "CloseVideo": {
       "name": "CloseVideo",
@@ -45,7 +45,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "h1_2": {
       "name": "h1_2",
@@ -62,7 +62,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "div_3": {
       "name": "div_3",
@@ -79,7 +79,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "div_4": {
       "name": "div_4",
@@ -96,7 +96,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "div_5": {
       "name": "div_5",
@@ -113,7 +113,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "div_6": {
       "name": "div_6",
@@ -130,7 +130,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "span_7": {
       "name": "span_7",
@@ -147,7 +147,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "div_8": {
       "name": "div_8",
@@ -164,7 +164,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "span_9": {
       "name": "span_9",
@@ -181,7 +181,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "div_10": {
       "name": "div_10",
@@ -198,7 +198,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "div_11": {
       "name": "div_11",
@@ -215,7 +215,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "VideoPlayer": {
       "name": "VideoPlayer",
@@ -232,7 +232,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     },
     "insightsDetailHero_66ffcfaa31": {
       "name": "insightsDetailHero_66ffcfaa31",
@@ -254,7 +254,7 @@
           "confidence": 0.6
         }
       ],
-      "lastVerified": "2026-08-06T07:42:42.126Z"
+      "lastVerified": "2026-08-07T06:15:59.746Z"
     }
   }
 }

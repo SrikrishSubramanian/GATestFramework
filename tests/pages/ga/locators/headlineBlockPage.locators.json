@@ -1,32 +1,12 @@
 {
   "component": "headline-block",
-  "generatedAt": "2026-08-06T07:45:35.969Z",
+  "generatedAt": "2026-08-07T09:09:10.039Z",
   "source": "dom",
   "entries": {
-    "headlineBlockPageRoot": {
-      "strategies": [
-        {
-          "type": "css",
-          "selector": ".cmp-headlineblock",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-headlineblock']",
-          "confidence": 0.7
-        }
-      ],
-      "primary": "css"
-    },
     "a_Optional_CTA": {
       "name": "a_Optional_CTA",
       "component": "headline-block",
       "strategies": [
-        {
-          "type": "id",
-          "value": "button-d773e2966f",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-button",
@@ -46,6 +26,11 @@
           "type": "text",
           "value": "Optional CTA",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "button-d773e2966f",
+          "confidence": 0.3
         }
       ]
     },
@@ -53,11 +38,6 @@
       "name": "a_Link_Label",
       "component": "headline-block",
       "strategies": [
-        {
-          "type": "id",
-          "value": "button-fdf3e4782f",
-          "confidence": 0.95
-        },
         {
           "type": "css",
           "value": ".cmp-button",
@@ -77,6 +57,11 @@
           "type": "text",
           "value": "Link Label",
           "confidence": 0.4
+        },
+        {
+          "type": "id",
+          "value": "button-fdf3e4782f",
+          "confidence": 0.3
         }
       ]
     },

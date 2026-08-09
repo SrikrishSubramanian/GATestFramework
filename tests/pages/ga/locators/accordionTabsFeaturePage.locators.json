@@ -1,23 +1,8 @@
 {
   "component": "accordion-tabs-feature",
-  "generatedAt": "2026-08-06T07:45:35.949Z",
+  "generatedAt": "2026-08-07T09:07:20.015Z",
   "source": "dom",
   "entries": {
-    "accordionTabsFeaturePageRoot": {
-      "strategies": [
-        {
-          "type": "css",
-          "selector": ".cmp-accordiontabsfeature",
-          "confidence": 0.8
-        },
-        {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-accordiontabsfeature']",
-          "confidence": 0.7
-        }
-      ],
-      "primary": "css"
-    },
     "Learn_More": {
       "name": "Learn_More",
       "component": "accordion-tabs-feature",
