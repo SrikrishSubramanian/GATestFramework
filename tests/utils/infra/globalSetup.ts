@@ -18,10 +18,14 @@ async function globalSetup(config: FullConfig) {
         });
     }
 
-    // Check fixture sync status (warn mode — never blocks execution)
-    const syncReport = checkFixtureSync();
-    if (syncReport.hasWarnings) {
-        console.warn(formatSyncWarnings(syncReport));
+    // Check fixture sync status (warn mode — must never block execution)
+    try {
+        const syncReport = checkFixtureSync();
+        if (syncReport.hasWarnings) {
+            console.warn(formatSyncWarnings(syncReport));
+        }
+    } catch (e: any) {
+        console.warn(`[globalSetup] Fixture sync check failed (non-fatal): ${e.message}`);
     }
 
     // ─── Global AEM Auth ──────────────────────────────────────────────
@@ -48,7 +52,7 @@ async function globalSetup(config: FullConfig) {
     }
 
     console.log('[globalSetup] Authenticating with AEM author...');
-    const browser = await chromium.launch({ headless: false });
+    const browser = await chromium.launch({ headless: !!process.env.CI });
     const context = await browser.newContext({ ignoreHTTPSErrors: true });
     const page = await context.newPage();
 
