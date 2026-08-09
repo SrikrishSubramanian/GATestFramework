@@ -18,8 +18,13 @@ env:
 
 jobs:
   desktop:
-    name: Desktop (Firefox)
+    name: Desktop (Firefox) - Shard ${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3]
+        shardTotal: [3]
     steps:
       - uses: actions/checkout@v4
 
@@ -35,21 +40,26 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run desktop suite
-        run: npx playwright test tests/specFiles/ga/ --project firefox
+        run: npx playwright test tests/specFiles/ga/ --project firefox --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
 
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-desktop
+          name: playwright-report-desktop-${{ matrix.shardIndex }}
           path: |
             playwright-report/
             test-results/
           retention-days: 14
 
   tablet:
-    name: Tablet (Galaxy Tab S6 - Chrome)
+    name: Tablet (Galaxy Tab S6 - Chrome) - Shard ${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3]
+        shardTotal: [3]
     steps:
       - uses: actions/checkout@v4
 
@@ -65,21 +75,26 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run tablet suite
-        run: npx playwright test tests/specFiles/ga/ --project "Tablet-GalaxyTabS6-Chrome"
+        run: npx playwright test tests/specFiles/ga/ --project "Tablet-GalaxyTabS6-Chrome" --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
 
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-tablet
+          name: playwright-report-tablet-${{ matrix.shardIndex }}
           path: |
             playwright-report/
             test-results/
           retention-days: 14
 
   mobile:
-    name: Mobile (Pixel 4 XL, Galaxy S9 - Chrome)
+    name: Mobile (Pixel 4 XL, Galaxy S9 - Chrome) - Shard ${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3]
+        shardTotal: [3]
     steps:
       - uses: actions/checkout@v4
 
@@ -95,13 +110,13 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run mobile suite
-        run: npx playwright test tests/specFiles/ga/ --project "Mobile-Pixel4XL-Chrome" --project "Mobile-GalaxyS9-Chrome"
+        run: npx playwright test tests/specFiles/ga/ --project "Mobile-Pixel4XL-Chrome" --project "Mobile-GalaxyS9-Chrome" --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
 
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-mobile
+          name: playwright-report-mobile-${{ matrix.shardIndex }}
           path: |
             playwright-report/
             test-results/
