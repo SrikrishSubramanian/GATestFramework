@@ -104,6 +104,7 @@ export class RateTablePage {
   /** Get column headers text for a specific variation */
   async getColumnHeaders(variation: RateTableVariation): Promise<string[]> {
     const instance = this.instanceByVariation(variation);
+    await instance.waitFor({ state: 'visible' });
     const cells = instance.locator('.cmp-rate-table__cell--header');
     const count = await cells.count();
     const headers: string[] = [];
@@ -116,6 +117,7 @@ export class RateTablePage {
   /** Get data row count for a specific variation */
   async getRowCount(variation: RateTableVariation): Promise<number> {
     const instance = this.instanceByVariation(variation);
+    await instance.waitFor({ state: 'visible' });
     return instance.locator('.cmp-rate-table__tbody .cmp-rate-table__row').count();
   }
 
@@ -128,6 +130,7 @@ export class RateTablePage {
   /** Get all cell values for a specific row in a specific variation */
   async getRowData(variation: RateTableVariation, rowIndex: number): Promise<string[]> {
     const instance = this.instanceByVariation(variation);
+    await instance.waitFor({ state: 'visible' });
     const row = instance.locator('.cmp-rate-table__tbody .cmp-rate-table__row').nth(rowIndex);
     const cells = row.locator('.cmp-rate-table__cell');
     const count = await cells.count();

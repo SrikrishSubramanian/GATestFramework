@@ -116,6 +116,7 @@ test.describe('RateTable — Table Structure', () => {
             const pom = new RateTablePage(page);
             await pom.navigate(BASE());
             const instance = pom.instanceByVariation(variation);
+            await expect(instance).toBeVisible();
             const productCells = instance.locator('.cmp-rate-table__tbody .cmp-rate-table__row .cmp-rate-table__cell:first-child');
             const count = await productCells.count();
             const foundProducts = new Set<string>();

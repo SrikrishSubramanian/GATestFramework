@@ -37,7 +37,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-001 social link hover changes background to white', async ({ page }) => {
     await page.goto(componentUrl());
-    await page.locator(PB_SOCIAL_LINK).waitFor({ state: 'visible' });
+    await page.locator(PB_SOCIAL_LINK).first().waitFor({ state: 'visible' });
 
     const link = page.locator(PB_SOCIAL_LINK).first();
     await expect(link).toBeVisible();
@@ -121,7 +121,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-004 CTA button hover changes background color', async ({ page }) => {
     await page.goto(componentUrl());
-    await page.locator(PB_CTA).waitFor({ state: 'visible' });
+    await page.locator(PB_CTA).first().waitFor({ state: 'visible' });
 
     const btn = page.locator(PB_CTA).first();
     await expect(btn).toBeVisible();
@@ -141,7 +141,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-005 CTA button contains Arrow-Right icon', async ({ page }) => {
     await page.goto(componentUrl());
-    await page.locator(PB_CTA).waitFor({ state: 'visible' });
+    await page.locator(PB_CTA).first().waitFor({ state: 'visible' });
 
     // Each CTA button should contain the Arrow-Right icon element
     const arrowIcon = page.locator(`${PB_CTA} ${PB_ICON_ARROW}`).first();
@@ -150,7 +150,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-006 CTA button link has cursor pointer', async ({ page }) => {
     await page.goto(componentUrl());
-    await page.locator(PB_CTA).waitFor({ state: 'visible' });
+    await page.locator(PB_CTA).first().waitFor({ state: 'visible' });
 
     const cursor = await page.locator(PB_CTA).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.cursor // measurement: use measurement-utils for cleaner code
     );
@@ -162,7 +162,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-007 Tab key reaches social links', async ({ page }) => {
     await page.goto(componentUrl());
-    await page.locator(PB_CTA).waitFor({ state: 'visible' });
+    await page.locator(PB_CTA).first().waitFor({ state: 'visible' });
 
     // Start from the top of the page and Tab until a social link is focused
     await page.keyboard.press('Tab');
@@ -182,7 +182,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   test('@interaction @regression PB-INT-008 Tab key reaches CTA buttons', async ({ page }) => {
     await page.goto(componentUrl());
-    await page.locator(PB_CTA).waitFor({ state: 'visible' });
+    await page.locator(PB_CTA).first().waitFor({ state: 'visible' });
 
     await page.keyboard.press('Tab');
     let focused = false;
@@ -246,7 +246,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   test('@interaction @regression PB-INT-010 desktop layout: promo-banner uses flex-direction row', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 900 });
     await page.goto(componentUrl());
-    await page.locator(PB_CTA).waitFor({ state: 'visible' });
+    await page.locator(PB_CTA).first().waitFor({ state: 'visible' });
 
     const flexDirection = await page.locator(PB).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.flexDirection // measurement: use measurement-utils for cleaner code
     );
@@ -277,7 +277,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
     // Desktop
     await page.setViewportSize({ width: 1280, height: 900 });
     await page.goto(componentUrl());
-    await page.locator(PB_CTA).waitFor({ state: 'visible' });
+    await page.locator(PB_CTA).first().waitFor({ state: 'visible' });
 
     const desktopDir = await page.locator(ctaSelector).first().evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.flexDirection // measurement: use measurement-utils for cleaner code
     );

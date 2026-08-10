@@ -206,11 +206,10 @@ test.describe('FormOptions — Dark Background', () => {
             test.skip();
             return;
         }
-        const color = // 📏 TODO: Replace with measurement-utils
-         await label.evaluate(el => getComputedStyle(el).color);
-        // measurement: use measurement-utils for cleaner code
-        // Text on dark background should be light
-        expect(color).toContain('255');
+        const color = await label.evaluate(el => getComputedStyle(el).color);
+        const [r, g, b] = color.match(/\d+/g)!.map(Number);
+        const luminance = (r + g + b) / 3;
+        expect(luminance, `Text on granite should be light (>180), got color ${color}`).toBeGreaterThanOrEqual(180);
     });
     test('[FO-034] @regression Form labels are readable on azul background', async ({ page }) => {
         const pom = new FormOptionsPage(page);
@@ -225,10 +224,10 @@ test.describe('FormOptions — Dark Background', () => {
             test.skip();
             return;
         }
-        const color = // 📏 TODO: Replace with measurement-utils
-         await label.evaluate(el => getComputedStyle(el).color);
-        // measurement: use measurement-utils for cleaner code
-        expect(color).toContain('255');
+        const color = await label.evaluate(el => getComputedStyle(el).color);
+        const [r, g, b] = color.match(/\d+/g)!.map(Number);
+        const luminance = (r + g + b) / 3;
+        expect(luminance, `Text on azul should be light (>180), got color ${color}`).toBeGreaterThanOrEqual(180);
     });
 });
 test.describe('FormOptions — BEM Structure', () => {

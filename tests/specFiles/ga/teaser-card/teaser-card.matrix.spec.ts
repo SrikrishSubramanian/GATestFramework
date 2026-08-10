@@ -58,14 +58,16 @@ test.describe('TeaserCard — State Matrix: Position × Color × Viewport', () =
           const selector = `${TC}.${positionClass(position)}.${colorClass(color)}`;
           let card = page.locator(selector).first();
           if (await card.count() === 0) {
-            // Inject variant classes on first available card
-            // 📏 TODO: Replace with measurement-utils
-    await page.evaluate(({ root, posClass, colClass }) => {
+            // Inject variant classes on first available card — strip sibling classes from the
+            // same modifier group first, since a card may already be authored with a conflicting variant.
+            await page.evaluate(({ root, posClass, colClass, allPosClasses, allColorClasses }) => {
               const el = document.querySelector(root);
               if (el) {
+                allPosClasses.forEach((c: string) => el.classList.remove(c));
+                allColorClasses.forEach((c: string) => el.classList.remove(c));
                 el.classList.add(posClass, colClass);
               }
-            }, { root: TC, posClass: positionClass(position), colClass: colorClass(color) });
+            }, { root: TC, posClass: positionClass(position), colClass: colorClass(color), allPosClasses: IMAGE_POSITIONS.map(positionClass), allColorClasses: COLOR_VARIANTS.map(colorClass) });
             card = page.locator(selector).first();
           }
 
@@ -96,11 +98,16 @@ test.describe('TeaserCard — State Matrix: Position × Image Style', () => {
         const selector = `${TC}.${positionClass(position)}.${styleClass(style)}`;
         let card = page.locator(selector).first();
         if (await card.count() === 0) {
-          // 📏 TODO: Replace with measurement-utils
-    await page.evaluate(({ root, posClass, styleClass }) => {
+          // Strip sibling classes from the same modifier group first — otherwise a card already
+          // authored as e.g. --image-style-circle keeps that class alongside the injected one.
+          await page.evaluate(({ root, posClass, styleClass, allPosClasses, allStyleClasses }) => {
             const el = document.querySelector(root);
-            if (el) el.classList.add(posClass, styleClass);
-          }, { root: TC, posClass: positionClass(position), styleClass: styleClass(style) });
+            if (el) {
+              allPosClasses.forEach((c: string) => el.classList.remove(c));
+              allStyleClasses.forEach((c: string) => el.classList.remove(c));
+              el.classList.add(posClass, styleClass);
+            }
+          }, { root: TC, posClass: positionClass(position), styleClass: styleClass(style), allPosClasses: IMAGE_POSITIONS.map(positionClass), allStyleClasses: IMAGE_STYLES.map(styleClass) });
           card = page.locator(selector).first();
         }
 
@@ -140,11 +147,15 @@ test.describe('TeaserCard — State Matrix: Color × Mobile', () => {
       const selector = `${TC}.${colorClass(color)}`;
       let card = page.locator(selector).first();
       if (await card.count() === 0) {
-        // 📏 TODO: Replace with measurement-utils
-    await page.evaluate(({ root, colClass }) => {
+        // Strip sibling color classes first — otherwise a card already authored with a
+        // different color variant keeps that class alongside the injected one.
+        await page.evaluate(({ root, colClass, allColorClasses }) => {
           const el = document.querySelector(root);
-          if (el) el.classList.add(colClass);
-        }, { root: TC, colClass: colorClass(color) });
+          if (el) {
+            allColorClasses.forEach((c: string) => el.classList.remove(c));
+            el.classList.add(colClass);
+          }
+        }, { root: TC, colClass: colorClass(color), allColorClasses: COLOR_VARIANTS.map(colorClass) });
         card = page.locator(selector).first();
       }
       if (await card.count() === 0) { test.skip(); return; }

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ButtonPage } from '../../../pages/ga/components/buttonPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -33,7 +33,7 @@ test.describe('Button — Happy Path', () => {
     test('[BTTN-002] @smoke @regression Button renders correctly', async ({ page }) => {
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
-        const root = page.locator('.cmp-button').first();
+        const root = page.locator('.cmp-button:not(#skip-nav)').first();
         await expect(root).toBeVisible();
         // Verify core structure: heading or primary content exists
         const heading = root.locator('h1, h2, h3').first();
@@ -49,7 +49,7 @@ test.describe('Button — Happy Path', () => {
     test('[BTTN-003] @smoke @regression Button interactive elements are functional', async ({ page }) => {
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
-        const root = page.locator('.cmp-button').first();
+        const root = page.locator('.cmp-button:not(#skip-nav)').first();
         await expect(root).toBeVisible();
         // Verify interactive elements (links, buttons) are present and clickable
         const interactive = root.locator('a, button');
@@ -68,9 +68,9 @@ test.describe('Button — Negative & Boundary', () => {
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
-        await expect(page.locator('.cmp-button').first()).toBeVisible();
+        await expect(page.locator('.cmp-button:not(#skip-nav)').first()).toBeVisible();
     });
     test('[BTTN-005] @negative @regression Button handles missing images', async ({ page }) => {
         const pom = new ButtonPage(page);
@@ -88,7 +88,7 @@ test.describe('Button — Responsive', () => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
-        const root = page.locator('.cmp-button').first();
+        const root = page.locator('.cmp-button:not(#skip-nav)').first();
         await expect(root).toBeVisible();
         // Verify layout adapts to mobile: flex-direction should exist
         // Use assertLayout() to verify responsive behavior
@@ -103,7 +103,7 @@ test.describe('Button — Responsive', () => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
-        const root = page.locator('.cmp-button').first();
+        const root = page.locator('.cmp-button:not(#skip-nav)').first();
         await expect(root).toBeVisible();
         // Tablet should render without horizontal overflow
         const overflow = // 📏 TODO: Replace with measurement-utils

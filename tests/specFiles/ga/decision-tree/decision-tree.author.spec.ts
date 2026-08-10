@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { DecisionTreePage } from '../../../pages/ga/components/decisionTreePage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -16,7 +16,8 @@ test.describe('DecisionTree — Happy Path', () => {
         const root = page.locator('.cmp-decision-tree').first();
         await expect(root).toBeVisible();
         // Verify core structure: heading or primary content exists
-        const heading = root.locator('h1, h2, h3').first();
+        // Multi-step wizard: only :visible to avoid matching hidden inactive-step modal titles
+        const heading = root.locator('h1:visible, h2:visible, h3:visible').first();
         const hasHeading = await heading.count() > 0;
         if (hasHeading) {
             await expect(heading).toBeVisible();
@@ -32,7 +33,8 @@ test.describe('DecisionTree — Happy Path', () => {
         const root = page.locator('.cmp-decision-tree').first();
         await expect(root).toBeVisible();
         // Verify interactive elements (links, buttons) are present and clickable
-        const interactive = root.locator('a, button');
+        // Multi-step wizard: only :visible to avoid matching hidden inactive-step toggles
+        const interactive = root.locator('a:visible, button:visible');
         const count = await interactive.count();
         for (let i = 0; i < Math.min(count, 3); i++) {
             await expect(interactive.nth(i)).toBeVisible();
@@ -48,7 +50,7 @@ test.describe('DecisionTree — Negative & Boundary', () => {
         const pom = new DecisionTreePage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-decision-tree').first()).toBeVisible();
     });

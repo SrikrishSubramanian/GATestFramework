@@ -8,6 +8,25 @@ export interface CapturedConsoleEntry {
 }
 
 /**
+ * Browser-native / third-party AEM author-overlay noise unrelated to component behavior
+ * (Firefox rejecting analytics cookies on the author domain, Adobe Experience Platform /
+ * Universal Editor scripts racing document.body during domcontentloaded, etc). Excluded from
+ * getErrors() so "no JS errors" assertions aren't polluted by environment noise.
+ */
+const BENIGN_ERROR_PATTERNS: RegExp[] = [
+  /has been rejected for invalid domain/i,
+  /document\.body is null/i,
+  /MutationObserver\.observe: Argument 1 is not an object/i,
+  /^The operation was aborted\.?\s*$/i,
+  /Failed to fetch dynamically imported module: https:\/\/exc-unifiedcontent\.experience\.adobe\.net/i,
+];
+
+/** Shared benign-noise check — also used by specs that capture `pageerror` inline instead of via ConsoleCapture. */
+export function isBenignError(message: string): boolean {
+  return BENIGN_ERROR_PATTERNS.some(p => p.test(message));
+}
+
+/**
  * Captures browser console errors, page errors, and failed network responses.
  * Attach to a page in beforeEach, then check entries in afterEach or assertions.
  *
@@ -88,9 +107,9 @@ export class ConsoleCapture {
     return [...this.entries];
   }
 
-  /** Get only errors (console errors + page errors) */
+  /** Get only errors (console errors + page errors), excluding known-benign browser noise */
   getErrors(): CapturedConsoleEntry[] {
-    return this.entries.filter(e => e.type === 'error' || e.type === 'pageerror');
+    return this.entries.filter(e => (e.type === 'error' || e.type === 'pageerror') && !isBenignError(e.message));
   }
 
   /** Get failed HTTP responses (4xx/5xx) */
