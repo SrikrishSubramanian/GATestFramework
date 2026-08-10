@@ -27,6 +27,18 @@ export function isBenignError(message: string): boolean {
 }
 
 /**
+ * URL patterns whose errors can never be attributable to the component under test — e.g. the
+ * AEM Start console shell a test transiently sits on right after login, before its own navigate().
+ */
+const BENIGN_ERROR_URL_PATTERNS: RegExp[] = [
+  /\/ui#\/aem\//i,
+];
+
+function isFromBenignUrl(url: string | undefined): boolean {
+  return !!url && BENIGN_ERROR_URL_PATTERNS.some(p => p.test(url));
+}
+
+/**
  * Captures browser console errors, page errors, and failed network responses.
  * Attach to a page in beforeEach, then check entries in afterEach or assertions.
  *
@@ -109,7 +121,9 @@ export class ConsoleCapture {
 
   /** Get only errors (console errors + page errors), excluding known-benign browser noise */
   getErrors(): CapturedConsoleEntry[] {
-    return this.entries.filter(e => (e.type === 'error' || e.type === 'pageerror') && !isBenignError(e.message));
+    return this.entries.filter(e =>
+      (e.type === 'error' || e.type === 'pageerror') && !isBenignError(e.message) && !isFromBenignUrl(e.url)
+    );
   }
 
   /** Get failed HTTP responses (4xx/5xx) */

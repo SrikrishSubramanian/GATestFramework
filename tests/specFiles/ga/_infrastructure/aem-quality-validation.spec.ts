@@ -63,7 +63,7 @@ test.describe('Performance — No Oversized Images (>500KB)', () => {
                     }
                 }
             });
-            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             expect(oversizedImages.map(i => `${(i.size / 1024).toFixed(0)}KB: ${i.url}`), `${sg.component}: ${oversizedImages.length} image(s) exceed 500KB.\nLarge images increase LCP and consume bandwidth.`).toEqual([]);
         });
     }
@@ -77,7 +77,7 @@ test.describe('Performance — No Oversized Images (>500KB)', () => {
 test.describe('Link Integrity — Style Guide Pages', () => {
     for (const sg of STYLE_GUIDE_PAGES) {
         test(`@regression ${sg.component} has no broken internal links`, async ({ page }) => {
-            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             // Extract all internal links (href starting with / or the base URL)
             const links = // 📏 TODO: Replace with measurement-utils
              await page.evaluate((baseUrl) => {
@@ -115,7 +115,7 @@ test.describe('Link Integrity — Style Guide Pages', () => {
 test.describe('DAM Asset Integrity — Image Sources', () => {
     for (const sg of STYLE_GUIDE_PAGES) {
         test(`@regression ${sg.component} has no broken image sources`, async ({ page }) => {
-            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             // Check all <img> src attributes that point to DAM or internal paths
             const imageResults = // 📏 TODO: Replace with measurement-utils
              await page.evaluate(() => {
@@ -135,7 +135,7 @@ test.describe('DAM Asset Integrity — Image Sources', () => {
             expect(brokenImages.map(i => `broken: ${i.src} (alt="${i.alt}")`), `${sg.component}: ${brokenImages.length} broken image(s). DAM assets may have been moved or deleted.`).toEqual([]);
         });
         test(`@regression ${sg.component} all images have alt attributes`, async ({ page }) => {
-            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             // Every <img> must have an alt attribute (empty alt="" is valid for decorative images)
             const missingAlt = // 📏 TODO: Replace with measurement-utils
              await page.evaluate(() => {
@@ -159,7 +159,7 @@ test.describe('DAM Asset Integrity — Background Images', () => {
                     failedBgImages.push(`${response.status()}: ${url}`);
                 }
             });
-            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             expect(failedBgImages, `${sg.component}: ${failedBgImages.length} CSS background image(s) failed to load from DAM`).toEqual([]);
         });
     }
@@ -173,13 +173,13 @@ test.describe('DAM Asset Integrity — Background Images', () => {
 test.describe('SEO — Page Title', () => {
     for (const pg of GA_PAGES) {
         test(`@regression ${pg.name} has a non-empty <title> tag`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const title = await page.title();
             expect(title, `${pg.name}: <title> is empty`).toBeTruthy();
             expect(title.length, `${pg.name}: <title> is too short (${title.length} chars). Should be 30-60 characters for SEO.`).toBeGreaterThanOrEqual(5);
         });
         test(`@regression ${pg.name} title does not contain "undefined" or template placeholders`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const title = await page.title();
             const badPatterns = ['undefined', 'null', '${', '{{', 'TITLE_HERE', 'Page Title'];
             for (const pattern of badPatterns) {
@@ -190,7 +190,7 @@ test.describe('SEO — Page Title', () => {
     // Style guide pages should also have proper titles
     for (const sg of STYLE_GUIDE_PAGES) {
         test(`@regression ${sg.component} style guide page has descriptive title`, async ({ page }) => {
-            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${sg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const title = await page.title();
             expect(title, `${sg.component} style guide: <title> is empty`).toBeTruthy();
         });
@@ -199,12 +199,12 @@ test.describe('SEO — Page Title', () => {
 test.describe('SEO — Meta Description', () => {
     for (const pg of GA_PAGES) {
         test(`@regression ${pg.name} has a meta description`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const description = await page.getAttribute('meta[name="description"]', 'content');
             expect(description, `${pg.name}: <meta name="description"> is missing. Search engines will auto-generate a snippet, which may be poor quality.`).toBeTruthy();
         });
         test(`@regression ${pg.name} meta description has appropriate length`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const description = await page.getAttribute('meta[name="description"]', 'content');
             if (!description) {
                 test.skip();
@@ -218,12 +218,12 @@ test.describe('SEO — Meta Description', () => {
 test.describe('SEO — Open Graph Tags', () => {
     for (const pg of GA_PAGES) {
         test(`@regression ${pg.name} has Open Graph title`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const ogTitle = await page.getAttribute('meta[property="og:title"]', 'content');
             expect(ogTitle, `${pg.name}: <meta property="og:title"> is missing. Social media shares will have no title preview.`).toBeTruthy();
         });
         test(`@regression ${pg.name} has Open Graph type`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const ogType = await page.getAttribute('meta[property="og:type"]', 'content');
             // og:type is recommended but may not be on every page — soft check
             if (ogType) {
@@ -231,7 +231,7 @@ test.describe('SEO — Open Graph Tags', () => {
             }
         });
         test(`@regression ${pg.name} has Open Graph image`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const ogImage = await page.getAttribute('meta[property="og:image"]', 'content');
             expect(ogImage, `${pg.name}: <meta property="og:image"> is missing. Social media shares will have no image preview.`).toBeTruthy();
             // If og:image exists, verify it's a valid URL
@@ -244,12 +244,12 @@ test.describe('SEO — Open Graph Tags', () => {
 test.describe('SEO — Canonical URL', () => {
     for (const pg of GA_PAGES) {
         test(`@regression ${pg.name} has a canonical URL`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const canonical = await page.getAttribute('link[rel="canonical"]', 'href');
             expect(canonical, `${pg.name}: <link rel="canonical"> is missing. This can cause duplicate content issues in search engines.`).toBeTruthy();
         });
         test(`@regression ${pg.name} canonical URL does not contain /content/`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const canonical = await page.getAttribute('link[rel="canonical"]', 'href');
             if (!canonical) {
                 test.skip();
@@ -266,12 +266,12 @@ test.describe('SEO — Canonical URL', () => {
 test.describe('SEO — HTML Lang & Charset', () => {
     for (const pg of GA_PAGES) {
         test(`@regression ${pg.name} has lang attribute on <html>`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const lang = await page.getAttribute('html', 'lang');
             expect(lang, `${pg.name}: <html> element missing lang attribute. Required for accessibility and SEO.`).toBeTruthy();
         });
         test(`@regression ${pg.name} has charset meta tag`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const charset = // 📏 TODO: Replace with measurement-utils
              await page.evaluate(() => {
                 const meta = document.querySelector('meta[charset]');
@@ -284,12 +284,12 @@ test.describe('SEO — HTML Lang & Charset', () => {
 test.describe('SEO — Heading Hierarchy', () => {
     for (const pg of GA_PAGES) {
         test(`@regression ${pg.name} has exactly one <h1> element`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const h1Count = await page.locator('h1').count();
             expect(h1Count, `${pg.name}: Found ${h1Count} <h1> elements. SEO best practice is exactly one <h1> per page.`).toBe(1);
         });
         test(`@regression ${pg.name} heading hierarchy does not skip levels`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`);
+            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const headingLevels = // 📏 TODO: Replace with measurement-utils
              await page.evaluate(() => {
                 const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));

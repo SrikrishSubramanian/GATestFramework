@@ -74,8 +74,12 @@ export async function loginToAEMAuthor(page: Page, options?: AuthOptions): Promi
     throw err;
   }
 
-  // Check if already logged in — covers direct redirect or active session
+  // Check if already logged in — covers direct redirect or active session.
+  // Settle briefly first: the AEM Start console SPA shell can still be mid-init
+  // right after landing here, and a residual redirect can race the caller's next
+  // page.goto(), producing "navigation interrupted by another navigation" errors.
   if (isAlreadyLoggedIn(page.url())) {
+    await page.waitForTimeout(1500);
     return;
   }
 
@@ -84,6 +88,7 @@ export async function loginToAEMAuthor(page: Page, options?: AuthOptions): Promi
   if (isCloudEnv(authorUrl)) {
     await page.waitForTimeout(2000);
     if (isAlreadyLoggedIn(page.url())) {
+      await page.waitForTimeout(1500);
       return;
     }
   }
@@ -157,6 +162,10 @@ export async function loginToAEMAuthor(page: Page, options?: AuthOptions): Promi
     throw new Error(`Auth flow did not reach AEM. Final URL: ${page.url()}`);
   }
 
+  // Settle before returning — the AEM Start console SPA shell can still be mid-init,
+  // and a residual redirect can race the caller's next page.goto().
+  await page.waitForTimeout(1500);
+
   // Save auth state after successful login so subsequent runs (and globalSetup)
   // can reuse the session without repeating MFA.
   try {
@@ -202,9 +211,20 @@ async function loginViaAdobeIMS(page: Page, email: string, password: string, tim
     await signInButton.first().click();
   }
 
-  // Step 2: Wait for Adobe IMS login page and fill email
+  // Step 2: Wait for Adobe IMS login page and fill email — race against an
+  // already-authenticated redirect, since an active SSO session can skip the
+  // email page entirely and land straight on AEM (mirrors the Step 4 password race below).
   const emailField = page.locator('input[name="username"], input[type="email"], #EmailPage-EmailField');
-  await emailField.waitFor({ state: 'visible', timeout });
+  const ssoSkippedEmail = page.waitForURL(
+    (url) => /\/(aem\/start|sites\.html|welcome|projects\.html)/.test(url.toString()),
+    { timeout }
+  ).then(() => 'sso').catch(() => null);
+  const emailPrompt = emailField.waitFor({ state: 'visible', timeout }).then(() => 'email').catch(() => null);
+  const emailWinner = await Promise.race([ssoSkippedEmail, emailPrompt]);
+  if (emailWinner === 'sso') {
+    console.log('[auth] SSO session active — skipped email prompt');
+    return;
+  }
   await emailField.click();
   await emailField.fill('');
   await page.keyboard.type(email, { delay: 50 });
