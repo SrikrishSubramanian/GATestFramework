@@ -10,8 +10,11 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
     "@playwright/test": "^1.59.1",
+    "@types/libsodium-wrappers": "^0.7.14",
     "@types/node": "^22.13.10",
     "cross-env": "^7.0.3",
+    "libsodium-wrappers": "^0.8.4",
+    "otplib": "^13.4.1",
     "typescript": "^5.9.3",
     "xlsx": "^0.18.5"
   },
@@ -27,6 +30,8 @@
     "test:cross-browser": "cross-env env=local npx playwright test tests/specFiles/ga/ --project chromium --project firefox --project webkit --project Desktop-Edge --project \"Mobile-Pixel4XL-Chrome\" --project \"Mobile-GalaxyS9-Chrome\" --project \"Mobile-GalaxyNote10-Firefox\" --project \"Mobile-iPhone8-Safari\" --project \"Tablet-GalaxyTabS6-Chrome\" --project \"Tablet-iPad7-Safari\"",
     "cleanup:logs": "npx ts-node scripts/cleanup-logs.ts",
     "auth:generate": "npx ts-node scripts/generate-auth-state.ts",
+    "auth:push-secret": "npx ts-node scripts/push-auth-secret.ts",
+    "auth:refresh": "npm run auth:generate && npm run auth:push-secret",
     "check:locators": "node scripts/check-locator-sync.js",
     "postinstall": "playwright install"
   }

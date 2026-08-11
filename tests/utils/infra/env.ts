@@ -3,6 +3,7 @@ class ENV {
     public static get AEM_AUTHOR_URL() { return process.env.AEM_AUTHOR_URL }
     public static get AEM_AUTHOR_USERNAME() { return process.env.AEM_AUTHOR_USERNAME }
     public static get AEM_AUTHOR_PASSWORD() { return process.env.AEM_AUTHOR_PASSWORD }
+    public static get AEM_MFA_TOTP_SECRET() { return process.env.AEM_MFA_TOTP_SECRET }
     public static get GA_AUTH_REQUIRED() { return process.env.GA_AUTH_REQUIRED === 'true' }
     public static get BIO() { return process.env.BIO }
     public static get EXPANDABLE_TEASER() { return process.env.EXPANDABLE_TEASER }

@@ -20,6 +20,11 @@ async function main() {
       override: true,
     });
   }
+  // AEM_MFA_TOTP_SECRET lives here so it never has to touch env files that get
+  // loaded in CI or committed .env.<env> files.
+  dotenv.config({
+    path: path.resolve(__dirname, '..', 'tests', 'environments', '.env.local.credentials'),
+  });
 
   const authorUrl = process.env.AEM_AUTHOR_URL || 'http://localhost:4502';
   const username = process.env.AEM_AUTHOR_USERNAME || 'admin';
@@ -35,7 +40,7 @@ async function main() {
   try {
     await loginToAEMAuthor(page, { authorUrl, username, password, timeout: 60000 });
     console.log(`[generate-auth-state] Success — session cached at ${AUTH_STATE_PATH}`);
-    console.log('[generate-auth-state] Copy that file\'s contents into the AEM_AUTH_STATE_JSON GitHub secret.');
+    console.log('[generate-auth-state] Run `npm run auth:push-secret` to push it to the AEM_AUTH_STATE_JSON GitHub secret (or `npm run auth:refresh` to do both steps at once next time).');
   } finally {
     await browser.close();
   }

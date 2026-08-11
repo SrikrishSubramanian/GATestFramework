@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import fs from 'fs';
+import { generateSync } from 'otplib';
 import ENV from './env';
 import { AUTH_STATE_PATH } from './persistent-context';
 
@@ -330,7 +331,17 @@ async function loginViaAdobeIMS(page: Page, email: string, password: string, tim
     console.log(`\n🔐 Microsoft Authenticator MFA — approve the number: ${mfaNumber?.trim()}\n`);
     await page.waitForURL((url) => !url.toString().includes('login.microsoftonline.com'), { timeout: 120000 });
   } else if (hasCodeMfa) {
-    console.log('\n🔐 Microsoft Authenticator MFA — enter the TOTP code in the browser window\n');
+    const totpSecret = ENV.AEM_MFA_TOTP_SECRET;
+    if (totpSecret) {
+      console.log('\n🔐 Microsoft Authenticator MFA — auto-filling TOTP code\n');
+      const code = generateSync({ secret: totpSecret });
+      const codeInput = page.locator('input#idTxtBx_SAOTCC_OTC, input[name="otc"]').first();
+      await codeInput.fill(code);
+      const verifyButton = page.locator('#idSubmit_SAOTCC_Continue, button:has-text("Verify"), input[type="submit"]');
+      await verifyButton.first().click();
+    } else {
+      console.log('\n🔐 Microsoft Authenticator MFA — enter the TOTP code in the browser window\n');
+    }
     await page.waitForURL((url) => !url.toString().includes('login.microsoftonline.com'), { timeout: 120000 });
   }
 
