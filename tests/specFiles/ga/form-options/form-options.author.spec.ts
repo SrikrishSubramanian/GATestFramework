@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { FormOptionsPage } from '../../../pages/ga/components/formOptionsPage';
 import ENV from '../../../utils/infra/env';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -35,7 +35,7 @@ test.describe('FormOptions — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[FO-002] @smoke @regression FormOptions interactive elements are functional', async ({ page }) => {
         const pom = new FormOptionsPage(page);

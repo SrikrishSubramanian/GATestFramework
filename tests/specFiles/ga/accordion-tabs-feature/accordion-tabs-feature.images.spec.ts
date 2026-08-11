@@ -28,7 +28,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Accordion Tabs Feature — Images & Media', () => {
   test('[ACCORDION-TABS-IMAGE-001] @regression Accordion/tabs icons load successfully', async ({ page }) => {
     const url = resolveComponentUrl('accordion-tabs-feature');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const icons = page.locator('[class*="accordion"] [class*="icon"], [class*="tabs"] [class*="icon"], .cmp-accordion-tabs svg');
     const iconCount = await icons.count();
@@ -37,7 +37,7 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
 
   test('[ACCORDION-TABS-IMAGE-002] @regression Accordion/tabs has no broken images', async ({ page }) => {
     const url = resolveComponentUrl('accordion-tabs-feature');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const images = page.locator('[class*="accordion"] img, [class*="tabs"] img, .cmp-accordion-tabs img');
     const count = await images.count();
@@ -51,7 +51,7 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
 
   test('[ACCORDION-TABS-IMAGE-003] @regression Accordion/tabs images have alt text', async ({ page }) => {
     const url = resolveComponentUrl('accordion-tabs-feature');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const images = page.locator('[class*="accordion"] img, [class*="tabs"] img, .cmp-accordion-tabs img');
     const count = await images.count();
@@ -65,7 +65,7 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
 
   test('[ACCORDION-TABS-IMAGE-004] @regression Accordion/tabs background images render', async ({ page }) => {
     const url = resolveComponentUrl('accordion-tabs-feature');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const bgElements = page.locator('[class*="accordion"] [style*="background-image"], [class*="tabs"] [style*="background-image"], .cmp-accordion-tabs [style*="background-image"]');
     const count = await bgElements.count();
@@ -84,7 +84,7 @@ test.describe('Accordion Tabs Feature — Images & Media', () => {
 
   test('[ACCORDION-TABS-IMAGE-005] @regression Accordion/tabs SVG icons are accessible', async ({ page }) => {
     const url = resolveComponentUrl('accordion-tabs-feature');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const svgs = page.locator('[class*="accordion"] svg, [class*="tabs"] svg, .cmp-accordion-tabs svg');
     const svgCount = await svgs.count();

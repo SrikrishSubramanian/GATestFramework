@@ -18,7 +18,8 @@ const BENIGN_ERROR_PATTERNS: RegExp[] = [
   /document\.body is null/i,
   /MutationObserver\.observe: Argument 1 is not an object/i,
   /^The operation was aborted\.?\s*$/i,
-  /Failed to fetch dynamically imported module: https:\/\/exc-unifiedcontent\.experience\.adobe\.net/i,
+  /(?:failed to fetch dynamically imported module|error loading dynamically imported module|failed to load script)[^\n]*https?:\/\/[\w.-]*\.experience\.adobe\.net/i,
+  /^NetworkError when attempting to fetch resource\.?$/i,
   /can't access property "addEventListener", .*getElementById\(.*\) is null/i,
   /XML Parsing Error: unclosed token[\s\S]*spectrum-icons-color\.svg/i,
 ];

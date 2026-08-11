@@ -48,3 +48,13 @@ test.describe('Homepage Hero — Responsive', () => {
 test.describe('Homepage Hero — Accessibility', () => {
     test.describe.configure({ retries: 1 });
 });
+// Relocated from text.author.spec.ts (TEXT-001) — CSV import mis-bucketed this under Text;
+// it's actually about the Homepage Hero role card click behavior.
+test.describe('Homepage Hero — CSV Test Cases (GAAM-397)', () => {
+    test('[HH-007] @smoke @regression @sanity CMS FE: Homepage Hero Role Card Click Action — AC1', async ({ page }) => {
+        const pom = new HomepageHeroPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: Local Storage Write on Card Click*
+        test.fixme();
+    });
+});

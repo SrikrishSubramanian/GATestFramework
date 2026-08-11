@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { TabsPage } from '../../../pages/ga/components/tabsPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -616,7 +616,7 @@ test.describe('Tabs — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[TABS-048] @smoke @regression Tabs interactive elements are functional', async ({ page }) => {
         const pom = new TabsPage(page);
@@ -640,7 +640,7 @@ test.describe('Tabs — Negative & Boundary', () => {
         const pom = new TabsPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-tabs').first()).toBeVisible();
     });

@@ -404,3 +404,16 @@ test.describe('ImageWithNestedContent — Console Errors', () => {
         expect(capture.getErrors()).toEqual([]);
     });
 });
+// Relocated from image.author.spec.ts (MG-066) — CSV import mis-bucketed this under plain Image;
+// it's actually about Image with Nested Content. The original implementation asserted against
+// `.cmp-image` (the wrong component's root) and never actually checked the background color the
+// ticket describes, so it was rewritten as fixme rather than kept as a silently-fake-passing test.
+test.describe('ImageWithNestedContent — CSV Test Cases (GAAM-1242)', () => {
+    test('[IWNC-040] @smoke @regression FE: Image with Nested Content - Background Color — AC1', async ({ page }) => {
+        const pom = new ImageWithNestedContentPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for background color on the secondary/nested content slot —
+        // needs live DOM investigation to find the correct selector and expected color value.
+        test.fixme();
+    });
+});

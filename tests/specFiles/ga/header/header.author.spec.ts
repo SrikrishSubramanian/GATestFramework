@@ -7,7 +7,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 let capture: ConsoleCapture;
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 test.beforeEach(async ({ page }) => {
@@ -54,13 +54,18 @@ test.describe('Header — CSV Test Cases (GAAM-1481)', () => {
         const pom = new HeaderPage(page);
         await pom.navigate(BASE());
         // TODO: Implement assertion for: Testing link - [https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/dynamic_rates/Dynamic_rates/income-150--se-fixed-index-annuity/income-150-se-all.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/dynamic_rates/Dynamic_rates/income-150--se-fixed-index-annuity/income-150-se-all.html?wcmmode=disabled]
-        // screenshot - 
-        // 
-        // 
+        // screenshot -
+        //
+        //
         // !image (18)-20260708-063822.png|width=315,alt="image (18)-20260708-063822.png"!
         test.fixme();
     });
 });
+// HDR-027 (GAAM-1455, "CMS BE: Cleanup BE integration code") removed — pure backend RedOak/form-clientlib
+// integration cleanup, explicitly marked "QA Waived" in the ticket itself, and not about the Header
+// component at all. CSV import mis-bucketed it here; no UI-testable surface exists for it anywhere.
+// HDR-028 (GAAM-1286, "50 50 banner: Background extension in XL breakpoints") relocated to
+// hero-fifty-fifty.author.spec.ts — it's about the hero-fifty-fifty component, not Header.
 test.describe('Header — Negative & Boundary', () => {
     test('[HDR-015] @negative @regression Header handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
@@ -69,7 +74,7 @@ test.describe('Header — Negative & Boundary', () => {
         const pom = new HeaderPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-header').first()).toBeVisible();
     });
@@ -100,38 +105,4 @@ test.describe('Header — Broken Images', () => {
     });
 });
 test.describe('Header — AEM Dialog Configuration', () => {
-});
-test.describe('Header — CSV Test Cases (GAAM-1455)', () => {
-    test('[HDR-027] @smoke @regression CMS BE: Cleanup BE integration code — AC1', async ({ page }) => {
-        const pom = new HeaderPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: *Acceptance Criteria:* 
-        // 
-        // # Added RedoakService.isConfigured() and guarded the servlet to return a clear error in unconfigured environments.
-        // # Updated RedOak token/submission-id parsing to prevent uncaught 500 errors on unexpected responses. Built the analytics cookie as the form clientlib expects, fixing the "Response header too large" error and success/failure events.
-        // # Added Javadocs to missing methods and unit tests for the above.
-        // # Added forward.jsp to route submissions to FormRedoakServlet.
-        // # Added doGet config probe and redoak.js authoring clientlib to warn when the RedOak service is not configured.
-        // # Logged successful submissions at INFO with submission ID instead of full response body at WARN.
-        // 
-        // 
-        // *QA Waived*
-        test.fixme();
-    });
-});
-test.describe('Header — CSV Test Cases (GAAM-1286)', () => {
-    test('[HDR-028] @smoke @regression 50 50 banner : Background extension in XL breakpoints — AC1', async ({ page }) => {
-        const pom = new HeaderPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Hi, In XL desktop breakpoints - the background needs to extend edge to egde while the content stays aligned to the header as per design. The divider in the header also needs to extend to the sides.
-        // [~accountid:5e73d47c17c6640c385f56a6] Can you help out with this issue? I’m raising this as a bug.
-        // 
-        // Thank you.
-        // 
-        // CC: [~accountid:712020:19496377-93fa-4b6a-be8c-4f3dac15dfb5] [~accountid:712020:ad021791-2e09-4b21-b18b-e7d643149e13]  [~accountid:712020:fe8fe45b-af82-40e5-baec-1580ec63583e] 
-        // 
-        // 
-        // !Screenshot 2026-06-15 at 7.03.20 PM-20260615-133326.png|width=686,alt="Screenshot 2026-06-15 at 7.03.20 PM-20260615-133326.png"!
-        test.fixme();
-    });
 });

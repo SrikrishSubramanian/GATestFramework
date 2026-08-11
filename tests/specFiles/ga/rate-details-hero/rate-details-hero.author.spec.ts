@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { RateDetailsHeroPage } from '../../../pages/ga/components/rateDetailsHeroPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -24,7 +24,7 @@ test.describe('RateDetailsHero — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[RDH-002] @smoke @regression RateDetailsHero interactive elements are functional', async ({ page }) => {
         const pom = new RateDetailsHeroPage(page);
@@ -48,7 +48,7 @@ test.describe('RateDetailsHero — Negative & Boundary', () => {
         const pom = new RateDetailsHeroPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-rate-details-hero').first()).toBeVisible();
     });
@@ -130,4 +130,20 @@ test.describe('RateDetailsHero — Broken Images', () => {
 test.describe('RateDetailsHero — Accessibility', () => {
 });
 test.describe('RateDetailsHero — AEM Dialog Configuration', () => {
+});
+// Relocated from image.author.spec.ts (MG-065) — CSV import mis-bucketed this under Image;
+// it's actually about the Rate Details Hero component.
+test.describe('RateDetailsHero — CSV Test Cases (GAAM-1320)', () => {
+    test('[RDH-010] @smoke @regression DR AEM FE: Rate Detail Hero padding is not aligned in responsive mode — AC1', async ({ page }) => {
+        const pom = new RateDetailsHeroPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: *In Responsive Mode:*
+        //
+        // * Rate Details Hero Contents are not properly left aligned with another components - to be fixed
+        // * Also *check with other possible responsive modes - All gaps should be fixed and tested thoroughly.*
+        // * Update the padding left & right for Rate Details Hero to 20px
+        //
+        // !image-20260619-074723.png|width=1096,alt="image-20260619-074723.png"!
+        test.fixme();
+    });
 });

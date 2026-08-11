@@ -24,8 +24,8 @@ on:
   push:
     branches:
       - ga_automation_testing
-  # schedule:
-  #   - cron: '0 1 * * *'
+  schedule:
+    - cron: '0 6 * * *'
 
 env:
   env: ${{ inputs.environment || 'dev' }}

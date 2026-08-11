@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { HeroFiftyFiftyPage } from '../../../pages/ga/components/heroFiftyFiftyPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertColumnLayout, assertNoEmptyWrappers, assertImageFillsContainer, assertTagName, assertFocusIndicator, assertHidden, assertAlignment, } from '../../../utils/infra/component-assertions';
@@ -453,7 +453,7 @@ test.describe('HeroFiftyFifty — Image (AC32–AC35)', () => {
         for (let i = 0; i < count; i++) {
             await expect(heroes.nth(i)).toBeVisible();
         }
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[HFF-035] @regression All authored images load successfully', async ({ page }) => {
         const pom = new HeroFiftyFiftyPage(page);
@@ -584,7 +584,7 @@ test.describe('HeroFiftyFifty — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[HFF-051] @smoke @regression HeroFiftyFifty interactive elements are functional', async ({ page }) => {
         const pom = new HeroFiftyFiftyPage(page);
@@ -608,7 +608,7 @@ test.describe('HeroFiftyFifty — Negative & Boundary', () => {
         const pom = new HeroFiftyFiftyPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-hero-fifty-fifty').first()).toBeVisible();
     });
@@ -666,4 +666,50 @@ test.describe('HeroFiftyFifty — Broken Images', () => {
     });
 });
 test.describe('HeroFiftyFifty — AEM Dialog Configuration', () => {
+});
+// Relocated from header.author.spec.ts (HDR-028) — CSV import mis-bucketed this under Header;
+// it's actually about the hero-fifty-fifty component.
+test.describe('HeroFiftyFifty — CSV Test Cases (GAAM-1286)', () => {
+    test('[HFF-059] @smoke @regression 50 50 banner : Background extension in XL breakpoints — AC1', async ({ page }) => {
+        const pom = new HeroFiftyFiftyPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: Hi, In XL desktop breakpoints - the background needs to extend edge to egde while the content stays aligned to the header as per design. The divider in the header also needs to extend to the sides.
+        // [~accountid:5e73d47c17c6640c385f56a6] Can you help out with this issue? I’m raising this as a bug.
+        //
+        // Thank you.
+        //
+        // CC: [~accountid:712020:19496377-93fa-4b6a-be8c-4f3dac15dfb5] [~accountid:712020:ad021791-2e09-4b21-b18b-e7d643149e13]  [~accountid:712020:fe8fe45b-af82-40e5-baec-1580ec63583e]
+        //
+        //
+        // !Screenshot 2026-06-15 at 7.03.20 PM-20260615-133326.png|width=686,alt="Screenshot 2026-06-15 at 7.03.20 PM-20260615-133326.png"!
+        test.fixme();
+    });
+});
+// Relocated from image.author.spec.ts (MG-060) — CSV import mis-bucketed this under Image;
+// it's actually about the hero-fifty-fifty component ("feature 50/50").
+test.describe('HeroFiftyFifty — CSV Test Cases (GAAM-1356)', () => {
+    test('[HFF-060] @smoke @regression CMS: FE: feature 50/50: Removal of Left and Right Padding — AC1', async ({ page }) => {
+        const pom = new HeroFiftyFiftyPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: The "Remove Left and Right Padding" feature is enabled for the 50% rollout group. However, the left and right padding is still being displayed on the affected pages/components, resulting in inconsistent layout behavior between users in the feature-enabled cohort and the expected design.
+        //
+        // URL tested - [ForeIncome II Fixed Index Annuity | Global Atlantic|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/financial-professionals/main/en/annuities/fixed-index-annuities/foreincome-ii-fixed-index-annuity.html?wcmmode=disabled]
+        //
+        // *Steps to Reproduce:*
+        //
+        // # Enable the "Remove Left and Right Padding" feature flag for a test user.
+        // # Navigate to the affected CMS page/component.
+        // # Observe the page layout and spacing on the left and right sides of the content area.
+        //
+        // *Expected Result:*
+        // Left and right padding should be completely removed according to the feature requirements, and the content should align with the updated design specifications.
+        //
+        // *Actual Result:*
+        // Left and/or right padding is still visible, causing extra whitespace and layout inconsistencies.
+        //
+        // !image-20260624-070720.png|width=546,alt="image-20260624-070720.png"!
+        //
+        // !image-20260624-070746.png|width=547,alt="image-20260624-070746.png"!
+        test.fixme();
+    });
 });

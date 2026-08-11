@@ -28,7 +28,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Hero Fifty-Fifty — Interactions', () => {
   test('[H5050-INTERACTION-001] @interaction @regression CTA button is clickable', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     const button = hero.locator('button, a[class*="button"]').first();
@@ -41,7 +41,7 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
 
   test('[H5050-INTERACTION-002] @interaction @regression Hero links are functional', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     const links = hero.locator('a');
@@ -56,7 +56,7 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
 
   test('[H5050-INTERACTION-003] @interaction @regression Hero 50/50 hover states work', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const button = page.locator('.cmp-hero-fifty-fifty button, .cmp-hero-fifty-fifty a[class*="button"]').first();
 
@@ -80,7 +80,7 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
 
   test('[H5050-INTERACTION-004] @interaction @regression Keyboard navigation works', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     await hero.focus();
@@ -93,7 +93,7 @@ test.describe('Hero Fifty-Fifty — Interactions', () => {
 
   test('[H5050-INTERACTION-005] @interaction @regression Image adapts to content changes', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const hero = page.locator('.cmp-hero-fifty-fifty').first();
     await expect(hero).toBeVisible();

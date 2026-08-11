@@ -24,7 +24,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Maxlength Constraint ============
     test('[GAAM-504-EDGE-001] @edge Verify input enforces maxlength strictly', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"][maxlength]').first();
         if (await input.count() > 0) {
             const maxlength = parseInt(await input.getAttribute('maxlength') || '');
@@ -36,7 +36,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-002] @edge Verify textarea enforces maxlength strictly', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea[maxlength]').first();
         if (await textarea.count() > 0) {
             const maxlength = parseInt(await textarea.getAttribute('maxlength') || '');
@@ -49,7 +49,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Special Characters ============
     test('[GAAM-504-EDGE-003] @edge Verify input handles special characters', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const specialChars = '<>&"\'!@#$%^&*()';
@@ -60,7 +60,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-004] @edge Verify textarea handles special characters', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             const specialChars = '<>&"\'!@#$%^&*()\n\t';
@@ -73,7 +73,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Unicode & Emoji ============
     test('[GAAM-504-EDGE-005] @edge Verify input handles unicode characters', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const unicode = '你好世界 مرحبا العالم';
@@ -84,7 +84,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-006] @edge Verify textarea handles emoji characters', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             const emoji = '😀🎉🚀✨';
@@ -96,7 +96,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Whitespace Handling ============
     test('[GAAM-504-EDGE-007] @edge Verify input preserves leading whitespace', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const textWithSpaces = '   test   ';
@@ -107,7 +107,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-008] @edge Verify textarea preserves line breaks', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             const multiline = 'line1\nline2\nline3';
@@ -120,7 +120,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Copy/Paste ============
     test('[GAAM-504-EDGE-009] @edge Verify input handles paste with maxlength', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"][maxlength]').first();
         if (await input.count() > 0) {
             const maxlength = parseInt(await input.getAttribute('maxlength') || '');
@@ -132,7 +132,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-010] @edge Verify textarea handles paste correctly', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             const multilineText = 'line1\nline2\nline3';
@@ -143,7 +143,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-012] @edge Verify textarea handles rapid typing', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             await textarea.type('test input', { delay: 5 });
@@ -154,7 +154,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Clear & Refill ============
     test('[GAAM-504-EDGE-013] @edge Verify input can be cleared and refilled multiple times', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             for (let i = 0; i < 3; i++) {
@@ -169,7 +169,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-014] @edge Verify textarea can be cleared and refilled multiple times', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             for (let i = 0; i < 3; i++) {
@@ -185,7 +185,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Focus/Blur Cycle ============
     test('[GAAM-504-EDGE-015] @edge Verify input focus/blur cycle preserves value', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             await fill(input, 'test value');
@@ -197,7 +197,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-016] @edge Verify textarea focus/blur cycle preserves value', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             await fill(textarea, 'test\nvalue');
@@ -210,7 +210,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Input Events ============
     test('[GAAM-504-EDGE-017] @edge Verify input event fires on text change', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             // ?? TODO: Replace with measurement-utils
@@ -228,7 +228,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-018] @edge Verify change event fires on blur', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             // ?? TODO: Replace with measurement-utils
@@ -248,7 +248,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Disabled & ReadOnly ============
     test('[GAAM-504-EDGE-019] @edge Verify disabled input shows disabled styling', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const disabledInput = page.locator('input[type="text"][disabled]').first();
         if (await disabledInput.count() > 0) {
             const opacity = // ?? TODO: Replace with measurement-utils
@@ -259,7 +259,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-020] @edge Verify readonly input styling preserved', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const readonlyInput = page.locator('input[type="text"][readonly]').first();
         if (await readonlyInput.count() > 0) {
             const bgColor = // ?? TODO: Replace with measurement-utils
@@ -270,7 +270,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Keyboard Shortcuts ============
     test('[GAAM-504-EDGE-021] @edge Verify Ctrl+A selects all text', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             await fill(input, 'test text');
@@ -283,7 +283,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-022] @edge Verify Ctrl+C copies text', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             await fill(input, 'test text');
@@ -294,7 +294,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     // ============ Edge Case: Number Input Constraints ============
     test('[GAAM-504-EDGE-023] @edge Verify number input rejects non-numeric', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const numberInput = page.locator('input[type="number"]').first();
         if (await numberInput.count() > 0) {
             await fill(numberInput, 'abc');
@@ -305,7 +305,7 @@ test.describe('Form Field Text — Edge Cases (GAAM-504)', () => {
     });
     test('[GAAM-504-EDGE-024] @edge Verify number input accepts numeric input', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const numberInput = page.locator('input[type="number"]').first();
         if (await numberInput.count() > 0) {
             await fill(numberInput, '123');

@@ -33,7 +33,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Text — Images & Media', () => {
   test('[TEXT-IMAGE-001] @regression Text embedded images load', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const images = page.locator('.cmp-text img');
     const count = await images.count();
@@ -47,7 +47,7 @@ test.describe('Text — Images & Media', () => {
 
   test('[TEXT-IMAGE-002] @regression Text images have alt text', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const images = page.locator('.cmp-text img');
     const count = await images.count();
@@ -61,7 +61,7 @@ test.describe('Text — Images & Media', () => {
 
   test('[TEXT-IMAGE-003] @regression Text image sizing is responsive', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const images = page.locator('.cmp-text img');
     const count = await images.count();
@@ -76,7 +76,7 @@ test.describe('Text — Images & Media', () => {
 
   test('[TEXT-IMAGE-004] @regression Text figure elements are semantic', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const figures = page.locator('.cmp-text figure');
     const count = await figures.count();
@@ -92,7 +92,7 @@ test.describe('Text — Images & Media', () => {
 
   test('[TEXT-IMAGE-005] @regression Text icons are visible', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const icons = page.locator('.cmp-text svg, .cmp-text i[class*="icon"]');
     const count = await icons.count();

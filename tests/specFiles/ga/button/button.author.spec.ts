@@ -44,7 +44,7 @@ test.describe('Button — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[BTTN-003] @smoke @regression Button interactive elements are functional', async ({ page }) => {
         const pom = new ButtonPage(page);

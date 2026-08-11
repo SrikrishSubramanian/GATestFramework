@@ -23,3 +23,12 @@ tests/environments/.env.*.credentials
 # AEM SDK (local dev only)
 GA_AEM_CODE/
 aem-sdk-*
+
+# kkr-aem is a separate repo, cloned locally only to read source paths for fixture-sync warnings —
+# never committed here (see CLAUDE.md: "No modifying kkr-aem from this repo")
+kkr-aem/
+
+# Office lock files
+~$*.xlsx
+~$*.docx
+~$*.pptx

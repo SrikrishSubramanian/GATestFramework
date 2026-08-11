@@ -23,7 +23,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     // ============ Frontend Rendering ============
     test('[GAAM-531-001] @regression @sanity Verify RTE frontend renders published content', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const content = page.locator('[class*="rte-content"], [class*="text-content"]').first();
         if (await content.count() > 0) {
             expect(await content.isVisible()).toBe(true);
@@ -31,14 +31,14 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     });
     test('[GAAM-531-002] @regression Verify no edit buttons visible in frontend', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const editButtons = page.locator('[class*="cq-editable"], button[aria-label*="edit"]');
         const count = await editButtons.count();
         expect(count).toBe(0);
     });
     test('[GAAM-531-003] @regression Verify content is read-only in frontend', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const editable = page.locator('[contenteditable="true"]');
         const count = await editable.count();
         expect(count).toBe(0);
@@ -46,7 +46,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     // ============ Text Display ============
     test('[GAAM-531-004] @regression Verify formatted text displays correctly', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const text = page.locator('p, span, div').first();
         if (await text.count() > 0) {
             const content = await text.textContent();
@@ -55,7 +55,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     });
     test('[GAAM-531-005] @regression Verify bold formatting visible', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const bold = page.locator('strong, b').first();
         if (await bold.count() > 0) {
             const fontWeight = // ?? TODO: Replace with measurement-utils
@@ -68,7 +68,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     // ============ Link Rendering ============
     test('[GAAM-531-007] @regression Verify internal links navigate correctly', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const internalLink = page.locator('a[href^="/"]').first();
         if (await internalLink.count() > 0) {
             const href = await internalLink.getAttribute('href');
@@ -77,7 +77,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     });
     test('[GAAM-531-008] @regression Verify external links open in new tab', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const externalLink = page.locator('a[href^="http"]').first();
         if (await externalLink.count() > 0) {
             const target = await externalLink.getAttribute('target');
@@ -87,7 +87,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     // ============ List Display ============
     test('[GAAM-531-010] @regression Verify unordered lists display with bullets', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const ul = page.locator('ul').first();
         if (await ul.count() > 0) {
             const items = ul.locator('li');
@@ -96,7 +96,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     });
     test('[GAAM-531-011] @regression Verify ordered lists display with numbers', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const ol = page.locator('ol').first();
         if (await ol.count() > 0) {
             const items = ol.locator('li');
@@ -107,7 +107,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     // ============ Headings Display ============
     test('[GAAM-531-013] @regression Verify headings are visually distinct', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const h1 = page.locator('h1').first();
         const p = page.locator('p').first();
         if (await h1.count() > 0 && await p.count() > 0) {
@@ -122,7 +122,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     });
     test('[GAAM-531-014] @regression Verify heading hierarchy structure', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const h1 = page.locator('h1');
         const h2 = page.locator('h2');
         // Should have proper heading structure
@@ -132,7 +132,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     test('[GAAM-531-017] @regression Verify responsive on mobile (375px)', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const content = page.locator('[class*="rte-content"]').first();
         if (await content.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -143,7 +143,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     test('[GAAM-531-018] @regression Verify responsive on tablet (768px)', async ({ page }) => {
         await page.setViewportSize({ width: 768, height: 1024 });
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const content = page.locator('[class*="rte-content"]').first();
         if (await content.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -154,7 +154,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     test('[GAAM-531-019] @regression Verify responsive on desktop (1440px)', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const content = page.locator('[class*="rte-content"]').first();
         if (await content.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -165,7 +165,7 @@ test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     // ============ Content Completeness ============
     test('[GAAM-531-020] @regression Verify all formatted content renders', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const content = page.locator('[class*="rte-content"]').first();
         if (await content.count() > 0) {
             const childCount = await content.locator('*').count();

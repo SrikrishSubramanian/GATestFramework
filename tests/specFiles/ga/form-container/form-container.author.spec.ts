@@ -38,3 +38,13 @@ test.describe('Form Container — Happy Path', () => {
 test.describe('Form Container — Accessibility', () => {
     test.describe.configure({ retries: 1 });
 });
+// Relocated from text.author.spec.ts (TEXT-020) — CSV import mis-bucketed this under Text;
+// it's explicitly about the Form Container component's dialog.
+test.describe('Form Container — CSV Test Cases (GAAM-1308)', () => {
+    test('[FC-003] @smoke @regression CMS BE: Form Container — Marketo Illustrations Action Type — AC1', async ({ page }) => {
+        const pom = new FormContainerPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: Dialog Structure*
+        test.fixme();
+    });
+});

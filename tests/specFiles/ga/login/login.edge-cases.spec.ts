@@ -23,7 +23,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     test('[LOGIN-EDGE-002] @edge Verify key points list hidden when not authored', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const keyPointsContainer = page.locator('[class*="key-points"], [class*="keyPoints"]');
         // If no key points authored, container should not be visible
         if (await keyPointsContainer.count() > 0) {
@@ -36,7 +36,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-003] @edge Verify subheadline hidden when not authored', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const subheadline = page.locator('[class*="subheadline"], [class*="subtitle"], .cmp-login h3');
         // Subheadline should only be visible if text is authored
         if (await subheadline.count() > 0) {
@@ -48,7 +48,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-004] @edge Verify fine print hidden when not authored', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const finePrint = page.locator('[class*="fine-print"], [class*="disclaimer"], .cmp-login small');
         if (await finePrint.count() > 0) {
             const text = await finePrint.textContent();
@@ -61,7 +61,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     test('[LOGIN-EDGE-005] @edge Verify decorative SVG hidden on mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const svg = page.locator('[class*="login"] [class*="decorative"] svg, [class*="login"] svg[aria-hidden="true"]');
         if (await svg.count() > 0) {
             const isVisible = await svg.isVisible().catch(() => false);
@@ -72,7 +72,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     test('[LOGIN-EDGE-007] @edge Verify single column layout on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
         if (await loginComponent.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -84,7 +84,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     // ============ Edge Case: Input Validation & Constraints ============
     test('[LOGIN-EDGE-008] @edge Verify username field accepts special characters', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const usernameField = page.locator('input[type="email"], input[name*="username"], input[name*="email"]').first();
         if (await usernameField.count() > 0) {
             const specialChars = "user+tag@example.com";
@@ -95,7 +95,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-009] @edge Verify password field masks input on default state', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const passwordField = page.locator('input[type="password"]').first();
         if (await passwordField.count() > 0) {
             const type = await passwordField.getAttribute('type');
@@ -105,7 +105,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     // ============ Edge Case: Validation Error Scenarios ============
     test('[LOGIN-EDGE-011] @edge Verify empty username field validation error', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const submitButton = page.locator('button:has-text("Continue"), button[type="submit"], [class*="cta"] button').first();
         if (await submitButton.count() > 0) {
             await clickElement(submitButton);
@@ -118,7 +118,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-013] @edge Verify invalid email format detection', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const emailField = page.locator('input[type="email"]').first();
         if (await emailField.count() > 0) {
             await fill(emailField, 'invalidemail');
@@ -129,7 +129,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     // ============ Edge Case: Form State Preservation ============
     test('[LOGIN-EDGE-014] @edge Verify form state after page navigation', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const usernameField = page.locator('input[type="email"], input[name*="username"]').first();
         if (await usernameField.count() > 0) {
             await fill(usernameField, 'test@example.com');
@@ -144,7 +144,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-015] @edge Verify form submission with both fields filled', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const usernameField = page.locator('input[type="email"], input[name*="username"]').first();
         const passwordField = page.locator('input[type="password"]').first();
         const submitButton = page.locator('button:has-text("Continue"), button[type="submit"]').first();
@@ -159,7 +159,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     // ============ Edge Case: Accessibility ============
     test('[LOGIN-EDGE-016] @edge Verify form labels associated with inputs via for attribute', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const labels = page.locator('label');
         const labelCount = await labels.count();
         expect(labelCount).toBeGreaterThan(0);
@@ -174,7 +174,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-017] @edge Verify password toggle button has accessible label', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const toggleButton = page.locator('button[class*="toggle"], [class*="show-password"], [aria-label*="password"]').first();
         if (await toggleButton.count() > 0) {
             const ariaLabel = await toggleButton.getAttribute('aria-label');
@@ -184,7 +184,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-018] @edge Verify form has proper heading hierarchy', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const h1 = page.locator('h1');
         const h2 = page.locator('h2');
         // Should have either h1 or h2 as form title
@@ -194,7 +194,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     // ============ Edge Case: Content Constraints ============
     test('[LOGIN-EDGE-019] @edge Verify content order: H1 → subheadline → key points → fine print', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const leftPanel = page.locator('[class*="login"] [class*="panel"], [class*="login"] [class*="left"], [class*="login"] section').first();
         if (await leftPanel.count() > 0) {
             const h1 = leftPanel.locator('h1').first();
@@ -209,7 +209,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-020] @edge Verify slate background color applied', async ({ page }) => {
         const url = resolveComponentUrl('login');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
         if (await loginComponent.count() > 0) {
             const bgColor = // ?? TODO: Replace with measurement-utils

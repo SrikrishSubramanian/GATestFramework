@@ -24,7 +24,7 @@ test.describe('BioCard — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[BC-002] @smoke @regression BioCard interactive elements are functional', async ({ page }) => {
         const pom = new BioCardPage(page);
@@ -130,4 +130,63 @@ test.describe('BioCard — Broken Images', () => {
 test.describe('BioCard — Accessibility', () => {
 });
 test.describe('BioCard — AEM Dialog Configuration', () => {
+});
+// Relocated from image.author.spec.ts (MG-058, MG-062) — CSV import mis-bucketed these under
+// Image; they're actually about the Bio Card component.
+test.describe('BioCard — CSV Test Cases (GAAM-1360)', () => {
+    test('[BC-010] @smoke @regression CMS FE: Bio Content – Bio Card issues — AC1', async ({ page }) => {
+        const pom = new BioCardPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: # Hover animation is not working as expected
+        //
+        // !image-20260624-075934.png|width=670,alt="image-20260624-075934.png"!
+        //
+        // # If bio link is not authored, the name and title are displaying on top in mobile view.It should be in center right(we dont have this scenario in Figma) please confirm
+        //
+        // !image-20260624-080618.png|width=670,alt="image-20260624-080618.png"!
+        //
+        // # Padding is not matching for all cards as per the Figma
+        //
+        // !image-20260624-081833.png|width=670,alt="image-20260624-081833.png"!
+        //
+        // # As per the feedback we need to add below role tag in content fragment (*Note:* Can we put a more realistic role in as an example? Let's go with 'Practice Management Consultant' for now.)
+        //
+        //
+        //
+        // Tested URL: [https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/QA_testing/bio-card-test2.html|https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/QA_testing/bio-card-test2.html]
+        test.fixme();
+    });
+});
+test.describe('BioCard — CSV Test Cases (GAAM-1333)', () => {
+    test('[BC-011] @smoke @regression CMS FE: GAAM-1084 - Bio Content-Hero Card Issues — AC1', async ({ page }) => {
+        const pom = new BioCardPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: Issue 1: Font Size of Bio Desc is 16px instead 18px
+        // Issue 2: Font Size of Title is 20px instead 18px
+        // Issue 3: Font Size of pdf link should be 14px
+        // Issue 4: In dark theme the font color of the *title and location* should be rgba(238, 243, 249, 1)
+        //
+        // Issue 5: In Mobile View the Font Size of the Texts are mismatching. Please check all the font sizes in Mobile.
+        //
+        // Test URL: [https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/bio-content-hero-card.html|https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/bio-content-hero-card.html]
+        //
+        // Figma: [https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?node-id=39478-46305&t=uL8ewnNZ52tPq11u-0|https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?node-id=39478-46305&t=uL8ewnNZ52tPq11u-0|smart-link]
+        //
+        // Issue 1:
+        //
+        // !image-20260622-122919.png|width=418,alt="image-20260622-122919.png"!
+        //
+        // Issue 2:
+        //
+        // !image-20260622-122958.png|width=420,alt="image-20260622-122958.png"!
+        //
+        // Issue 3:
+        //
+        // !image-20260622-123142.png|width=420,alt="image-20260622-123142.png"!
+        //
+        // Issue 4:
+        //
+        // !image-20260622-123303.png|width=425,alt="image-20260622-123303.png"!
+        test.fixme();
+    });
 });

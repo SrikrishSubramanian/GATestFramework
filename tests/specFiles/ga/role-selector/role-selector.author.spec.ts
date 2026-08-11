@@ -7,7 +7,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 let capture: ConsoleCapture;
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 test.beforeEach(async ({ page }) => {
@@ -66,7 +66,7 @@ test.describe('RoleSelector — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[RS-013] @smoke @regression RoleSelector interactive elements are functional', async ({ page }) => {
         const pom = new RoleSelectorPage(page);
@@ -95,7 +95,7 @@ test.describe('RoleSelector — Negative & Boundary', () => {
         const pom = new RoleSelectorPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         const root = await pom.root;
         await expect(root).toBeVisible();

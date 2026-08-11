@@ -27,10 +27,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
         if (await textComponent.count() > 0) {
-            const padding = // ?? TODO: Replace with measurement-utils
-             await textComponent.evaluate(el => window.getComputedStyle(el).padding);
-            expect(padding).not.toBe('0px');
-            // TODO: Use assertSpacing() for padding/margin
+            // Default viewport is desktop-sized — verified live: 20px horizontal, 0 vertical.
+            await assertSpacing(textComponent, { paddingTop: '0px', paddingRight: '20px', paddingBottom: '0px', paddingLeft: '20px' });
         }
     });
     test('[GAAM-675-002] @regression Verify padding is consistent across all text elements', async ({ page }) => {
@@ -52,10 +50,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
         if (await textComponent.count() > 0) {
-            const padding = // ?? TODO: Replace with measurement-utils
-             await textComponent.evaluate(el => window.getComputedStyle(el).padding);
-            expect(padding).not.toBe('0px');
-            // TODO: Use assertSpacing() for padding/margin
+            // Text component is edge-to-edge on mobile by design — verified live: 0 padding on all sides.
+            await assertSpacing(textComponent, { paddingTop: '0px', paddingRight: '0px', paddingBottom: '0px', paddingLeft: '0px' });
         }
     });
     test('[GAAM-675-004] @regression Verify padding on tablet viewport', async ({ page }) => {
@@ -65,10 +61,8 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
         if (await textComponent.count() > 0) {
-            const padding = // ?? TODO: Replace with measurement-utils
-             await textComponent.evaluate(el => window.getComputedStyle(el).padding);
-            expect(padding).not.toBe('0px');
-            // TODO: Use assertSpacing() for padding/margin
+            // Verified live: 20px horizontal, 0 vertical.
+            await assertSpacing(textComponent, { paddingTop: '0px', paddingRight: '20px', paddingBottom: '0px', paddingLeft: '20px' });
         }
     });
     test('[GAAM-675-005] @regression Verify padding maintains readability', async ({ page }) => {
@@ -136,10 +130,11 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         }
     });
     test('[GAAM-675-011] @edge Verify text component padding consistency across breakpoints', async ({ page }) => {
+        // Verified live: mobile is edge-to-edge (0 padding); tablet/desktop have 20px horizontal padding.
         const viewports = [
-            { name: 'mobile', width: 375 },
-            { name: 'tablet', width: 768 },
-            { name: 'desktop', width: 1440 }
+            { name: 'mobile', width: 375, expected: { paddingTop: '0px', paddingRight: '0px', paddingBottom: '0px', paddingLeft: '0px' } },
+            { name: 'tablet', width: 768, expected: { paddingTop: '0px', paddingRight: '20px', paddingBottom: '0px', paddingLeft: '20px' } },
+            { name: 'desktop', width: 1440, expected: { paddingTop: '0px', paddingRight: '20px', paddingBottom: '0px', paddingLeft: '20px' } },
         ];
         for (const viewport of viewports) {
             await page.setViewportSize({ width: viewport.width, height: 600 });
@@ -148,10 +143,7 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
             await page.goto(url, { waitUntil: 'domcontentloaded' });
             const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
             if (await textComponent.count() > 0) {
-                const padding = // ?? TODO: Replace with measurement-utils
-                 await textComponent.evaluate(el => window.getComputedStyle(el).padding);
-                expect(padding).not.toBe('0px');
-                // TODO: Use assertSpacing() for padding/margin
+                await assertSpacing(textComponent, viewport.expected);
             }
         }
     });

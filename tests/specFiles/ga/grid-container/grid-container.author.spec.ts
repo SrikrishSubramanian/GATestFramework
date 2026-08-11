@@ -720,3 +720,22 @@ test.describe('GridContainer — Console Errors', () => {
         expect(errors.map(e => e.message), `JS errors on grid-container style guide: ${errors.map(e => e.message).join('; ')}`).toEqual([]);
     });
 });
+// Relocated from image.author.spec.ts (MG-057) — CSV import mis-bucketed this under Image;
+// it's actually about the Grid component (used inside the Dynamic Rates table).
+test.describe('GridContainer — CSV Test Cases (GAAM-1387)', () => {
+    test('[GC-047] @smoke @regression CMS BE: Add a style option to Grid component - to be used in DR table component — AC1', async ({ page }) => {
+        const pom = new GridContainerPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: *AS IS:*
+        //
+        // * Grid component is missing with Style option while adding them in a Dynamic Rate component
+        // !image-20260626-122947.png|width=1078,alt="image-20260626-122947.png"!
+        //
+        //
+        //
+        // *TO BE:*
+        //
+        // * Add a *Style Option in the Grid component* - so that the grid can be configured as needed.
+        test.fixme();
+    });
+});

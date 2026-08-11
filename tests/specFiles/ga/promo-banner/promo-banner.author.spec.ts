@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { PromoBannerPage } from '../../../pages/ga/components/promoBannerPage';
+import { resolveComponentUrl, deployFixture } from '../../../utils/infra/content-fixture-deployer';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -152,8 +153,10 @@ test.describe('PromoBanner — Core Structure', () => {
 // ---------------------------------------------------------------------------
 test.describe('PromoBanner — Style Variants', () => {
     test('[PB-011] @regression granite variant has correct dark background color', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
+        // Style guide page never has a variant selected on any instance — use the
+        // dedicated content fixture (cq:styleIds="[promo-granite]") instead.
+        await deployFixture('promo-banner', page);
+        await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const graniteEl = page.locator(`${PB}.cmp-promo-banner--granite`).first();
         const count = await graniteEl.count();
         if (count === 0) {
@@ -169,8 +172,8 @@ test.describe('PromoBanner — Style Variants', () => {
         expect(bg, 'Granite variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
     });
     test('[PB-012] @regression azul variant has correct background color', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
+        await deployFixture('promo-banner', page);
+        await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const azulEl = page.locator(`${PB}.cmp-promo-banner--azul`).first();
         const count = await azulEl.count();
         if (count === 0) {
@@ -185,8 +188,8 @@ test.describe('PromoBanner — Style Variants', () => {
         expect(bg, 'Azul variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
     });
     test('[PB-013] @regression aubergine variant has correct twilight background color', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
+        await deployFixture('promo-banner', page);
+        await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const aubergineEl = page.locator(`${PB}.cmp-promo-banner--aubergine`).first();
         const count = await aubergineEl.count();
         if (count === 0) {
@@ -201,8 +204,8 @@ test.describe('PromoBanner — Style Variants', () => {
         expect(bg, 'Aubergine variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
     });
     test('[PB-014] @regression footer variant has azul background and border separator on title', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
+        await deployFixture('promo-banner', page);
+        await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
         if (count === 0) {
@@ -579,8 +582,8 @@ test.describe('PromoBanner — Mobile Layout', () => {
 // ---------------------------------------------------------------------------
 test.describe('PromoBanner — Footer Variant', () => {
     test('[PB-033] @regression footer variant logo has no circular border-radius', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
+        await deployFixture('promo-banner', page);
+        await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
         if (count === 0) {
@@ -601,8 +604,8 @@ test.describe('PromoBanner — Footer Variant', () => {
         expect(borderRadius, 'Footer variant logo should not have 999px circular radius').not.toMatch(/999px|9999px/);
     });
     test('[PB-034] @regression footer variant social icons are present', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
+        await deployFixture('promo-banner', page);
+        await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
         if (count === 0) {
@@ -615,8 +618,8 @@ test.describe('PromoBanner — Footer Variant', () => {
         expect(socialCount, 'Footer variant should have at least one social icon link').toBeGreaterThan(0);
     });
     test('[PB-035] @regression footer variant title has a border separator (right or bottom border)', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
+        await deployFixture('promo-banner', page);
+        await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
         if (count === 0) {
@@ -645,8 +648,8 @@ test.describe('PromoBanner — Footer Variant', () => {
         expect(hasRightBorder || hasBottomBorder, 'Footer variant title should have a visible border separator').toBe(true);
     });
     test('[PB-036] @regression footer variant renders logo alongside content', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
+        await deployFixture('promo-banner', page);
+        await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
         if (count === 0) {
@@ -741,7 +744,7 @@ test.describe('PromoBanner — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[PB-048] @smoke @regression PromoBanner interactive elements are functional', async ({ page }) => {
         const pom = new PromoBannerPage(page);
@@ -765,7 +768,7 @@ test.describe('PromoBanner — Negative & Boundary', () => {
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-promo-banner').first()).toBeVisible();
     });

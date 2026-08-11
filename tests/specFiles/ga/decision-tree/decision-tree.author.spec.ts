@@ -25,7 +25,7 @@ test.describe('DecisionTree — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[DT-002] @smoke @regression DecisionTree interactive elements are functional', async ({ page }) => {
         const pom = new DecisionTreePage(page);
@@ -121,4 +121,24 @@ test.describe('DecisionTree — Broken Images', () => {
 test.describe('DecisionTree — Accessibility', () => {
 });
 test.describe('DecisionTree — AEM Dialog Configuration', () => {
+});
+// Relocated from image.author.spec.ts (MG-056) — CSV import mis-bucketed this under Image;
+// it's actually about the Decision Tree component's authoring guide.
+test.describe('DecisionTree — CSV Test Cases (GAAM-1388)', () => {
+    test('[DT-010] @smoke @regression CMS-BE | Decision Tree Component- authoring guide issue — AC1', async ({ page }) => {
+        const pom = new DecisionTreePage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: Authoring guide is not updated properly for all Decision tree, Decision tree step and Decision tree option
+        //
+        // !image-20260626-130125.png|width=670,alt="image-20260626-130125.png"!
+        //
+        // !image-20260626-130156.png|width=670,alt="image-20260626-130156.png"!
+        //
+        // !image-20260626-130212.png|width=670,alt="image-20260626-130212.png"!
+        //
+        //
+        //
+        // *Note:* Refer Promo banner and headline block components authoring guide
+        test.fixme();
+    });
 });

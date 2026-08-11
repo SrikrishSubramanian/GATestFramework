@@ -1251,61 +1251,6 @@
       "totalTests": 3,
       "lastUpdated": "2026-08-07T14:08:24.062Z"
     },
-    "general": {
-      "component": "general",
-      "categories": {
-        "csv": {
-          "category": "csv",
-          "testCount": 16,
-          "specFile": "general.author.spec.ts",
-          "tags": []
-        },
-        "happy-path": {
-          "category": "happy-path",
-          "testCount": 16,
-          "specFile": "general.author.spec.ts",
-          "tags": []
-        },
-        "negative": {
-          "category": "negative",
-          "testCount": 16,
-          "specFile": "general.author.spec.ts",
-          "tags": []
-        },
-        "responsive": {
-          "category": "responsive",
-          "testCount": 16,
-          "specFile": "general.author.spec.ts",
-          "tags": []
-        },
-        "console-errors": {
-          "category": "console-errors",
-          "testCount": 16,
-          "specFile": "general.author.spec.ts",
-          "tags": []
-        },
-        "broken-images": {
-          "category": "broken-images",
-          "testCount": 16,
-          "specFile": "general.author.spec.ts",
-          "tags": []
-        },
-        "accessibility": {
-          "category": "accessibility",
-          "testCount": 16,
-          "specFile": "general.author.spec.ts",
-          "tags": []
-        },
-        "aem-dialog": {
-          "category": "aem-dialog",
-          "testCount": 16,
-          "specFile": "general.author.spec.ts",
-          "tags": []
-        }
-      },
-      "totalTests": 128,
-      "lastUpdated": "2026-06-17T15:25:40.168Z"
-    },
     "button": {
       "component": "button",
       "categories": {

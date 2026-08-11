@@ -276,3 +276,32 @@ test.describe('Product Rate Table — Known Content Gaps', () => {
     test.skip(true, 'ForeInvestors Choice Variable Annuity has no Dynamic Rates content authored yet — confirmed via live check, not a test defect');
   });
 });
+
+// Relocated from image.author.spec.ts (MG-041, MG-064) — CSV import mis-bucketed these under
+// Image; they're actually about the Dynamic Rates / Product Rate Table component.
+test.describe('Product Rate Table — CSV Test Cases (GAAM-1402)', () => {
+  test('[PRT-010] @smoke @regression DR AEM FE: Only selected Index in dialog should be loaded in DR table — AC1', async ({ page }) => {
+    const foreIncomeII = PRODUCTS.find(p => p.id === 'PRT-001')!;
+    const pom = new ProductRateTablePage(page);
+    await pom.navigate(BASE(), foreIncomeII.productPath, foreIncomeII.childPath);
+    // TODO: Implement assertion for: *Bug:*
+    //
+    // * *Only the selected Index and Year in the dialog - should be loaded in the DR table.*
+    // Refer the attach the AEM author page link.
+    // * This should be done for all the products.
+    //
+    // * [ForeIncome II - Morgan Stanley | Adobe Experience Manager|https://author-p101514-e947796.adobeaemcloud.com/ui#/aem/editor.html/content/global-atlantic/financial-professionals/main/en/resources/rates/foreincome-ii-ms.html]
+    test.fixme();
+  });
+});
+test.describe('Product Rate Table — CSV Test Cases (GAAM-1321)', () => {
+  test('[PRT-011] @smoke @regression DR AEM FE: Rider Charge is not aligned as expected — AC1', async ({ page }) => {
+    const foreIncomeII = PRODUCTS.find(p => p.id === 'PRT-001')!;
+    const pom = new ProductRateTablePage(page);
+    await pom.navigate(BASE(), foreIncomeII.productPath, foreIncomeII.childPath);
+    // TODO: Implement assertion for: # Rider Charge - Added manually - is not aligned properly on *Dimensions 660 * 815* - should be fixed
+    // # manual table addition would be checked for different products, wherever required.
+    // # Testing Path - [ForeIncome II - All|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/financial-professionals/main/en/resources/rates/foreincome-ii-all.html?wcmmode=disabled]
+    test.fixme();
+  });
+});

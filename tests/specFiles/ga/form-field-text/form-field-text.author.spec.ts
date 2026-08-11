@@ -24,7 +24,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Input Field Rendering ============
     test('[GAAM-504-001] @regression @sanity Verify text input renders', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"], [class*="text-input"], [class*="form-text"]').first();
         if (await input.count() > 0) {
             expect(await input.isVisible()).toBe(true);
@@ -32,7 +32,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-002] @regression Verify textarea renders', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea, [class*="textarea"]').first();
         if (await textarea.count() > 0) {
             expect(await textarea.isVisible()).toBe(true);
@@ -40,7 +40,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-003] @regression Verify input has label associated', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const inputId = await input.getAttribute('id');
@@ -52,7 +52,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-004] @regression Verify textarea has label associated', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             const textareaId = await textarea.getAttribute('id');
@@ -65,7 +65,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Input Typing & Value ============
     test('[GAAM-504-005] @regression Verify text input accepts typed input', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             await fill(input, 'test value');
@@ -75,7 +75,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-006] @regression Verify textarea accepts multiline input', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             await fill(textarea, 'line 1\nline 2\nline 3');
@@ -85,7 +85,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-007] @regression Verify input field clears value', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             await fill(input, 'test');
@@ -96,7 +96,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-008] @regression Verify textarea clears value', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             await fill(textarea, 'test');
@@ -108,7 +108,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Placeholder & Default Text ============
     test('[GAAM-504-009] @regression Verify input placeholder displays', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"][placeholder]').first();
         if (await input.count() > 0) {
             const placeholder = await input.getAttribute('placeholder');
@@ -117,7 +117,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-010] @regression Verify textarea placeholder displays', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea[placeholder]').first();
         if (await textarea.count() > 0) {
             const placeholder = await textarea.getAttribute('placeholder');
@@ -127,7 +127,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Input Constraints ============
     test('[GAAM-504-011] @regression Verify maxlength constraint on input', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const inputWithMax = page.locator('input[type="text"][maxlength]').first();
         if (await inputWithMax.count() > 0) {
             const maxlength = await inputWithMax.getAttribute('maxlength');
@@ -137,7 +137,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-012] @regression Verify maxlength constraint on textarea', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textareaWithMax = page.locator('textarea[maxlength]').first();
         if (await textareaWithMax.count() > 0) {
             const maxlength = await textareaWithMax.getAttribute('maxlength');
@@ -146,7 +146,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-013] @regression Verify minlength constraint on input', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const inputWithMin = page.locator('input[type="text"][minlength]').first();
         if (await inputWithMin.count() > 0) {
             const minlength = await inputWithMin.getAttribute('minlength');
@@ -155,7 +155,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-014] @regression Verify input respects maxlength during typing', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"][maxlength]').first();
         if (await input.count() > 0) {
             const maxlength = parseInt(await input.getAttribute('maxlength') || '');
@@ -170,7 +170,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Required Field Validation ============
     test('[GAAM-504-015] @regression Verify required input has required attribute', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const requiredInput = page.locator('input[type="text"][required]').first();
         if (await requiredInput.count() > 0) {
             expect(await requiredInput.getAttribute('required')).toBeTruthy();
@@ -178,7 +178,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-016] @regression Verify required textarea has required attribute', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const requiredTextarea = page.locator('textarea[required]').first();
         if (await requiredTextarea.count() > 0) {
             expect(await requiredTextarea.getAttribute('required')).toBeTruthy();
@@ -187,7 +187,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Input Types ============
     test('[GAAM-504-017] @regression Verify email input type', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const emailInput = page.locator('input[type="email"]').first();
         if (await emailInput.count() > 0) {
             expect(await emailInput.getAttribute('type')).toBe('email');
@@ -195,7 +195,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-018] @regression Verify number input type', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const numberInput = page.locator('input[type="number"]').first();
         if (await numberInput.count() > 0) {
             expect(await numberInput.getAttribute('type')).toBe('number');
@@ -203,7 +203,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-019] @regression Verify phone input type', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const phoneInput = page.locator('input[type="tel"]').first();
         if (await phoneInput.count() > 0) {
             expect(await phoneInput.getAttribute('type')).toBe('tel');
@@ -212,7 +212,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Disabled & ReadOnly States ============
     test('[GAAM-504-020] @regression Verify disabled input cannot be edited', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const disabledInput = page.locator('input[type="text"][disabled]').first();
         if (await disabledInput.count() > 0) {
             const isDisabled = // ?? TODO: Replace with measurement-utils
@@ -222,7 +222,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-021] @regression Verify readonly input cannot be edited', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const readonlyInput = page.locator('input[type="text"][readonly]').first();
         if (await readonlyInput.count() > 0) {
             const isReadonly = // ?? TODO: Replace with measurement-utils
@@ -234,7 +234,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     test('[GAAM-504-025] @regression Verify input responsive on mobile (375px)', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -245,7 +245,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     test('[GAAM-504-026] @regression Verify textarea responsive on mobile (375px)', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -256,7 +256,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     test('[GAAM-504-027] @regression Verify input responsive on tablet (768px)', async ({ page }) => {
         await page.setViewportSize({ width: 768, height: 1024 });
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -267,7 +267,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     test('[GAAM-504-028] @regression Verify input responsive on desktop (1440px)', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -278,7 +278,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Styling & Appearance ============
     test('[GAAM-504-029] @regression Verify input has visible border', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const border = // ?? TODO: Replace with measurement-utils
@@ -288,7 +288,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-030] @regression Verify textarea has visible border', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             const border = // ?? TODO: Replace with measurement-utils
@@ -298,7 +298,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-031] @regression Verify input has readable text color', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const color = // ?? TODO: Replace with measurement-utils
@@ -308,7 +308,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-032] @regression Verify input has appropriate padding', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const padding = // ?? TODO: Replace with measurement-utils
@@ -320,7 +320,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Data Attributes ============
     test('[GAAM-504-033] @regression Verify input has name attribute', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"]').first();
         if (await input.count() > 0) {
             const name = await input.getAttribute('name');
@@ -329,7 +329,7 @@ test.describe('Form Field Text Component (GAAM-504)', () => {
     });
     test('[GAAM-504-034] @regression Verify textarea has name attribute', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textarea = page.locator('textarea').first();
         if (await textarea.count() > 0) {
             const name = await textarea.getAttribute('name');

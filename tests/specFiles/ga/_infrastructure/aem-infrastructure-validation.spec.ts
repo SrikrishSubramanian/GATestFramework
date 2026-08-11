@@ -167,7 +167,7 @@ test.describe('Style System — CSS Class Existence', () => {
     // Also verify per-component that style classes on rendered elements have effect
     test('@regression Section background style classes produce non-transparent backgrounds', async ({ page }) => {
         const url = resolveComponentUrl('accordion');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         await page.waitForLoadState('networkidle');
         const backgrounds = [
             { selector: '.cmp-section--background-color-granite', expectDark: true },

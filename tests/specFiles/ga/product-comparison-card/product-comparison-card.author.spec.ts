@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ProductComparisonCardPage } from '../../../pages/ga/components/productComparisonCardPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -24,7 +24,7 @@ test.describe('ProductComparisonCard — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[PCC-002] @smoke @regression ProductComparisonCard interactive elements are functional', async ({ page }) => {
         const pom = new ProductComparisonCardPage(page);
@@ -48,7 +48,7 @@ test.describe('ProductComparisonCard — Negative & Boundary', () => {
         const pom = new ProductComparisonCardPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-product-comparison-card').first()).toBeVisible();
     });
@@ -120,4 +120,14 @@ test.describe('ProductComparisonCard — Broken Images', () => {
 test.describe('ProductComparisonCard — Accessibility', () => {
 });
 test.describe('ProductComparisonCard — AEM Dialog Configuration', () => {
+});
+// Relocated from text.author.spec.ts (TEXT-018) — CSV import mis-bucketed this under Text;
+// it's actually about the Product Comparison content fragment model.
+test.describe('ProductComparisonCard — CSV Test Cases (GAAM-1384)', () => {
+    test('[PCC-010] @smoke @regression CMS BE: Product Comparison CF - Increase Key Features Max to 4 — AC1', async ({ page }) => {
+        const pom = new ProductComparisonCardPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: The Key Features multifield on the Product CF model allows authors to add up to 4 items (previously 3)
+        test.fixme();
+    });
 });

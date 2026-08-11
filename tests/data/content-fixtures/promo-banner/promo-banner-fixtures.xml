@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Promo Banner style-variant fixture — covers the 4 real cq:styleIds from
+     /conf/global-atlantic/settings/wcm/styles/promo-banner-default (verified in kkr-aem policies):
+     promo-granite, promo-azul, promo-aubergine, promo-footer.
+     The live style guide page never had any of these variants selected on its 5 instances,
+     so PB-011/012/013/014/033/034/035/036 correctly self-skip against it (content gap, not a bug). -->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Promo Banner style-variant fixture — granite, azul, aubergine, footer."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Promo Banner — Style Variants"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+
+                <text_header
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/text"
+                    text="&lt;h1 class=&quot;style-guide__page-headline&quot;&gt;Promo Banner — Style Variants&lt;/h1&gt;&lt;div class=&quot;style-guide__page-description&quot;&gt;One instance per cq:styleIds variant (promo-granite, promo-azul, promo-aubergine, promo-footer), so variant-specific tests have real content instead of self-skipping.&lt;/div&gt;"
+                    textIsRich="true"/>
+
+                <!-- Granite variant (also the visual default background, but with the explicit modifier class applied) -->
+                <promo_banner_granite
+                    cq:styleIds="[promo-granite]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/promo-banner"
+                    bannerTitle="Granite Variation"
+                    bannerText="A leading provider of retirement security and investment solutions."
+                    imageAltText="Granite promo banner logo"
+                    logoURL="/content/global-atlantic/style-guide"/>
+
+                <spacer_1
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- Azul variant -->
+                <promo_banner_azul
+                    cq:styleIds="[promo-azul]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/promo-banner"
+                    bannerTitle="Azul Variation"
+                    bannerText="A leading provider of retirement security and investment solutions."
+                    imageAltText="Azul promo banner logo"
+                    logoURL="/content/global-atlantic/style-guide"/>
+
+                <spacer_2
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- Aubergine variant -->
+                <promo_banner_aubergine
+                    cq:styleIds="[promo-aubergine]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/promo-banner"
+                    bannerTitle="Aubergine Variation"
+                    bannerText="A leading provider of retirement security and investment solutions."
+                    imageAltText="Aubergine promo banner logo"
+                    logoURL="/content/global-atlantic/style-guide"/>
+
+                <spacer_3
+                    cq:styleIds="[size-medium]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/spacer"/>
+
+                <!-- Footer variant — logo/social layout with a title border separator; include social links
+                     so PB-034 (footer variant social icons are present) has real content to check. -->
+                <promo_banner_footer
+                    cq:styleIds="[promo-footer]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/promo-banner"
+                    bannerTitle="Footer Variation"
+                    imageAltText="Footer promo banner logo"
+                    logoURL="/content/global-atlantic/style-guide">
+                    <socialLinks jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            path="https://www.linkedin.com/company/global-atlantic"
+                            icon="fab fa-linkedin"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            path="https://www.facebook.com/globalatlantic"
+                            icon="fab fa-facebook"/>
+                    </socialLinks>
+                </promo_banner_footer>
+
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

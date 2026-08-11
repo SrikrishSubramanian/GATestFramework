@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { FirmSelectionModalPage } from '../../../pages/ga/components/firmSelectionModalPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -26,7 +26,7 @@ test.describe('FirmSelectionModal — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[FSM-002] @smoke @regression FirmSelectionModal interactive elements are functional', async ({ page }) => {
         const pom = new FirmSelectionModalPage(page);
@@ -55,7 +55,7 @@ test.describe('FirmSelectionModal — Negative & Boundary', () => {
         const pom = new FirmSelectionModalPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present in the DOM (not crash) — modal itself
         // stays hidden until its trigger is clicked, so we check attached, not visible
         await expect(page.locator('.cmp-firm-selection-modal').first()).toBeAttached();

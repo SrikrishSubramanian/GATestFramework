@@ -23,7 +23,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Hero CTA Video Modal — Edge Cases', () => {
     test('[GAAM-621-EDGE-004] @edge Verify Space key opens modal on button', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const cta = page.locator('button[class*="cta"]').first();
         if (await cta.count() > 0) {
             await cta.focus();
@@ -37,7 +37,7 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
     });
     test('[GAAM-621-EDGE-006] @edge Verify video resets position on modal close/reopen', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const video = page.locator('video').first();
         if (await video.count() > 0) {
             const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
@@ -62,7 +62,7 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
     // ============ Edge Case: Error Scenarios ============
     test('[GAAM-621-EDGE-013] @edge Verify modal gracefully handles missing video source', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const video = page.locator('video').first();
         if (await video.count() > 0) {
             // Check for fallback content
@@ -76,7 +76,7 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
     });
     test('[GAAM-621-EDGE-018] @edge Verify modal content contrast meets WCAG standards', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const cta = page.locator('button[class*="cta"], a[class*="cta"]').first();
         if (await cta.count() > 0) {
             await clickElement(cta);

@@ -24,7 +24,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     // ============ Banner Rendering ============
     test('[FB-001] @regression @sanity Verify feature banner renders', async ({ page }) => {
         const url = resolveComponentUrl('feature-banner');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const banner = page.locator('[class*="feature-banner"], [class*="banner"]').first();
         if (await banner.count() > 0) {
             expect(await banner.isVisible()).toBe(true);
@@ -32,7 +32,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     });
     test('[FB-002] @regression Verify banner has background image or color', async ({ page }) => {
         const url = resolveComponentUrl('feature-banner');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const banner = page.locator('[class*="feature-banner"]').first();
         if (await banner.count() > 0) {
             const bgImage = // ?? TODO: Replace with measurement-utils
@@ -44,7 +44,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     });
     test('[FB-003] @regression Verify banner text/content displays', async ({ page }) => {
         const url = resolveComponentUrl('feature-banner');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const content = page.locator('[class*="feature-banner"] *').first();
         if (await content.count() > 0) {
             const text = await content.textContent();
@@ -53,7 +53,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     });
     test('[FB-004] @regression Verify banner has CTA button', async ({ page }) => {
         const url = resolveComponentUrl('feature-banner');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const button = page.locator('[class*="feature-banner"] button, [class*="feature-banner"] a[class*="cta"]').first();
         if (await button.count() > 0) {
             expect(await button.isVisible()).toBe(true);
@@ -62,7 +62,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     test('[FB-005] @regression Verify responsive on mobile (375px)', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const url = resolveComponentUrl('feature-banner');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const banner = page.locator('[class*="feature-banner"]').first();
         if (await banner.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -73,7 +73,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     test('[FB-006] @regression Verify responsive on tablet (768px)', async ({ page }) => {
         await page.setViewportSize({ width: 768, height: 1024 });
         const url = resolveComponentUrl('feature-banner');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const banner = page.locator('[class*="feature-banner"]').first();
         if (await banner.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -84,7 +84,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     test('[FB-007] @regression Verify responsive on desktop (1440px)', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const url = resolveComponentUrl('feature-banner');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const banner = page.locator('[class*="feature-banner"]').first();
         if (await banner.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -94,7 +94,7 @@ test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     });
     test('[FB-010] @regression Verify text readable over background', async ({ page }) => {
         const url = resolveComponentUrl('feature-banner');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const text = page.locator('[class*="feature-banner"] p').first();
         if (await text.count() > 0) {
             const color = // ?? TODO: Replace with measurement-utils

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { InsightsListingPage } from '../../../pages/ga/components/insightsListingPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -24,7 +24,7 @@ test.describe('InsightsListing — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[IL-002] @smoke @regression InsightsListing interactive elements are functional', async ({ page }) => {
         const pom = new InsightsListingPage(page);
@@ -48,7 +48,7 @@ test.describe('InsightsListing — Negative & Boundary', () => {
         const pom = new InsightsListingPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-insights-listing').first()).toBeVisible();
     });

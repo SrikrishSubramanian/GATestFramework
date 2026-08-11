@@ -28,7 +28,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Text — Interactions', () => {
   test('[TEXT-INTERACTION-001] @interaction @regression Text links are clickable', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const links = page.locator('.cmp-text a');
     const count = await links.count();
@@ -42,7 +42,7 @@ test.describe('Text — Interactions', () => {
 
   test('[TEXT-INTERACTION-002] @interaction @regression Text content is selectable', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const text = page.locator('.cmp-text').first();
     await expect(text).toBeVisible();
@@ -57,7 +57,7 @@ test.describe('Text — Interactions', () => {
 
   test('[TEXT-INTERACTION-003] @interaction @regression Text keyboard navigation', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const links = page.locator('.cmp-text a');
     if (await links.count() > 0) {
@@ -74,7 +74,7 @@ test.describe('Text — Interactions', () => {
 
   test('[TEXT-INTERACTION-004] @interaction @regression Text code blocks display', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const codeBlocks = page.locator('.cmp-text code, .cmp-text pre');
     const count = await codeBlocks.count();
@@ -88,7 +88,7 @@ test.describe('Text — Interactions', () => {
 
   test('[TEXT-INTERACTION-005] @interaction @regression Text tables render correctly', async ({ page }) => {
     const url = resolveComponentUrl('text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const tables = page.locator('.cmp-text table');
     const count = await tables.count();

@@ -406,7 +406,11 @@ test.describe('TeaserCard — CTA & Card Clickability', () => {
         // Without CTA, the inner element is <div class="cmp-teaser-card">, not <a>
         const nonLinkedCard = page.locator(`div${TC}`).first();
         if (await nonLinkedCard.count() === 0) {
-            test.skip();
+            // Verified live 2026-08-12: all 75 .cmp-teaser-card instances on the style-guide page
+            // are <a> (linked). Zero use the unlinked <div> variant. The component code already
+            // branches on this (TC_WITH_CTA / TC_WITHOUT_CTA), so this is a content gap on the
+            // demo page, not a missing feature — un-skip once a no-CTA card is authored there.
+            test.skip(true, 'No unlinked (no-CTA) teaser-card instance authored on the style-guide page — content gap, not a component defect');
             return;
         }
         const tag = // 📏 TODO: Replace with measurement-utils
@@ -752,7 +756,9 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
         await pom.navigate(BASE());
         const nonLinkedCard = page.locator(`div${TC}`).first();
         if (await nonLinkedCard.count() === 0) {
-            test.skip();
+            // Same content gap as TC-025 — no unlinked (no-CTA) teaser-card instance authored on
+            // the style-guide page. See TC-025 for details.
+            test.skip(true, 'No unlinked (no-CTA) teaser-card instance authored on the style-guide page — content gap, not a component defect');
             return;
         }
         await hover(nonLinkedCard);

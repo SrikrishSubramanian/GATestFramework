@@ -28,7 +28,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Form Text — Images & Media', () => {
   test('[FORMTEXT-IMAGE-001] @regression Form text field icons are present', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const icons = page.locator('.cmp-form-text [class*="icon"], .cmp-form-text svg');
     const iconCount = await icons.count();
@@ -37,7 +37,7 @@ test.describe('Form Text — Images & Media', () => {
 
   test('[FORMTEXT-IMAGE-002] @regression Form text field icons load correctly', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const svgs = page.locator('.cmp-form-text svg, .cmp-form-text [class*="icon"] svg');
     const svgCount = await svgs.count();
@@ -51,7 +51,7 @@ test.describe('Form Text — Images & Media', () => {
 
   test('[FORMTEXT-IMAGE-003] @regression Form text background images render', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const bgElements = page.locator('.cmp-form-text [style*="background-image"]');
     const count = await bgElements.count();
@@ -70,7 +70,7 @@ test.describe('Form Text — Images & Media', () => {
 
   test('[FORMTEXT-IMAGE-004] @regression Form text has no broken images', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const images = page.locator('.cmp-form-text img');
     const imgCount = await images.count();
@@ -84,7 +84,7 @@ test.describe('Form Text — Images & Media', () => {
 
   test('[FORMTEXT-IMAGE-005] @regression Form text images have alt text', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const images = page.locator('.cmp-form-text img');
     const count = await images.count();

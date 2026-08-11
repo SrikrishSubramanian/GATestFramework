@@ -24,7 +24,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Mixed Formatting ============
     test('[GAAM-530-EDGE-001] @edge Verify mixed bold and italic formatting', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const mixedFormat = page.locator('strong em, b i, em strong, i b').first();
         if (await mixedFormat.count() > 0) {
             const fontWeight = // ?? TODO: Replace with measurement-utils
@@ -38,7 +38,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-002] @edge Verify bold with link formatting', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const boldLink = page.locator('a strong, strong a, a b, b a').first();
         if (await boldLink.count() > 0) {
             expect(await boldLink.isVisible()).toBe(true);
@@ -47,7 +47,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Large Lists ============
     test('[GAAM-530-EDGE-003] @edge Verify large unordered list renders correctly', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const ul = page.locator('ul').first();
         if (await ul.count() > 0) {
             const items = ul.locator('li');
@@ -58,7 +58,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-004] @edge Verify deeply nested list structure', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const deeplyNested = page.locator('ul ul ul, ol ol ol').first();
         if (await deeplyNested.count() > 0) {
             // Verify DOM structure supports deep nesting
@@ -68,7 +68,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Special Characters in Content ============
     test('[GAAM-530-EDGE-005] @edge Verify special HTML characters display correctly', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const content = page.locator('[class*="rte-content"]').first();
         if (await content.count() > 0) {
             const text = await content.textContent();
@@ -78,7 +78,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-006] @edge Verify unicode characters in RTE content', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const rte = page.locator('[class*="rte"]').first();
         if (await rte.count() > 0) {
             const text = await rte.textContent();
@@ -88,7 +88,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Empty Elements ============
     test('[GAAM-530-EDGE-007] @edge Verify empty paragraph renders without error', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const emptyP = page.locator('p:empty').first();
         if (await emptyP.count() > 0) {
             const isVisible = await emptyP.isVisible().catch(() => false);
@@ -97,7 +97,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-008] @edge Verify empty list items handled gracefully', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const li = page.locator('li').first();
         if (await li.count() > 0) {
             // List items should be in valid list context
@@ -110,7 +110,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Very Long Content ============
     test('[GAAM-530-EDGE-009] @edge Verify RTE handles very long paragraphs', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const paragraph = page.locator('p').first();
         if (await paragraph.count() > 0) {
             const text = await paragraph.textContent();
@@ -124,7 +124,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-010] @edge Verify RTE handles many headings', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const headings = page.locator('h1, h2, h3, h4, h5, h6');
         const count = await headings.count();
         expect(count).toBeGreaterThanOrEqual(0);
@@ -132,7 +132,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Link Validation ============
     test('[GAAM-530-EDGE-011] @edge Verify broken internal links handled', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const links = page.locator('a[href]');
         const count = await links.count();
         for (let i = 0; i < Math.min(count, 3); i++) {
@@ -142,7 +142,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-012] @edge Verify mailto links work correctly', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const mailtoLink = page.locator('a[href^="mailto:"]').first();
         if (await mailtoLink.count() > 0) {
             const href = await mailtoLink.getAttribute('href');
@@ -151,7 +151,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-013] @edge Verify anchor links work correctly', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const anchorLink = page.locator('a[href^="#"]').first();
         if (await anchorLink.count() > 0) {
             const href = await anchorLink.getAttribute('href');
@@ -161,7 +161,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Code Block Edge Cases ============
     test('[GAAM-530-EDGE-014] @edge Verify code block with special characters', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const code = page.locator('code, pre').first();
         if (await code.count() > 0) {
             const text = await code.textContent();
@@ -170,7 +170,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-015] @edge Verify code preserves formatting and indentation', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const pre = page.locator('pre').first();
         if (await pre.count() > 0) {
             const whiteSpace = // ?? TODO: Replace with measurement-utils
@@ -181,7 +181,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Blockquote with Nested Elements ============
     test('[GAAM-530-EDGE-016] @edge Verify blockquote with nested paragraphs', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const blockquote = page.locator('blockquote').first();
         if (await blockquote.count() > 0) {
             const paragraphs = blockquote.locator('p');
@@ -190,7 +190,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-017] @edge Verify blockquote with attribution', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const blockquote = page.locator('blockquote').first();
         if (await blockquote.count() > 0) {
             const cite = blockquote.locator('cite, footer, [class*="attribution"]');
@@ -201,7 +201,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Table Support (if applicable) ============
     test('[GAAM-530-EDGE-018] @edge Verify table renders in RTE', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const table = page.locator('table').first();
         if (await table.count() > 0) {
             const rows = table.locator('tr');
@@ -212,7 +212,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     test('[GAAM-530-EDGE-019] @edge Verify text wraps properly on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const paragraph = page.locator('p').first();
         if (await paragraph.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -227,7 +227,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     test('[GAAM-530-EDGE-020] @edge Verify lists adapt to mobile width', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const ul = page.locator('ul').first();
         if (await ul.count() > 0) {
             const width = // ?? TODO: Replace with measurement-utils
@@ -238,7 +238,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     // ============ Edge Case: Color & Styling Variations ============
     test('[GAAM-530-EDGE-021] @edge Verify colored text displays properly', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const coloredText = page.locator('[style*="color"]').first();
         if (await coloredText.count() > 0) {
             const color = // ?? TODO: Replace with measurement-utils
@@ -248,7 +248,7 @@ test.describe('Formatted RTE — Edge Cases (GAAM-530)', () => {
     });
     test('[GAAM-530-EDGE-022] @edge Verify highlighted text background displays', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const highlighted = page.locator('[style*="background"]').first();
         if (await highlighted.count() > 0) {
             const bgColor = // ?? TODO: Replace with measurement-utils

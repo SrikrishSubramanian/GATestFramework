@@ -23,7 +23,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Form Text — Core Functionality', () => {
     test('[FORMTEXT-002] @regression @sanity Form text field accepts input', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
         if (await textInput.count() > 0) {
             await fill(textInput, 'Test Input Value');
@@ -33,7 +33,7 @@ test.describe('Form Text — Core Functionality', () => {
     });
     test('[FORMTEXT-003] @regression Form text field has required attribute when specified', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textInputs = page.locator('input[type="text"], .cmp-form-text input');
         const count = await textInputs.count();
         for (let i = 0; i < Math.min(count, 3); i++) {
@@ -44,7 +44,7 @@ test.describe('Form Text — Core Functionality', () => {
     });
     test('[FORMTEXT-004] @regression Form text placeholder is displayed', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textInput = page.locator('input[type="text"][placeholder], .cmp-form-text input[placeholder]').first();
         if (await textInput.count() > 0) {
             const placeholder = await textInput.getAttribute('placeholder');
@@ -53,7 +53,7 @@ test.describe('Form Text — Core Functionality', () => {
     });
     test('[FORMTEXT-006] @regression Form text field validates minimum length', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textInput = page.locator('input[type="text"][minlength], .cmp-form-text input[minlength]').first();
         if (await textInput.count() > 0) {
             const minLength = await textInput.getAttribute('minlength');
@@ -62,7 +62,7 @@ test.describe('Form Text — Core Functionality', () => {
     });
     test('[FORMTEXT-007] @regression Form text field respects maximum length', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textInput = page.locator('input[type="text"][maxlength], .cmp-form-text input[maxlength]').first();
         if (await textInput.count() > 0) {
             const maxLength = await textInput.getAttribute('maxlength');
@@ -71,7 +71,7 @@ test.describe('Form Text — Core Functionality', () => {
     });
     test('[FORMTEXT-008] @regression Form text field pattern validation', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textInput = page.locator('input[type="text"][pattern], .cmp-form-text input[pattern]').first();
         if (await textInput.count() > 0) {
             const pattern = await textInput.getAttribute('pattern');
@@ -80,7 +80,7 @@ test.describe('Form Text — Core Functionality', () => {
     });
     test('[FORMTEXT-009] @regression Form text field name attribute is set', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textInputs = page.locator('input[type="text"], .cmp-form-text input');
         const count = await textInputs.count();
         expect(count).toBeGreaterThan(0);
@@ -91,7 +91,7 @@ test.describe('Form Text — Core Functionality', () => {
     });
     test('[FORMTEXT-010] @regression Form text displays error message on validation failure', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const errorContainer = page.locator('[class*="error"], [class*="invalid"], .cmp-form-text [role="alert"]');
         const hasErrors = await errorContainer.count() > 0;
         expect(hasErrors).toBeDefined();

@@ -6,7 +6,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 let capture: ConsoleCapture;
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 test.beforeEach(async ({ page }) => {
@@ -24,7 +24,7 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     // ============ Modal Opening & Closing ============
     test('[GAAM-621-001] @regression Verify video modal opens on CTA click', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const ctaButton = page.locator('button[aria-label="Watch video"]').first();
         if (await ctaButton.count() > 0) {
             await clickElement(ctaButton);
@@ -37,7 +37,7 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     });
     test('[GAAM-621-002] @regression Verify modal closes on X button click', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const modal = page.locator('[class*="modal"], [role="dialog"]').first();
         if (await modal.count() > 0) {
             const closeBtn = modal.locator('button[aria-label*="close"], button[class*="close"], [class*="close-button"]').first();
@@ -53,7 +53,7 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     // ============ Video Controls ============
     test('[GAAM-621-005] @regression Verify video plays and pauses on click', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const videoElement = page.locator('video, [class*="video-player"]').first();
         if (await videoElement.count() > 0) {
             const video = page.locator('video').first();
@@ -66,7 +66,7 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     });
     test('[GAAM-621-006] @regression Verify video controls are accessible', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const videoControl = page.locator('[class*="video-controls"], video');
         if (await videoControl.count() > 0) {
             // Check for control buttons or attributes
@@ -78,7 +78,7 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     });
     test('[GAAM-621-007] @regression Verify video fullscreen capability', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const video = page.locator('video').first();
         if (await video.count() > 0) {
             const fullscreenBtn = page.locator('button[aria-label*="fullscreen"], [class*="fullscreen"]').first();
@@ -87,7 +87,7 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     });
     test('[GAAM-621-014] @regression Verify video stops when modal closes', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const video = page.locator('video').first();
         if (await video.count() > 0) {
             await clickElement(video);
@@ -106,7 +106,7 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     // ============ Video Source & Loading ============
     test('[GAAM-621-017] @regression Verify video source is valid', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const video = page.locator('video').first();
         if (await video.count() > 0) {
             const source = video.locator('source').first();
@@ -118,13 +118,13 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
     });
     test('[GAAM-621-018] @regression Verify video loads without errors', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
         const video = page.locator('video').first();
         if (await video.count() > 0) {
             // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
         }
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
 });

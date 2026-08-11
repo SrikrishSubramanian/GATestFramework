@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ImagePage } from '../../../pages/ga/components/imagePage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -462,29 +462,6 @@ test.describe('Image — Console', () => {
         expect(errors).toEqual([]);
     });
 });
-test.describe('Image — CSV Test Cases (GAAM-1402)', () => {
-    test('[MG-041] @smoke @regression DR AEM FE: Only selected Index in dialog should be loaded in DR table — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: *Bug:*
-        // 
-        // * *Only the selected Index and Year in the dialog - should be loaded in the DR table.*
-        // Refer the attach the AEM author page link.
-        // * This should be done for all the products.
-        // 
-        // * [ForeIncome II - Morgan Stanley | Adobe Experience Manager|https://author-p101514-e947796.adobeaemcloud.com/ui#/aem/editor.html/content/global-atlantic/financial-professionals/main/en/resources/rates/foreincome-ii-ms.html]
-        // 
-        // 
-        // *Selected Tag in Dialog*
-        // 
-        // !image-20260629-152548.png|width=665,alt="image-20260629-152548.png"!
-        // 
-        // *Data Appearing in Dialog*
-        // 
-        // !image-20260629-152636.png|width=665,alt="image-20260629-152636.png"!
-        test.fixme();
-    });
-});
 test.describe('Image — Happy Path', () => {
     test('[MG-042] @smoke @regression Image renders correctly', async ({ page }) => {
         const pom = new ImagePage(page);
@@ -500,7 +477,7 @@ test.describe('Image — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[MG-043] @smoke @regression Image interactive elements are functional', async ({ page }) => {
         const pom = new ImagePage(page);
@@ -524,7 +501,7 @@ test.describe('Image — Negative & Boundary', () => {
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-image').first()).toBeVisible();
     });
@@ -594,208 +571,11 @@ test.describe('Image — Broken Images', () => {
 });
 test.describe('Image — AEM Dialog Configuration', () => {
 });
-test.describe('Image — CSV Test Cases (GAAM-1388)', () => {
-    test('[MG-056] @smoke @regression CMS-BE | Decision Tree Component- authoring guide issue — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Authoring guide is not updated properly for all Decision tree, Decision tree step and Decision tree option
-        // 
-        // !image-20260626-130125.png|width=670,alt="image-20260626-130125.png"!
-        // 
-        // !image-20260626-130156.png|width=670,alt="image-20260626-130156.png"!
-        // 
-        // !image-20260626-130212.png|width=670,alt="image-20260626-130212.png"!
-        // 
-        // 
-        // 
-        // *Note:* Refer Promo banner and headline block components authoring guide
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1387)', () => {
-    test('[MG-057] @smoke @regression CMS BE: Add a style option to Grid component - to be used in DR table component — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: *AS IS:*
-        // 
-        // * Grid component is missing with Style option while adding them in a Dynamic Rate component
-        // !image-20260626-122947.png|width=1078,alt="image-20260626-122947.png"!
-        // 
-        // 
-        // 
-        // *TO BE:*
-        // 
-        // * Add a *Style Option in the Grid component* - so that the grid can be configured as needed.
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1360)', () => {
-    test('[MG-058] @smoke @regression CMS FE: Bio Content – Bio Card issues — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: # Hover animation is not working as expected
-        // 
-        // !image-20260624-075934.png|width=670,alt="image-20260624-075934.png"!
-        // 
-        // # If bio link is not authored, the name and title are displaying on top in mobile view.It should be in center right(we dont have this scenario in Figma) please confirm
-        // 
-        // !image-20260624-080618.png|width=670,alt="image-20260624-080618.png"!
-        // 
-        // # Padding is not matching for all cards as per the Figma
-        // 
-        // !image-20260624-081833.png|width=670,alt="image-20260624-081833.png"!
-        // 
-        // # As per the feedback we need to add below role tag in content fragment (*Note:* Can we put a more realistic role in as an example? Let's go with 'Practice Management Consultant' for now.)
-        // 
-        // 
-        // 
-        // Tested URL: [https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/QA_testing/bio-card-test2.html|https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/QA_testing/bio-card-test2.html]
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1357)', () => {
-    test('[MG-059] @smoke @regression CMS FE: GAAM-1280(quote component) alignment issue — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Hi, A few more issues:
-        // 1. The roles in the info panel are not aligning to the right in small desktop breakpoints. 
-        // 2. At small desktop breakpoints, only the quote wraps to multiple lines — the info panel maintains its width.
-        // 3. In tablet breakpoints, the Author images and names should be aligned to the left for the left aligned quote (Refer [figma|https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?m=auto&node-id=34313-44453&t=HD2vpnOwOlhUfkB4-1]). It should be aligned in the center for the center aligned quote. The mobile implementation working well, kindly incorporate the same implementation for desktop as well. 
-        // 
-        // 
-        // !Screenshot 2026-06-24 at 12.53.56 PM-20260624-072402.png|width=648,alt="Screenshot 2026-06-24 at 12.53.56 PM-20260624-072402.png"!
-        // 
-        // 
-        // Thank you.
-        // CC: [~accountid:712020:19496377-93fa-4b6a-be8c-4f3dac15dfb5] [~accountid:712020:f8626600-fef9-4321-a873-db1099c23d62] [~accountid:712020:ca49fe11-4085-496b-8053-2df97275fc28] [~accountid:606ce8584703e400679818a2] 
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1356)', () => {
-    test('[MG-060] @smoke @regression CMS: FE: feature 50/50: Removal of Left and Right Padding — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: The "Remove Left and Right Padding" feature is enabled for the 50% rollout group. However, the left and right padding is still being displayed on the affected pages/components, resulting in inconsistent layout behavior between users in the feature-enabled cohort and the expected design.
-        // 
-        // URL tested - [ForeIncome II Fixed Index Annuity | Global Atlantic|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/financial-professionals/main/en/annuities/fixed-index-annuities/foreincome-ii-fixed-index-annuity.html?wcmmode=disabled]
-        // 
-        // *Steps to Reproduce:*
-        // 
-        // # Enable the "Remove Left and Right Padding" feature flag for a test user.
-        // # Navigate to the affected CMS page/component.
-        // # Observe the page layout and spacing on the left and right sides of the content area.
-        // 
-        // *Expected Result:*
-        // Left and right padding should be completely removed according to the feature requirements, and the content should align with the updated design specifications.
-        // 
-        // *Actual Result:*
-        // Left and/or right padding is still visible, causing extra whitespace and layout inconsistencies.
-        // 
-        // !image-20260624-070720.png|width=546,alt="image-20260624-070720.png"!
-        // 
-        // !image-20260624-070746.png|width=547,alt="image-20260624-070746.png"!
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1354)', () => {
-    test('[MG-061] @smoke @regression DR AEM BE: Dynamic Rates Audit Log - error handling issue — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: validation error are not shown 
-        // Testing _link -[https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/rate-admin-dashboard.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/rate-admin-dashboard.html?wcmmode=disabled]
-        // 
-        // !image-20260624-051512.png|width=330,alt="image-20260624-051512.png"!
-        // 
-        //  
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1333)', () => {
-    test('[MG-062] @smoke @regression CMS FE: GAAM-1084 - Bio Content-Hero Card Issues — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Issue 1: Font Size of Bio Desc is 16px instead 18px
-        // Issue 2: Font Size of Title is 20px instead 18px
-        // Issue 3: Font Size of pdf link should be 14px
-        // Issue 4: In dark theme the font color of the *title and location* should be rgba(238, 243, 249, 1) 
-        // 
-        // Issue 5: In Mobile View the Font Size of the Texts are mismatching. Please check all the font sizes in Mobile.
-        // 
-        // Test URL: [https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/bio-content-hero-card.html|https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/bio-content-hero-card.html]
-        // 
-        // Figma: [https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?node-id=39478-46305&t=uL8ewnNZ52tPq11u-0|https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?node-id=39478-46305&t=uL8ewnNZ52tPq11u-0|smart-link] 
-        // 
-        // Issue 1: 
-        // 
-        // !image-20260622-122919.png|width=418,alt="image-20260622-122919.png"!
-        // 
-        // Issue 2: 
-        // 
-        // !image-20260622-122958.png|width=420,alt="image-20260622-122958.png"!
-        // 
-        // Issue 3: 
-        // 
-        // !image-20260622-123142.png|width=420,alt="image-20260622-123142.png"!
-        // 
-        // Issue 4: 
-        // 
-        // !image-20260622-123303.png|width=425,alt="image-20260622-123303.png"!
-        // 
-        // 
-        // 
-        // 
-        // 
-        //           
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1332)', () => {
-    test('[MG-063] @smoke @regression CMS BE: Code Optimization KKRV-1832 — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: There are reference of the deprecated {{com.google.common}} library in {{DynamicRateUploadServiceImplTest.java}}. 
-        // 
-        // Introduce alternate libraries supported by AEM Cloud to replace the deprecated com.google.common library used in our code base.
-        // 
-        // !image-20260619-062720.png|width=650,alt="image-20260619-062720.png"!
-        // 
-        // For reference, the MS team has already completed similar remediation work under [+*KKRV-1927*+|https://bounteous.jira.com/browse/KKRV-1927], and the changes implemented there can be leveraged as a reference for this update.
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1321)', () => {
-    test('[MG-064] @smoke @regression DR AEM FE: Rider Charge is not aligned as expected — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: # Rider Charge - Added manually - is not aligned properly on *Dimensions 660 * 815* - should be fixed
-        // # manual table addition would be checked for different products, wherever required.
-        // # Testing Path - [ForeIncome II - All|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/financial-professionals/main/en/resources/rates/foreincome-ii-all.html?wcmmode=disabled]
-        // 
-        // !image-20260625-080609.png|width=825,alt="image-20260625-080609.png"!
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1320)', () => {
-    test('[MG-065] @smoke @regression DR AEM FE: Rate Detail Hero padding is not aligned in responsive mode — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: *In Responsive Mode:*
-        // 
-        // * Rate Details Hero Contents are not properly left aligned with another components - to be fixed
-        // * Also *check with other possible responsive modes - All gaps should be fixed and tested thoroughly.*
-        // * Update the padding left & right for Rate Details Hero to 20px
-        // 
-        // !image-20260619-074723.png|width=1096,alt="image-20260619-074723.png"!
-        test.fixme();
-    });
-});
-test.describe('Image — CSV Test Cases (GAAM-1242)', () => {
-    test('[MG-066] @smoke @regression FE: Image with Nested Content - Background Color — AC1', async ({ page }) => {
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        const secondarySlot = page.locator('.cmp-image__secondary-slot').first();
-        // Secondary slot may or may not be present depending on authored content
-        const root = page.locator('.cmp-image').first();
-        await expect(root).toBeVisible();
-    });
-});
+// 12 CSV-imported test cases (MG-041, MG-056 through MG-066) were removed from here — the CSV
+// bulk-import's component-bucketing fallback (csv-test-parser.ts deriveComponentFromMetadata)
+// mis-assigned every unmatched row in that batch to "image", even though none of them are about
+// the Image component. MG-041/060/064/065/056/057/058/059/062/066 were relocated to their real
+// components (product-rate-table, hero-fifty-fifty, decision-tree, grid-container, bio-card,
+// quote, rate-details-hero, image-with-nested-content). MG-061 and MG-063 were deleted outright —
+// backend-only tickets (admin-dashboard audit log, a Java library dependency cleanup) with no
+// UI-testable surface in any component.

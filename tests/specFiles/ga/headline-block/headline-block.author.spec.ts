@@ -295,61 +295,47 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
-        // Look for a block with padding-top-off applied
-        const paddingOffBlock = page.locator('.cmp-headline-block--padding-top-off .cmp-headline-block');
-        const count = await paddingOffBlock.count();
-        if (count === 0) {
-            test.skip(true, 'No padding-top-off variation on style guide — needs content fixture');
-            return;
-        }
-        const paddingTop = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingTop);
-        // measurement: use measurement-utils for cleaner code
-        const paddingBottom = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingBottom);
-        // measurement: use measurement-utils for cleaner code
+        // No style-guide instance authors this modifier, so it's applied at runtime. The
+        // modifier lives on the ancestor .aem-GridColumn, not on .cmp-headline-block itself —
+        // confirmed live (self-injection has no effect; ancestor injection does).
+        const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
+        const gridCol = block.locator('xpath=ancestor::*[contains(@class, "aem-GridColumn")][1]');
+        await gridCol.evaluate(el => el.classList.add('cmp-headline-block--padding-top-off'));
+        const paddingTop = await block.evaluate(el => getComputedStyle(el).paddingTop);
+        const paddingBottom = await block.evaluate(el => getComputedStyle(el).paddingBottom);
         expect(paddingTop).toBe('0px');
-        // TODO: Use assertSpacing() for padding/margin
         expect(paddingBottom).toBe('48px');
-        // TODO: Use assertSpacing() for padding/margin
     });
     test('[HB-026] @regression Padding-bottom-off class removes bottom padding only', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
-        const paddingOffBlock = page.locator('.cmp-headline-block--padding-bottom-off .cmp-headline-block');
-        const count = await paddingOffBlock.count();
-        if (count === 0) {
-            test.skip(true, 'No padding-bottom-off variation on style guide — needs content fixture');
-            return;
-        }
-        const paddingTop = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingTop);
-        // measurement: use measurement-utils for cleaner code
-        const paddingBottom = await paddingOffBlock.first().evaluate(el => getComputedStyle(el).paddingBottom);
-        // measurement: use measurement-utils for cleaner code
+        const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
+        const gridCol = block.locator('xpath=ancestor::*[contains(@class, "aem-GridColumn")][1]');
+        await gridCol.evaluate(el => el.classList.add('cmp-headline-block--padding-bottom-off'));
+        const paddingTop = await block.evaluate(el => getComputedStyle(el).paddingTop);
+        const paddingBottom = await block.evaluate(el => getComputedStyle(el).paddingBottom);
         expect(paddingTop).toBe('48px');
-        // TODO: Use assertSpacing() for padding/margin
         expect(paddingBottom).toBe('0px');
-        // TODO: Use assertSpacing() for padding/margin
     });
     test('[HB-027] @regression Internal spacing unchanged when padding removed', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
-        // Compare eyebrow-to-title gap in normal block vs padding-off block
-        const normalBlock = page.locator(`${SECTION_WHITE} ${HB}`).first();
-        const normalEyeBox = await normalBlock.locator(EYEBROW).boundingBox();
-        const normalTitleBox = await normalBlock.locator(TITLE).boundingBox();
+        // Compare eyebrow-to-title gap in normal block vs the same block with padding-top-off applied
+        const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
+        const normalEyeBox = await block.locator(EYEBROW).boundingBox();
+        const normalTitleBox = await block.locator(TITLE).boundingBox();
         const normalGap = normalTitleBox!.y - (normalEyeBox!.y + normalEyeBox!.height);
-        // Check padding-off block if available
-        const paddingOffBlock = page.locator('.cmp-headline-block--padding-top-off .cmp-headline-block');
-        const count = await paddingOffBlock.count();
-        if (count === 0) {
-            test.skip(true, 'No padding-off variation on style guide — needs content fixture');
-            return;
-        }
-        const offEyeBox = await paddingOffBlock.first().locator(EYEBROW).boundingBox();
-        const offTitleBox = await paddingOffBlock.first().locator(TITLE).boundingBox();
+
+        const gridCol = block.locator('xpath=ancestor::*[contains(@class, "aem-GridColumn")][1]');
+        await gridCol.evaluate(el => el.classList.add('cmp-headline-block--padding-top-off'));
+
+        const offEyeBox = await block.locator(EYEBROW).boundingBox();
+        const offTitleBox = await block.locator(TITLE).boundingBox();
         if (offEyeBox && offTitleBox) {
             const offGap = offTitleBox.y - (offEyeBox.y + offEyeBox.height);
-            // Internal spacing should be approximately the same (±2px for rounding)
+            // Internal spacing should be approximately the same (±2px for rounding) — removing
+            // the block's outer padding must not affect spacing between its own children.
             expect(Math.abs(offGap - normalGap)).toBeLessThanOrEqual(2);
         }
     });

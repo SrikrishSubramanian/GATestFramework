@@ -24,7 +24,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Large Option Lists ============
     test('[GAAM-507-EDGE-001] @edge Verify dropdown handles many options (100+)', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const options = select.locator('option');
@@ -35,7 +35,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     });
     test('[GAAM-507-EDGE-002] @edge Verify keyboard navigation in large option list', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const options = select.locator('option');
@@ -52,7 +52,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Special Characters in Options ============
     test('[GAAM-507-EDGE-003] @edge Verify options with special characters display correctly', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const options = select.locator('option');
@@ -66,7 +66,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     });
     test('[GAAM-507-EDGE-004] @edge Verify options with very long text wrap correctly', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const options = select.locator('option');
@@ -83,7 +83,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Rapid Selection ============
     test('[GAAM-507-EDGE-005] @edge Verify rapid selection changes work correctly', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const options = select.locator('option');
@@ -99,7 +99,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     });
     test('[GAAM-507-EDGE-006] @edge Verify selecting same option twice works', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const options = select.locator('option');
@@ -116,7 +116,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Empty Option ============
     test('[GAAM-507-EDGE-007] @edge Verify empty option can be selected', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const firstOption = select.locator('option').first();
@@ -131,7 +131,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Focus & Blur Interactions ============
     test('[GAAM-507-EDGE-008] @edge Verify focus event fires on dropdown focus', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             let focusCount = 0;
@@ -149,7 +149,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     });
     test('[GAAM-507-EDGE-009] @edge Verify blur event fires on dropdown blur', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             await select.focus();
@@ -162,7 +162,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Form Submission with Dropdown ============
     test('[GAAM-507-EDGE-010] @edge Verify form includes dropdown value on submission', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const form = page.locator('form').first();
         if (await form.count() > 0) {
             const select = form.locator('select').first();
@@ -183,7 +183,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Disabled & ReadOnly States ============
     test('[GAAM-507-EDGE-011] @edge Verify disabled dropdown cannot change value', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const disabledSelect = page.locator('select[disabled]').first();
         if (await disabledSelect.count() > 0) {
             const isDisabled = // ?? TODO: Replace with measurement-utils
@@ -201,7 +201,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
         for (const viewport of viewports) {
             await page.setViewportSize(viewport);
             const url = resolveComponentUrl('form-field-dropdown');
-            await page.goto(url);
+            await page.goto(url, { waitUntil: 'domcontentloaded' });
             const select = page.locator('select').first();
             if (await select.count() > 0) {
                 const options = select.locator('option');
@@ -217,7 +217,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
         for (const viewport of viewports) {
             await page.setViewportSize(viewport);
             const url = resolveComponentUrl('form-field-dropdown');
-            await page.goto(url);
+            await page.goto(url, { waitUntil: 'domcontentloaded' });
             const select = page.locator('select').first();
             if (await select.count() > 0) {
                 await select.focus();
@@ -230,7 +230,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Custom Styling ============
     test('[GAAM-507-EDGE-014] @edge Verify custom background color on dropdown', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const bgColor = // ?? TODO: Replace with measurement-utils
@@ -240,7 +240,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     });
     test('[GAAM-507-EDGE-015] @edge Verify custom font styling on options', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const fontSize = // ?? TODO: Replace with measurement-utils
@@ -252,7 +252,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Change Event ============
     test('[GAAM-507-EDGE-019] @edge Verify change event fires on option selection', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const options = select.locator('option');
@@ -274,7 +274,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Value Persistence ============
     test('[GAAM-507-EDGE-021] @edge Verify selected value persists after page scroll', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select').first();
         if (await select.count() > 0) {
             const options = select.locator('option');
@@ -291,7 +291,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Empty Form State ============
     test('[GAAM-507-EDGE-022] @edge Verify dropdown maintains empty state when not required', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const optionalSelect = page.locator('select:not([required])').first();
         if (await optionalSelect.count() > 0) {
             const initialValue = await optionalSelect.inputValue();
@@ -302,7 +302,7 @@ test.describe('Form Field Dropdown — Edge Cases (GAAM-507)', () => {
     // ============ Edge Case: Multiple Selections with Ctrl/Cmd ============
     test('[GAAM-507-EDGE-023] @edge Verify dropdown ignores Ctrl+Click for single-select', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const select = page.locator('select:not([multiple])').first();
         if (await select.count() > 0) {
             const options = select.locator('option');

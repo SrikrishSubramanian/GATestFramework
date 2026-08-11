@@ -31,7 +31,9 @@ test.describe('Video External — Happy Path', () => {
     test('[VE-002] @regression Video container is present', async ({ page }) => {
         const pom = new VideoExternalPage(page);
         await pom.navigate(BASE());
-        const container = page.locator('.cmp-video-external__container');
+        // Verified live 2026-08-12: `.cmp-video-external__container` never existed in the real
+        // DOM — it was a guessed selector. The actual poster/thumbnail container is `__image-box`.
+        const container = page.locator('.cmp-video-external__image-box').first();
         await expect(container).toBeVisible();
     });
 });

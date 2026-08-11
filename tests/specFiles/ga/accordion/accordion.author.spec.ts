@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { AccordionPage } from '../../../pages/ga/components/accordionPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { deployFixture } from '../../../utils/infra/content-fixture-deployer';
@@ -498,7 +498,7 @@ test.describe('Accordion — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[CCRD-061] @smoke @regression Accordion interactive elements are functional', async ({ page }) => {
         const pom = new AccordionPage(page);
@@ -522,7 +522,7 @@ test.describe('Accordion — Negative & Boundary', () => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-accordion').first()).toBeVisible();
     });

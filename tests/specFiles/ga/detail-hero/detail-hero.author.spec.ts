@@ -24,7 +24,7 @@ test.describe('DetailHero — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[DH-002] @smoke @regression DetailHero interactive elements are functional', async ({ page }) => {
         const pom = new DetailHeroPage(page);

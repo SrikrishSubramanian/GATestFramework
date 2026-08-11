@@ -9,14 +9,26 @@ import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/ac
 let capture: ConsoleCapture;
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 const TC = '.cmp-teaser-card';
-const TC_LINK = '.cmp-teaser-card__link';
+// Verified live 2026-08-12 against the real DOM (author.spec.ts already has the correct names —
+// this file was generated before some CSS renames and was never resynced):
+// - `.cmp-teaser-card__link` never existed; the actual clickable element is the card root itself
+//   when CTA is authored (`a.cmp-teaser-card`) — `__cta` is just an inner label <span>, not focusable.
+// - Modifier classes (--enhanced-hover, --layout-image-*, --image-rectangle) live on the OUTER
+//   `.teaser-card` wrapper, not on the inner `.cmp-teaser-card` root — compounding them with `TC`
+//   produced impossible selectors that never matched anything.
+// - `--image-position-left/right` and `--image-style-rectangle` were never real classes; the real
+//   ones are `--layout-image-left/right` and `--image-rectangle`.
+const TC_OUTER = '.teaser-card';
+const TC_LINK = `a${TC}`;
+const TC_CTA = '.cmp-teaser-card__cta'; // the visual CTA text span inside a linked card
 const TC_IMAGE_WRAPPER = '.cmp-teaser-card__image-wrapper';
 const TC_TITLE = '.cmp-teaser-card__title';
 const TC_DESCRIPTOR = '.cmp-teaser-card__descriptor';
-const TC_ENHANCED = `${TC}.cmp-teaser-card--enhanced-hover`;
-const TC_POS_LEFT = `${TC}.cmp-teaser-card--image-position-left`;
-const TC_POS_RIGHT = `${TC}.cmp-teaser-card--image-position-right`;
-const TC_IMG_RECTANGLE = `${TC}.cmp-teaser-card--image-style-rectangle`;
+const TC_CONTENT = '.cmp-teaser-card__content-wrapper';
+const TC_ENHANCED = `${TC_OUTER}.cmp-teaser-card--enhanced-hover`;
+const TC_POS_LEFT = `${TC_OUTER}.cmp-teaser-card--layout-image-left`;
+const TC_POS_RIGHT = `${TC_OUTER}.cmp-teaser-card--layout-image-right`;
+const TC_IMG_RECTANGLE = `${TC_OUTER}.cmp-teaser-card--image-rectangle`;
 const DESKTOP = { width: 1440, height: 900 };
 const MOBILE = { width: 390, height: 844 };
 test.beforeEach(async ({ page }) => {
@@ -38,7 +50,7 @@ test.describe('TeaserCard — Standard Hover', () => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
-        const linkedCard = page.locator(`${TC}:has(${TC_LINK})`).first();
+        const linkedCard = page.locator(TC_LINK).first();
         if (await linkedCard.count() === 0) {
             test.skip();
             return;
@@ -53,7 +65,7 @@ test.describe('TeaserCard — Standard Hover', () => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
-        const linkedCard = page.locator(`${TC}:has(${TC_LINK})`).first();
+        const linkedCard = page.locator(TC_LINK).first();
         if (await linkedCard.count() === 0) {
             test.skip();
             return;
@@ -69,12 +81,12 @@ test.describe('TeaserCard — Standard Hover', () => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
-        const linkedCard = page.locator(`${TC}:has(${TC_LINK})`).first();
+        const linkedCard = page.locator(TC_LINK).first();
         if (await linkedCard.count() === 0) {
             test.skip();
             return;
         }
-        const ctaLink = linkedCard.locator(TC_LINK).first();
+        const ctaLink = linkedCard.locator(TC_CTA).first();
         const colorBefore = // 📏 TODO: Replace with measurement-utils
          await ctaLink.evaluate(el => getComputedStyle(el).color);
         // measurement: use measurement-utils for cleaner code
@@ -155,19 +167,18 @@ test.describe('TeaserCard — Enhanced Hover', () => {
             test.skip();
             return;
         }
-        const colorBefore = // 📏 TODO: Replace with measurement-utils
-         await title.evaluate(el => getComputedStyle(el).color);
-        // measurement: use measurement-utils for cleaner code
+        const colorBefore = await title.evaluate(el => getComputedStyle(el).color);
+        const rgbSum = (color) => (color.match(/\d+/g)?.map(Number) ?? []).slice(0, 3).reduce((a, b) => a + b, 0);
         await hover(enhanced);
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-        const colorAfter = // 📏 TODO: Replace with measurement-utils
-         await title.evaluate(el => getComputedStyle(el).color);
-        // measurement: use measurement-utils for cleaner code
+        // Wait for the CSS color transition to fully settle at its final (white) value — reading
+        // immediately after hover() captures a mid-transition blend color, not the final state.
+        await expect.poll(
+            () => title.evaluate(el => getComputedStyle(el).color).then(rgbSum),
+            { timeout: 3000 }
+        ).toBeGreaterThan(600);
+        const colorAfter = await title.evaluate(el => getComputedStyle(el).color);
         expect(colorAfter, 'Enhanced hover: title should transition to white').not.toBe(colorBefore);
-        const rgb = colorAfter.match(/\d+/g)?.map(Number) ?? [];
-        if (rgb.length >= 3) {
-            expect(rgb[0] + rgb[1] + rgb[2], 'Enhanced hover: title color should be white or near-white').toBeGreaterThan(600);
-        }
+        expect(rgbSum(colorAfter), 'Enhanced hover: title color should be white or near-white').toBeGreaterThan(600);
     });
     test('[TC-INT-009] @interaction @regression Enhanced hover: image-wrapper has a CSS transition', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
@@ -215,9 +226,10 @@ test.describe('TeaserCard — Keyboard Navigation', () => {
         let reached = false;
         for (let i = 0; i < 50; i++) {
             await page.keyboard.press('Tab');
-            const focused = // 📏 TODO: Replace with measurement-utils
-             await page.evaluate(() => document.activeElement?.className ?? '');
-            if (focused.includes('teaser-card__link')) {
+            // The card root itself is the <a> when CTA is authored — there is no separate
+            // "__link" element (see TC_LINK definition above).
+            const isCardLink = await page.evaluate(() => document.activeElement?.matches('a.cmp-teaser-card') ?? false);
+            if (isCardLink) {
                 reached = true;
                 break;
             }
@@ -285,9 +297,15 @@ test.describe('TeaserCard — No-hover Conditions', () => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
-        const nonLinked = page.locator(`${TC}:not(:has(${TC_LINK}))`).first();
+        // Non-CTA cards render as <div class="cmp-teaser-card">, not <a> (matches
+        // TC_WITHOUT_CTA in teaser-card.author.spec.ts). The previous `:not(:has(TC_LINK))`
+        // form was a no-op — TC_LINK never matched anything, so it silently matched every card
+        // (including linked ones) instead of genuinely isolating the non-CTA case.
+        const nonLinked = page.locator(`div${TC}`).first();
         if (await nonLinked.count() === 0) {
-            test.skip();
+            // Verified live 2026-08-12: all 75 .cmp-teaser-card instances on the style-guide page
+            // are <a> (linked) — same content gap as TC-025/TC-055 in teaser-card.author.spec.ts.
+            test.skip(true, 'No unlinked (no-CTA) teaser-card instance authored on the style-guide page — content gap, not a component defect');
             return;
         }
         const bgBefore = // 📏 TODO: Replace with measurement-utils
@@ -304,7 +322,7 @@ test.describe('TeaserCard — No-hover Conditions', () => {
         await page.setViewportSize(MOBILE);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
-        const linkedCard = page.locator(`${TC}:has(${TC_LINK})`).first();
+        const linkedCard = page.locator(TC_LINK).first();
         if (await linkedCard.count() === 0) {
             test.skip();
             return;
@@ -338,7 +356,7 @@ test.describe('TeaserCard — Left/Right Position Layout', () => {
             return;
         }
         const imgWrapper = card.locator(TC_IMAGE_WRAPPER).first();
-        const content = card.locator('.cmp-teaser-card__content').first();
+        const content = card.locator(TC_CONTENT).first();
         if (await imgWrapper.count() === 0 || await content.count() === 0) {
             test.skip();
             return;
@@ -359,7 +377,7 @@ test.describe('TeaserCard — Left/Right Position Layout', () => {
             return;
         }
         const imgWrapper = card.locator(TC_IMAGE_WRAPPER).first();
-        const content = card.locator('.cmp-teaser-card__content').first();
+        const content = card.locator(TC_CONTENT).first();
         if (await imgWrapper.count() === 0 || await content.count() === 0) {
             test.skip();
             return;
@@ -374,23 +392,13 @@ test.describe('TeaserCard — Left/Right Position Layout', () => {
         await page.setViewportSize(MOBILE);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
-        let card = page.locator(`${TC_POS_LEFT}${TC_IMG_RECTANGLE}`).first();
-        if (await card.count() === 0) {
-            // 📏 TODO: Replace with measurement-utils
-            await page.evaluate((sel) => {
-                const el = document.querySelector(sel);
-                if (el) {
-                    el.classList.add('cmp-teaser-card--image-position-left', 'cmp-teaser-card--image-style-rectangle');
-                }
-            }, TC);
-            card = page.locator(`${TC_POS_LEFT}${TC_IMG_RECTANGLE}`).first();
-        }
+        const card = page.locator(`${TC_POS_LEFT}${TC_IMG_RECTANGLE}`).first();
         if (await card.count() === 0) {
             test.skip();
             return;
         }
         const imgWrapper = card.locator(TC_IMAGE_WRAPPER).first();
-        const content = card.locator('.cmp-teaser-card__content').first();
+        const content = card.locator(TC_CONTENT).first();
         if (await imgWrapper.count() === 0 || await content.count() === 0) {
             test.skip();
             return;

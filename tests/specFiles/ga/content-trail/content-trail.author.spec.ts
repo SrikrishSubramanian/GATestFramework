@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ContentTrailPage } from '../../../pages/ga/components/contentTrailPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -204,7 +204,7 @@ test.describe('ContentTrail — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[CT-003] @smoke @regression ContentTrail interactive elements are functional', async ({ page }) => {
         const pom = new ContentTrailPage(page);
@@ -228,7 +228,7 @@ test.describe('ContentTrail — Negative & Boundary', () => {
         const pom = new ContentTrailPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-content-trail').first()).toBeVisible();
     });

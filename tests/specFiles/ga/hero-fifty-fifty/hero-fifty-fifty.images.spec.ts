@@ -23,7 +23,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Hero Fifty-Fifty — Images & Media', () => {
     test('[H5050-IMAGE-001] @regression Hero hero image loads successfully', async ({ page }) => {
         const url = resolveComponentUrl('hero-fifty-fifty');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const hero = page.locator('.cmp-hero-fifty-fifty').first();
         const images = hero.locator('img');
         const count = await images.count();
@@ -35,7 +35,7 @@ test.describe('Hero Fifty-Fifty — Images & Media', () => {
     });
     test('[H5050-IMAGE-002] @regression Hero images have alt text', async ({ page }) => {
         const url = resolveComponentUrl('hero-fifty-fifty');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const hero = page.locator('.cmp-hero-fifty-fifty').first();
         const images = hero.locator('img');
         const count = await images.count();
@@ -47,7 +47,7 @@ test.describe('Hero Fifty-Fifty — Images & Media', () => {
     });
     test('[H5050-IMAGE-004] @regression Hero image aspect ratio is maintained', async ({ page }) => {
         const url = resolveComponentUrl('hero-fifty-fifty');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const hero = page.locator('.cmp-hero-fifty-fifty').first();
         const image = hero.locator('img').first();
         if (await image.count() > 0) {
@@ -63,7 +63,7 @@ test.describe('Hero Fifty-Fifty — Images & Media', () => {
     });
     test('[H5050-IMAGE-005] @regression Hero background images are styled correctly', async ({ page }) => {
         const url = resolveComponentUrl('hero-fifty-fifty');
-        await page.goto(url);
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const hero = page.locator('.cmp-hero-fifty-fifty').first();
         const bgElements = hero.locator('[style*="background-image"]');
         const count = await bgElements.count();

@@ -1,0 +1,12 @@
+{
+  "component": "promo-banner",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/promo-banner/.content.xml",
+  "sourceHash": "e549f1bcee34a58d5070ade02339e14e",
+  "generatedAt": "2026-08-12",
+  "tickets": [],
+  "additions": [
+    "The live style guide page has 5 promo-banner instances but none has a cq:styleIds variant selected, so PB-011/012/013/014/033/034/035/036 self-skip against it.",
+    "Added one instance per real cq:styleIds value from the promo-banner-default style policy: promo-granite, promo-azul, promo-aubergine, promo-footer (footer includes socialLinks for PB-034).",
+    "Verified against kkr-aem: ui.apps.ga promo-banner.html has no variant logic itself; classes come entirely from the AEM Style System per conf/global-atlantic/settings/wcm/policies promo-banner-default styleGroups."
+  ]
+}

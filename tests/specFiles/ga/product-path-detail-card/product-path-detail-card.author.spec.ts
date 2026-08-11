@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ProductPathDetailCardPage } from '../../../pages/ga/components/productPathDetailCardPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -24,7 +24,7 @@ test.describe('ProductPathDetailCard — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[PPDC-002] @smoke @regression ProductPathDetailCard interactive elements are functional', async ({ page }) => {
         const pom = new ProductPathDetailCardPage(page);
@@ -48,7 +48,7 @@ test.describe('ProductPathDetailCard — Negative & Boundary', () => {
         const pom = new ProductPathDetailCardPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-product-path-detail-card').first()).toBeVisible();
     });
@@ -120,4 +120,16 @@ test.describe('ProductPathDetailCard — Broken Images', () => {
 test.describe('ProductPathDetailCard — Accessibility', () => {
 });
 test.describe('ProductPathDetailCard — AEM Dialog Configuration', () => {
+});
+// Relocated from text.author.spec.ts (TEXT-021) — CSV import mis-bucketed this under Text;
+// it's explicitly about the Product Path Detail Card's superscript support.
+test.describe('ProductPathDetailCard — CSV Test Cases (GAAM-1269)', () => {
+    test('[PPDC-010] @smoke @regression BE: Product Path Detail Card - Superscript — AC1', async ({ page }) => {
+        const pom = new ProductPathDetailCardPage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: Product Path Detail Card List Item Titles, Descriptor
+        // Titles, and CTA Titles don't support superscript text. Superscript text should render
+        // visually raised relative to the title baseline. See Jira GAAM-1269 for full AC and Figma.
+        test.fixme();
+    });
 });

@@ -16,7 +16,8 @@ export class VideoExternalPage {
   }
 
   get container(): Promise<Locator> {
-    return resolveLocator(this.page, registry.entries.container || { strategies: [{ type: 'css', value: '.cmp-video-external__container' }] });
+    // Verified live 2026-08-12: real class is __image-box — __container never existed.
+    return resolveLocator(this.page, registry.entries.container || { strategies: [{ type: 'css', value: '.cmp-video-external__image-box' }] });
   }
 
   async isVisible(): Promise<boolean> {

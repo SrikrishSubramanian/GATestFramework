@@ -28,7 +28,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Form Text — Interactions', () => {
   test('[FORMTEXT-INTERACTION-001] @interaction Form text field receives focus', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -41,7 +41,7 @@ test.describe('Form Text — Interactions', () => {
 
   test('[FORMTEXT-INTERACTION-002] @interaction Form text field displays focus outline', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -56,7 +56,7 @@ test.describe('Form Text — Interactions', () => {
 
   test('[FORMTEXT-INTERACTION-003] @interaction Form text field changes background on focus', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -77,7 +77,7 @@ test.describe('Form Text — Interactions', () => {
 
   test('[FORMTEXT-INTERACTION-004] @interaction Form text allows text selection', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -90,7 +90,7 @@ test.describe('Form Text — Interactions', () => {
 
   test('[FORMTEXT-INTERACTION-005] @interaction Form text responds to keyboard events', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {
@@ -103,7 +103,7 @@ test.describe('Form Text — Interactions', () => {
 
   test('[FORMTEXT-INTERACTION-006] @interaction Form text field clears on backspace', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const textInput = page.locator('input[type="text"], .cmp-form-text input').first();
     if (await textInput.count() > 0) {

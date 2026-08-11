@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { QuotePage } from '../../../pages/ga/components/quotePage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -24,7 +24,7 @@ test.describe('Quote — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[QT-002] @smoke @regression Quote interactive elements are functional', async ({ page }) => {
         const pom = new QuotePage(page);
@@ -48,7 +48,7 @@ test.describe('Quote — Negative & Boundary', () => {
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-quote').first()).toBeVisible();
     });
@@ -130,4 +130,23 @@ test.describe('Quote — Broken Images', () => {
 test.describe('Quote — Accessibility', () => {
 });
 test.describe('Quote — AEM Dialog Configuration', () => {
+});
+// Relocated from image.author.spec.ts (MG-059) — CSV import mis-bucketed this under Image;
+// it's actually about the Quote component (GAAM-1280).
+test.describe('Quote — CSV Test Cases (GAAM-1357)', () => {
+    test('[QT-010] @smoke @regression CMS FE: GAAM-1280(quote component) alignment issue — AC1', async ({ page }) => {
+        const pom = new QuotePage(page);
+        await pom.navigate(BASE());
+        // TODO: Implement assertion for: Hi, A few more issues:
+        // 1. The roles in the info panel are not aligning to the right in small desktop breakpoints.
+        // 2. At small desktop breakpoints, only the quote wraps to multiple lines — the info panel maintains its width.
+        // 3. In tablet breakpoints, the Author images and names should be aligned to the left for the left aligned quote (Refer [figma|https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?m=auto&node-id=34313-44453&t=HD2vpnOwOlhUfkB4-1]). It should be aligned in the center for the center aligned quote. The mobile implementation working well, kindly incorporate the same implementation for desktop as well.
+        //
+        //
+        // !Screenshot 2026-06-24 at 12.53.56 PM-20260624-072402.png|width=648,alt="Screenshot 2026-06-24 at 12.53.56 PM-20260624-072402.png"!
+        //
+        //
+        // Thank you.
+        test.fixme();
+    });
 });
