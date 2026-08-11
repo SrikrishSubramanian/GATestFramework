@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Formatted RTE Component (GAAM-530)', () => {
     // ============ RTE Container & Structure ============
-    test('[GAAM-530-001] @regression Verify RTE component renders', async ({ page }) => {
+    test('[GAAM-530-001] @regression @sanity Verify RTE component renders', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte');
         await page.goto(url);
         const rte = page.locator('[class*="rte"], [class*="rich-text"], [role="textbox"]').first();

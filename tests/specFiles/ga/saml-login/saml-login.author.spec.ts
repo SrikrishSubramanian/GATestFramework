@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('SAML Login Component (GAAM-410)', () => {
     // ============ Login Form Rendering ============
-    test('[GAAM-410-001] @regression Verify SAML login form renders', async ({ page }) => {
+    test('[GAAM-410-001] @regression @sanity Verify SAML login form renders', async ({ page }) => {
         const url = resolveComponentUrl('saml-login');
         await page.goto(url);
         const form = page.locator('form, [class*="login"], [class*="saml"]').first();

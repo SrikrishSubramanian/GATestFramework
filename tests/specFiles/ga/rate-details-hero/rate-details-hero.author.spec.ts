@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('RateDetailsHero — Happy Path', () => {
-    test('[RDH-001] @smoke @regression RateDetailsHero renders correctly', async ({ page }) => {
+    test('[RDH-001] @smoke @regression @sanity RateDetailsHero renders correctly', async ({ page }) => {
         const pom = new RateDetailsHeroPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-rate-details-hero').first();

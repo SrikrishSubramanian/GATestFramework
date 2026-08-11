@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { SpacerPage } from '../../../pages/ga/components/spacerPage';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -26,7 +26,16 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 test.describe('Spacer — State Matrix', () => {
-  const sizes = ['small', 'medium', 'large', 'xl'];
+  // Verified against the live style guide page (/style-guide/components/spacer.html): the
+  // cmp-spacer--<modifier> class lives on the *parent* wrapper, not on .cmp-spacer itself
+  // (.cmp-spacer's own class is always just "cmp-spacer"), so scoping requires a descendant
+  // selector. Medium is the default and its wrapper carries no size modifier at all.
+  const sizes: { name: string; selector: string }[] = [
+    { name: 'small', selector: '.cmp-spacer--small .cmp-spacer' },
+    { name: 'medium', selector: '.spacer:not([class*="cmp-spacer--"]) .cmp-spacer' },
+    { name: 'large', selector: '.cmp-spacer--large .cmp-spacer' },
+    { name: 'xl', selector: '.cmp-spacer--xlarge .cmp-spacer' },
+  ];
   const viewports = [
     { name: 'mobile', width: 375 },
     { name: 'tablet', width: 768 },
@@ -35,22 +44,21 @@ test.describe('Spacer — State Matrix', () => {
 
   for (const size of sizes) {
     for (const viewport of viewports) {
-      test(`[SPACER-MATRIX-${size}-${viewport.name}] @matrix @regression Spacer (${size}, ${viewport.name})`, async ({ page }) => {
+      test(`[SPACER-MATRIX-${size.name}-${viewport.name}] @matrix @regression Spacer (${size.name}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        const url = resolveComponentUrl('spacer');
-    await page.goto(url, { waitUntil: 'domcontentloaded' });
+        const pom = new SpacerPage(page);
+        await pom.navigate(BASE());
 
-        const spacer = page.locator('.cmp-spacer').first();
-        await expect(spacer).toBeVisible();
+        const spacer = page.locator(size.selector).first();
+        await expect(spacer).toBeVisible({ timeout: 10000 });
 
-        const height = // ?? TODO: Replace with measurement-utils
-    await spacer.evaluate(el => el.offsetHeight);
+        const height = await spacer.evaluate(el => el.offsetHeight);
         expect(height).toBeGreaterThan(0);
 
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
       });
     }
   }

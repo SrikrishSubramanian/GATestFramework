@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Feature Banner Component (Sprint 11 - BE-355, FE-376)', () => {
     // ============ Banner Rendering ============
-    test('[FB-001] @regression Verify feature banner renders', async ({ page }) => {
+    test('[FB-001] @regression @sanity Verify feature banner renders', async ({ page }) => {
         const url = resolveComponentUrl('feature-banner');
         await page.goto(url);
         const banner = page.locator('[class*="feature-banner"], [class*="banner"]').first();

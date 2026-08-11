@@ -9,7 +9,7 @@ export class NavigationPage {
 
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/navigation.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
+    return this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/navigation.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
   }
 
   /** Locator for Style_Guide */

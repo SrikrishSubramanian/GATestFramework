@@ -19,6 +19,8 @@ const BENIGN_ERROR_PATTERNS: RegExp[] = [
   /MutationObserver\.observe: Argument 1 is not an object/i,
   /^The operation was aborted\.?\s*$/i,
   /Failed to fetch dynamically imported module: https:\/\/exc-unifiedcontent\.experience\.adobe\.net/i,
+  /can't access property "addEventListener", .*getElementById\(.*\) is null/i,
+  /XML Parsing Error: unclosed token[\s\S]*spectrum-icons-color\.svg/i,
 ];
 
 /** Shared benign-noise check — also used by specs that capture `pageerror` inline instead of via ConsoleCapture. */

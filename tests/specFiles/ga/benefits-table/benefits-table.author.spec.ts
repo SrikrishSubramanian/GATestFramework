@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('BenefitsTable — Happy Path', () => {
-    test('[BT-001] @smoke @regression BenefitsTable renders correctly', async ({ page }) => {
+    test('[BT-001] @smoke @regression @sanity BenefitsTable renders correctly', async ({ page }) => {
         const pom = new BenefitsTablePage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-benefits-table').first();

@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Form Field Dropdown Component (GAAM-507)', () => {
-    test('[GAAM-507-002] @regression Verify dropdown has label associated', async ({ page }) => {
+    test('[GAAM-507-002] @regression @sanity Verify dropdown has label associated', async ({ page }) => {
         const url = resolveComponentUrl('form-field-dropdown');
         await page.goto(url);
         const select = page.locator('select').first();

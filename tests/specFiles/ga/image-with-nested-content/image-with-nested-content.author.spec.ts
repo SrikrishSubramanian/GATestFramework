@@ -77,7 +77,7 @@ async function withSectionBg(page: import('@playwright/test').Page, idx: number,
 }
 // ─── Core Structure (001-010) ─────────────────────────────────────────────────
 test.describe('ImageWithNestedContent — Core Structure', () => {
-    test('[IWNC-001] @smoke @regression All 4 style-guide variations render', async ({ page }) => {
+    test('[IWNC-001] @smoke @regression @sanity All 4 style-guide variations render', async ({ page }) => {
         const pom = new ImageWithNestedContentPage(page);
         await pom.navigate(BASE());
         const count = await page.locator(IWNC).count();

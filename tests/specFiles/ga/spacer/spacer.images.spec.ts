@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { SpacerPage } from '../../../pages/ga/components/spacerPage';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
@@ -27,8 +27,8 @@ test.afterEach(async ({ page }, testInfo) => {
 
 test.describe('Spacer — Images & Media', () => {
   test('[SPACER-IMAGE-001] @regression Spacer component has no images by design', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     const spacer = page.locator('.cmp-spacer').first();
     const images = spacer.locator('img');
@@ -39,8 +39,8 @@ test.describe('Spacer — Images & Media', () => {
   });
 
   test('[SPACER-IMAGE-002] @regression Spacer background image is transparent', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     const spacer = page.locator('.cmp-spacer').first();
     const bgImage = // ?? TODO: Replace with measurement-utils
@@ -53,8 +53,8 @@ test.describe('Spacer — Images & Media', () => {
   });
 
   test('[SPACER-IMAGE-003] @regression Spacer renders without visual artifacts', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     const spacer = page.locator('.cmp-spacer').first();
     await expect(spacer).toBeVisible();
@@ -69,8 +69,8 @@ test.describe('Spacer — Images & Media', () => {
   });
 
   test('[SPACER-IMAGE-004] @regression Spacer border is not visible', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     const spacer = page.locator('.cmp-spacer').first();
     const borderStyle = // ?? TODO: Replace with measurement-utils
@@ -83,8 +83,8 @@ test.describe('Spacer — Images & Media', () => {
   });
 
   test('[SPACER-IMAGE-005] @regression Spacer outline is not visible', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     const spacer = page.locator('.cmp-spacer').first();
     const outline = // ?? TODO: Replace with measurement-utils

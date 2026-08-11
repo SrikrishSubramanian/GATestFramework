@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('DetailHero — Happy Path', () => {
-    test('[DH-001] @smoke @regression DetailHero renders correctly', async ({ page }) => {
+    test('[DH-001] @smoke @regression @sanity DetailHero renders correctly', async ({ page }) => {
         const pom = new DetailHeroPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-detail-hero').first();

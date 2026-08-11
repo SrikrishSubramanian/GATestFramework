@@ -453,24 +453,6 @@
     "generatedAt": "2026-03-18T06:44:00.085Z",
     "source": "dom"
   },
-  "rate-table": {
-    "pomClass": "RateTablePage",
-    "pomPath": "../pages/ga/components/rateTablePage.ts",
-    "sidecarPath": "../pages/ga/components/rateTablePage.locators.json",
-    "specPath": "../specFiles/ga/rate-table/rate-table.author.spec.ts",
-    "elementCount": 105,
-    "testCount": 0,
-    "categories": [
-      "happy-path",
-      "negative",
-      "responsive",
-      "console-errors",
-      "broken-images",
-      "accessibility"
-    ],
-    "generatedAt": "2026-03-18T11:47:30.470Z",
-    "source": "dom"
-  },
   "content-trail": {
     "pomClass": "ContentTrailPage",
     "pomPath": "../pages/ga/components/contentTrailPage.ts",

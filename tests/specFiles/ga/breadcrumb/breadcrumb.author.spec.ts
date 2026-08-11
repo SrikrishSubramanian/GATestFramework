@@ -30,7 +30,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 // ─── Core Structure (BC-001 – BC-008) ────────────────────────────────────────
 test.describe('Breadcrumb — Core Structure', () => {
-    test('[BC-001] @smoke @regression Breadcrumb is visible at desktop viewport', async ({ page }) => {
+    test('[BC-001] @smoke @regression @sanity Breadcrumb is visible at desktop viewport', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());

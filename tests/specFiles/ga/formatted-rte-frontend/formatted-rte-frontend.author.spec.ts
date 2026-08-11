@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Formatted RTE Frontend Component (GAAM-531)', () => {
     // ============ Frontend Rendering ============
-    test('[GAAM-531-001] @regression Verify RTE frontend renders published content', async ({ page }) => {
+    test('[GAAM-531-001] @regression @sanity Verify RTE frontend renders published content', async ({ page }) => {
         const url = resolveComponentUrl('formatted-rte-frontend');
         await page.goto(url);
         const content = page.locator('[class*="rte-content"], [class*="text-content"]').first();

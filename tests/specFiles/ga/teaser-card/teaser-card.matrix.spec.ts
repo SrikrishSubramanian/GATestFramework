@@ -11,6 +11,7 @@ let capture: ConsoleCapture;
 
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 const TC = '.cmp-teaser-card';
+const GRID_COL = '.aem-GridColumn';
 
 type ImagePosition = 'top' | 'left' | 'right';
 type ColorVariant = 'border' | 'white' | 'slate';
@@ -25,9 +26,24 @@ const VIEWPORTS: Viewport[] = [
   { width: 390, height: 844, label: 'mobile' },
 ];
 
-const positionClass = (p: ImagePosition) => `cmp-teaser-card--image-position-${p}`;
-const colorClass = (c: ColorVariant) => `cmp-teaser-card--color-${c}`;
-const styleClass = (s: ImageStyle) => `cmp-teaser-card--image-style-${s}`;
+// Modifier classes live on the card's ancestor `.aem-GridColumn`, not on `.cmp-teaser-card`
+// itself — confirmed against live DOM. "top" is the default layout and has no modifier
+// class of its own; only "left"/"right" are explicit deviations.
+const positionClass = (p: ImagePosition): string | null =>
+  p === 'top' ? null : `cmp-teaser-card--layout-image-${p}`;
+const colorClass = (c: ColorVariant) => `cmp-teaser-card--card-${c}`;
+const styleClass = (s: ImageStyle) => `cmp-teaser-card--image-${s}`;
+
+const ALL_POSITION_CLASSES = (['left', 'right'] as const).map(p => `cmp-teaser-card--layout-image-${p}`);
+const ALL_COLOR_CLASSES = COLOR_VARIANTS.map(colorClass);
+const ALL_STYLE_CLASSES = IMAGE_STYLES.map(styleClass);
+
+/** Builds a selector for the ancestor grid column carrying the given modifier classes. */
+function gridColSelector(include: string[], exclude: string[] = []): string {
+  const includes = include.map(c => `.${c}`).join('');
+  const excludes = exclude.map(c => `:not(.${c})`).join('');
+  return `${GRID_COL}${includes}${excludes}`;
+}
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
@@ -55,19 +71,27 @@ test.describe('TeaserCard — State Matrix: Position × Color × Viewport', () =
           const pom = new TeaserCardPage(page);
           await pom.navigate(BASE());
 
-          const selector = `${TC}.${positionClass(position)}.${colorClass(color)}`;
+          const posClass = positionClass(position);
+          const colClass = colorClass(color);
+          const include = posClass ? [posClass, colClass] : [colClass];
+          const exclude = posClass ? [] : ALL_POSITION_CLASSES;
+          const selector = `${gridColSelector(include, exclude)} ${TC}`;
           let card = page.locator(selector).first();
+
           if (await card.count() === 0) {
-            // Inject variant classes on first available card — strip sibling classes from the
-            // same modifier group first, since a card may already be authored with a conflicting variant.
-            await page.evaluate(({ root, posClass, colClass, allPosClasses, allColorClasses }) => {
-              const el = document.querySelector(root);
-              if (el) {
-                allPosClasses.forEach((c: string) => el.classList.remove(c));
-                allColorClasses.forEach((c: string) => el.classList.remove(c));
-                el.classList.add(posClass, colClass);
+            // Inject variant classes on the first available card's grid-column ancestor —
+            // strip sibling classes from the same modifier group first, since it may already
+            // carry a conflicting variant.
+            await page.evaluate(({ cardSel, gridColSel, posClass, colClass, allPosClasses, allColorClasses }) => {
+              const cardEl = document.querySelector(cardSel);
+              const gridCol = cardEl?.closest(gridColSel) as HTMLElement | null;
+              if (gridCol) {
+                allPosClasses.forEach((c: string) => gridCol.classList.remove(c));
+                allColorClasses.forEach((c: string) => gridCol.classList.remove(c));
+                if (posClass) gridCol.classList.add(posClass);
+                gridCol.classList.add(colClass);
               }
-            }, { root: TC, posClass: positionClass(position), colClass: colorClass(color), allPosClasses: IMAGE_POSITIONS.map(positionClass), allColorClasses: COLOR_VARIANTS.map(colorClass) });
+            }, { cardSel: TC, gridColSel: GRID_COL, posClass, colClass, allPosClasses: ALL_POSITION_CLASSES, allColorClasses: ALL_COLOR_CLASSES });
             card = page.locator(selector).first();
           }
 
@@ -88,26 +112,38 @@ test.describe('TeaserCard — State Matrix: Position × Color × Viewport', () =
 // ---------------------------------------------------------------------------
 
 test.describe('TeaserCard — State Matrix: Position × Image Style', () => {
+  // Circle image style is only a valid combination with top-position (confirmed against live
+  // content — all circle cards are top-position, all left/right cards are rectangle-style).
+  // circle+left / circle+right are not supported combinations, so they're excluded here.
   for (const position of IMAGE_POSITIONS) {
     for (const style of IMAGE_STYLES) {
+      if (style === 'circle' && position !== 'top') continue;
+
       test(`@matrix @regression [desktop] ${position}-position + ${style}-image: card renders with image wrapper`, async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
 
-        const selector = `${TC}.${positionClass(position)}.${styleClass(style)}`;
+        const posClass = positionClass(position);
+        const stClass = styleClass(style);
+        const include = posClass ? [posClass, stClass] : [stClass];
+        const exclude = posClass ? [] : ALL_POSITION_CLASSES;
+        const selector = `${gridColSelector(include, exclude)} ${TC}`;
         let card = page.locator(selector).first();
+
         if (await card.count() === 0) {
           // Strip sibling classes from the same modifier group first — otherwise a card already
-          // authored as e.g. --image-style-circle keeps that class alongside the injected one.
-          await page.evaluate(({ root, posClass, styleClass, allPosClasses, allStyleClasses }) => {
-            const el = document.querySelector(root);
-            if (el) {
-              allPosClasses.forEach((c: string) => el.classList.remove(c));
-              allStyleClasses.forEach((c: string) => el.classList.remove(c));
-              el.classList.add(posClass, styleClass);
+          // authored as e.g. --image-circle keeps that class alongside the injected one.
+          await page.evaluate(({ cardSel, gridColSel, posClass, stClass, allPosClasses, allStyleClasses }) => {
+            const cardEl = document.querySelector(cardSel);
+            const gridCol = cardEl?.closest(gridColSel) as HTMLElement | null;
+            if (gridCol) {
+              allPosClasses.forEach((c: string) => gridCol.classList.remove(c));
+              allStyleClasses.forEach((c: string) => gridCol.classList.remove(c));
+              if (posClass) gridCol.classList.add(posClass);
+              gridCol.classList.add(stClass);
             }
-          }, { root: TC, posClass: positionClass(position), styleClass: styleClass(style), allPosClasses: IMAGE_POSITIONS.map(positionClass), allStyleClasses: IMAGE_STYLES.map(styleClass) });
+          }, { cardSel: TC, gridColSel: GRID_COL, posClass, stClass, allPosClasses: ALL_POSITION_CLASSES, allStyleClasses: ALL_STYLE_CLASSES });
           card = page.locator(selector).first();
         }
 
@@ -118,13 +154,10 @@ test.describe('TeaserCard — State Matrix: Position × Image Style', () => {
         if (await imgWrapper.count() > 0) {
           await expect(imgWrapper).toBeVisible();
 
+          const radius = await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius);
           if (style === 'circle') {
-            const radius = // 📏 TODO: Replace with measurement-utils
-    await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
             expect(radius, `Circle image wrapper must have 50% border-radius`).toBe('50%');
           } else {
-            const radius = // 📏 TODO: Replace with measurement-utils
-    await imgWrapper.evaluate(el => getComputedStyle(el).borderRadius); // measurement: use measurement-utils for cleaner code
             expect(radius, `Rectangle image wrapper must not be circular`).not.toBe('50%');
           }
         }
@@ -144,25 +177,26 @@ test.describe('TeaserCard — State Matrix: Color × Mobile', () => {
       const pom = new TeaserCardPage(page);
       await pom.navigate(BASE());
 
-      const selector = `${TC}.${colorClass(color)}`;
+      const colClass = colorClass(color);
+      const selector = `${gridColSelector([colClass])} ${TC}`;
       let card = page.locator(selector).first();
       if (await card.count() === 0) {
         // Strip sibling color classes first — otherwise a card already authored with a
         // different color variant keeps that class alongside the injected one.
-        await page.evaluate(({ root, colClass, allColorClasses }) => {
-          const el = document.querySelector(root);
-          if (el) {
-            allColorClasses.forEach((c: string) => el.classList.remove(c));
-            el.classList.add(colClass);
+        await page.evaluate(({ cardSel, gridColSel, colClass, allColorClasses }) => {
+          const cardEl = document.querySelector(cardSel);
+          const gridCol = cardEl?.closest(gridColSel) as HTMLElement | null;
+          if (gridCol) {
+            allColorClasses.forEach((c: string) => gridCol.classList.remove(c));
+            gridCol.classList.add(colClass);
           }
-        }, { root: TC, colClass: colorClass(color), allColorClasses: COLOR_VARIANTS.map(colorClass) });
+        }, { cardSel: TC, gridColSel: GRID_COL, colClass, allColorClasses: ALL_COLOR_CLASSES });
         card = page.locator(selector).first();
       }
       if (await card.count() === 0) { test.skip(); return; }
       await expect(card).toBeVisible();
 
-      const overflow = // 📏 TODO: Replace with measurement-utils
-    await card.evaluate(el => el.scrollWidth > el.clientWidth + 2);
+      const overflow = await card.evaluate(el => el.scrollWidth > el.clientWidth + 2);
       expect(overflow, `${color} card must not overflow on mobile`).toBe(false);
     });
   }
@@ -173,34 +207,34 @@ test.describe('TeaserCard — State Matrix: Color × Mobile', () => {
 // ---------------------------------------------------------------------------
 
 test.describe('TeaserCard — State Matrix: Enhanced Hover Applicability', () => {
+  const ENHANCED_HOVER = 'cmp-teaser-card--enhanced-hover';
+
   test('@matrix @regression Enhanced hover ON + Circle + Top: all active together', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     const pom = new TeaserCardPage(page);
     await pom.navigate(BASE());
 
-    let card = page.locator(`${TC}.cmp-teaser-card--enhanced-hover`).first();
+    const selector = `${gridColSelector([ENHANCED_HOVER])} ${TC}`;
+    let card = page.locator(selector).first();
     if (await card.count() === 0) {
-      // 📏 TODO: Replace with measurement-utils
-    await page.evaluate((root) => {
-        const el = document.querySelector(root);
-        if (el) el.classList.add(
-          'cmp-teaser-card--enhanced-hover',
-          'cmp-teaser-card--image-style-circle',
-          'cmp-teaser-card--image-position-top'
-        );
-      }, TC);
-      card = page.locator(`${TC}.cmp-teaser-card--enhanced-hover`).first();
+      await page.evaluate(({ cardSel, gridColSel, enhancedHover, circleClass, allPosClasses }) => {
+        const cardEl = document.querySelector(cardSel);
+        const gridCol = cardEl?.closest(gridColSel) as HTMLElement | null;
+        if (gridCol) {
+          allPosClasses.forEach((c: string) => gridCol.classList.remove(c));
+          gridCol.classList.add(enhancedHover, circleClass);
+        }
+      }, { cardSel: TC, gridColSel: GRID_COL, enhancedHover: ENHANCED_HOVER, circleClass: styleClass('circle'), allPosClasses: ALL_POSITION_CLASSES });
+      card = page.locator(selector).first();
     }
     if (await card.count() === 0) { test.skip(); return; }
     await expect(card).toBeVisible();
 
-    // Must have circle + top
-    const hasCircle = // 📏 TODO: Replace with measurement-utils
-    await card.evaluate(el => el.classList.contains('cmp-teaser-card--image-style-circle'));
-    const hasTop = // 📏 TODO: Replace with measurement-utils
-    await card.evaluate(el =>
-      !el.classList.contains('cmp-teaser-card--image-position-left') &&
-      !el.classList.contains('cmp-teaser-card--image-position-right')
+    const gridCol = card.locator(`xpath=ancestor::*[contains(@class, "aem-GridColumn")][1]`);
+    const hasCircle = await gridCol.evaluate(el => el.classList.contains('cmp-teaser-card--image-circle'));
+    const hasTop = await gridCol.evaluate(el =>
+      !el.classList.contains('cmp-teaser-card--layout-image-left') &&
+      !el.classList.contains('cmp-teaser-card--layout-image-right')
     );
     expect(hasCircle, 'Enhanced hover must be on circle card').toBe(true);
     expect(hasTop, 'Enhanced hover must be on top-position card').toBe(true);
@@ -211,8 +245,8 @@ test.describe('TeaserCard — State Matrix: Enhanced Hover Applicability', () =>
     const pom = new TeaserCardPage(page);
     await pom.navigate(BASE());
 
-    const invalidLeft = page.locator(`${TC}.cmp-teaser-card--enhanced-hover.cmp-teaser-card--image-position-left`);
-    const invalidRight = page.locator(`${TC}.cmp-teaser-card--enhanced-hover.cmp-teaser-card--image-position-right`);
+    const invalidLeft = page.locator(`${gridColSelector([ENHANCED_HOVER, ALL_POSITION_CLASSES[0]])} ${TC}`);
+    const invalidRight = page.locator(`${gridColSelector([ENHANCED_HOVER, ALL_POSITION_CLASSES[1]])} ${TC}`);
     expect(await invalidLeft.count(), 'Enhanced hover must not be on left-position').toBe(0);
     expect(await invalidRight.count(), 'Enhanced hover must not be on right-position').toBe(0);
   });
@@ -222,7 +256,7 @@ test.describe('TeaserCard — State Matrix: Enhanced Hover Applicability', () =>
     const pom = new TeaserCardPage(page);
     await pom.navigate(BASE());
 
-    const invalidRect = page.locator(`${TC}.cmp-teaser-card--enhanced-hover.cmp-teaser-card--image-style-rectangle`);
+    const invalidRect = page.locator(`${gridColSelector([ENHANCED_HOVER, styleClass('rectangle')])} ${TC}`);
     expect(await invalidRect.count(), 'Enhanced hover must not be on rectangle cards').toBe(0);
   });
 });

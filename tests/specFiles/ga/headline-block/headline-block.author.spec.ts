@@ -31,7 +31,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 // ── GAAM-344: Core Rendering ──
 test.describe('Headline Block — Core Structure (GAAM-344)', () => {
-    test('[HB-001] @smoke @regression Eyebrow renders above headline with correct BEM class', async ({ page }) => {
+    test('[HB-001] @smoke @regression @sanity Eyebrow renders above headline with correct BEM class', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
         const block = page.locator(`${SECTION_WHITE} ${HB}`).first();

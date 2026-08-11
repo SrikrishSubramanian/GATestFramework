@@ -339,12 +339,17 @@ test.afterEach(async ({ page }, testInfo) => {
 
     // Hover over the CTA link
     await hover(ctaLink);
-    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-    // allow CSS transition to complete
+
+    // Poll until the transition actually settles at ~12px, not just "greater than before" —
+    // the very first transition frame already exceeds gapBefore, so that alone isn't a
+    // reliable signal that the transition has finished.
+    await expect.poll(
+      () => ctaLink.evaluate((el: HTMLElement) => parseFloat(window.getComputedStyle(el).gap || '0')),
+      { timeout: 3000 }
+    ).toBeGreaterThan(11.5);
 
     // Capture gap after hover
-    const gapAfter = // 📏 TODO: Replace with measurement-utils
-    await ctaLink.evaluate((el: HTMLElement) => {
+    const gapAfter = await ctaLink.evaluate((el: HTMLElement) => {
       return parseFloat(window.getComputedStyle(el).gap || '0');
     });
 

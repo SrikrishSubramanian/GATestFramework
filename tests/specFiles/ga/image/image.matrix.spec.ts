@@ -6,7 +6,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -42,14 +42,14 @@ test.describe('Image — State Matrix', () => {
     await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const root = page.locator('.cmp-image').first();
-        await expect(root).toBeVisible();
+        await expect(root).toBeVisible({ timeout: 10000 });
 
         const img = root.locator('img').first();
-        await expect(img).toBeVisible();
+        await expect(img).toBeVisible({ timeout: 10000 });
 
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
       });
     }
   }

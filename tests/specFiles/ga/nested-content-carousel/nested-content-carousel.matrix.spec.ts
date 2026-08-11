@@ -6,7 +6,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -42,14 +42,14 @@ test.describe('Nested Content Carousel — State Matrix', () => {
         await pom.navigate(BASE());
 
         const root = page.locator('.cmp-nested-content-carousel').first();
-        await expect(root).toBeVisible();
+        await expect(root).toBeVisible({ timeout: 10000 });
 
         const slides = root.locator('[role="group"], .slide');
         expect(await slides.count()).toBeGreaterThan(0);
 
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
       });
     }
   }

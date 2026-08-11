@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('InBrief — Happy Path', () => {
-    test('[IB-001] @smoke @regression InBrief renders correctly', async ({ page }) => {
+    test('[IB-001] @smoke @regression @sanity InBrief renders correctly', async ({ page }) => {
         const pom = new InBriefPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-in-brief').first();

@@ -4,7 +4,23 @@ name: GA Regression Suite
 # Cron is commented out for now — uncomment when ready. Cron is always UTC —
 # 0 1 * * * = 1:00 AM UTC = 6:30 AM IST daily.
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run against'
+        type: choice
+        options:
+          - dev
+          - stage
+        default: dev
+      testType:
+        description: 'Test suite to run'
+        type: choice
+        options:
+          - smoke
+          - sanity
+          - regression
+        default: regression
   push:
     branches:
       - ga_automation_testing
@@ -12,7 +28,8 @@ on:
   #   - cron: '0 1 * * *'
 
 env:
-  env: dev
+  env: ${{ inputs.environment || 'dev' }}
+  TEST_TYPE: ${{ inputs.testType || 'regression' }}
   AEM_AUTHOR_USERNAME: ${{ secrets.AEM_AUTHOR_USERNAME }}
   AEM_AUTHOR_PASSWORD: ${{ secrets.AEM_AUTHOR_PASSWORD }}
 
@@ -51,7 +68,12 @@ jobs:
           fi
 
       - name: Run desktop suite
-        run: npx playwright test tests/specFiles/ga/ --project firefox --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+        run: |
+          GREP_ARGS=""
+          if [ "$TEST_TYPE" != "regression" ]; then
+            GREP_ARGS="--grep @$TEST_TYPE"
+          fi
+          npx playwright test tests/specFiles/ga/ --project firefox --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }} $GREP_ARGS
 
       - name: Upload report
         if: always()

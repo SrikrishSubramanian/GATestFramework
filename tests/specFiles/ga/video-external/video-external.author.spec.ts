@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Video External — Happy Path', () => {
-    test('[VE-001] @smoke @regression External Video renders', async ({ page }) => {
+    test('[VE-001] @smoke @regression @sanity External Video renders', async ({ page }) => {
         const pom = new VideoExternalPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-video-external').first();

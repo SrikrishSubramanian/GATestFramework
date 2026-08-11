@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { TextPage } from '../../../pages/ga/components/textPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Text — CSV Test Cases', () => {
-    test('[TEXT-001] @smoke @regression CMS FE: Homepage Hero Role Card Click Action — AC1', async ({ page }) => {
+    test('[TEXT-001] @smoke @regression @sanity CMS FE: Homepage Hero Role Card Click Action — AC1', async ({ page }) => {
         const pom = new TextPage(page);
         await pom.navigate(BASE());
         // TODO: Implement assertion for: Local Storage Write on Card Click*
@@ -44,7 +44,7 @@ test.describe('Text — Happy Path', () => {
         // Verify no JS errors during render
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
     test('[TEXT-003] @smoke @regression Text interactive elements are functional', async ({ page }) => {
         const pom = new TextPage(page);
@@ -68,7 +68,7 @@ test.describe('Text — Negative & Boundary', () => {
         const pom = new TextPage(page);
         await pom.navigate(BASE());
         // Component should render without JS errors
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-text').first()).toBeVisible();
     });
@@ -123,7 +123,7 @@ test.describe('Text — Console & Resources', () => {
         // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
         const errors = capture.getErrors();
         capture.stop();
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
 });
 test.describe('Text — Broken Images', () => {

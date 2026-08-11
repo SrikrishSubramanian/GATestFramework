@@ -93,7 +93,7 @@ const GA_COMPONENTS = [
   'nested-content-carousel', 'brand-relationship', 'formatted-rte-frontend',
   'form-field-dropdown', 'hero-fifty-fifty', 'content-trail', 'grid-container',
   'form-field-text', 'headline-block', 'video-external', 'form-recaptcha',
-  'homepage-hero', 'promo-banner', 'ratings-card', 'role-selector', 'rate-table',
+  'homepage-hero', 'promo-banner', 'ratings-card', 'role-selector',
   'formatted-rte', 'form-container', 'site-header', 'teaser-card', 'form-options',
   'marketo-forms', 'saml-login', 'form-hidden', 'feature-banner', 'breadcrumb',
   'disclaimers', 'form-text', 'navigation', 'accordion', 'statistic', 'workbench',

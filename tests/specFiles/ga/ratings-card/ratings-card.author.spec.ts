@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Ratings Card — Happy Path', () => {
-    test('[RC-001] @smoke @regression Ratings Card renders', async ({ page }) => {
+    test('[RC-001] @smoke @regression @sanity Ratings Card renders', async ({ page }) => {
         const pom = new RatingsCardPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-rating-card').first();

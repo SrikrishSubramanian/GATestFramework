@@ -54,8 +54,6 @@ const AVAILABLE_COMPONENTS = [
   { name: 'form-options', rootSelector: '.cmp-form-options' },
   { name: 'hero-fifty-fifty', rootSelector: '.cmp-hero-fifty-fifty' },
   { name: 'navigation', rootSelector: '.cmp-navigation' },
-  { name: 'rate-table', rootSelector: '.cmp-rate-sheet-grid',
-    styleGuideUrl: '/content/global-atlantic/style-guide/components/rate-sheet-grid.html' },
   { name: 'spacer', rootSelector: '.cmp-spacer' },
   { name: 'text', rootSelector: '.cmp-text' },
   { name: 'content-trail', rootSelector: '.cmp-content-trail' },

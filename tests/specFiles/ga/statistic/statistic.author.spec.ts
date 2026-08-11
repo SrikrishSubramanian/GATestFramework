@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Statistic — Happy Path', () => {
-    test('[STTS-001] @smoke @regression Statistic renders correctly', async ({ page }) => {
+    test('[STTS-001] @smoke @regression @sanity Statistic renders correctly', async ({ page }) => {
         const pom = new StatisticPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-statistic').first();

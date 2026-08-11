@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Login — CSV Test Cases', () => {
-    test('[LGN-001] @smoke @regression CMS BE: Login cookie sessionIndex update & Ping Logout Servlet implementation — AC1', async ({ page }) => {
+    test('[LGN-001] @smoke @regression @sanity CMS BE: Login cookie sessionIndex update & Ping Logout Servlet implementation — AC1', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         // TODO: Implement assertion for Ping Logout Servlet - See GAAM-821, GAAM-1217 for SAML SLO requirements

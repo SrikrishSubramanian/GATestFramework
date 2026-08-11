@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('ContentHighlight — Happy Path', () => {
-    test('[CH-001] @smoke @regression ContentHighlight renders correctly', async ({ page }) => {
+    test('[CH-001] @smoke @regression @sanity ContentHighlight renders correctly', async ({ page }) => {
         const pom = new ContentHighlightPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-content-highlight').first();

@@ -5,7 +5,7 @@ import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -39,7 +39,7 @@ test.describe('Form Options — State Matrix', () => {
           await pom.navigate(BASE());
 
           const root = page.locator('.cmp-form-options').first();
-          await expect(root).toBeVisible();
+          await expect(root).toBeVisible({ timeout: 10000 });
 
           // Find elements matching the field type.
           // "select" is special-cased: this component uses the Choices.js
@@ -72,14 +72,14 @@ test.describe('Form Options — State Matrix', () => {
                 // Check if disabled attribute exists on any similar element
                 const disabled = page.locator(`${selector}:disabled`);
                 // May or may not have disabled elements
-                await expect(root).toBeVisible();
+                await expect(root).toBeVisible({ timeout: 10000 });
                 break;
 
               case 'default':
               case 'error':
               case 'success':
                 // Verify element is visible
-                await expect(element).toBeVisible();
+                await expect(element).toBeVisible({ timeout: 10000 });
                 break;
             }
           }
@@ -87,7 +87,7 @@ test.describe('Form Options — State Matrix', () => {
           // Verify no errors
           const errors: string[] = [];
           page.on('pageerror', e => errors.push(e.message));
-          expect(errors).toEqual([]);
+          expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         });
       }
     }

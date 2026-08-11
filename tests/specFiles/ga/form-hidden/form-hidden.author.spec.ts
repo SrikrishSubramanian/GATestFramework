@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Form Hidden Field — Happy Path', () => {
-    test('[FH-001] @smoke @regression Hidden form field renders without visibility', async ({ page }) => {
+    test('[FH-001] @smoke @regression @sanity Hidden form field renders without visibility', async ({ page }) => {
         const pom = new FormHiddenPage(page);
         await pom.navigate(BASE());
         const hidden = page.locator('input[type="hidden"]').first();

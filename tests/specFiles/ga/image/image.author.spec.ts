@@ -32,7 +32,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // Core Structure (IMG-001 to IMG-008)
 // ---------------------------------------------------------------------------
 test.describe('Image — Core Structure', () => {
-    test('[IMG-001] @smoke @regression Multiple .cmp-image instances render on style guide page', async ({ page }) => {
+    test('[IMG-001] @smoke @regression @sanity Multiple .cmp-image instances render on style guide page', async ({ page }) => {
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
         const images = page.locator(IMG_ROOT);

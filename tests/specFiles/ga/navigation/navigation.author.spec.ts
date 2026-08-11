@@ -1,4 +1,3 @@
-import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
 import { test, expect } from '@playwright/test';
 import { NavigationPage } from '../../../pages/ga/components/navigationPage';
 import ENV from '../../../utils/infra/env';
@@ -42,7 +41,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 // ─── Mobile Single List ───────────────────────────────────────────────────────
 test.describe('Navigation — Mobile Single List (GAAM-396)', () => {
-    test('[NVGT-001] @mobile @regression Horizontal nav converts to vertical stack on mobile', async ({ page }) => {
+    test('[NVGT-001] @mobile @regression @sanity Horizontal nav converts to vertical stack on mobile', async ({ page }) => {
         await page.setViewportSize(MOBILE);
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
@@ -230,7 +229,10 @@ test.describe('Navigation — General Delivery (GAAM-396)', () => {
     });
     test('[NVGT-015] @regression Style Guide page exists with all variations', async ({ page }) => {
         const pom = new NavigationPage(page);
-        const response = await page.goto(resolveComponentUrl('navigation'));
+        // Use the same shared style-guide page as the rest of this file (already has 6
+        // instances across granite/azul/white sections) — resolveComponentUrl() routes
+        // local/dev through an auto-deploy test-fixtures path that isn't deployed here.
+        const response = await pom.navigate(BASE());
         expect(response?.status()).toBe(200);
         // Should have multiple navigation instances
         const navCount = await page.locator(SEL.root).count();
@@ -799,25 +801,29 @@ test.describe('Navigation — CSV Test Cases (GAAM-1371)', () => {
 });
 test.describe('Navigation — CSV Test Cases (GAAM-1358)', () => {
     test('[NVGT-066] @smoke @regression VQA - Main Nav sticky behavior — AC1', async ({ page }) => {
-        const pom = new NavigationPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: [https://bounteous.jira.com/browse/GAAM-397|https://bounteous.jira.com/browse/GAAM-397|smart-link] 
-        // 
-        // 
-        // 
-        // !image-20260626-131941.png|width=893,alt="image-20260626-131941.png"!
-        // 
-        // 
-        // 
-        // once you're on the role site (like, you've selected FP), the FP navigation bar isn't sticky to the top when it should be. Kindly resolve this issue, Thank you.
-        // 
-        // 
-        // 
-        // Here is the prototype thats showcases the sticky behaviour: [https://www.figma.com/proto/bGvnz1Z5Yi9ceIWVYNNvcj/GAFG-%7C-Template-Reference-File?node-id=1921-4123&viewport=909%2C122%2C0.08&t=IS1D53hC0WDcLRsa-9&scaling=min-zoom&content-scaling=fixed&page-id=1866%3A12030&starting-point-node-id=1921%3A4123&show-proto-sidebar=1&desktop-link-click-timestamp=1782813546875&desktop-ul-exp-bucket=po&desktop-ul-pref-conflict=1|https://www.figma.com/proto/bGvnz1Z5Yi9ceIWVYNNvcj/GAFG-%7C-Template-Reference-File?node-id=1921-4123&viewport=909%2C122%2C0.08&t=IS1D53hC0WDcLRsa-9&scaling=min-zoom&content-scaling=fixed&page-id=1866%3A12030&starting-point-node-id=1921%3A4123&show-proto-sidebar=1&desktop-link-click-timestamp=1782813546875&desktop-ul-exp-bucket=po&desktop-ul-pref-conflict=1|smart-link] 
-        // 
-        // 
-        // 
-        test.fixme();
+        // GAAM-1358 / GAAM-397: once a role is selected (e.g. Financial Professional), the
+        // site-header should stick to the top of the viewport on scroll. Reported as broken —
+        // confirmed live on the FP persona page (header uses position:static and scrolls away).
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.goto(`${BASE()}/content/global-atlantic/financial-professionals/main/en.html?wcmmode=disabled`, { waitUntil: 'load' });
+
+        // Dismiss the first-visit consent alert modal (GAAM-1371) — it scroll-locks the body.
+        const modalClose = page.locator('.cmp-alert-modal__dialog button').first();
+        if (await modalClose.count() > 0 && await modalClose.isVisible()) {
+            await modalClose.click();
+        }
+
+        const header = page.locator('.cmp-site-header').first();
+        await expect(header).toBeVisible();
+
+        await page.mouse.wheel(0, 900);
+        await page.waitForTimeout(500);
+
+        const position = await header.evaluate(el => getComputedStyle(el).position);
+        const top = await header.evaluate(el => el.getBoundingClientRect().top);
+        // A sticky/fixed header stays pinned at (or near) the top of the viewport after scrolling.
+        expect(['sticky', 'fixed']).toContain(position);
+        expect(top).toBeGreaterThanOrEqual(-1);
     });
 });
 test.describe('Navigation — CSV Test Cases (GAAM-1342)', () => {
@@ -869,9 +875,29 @@ test.describe('Navigation — CSV Test Cases (GAAM-549)', () => {
 });
 test.describe('Navigation — CSV Test Cases (GAAM-794)', () => {
     test('[NVGT-072] @smoke @regression CMS FE: Main Nav - MegaMenu Panel layouts — AC1', async ({ page }) => {
-        const pom = new NavigationPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Style System*
-        test.fixme();
+        // GAAM-794: Main Navigation L1 category triggers expand a mega-menu panel of sub-links.
+        // This only exists on the site-header integration (FP persona page) — the standalone
+        // Navigation style-guide demo page has no aria-haspopup triggers at all.
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.goto(`${BASE()}/content/global-atlantic/financial-professionals/main/en.html?wcmmode=disabled`, { waitUntil: 'load' });
+
+        const modalClose = page.locator('.cmp-alert-modal__dialog button').first();
+        if (await modalClose.count() > 0 && await modalClose.isVisible()) {
+            await modalClose.click();
+        }
+
+        // aria-controls="nav-panel-N" identifies Main Nav L1 category triggers specifically
+        // (distinct from the top-nav "Company" dropdown and the role-changer trigger).
+        const trigger = page.locator('button[aria-haspopup][aria-controls^="nav-panel-"]').first();
+        await expect(trigger).toBeVisible();
+        await expect(trigger).toHaveAttribute('aria-expanded', 'false');
+
+        const panelId = await trigger.getAttribute('aria-controls');
+        await trigger.click();
+
+        await expect(trigger).toHaveAttribute('aria-expanded', 'true');
+        const panel = page.locator(`#${panelId}`);
+        await expect(panel).toBeVisible();
+        expect(await panel.locator('a').count()).toBeGreaterThan(0);
     });
 });

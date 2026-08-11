@@ -33,7 +33,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // Core Structure (PB-001 – PB-010)
 // ---------------------------------------------------------------------------
 test.describe('PromoBanner — Core Structure', () => {
-    test('[PB-001] @smoke @regression multiple banner instances render on style guide', async ({ page }) => {
+    test('[PB-001] @smoke @regression @sanity multiple banner instances render on style guide', async ({ page }) => {
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
         const banners = page.locator(PB);

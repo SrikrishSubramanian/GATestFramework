@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('AlertBanner — Happy Path', () => {
-    test('[AB-001] @smoke @regression AlertBanner renders correctly', async ({ page }) => {
+    test('[AB-001] @smoke @regression @sanity AlertBanner renders correctly', async ({ page }) => {
         const pom = new AlertBannerPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-alert-banner-ga').first();

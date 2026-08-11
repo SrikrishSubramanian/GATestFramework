@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('DecisionTree — Happy Path', () => {
-    test('[DT-001] @smoke @regression DecisionTree renders correctly', async ({ page }) => {
+    test('[DT-001] @smoke @regression @sanity DecisionTree renders correctly', async ({ page }) => {
         const pom = new DecisionTreePage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-decision-tree').first();

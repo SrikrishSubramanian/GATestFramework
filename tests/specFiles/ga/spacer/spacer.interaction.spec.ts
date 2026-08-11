@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { SpacerPage } from '../../../pages/ga/components/spacerPage';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
@@ -27,8 +27,8 @@ test.afterEach(async ({ page }, testInfo) => {
 
 test.describe('Spacer — Interactions', () => {
   test('[SPACER-INTERACTION-001] @interaction @regression Spacer height adjusts responsively', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     const spacer = page.locator('.cmp-spacer').first();
     const initialHeight = // ?? TODO: Replace with measurement-utils
@@ -46,8 +46,8 @@ test.describe('Spacer — Interactions', () => {
   });
 
   test('[SPACER-INTERACTION-002] @interaction @regression Spacer does not block keyboard navigation', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     // Spacer should not interfere with tab navigation
     await page.keyboard.press('Tab');
@@ -58,8 +58,8 @@ test.describe('Spacer — Interactions', () => {
   });
 
   test('[SPACER-INTERACTION-003] @interaction @regression Spacer is not clickable', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     const spacer = page.locator('.cmp-spacer').first();
     const pointerEvents = // ?? TODO: Replace with measurement-utils
@@ -72,8 +72,8 @@ test.describe('Spacer — Interactions', () => {
   });
 
   test('[SPACER-INTERACTION-004] @interaction @regression Spacer maintains spacing under different content', async ({ page }) => {
-    const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+    const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
     const spacers = page.locator('.cmp-spacer');
     const count = await spacers.count();
@@ -97,8 +97,8 @@ test.describe('Spacer — Interactions', () => {
 
     for (const viewport of viewports) {
       await page.setViewportSize(viewport);
-      const url = resolveComponentUrl('spacer');
-    await page.goto(url);
+      const pom = new SpacerPage(page);
+    await pom.navigate(BASE());
 
       const spacer = page.locator('.cmp-spacer').first();
       await expect(spacer).toBeVisible();

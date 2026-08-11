@@ -48,7 +48,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 // ─── AC1–AC6: Overall Layout ─────────────────────────────────────────────────
 test.describe('HeroFiftyFifty — Layout (AC1–AC6)', () => {
-    test('[HFF-001] @smoke @regression 50/50 two-column layout on desktop', async ({ page }) => {
+    test('[HFF-001] @smoke @regression @sanity 50/50 two-column layout on desktop', async ({ page }) => {
         const pom = new HeroFiftyFiftyPage(page);
         await pom.navigate(BASE());
         const root = page.locator(SEL.root).first();

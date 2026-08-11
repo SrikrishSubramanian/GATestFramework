@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Form Text — Core Functionality', () => {
-    test('[FORMTEXT-002] @regression Form text field accepts input', async ({ page }) => {
+    test('[FORMTEXT-002] @regression @sanity Form text field accepts input', async ({ page }) => {
         const url = resolveComponentUrl('form-text');
         await page.goto(url);
         const textInput = page.locator('input[type="text"], .cmp-form-text input').first();

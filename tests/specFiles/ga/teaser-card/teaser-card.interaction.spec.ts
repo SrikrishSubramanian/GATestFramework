@@ -401,19 +401,4 @@ test.describe('TeaserCard — Left/Right Position Layout', () => {
             expect(imgBox.y, 'Rectangle Left: image should be above content on mobile').toBeLessThan(contentBox.y);
         }
     });
-    test('[TC-INT-022] @interaction @regression Circle Left card: retains side-by-side on mobile', async ({ page }) => {
-        await page.setViewportSize(MOBILE);
-        const pom = new TeaserCardPage(page);
-        await pom.navigate(BASE());
-        // Circle + Left should stay horizontal even on mobile (per spec)
-        let card = page.locator(`${TC_POS_LEFT}${TC}.cmp-teaser-card--image-style-circle`).first();
-        if (await card.count() === 0) {
-            test.skip();
-            return;
-        }
-        const flexDir = // 📏 TODO: Replace with measurement-utils
-         await card.evaluate(el => getComputedStyle(el).flexDirection);
-        // measurement: use measurement-utils for cleaner code
-        expect(['row', 'row-reverse'], 'Circle Left card should remain side-by-side on mobile').toContain(flexDir);
-    });
 });

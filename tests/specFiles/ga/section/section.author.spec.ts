@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Section — CSV Test Cases', () => {
-    test('[SCTN-001] @smoke @regression CMS FE: Bio Content - Hero Card — AC1', async ({ page }) => {
+    test('[SCTN-001] @smoke @regression @sanity CMS FE: Bio Content - Hero Card — AC1', async ({ page }) => {
         const pom = new SectionPage(page);
         await pom.navigate(BASE());
         // TODO: Implement assertion for: h3. Style System

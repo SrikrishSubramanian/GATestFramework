@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Header — Happy Path', () => {
-    test('[HDR-001] @smoke @regression Header component renders', async ({ page }) => {
+    test('[HDR-001] @smoke @regression @sanity Header component renders', async ({ page }) => {
         const pom = new HeaderPage(page);
         await pom.navigate(BASE());
         const root = page.locator('header, .cmp-header').first();

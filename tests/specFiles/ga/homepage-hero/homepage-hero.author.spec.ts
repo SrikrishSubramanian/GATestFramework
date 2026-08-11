@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Homepage Hero — Happy Path', () => {
-    test('[HH-001] @smoke @regression Homepage Hero component renders', async ({ page }) => {
+    test('[HH-001] @smoke @regression @sanity Homepage Hero component renders', async ({ page }) => {
         const pom = new HomepageHeroPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-homepage-hero').first();

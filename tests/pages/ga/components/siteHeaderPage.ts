@@ -8,14 +8,16 @@ export class SiteHeaderPage {
   constructor(private page: Page) {}
 
   /**
-   * Navigate to the site header style guide page.
-   * NOTE: Site Header is delivered inside an Experience Fragment (GAAM-792).
-   * For local/dev testing, use the XF preview URL or a page that embeds the header XF.
-   * The style guide URL below is a placeholder until the XF is set up (GAAM-792).
+   * Navigate to the site header.
+   * Site Header ships inside a persona-specific Experience Fragment (GAAM-792) —
+   * there is no standalone style-guide page for it, and the plain
+   * /content/global-atlantic/en.html home page still serves the legacy
+   * .cmp-header component, not this one. Default target is the
+   * financial-professionals persona XF master, confirmed live.
    */
   async navigate(baseUrl: string, overrideUrl?: string) {
     const url = overrideUrl
-      ?? `${baseUrl}/content/global-atlantic/style-guide/components/site-header.html?wcmmode=disabled`;
+      ?? `${baseUrl}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`;
     await this.page.goto(url, { waitUntil: 'domcontentloaded' });
   }
 

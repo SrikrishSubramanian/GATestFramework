@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('ContentTrail — GAAM-328: Reskin Acceptance Criteria', () => {
-    test('[CT-001] @smoke @regression All three content types (video, written, link) render', async ({ page }) => {
+    test('[CT-001] @smoke @regression @sanity All three content types (video, written, link) render', async ({ page }) => {
         const pom = new ContentTrailPage(page);
         await pom.navigate(BASE());
         await expect(page.locator('.cmp-content-trail__container.cmp-content-trail__video').first()).toBeVisible();

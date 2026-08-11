@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('FormOptions — Happy Path', () => {
-    test('[FO-001] @smoke @regression FormOptions renders correctly', async ({ page }) => {
+    test('[FO-001] @smoke @regression @sanity FormOptions renders correctly', async ({ page }) => {
         const pom = new FormOptionsPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-form-options').first();

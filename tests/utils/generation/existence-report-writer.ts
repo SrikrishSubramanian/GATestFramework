@@ -83,7 +83,6 @@ export const CHECKLIST: ChecklistItem[] = [
     status: 'missing',
     reason: 'Component code exists in kkr-aem source, but no style-guide demo page has been authored.',
   },
-  { name: 'Rate list Accordion', component: 'rate-table', status: 'automated' },
   { name: 'Product path Detail card', component: 'product-path-detail-card', status: 'automated' },
   {
     name: 'Alert Banner',

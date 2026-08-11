@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Brand Relationship — Happy Path', () => {
-    test('[BR-001] @smoke @regression Brand Relationship component renders', async ({ page }) => {
+    test('[BR-001] @smoke @regression @sanity Brand Relationship component renders', async ({ page }) => {
         const pom = new BrandRelationshipPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-brand-relationship').first();

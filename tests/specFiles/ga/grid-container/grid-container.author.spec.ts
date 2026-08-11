@@ -30,7 +30,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 // ─── Core Structure (GC-001 to GC-009) ─────────────────────────────────────────
 test.describe('GridContainer — Core Structure', () => {
-    test('[GC-001] @smoke @regression Style guide page loads and grid containers are visible', async ({ page }) => {
+    test('[GC-001] @smoke @regression @sanity Style guide page loads and grid containers are visible', async ({ page }) => {
         const pom = new GridContainerPage(page);
         await pom.navigate(BASE());
         const roots = page.locator(GC_ROOT);

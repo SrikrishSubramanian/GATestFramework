@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('ProductComparisonCard — Happy Path', () => {
-    test('[PCC-001] @smoke @regression ProductComparisonCard renders correctly', async ({ page }) => {
+    test('[PCC-001] @smoke @regression @sanity ProductComparisonCard renders correctly', async ({ page }) => {
         const pom = new ProductComparisonCardPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-product-comparison-card').first();

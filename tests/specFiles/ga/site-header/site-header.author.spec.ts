@@ -65,9 +65,9 @@ test.describe('SiteHeader — CSV Test Cases (GAAM-1353)', () => {
     });
 });
 test.describe('SiteHeader — Happy Path', () => {
-    test('[SH-049] @smoke @regression SiteHeader renders correctly', async ({ page }) => {
+    test('[SH-049] @smoke @regression @sanity SiteHeader renders correctly', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
         const root = page.locator('.cmp-site-header').first();
         await expect(root).toBeVisible();
         // Verify core structure: heading or primary content exists
@@ -83,7 +83,7 @@ test.describe('SiteHeader — Happy Path', () => {
     });
     test('[SH-050] @smoke @regression SiteHeader interactive elements are functional', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
         const root = page.locator('.cmp-site-header').first();
         await expect(root).toBeVisible();
         // Verify interactive elements (links, buttons) are present and clickable
@@ -101,7 +101,7 @@ test.describe('SiteHeader — Negative & Boundary', () => {
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
         // Component should render without JS errors
         expect(errors).toEqual([]);
         // Root element should still be present (not crash)
@@ -109,7 +109,8 @@ test.describe('SiteHeader — Negative & Boundary', () => {
     });
     test('[SH-052] @negative @regression SiteHeader handles missing images', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
+        await page.waitForLoadState('load'); // header embeds several image-with-nested-content images that finish downloading after domcontentloaded
         const images = page.locator('.cmp-site-header img');
         const count = await images.count();
         for (let i = 0; i < count; i++) {
@@ -122,7 +123,7 @@ test.describe('SiteHeader — Responsive', () => {
     test('[SH-053] @mobile @regression @mobile SiteHeader adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
         const root = page.locator('.cmp-site-header').first();
         await expect(root).toBeVisible();
         // Verify layout adapts to mobile: check flex-direction changes to column
@@ -137,7 +138,7 @@ test.describe('SiteHeader — Responsive', () => {
     test('[SH-054] @mobile @regression SiteHeader adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
         const root = page.locator('.cmp-site-header').first();
         await expect(root).toBeVisible();
         // Tablet should render without horizontal overflow
@@ -152,7 +153,8 @@ test.describe('SiteHeader — Console & Resources', () => {
 test.describe('SiteHeader — Broken Images', () => {
     test('[SH-056] @regression SiteHeader all images load successfully', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
+        await page.waitForLoadState('load'); // header embeds several image-with-nested-content images that finish downloading after domcontentloaded
         const images = page.locator('.cmp-site-header img');
         const count = await images.count();
         for (let i = 0; i < count; i++) {
@@ -163,7 +165,7 @@ test.describe('SiteHeader — Broken Images', () => {
     });
     test('[SH-057] @regression SiteHeader all images have alt attributes', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
         const images = page.locator('.cmp-site-header img');
         const count = await images.count();
         for (let i = 0; i < count; i++) {

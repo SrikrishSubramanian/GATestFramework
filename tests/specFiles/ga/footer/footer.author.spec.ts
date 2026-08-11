@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Footer — Happy Path & Core Functionality', () => {
-    test('[FTR-001] @smoke @regression Footer renders correctly', async ({ page }) => {
+    test('[FTR-001] @smoke @regression @sanity Footer renders correctly', async ({ page }) => {
         const pom = new FooterPage(page);
         await pom.navigate(BASE());
         const root = await pom.getRoot();

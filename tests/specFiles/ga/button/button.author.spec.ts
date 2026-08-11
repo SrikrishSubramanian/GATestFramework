@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Button — CSV Test Cases', () => {
-    test('[BTTN-001] @smoke @regression DR AEM FE: Dynamic Rates Audit Log — AC1', async ({ page }) => {
+    test('[BTTN-001] @smoke @regression @sanity DR AEM FE: Dynamic Rates Audit Log — AC1', async ({ page }) => {
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
         // TODO: Implement assertion for: Functionality*

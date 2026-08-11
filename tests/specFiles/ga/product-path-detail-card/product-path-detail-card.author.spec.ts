@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('ProductPathDetailCard — Happy Path', () => {
-    test('[PPDC-001] @smoke @regression ProductPathDetailCard renders correctly', async ({ page }) => {
+    test('[PPDC-001] @smoke @regression @sanity ProductPathDetailCard renders correctly', async ({ page }) => {
         const pom = new ProductPathDetailCardPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-product-path-detail-card').first();

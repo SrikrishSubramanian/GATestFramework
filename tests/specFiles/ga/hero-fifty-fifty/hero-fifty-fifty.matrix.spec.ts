@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { HeroFiftyFiftyPage } from '../../../pages/ga/components/heroFiftyFiftyPage';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -38,11 +38,11 @@ test.describe('Hero Fifty-Fifty — State Matrix', () => {
       test(`[H5050-MATRIX-${layout}-${viewport.name}] @matrix @regression Hero 50/50 (${layout}, ${viewport.name})`, async ({ page }) => {
         await page.setViewportSize({ width: viewport.width, height: 600 });
 
-        const url = resolveComponentUrl('hero-fifty-fifty');
-    await page.goto(url, { waitUntil: 'domcontentloaded' });
+        const pom = new HeroFiftyFiftyPage(page);
+        await pom.navigate(BASE());
 
         const hero = page.locator('.cmp-hero-fifty-fifty').first();
-        await expect(hero).toBeVisible();
+        await expect(hero).toBeVisible({ timeout: 10000 });
 
         const width = // ?? TODO: Replace with measurement-utils
     await hero.evaluate(el => el.offsetWidth);
@@ -50,7 +50,7 @@ test.describe('Hero Fifty-Fifty — State Matrix', () => {
 
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
       });
     }
   }

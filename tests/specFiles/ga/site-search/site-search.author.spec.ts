@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('SiteSearch — Happy Path', () => {
-    test('[SS-001] @smoke @regression SiteSearch renders correctly', async ({ page }) => {
+    test('[SS-001] @smoke @regression @sanity SiteSearch renders correctly', async ({ page }) => {
         const pom = new SiteSearchPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-site-search').first();

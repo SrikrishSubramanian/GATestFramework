@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('GatedSection — Happy Path', () => {
-    test('[GS-001] @smoke @regression GatedSection renders correctly', async ({ page }) => {
+    test('[GS-001] @smoke @regression @sanity GatedSection renders correctly', async ({ page }) => {
         const pom = new GatedSectionPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-gated-section').first();

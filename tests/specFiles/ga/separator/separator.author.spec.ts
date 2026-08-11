@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Separator — Happy Path', () => {
-    test('[SEP-001] @smoke @regression Separator renders', async ({ page }) => {
+    test('[SEP-001] @smoke @regression @sanity Separator renders', async ({ page }) => {
         const pom = new SeparatorPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-separator').first();

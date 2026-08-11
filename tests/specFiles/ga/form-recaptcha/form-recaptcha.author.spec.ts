@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Form reCAPTCHA — Happy Path', () => {
-    test('[RECAP-001] @smoke @regression reCAPTCHA field renders', async ({ page }) => {
+    test('[RECAP-001] @smoke @regression @sanity reCAPTCHA field renders', async ({ page }) => {
         const pom = new FormRecaptchaPage(page);
         await pom.navigate(BASE());
         // This site renders Google's invisible reCAPTCHA variant (data-size="invisible"),

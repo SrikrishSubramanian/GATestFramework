@@ -1,19 +1,115 @@
 {
+  "component": "role-selector",
+  "generatedAt": "2026-08-10",
+  "source": "dom",
   "entries": {
-    "roleSelectorPageRoot": {
+    "root": {
+      "name": "root",
+      "component": "role-selector",
       "strategies": [
         {
           "type": "css",
-          "selector": ".cmp-roleselector",
+          "value": ".cmp-site-header-role-selector",
           "confidence": 0.8
         },
         {
-          "type": "xpath",
-          "selector": "//div[@class='cmp-roleselector']",
+          "type": "role",
+          "value": "navigation[name='Role selector navigation']",
           "confidence": 0.7
         }
-      ],
-      "primary": "css"
+      ]
+    },
+    "trigger": {
+      "name": "trigger",
+      "component": "role-selector",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-header-role-selector__header",
+          "confidence": 0.8
+        },
+        {
+          "type": "role",
+          "value": "button[name='Role Selector Dropdown']",
+          "confidence": 0.7
+        }
+      ]
+    },
+    "panel": {
+      "name": "panel",
+      "component": "role-selector",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-header-role-selector__panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "id",
+          "value": "site-header-role-selector-panel",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "options": {
+      "name": "options",
+      "component": "role-selector",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-header-role-selector__link",
+          "confidence": 0.8
+        }
+      ]
+    },
+    "mobileRoot": {
+      "name": "mobileRoot",
+      "component": "role-selector",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-header__mobile-role-selector",
+          "confidence": 0.8
+        }
+      ]
+    },
+    "mobileTrigger": {
+      "name": "mobileTrigger",
+      "component": "role-selector",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-header__mobile-role-accordion-trigger",
+          "confidence": 0.8
+        }
+      ]
+    },
+    "mobilePanel": {
+      "name": "mobilePanel",
+      "component": "role-selector",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-header__mobile-role-accordion-panel",
+          "confidence": 0.8
+        },
+        {
+          "type": "id",
+          "value": "mobile-role-accordion-panel",
+          "confidence": 0.6
+        }
+      ]
+    },
+    "mobileOptions": {
+      "name": "mobileOptions",
+      "component": "role-selector",
+      "strategies": [
+        {
+          "type": "css",
+          "value": ".cmp-site-header__mobile-role-accordion-link",
+          "confidence": 0.8
+        }
+      ]
     }
   }
 }

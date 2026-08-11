@@ -31,12 +31,29 @@ export async function scanImages(
   componentSelector: string
 ): Promise<ImageScanResult> {
   const images = await page.evaluate(
-    ({ selector, maxSizeKb }) => {
-      const results: any[] = [];
-      const imgs = document.querySelectorAll(`${selector} img`);
+    async ({ selector, maxSizeKb }) => {
+      // Wait for each image to settle (load or error) before reading naturalWidth/Height —
+      // otherwise slow-loading but valid images (e.g. third-party CDN video posters) get
+      // falsely flagged as broken just because they hadn't finished downloading yet.
+      const waitForSettled = (el: HTMLImageElement): Promise<void> => {
+        if (el.complete) return Promise.resolve();
+        return new Promise<void>((resolve) => {
+          const done = () => {
+            el.removeEventListener('load', done);
+            el.removeEventListener('error', done);
+            resolve();
+          };
+          el.addEventListener('load', done);
+          el.addEventListener('error', done);
+          setTimeout(done, 10000); // don't hang forever on a genuinely broken image
+        });
+      };
 
-      imgs.forEach((img: Element) => {
-        const el = img as HTMLImageElement;
+      const imgs = Array.from(document.querySelectorAll(`${selector} img`)) as HTMLImageElement[];
+      await Promise.all(imgs.map(waitForSettled));
+
+      const results: any[] = [];
+      imgs.forEach((el) => {
         const src = el.src || el.getAttribute('data-src') || '';
         const alt = el.getAttribute('alt');
         const naturalWidth = el.naturalWidth;

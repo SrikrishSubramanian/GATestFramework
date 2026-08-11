@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('EnhancedRelatedContent — Happy Path', () => {
-    test('[ERC-001] @smoke @regression EnhancedRelatedContent renders correctly', async ({ page }) => {
+    test('[ERC-001] @smoke @regression @sanity EnhancedRelatedContent renders correctly', async ({ page }) => {
         const pom = new EnhancedRelatedContentPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-enhanced-related-content').first();

@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('InsightsDetailHero — Happy Path', () => {
-    test('[IDH-001] @smoke @regression InsightsDetailHero renders correctly', async ({ page }) => {
+    test('[IDH-001] @smoke @regression @sanity InsightsDetailHero renders correctly', async ({ page }) => {
         const pom = new InsightsDetailHeroPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-insights-detail-hero').first();

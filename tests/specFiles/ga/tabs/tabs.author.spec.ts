@@ -34,7 +34,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // Core Structure (TAB-001 – TAB-010)
 // ─────────────────────────────────────────────────────────────────────────────
 test.describe('Tabs — Core Structure', () => {
-    test('[TAB-001] @smoke @regression Style guide has at least 4 tabs instances', async ({ page }) => {
+    test('[TAB-001] @smoke @regression @sanity Style guide has at least 4 tabs instances', async ({ page }) => {
         const pom = new TabsPage(page);
         await pom.navigate(BASE());
         const instances = page.locator(TABS);

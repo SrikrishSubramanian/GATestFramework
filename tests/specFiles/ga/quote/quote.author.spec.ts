@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('Quote — Happy Path', () => {
-    test('[QT-001] @smoke @regression Quote renders correctly', async ({ page }) => {
+    test('[QT-001] @smoke @regression @sanity Quote renders correctly', async ({ page }) => {
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-quote').first();

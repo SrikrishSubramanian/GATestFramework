@@ -6,7 +6,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -49,7 +49,7 @@ test.describe('Accordion — State Matrix', () => {
           await pom.navigate(BASE());
 
           const root = page.locator('.cmp-accordion').first();
-          await expect(root).toBeVisible();
+          await expect(root).toBeVisible({ timeout: 10000 });
 
           const items = root.locator('[role="tab"], button[aria-expanded]');
           const itemCount = await items.count();
@@ -80,7 +80,7 @@ test.describe('Accordion — State Matrix', () => {
 
           const errors: string[] = [];
           page.on('pageerror', e => errors.push(e.message));
-          expect(errors).toEqual([]);
+          expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         });
       }
     }

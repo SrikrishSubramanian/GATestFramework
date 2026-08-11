@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Spacer — CSV Test Cases', () => {
-    test('[SPC-001] @smoke @regression TC_SPC_001 Verify Spacer component availability', async ({ page }) => {
+    test('[SPC-001] @smoke @regression @sanity TC_SPC_001 Verify Spacer component availability', async ({ page }) => {
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
         // Pre-condition: User logged into CMS
@@ -44,8 +44,10 @@ test.describe('Spacer — CSV Test Cases', () => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
-        // NOTE: 3XS variant not present on style guide — CSV specifies 6px desktop.
-        test.skip();
+        const spacer = page.locator('.cmp-spacer--3xsmall > .cmp-spacer').first();
+        await expect(spacer).toBeVisible();
+        const height = await pom.getSpacerHeight(spacer);
+        expect(height).toBe(6);
     });
     test('[SPC-006] @smoke @regression TC_SPC_006 Validate 2XS/XXS style — Desktop spacing', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
@@ -112,8 +114,10 @@ test.describe('Spacer — CSV Test Cases', () => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
-        // NOTE: 3XS variant not present on style guide — CSV specifies 4px mobile.
-        test.skip();
+        const spacer = page.locator('.cmp-spacer--3xsmall > .cmp-spacer').first();
+        await expect(spacer).toBeVisible();
+        const height = await pom.getSpacerHeight(spacer);
+        expect(height).toBe(4);
     });
     test('[SPC-013] @smoke @regression @mobile TC_SPC_013 Validate 2XS/XXS style — Mobile spacing', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });

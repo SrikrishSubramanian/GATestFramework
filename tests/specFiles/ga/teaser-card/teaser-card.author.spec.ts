@@ -61,7 +61,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // Core Structure (TC-001 – TC-010)
 // ---------------------------------------------------------------------------
 test.describe('TeaserCard — Core Structure', () => {
-    test('[TC-001] @smoke @regression At least one .cmp-teaser-card renders on the style guide page', async ({ page }) => {
+    test('[TC-001] @smoke @regression @sanity At least one .cmp-teaser-card renders on the style guide page', async ({ page }) => {
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
         const cards = page.locator(TC);

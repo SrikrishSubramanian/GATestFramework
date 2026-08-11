@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Top Nav — Happy Path', () => {
-    test('[TN-001] @smoke @regression Top Navigation renders', async ({ page }) => {
+    test('[TN-001] @smoke @regression @sanity Top Navigation renders', async ({ page }) => {
         const pom = new TopNavPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-site-header__top-nav').first();

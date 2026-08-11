@@ -45,7 +45,7 @@ const HEADLINE_BLOCK = '.cmp-headline-block';
 // 4 = Granite Background variant (Global Reach / Innovation / Sustainability) — background-granite
 // ─── Accordion Variant — Desktop ────────────────────────────────────────────
 test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
-    test('[ATF-001] @smoke @regression Style guide page loads with all 5 component instances', async ({ page }) => {
+    test('[ATF-001] @smoke @regression @sanity Style guide page loads with all 5 component instances', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const roots = page.locator(ROOT);

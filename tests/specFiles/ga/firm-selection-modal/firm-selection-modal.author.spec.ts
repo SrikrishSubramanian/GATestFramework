@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('FirmSelectionModal — Happy Path', () => {
-    test('[FSM-001] @smoke @regression FirmSelectionModal renders correctly', async ({ page }) => {
+    test('[FSM-001] @smoke @regression @sanity FirmSelectionModal renders correctly', async ({ page }) => {
         const pom = new FirmSelectionModalPage(page);
         await pom.navigate(BASE());
         // Modal is hidden until its trigger is clicked

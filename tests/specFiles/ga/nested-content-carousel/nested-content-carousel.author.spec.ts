@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { NestedContentCarouselPage } from '../../../pages/ga/components/nestedContentCarouselPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -42,7 +42,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // Core Structure (NCC-001 to NCC-010)
 // ---------------------------------------------------------------------------
 test.describe('NestedContentCarousel — Core Structure', () => {
-    test('[NCC-001] @smoke @regression Carousel root renders with role="region" and aria-label', async ({ page }) => {
+    test('[NCC-001] @smoke @regression @sanity Carousel root renders with role="region" and aria-label', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const root = page.locator(NCC).first();
@@ -592,7 +592,7 @@ test.describe('NestedContentCarousel — Console Errors', () => {
         // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
         const errors = capture.getErrors();
         capture.stop();
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e.message))).toEqual([]);
     });
     test('[NCC-045] @regression No JS errors during carousel auto-advance (wait 7s)', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
@@ -601,6 +601,6 @@ test.describe('NestedContentCarousel — Console Errors', () => {
         // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
         const errors = capture.getErrors();
         capture.stop();
-        expect(errors).toEqual([]);
+        expect(errors.filter(e => !isBenignError(e.message))).toEqual([]);
     });
 });

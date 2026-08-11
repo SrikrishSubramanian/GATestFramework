@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Form Container — Happy Path', () => {
-    test('[FC-001] @smoke @regression Form Container renders', async ({ page }) => {
+    test('[FC-001] @smoke @regression @sanity Form Container renders', async ({ page }) => {
         const pom = new FormContainerPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-form').first();

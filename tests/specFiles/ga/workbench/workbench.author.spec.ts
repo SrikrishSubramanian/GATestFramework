@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Workbench — Happy Path', () => {
-    test('[WB-001] @smoke @regression Workbench component renders', async ({ page }) => {
+    test('[WB-001] @smoke @regression @sanity Workbench component renders', async ({ page }) => {
         const pom = new WorkbenchPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-workbench').first();

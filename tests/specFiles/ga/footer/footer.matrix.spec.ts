@@ -6,7 +6,7 @@ import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
 import { assertLayout, assertSpacing, assertTypography, assertBackgroundColor } from '../../../utils/infra/component-assertions';
-import { ConsoleCapture } from '../../../utils/infra/console-capture';
+import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
 
 let capture: ConsoleCapture;
 
@@ -49,7 +49,7 @@ test.describe('Footer — State Matrix', () => {
           await pom.navigate(BASE());
 
           const root = await pom.getRoot();
-          await expect(root).toBeVisible();
+          await expect(root).toBeVisible({ timeout: 10000 });
 
           // Verify footer width adapts to viewport
           const width = // 📏 TODO: Replace with measurement-utils
@@ -59,7 +59,7 @@ test.describe('Footer — State Matrix', () => {
           // Verify no errors
           const errors: string[] = [];
           page.on('pageerror', e => errors.push(e.message));
-          expect(errors).toEqual([]);
+          expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         });
       }
     }

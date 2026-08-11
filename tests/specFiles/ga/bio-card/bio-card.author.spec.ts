@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
 });
 test.describe('BioCard — Happy Path', () => {
-    test('[BC-001] @smoke @regression BioCard renders correctly', async ({ page }) => {
+    test('[BC-001] @smoke @regression @sanity BioCard renders correctly', async ({ page }) => {
         const pom = new BioCardPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-bio-card').first();

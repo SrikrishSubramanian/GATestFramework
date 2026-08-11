@@ -39,7 +39,7 @@ const INDICATOR_GA = '.cmp-accordion__item-indicator--default';
 const ICON_LINE_H = '.cmp-accordion__item-icon-line--horizontal';
 const ICON_LINE_V = '.cmp-accordion__item-icon-line--vertical';
 test.describe('Accordion — Style Guide Page', () => {
-    test('[ACRD-001] @smoke @regression Style guide page exists and loads', async ({ page }) => {
+    test('[ACRD-001] @smoke @regression @sanity Style guide page exists and loads', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         await expect(page.locator(ACCORDION).first()).toBeVisible();

@@ -21,7 +21,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Marketo Forms Component (GAAM-533)', () => {
     // ============ Form Rendering ============
-    test('[GAAM-533-001] @regression Verify Marketo form renders', async ({ page }) => {
+    test('[GAAM-533-001] @regression @sanity Verify Marketo form renders', async ({ page }) => {
         const url = resolveComponentUrl('marketo-forms');
         await page.goto(url);
         const form = page.locator('form, [class*="marketo"], [class*="form"]').first();

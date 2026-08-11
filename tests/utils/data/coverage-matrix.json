@@ -642,57 +642,6 @@
       "totalTests": 4,
       "lastUpdated": "2026-04-17T05:20:35.214Z"
     },
-    "rate-table": {
-      "component": "rate-table",
-      "categories": {
-        "happy-path": {
-          "category": "happy-path",
-          "testCount": 27,
-          "specFile": "rate-table.author.spec.ts",
-          "tags": [
-            "@a11y",
-            "@mobile"
-          ]
-        },
-        "visual": {
-          "category": "visual",
-          "testCount": 5,
-          "specFile": "rate-table.visual.spec.ts",
-          "tags": [
-            "@visual",
-            "@regression"
-          ]
-        },
-        "interaction": {
-          "category": "interaction",
-          "testCount": 5,
-          "specFile": "rate-table.interaction.spec.ts",
-          "tags": [
-            "@interaction",
-            "@regression"
-          ]
-        },
-        "state-matrix": {
-          "category": "state-matrix",
-          "testCount": 1,
-          "specFile": "rate-table.matrix.spec.ts",
-          "tags": [
-            "@matrix",
-            "@regression"
-          ]
-        },
-        "broken-images": {
-          "category": "broken-images",
-          "testCount": 5,
-          "specFile": "rate-table.images.spec.ts",
-          "tags": [
-            "@regression"
-          ]
-        }
-      },
-      "totalTests": 43,
-      "lastUpdated": "2026-05-04T23:13:00.000Z"
-    },
     "content-trail": {
       "component": "content-trail",
       "categories": {
