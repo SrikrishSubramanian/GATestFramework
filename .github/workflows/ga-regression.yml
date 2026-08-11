@@ -1,0 +1,86 @@
+name: GA Regression Suite
+
+# Manual trigger (Actions tab → "Run workflow") and push-to-branch are active.
+# Cron is commented out for now — uncomment when ready. Cron is always UTC —
+# 0 1 * * * = 1:00 AM UTC = 6:30 AM IST daily.
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run against'
+        type: choice
+        options:
+          - dev
+          - stage
+        default: dev
+      testType:
+        description: 'Test suite to run'
+        type: choice
+        options:
+          - smoke
+          - sanity
+          - regression
+        default: regression
+  push:
+    branches:
+      - ga_automation_testing
+  schedule:
+    - cron: '0 6 * * *'
+
+env:
+  env: ${{ inputs.environment || 'dev' }}
+  TEST_TYPE: ${{ inputs.testType || 'regression' }}
+  AEM_AUTHOR_USERNAME: ${{ secrets.AEM_AUTHOR_USERNAME }}
+  AEM_AUTHOR_PASSWORD: ${{ secrets.AEM_AUTHOR_PASSWORD }}
+
+jobs:
+  desktop:
+    name: Desktop (Firefox) - Shard ${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3]
+        shardTotal: [3]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Restore cached AEM auth state
+        env:
+          AUTH_STATE_JSON: ${{ secrets.AEM_AUTH_STATE_JSON }}
+        run: |
+          if [ -n "$AUTH_STATE_JSON" ]; then
+            printf '%s' "$AUTH_STATE_JSON" > .auth-state.json
+            echo "Restored cached AEM auth state — globalSetup will skip login."
+          else
+            echo "No AEM_AUTH_STATE_JSON secret set — tests will attempt individual login (fails if MFA is required)."
+          fi
+
+      - name: Run desktop suite
+        run: |
+          GREP_ARGS=""
+          if [ "$TEST_TYPE" != "regression" ]; then
+            GREP_ARGS="--grep @$TEST_TYPE"
+          fi
+          npx playwright test tests/specFiles/ga/ --project firefox --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }} $GREP_ARGS
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-desktop-${{ matrix.shardIndex }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
