@@ -9,7 +9,18 @@ export class SpacerPage {
 
   /** Navigate to the component style guide page */
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`);
+    const url = `${baseUrl}/content/global-atlantic/style-guide/components/spacer.html?wcmmode=disabled`;
+    try {
+      await this.page.goto(url);
+    } catch (err) {
+      // AEM's Unified Shell can still be mid-redirect (to its own aem/start.html
+      // console) right after login, interrupting this navigation. Retry once.
+      if (err instanceof Error && (err.message.includes('interrupted by another navigation') || err.message.includes('NS_ERROR_ABORT'))) {
+        await this.page.goto(url);
+      } else {
+        throw err;
+      }
+    }
     await this.page.waitForLoadState('domcontentloaded');
     await this.page.waitForSelector('.cmp-spacer', { timeout: 15000 });
   }

@@ -10,7 +10,17 @@ export class FooterPage {
 
   async navigate(baseUrl: string): Promise<void> {
     const url = `${baseUrl}/content/global-atlantic/style-guide/components/footer.html?wcmmode=disabled`;
-    await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+    try {
+      await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+    } catch (err) {
+      // AEM's Unified Shell can still be mid-redirect (to its own aem/start.html
+      // console) right after login, interrupting this navigation. Retry once.
+      if (err instanceof Error && (err.message.includes('interrupted by another navigation') || err.message.includes('NS_ERROR_ABORT'))) {
+        await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+      } else {
+        throw err;
+      }
+    }
   }
 
   // Root element

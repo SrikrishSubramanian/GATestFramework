@@ -12,7 +12,16 @@ export class FormContainerPage {
    * the live instance is the base kkr tenant's style guide (verified via querybuilder + live DOM).
    */
   async navigate(baseUrl: string) {
-    await this.page.goto(`${baseUrl}/content/kkr/style-guide/components/form-container.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
+    try {
+      return await this.page.goto(`${baseUrl}/content/kkr/style-guide/components/form-container.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
+    } catch (err) {
+      // AEM's Unified Shell can still be mid-redirect (to its own aem/start.html
+      // console) right after login, interrupting this navigation. Retry once.
+      if (err instanceof Error && (err.message.includes('interrupted by another navigation') || err.message.includes('NS_ERROR_ABORT'))) {
+        return this.page.goto(`${baseUrl}/content/kkr/style-guide/components/form-container.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
+      }
+      throw err;
+    }
   }
 
   get root(): Promise<Locator> {

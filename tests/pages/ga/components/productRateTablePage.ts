@@ -18,7 +18,7 @@ export class ProductRateTablePage {
     } catch (err) {
       // A residual AEM Start console redirect can transiently interrupt the very next
       // navigation right after login. It's self-resolving — retry once.
-      if (err instanceof Error && err.message.includes('interrupted by another navigation')) {
+      if (err instanceof Error && (err.message.includes('interrupted by another navigation') || err.message.includes('NS_ERROR_ABORT'))) {
         await this.page.goto(url, { waitUntil: 'domcontentloaded' });
       } else {
         throw err;

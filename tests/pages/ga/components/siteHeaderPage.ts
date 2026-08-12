@@ -18,7 +18,17 @@ export class SiteHeaderPage {
   async navigate(baseUrl: string, overrideUrl?: string) {
     const url = overrideUrl
       ?? `${baseUrl}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`;
-    await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+    try {
+      await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+    } catch (err) {
+      // AEM's Unified Shell can still be mid-redirect (to its own aem/start.html
+      // console) right after login, interrupting this navigation. Retry once.
+      if (err instanceof Error && (err.message.includes('interrupted by another navigation') || err.message.includes('NS_ERROR_ABORT'))) {
+        await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+      } else {
+        throw err;
+      }
+    }
   }
 
   /** Component root */

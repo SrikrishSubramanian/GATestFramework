@@ -11,7 +11,18 @@ export class LoginPage {
   constructor(private page: Page) {}
 
   async navigate(baseUrl: string): Promise<void> {
-    await this.page.goto(`${baseUrl}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
+    const url = `${baseUrl}/content/global-atlantic/style-guide/components/login.html?wcmmode=disabled`;
+    try {
+      await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+    } catch (err) {
+      // AEM's Unified Shell can still be mid-redirect (to its own aem/start.html
+      // console) right after login, interrupting this navigation. Retry once.
+      if (err instanceof Error && (err.message.includes('interrupted by another navigation') || err.message.includes('NS_ERROR_ABORT'))) {
+        await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+      } else {
+        throw err;
+      }
+    }
   }
 
   getComponentRoot(): Locator {
