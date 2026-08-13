@@ -395,6 +395,9 @@ test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion
     // The accordion_item_content policy must allow: text, button, image, headline-block,
     // separator, spacer, statistic, image-with-nested-content, video-external.
     // The fixture section_mixed_content has pre-expanded items with diverse child types.
+    // Each test deploys independently (rather than sharing one beforeAll deploy) so a failure in
+    // one doesn't skip the others — deployFixture() itself retries on the 409 Conflict these
+    // concurrent same-fixture deploys can race into (see content-fixture-deployer.ts).
     test('[ACRD-048] @regression @smoke @sanity Accordion item renders button child component', async ({ page }) => {
         const deployResult = await deployFixture('accordion', page);
         expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);

@@ -152,10 +152,15 @@ test.describe('PromoBanner — Core Structure', () => {
 // Style Variants (PB-011 – PB-016)
 // ---------------------------------------------------------------------------
 test.describe('PromoBanner — Style Variants', () => {
+    // Each test deploys the promo-banner fixture independently (rather than sharing one beforeAll
+    // deploy) so a failure in one doesn't skip the others — deployFixture() itself retries on the
+    // 409 Conflict these concurrent same-fixture deploys can race into under parallel workers
+    // (see content-fixture-deployer.ts).
     test('[PB-011] @regression granite variant has correct dark background color', async ({ page }) => {
         // Style guide page never has a variant selected on any instance — use the
         // dedicated content fixture (cq:styleIds="[promo-granite]") instead.
-        await deployFixture('promo-banner', page);
+        const deployResult = await deployFixture('promo-banner', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const graniteEl = page.locator(`${PB}.cmp-promo-banner--granite`).first();
         const count = await graniteEl.count();
@@ -173,7 +178,8 @@ test.describe('PromoBanner — Style Variants', () => {
         expect(bg, 'Granite variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
     });
     test('[PB-012] @regression azul variant has correct background color', async ({ page }) => {
-        await deployFixture('promo-banner', page);
+        const deployResult = await deployFixture('promo-banner', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const azulEl = page.locator(`${PB}.cmp-promo-banner--azul`).first();
         const count = await azulEl.count();
@@ -189,7 +195,8 @@ test.describe('PromoBanner — Style Variants', () => {
         expect(bg, 'Azul variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
     });
     test('[PB-013] @regression aubergine variant has correct twilight background color', async ({ page }) => {
-        await deployFixture('promo-banner', page);
+        const deployResult = await deployFixture('promo-banner', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const aubergineEl = page.locator(`${PB}.cmp-promo-banner--aubergine`).first();
         const count = await aubergineEl.count();
@@ -205,7 +212,8 @@ test.describe('PromoBanner — Style Variants', () => {
         expect(bg, 'Aubergine variant background should not be transparent').not.toBe('rgba(0, 0, 0, 0)');
     });
     test('[PB-014] @regression footer variant has azul background and border separator on title', async ({ page }) => {
-        await deployFixture('promo-banner', page);
+        const deployResult = await deployFixture('promo-banner', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
@@ -582,8 +590,11 @@ test.describe('PromoBanner — Mobile Layout', () => {
 // Footer Variant (PB-033 – PB-036)
 // ---------------------------------------------------------------------------
 test.describe('PromoBanner — Footer Variant', () => {
+    // Each test deploys independently — deployFixture() retries on 409 internally, so this
+    // doesn't need shared/serial setup (see "Style Variants" above and content-fixture-deployer.ts).
     test('[PB-033] @regression footer variant logo has no circular border-radius', async ({ page }) => {
-        await deployFixture('promo-banner', page);
+        const deployResult = await deployFixture('promo-banner', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
@@ -605,7 +616,8 @@ test.describe('PromoBanner — Footer Variant', () => {
         expect(borderRadius, 'Footer variant logo should not have 999px circular radius').not.toMatch(/999px|9999px/);
     });
     test('[PB-034] @regression footer variant social icons are present', async ({ page }) => {
-        await deployFixture('promo-banner', page);
+        const deployResult = await deployFixture('promo-banner', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
@@ -619,7 +631,8 @@ test.describe('PromoBanner — Footer Variant', () => {
         expect(socialCount, 'Footer variant should have at least one social icon link').toBeGreaterThan(0);
     });
     test('[PB-035] @regression footer variant title has a border separator (right or bottom border)', async ({ page }) => {
-        await deployFixture('promo-banner', page);
+        const deployResult = await deployFixture('promo-banner', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
@@ -649,7 +662,8 @@ test.describe('PromoBanner — Footer Variant', () => {
         expect(hasRightBorder || hasBottomBorder, 'Footer variant title should have a visible border separator').toBe(true);
     });
     test('[PB-036] @regression footer variant renders logo alongside content', async ({ page }) => {
-        await deployFixture('promo-banner', page);
+        const deployResult = await deployFixture('promo-banner', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();

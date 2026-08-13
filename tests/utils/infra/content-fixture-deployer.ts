@@ -220,9 +220,22 @@ export async function deployFixture(component: string, page: Page): Promise<Depl
       const tokenJson = await tokenRes.json();
       csrfToken = tokenJson.token;
     }
+    if (!csrfToken) {
+      return {
+        component,
+        deployed: false,
+        path: targetPath,
+        message: `Could not obtain a CSRF token (GET /libs/granite/csrf/token.json returned ${tokenRes.status()}) — the import POST below would be rejected without one.`,
+      };
+    }
 
-    const headers: Record<string, string> = {};
-    if (csrfToken) headers['CSRF-Token'] = csrfToken;
+    // page.request.post() is an API-only call, not a real page navigation — it doesn't carry a
+    // Referer header the way an actual authored form submission would. AEM's ReferrerFilter can
+    // reject exactly this shape of request with a bare 403, independent of CSRF-Token being valid.
+    const headers: Record<string, string> = {
+      'CSRF-Token': csrfToken,
+      Referer: `${authorUrl}/`,
+    };
 
     // Step 3: Ensure parent path exists
     await page.request.post(`${authorUrl}${TEST_FIXTURES_BASE}`, {
@@ -233,66 +246,86 @@ export async function deployFixture(component: string, page: Page): Promise<Depl
       ignoreHTTPSErrors: true,
     });
 
-    // Step 4: Delete any stale node at the target path first. If a prior deploy ever landed a
-    // POST directly at targetPath, Sling auto-vivifies it as a plain resource before any import
-    // runs — permanently pinning it to the wrong primaryType, since import can only ever set
-    // properties on that already-created node, never its own root type. Starting clean avoids
-    // silently merging into that stale resource.
-    await page.request.post(`${authorUrl}${targetPath}`, {
-      headers,
-      form: { ':operation': 'delete' },
-      ignoreHTTPSErrors: true,
-    });
-
-    // Step 5: Import the fixture as JSON, POSTed to the PARENT with the target keyed by name —
-    // NOT posted directly at targetPath. Posting straight at targetPath hits the same
-    // auto-vivification problem as step 4 describes: Sling creates the resource before handing
-    // off to the import operation, so the imported root's own jcr:primaryType never applies.
-    // Keying it under the parent lets the import operation create the child node fresh.
+    // Steps 4-6: delete any stale node, re-import, then verify — retrying the WHOLE sequence, not
+    // just the import call. Multiple tests/specs commonly deploy the SAME component's fixture
+    // (e.g. every test in a describe block calling deployFixture('accordion', page) independently)
+    // and can run concurrently across parallel workers. That doesn't just surface as a 409 on the
+    // import: a competing test's delete can also land in the gap between THIS attempt's import and
+    // its verify GET, making an otherwise-successful import look like it 404s or reverts to the
+    // wrong primaryType on verify. Retrying the full cycle with jitter — not just the import — is
+    // what actually converges once concurrent competitors finish their own cycles.
     const fixtureJson = docViewXmlToJson(fixtureContent);
     const payload = { [component]: fixtureJson };
+    const MAX_ATTEMPTS = 5;
+    let failureMessage = '';
 
-    const importRes = await page.request.post(`${authorUrl}${TEST_FIXTURES_BASE}`, {
-      headers,
-      form: {
-        ':operation': 'import',
-        ':contentType': 'json',
-        ':content': JSON.stringify(payload),
-        ':replace': 'true',
-        ':replaceProperties': 'true',
-      },
-      ignoreHTTPSErrors: true,
-    });
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      // Step 4: Delete any stale node at the target path first. If a prior deploy ever landed a
+      // POST directly at targetPath, Sling auto-vivifies it as a plain resource before any import
+      // runs — permanently pinning it to the wrong primaryType, since import can only ever set
+      // properties on that already-created node, never its own root type. Starting clean avoids
+      // silently merging into that stale resource.
+      await page.request.post(`${authorUrl}${targetPath}`, {
+        headers,
+        form: { ':operation': 'delete' },
+        ignoreHTTPSErrors: true,
+      });
 
-    if (!importRes.ok()) {
-      return {
-        component,
-        deployed: false,
-        path: targetPath,
-        message: `Deploy HTTP ${importRes.status()}: ${(await importRes.text()).substring(0, 200)}`,
-      };
+      // Step 5: Import the fixture as JSON, POSTed to the PARENT with the target keyed by name —
+      // NOT posted directly at targetPath. Posting straight at targetPath hits the same
+      // auto-vivification problem as step 4 describes: Sling creates the resource before handing
+      // off to the import operation, so the imported root's own jcr:primaryType never applies.
+      // Keying it under the parent lets the import operation create the child node fresh.
+      const importRes = await page.request.post(`${authorUrl}${TEST_FIXTURES_BASE}`, {
+        headers,
+        form: {
+          ':operation': 'import',
+          ':contentType': 'json',
+          ':content': JSON.stringify(payload),
+          ':replace': 'true',
+          ':replaceProperties': 'true',
+        },
+        ignoreHTTPSErrors: true,
+      });
+
+      if (!importRes.ok()) {
+        failureMessage = `Deploy HTTP ${importRes.status()}: ${(await importRes.text()).substring(0, 200)}`;
+        if (importRes.status() !== 409 || attempt === MAX_ATTEMPTS) break;
+        await new Promise(resolve => setTimeout(resolve, 250 * attempt + Math.random() * 250));
+        continue;
+      }
+
+      // Step 6: Verify the page actually deployed as a real cq:Page, not a stray auto-vivified
+      // node — and treat a failed verify as retryable too, since a concurrent competitor's delete
+      // can land in the gap right after this import.
+      const verifyRes = await page.request.get(
+        `${authorUrl}${targetPath}.1.json`,
+        { ignoreHTTPSErrors: true }
+      );
+      if (!verifyRes.ok()) {
+        failureMessage = `Import returned ${importRes.status()} but page node not found at ${targetPath}`;
+        if (attempt === MAX_ATTEMPTS) break;
+        await new Promise(resolve => setTimeout(resolve, 250 * attempt + Math.random() * 250));
+        continue;
+      }
+      const verifyJson = await verifyRes.json();
+      if (verifyJson['jcr:primaryType'] !== 'cq:Page') {
+        failureMessage = `Import succeeded but ${targetPath} has jcr:primaryType="${verifyJson['jcr:primaryType']}" (expected cq:Page) — fixture content did not apply to the root node.`;
+        if (attempt === MAX_ATTEMPTS) break;
+        await new Promise(resolve => setTimeout(resolve, 250 * attempt + Math.random() * 250));
+        continue;
+      }
+
+      failureMessage = '';
+      break;
     }
 
-    // Step 6: Verify the page actually deployed as a real cq:Page, not a stray auto-vivified node.
-    const verifyRes = await page.request.get(
-      `${authorUrl}${targetPath}.1.json`,
-      { ignoreHTTPSErrors: true }
-    );
-    if (!verifyRes.ok()) {
+    if (failureMessage) {
       return {
         component,
         deployed: false,
         path: targetPath,
-        message: `Import returned ${importRes.status()} but page node not found at ${targetPath}`,
-      };
-    }
-    const verifyJson = await verifyRes.json();
-    if (verifyJson['jcr:primaryType'] !== 'cq:Page') {
-      return {
-        component,
-        deployed: false,
-        path: targetPath,
-        message: `Import succeeded but ${targetPath} has jcr:primaryType="${verifyJson['jcr:primaryType']}" (expected cq:Page) — fixture content did not apply to the root node.`,
+        message: failureMessage,
       };
     }
 
