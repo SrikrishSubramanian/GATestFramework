@@ -42,7 +42,7 @@ test.describe('InsightsDetailHero — Happy Path', () => {
         // all, so this couldn't be reproduced against live DOM). Scoping this check to genuine
         // hero content (play button, video-modal close) avoids a flaky/unverified assertion on
         // that specific link without silently certifying it as working.
-        const interactive = root.locator('a, button').filter({ hasNot: page.locator('[aria-label="All Insights"]') });
+        const interactive = root.locator('a:not([aria-label="All Insights"]), button:not([aria-label="All Insights"])');
         const count = await interactive.count();
         for (let i = 0; i < Math.min(count, 3); i++) {
             await expect(interactive.nth(i)).toBeVisible();

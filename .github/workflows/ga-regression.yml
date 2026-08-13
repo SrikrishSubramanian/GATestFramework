@@ -1,6 +1,7 @@
 name: GA Regression Suite
 
-# Manual trigger (Actions tab → "Run workflow") and push-to-branch are active.
+# Manual trigger (Actions tab → "Run workflow") is active. Push-to-branch is disabled —
+# triggering manually only, on purpose.
 # Scheduled daily run: cron is always UTC — 30 0 * * * = 00:30 UTC = 6:00 AM IST daily.
 # GitHub only evaluates `schedule:` from the workflow file on the repo's default branch,
 # and checkout otherwise defaults to that same ref for a schedule event — the explicit
@@ -24,9 +25,9 @@ on:
           - sanity
           - regression
         default: regression
-  push:
-    branches:
-      - ga_automation_testing
+  # push:
+  #   branches:
+  #     - ga_automation_testing
   schedule:
     - cron: '30 0 * * *'
 
