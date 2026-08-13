@@ -396,7 +396,8 @@ test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion
     // separator, spacer, statistic, image-with-nested-content, video-external.
     // The fixture section_mixed_content has pre-expanded items with diverse child types.
     test('[ACRD-048] @regression @smoke @sanity Accordion item renders button child component', async ({ page }) => {
-        await deployFixture('accordion', page);
+        const deployResult = await deployFixture('accordion', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
         // The mixed-content accordion has a button inside item_0
         const buttonInItem = page.locator(`${ITEM_CONTENT} .cmp-button`);
@@ -407,19 +408,22 @@ test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion
         await expect(buttonInItem.first()).toHaveAttribute('href', /.+/);
     });
     test('[ACRD-049] @regression Accordion item renders headline-block child component', async ({ page }) => {
-        await deployFixture('accordion', page);
+        const deployResult = await deployFixture('accordion', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
         const headlineInItem = page.locator(`${ITEM_CONTENT} .cmp-headline-block`);
         await expect(headlineInItem.first()).toBeVisible();
     });
     test('[ACRD-050] @regression Accordion item renders separator child component', async ({ page }) => {
-        await deployFixture('accordion', page);
+        const deployResult = await deployFixture('accordion', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
         const separatorInItem = page.locator(`${ITEM_CONTENT} .cmp-separator`);
         await expect(separatorInItem.first()).toBeVisible();
     });
     test('[ACRD-051] @regression Accordion item renders spacer child component', async ({ page }) => {
-        await deployFixture('accordion', page);
+        const deployResult = await deployFixture('accordion', page);
+        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
         await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
         const spacerInItem = page.locator(`${ITEM_CONTENT} .cmp-spacer`);
         await expect(spacerInItem.first()).toBeVisible();
