@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Form Field Text Component (GAAM-504)', () => {
     // ============ Input Field Rendering ============
-    test('[GAAM-504-001] @regression @sanity Verify text input renders', async ({ page }) => {
+    test('[GAAM-504-001] @smoke @regression @sanity Verify text input renders', async ({ page }) => {
         const url = resolveComponentUrl('form-field-text');
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const input = page.locator('input[type="text"], [class*="text-input"], [class*="form-text"]').first();

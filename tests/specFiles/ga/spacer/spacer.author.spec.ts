@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Spacer — CSV Test Cases', () => {
-    test('[SPC-001] @regression @sanity TC_SPC_001 Verify Spacer component availability', async ({ page }) => {
+    test('[SPC-001] @smoke @regression @sanity TC_SPC_001 Verify Spacer component availability', async ({ page }) => {
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
         // Pre-condition: User logged into CMS

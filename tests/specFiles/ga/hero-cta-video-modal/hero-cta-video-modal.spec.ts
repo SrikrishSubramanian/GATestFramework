@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Hero CTA Video Modal — GAAM-621', () => {
     // ============ Modal Opening & Closing ============
-    test('[GAAM-621-001] @regression Verify video modal opens on CTA click', async ({ page }) => {
+    test('[GAAM-621-001] @regression @sanity Verify video modal opens on CTA click', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const ctaButton = page.locator('button[aria-label="Watch video"]').first();
