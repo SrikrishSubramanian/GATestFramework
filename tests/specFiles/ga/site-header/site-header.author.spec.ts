@@ -89,42 +89,6 @@ test.describe('SiteHeader — AEM Convention Compliance (GAAM-394)', () => {
         expect(true).toBe(true);
     });
 });
-test.describe('SiteHeader — CSV Test Cases (GAAM-1353)', () => {
-    test('[SH-048] @regression @sanity CMS BE: Logout Processing with OOTB SAML Handler — AC1', async ({ page }) => {
-        const pom = new SiteHeaderPage(page);
-        // The financial-professionals/main/en/... path previously used here 404s on this instance —
-        // the real, currently-authored FP site-header XF instance lives at
-        // /content/experience-fragments/global-atlantic/style-guide/header/header-master/financial-professionals
-        // (confirmed via ui.content.ga .content.xml + live 200 response), so navigate there directly.
-        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/style-guide/header/header-master/financial-professionals.html?wcmmode=disabled`);
-        // AC: Clicking Log out invalidates the *AEM session* (login-token dropped).
-        //
-        // Re-investigated live 2026-08-12 — the prior note on this test ("no onclick handler...
-        // does not appear to be implemented yet") does not hold up against the actual source:
-        // ui.apps.ga/.../site-header/clientlibs/site/js/site-header-dropdown.js attaches a real
-        // click listener to every `[data-cmp-hook-site-header="logoutButton"]` element (init(), line
-        // ~49) and its performLogout() (line ~832) clears the `gaUserAttributes` cookie and redirects
-        // to the SAML SLO endpoint from `model.pingLoginConfigService.logoutUrl` — a genuine OSGi
-        // config (PingLoginConfigServiceImpl, GAAM-728) driven by the PING_LOGOUT_URL/PING_LOGOUT_FLAG
-        // env vars. Logout FE processing is implemented, not missing.
-        //
-        // What actually blocks automation: the logout link only exists inside the *authenticated*
-        // tray (desktop `#login-tray-authenticated`) and the mobile login panel, both gated behind
-        // `.cmp-site-header--authenticated`, which the FE only applies when a `gaUserAttributes`
-        // cookie is present (set by a real Ping/SAML SSO login — unrelated to the AEM-author
-        // `loginToAEMAuthor()` session this suite uses). Confirmed live on the FP XF instance above:
-        // `[data-cmp-hook-site-header="logoutButton"]` count = 2, but 0 are `:visible` — Playwright
-        // cannot click a link that isn't reachable without first completing a live SAML round-trip
-        // through PingOne, which this headless suite has no credentials for. Also note: on this local
-        // instance `PING_LOGOUT_URL` isn't configured (the `data-logouturl` attribute is absent
-        // entirely, since `pingLoginConfigService.logoutUrl` resolves null and HTL omits the attr),
-        // so even an authenticated click here wouldn't reach a real IdP — another live/env-only
-        // condition this suite can't fabricate.
-        // Leaving fixme: this needs a genuine SSO-authenticated session (non-headless, real PingOne
-        // test-env credentials) to verify the SLO redirect end-to-end.
-        test.fixme(true, 'Logout FE (click handler + SAML SLO redirect via PingLoginConfigService/GAAM-728) is implemented in site-header-dropdown.js, but the logout link is only reachable in the authenticated header state, which requires a real SAML/PingOne SSO login (not the AEM-author session this suite uses) — confirmed live: 2 logoutButton elements exist, 0 are :visible without that auth. Verify manually with real SSO credentials.');
-    });
-});
 test.describe('SiteHeader — Happy Path', () => {
     test('[SH-049] @smoke @regression @sanity SiteHeader renders correctly', async ({ page }) => {
         const pom = new SiteHeaderPage(page);

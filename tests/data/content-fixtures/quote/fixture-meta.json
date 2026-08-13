@@ -1,0 +1,12 @@
+{
+  "component": "quote",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/quote/.content.xml",
+  "sourceHash": "8092b97e94bb01ad370fc5a944d3cb1d",
+  "generatedAt": "2026-08-14",
+  "tickets": ["GAAM-1357"],
+  "additions": [
+    "None of the real style guide's quote instances set `author` (only `authorDescription`), even though several are headlined \"Two Authors\" — per QuoteImpl/BlogAuthor, a blank author makes quoteModel.author null, so __name/__author-description (both guarded on author.name) never render on any live instance.",
+    "Added a left-aligned and a center-aligned instance, each with a plain-string `author` (no DAM asset/Content Fragment needed — BlogAuthor(String) just sets name) plus authorDescription, so QT-010 can check the name/description alignment claim against real rendered content.",
+    "Does NOT cover the author-image alignment sub-claim — that needs author.imagePath, which only populates from a real Content Fragment resource (author starting with \"/content\"), a heavier setup left for a future fixture if that specific sub-claim needs verifying."
+  ]
+}

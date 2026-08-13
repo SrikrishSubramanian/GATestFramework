@@ -1,0 +1,11 @@
+{
+  "component": "product-path-detail-card",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/product-path-detail-card/.content.xml",
+  "sourceHash": "c0635935c2b8e63a79d6fa272c6edd99",
+  "generatedAt": "2026-08-14",
+  "tickets": ["GAAM-1269"],
+  "additions": [
+    "The live style guide authors <sup> markup on listItemDescription/featuredDescription fields (GAAM-764/GAAM-859 examples) but never on any title field (listItemTitle/descriptorTitle/ctaCalloutTitle) — a content gap, not a component defect, since the dialog richtext fields and HTL (@ context='html') both support superscript there too.",
+    "Added one instance (card_superscript_title) with a listItemTitle containing <sup>1</sup> so PPDC-010 has real content to exercise instead of self-skipping."
+  ]
+}

@@ -49,17 +49,15 @@ test.afterEach(async ({ page }, testInfo) => {
     await progressBar.waitFor({ state: 'visible', timeout: 10000 });
 
     // Record width at t=0
-    const widthAtStart = // 📏 TODO: Replace with measurement-utils
-    await progressBar.evaluate((el: HTMLElement) => {
+    const widthAtStart = await progressBar.evaluate((el: HTMLElement) => {
       const style = window.getComputedStyle(el);
       return parseFloat(style.width);
     });
 
     // Wait 3 seconds and check again
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    await page.waitForTimeout(3000);
 
-    const widthAt3s = // 📏 TODO: Replace with measurement-utils
-    await progressBar.evaluate((el: HTMLElement) => {
+    const widthAt3s = await progressBar.evaluate((el: HTMLElement) => {
       const style = window.getComputedStyle(el);
       return parseFloat(style.width);
     });

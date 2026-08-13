@@ -3,6 +3,7 @@ import { TeaserCardPage } from '../../../pages/ga/components/teaserCardPage';
 import ENV from '../../../utils/infra/env';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl, deployFixture } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
@@ -87,14 +88,14 @@ test.describe('TeaserCard — Standard Hover', () => {
             return;
         }
         const ctaLink = linkedCard.locator(TC_CTA).first();
-        const colorBefore = // 📏 TODO: Replace with measurement-utils
-         await ctaLink.evaluate(el => getComputedStyle(el).color);
-        // measurement: use measurement-utils for cleaner code
+        const colorBefore = await ctaLink.evaluate(el => getComputedStyle(el).color);
         await hover(linkedCard);
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-        const colorAfter = // 📏 TODO: Replace with measurement-utils
-         await ctaLink.evaluate(el => getComputedStyle(el).color);
-        // measurement: use measurement-utils for cleaner code
+        // Wait for the CSS color transition to fully settle before re-reading.
+        await expect.poll(
+            () => ctaLink.evaluate(el => getComputedStyle(el).color),
+            { timeout: 3000 }
+        ).not.toBe(colorBefore);
+        const colorAfter = await ctaLink.evaluate(el => getComputedStyle(el).color);
         // Color should change on hover (CTA hover state activates)
         expect(colorAfter, 'CTA should change color when card is hovered').not.toBe(colorBefore);
     });
@@ -119,7 +120,8 @@ test.describe('TeaserCard — Enhanced Hover', () => {
         }
         const boxBefore = await imgWrapper.boundingBox();
         await hover(enhanced);
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+        // Wait for the CSS width/transform transition to finish before re-measuring.
+        await page.waitForTimeout(400);
         const boxAfter = await imgWrapper.boundingBox();
         if (boxBefore && boxAfter) {
             expect(boxAfter.width, 'Enhanced hover: image should expand width on hover').toBeGreaterThanOrEqual(boxBefore.width);
@@ -299,27 +301,18 @@ test.describe('TeaserCard — Keyboard Navigation', () => {
 test.describe('TeaserCard — No-hover Conditions', () => {
     test('[TC-INT-016] @interaction @regression @sanity Non-CTA card: no hover state applied', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
-        const pom = new TeaserCardPage(page);
-        await pom.navigate(BASE());
-        // Non-CTA cards render as <div class="cmp-teaser-card">, not <a> (matches
-        // TC_WITHOUT_CTA in teaser-card.author.spec.ts). The previous `:not(:has(TC_LINK))`
-        // form was a no-op — TC_LINK never matched anything, so it silently matched every card
-        // (including linked ones) instead of genuinely isolating the non-CTA case.
+        // Non-CTA cards render as <div class="cmp-teaser-card">, not <a> (teaser-card.html:51-70,
+        // gated on isConfigured = ctaTitle && ctaLinkDestination.href). Every real style-guide
+        // instance sets both fields, so this branch never renders live — use a dedicated content
+        // fixture (tests/data/content-fixtures/teaser-card) with neither field set instead, deployed
+        // to a GATestFramework-owned test-fixtures path; the kkr-aem style guide isn't modified.
+        await deployFixture('teaser-card', page);
+        await page.goto(resolveComponentUrl('teaser-card'), { waitUntil: 'domcontentloaded' });
         const nonLinked = page.locator(`div${TC}`).first();
-        if (await nonLinked.count() === 0) {
-            // Verified live 2026-08-12: all 75 .cmp-teaser-card instances on the style-guide page
-            // are <a> (linked) — same content gap as TC-025/TC-055 in teaser-card.author.spec.ts.
-            test.skip(true, 'No unlinked (no-CTA) teaser-card instance authored on the style-guide page — content gap, not a component defect');
-            return;
-        }
-        const bgBefore = // 📏 TODO: Replace with measurement-utils
-         await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor);
-        // measurement: use measurement-utils for cleaner code
+        await expect(nonLinked, 'Fixture should render an unlinked (non-CTA) teaser-card').toBeVisible();
+        const bgBefore = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor);
         await hover(nonLinked);
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-        const bgAfter = // 📏 TODO: Replace with measurement-utils
-         await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor);
-        // measurement: use measurement-utils for cleaner code
+        const bgAfter = await nonLinked.evaluate(el => getComputedStyle(el).backgroundColor);
         expect(bgBefore, 'Non-CTA card background must not change on hover').toBe(bgAfter);
     });
     test('[TC-INT-018] @interaction @regression Hover states do not apply at mobile breakpoint', async ({ page }) => {

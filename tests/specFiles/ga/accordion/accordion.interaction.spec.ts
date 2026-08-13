@@ -15,7 +15,11 @@ const SECTION_AZUL = '.cmp-section--background-color-azul';
 const ACCORDION = '.cmp-accordion';
 const ITEM_BUTTON = '.cmp-accordion__item-button';
 const ITEM_CONTENT = '.cmp-accordion__item-content';
-const INDICATOR_GA = '.cmp-accordion__item-indicator--ga';
+// `--ga` never existed in accordion.less (only `--blog`, which the GA reskin hides via
+// display:none, and `--default`, the actually-visible +/- indicator that responds to hover) —
+// verified live 2026-08-14: `.cmp-accordion__item-indicator--ga` matches zero elements on the
+// style-guide page, in any section.
+const INDICATOR_GA = '.cmp-accordion__item-indicator--default';
 test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
     capture = new ConsoleCapture(page);
@@ -98,9 +102,7 @@ test.describe('Accordion — Cross-Background Behavior Consistency', () => {
             const indicator = btn.locator(INDICATOR_GA);
             // Verify indicator exists and has transition
             await expect(indicator).toBeVisible();
-            const transition = // 📏 TODO: Replace with measurement-utils
-             await indicator.evaluate(el => getComputedStyle(el).transition);
-            // measurement: use measurement-utils for cleaner code
+            const transition = await indicator.evaluate(el => getComputedStyle(el).transition);
             expect(transition).toContain('background-color');
         }
     });
@@ -111,13 +113,16 @@ test.describe('Accordion — Hover State on Dark Backgrounds', () => {
         await pom.navigate(BASE());
         const btn = page.locator(`${SECTION_GRANITE} ${ITEM_BUTTON}`).first();
         const indicator = btn.locator(INDICATOR_GA);
-        const bgBefore = // 📏 TODO: Replace with measurement-utils
-         await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
-        // measurement: use measurement-utils for cleaner code
+        const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
         await hover(btn);
-        const bgAfter = // 📏 TODO: Replace with measurement-utils
-         await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
-        // measurement: use measurement-utils for cleaner code
+        // Wait for the 300ms background-color transition (accordion.less:267) to settle rather
+        // than racing a read against it — under parallel worker load the immediate read can catch
+        // the indicator mid-transition (or not yet started).
+        await expect.poll(
+            () => indicator.evaluate(el => getComputedStyle(el).backgroundColor),
+            { timeout: 3000 }
+        ).not.toBe(bgBefore);
+        const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
         expect(bgAfter).not.toBe(bgBefore);
     });
     test('[ACRD-INT-012] @interaction @regression Azul hover changes icon background', async ({ page }) => {
@@ -125,13 +130,13 @@ test.describe('Accordion — Hover State on Dark Backgrounds', () => {
         await pom.navigate(BASE());
         const btn = page.locator(`${SECTION_AZUL} ${ITEM_BUTTON}`).first();
         const indicator = btn.locator(INDICATOR_GA);
-        const bgBefore = // 📏 TODO: Replace with measurement-utils
-         await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
-        // measurement: use measurement-utils for cleaner code
+        const bgBefore = await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
         await hover(btn);
-        const bgAfter = // 📏 TODO: Replace with measurement-utils
-         await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
-        // measurement: use measurement-utils for cleaner code
+        await expect.poll(
+            () => indicator.evaluate(el => getComputedStyle(el).backgroundColor),
+            { timeout: 3000 }
+        ).not.toBe(bgBefore);
+        const bgAfter = await indicator.evaluate(el => getComputedStyle(el).backgroundColor);
         expect(bgAfter).not.toBe(bgBefore);
     });
 });

@@ -52,17 +52,18 @@ test.describe('PromoBanner — Interaction Tests', () => {
     await expect(link).toBeVisible();
 
     // Capture pre-hover background
-    const bgBefore = // 📏 TODO: Replace with measurement-utils
-    await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor // measurement: use measurement-utils for cleaner code
-    );
+    const bgBefore = await link.evaluate((el) => getComputedStyle(el).backgroundColor);
 
     await hover(link);
-    // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-    // allow transition to complete
+    // Wait for the 0.18s CSS hover transition (see PB-INT-003) to fully settle at its final
+    // (opaque white) value — a fixed wait can catch Firefox mid-transition, e.g.
+    // "rgba(255, 255, 255, 0.64)" instead of the final "rgb(255, 255, 255)".
+    await expect.poll(
+      () => link.evaluate((el) => getComputedStyle(el).backgroundColor),
+      { timeout: 3000 }
+    ).toBe('rgb(255, 255, 255)');
 
-    const bgAfter = // 📏 TODO: Replace with measurement-utils
-    await link.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor // measurement: use measurement-utils for cleaner code
-    );
+    const bgAfter = await link.evaluate((el) => getComputedStyle(el).backgroundColor);
 
     // After hover the background should be white (rgb(255, 255, 255))
     expect(bgAfter, `Expected 'rgb(255, 255, 255, got ${bgAfter}`).toBe('rgb(255, 255, 255)');
@@ -135,14 +136,17 @@ test.describe('PromoBanner — Interaction Tests', () => {
     const btn = page.locator(PB_CTA).first();
     await expect(btn).toBeVisible();
 
-    const bgBefore = // 📏 TODO: Replace with measurement-utils
-    await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgBefore = await btn.evaluate((el) => getComputedStyle(el).backgroundColor);
 
     await hover(btn);
-    // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+    // Wait for the 0.18s CSS hover transition (see PB-INT-003) to fully settle rather than
+    // racing a fixed-duration sleep against browser-dependent transition timing.
+    await expect.poll(
+      () => btn.evaluate((el) => getComputedStyle(el).backgroundColor),
+      { timeout: 3000 }
+    ).not.toBe(bgBefore);
 
-    const bgAfter = // 📏 TODO: Replace with measurement-utils
-    await btn.evaluate((el) => getComputedStyle(el) /* TODO: use component-assertions */.backgroundColor); // measurement: use measurement-utils for cleaner code
+    const bgAfter = await btn.evaluate((el) => getComputedStyle(el).backgroundColor);
 
     // Background must change on hover
     expect(bgAfter).not.toBe(bgBefore);

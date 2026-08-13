@@ -1,0 +1,11 @@
+{
+  "component": "teaser-card",
+  "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/teaser-card/.content.xml",
+  "sourceHash": "9fd4a7db7842fd834325d635b5593574",
+  "generatedAt": "2026-08-14",
+  "tickets": [],
+  "additions": [
+    "Every real style-guide teaser-card instance sets both ctaTitle and ctaLinkDestination, so teaser-card.html's isConfigured guard is always true and it always renders as a linked <a class=\"cmp-teaser-card\"> — the unlinked <div class=\"cmp-teaser-card\"> branch (no CTA authored) has no live instance to exercise TC-INT-016/017/018 ('no hover state on non-CTA cards') against.",
+    "Added one instance with no ctaTitle/ctaLinkDestination set, so those tests have a real div.cmp-teaser-card to check instead of self-skipping."
+  ]
+}

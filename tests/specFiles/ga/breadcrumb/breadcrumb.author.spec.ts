@@ -596,16 +596,12 @@ test.describe('Breadcrumb — Responsive', () => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
+        // breadcrumb.less:34-43 ("Hidden on mobile and tablet") intentionally sets
+        // display: none below @ga-bp-desktop-min (1024px) — the component is not meant to be
+        // visible at this 390px viewport at all, so "adapts to mobile" here means confirming it's
+        // correctly hidden, not checking a layout property on a visible element.
         const root = page.locator('.cmp-breadcrumb').first();
-        await expect(root).toBeVisible();
-        // Verify layout adapts to mobile: check flex-direction changes to column
-        const flexDir = await root.evaluate(el => {
-            const cs = getComputedStyle(el);
-            return cs.flexDirection || cs.display;
-        });
-        // At mobile, flex containers typically switch to column layout
-        // Grid containers may change template columns
-        expect(flexDir).toBeDefined();
+        await expect(root).toBeHidden();
     });
     test('[BRDC-042] @mobile @regression @sanity Breadcrumb adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });

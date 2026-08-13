@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl, deployFixture } from '../../../utils/infra/content-fixture-deployer';
 import AxeBuilder from '@axe-core/playwright';
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 test.beforeEach(async ({ page }) => {
@@ -98,6 +99,7 @@ test.describe('ProductPathDetailCard — Broken Images', () => {
     test('[PPDC-008] @regression ProductPathDetailCard all images load successfully', async ({ page }) => {
         const pom = new ProductPathDetailCardPage(page);
         await pom.navigate(BASE());
+        await page.waitForLoadState('load'); // page has 10 card image instances that finish downloading after domcontentloaded
         const images = page.locator('.cmp-product-path-detail-card img');
         const count = await images.count();
         for (let i = 0; i < count; i++) {
@@ -131,18 +133,20 @@ test.describe('ProductPathDetailCard — CSV Test Cases (GAAM-1269)', () => {
         // (_cq_dialog/.content.xml), and product-path-detail-card.html renders each with
         // `@ context='html'` (not escaped), so any authored <sup> markup survives to the DOM.
         // Base normalize.less also correctly raises <sup> (position:relative; top:-0.5em).
-        // But no title field on the style-guide page currently authors a <sup> — content gap,
-        // not a component defect. Un-skip once a title/descriptor/CTA-callout title is authored
-        // with superscript text (e.g. a footnote marker on a headline).
-        const pom = new ProductPathDetailCardPage(page);
-        await pom.navigate(BASE());
+        // No title field on the real style-guide page authors a <sup> (content gap, not a
+        // component defect), so this uses a dedicated content fixture instead
+        // (tests/data/content-fixtures/product-path-detail-card) that authors a listItemTitle
+        // with a real <sup>, deployed to a GATestFramework-owned test-fixtures path — the
+        // kkr-aem style guide content itself isn't modified.
+        await deployFixture('product-path-detail-card', page);
+        await page.goto(resolveComponentUrl('product-path-detail-card'), { waitUntil: 'domcontentloaded' });
         const titleSup = page.locator(
             '.cmp-product-path-detail-card__list-item-title sup, ' +
             '.cmp-product-path-detail-card__descriptor-title sup, ' +
             '.cmp-product-path-detail-card__cta-callout-title sup'
         ).first();
         const count = await titleSup.count();
-        test.skip(count === 0, 'No title/descriptor/CTA-callout title on the style guide authors superscript text — content gap, not a component defect (dialog + HTL both correctly support it)');
+        test.skip(count === 0, 'No title/descriptor/CTA-callout title authors superscript text — content gap, not a component defect (dialog + HTL both correctly support it)');
         await expect(titleSup).toBeVisible();
         // normalize.less raises <sup> via position:relative + a negative top offset (not
         // vertical-align, which stays "baseline" by design) plus a smaller font-size.

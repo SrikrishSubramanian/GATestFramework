@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Teaser Card non-CTA fixture (TC-INT-016/017/018) — every teaser-card instance authored on the
+     real style guide sets both ctaTitle and ctaLinkDestination, so teaser-card.html's
+     `isConfigured = ctaTitle && ctaLinkDestination.href` is always true and the component always
+     renders as a linked <a class="cmp-teaser-card">. The unlinked/no-CTA <div class="cmp-teaser-card">
+     branch (teaser-card.html:51-70) — rendered when either field is left blank — has no authored
+     instance anywhere to exercise the "no hover state on non-CTA cards" tests against. This fixture
+     adds one instance with no ctaTitle/ctaLinkDestination set. -->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Teaser Card non-CTA (no ctaTitle/ctaLinkDestination) fixture."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Teaser Card — Non-CTA Fixture"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+                <teaser_card_no_cta
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/teaser-card"
+                    descriptor="&lt;p&gt;Non-CTA teaser card — no link destination or CTA title authored, so it renders as a plain, unlinked div instead of an anchor.&lt;/p&gt;"
+                    eyebrow="Optional eyebrow"
+                    textIsRich="[true]"
+                    title="Non-CTA Teaser Card">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kkr-aem-base/components/content/image"
+                        fileReference="/content/dam/global-atlantic/style-guide/fpo-imagery/FPO-350x350.png"/>
+                </teaser_card_no_cta>
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

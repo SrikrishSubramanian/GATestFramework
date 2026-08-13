@@ -4,6 +4,7 @@ import ENV from '../../../utils/infra/env';
 import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl, deployFixture } from '../../../utils/infra/content-fixture-deployer';
 import AxeBuilder from '@axe-core/playwright';
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 test.beforeEach(async ({ page }) => {
@@ -55,6 +56,7 @@ test.describe('Quote — Negative & Boundary', () => {
     test('[QT-004] @negative @regression @sanity Quote handles missing images', async ({ page }) => {
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
+        await page.waitForLoadState('load'); // images finish downloading after domcontentloaded
         const images = page.locator('.cmp-quote img');
         const count = await images.count();
         for (let i = 0; i < count; i++) {
@@ -108,6 +110,7 @@ test.describe('Quote — Broken Images', () => {
     test('[QT-008] @regression Quote all images load successfully', async ({ page }) => {
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
+        await page.waitForLoadState('load'); // images finish downloading after domcontentloaded
         const images = page.locator('.cmp-quote img');
         const count = await images.count();
         for (let i = 0; i < count; i++) {
@@ -162,17 +165,52 @@ test.describe('Quote — CSV Test Cases (GAAM-1357)', () => {
         //    (quote.less:386-397) — desktop already mirrors mobile.
         //
         //    BUT: none of the style-guide fixtures (ui.content.ga/.../style-guide/components/
-        //    quote/.content.xml) author an `author` DAM asset — every instance sets only
-        //    `textarea`/`authorDescription`. quote.html:59 guards the role text on
-        //    `${quoteModel.authorDescription && quoteModel.author.name}` (both must be truthy),
-        //    and the name/headshot spans (quote.html:48-58) require `author.imagePath`/
-        //    `author.name` directly. With no `author` asset authored anywhere, the entire
-        //    figcaption "info panel" this AC is about renders empty on every live instance —
-        //    a content gap that blocks visually verifying any of points 1-3, not just point 3.
-        test.fixme(true, 'AC bundles a Figma-direction question (point 1, needs live design comparison — not fetchable from source), a content-length-dependent wrap claim (point 2), and a claim already matching current CSS (point 3) that has no live content to render it (no style-guide quote instance authors an `author` DAM asset, so quote.html:59\'s authorDescription && author.name guard never passes). Verify manually against the linked Figma frame once a quote instance with a real author asset is authored.');
-        const pom = new QuotePage(page);
-        await pom.navigate(BASE());
-        const root = page.locator('.cmp-quote').first();
-        await expect(root).toBeVisible();
+        //    quote/.content.xml) author an `author` value — every instance sets only
+        //    `textarea`/`authorDescription`. QuoteImpl.getAuthorDetails() returns null when
+        //    `author` is blank, so quoteModel.author is null on every real instance, and
+        //    quote.html's __name/__author-description spans (both guarded on author.name) never
+        //    render — the figcaption "info panel" this AC is about is empty everywhere.
+        //
+        // Points 1 and 2 remain genuinely unverifiable here (a Figma-direction question and a
+        // content-length-dependent wrap claim, respectively — not decidable from source or a
+        // fixed test string). Point 3 IS verifiable now: per BlogAuthor.java, `author` only needs
+        // a DAM asset/Content Fragment if the value starts with "/content" — a plain string is
+        // enough to populate author.name without one. Using a dedicated content fixture (tests/
+        // data/content-fixtures/quote) with a plain-string author + authorDescription on both a
+        // left- and a center-aligned instance, deployed to a GATestFramework-owned test-fixtures
+        // path — the kkr-aem style guide content itself isn't modified. (The author-image
+        // alignment sub-claim still isn't covered — that needs author.imagePath, which requires
+        // an actual Content Fragment resource, not just a plain string.)
+        await deployFixture('quote', page);
+        await page.goto(resolveComponentUrl('quote'), { waitUntil: 'domcontentloaded' });
+        await page.setViewportSize({ width: 1280, height: 900 }); // > @bp_small_desktop_min (1025px, variables.less:240)
+
+        const leftQuote = page.locator('.cmp-quote').first();
+        await expect(leftQuote).toBeVisible();
+        const leftName = leftQuote.locator('.cmp-quote__name');
+        const leftDescription = leftQuote.locator('.cmp-quote__author-description');
+        await expect(leftName, 'Fixture author name should render (not skipped as empty content)').toBeVisible();
+        await expect(leftDescription, 'Fixture author description should render (not skipped as empty content)').toBeVisible();
+        expect(
+            await leftName.evaluate(el => getComputedStyle(el).textAlign),
+            'Left-aligned quote: author name should be left-aligned at small-desktop (quote.less:237-239)'
+        ).toBe('left');
+        expect(
+            await leftDescription.evaluate(el => getComputedStyle(el).textAlign),
+            'Left-aligned quote: author description should be left-aligned at small-desktop (quote.less:272-274)'
+        ).toBe('left');
+
+        const centerQuote = page.locator('.cmp-quote').nth(1);
+        await expect(centerQuote).toBeVisible();
+        const centerName = centerQuote.locator('.cmp-quote__name');
+        const centerDescription = centerQuote.locator('.cmp-quote__author-description');
+        expect(
+            await centerName.evaluate(el => getComputedStyle(el).textAlign),
+            'Center-aligned quote: author name should be center-aligned at small-desktop (quote.less:391-393)'
+        ).toBe('center');
+        expect(
+            await centerDescription.evaluate(el => getComputedStyle(el).textAlign),
+            'Center-aligned quote: author description should be center-aligned at small-desktop (quote.less:395-397)'
+        ).toBe('center');
     });
 });

@@ -3,6 +3,7 @@ import { TeaserCardPage } from '../../../pages/ga/components/teaserCardPage';
 import ENV from '../../../utils/infra/env';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
+import { resolveComponentUrl, deployFixture } from '../../../utils/infra/content-fixture-deployer';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
@@ -401,20 +402,15 @@ test.describe('TeaserCard — CTA & Card Clickability', () => {
         expect(cursor, 'Clickable card should show pointer cursor').toBe('pointer');
     });
     test('[TC-025] @regression When no CTA authored, card root is a <div> (not wrapped in a link)', async ({ page }) => {
-        const pom = new TeaserCardPage(page);
-        await pom.navigate(BASE());
-        // Without CTA, the inner element is <div class="cmp-teaser-card">, not <a>
+        // Without CTA, the inner element is <div class="cmp-teaser-card">, not <a>. Every real
+        // style-guide instance sets both ctaTitle/ctaLinkDestination, so this branch never renders
+        // live — use a dedicated content fixture (tests/data/content-fixtures/teaser-card) with
+        // neither field set instead of the plain style guide; kkr-aem itself isn't modified.
+        await deployFixture('teaser-card', page);
+        await page.goto(resolveComponentUrl('teaser-card'), { waitUntil: 'domcontentloaded' });
         const nonLinkedCard = page.locator(`div${TC}`).first();
-        if (await nonLinkedCard.count() === 0) {
-            // Verified live 2026-08-12: all 75 .cmp-teaser-card instances on the style-guide page
-            // are <a> (linked). Zero use the unlinked <div> variant. The component code already
-            // branches on this (TC_WITH_CTA / TC_WITHOUT_CTA), so this is a content gap on the
-            // demo page, not a missing feature — un-skip once a no-CTA card is authored there.
-            test.skip(true, 'No unlinked (no-CTA) teaser-card instance authored on the style-guide page — content gap, not a component defect');
-            return;
-        }
-        const tag = // 📏 TODO: Replace with measurement-utils
-         await nonLinkedCard.evaluate(el => el.tagName.toLowerCase());
+        await expect(nonLinkedCard, 'Fixture should render an unlinked (non-CTA) teaser-card').toBeVisible();
+        const tag = await nonLinkedCard.evaluate(el => el.tagName.toLowerCase());
         expect(tag, 'Non-CTA card must be a <div>, not wrapped in an <a>').toBe('div');
     });
     test('[TC-026] @regression CTA card root is an <a> tag', async ({ page }) => {
@@ -752,15 +748,11 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
     });
     test('[TC-055] @regression [GAAM-1051] Card without CTA does not show pointer cursor on hover', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
-        const pom = new TeaserCardPage(page);
-        await pom.navigate(BASE());
+        // Same content gap as TC-025 (see there for details) — use the same non-CTA fixture.
+        await deployFixture('teaser-card', page);
+        await page.goto(resolveComponentUrl('teaser-card'), { waitUntil: 'domcontentloaded' });
         const nonLinkedCard = page.locator(`div${TC}`).first();
-        if (await nonLinkedCard.count() === 0) {
-            // Same content gap as TC-025 — no unlinked (no-CTA) teaser-card instance authored on
-            // the style-guide page. See TC-025 for details.
-            test.skip(true, 'No unlinked (no-CTA) teaser-card instance authored on the style-guide page — content gap, not a component defect');
-            return;
-        }
+        await expect(nonLinkedCard, 'Fixture should render an unlinked (non-CTA) teaser-card').toBeVisible();
         await hover(nonLinkedCard);
         const cursor = // 📏 TODO: Replace with measurement-utils
          await nonLinkedCard.evaluate(el => getComputedStyle(el).cursor);

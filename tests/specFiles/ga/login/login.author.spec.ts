@@ -34,9 +34,9 @@ test.describe('Login — CSV Test Cases', () => {
         // both return the same status as an arbitrary unmapped control path — proving neither is a
         // registered Sling path/servlet (contrast with /saml_login, which IS wired to real SAML
         // processing — see LGN-016). The only related backend artifact is PingLoginConfigServiceImpl
-        // (GAAM-728, logoutUrl/handleLogout OSGi config), which SH-048 (site-header suite) already
-        // confirmed drives only the site-header FE click-handler redirect — a different
-        // component/test, and not a servlet implementation.
+        // (GAAM-728, logoutUrl/handleLogout OSGi config), which drives only the site-header FE
+        // click-handler redirect (site-header-dropdown.js performLogout()) — a different
+        // component, and not a servlet implementation.
         // This AC's actual behavior (a real IdP-issued SessionIndex on the login cookie, consumed by
         // a server-side Ping Logout Servlet to invalidate the AEM session) would live entirely
         // inside the OOTB/third-party SAML2 auth handler bundle (not part of kkr-aem's own source)

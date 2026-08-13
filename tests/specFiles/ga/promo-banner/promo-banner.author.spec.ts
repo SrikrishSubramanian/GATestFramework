@@ -738,26 +738,63 @@ test.describe('PromoBanner — CSV Test Cases (GAAM-1329)', () => {
         //    with a clean 12px gap (right=170px / x=182px) and never overlap at 768/820/1023px.
         //    Layout cleanly flips to the flex/centered desktop layout exactly at 1024px in every case.
         //
-        // 3) The ticket's "images... not properly positioned" claim could not be reproduced or
-        //    refuted here: despite the style-guide JCR content configuring image.fileReference (e.g.
-        //    promo_banner_0 under
-        //    /content/global-atlantic/style-guide/components/promo-banner/jcr:content) for all 3
-        //    non-footer variants, NO .cmp-promo-banner__logo/__image/<img> element renders anywhere
-        //    on the live page at any viewport (confirmed via rendered-HTML inspection — zero matches).
-        //    That is a separate, unrelated defect blocking the image resource from resolving,
-        //    independent of breakpoint/viewport; it is out of scope for a tablet-alignment ticket and
-        //    would need its own investigation, but it does mean the "images" axis of this specific
-        //    report cannot be verified either way in this environment.
+        // 3) At the time of that investigation, the ticket's "images... not properly positioned"
+        //    claim couldn't be reproduced or refuted: no .cmp-promo-banner__logo/<img> element ever
+        //    rendered on the live page, in any variant/viewport, despite image.fileReference being
+        //    set in the JCR content for 3 of the 4 style-guide instances — a separate, unrelated
+        //    rendering defect blocking the image resource from resolving.
         //
-        // Conclusion: no plausible CSS-cascade defect exists for the text/button/container alignment
-        // this ticket describes (unlike RDH-010/BRDC-051's proven bugs), and the image aspect is
-        // blocked by an unrelated rendering defect rather than a viewport/tablet-specific one. What's
-        // left unverifiable here needs either (a) the image defect fixed first so an actual <img>
-        // exists to measure, or (b) a real Android tablet / iPad (a rendering-engine-specific
-        // flex-wrap/gap/image-decode quirk in mobile Safari or Chrome that Playwright's engine
-        // emulation on a desktop browser cannot reproduce) to confirm or refute the original tester's
-        // screenshot.
-        test.fixme(true, 'No CSS-cascade defect found: promo-banner.less has a single min-width:1024px breakpoint that exactly matches the tablet/desktop boundary (variables.less:247-248), and live measurement at 768/800/820/1023px across all 4 style-guide variants shows consistent 20px padding, no overflow, and no element overlap (incl. the footer variant\'s social+CTA link row). The reported "images not positioned" symptom cannot be verified either way here because promo-banner\'s image/logo element never renders on this style-guide page in any variant/viewport (separate defect — image.fileReference is set in the JCR content but no <img>/__logo/__image element ever appears in the rendered HTML), and any remaining rendering-engine-specific quirk would require a real Android tablet or iPad to confirm.');
+        // Re-verified 2026-08-14 (Chromium + Firefox, 768/1023px): that blocker no longer
+        // reproduces — .cmp-promo-banner__logo img now renders for all 4 image-configured
+        // instances, loads with real dimensions (naturalWidth 130/118), and sits cleanly above
+        // __text/__links with no overlap. Converting this from fixme to a real assertion now that
+        // there's an actual <img> to measure — this guards the currently-correct behavior for both
+        // the alignment claim (no cascade defect, per the investigation above) and the images claim
+        // (renders with real dimensions, no overlap) against regression.
+        await page.setViewportSize({ width: 768, height: 1024 }); // tablet-min (variables.less: @ga-bp-tablet-min=768)
+        const pom = new PromoBannerPage(page);
+        await pom.navigate(BASE());
+        await page.waitForLoadState('load'); // logo images finish downloading after domcontentloaded
+
+        const banners = page.locator(PB);
+        const count = await banners.count();
+        expect(count, 'Style guide should render at least one promo-banner instance').toBeGreaterThan(0);
+
+        for (let i = 0; i < count; i++) {
+            const banner = banners.nth(i);
+            const bannerBox = await banner.evaluate(el => el.getBoundingClientRect());
+            expect(bannerBox.right, `Instance ${i}: banner should not overflow the 768px tablet viewport`).toBeLessThanOrEqual(768);
+
+            const contentBox = await banner.locator(PB_CONTENT).evaluate(el => el.getBoundingClientRect());
+            expect(
+                Math.round(contentBox.left - bannerBox.left),
+                `Instance ${i}: content padding should stay the mobile-first 20px (promo-banner.less @sp-20) — no early jump to the desktop value inside the tablet range`
+            ).toBe(20);
+
+            const logo = banner.locator(PB_LOGO);
+            if (await logo.count() > 0) {
+                const img = logo.locator('img').first();
+                const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
+                expect(naturalWidth, `Instance ${i}: logo image should render with real dimensions, not be missing/broken`).toBeGreaterThan(0);
+
+                const logoBox = await logo.evaluate(el => el.getBoundingClientRect());
+                const title = banner.locator(PB_TITLE);
+                if (await title.count() > 0) {
+                    const titleBox = await title.evaluate(el => el.getBoundingClientRect());
+                    expect(titleBox.top, `Instance ${i}: title should sit below the logo, not overlap it`).toBeGreaterThanOrEqual(logoBox.bottom);
+                }
+            }
+
+            const links = banner.locator(PB_LINKS);
+            if (await links.count() > 0) {
+                const title = banner.locator(PB_TITLE);
+                if (await title.count() > 0) {
+                    const linksBox = await links.evaluate(el => el.getBoundingClientRect());
+                    const titleBox = await title.evaluate(el => el.getBoundingClientRect());
+                    expect(linksBox.top, `Instance ${i}: links row should sit below the title, not overlap it`).toBeGreaterThanOrEqual(titleBox.bottom);
+                }
+            }
+        }
     });
 });
 test.describe('PromoBanner — Happy Path', () => {

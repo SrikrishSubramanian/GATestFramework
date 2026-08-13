@@ -26,7 +26,9 @@
                     text="&lt;h1 class=&quot;style-guide__page-headline&quot;&gt;Promo Banner — Style Variants&lt;/h1&gt;&lt;div class=&quot;style-guide__page-description&quot;&gt;One instance per cq:styleIds variant (promo-granite, promo-azul, promo-aubergine, promo-footer), so variant-specific tests have real content instead of self-skipping.&lt;/div&gt;"
                     textIsRich="true"/>
 
-                <!-- Granite variant (also the visual default background, but with the explicit modifier class applied) -->
+                <!-- Granite variant (also the visual default background, but with the explicit modifier class applied) —
+                     includes a ctaLinks multifield so CTA-button tests (PB-INT-004/005/006/008 etc.) have
+                     real content instead of timing out on a locator that never renders. -->
                 <promo_banner_granite
                     cq:styleIds="[promo-granite]"
                     jcr:primaryType="nt:unstructured"
@@ -34,7 +36,15 @@
                     bannerTitle="Granite Variation"
                     bannerText="A leading provider of retirement security and investment solutions."
                     imageAltText="Granite promo banner logo"
-                    logoURL="/content/global-atlantic/style-guide"/>
+                    logoURL="/content/global-atlantic/style-guide">
+                    <ctaLinks jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            label="Learn More"
+                            linkTarget="_self"
+                            path="/content/global-atlantic/style-guide"/>
+                    </ctaLinks>
+                </promo_banner_granite>
 
                 <spacer_1
                     cq:styleIds="[size-medium]"

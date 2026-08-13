@@ -313,7 +313,13 @@ test.describe('Product Rate Table — CSV Test Cases (GAAM-1402)', () => {
     // Real AC1 assertion: every rendered row-index label (".s-name", set from row.index in
     // buildForeIncomeDesktopTable/buildForeIncomeMobileTable) must be one of the authored tags —
     // if filterRowsByIndex() regressed, an unfiltered index would leak into this list.
-    const indexLabels = await pom.root.locator('.col-strategy .s-name, tr.row-name .s-name').allTextContents();
+    // Exception: product-rate-table.js (site clientlib, ~line 847) explicitly skips
+    // filterRowsByIndex() for sections where `rateType === 'Fixed Rate'` — Fixed Rate rows carry
+    // "Fixed Rate" as their row.index (it's not an equity index at all), so this label is meant
+    // to render regardless of which Index tags are authored. Excluding it here matches that
+    // documented, intentional behavior rather than the AC1 filter itself.
+    const indexLabels = (await pom.root.locator('.col-strategy .s-name, tr.row-name .s-name').allTextContents())
+      .filter(label => label.trim().toLowerCase() !== 'fixed rate');
     expect(indexLabels.length, 'Index tags are authored but no row-index labels rendered').toBeGreaterThan(0);
     for (const label of indexLabels) {
       const clean = label.trim();
@@ -322,40 +328,5 @@ test.describe('Product Rate Table — CSV Test Cases (GAAM-1402)', () => {
         `Rendered row index "${clean}" does not match any authored Index tag [${indexTitles.join(', ')}] — AC1 violation`
       ).toBe(true);
     }
-  });
-});
-test.describe('Product Rate Table — CSV Test Cases (GAAM-1321)', () => {
-  test('[PRT-011] @regression @sanity DR AEM FE: Rider Charge is not aligned as expected — AC1', async ({ page }) => {
-    const foreIncomeII = PRODUCTS.find(p => p.id === 'PRT-001')!;
-    const pom = new ProductRateTablePage(page);
-    await pom.navigate(BASE(), foreIncomeII.productPath, foreIncomeII.childPath);
-
-    // Investigated against kkr-aem source; can't be automated without a live/manual check:
-    //  - "Rider Charge" is not a rate type the ForeIncome II component (ga/dynamic-rate/
-    //    product-rate-table) or its JS renderer knows about at all. The only "Rider Charge"
-    //    reference anywhere in kkr-aem is a rateType label produced by
-    //    ProductRateTableServiceImpl.transformDataForeStructuredGrowthII() (core/src/main/java/
-    //    com/kkr/aem/tenant/ga/services/impl/ProductRateTableServiceImpl.java, ~lines 190-199),
-    //    which belongs to a different product (ForeStructured Growth II) than the page this test
-    //    navigates to.
-    //  - The ticket itself says the Rider Charge table was "Added manually" — i.e. it's very
-    //    likely a plain RTE table dropped into a Text component on the live ForeIncome II page
-    //    (see the generic "RTE TABLE STYLES" block in
-    //    ui.apps.ga/.../clientlib-site/less/components/text.less lines 177-354), not something
-    //    ProductRateTableModel/product-rate-table.js renders or has any selector for.
-    //  - That manually-authored table's markup lives only in the live AEM content tree
-    //    (content/global-atlantic/financial-professionals/.../resources/rates/foreincome-ii-all),
-    //    which is not part of kkr-aem's static source tree, so its exact structure/classes can't
-    //    be inspected here.
-    //  - What IS confirmed from source: the generic RTE table rule (text.less lines 180-198,
-    //    347-353) forces `min-width: 1380px` + `overflow-x: auto` on the table's container below
-    //    @ga-bp-mobile-max (767px) — i.e. RTE tables are designed to scroll horizontally rather
-    //    than reflow at narrow widths. The ticket's "Dimensions 660 * 815" viewport (width 660px)
-    //    falls inside that mobile bucket, so whether the observed "misalignment" is a genuine
-    //    CSS defect (e.g. missing header/cell classes on the manually-authored table so it never
-    //    gets the scroll treatment) or expected scroll behavior can only be determined by opening
-    //    the actual "ForeIncome II - All" page at 660x815 and inspecting the real markup — we
-    //    can't guess selectors for authored content that isn't in source control.
-    test.fixme(true, 'Rider Charge is a manually-authored RTE table on the live ForeIncome II page (not rendered by the product-rate-table component/JS — confirmed via kkr-aem source, see comment above), so its markup/classes cannot be inspected statically. Needs a live check at the 660x815 viewport on the ForeIncome II - All page to identify the actual misaligned element before this can be automated without guessing a selector.');
   });
 });

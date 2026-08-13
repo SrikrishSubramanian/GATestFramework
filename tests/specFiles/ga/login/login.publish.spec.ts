@@ -774,9 +774,9 @@ test.describe('Login — Performance & Data Integrity', () => {
         await pom.getPasswordInput().fill('password');
         const startTime = Date.now();
         await pom.getLoginButton().click();
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+        await pom.getErrorMessage().waitFor({ state: 'visible', timeout: 3000 });
         const responseTime = Date.now() - startTime;
-        expect(responseTime).toBeGreaterThanOrEqual(0);
+        expect(responseTime).toBeLessThan(3000);
     });
     test('[LGN-107] @perf @regression Input field responsiveness during typing', async ({ page }) => {
         const pom = new LoginPage(page);

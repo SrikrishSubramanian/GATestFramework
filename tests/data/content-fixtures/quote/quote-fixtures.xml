@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Quote author-attribution fixture (GAAM-1357/QT-010) — none of the real style guide's quote
+     instances ever set the `author` property (only `authorDescription`), even though several are
+     headlined "Two Authors". Per QuoteImpl.getAuthorDetails()/BlogAuthor.java, a blank `author`
+     value makes quoteModel.author null, so quote.html's __name and __author-description spans
+     (guarded on author.name) never render — the figcaption "info panel" this ticket's alignment
+     claim is about is empty on every real instance. A plain (non-"/content"-prefixed) `author`
+     string is enough to populate BlogAuthor.name without needing a DAM asset/Content Fragment, so
+     this fixture adds one left-aligned and one center-aligned instance with both `author` and
+     `authorDescription` set, so QT-010 has real name/description content to check alignment on. -->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/global-atlantic/settings/wcm/templates/ga-freeform-page"
+        jcr:description="Quote author-attribution fixture (GAAM-1357)."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Quote — Author Attribution Fixture"
+        sling:resourceType="ga/components/structure/page/basepage">
+        <root jcr:primaryType="nt:unstructured">
+            <main-par jcr:primaryType="nt:unstructured"
+                sling:resourceType="ga/components/structure/semantic/main-wrapper">
+                <quote_left_with_author
+                    cq:styleIds="[quote-colourway-slate,quote-align-left]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/quote"
+                    author="Jane Smith"
+                    authorDescription="Chief Investment Officer &amp; Managing Director"
+                    textarea="Global Atlantic has been an outstanding partner — their deep expertise and genuine commitment to client success set them apart in the industry."/>
+                <quote_center_with_author
+                    cq:styleIds="[quote-colourway-slate,quote-align-center]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ga/components/content/quote"
+                    author="Jane Smith"
+                    authorDescription="Chief Investment Officer &amp; Managing Director"
+                    textarea="Global Atlantic has been an outstanding partner — their deep expertise and genuine commitment to client success set them apart in the industry."/>
+            </main-par>
+        </root>
+    </jcr:content>
+</jcr:root>

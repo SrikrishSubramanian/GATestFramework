@@ -598,7 +598,7 @@ test.describe('NestedContentCarousel — Console Errors', () => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         // Wait for at least one full auto-advance cycle (typical delay ~4-5s, waiting 7s for margin)
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+        await page.waitForTimeout(7000);
         const errors = capture.getErrors();
         capture.stop();
         expect(errors.filter(e => !isBenignError(e.message))).toEqual([]);

@@ -30,15 +30,18 @@ export class LoginPage {
   }
 
   getUsernameInput(): Locator {
-    return this.page.locator('input[type="email"], input[type="text"][name*="user" i], #username').first();
+    return this.getComponentRoot().locator('input[type="email"], input[type="text"][name*="user" i], #username').first();
   }
 
   getPasswordInput(): Locator {
-    return this.page.locator('input[type="password"], #password').first();
+    return this.getComponentRoot().locator('input[type="password"], #password').first();
   }
 
   getLoginButton(): Locator {
-    return this.page.locator('button[type="submit"], button:has-text("Login"), button:has-text("Sign In"), button:has-text("Continue")').first();
+    // Scoped to the component root — the style-guide page can render multiple
+    // .cmp-login instances alongside an unrelated global nav "Login" button,
+    // and an unscoped page-wide locator can match that nav button instead.
+    return this.getComponentRoot().locator('button[type="submit"], button:has-text("Login"), button:has-text("Sign In"), button:has-text("Continue")').first();
   }
 
   getMFAPrompt(): Locator {

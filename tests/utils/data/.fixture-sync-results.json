@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-13T15:28:10.074Z",
+  "checkedAt": "2026-08-13T21:36:47.529Z",
   "kkrAemRoot": "C:\\Users\\PuneethAM\\Development_automation\\GATestFramework-main\\kkr-aem",
   "results": [
     {
@@ -49,6 +49,15 @@
       "message": "fixture-meta.json is missing the \"source\" field"
     },
     {
+      "component": "product-path-detail-card",
+      "status": "ok",
+      "message": "Fixture in sync",
+      "currentHash": "c0635935c2b8e63a79d6fa272c6edd99",
+      "expectedHash": "c0635935c2b8e63a79d6fa272c6edd99",
+      "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/product-path-detail-card/.content.xml",
+      "generatedAt": "2026-08-14"
+    },
+    {
       "component": "promo-banner",
       "status": "ok",
       "message": "Fixture in sync",
@@ -56,6 +65,15 @@
       "expectedHash": "e549f1bcee34a58d5070ade02339e14e",
       "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/promo-banner/.content.xml",
       "generatedAt": "2026-08-12"
+    },
+    {
+      "component": "quote",
+      "status": "ok",
+      "message": "Fixture in sync",
+      "currentHash": "8092b97e94bb01ad370fc5a944d3cb1d",
+      "expectedHash": "8092b97e94bb01ad370fc5a944d3cb1d",
+      "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/quote/.content.xml",
+      "generatedAt": "2026-08-14"
     },
     {
       "component": "spacer",
@@ -74,6 +92,15 @@
       "expectedHash": "21c0339ead4bf0dc93e59f04405b6793",
       "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/statistic/.content.xml",
       "generatedAt": "2026-03-15"
+    },
+    {
+      "component": "teaser-card",
+      "status": "ok",
+      "message": "Fixture in sync",
+      "currentHash": "9fd4a7db7842fd834325d635b5593574",
+      "expectedHash": "9fd4a7db7842fd834325d635b5593574",
+      "source": "ui.content.ga/src/main/content/jcr_root/content/global-atlantic/style-guide/components/teaser-card/.content.xml",
+      "generatedAt": "2026-08-14"
     },
     {
       "component": "text",
