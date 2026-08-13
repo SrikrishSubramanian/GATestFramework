@@ -94,7 +94,7 @@ test.describe('Footer — Happy Path & Core Functionality', () => {
             }
         }
     });
-    test('[FTR-008] @negative Footer handles empty content gracefully', async ({ page }) => {
+    test('[FTR-008] @negative @sanity Footer handles empty content gracefully', async ({ page }) => {
         const pom = new FooterPage(page);
         await pom.navigate(BASE());
         const root = await pom.getRoot();
@@ -118,7 +118,7 @@ test.describe('Footer — Happy Path & Core Functionality', () => {
 });
 test.describe('Footer — Responsive Design', () => {
     test.describe.configure({ retries: 1 });
-    test('[FTR-020] @mobile @regression Footer adapts to mobile viewport', async ({ page }) => {
+    test('[FTR-020] @mobile @regression @sanity Footer adapts to mobile viewport', async ({ page }) => {
         const pom = new FooterPage(page);
         await page.setViewportSize({ width: 375, height: 667 });
         await pom.navigate(BASE());
@@ -129,7 +129,7 @@ test.describe('Footer — Responsive Design', () => {
          await root.evaluate(el => el.offsetWidth);
         expect(width).toBeLessThanOrEqual(375);
     });
-    test('[FTR-021] @mobile @regression Footer menu toggle works on mobile', async ({ page }) => {
+    test('[FTR-021] @mobile @regression @sanity Footer menu toggle works on mobile', async ({ page }) => {
         const pom = new FooterPage(page);
         await page.setViewportSize({ width: 375, height: 667 });
         await pom.navigate(BASE());

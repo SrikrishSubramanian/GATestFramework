@@ -69,7 +69,7 @@ test.describe('TeaserCard — Core Structure', () => {
         expect(count, 'Expected at least one .cmp-teaser-card on style guide').toBeGreaterThan(0);
         await expect(cards.first()).toBeVisible();
     });
-    test('[TC-002] @smoke @regression Card title (.cmp-teaser-card__title) is present and visible', async ({ page }) => {
+    test('[TC-002] @smoke @regression @sanity Card title (.cmp-teaser-card__title) is present and visible', async ({ page }) => {
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
         const titles = page.locator(TC_TITLE);
@@ -77,7 +77,7 @@ test.describe('TeaserCard — Core Structure', () => {
         expect(count, 'Expected at least one .cmp-teaser-card__title').toBeGreaterThan(0);
         await expect(titles.first()).toBeVisible();
     });
-    test('[TC-003] @smoke @regression Title element is a SPAN or semantic heading (h2–h6)', async ({ page }) => {
+    test('[TC-003] @smoke @regression @sanity Title element is a SPAN or semantic heading (h2–h6)', async ({ page }) => {
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
         const titles = page.locator(TC_TITLE);
@@ -132,7 +132,7 @@ test.describe('TeaserCard — Core Structure', () => {
         const html = await page.content();
         expect(html, 'HTL comments should not appear in rendered HTML').not.toContain('<!--/*');
     });
-    test('[TC-009] @smoke @regression Multiple teaser cards can render on the same page', async ({ page }) => {
+    test('[TC-009] @smoke @regression @sanity Multiple teaser cards can render on the same page', async ({ page }) => {
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
         const cards = page.locator(TC);
@@ -521,7 +521,7 @@ test.describe('TeaserCard — Equal Height & Stretch', () => {
 // Responsive / Mobile (TC-031 – TC-034)
 // ---------------------------------------------------------------------------
 test.describe('TeaserCard — Responsive / Mobile', () => {
-    test('[TC-031] @regression @mobile At mobile (390px) cards stack in a single column', async ({ page }) => {
+    test('[TC-031] @regression @mobile @sanity At mobile (390px) cards stack in a single column', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
@@ -544,7 +544,7 @@ test.describe('TeaserCard — Responsive / Mobile', () => {
         const xValues = boxes.map(b => b.x);
         expect(Math.max(...xValues) - Math.min(...xValues), 'Mobile cards should stack (same x position)').toBeLessThan(20);
     });
-    test('[TC-032] @regression @mobile Card does not overflow at 390px mobile', async ({ page }) => {
+    test('[TC-032] @regression @mobile @sanity Card does not overflow at 390px mobile', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
@@ -555,7 +555,7 @@ test.describe('TeaserCard — Responsive / Mobile', () => {
             expect(overflow, `Card[${i}] overflows on mobile`).toBe(false);
         }
     });
-    test('[TC-033] @regression @mobile Rectangle Left/Right variant collapses to vertical stack on mobile', async ({ page }) => {
+    test('[TC-033] @regression @mobile @sanity Rectangle Left/Right variant collapses to vertical stack on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
@@ -570,7 +570,7 @@ test.describe('TeaserCard — Responsive / Mobile', () => {
         // measurement: use measurement-utils for cleaner code
         expect(['column', 'column-reverse'], 'Rectangle Left/Right card should stack vertically on mobile').toContain(flexDir);
     });
-    test('[TC-034] @regression @mobile Title text wraps without overflow at 320px', async ({ page }) => {
+    test('[TC-034] @regression @mobile @sanity Title text wraps without overflow at 320px', async ({ page }) => {
         await page.setViewportSize({ width: 320, height: 568 });
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
@@ -777,24 +777,59 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
             test.skip();
             return;
         }
-        const hasHoverNoneQuery = // 📏 TODO: Replace with measurement-utils
+        // Verified against source: teaser-card.less (ui.apps.ga clientlib-site/less/components)
+        // defines its ripple/:hover, CTA-span :hover, and the entire --enhanced-hover block
+        // (image transform, black overlay, text-color transitions) with NO hover-capability
+        // gating at all. The codebase's own convention for exactly this problem is the
+        // `.ga-hover-capable(@block)` mixin (clientlib-site/less/abstracts/mixins.less), which
+        // compiles to `@media (hover: hover) and (pointer: fine)` — it IS used by
+        // accordion-tabs-feature.less, video-external.less, and decision-tree.less to gate their
+        // hover-only effects, but teaser-card.less never calls it. Walk the live CSSOM for any
+        // teaser-card :hover/:focus-visible rule and confirm whether it (or an ancestor @media)
+        // is actually hover/pointer-gated, covering both the negative (`hover: none` /
+        // `pointer: coarse`) and positive (`hover: hover` / `pointer: fine`) query forms.
+        const result = // 📏 TODO: Replace with measurement-utils
          await page.evaluate(() => {
-            return Array.from(document.styleSheets).some(sheet => {
+            let totalHoverRules = 0;
+            let gatedHoverRules = 0;
+            const walk = (rules: any, gatedAncestor: boolean) => {
+                for (const rule of Array.from(rules) as any[]) {
+                    if (rule instanceof CSSMediaRule) {
+                        const isHoverGate = /hover|pointer/i.test(rule.conditionText || rule.media?.mediaText || '');
+                        try {
+                            walk(rule.cssRules, gatedAncestor || isHoverGate);
+                        }
+                        catch {
+                            // nested cross-origin rule list — ignore
+                        }
+                    }
+                    else if (rule instanceof CSSStyleRule) {
+                        const sel = rule.selectorText || '';
+                        if (sel.includes('teaser-card') && (sel.includes(':hover') || sel.includes(':focus-visible'))) {
+                            totalHoverRules++;
+                            if (gatedAncestor)
+                                gatedHoverRules++;
+                        }
+                    }
+                }
+            };
+            for (const sheet of Array.from(document.styleSheets)) {
                 try {
-                    return Array.from(sheet.cssRules).some((rule: any) => rule instanceof CSSMediaRule &&
-                        (rule.conditionText?.includes('hover: none') || rule.conditionText?.includes('pointer: coarse')));
+                    walk(sheet.cssRules, false);
                 }
                 catch {
-                    return false;
+                    // cross-origin stylesheet — ignore
                 }
-            });
+            }
+            return { totalHoverRules, gatedHoverRules };
         });
-        if (!hasHoverNoneQuery) {
-            console.warn('⚠️ [TC-056] No @media (hover: none) or (pointer: coarse) found — hover animations may fire on touch devices');
-            test.skip(true, 'No touch-device hover suppression media query found in stylesheets — CSS gap to address');
-            return;
-        }
-        expect(hasHoverNoneQuery, 'Styles must include @media (hover: none) or (pointer: coarse) to disable hover on touch').toBe(true);
+        expect(result.totalHoverRules, 'Sanity check: teaser-card must have :hover/:focus-visible rules to test').toBeGreaterThan(0);
+        // Confirmed gap: none of teaser-card's hover rules are gated, unlike sibling components
+        // that already use .ga-hover-capable() for this exact purpose — hover-triggered
+        // transitions/animations (ripple, CTA slide, enhanced-hover image scale + overlay +
+        // text-color) can get "stuck" after a tap on touch devices since nothing suppresses
+        // them when (hover: none)/(pointer: coarse).
+        expect(result.gatedHoverRules, 'teaser-card :hover/:focus-visible rules must be gated behind a hover-capable media query (e.g. .ga-hover-capable(), used by accordion-tabs-feature/video-external/decision-tree) to prevent sticky hover state on touch devices').toBeGreaterThan(0);
     });
 });
 // ---------------------------------------------------------------------------

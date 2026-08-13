@@ -21,16 +21,25 @@ test.afterEach(async ({ page }, testInfo) => {
     }
     await annotateEnvironment(testInfo);
 });
-test.describe('Button — CSV Test Cases', () => {
-    test('[BTTN-001] @smoke @regression @sanity DR AEM FE: Dynamic Rates Audit Log — AC1', async ({ page }) => {
-        const pom = new ButtonPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Functionality*
-        test.fixme();
-    });
-});
+// [BTTN-001] "DR AEM FE: Dynamic Rates Audit Log — AC1" was removed from here — the CSV
+// bulk-import's component-bucketing fallback mis-assigned this row to "button", even though it
+// has nothing to do with the Button component. Investigated against kkr-aem source: the
+// "Dynamic Rates Audit Log" is the Audit Report tab on the rate-sheet-grid component
+// (resourceType ga/components/content/rate-sheet-grid — rendered by rate-sheet-grid.html
+// lines 124-125 (auditTab) and 297-350 (audit controls/date fields/export button), exported via
+// DynamicRateAuditExportServlet.java, registered on selector "audit-export"). That is a distinct
+// component from the customer-facing Dynamic Rates table (ga/dynamic-rate/product-rate-table)
+// already covered by PRT-010/011 in product-rate-table.author.spec.ts — different resourceType,
+// different Sling Model, no shared markup. rate-sheet-grid backs the internal "Rate Admin Page"
+// template (ui.content.ga/.../style-guide/templates/rate-admin-page/.content.xml, jcr:description
+// "Rate Admin Page template style guide page") — it is not in AVAILABLE_COMPONENTS
+// (tests/generators/generate-components.ts) and has no POM/spec scaffolding anywhere in this
+// framework. This is also the FE sibling of MG-061 ("DR AEM BE: Dynamic Rates Audit Log - error
+// handling issue — AC1"), the backend ticket for the exact same feature that was already deleted
+// outright from image.author.spec.ts (see lines 574-581 there) for the identical reason: no
+// UI-testable surface in any component this framework covers.
 test.describe('Button — Happy Path', () => {
-    test('[BTTN-002] @smoke @regression Button renders correctly', async ({ page }) => {
+    test('[BTTN-002] @smoke @regression @sanity Button renders correctly', async ({ page }) => {
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-button:not(#skip-nav)').first();
@@ -46,7 +55,7 @@ test.describe('Button — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[BTTN-003] @smoke @regression Button interactive elements are functional', async ({ page }) => {
+    test('[BTTN-003] @smoke @regression @sanity Button interactive elements are functional', async ({ page }) => {
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-button:not(#skip-nav)').first();
@@ -61,7 +70,7 @@ test.describe('Button — Happy Path', () => {
     });
 });
 test.describe('Button — Negative & Boundary', () => {
-    test('[BTTN-004] @negative @regression Button handles empty content gracefully', async ({ page }) => {
+    test('[BTTN-004] @negative @regression @sanity Button handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -72,7 +81,7 @@ test.describe('Button — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-button:not(#skip-nav)').first()).toBeVisible();
     });
-    test('[BTTN-005] @negative @regression Button handles missing images', async ({ page }) => {
+    test('[BTTN-005] @negative @regression @sanity Button handles missing images', async ({ page }) => {
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-button img');
@@ -84,7 +93,7 @@ test.describe('Button — Negative & Boundary', () => {
     });
 });
 test.describe('Button — Responsive', () => {
-    test('[BTTN-006] @mobile @regression @mobile Button adapts to mobile viewport', async ({ page }) => {
+    test('[BTTN-006] @mobile @regression @mobile @sanity Button adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());
@@ -99,7 +108,7 @@ test.describe('Button — Responsive', () => {
         }));
         expect(computedStyle.flexDirection || computedStyle.display).toBeDefined();
     });
-    test('[BTTN-007] @mobile @regression Button adapts to tablet viewport', async ({ page }) => {
+    test('[BTTN-007] @mobile @regression @sanity Button adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new ButtonPage(page);
         await pom.navigate(BASE());

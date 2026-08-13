@@ -26,7 +26,7 @@ test.describe('GatedSection — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[GS-002] @smoke @regression GatedSection interactive elements are functional', async ({ page }) => {
+    test('[GS-002] @smoke @regression @sanity GatedSection interactive elements are functional', async ({ page }) => {
         const pom = new GatedSectionPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-gated-section').first();
@@ -41,7 +41,7 @@ test.describe('GatedSection — Happy Path', () => {
     });
 });
 test.describe('GatedSection — Negative & Boundary', () => {
-    test('[GS-003] @negative @regression GatedSection handles empty content gracefully', async ({ page }) => {
+    test('[GS-003] @negative @regression @sanity GatedSection handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('GatedSection — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-gated-section').first()).toBeVisible();
     });
-    test('[GS-004] @negative @regression GatedSection handles missing images', async ({ page }) => {
+    test('[GS-004] @negative @regression @sanity GatedSection handles missing images', async ({ page }) => {
         const pom = new GatedSectionPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-gated-section img');
@@ -64,7 +64,7 @@ test.describe('GatedSection — Negative & Boundary', () => {
     });
 });
 test.describe('GatedSection — Responsive', () => {
-    test('[GS-005] @mobile @regression @mobile GatedSection adapts to mobile viewport', async ({ page }) => {
+    test('[GS-005] @mobile @regression @mobile @sanity GatedSection adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new GatedSectionPage(page);
         await pom.navigate(BASE());

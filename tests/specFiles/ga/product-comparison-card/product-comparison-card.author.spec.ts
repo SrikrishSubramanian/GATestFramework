@@ -26,7 +26,7 @@ test.describe('ProductComparisonCard — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[PCC-002] @smoke @regression ProductComparisonCard interactive elements are functional', async ({ page }) => {
+    test('[PCC-002] @smoke @regression @sanity ProductComparisonCard interactive elements are functional', async ({ page }) => {
         const pom = new ProductComparisonCardPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-product-comparison-card').first();
@@ -41,7 +41,7 @@ test.describe('ProductComparisonCard — Happy Path', () => {
     });
 });
 test.describe('ProductComparisonCard — Negative & Boundary', () => {
-    test('[PCC-003] @negative @regression ProductComparisonCard handles empty content gracefully', async ({ page }) => {
+    test('[PCC-003] @negative @regression @sanity ProductComparisonCard handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('ProductComparisonCard — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-product-comparison-card').first()).toBeVisible();
     });
-    test('[PCC-004] @negative @regression ProductComparisonCard handles missing images', async ({ page }) => {
+    test('[PCC-004] @negative @regression @sanity ProductComparisonCard handles missing images', async ({ page }) => {
         const pom = new ProductComparisonCardPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-product-comparison-card img');
@@ -64,7 +64,7 @@ test.describe('ProductComparisonCard — Negative & Boundary', () => {
     });
 });
 test.describe('ProductComparisonCard — Responsive', () => {
-    test('[PCC-005] @mobile @regression @mobile ProductComparisonCard adapts to mobile viewport', async ({ page }) => {
+    test('[PCC-005] @mobile @regression @mobile @sanity ProductComparisonCard adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ProductComparisonCardPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('ProductComparisonCard — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[PCC-006] @mobile @regression ProductComparisonCard adapts to tablet viewport', async ({ page }) => {
+    test('[PCC-006] @mobile @regression @sanity ProductComparisonCard adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new ProductComparisonCardPage(page);
         await pom.navigate(BASE());
@@ -124,10 +124,32 @@ test.describe('ProductComparisonCard — AEM Dialog Configuration', () => {
 // Relocated from text.author.spec.ts (TEXT-018) — CSV import mis-bucketed this under Text;
 // it's actually about the Product Comparison content fragment model.
 test.describe('ProductComparisonCard — CSV Test Cases (GAAM-1384)', () => {
-    test('[PCC-010] @smoke @regression CMS BE: Product Comparison CF - Increase Key Features Max to 4 — AC1', async ({ page }) => {
+    test('[PCC-010] @regression @sanity CMS BE: Product Comparison CF - Increase Key Features Max to 4 — AC1', async ({ page }) => {
+        // Verified via kkr-aem CF model source 2026-08-12: the keyFeature multifield in
+        // conf/global-atlantic/settings/dam/cfm/models/product/.content.xml has
+        // granite:data mvmaxitems="4" — the AC (raise the cap from 3 to 4) is implemented.
+        // None of the 3 demo product CFs on the style guide (heritage-income, foundation-plus,
+        // forge-accumulation) currently author a 4th key feature, so this only guards the
+        // model's cap is respected in the rendered DOM, not that a 4th item renders — a content
+        // gap, not a component defect. Un-skip fully once a demo CF authors 4 key features.
         const pom = new ProductComparisonCardPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: The Key Features multifield on the Product CF model allows authors to add up to 4 items (previously 3)
-        test.fixme();
+        const cards = page.locator('.cmp-product-comparison-card__item');
+        const count = await cards.count();
+        expect(count, 'Product comparison card style guide should have at least one card').toBeGreaterThan(0);
+        for (let i = 0; i < count; i++) {
+            const keyFeatureCount = await cards.nth(i).evaluate(el => {
+                const labels = el.querySelectorAll('.cmp-product-comparison-card__element-label');
+                for (const label of Array.from(labels)) {
+                    if (label.textContent && label.textContent.trim() === 'Key Features') {
+                        const wrapper = label.closest('[class*="cmp-product-comparison-card__element--"]');
+                        return wrapper ? wrapper.querySelectorAll('.cmp-product-comparison-card__element-value').length : 0;
+                    }
+                }
+                return -1;
+            });
+            if (keyFeatureCount === -1) continue; // this card has no Key Features element authored
+            expect(keyFeatureCount, `Card ${i}'s Key Features must never exceed the CF model's 4-item cap`).toBeLessThanOrEqual(4);
+        }
     });
 });

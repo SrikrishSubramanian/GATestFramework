@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Section — Component Interactions', () => {
-  test('@interaction @regression section adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity section adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new SectionPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: section with unknown background

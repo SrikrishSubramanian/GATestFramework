@@ -49,7 +49,7 @@ function btnInSection(page: import('@playwright/test').Page, bg: string, variant
 
 test.describe('Button — Context Adaptation', () => {
 
-  test('[BTN-044] @interaction @regression primary button is interactive in white section', async ({ page }) => {
+  test('[BTN-044] @interaction @regression @sanity primary button is interactive in white section', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const btn = btnInSection(page, 'white', '.ga-button--primary');
@@ -100,7 +100,7 @@ test.describe('Button — Context Adaptation', () => {
 
 test.describe('Button — Keyboard & Accessibility Interactions', () => {
 
-  test('[BTN-050] @interaction @regression primary button has accessible role and text', async ({ page }) => {
+  test('[BTN-050] @interaction @regression @sanity primary button has accessible role and text', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const btn = btnInSection(page, 'white', '.ga-button--primary');
@@ -145,7 +145,7 @@ test.describe('Button — Keyboard & Accessibility Interactions', () => {
 
 test.describe('Button — Hover & Visual Interactions', () => {
 
-  test('[BTN-054] @interaction @regression button cursor is pointer', async ({ page }) => {
+  test('[BTN-054] @interaction @regression @sanity button cursor is pointer', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const btn = btnInSection(page, 'white', '.ga-button--primary');
@@ -167,7 +167,7 @@ test.describe('Button — Hover & Visual Interactions', () => {
 
 test.describe('Button — Video Modal Interactions', () => {
 
-  test('[BTN-056] @interaction @regression video button opens modal', async ({ page }) => {
+  test('[BTN-056] @interaction @regression @sanity video button opens modal', async ({ page }) => {
     const pom = new ButtonPage(page);
     await pom.navigate(BASE());
     const videoBtn = page.locator('.cmp-button.cmp-button--video').first();

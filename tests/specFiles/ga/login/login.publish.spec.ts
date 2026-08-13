@@ -32,7 +32,7 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
         const headings = root.locator('h1, h2, h3');
         expect(await headings.count()).toBeGreaterThan(0);
     });
-    test('[LGN-004] @negative @regression Key Point List - Max Items', async ({ page }) => {
+    test('[LGN-004] @negative @regression @sanity Key Point List - Max Items', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const listItems = page.locator('.cmp-login li');
@@ -112,7 +112,7 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
             expect(ariaLabel).toBeTruthy();
         }
     });
-    test('[LGN-013] @negative @regression Empty Validation: Both Fields', async ({ page }) => {
+    test('[LGN-013] @negative @regression @sanity Empty Validation: Both Fields', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const submitBtn = pom.getLoginButton();
@@ -121,7 +121,7 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
         expect(await usernameInput.inputValue()).toBe('');
         expect(await passwordInput.inputValue()).toBe('');
     });
-    test('[LGN-014] @negative @regression Empty Validation: Username Only', async ({ page }) => {
+    test('[LGN-014] @negative @regression @sanity Empty Validation: Username Only', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const usernameInput = pom.getUsernameInput();
@@ -261,7 +261,7 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
     });
 });
 test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
-    test('[LGN-033] @smoke @positive @regression Login renders correctly', async ({ page }) => {
+    test('[LGN-033] @smoke @positive @regression @sanity Login renders correctly', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-login').first();
@@ -274,7 +274,7 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[LGN-034] @smoke @positive @regression Login interactive elements are functional', async ({ page }) => {
+    test('[LGN-034] @smoke @positive @regression @sanity Login interactive elements are functional', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-login').first();
@@ -286,7 +286,7 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
             await expect(interactive.nth(i)).toBeEnabled();
         }
     });
-    test('[LGN-047] @positive @smoke Valid username field accepts standard email format', async ({ page }) => {
+    test('[LGN-047] @positive @smoke @sanity Valid username field accepts standard email format', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('user@example.com');
@@ -382,7 +382,7 @@ test.describe('Login — Positive: Happy Path & Valid Credentials', () => {
     });
 });
 test.describe('Login — Negative: Validation & Error Handling', () => {
-    test('[LGN-035] @negative @regression Login handles empty content gracefully', async ({ page }) => {
+    test('[LGN-035] @negative @regression @sanity Login handles empty content gracefully', async ({ page }) => {
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
         const pom = new LoginPage(page);
@@ -390,7 +390,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
         await expect(page.locator('.cmp-login').first()).toBeVisible();
     });
-    test('[LGN-036] @negative @regression Login handles missing images', async ({ page }) => {
+    test('[LGN-036] @negative @regression @sanity Login handles missing images', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-login img');
@@ -400,7 +400,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
             expect(naturalWidth).toBeGreaterThan(0);
         }
     });
-    test('[LGN-061] @negative @regression Empty username and password rejection', async ({ page }) => {
+    test('[LGN-061] @negative @regression @sanity Empty username and password rejection', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const usernameValue = await pom.getUsernameInput().inputValue();
@@ -408,63 +408,63 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
         expect(usernameValue).toBe('');
         expect(passwordValue).toBe('');
     });
-    test('[LGN-062] @negative @regression Empty username validation error', async ({ page }) => {
+    test('[LGN-062] @negative @regression @sanity Empty username validation error', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getPasswordInput().fill('password');
         const usernameValue = await pom.getUsernameInput().inputValue();
         expect(usernameValue).toBe('');
     });
-    test('[LGN-063] @negative @regression Empty password validation error', async ({ page }) => {
+    test('[LGN-063] @negative @regression @sanity Empty password validation error', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('user@example.com');
         const passwordValue = await pom.getPasswordInput().inputValue();
         expect(passwordValue).toBe('');
     });
-    test('[LGN-064] @negative @regression Invalid email format: missing @symbol', async ({ page }) => {
+    test('[LGN-064] @negative @regression @sanity Invalid email format: missing @symbol', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('userexample.com');
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe('userexample.com');
     });
-    test('[LGN-065] @negative @regression Invalid email format: missing domain extension', async ({ page }) => {
+    test('[LGN-065] @negative @regression @sanity Invalid email format: missing domain extension', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('user@example');
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe('user@example');
     });
-    test('[LGN-066] @negative @regression Invalid email format: double @symbol', async ({ page }) => {
+    test('[LGN-066] @negative @regression @sanity Invalid email format: double @symbol', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('user@@example.com');
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe('user@@example.com');
     });
-    test('[LGN-067] @negative @regression Email with leading space character', async ({ page }) => {
+    test('[LGN-067] @negative @regression @sanity Email with leading space character', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill(' user@example.com');
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe(' user@example.com');
     });
-    test('[LGN-068] @negative @regression Email with trailing space character', async ({ page }) => {
+    test('[LGN-068] @negative @regression @sanity Email with trailing space character', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('user@example.com ');
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe('user@example.com ');
     });
-    test('[LGN-069] @negative @regression Email with internal space character', async ({ page }) => {
+    test('[LGN-069] @negative @regression @sanity Email with internal space character', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('user name@example.com');
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe('user name@example.com');
     });
-    test('[LGN-070] @negative @regression Password field rejects SQL injection attempt', async ({ page }) => {
+    test('[LGN-070] @negative @regression @sanity Password field rejects SQL injection attempt', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const sqlInjection = "' OR '1'='1";
@@ -472,7 +472,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
         const value = await pom.getPasswordInput().inputValue();
         expect(value).toBe(sqlInjection);
     });
-    test('[LGN-071] @negative @regression Username field rejects SQL injection attempt', async ({ page }) => {
+    test('[LGN-071] @negative @regression @sanity Username field rejects SQL injection attempt', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const sqlInjection = "admin'--";
@@ -480,7 +480,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe(sqlInjection);
     });
-    test('[LGN-072] @negative @regression Password field rejects XSS payload', async ({ page }) => {
+    test('[LGN-072] @negative @regression @sanity Password field rejects XSS payload', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const xssPayload = '<script>alert("xss")</script>';
@@ -488,7 +488,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
         const value = await pom.getPasswordInput().inputValue();
         expect(value).toBe(xssPayload);
     });
-    test('[LGN-073] @negative @regression Username field rejects XSS payload', async ({ page }) => {
+    test('[LGN-073] @negative @regression @sanity Username field rejects XSS payload', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const xssPayload = '"><svg/onload=alert(1)>';
@@ -496,14 +496,14 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe(xssPayload);
     });
-    test('[LGN-074] @negative @regression Non-existent user email rejection', async ({ page }) => {
+    test('[LGN-074] @negative @regression @sanity Non-existent user email rejection', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('nonexistent@invalid.local');
         const value = await pom.getUsernameInput().inputValue();
         expect(value).toBe('nonexistent@invalid.local');
     });
-    test('[LGN-075] @negative @regression Incorrect password attempt tracking', async ({ page }) => {
+    test('[LGN-075] @negative @regression @sanity Incorrect password attempt tracking', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getUsernameInput().fill('user@example.com');
@@ -511,7 +511,7 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
         const value = await pom.getPasswordInput().inputValue();
         expect(value).toBe('wrongpassword');
     });
-    test('[LGN-076] @negative @regression Form does not auto-submit with invalid data', async ({ page }) => {
+    test('[LGN-076] @negative @regression @sanity Form does not auto-submit with invalid data', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         const initialUrl = page.url();
@@ -520,14 +520,14 @@ test.describe('Login — Negative: Validation & Error Handling', () => {
         const currentUrl = page.url();
         expect(currentUrl).toBe(initialUrl);
     });
-    test('[LGN-077] @negative @regression Password field input value is not exposed in page source', async ({ page }) => {
+    test('[LGN-077] @negative @regression @sanity Password field input value is not exposed in page source', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());
         await pom.getPasswordInput().fill('SecretPassword123');
         const pageContent = await page.content();
         expect(pageContent).not.toContain('SecretPassword123');
     });
-    test('[LGN-078] @negative @regression Console does not log password values', async ({ page }) => {
+    test('[LGN-078] @negative @regression @sanity Console does not log password values', async ({ page }) => {
         const consoleLogs: string[] = [];
         page.on('console', msg => consoleLogs.push(msg.text()));
         const pom = new LoginPage(page);

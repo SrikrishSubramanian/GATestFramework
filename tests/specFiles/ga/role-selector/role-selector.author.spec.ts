@@ -47,15 +47,27 @@ test.describe('Role Selector — Accessibility', () => {
     test.describe.configure({ retries: 1 });
 });
 test.describe('RoleSelector — CSV Test Cases (GAAM-1314)', () => {
-    test('[RS-011] @smoke @regression CMS BE & FE: Deprecate Role Selector and Top Nav Components — AC1', async ({ page }) => {
+    test('[RS-011] @regression @sanity CMS BE & FE: Deprecate Role Selector and Top Nav Components — AC1', async ({ page }) => {
+        // GAAM-1314 deprecation, confirmed in kkr-aem source (read-only check, not this repo):
+        // - The standalone component at apps/kkr-aem-base/components/content/role-selector renders
+        //   `class="cmp-role-selector"` (role-selector.html) but its .content.xml now sets
+        //   `componentGroup=".hidden"`, so it can no longer be dragged onto pages in the component browser.
+        // - The equivalent role UI is now baked directly into the site header's global Experience
+        //   Fragment as `.cmp-site-header-role-selector` (ui.apps.ga .../structure/site-header/site-header.html),
+        //   which is what RoleSelectorPage's locator sidecar (roleSelectorPage.locators.json, source: "dom")
+        //   already targets for `root`/`trigger`/`panel`/`options` above.
+        // This asserts that deprecation actually held on a live page: the old standalone markup is gone,
+        // and the header-embedded replacement is what's present instead.
         const pom = new RoleSelectorPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: Deprecation Scope*
-        test.fixme();
+        const legacyStandaloneRoleSelector = page.locator('.cmp-role-selector');
+        await expect(legacyStandaloneRoleSelector).toHaveCount(0);
+        const root = await pom.root;
+        await expect(root).toBeVisible();
     });
 });
 test.describe('RoleSelector — Happy Path', () => {
-    test('[RS-012] @smoke @regression RoleSelector renders correctly', async ({ page }) => {
+    test('[RS-012] @smoke @regression @sanity RoleSelector renders correctly', async ({ page }) => {
         const pom = new RoleSelectorPage(page);
         await pom.navigate(BASE());
         const root = await pom.root;
@@ -68,7 +80,7 @@ test.describe('RoleSelector — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[RS-013] @smoke @regression RoleSelector interactive elements are functional', async ({ page }) => {
+    test('[RS-013] @smoke @regression @sanity RoleSelector interactive elements are functional', async ({ page }) => {
         const pom = new RoleSelectorPage(page);
         await pom.navigate(BASE());
         const root = await pom.root;
@@ -88,7 +100,7 @@ test.describe('RoleSelector — Happy Path', () => {
     });
 });
 test.describe('RoleSelector — Negative & Boundary', () => {
-    test('[RS-014] @negative @regression RoleSelector handles empty content gracefully', async ({ page }) => {
+    test('[RS-014] @negative @regression @sanity RoleSelector handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -100,7 +112,7 @@ test.describe('RoleSelector — Negative & Boundary', () => {
         const root = await pom.root;
         await expect(root).toBeVisible();
     });
-    test('[RS-015] @negative @regression RoleSelector handles missing images', async ({ page }) => {
+    test('[RS-015] @negative @regression @sanity RoleSelector handles missing images', async ({ page }) => {
         const pom = new RoleSelectorPage(page);
         await pom.navigate(BASE());
         const root = await pom.root;
@@ -113,7 +125,7 @@ test.describe('RoleSelector — Negative & Boundary', () => {
     });
 });
 test.describe('RoleSelector — Responsive', () => {
-    test('[RS-016] @mobile @regression @mobile RoleSelector adapts to mobile viewport', async ({ page }) => {
+    test('[RS-016] @mobile @regression @mobile @sanity RoleSelector adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new RoleSelectorPage(page);
         await pom.navigate(BASE());
@@ -125,7 +137,7 @@ test.describe('RoleSelector — Responsive', () => {
         const overflow = await root.evaluate(el => el.scrollWidth > el.clientWidth + 1);
         expect(overflow).toBe(false);
     });
-    test('[RS-017] @mobile @regression RoleSelector adapts to tablet viewport', async ({ page }) => {
+    test('[RS-017] @mobile @regression @sanity RoleSelector adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new RoleSelectorPage(page);
         await pom.navigate(BASE());

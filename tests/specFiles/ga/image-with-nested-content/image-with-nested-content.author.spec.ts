@@ -86,13 +86,13 @@ test.describe('ImageWithNestedContent — Core Structure', () => {
             expect(await page.locator(IWNC).nth(i).count()).toBe(1);
         }
     });
-    test('[IWNC-002] @smoke @regression Image CSS defines border-radius 20px', async ({ page }) => {
+    test('[IWNC-002] @smoke @regression @sanity Image CSS defines border-radius 20px', async ({ page }) => {
         const pom = new ImageWithNestedContentPage(page);
         await pom.navigate(BASE());
         const radius = await checkImgCss(page, page.locator(IWNC).first(), 'borderRadius');
         expect(radius).toMatch(/^20px/);
     });
-    test('[IWNC-003] @smoke @regression Nested content positioned absolute at bottom', async ({ page }) => {
+    test('[IWNC-003] @smoke @regression @sanity Nested content positioned absolute at bottom', async ({ page }) => {
         const pom = new ImageWithNestedContentPage(page);
         await pom.navigate(BASE());
         const overlay = page.locator(`${IWNC} ${CT_CONTAINER}, ${IWNC} ${STAT_ITEM}`).first();
@@ -101,13 +101,13 @@ test.describe('ImageWithNestedContent — Core Structure', () => {
         // measurement: use measurement-utils for cleaner code
         expect(pos).toBe('absolute');
     });
-    test('[IWNC-004] @smoke @regression Content-trail child renders', async ({ page }) => {
+    test('[IWNC-004] @smoke @regression @sanity Content-trail child renders', async ({ page }) => {
         const pom = new ImageWithNestedContentPage(page);
         await pom.navigate(BASE());
         const ct = page.locator(`${IWNC} ${CT_CONTAINER}`).first();
         await expect(ct).toBeVisible();
     });
-    test('[IWNC-005] @smoke @regression Statistic child renders', async ({ page }) => {
+    test('[IWNC-005] @smoke @regression @sanity Statistic child renders', async ({ page }) => {
         const pom = new ImageWithNestedContentPage(page);
         await pom.navigate(BASE());
         const stat = page.locator(`${IWNC} ${STAT_ITEM}`).first();
@@ -404,16 +404,20 @@ test.describe('ImageWithNestedContent — Console Errors', () => {
         expect(capture.getErrors()).toEqual([]);
     });
 });
-// Relocated from image.author.spec.ts (MG-066) — CSV import mis-bucketed this under plain Image;
-// it's actually about Image with Nested Content. The original implementation asserted against
-// `.cmp-image` (the wrong component's root) and never actually checked the background color the
-// ticket describes, so it was rewritten as fixme rather than kept as a silently-fake-passing test.
-test.describe('ImageWithNestedContent — CSV Test Cases (GAAM-1242)', () => {
-    test('[IWNC-040] @smoke @regression FE: Image with Nested Content - Background Color — AC1', async ({ page }) => {
-        const pom = new ImageWithNestedContentPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for background color on the secondary/nested content slot —
-        // needs live DOM investigation to find the correct selector and expected color value.
-        test.fixme();
-    });
-});
+// [IWNC-040] "FE: Image with Nested Content - Background Color — AC1" (MG-066, GAAM-1242) was
+// deleted here rather than fixed. It was CSV-mis-bucketed under plain Image, then relocated to
+// this file, but its title/AC text (there is no further AC description anywhere in the source
+// CSV/summary — see image-test-summary.html row for MG-066) names no scenario beyond generic
+// "Background Color" behavior for this component. That exact behavior — section-driven
+// background-color propagation (white/slate/granite/azul) into the nested content-trail and
+// statistic overlays — is already fully covered by dedicated, real assertions in the
+// "Section Background Colors" describe block above (IWNC-029..033), grounded in
+// image-with-nested-content.less lines 207-313 (`.cmp-section--background-color-*` rules) and the
+// Section component's Style System "Background Color" group in
+// conf/global-atlantic/settings/wcm/policies/.content.xml (lines 894-914,
+// cq:styleClasses="cmp-section--background-color-white/slate/granite/azul"). The component's own
+// _cq_dialog (apps/kkr-aem-base/components/content/image-with-nested-content/_cq_dialog/.content.xml)
+// has no background-color field of its own — only image/isDecorative/alt/id — confirming there is
+// no distinct, untested authoring surface for this ticket to cover. With no unique acceptance
+// criterion left to assert and a pure duplicate of existing coverage, the stub was removed rather
+// than kept as fixme/skip dead weight.

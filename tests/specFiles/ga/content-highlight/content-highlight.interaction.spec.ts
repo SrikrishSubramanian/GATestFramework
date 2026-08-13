@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('ContentHighlight — Component Interactions', () => {
-  test('@interaction @regression content-highlight adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity content-highlight adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new ContentHighlightPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background

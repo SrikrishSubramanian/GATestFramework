@@ -92,7 +92,7 @@ test.describe('ContentHighlight — State Matrix (Responsive)', () => {
 // ── Invalid: contrast concerns (2 tests) ──
 
 test.describe('ContentHighlight — State Matrix (Invalid Combos)', () => {
-    test('[CONTENT_HIGHLIGHT-N] @matrix @negative default + light-theme on slate (light-on-light)', async ({ page }) => {
+    test('[CONTENT_HIGHLIGHT-N] @matrix @negative @sanity default + light-theme on slate (light-on-light)', async ({ page }) => {
       // light-theme on light background (slate) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new ContentHighlightPage(page);
@@ -101,7 +101,7 @@ test.describe('ContentHighlight — State Matrix (Invalid Combos)', () => {
       await expect(container).toBeVisible();
     });
 
-    test('[CONTENT_HIGHLIGHT-N] @matrix @negative default + dark-theme on granite (dark-on-dark)', async ({ page }) => {
+    test('[CONTENT_HIGHLIGHT-N] @matrix @negative @sanity default + dark-theme on granite (dark-on-dark)', async ({ page }) => {
       // dark-theme on dark background (granite) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new ContentHighlightPage(page);

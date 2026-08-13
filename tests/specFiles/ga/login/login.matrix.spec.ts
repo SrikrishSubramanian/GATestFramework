@@ -59,7 +59,7 @@ test.describe('Login — State Matrix (Responsive)', () => {
 // ── Invalid: contrast concerns (1 tests) ──
 
 test.describe('Login — State Matrix (Invalid Combos)', () => {
-    test('[LOGIN-N] @matrix @negative default + light-theme on white (light-on-light)', async ({ page }) => {
+    test('[LOGIN-N] @matrix @negative @sanity default + light-theme on white (light-on-light)', async ({ page }) => {
       // light-theme on light background (white) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new LoginPage(page);

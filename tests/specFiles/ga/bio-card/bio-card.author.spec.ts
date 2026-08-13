@@ -26,7 +26,7 @@ test.describe('BioCard — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[BC-002] @smoke @regression BioCard interactive elements are functional', async ({ page }) => {
+    test('[BC-002] @smoke @regression @sanity BioCard interactive elements are functional', async ({ page }) => {
         const pom = new BioCardPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-bio-card').first();
@@ -41,7 +41,7 @@ test.describe('BioCard — Happy Path', () => {
     });
 });
 test.describe('BioCard — Negative & Boundary', () => {
-    test('[BC-003] @negative @regression BioCard handles empty content gracefully', async ({ page }) => {
+    test('[BC-003] @negative @regression @sanity BioCard handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('BioCard — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-bio-card').first()).toBeVisible();
     });
-    test('[BC-004] @negative @regression BioCard handles missing images', async ({ page }) => {
+    test('[BC-004] @negative @regression @sanity BioCard handles missing images', async ({ page }) => {
         const pom = new BioCardPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-bio-card img');
@@ -64,7 +64,7 @@ test.describe('BioCard — Negative & Boundary', () => {
     });
 });
 test.describe('BioCard — Responsive', () => {
-    test('[BC-005] @mobile @regression @mobile BioCard adapts to mobile viewport', async ({ page }) => {
+    test('[BC-005] @mobile @regression @mobile @sanity BioCard adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new BioCardPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('BioCard — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[BC-006] @mobile @regression BioCard adapts to tablet viewport', async ({ page }) => {
+    test('[BC-006] @mobile @regression @sanity BioCard adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new BioCardPage(page);
         await pom.navigate(BASE());
@@ -134,59 +134,113 @@ test.describe('BioCard — AEM Dialog Configuration', () => {
 // Relocated from image.author.spec.ts (MG-058, MG-062) — CSV import mis-bucketed these under
 // Image; they're actually about the Bio Card component.
 test.describe('BioCard — CSV Test Cases (GAAM-1360)', () => {
-    test('[BC-010] @smoke @regression CMS FE: Bio Content – Bio Card issues — AC1', async ({ page }) => {
+    test('[BC-010] @regression @sanity CMS FE: Bio Content – Bio Card issues — AC1', async ({ page }) => {
         const pom = new BioCardPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: # Hover animation is not working as expected
+        // Ticket (GAAM-1360) reports 4 issues against the .cmp-bio-card--card variant:
+        //   1. Hover animation is not working as expected
+        //   2. If bio link is not authored, name/title display on top in mobile view;
+        //      should be "center right" (ticket itself: "we dont have this scenario in
+        //      Figma, please confirm" — an open design question, not a code defect)
+        //   3. Padding is not matching for all cards as per Figma
+        //   4. Add a "role" tag to the content fragment (e.g. "Practice Management Consultant")
         //
-        // !image-20260624-075934.png|width=670,alt="image-20260624-075934.png"!
+        // Investigated against kkr-aem source (read-only reference) and confirmed all
+        // 3 concretely-actionable items are already remediated in the checked-out
+        // reference (a4060eb1, release/v7.0):
+        //   - Issue 1: commit ef5a86e775 ("GAAM-1360 bio catd hover & hero VQA bug fixes",
+        //     confirmed ancestor of a4060eb1 via `git merge-base --is-ancestor`) replaced the
+        //     plain box-shadow hover with an animated ::before circle-swipe
+        //     (transform: translate(-339px, 137px) scale(16) on :hover, transition
+        //     0.55s cubic-bezier) — see bio-card.less lines 41-64.
+        //   - Issue 3: card padding is now explicit and breakpoint-driven
+        //     (@sp-16 mobile / @sp-24 desktop — bio-card.less lines 38, 66-69).
+        //     Exact Figma-spec parity could not be independently re-verified (no Figma
+        //     access in this session), but the earlier "not matching" state (no padding
+        //     override at all) is gone.
+        //   - Issue 4: the Insurance Bio CF model's "title" field already carries
+        //     fieldDescription "Enter the person's job title or role. This field is
+        //     mandatory." (insurance-bio/.content.xml lines 83-98, name=personTitle) —
+        //     matches the requested behavior.
+        //   - Issue 2 remains an open design question per the ticket's own text and is
+        //     out of scope for an automated assertion until Figma/design confirms it.
         //
-        // # If bio link is not authored, the name and title are displaying on top in mobile view.It should be in center right(we dont have this scenario in Figma) please confirm
-        //
-        // !image-20260624-080618.png|width=670,alt="image-20260624-080618.png"!
-        //
-        // # Padding is not matching for all cards as per the Figma
-        //
-        // !image-20260624-081833.png|width=670,alt="image-20260624-081833.png"!
-        //
-        // # As per the feedback we need to add below role tag in content fragment (*Note:* Can we put a more realistic role in as an example? Let's go with 'Practice Management Consultant' for now.)
-        //
-        //
-        //
-        // Tested URL: [https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/QA_testing/bio-card-test2.html|https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/QA_testing/bio-card-test2.html]
-        test.fixme();
+        // None of this can be exercised as a *live* assertion here: this AEM instance has
+        // zero Bio Content Fragments. Both style-guide entries at
+        // /content/global-atlantic/style-guide/components/bio-card (bio_card_card,
+        // bio_card_hero — ui.content.ga bio-card/.content.xml lines 33-47) point at
+        // fragmentPath=/content/dam/global-atlantic/bio-test-folder/bio-insurance-cf-test-1,
+        // which 404s. A querybuilder search for dam:Asset nodes using
+        // /conf/global-atlantic/settings/dam/cfm/models/insurance-bio returns 0 results
+        // instance-wide. bio-card.html's own HTL guard
+        // (data-sly-test.configured="${bioCardModel.cardVariation && bioCardModel.name}",
+        // line 19) then suppresses all markup, which is what a live wcmmode=disabled
+        // fetch of the style-guide page confirms today (0 occurrences of
+        // .cmp-bio-card--card / .cmp-bio-card--hero in the rendered HTML).
+        const card = page.locator('.cmp-bio-card--card').first();
+        test.skip(await card.count() === 0, 'No Bio Content Fragment exists in this AEM instance (0 dam:Asset nodes of the insurance-bio CF model) — the style guide bio-card entries reference a nonexistent fragmentPath and render nothing. Verified live 2026-08-13. Author/deploy a Bio CF fixture (see tests/utils/infra/content-fixture-deployer.ts; no fixture currently exists under tests/data/content-fixtures/bio-card) to un-skip. Code-level review confirms the hover animation, padding, and content-fragment role-field issues from this ticket are already fixed in kkr-aem (see comment above); the mobile "bio link not authored" layout remains an open design question per the ticket text itself.');
+        await expect(card).toBeVisible();
     });
 });
 test.describe('BioCard — CSV Test Cases (GAAM-1333)', () => {
-    test('[BC-011] @smoke @regression CMS FE: GAAM-1084 - Bio Content-Hero Card Issues — AC1', async ({ page }) => {
+    test('[BC-011] @regression @sanity CMS FE: GAAM-1084 - Bio Content-Hero Card Issues — AC1', async ({ page }) => {
+        // Desktop viewport: the fixed font-size values below (18px description, 18px
+        // title) only apply at the @ga-bp-desktop-min (1024px) breakpoint
+        // (bio-card.less lines 279-296, mixins.less lines 166-177) — set explicitly so
+        // this assertion is deterministic regardless of project default viewport.
+        await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new BioCardPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: Issue 1: Font Size of Bio Desc is 16px instead 18px
-        // Issue 2: Font Size of Title is 20px instead 18px
-        // Issue 3: Font Size of pdf link should be 14px
-        // Issue 4: In dark theme the font color of the *title and location* should be rgba(238, 243, 249, 1)
+        // "Bio Content-Hero Card" is NOT a separate component — GAAM-1084 is titled
+        // "Bio Hero FE" in kkr-aem git history (commits 303969a9c0, 00884fe8c4,
+        // ad5a1df165, bc7046888a) and the style-guide content confirms it's the
+        // cardVariation="bio-hero" mode of the same ga/components/content/bio-card
+        // component (ui.content.ga bio-card/.content.xml lines 33-47: bio_card_card
+        // uses cardVariation="bio-card", bio_card_hero uses cardVariation="bio-hero",
+        // both sling:resourceType="ga/components/content/bio-card"). So this ticket is
+        // correctly bucketed in bio-card.author.spec.ts, not mis-filed.
         //
-        // Issue 5: In Mobile View the Font Size of the Texts are mismatching. Please check all the font sizes in Mobile.
+        // Ticket (GAAM-1084/GAAM-1333) reports 5 issues against .cmp-bio-card--hero:
+        //   1. Bio Desc font-size is 16px, should be 18px
+        //   2. Title font-size is 20px, should be 18px
+        //   3. PDF link font-size should be 14px
+        //   4. Dark theme title/location color should be rgba(238, 243, 249, 1)
+        //   5. Mobile font sizes mismatching generally (no specific target values given)
         //
-        // Test URL: [https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/bio-content-hero-card.html|https://author-p101514-e1845752.adobeaemcloud.com/editor.html/content/global-atlantic/style-guide/qa-testing/components/bio-content-hero-card.html]
+        // All 4 numerically-specific issues are already fixed in the checked-out kkr-aem
+        // reference (a4060eb1, release/v7.0 — ancestor of eb67c175f4 / ef5a86e775,
+        // confirmed via `git merge-base --is-ancestor`):
+        //   - Issue 1: .cmp-bio-card__description font-size is rem-calc(18px) at the
+        //     desktop breakpoint (bio-card.less lines 279, 294-296) — matches.
+        //   - Issue 2: .cmp-bio-card--hero .cmp-bio-card__title now uses
+        //     .utility-eyebrow() (bio-card.less lines 339-347), whose desktop
+        //     font-size is @eyebrow-desktop: @sp-18 = 18px (mixins.less lines 166-170;
+        //     variables.less lines 166, 203) — matches.
+        //   - Issue 3: .cmp-bio-card__download-link-text font-size: rem-calc(14px)
+        //     (bio-card.less line 318) — matches exactly.
+        //   - Issue 4: in the dark-background context
+        //     (.cmp-section--background-color-granite/azul), .cmp-bio-card__title,
+        //     __description and __meta-item are colored @c-primary-slate
+        //     (bio-card.less lines 439-443), and @c-primary-slate: #EEF3F9
+        //     (variables.less line 292) = rgb(238, 243, 249) — an exact match to the
+        //     requested rgba(238, 243, 249, 1).
+        //   - Issue 5 is a non-specific catch-all ("please check all the font sizes in
+        //     Mobile") with no target values, so it isn't independently actionable.
         //
-        // Figma: [https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?node-id=39478-46305&t=uL8ewnNZ52tPq11u-0|https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?node-id=39478-46305&t=uL8ewnNZ52tPq11u-0|smart-link]
-        //
-        // Issue 1:
-        //
-        // !image-20260622-122919.png|width=418,alt="image-20260622-122919.png"!
-        //
-        // Issue 2:
-        //
-        // !image-20260622-122958.png|width=420,alt="image-20260622-122958.png"!
-        //
-        // Issue 3:
-        //
-        // !image-20260622-123142.png|width=420,alt="image-20260622-123142.png"!
-        //
-        // Issue 4:
-        //
-        // !image-20260622-123303.png|width=425,alt="image-20260622-123303.png"!
-        test.fixme();
+        // None of this can be exercised as a *live* assertion here: this AEM instance has
+        // zero Bio Content Fragments, so .cmp-bio-card--hero never renders. Both
+        // style-guide entries at /content/global-atlantic/style-guide/components/bio-card
+        // reference fragmentPath=/content/dam/global-atlantic/bio-test-folder/bio-insurance-cf-test-1,
+        // which 404s, and a querybuilder search for dam:Asset nodes using
+        // /conf/global-atlantic/settings/dam/cfm/models/insurance-bio returns 0 results
+        // instance-wide (same content gap documented on BC-010 above). A live
+        // wcmmode=disabled fetch of the style-guide page confirms 0 occurrences of
+        // .cmp-bio-card--hero in the rendered HTML today.
+        const hero = page.locator('.cmp-bio-card--hero').first();
+        test.skip(await hero.count() === 0, 'No Bio Content Fragment exists in this AEM instance (0 dam:Asset nodes of the insurance-bio CF model) — the style guide bio-hero entry references a nonexistent fragmentPath and renders nothing. Verified live 2026-08-13. Author/deploy a Bio CF fixture (see tests/utils/infra/content-fixture-deployer.ts; no fixture currently exists under tests/data/content-fixtures/bio-card) to un-skip. Code-level review confirms all 4 numerically-specific font-size/color issues from this ticket are already fixed in kkr-aem (see comment above); issue 5 is a non-specific catch-all with no target values.');
+        const desc = hero.locator('.cmp-bio-card__description').first();
+        await expect(desc).toBeVisible();
+        const descFontSize = await desc.evaluate(el => parseFloat(getComputedStyle(el).fontSize));
+        expect(descFontSize).toBeCloseTo(18, 0);
     });
 });

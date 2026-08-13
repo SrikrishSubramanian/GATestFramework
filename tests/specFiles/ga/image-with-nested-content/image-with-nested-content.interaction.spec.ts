@@ -28,7 +28,7 @@ test.describe('ImageWithNestedContent — Focus Interactions', () => {
 });
 // ── Hover Interactions ──
 test.describe('ImageWithNestedContent — Hover Interactions', () => {
-    test('[IWNC-INT-005] @interaction @regression Content-trail link has cursor:pointer', async ({ page }) => {
+    test('[IWNC-INT-005] @interaction @regression @sanity Content-trail link has cursor:pointer', async ({ page }) => {
         const pom = new ImageWithNestedContentPage(page);
         await pom.navigate(BASE());
         const cursor = await page.locator(IWNC).first().evaluate(el => {
@@ -67,7 +67,7 @@ test.describe('ImageWithNestedContent — Hover Interactions', () => {
 });
 // ── Responsive Transitions ──
 test.describe('ImageWithNestedContent — Responsive', () => {
-    test('[IWNC-INT-008] @interaction @regression Overlay has position:absolute at both viewports', async ({ page }) => {
+    test('[IWNC-INT-008] @interaction @regression @sanity Overlay has position:absolute at both viewports', async ({ page }) => {
         const pom = new ImageWithNestedContentPage(page);
         await page.setViewportSize({ width: 1440, height: 900 });
         await pom.navigate(BASE());
@@ -109,7 +109,7 @@ test.describe('ImageWithNestedContent — Responsive', () => {
 });
 // ── Nested Component Behavior ──
 test.describe('ImageWithNestedContent — Nested Components', () => {
-    test('[IWNC-INT-011] @interaction @regression Content-trail and statistic render in separate instances', async ({ page }) => {
+    test('[IWNC-INT-011] @interaction @regression @sanity Content-trail and statistic render in separate instances', async ({ page }) => {
         const pom = new ImageWithNestedContentPage(page);
         await pom.navigate(BASE());
         const ctCount = await page.locator(`${IWNC} ${CT_CONTAINER}`).count();

@@ -30,7 +30,7 @@ test.afterEach(async ({ page }, testInfo) => {
 test.describe('Accordion — Keyboard Navigation', () => {
 });
 test.describe('Accordion — Rapid Interaction', () => {
-    test('[ACRD-INT-005] @interaction @regression Rapid expand/collapse does not break state', async ({ page }) => {
+    test('[ACRD-INT-005] @interaction @regression @sanity Rapid expand/collapse does not break state', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
@@ -61,7 +61,7 @@ test.describe('Accordion — Rapid Interaction', () => {
     });
 });
 test.describe('Accordion — Cross-Background Behavior Consistency', () => {
-    test('[ACRD-INT-007] @interaction @regression White section: expand/collapse is functional', async ({ page }) => {
+    test('[ACRD-INT-007] @interaction @regression @sanity White section: expand/collapse is functional', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const btn = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
@@ -106,7 +106,7 @@ test.describe('Accordion — Cross-Background Behavior Consistency', () => {
     });
 });
 test.describe('Accordion — Hover State on Dark Backgrounds', () => {
-    test('[ACRD-INT-011] @interaction @regression Granite hover changes icon background', async ({ page }) => {
+    test('[ACRD-INT-011] @interaction @regression @sanity Granite hover changes icon background', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const btn = page.locator(`${SECTION_GRANITE} ${ITEM_BUTTON}`).first();

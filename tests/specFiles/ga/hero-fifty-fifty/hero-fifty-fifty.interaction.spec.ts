@@ -26,7 +26,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 test.describe('Hero Fifty-Fifty — Interactions', () => {
-  test('[H5050-INTERACTION-001] @interaction @regression CTA button is clickable', async ({ page }) => {
+  test('[H5050-INTERACTION-001] @interaction @regression @sanity CTA button is clickable', async ({ page }) => {
     const url = resolveComponentUrl('hero-fifty-fifty');
     await page.goto(url, { waitUntil: 'domcontentloaded' });
 

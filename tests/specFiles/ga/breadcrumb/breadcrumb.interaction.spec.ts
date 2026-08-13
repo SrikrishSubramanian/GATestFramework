@@ -32,7 +32,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // ─── Hover (BC-INT-001 – BC-INT-003) ─────────────────────────────────────────
 
 test.describe('Breadcrumb — Hover Interactions', () => {
-  test('[BC-INT-001] @interaction @regression Link hover changes color on light background', async ({ page }) => {
+  test('[BC-INT-001] @interaction @regression @sanity Link hover changes color on light background', async ({ page }) => {
     await page.setViewportSize(DESKTOP);
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
@@ -93,7 +93,7 @@ test.describe('Breadcrumb — Hover Interactions', () => {
 // ─── Keyboard Navigation (BC-INT-004 – BC-INT-007) ───────────────────────────
 
 test.describe('Breadcrumb — Keyboard Navigation', () => {
-  test('[BC-INT-004] @interaction @regression Breadcrumb links are keyboard focusable', async ({ page }) => {
+  test('[BC-INT-004] @interaction @regression @sanity Breadcrumb links are keyboard focusable', async ({ page }) => {
     await page.setViewportSize(DESKTOP);
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
@@ -161,7 +161,7 @@ test.describe('Breadcrumb — Keyboard Navigation', () => {
 // ─── Responsive Visibility (BC-INT-008 – BC-INT-010) ─────────────────────────
 
 test.describe('Breadcrumb — Responsive Visibility', () => {
-  test('[BC-INT-008] @interaction @regression Breadcrumb is visible at 1440px (desktop)', async ({ page }) => {
+  test('[BC-INT-008] @interaction @regression @sanity Breadcrumb is visible at 1440px (desktop)', async ({ page }) => {
     await page.setViewportSize(DESKTOP);
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());
@@ -195,7 +195,7 @@ test.describe('Breadcrumb — Responsive Visibility', () => {
 // ─── Dark Mode Interaction (BC-INT-011 – BC-INT-012) ─────────────────────────
 
 test.describe('Breadcrumb — Dark Mode Interaction', () => {
-  test('[BC-INT-011] @interaction @regression Dark focus box-shadow differs from light focus box-shadow', async ({ page }) => {
+  test('[BC-INT-011] @interaction @regression @sanity Dark focus box-shadow differs from light focus box-shadow', async ({ page }) => {
     await page.setViewportSize(DESKTOP);
     const pom = new BreadcrumbPage(page);
     await pom.navigate(BASE());

@@ -25,7 +25,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 test.describe('Footer — Interactions', () => {
-  test('[FTR-INTERACTION-001] @interaction @regression Footer links are clickable', async ({ page }) => {
+  test('[FTR-INTERACTION-001] @interaction @regression @sanity Footer links are clickable', async ({ page }) => {
     const pom = new FooterPage(page);
     await pom.navigate(BASE());
 

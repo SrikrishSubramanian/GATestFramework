@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Promo Banner style-variant fixture — covers the 4 real cq:styleIds from
-     /conf/global-atlantic/settings/wcm/styles/promo-banner-default (verified in kkr-aem policies):
-     promo-granite, promo-azul, promo-aubergine, promo-footer.
-     The live style guide page never had any of these variants selected on its 5 instances,
-     so PB-011/012/013/014/033/034/035/036 correctly self-skip against it (content gap, not a bug). -->
+     /conf/global-atlantic/settings/wcm/policies/ga/components/content/promo-banner/promo-banner-default
+     (verified in kkr-aem): promo-granite, promo-azul, promo-aubergine, promo-footer.
+     CONFIRMED BUG (tests/data/reports/confirmed-bugs-2026-08-11.xlsx, row 4): even with cq:styleIds
+     correctly set here and the policy correctly mapping each styleId to a cmp-promo-banner--<variant>
+     class, the modifier class never renders — apps/ga/components/content/promo-banner/promo-banner.html
+     hardcodes its root class as "cmp-promo-banner" and never applies the Style System's cssClasses.
+     PB-011/012/013/014/033/034/035/036 now assert on this directly instead of self-skipping. -->
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">

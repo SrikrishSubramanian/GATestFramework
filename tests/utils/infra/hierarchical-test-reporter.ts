@@ -102,6 +102,15 @@ export class HierarchicalTestReporter implements Reporter {
 
   private generateHTMLReport(): void {
     const html = this.buildHTMLReport();
+    // Playwright clears/removes its outputDir (test-results/) at the start of a run and
+    // only recreates it lazily when a test actually writes an artifact (trace, screenshot,
+    // etc.). Runs where every test is skipped (e.g. this file, which is entirely
+    // test.skip()) produce no artifacts, so the directory can be gone again by the time
+    // onEnd() fires here even though the constructor created it earlier. Re-ensure it
+    // exists right before writing rather than relying on the constructor-time check.
+    if (!fs.existsSync(this.outputDir)) {
+      fs.mkdirSync(this.outputDir, { recursive: true });
+    }
     const reportPath = path.join(this.outputDir, 'hierarchical-report.html');
     fs.writeFileSync(reportPath, html, 'utf-8');
 

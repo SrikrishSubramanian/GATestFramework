@@ -30,7 +30,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Tabs — Component Interactions @interaction @regression', () => {
     // ─── Click Interactions ───────────────────────────────────────────────────
-    test('TAB-INT-001: clicking 2nd tab makes it active and removes active from 1st', async ({ page }) => {
+    test('@sanity TAB-INT-001: clicking 2nd tab makes it active and removes active from 1st', async ({ page }) => {
         await page.goto(`${BASE()}${STYLE_GUIDE_URL}`, { waitUntil: 'domcontentloaded' });
         // Use the first tabs instance (default / light background)
         const tabsRoot = page.locator(TABS).first();
@@ -172,11 +172,19 @@ test.describe('Tabs — Component Interactions @interaction @regression', () => 
         const secondTab = tabs.nth(1);
         // Ensure 2nd tab is inactive
         await expect(secondTab).not.toHaveClass(/cmp-tabs__tab--active/);
+        // Root-caused 2026-08-13 (same mechanism as TAB-019/TAB-006/TAB-030 in
+        // tabs.author.spec.ts): navigate() resolves at 'domcontentloaded', before the GA
+        // clientlib CSS has necessarily finished applying, and every tab has
+        // `transition: background-color 0.2s ease, color 0.2s ease;` (tabs.less line ~97).
+        // A computed-style read taken immediately after navigate/hover can land mid-transition
+        // instead of at the settled value. Wait out the 200ms transition window before sampling.
+        await page.waitForTimeout(300);
         // Capture background-color before hover
         const bgBefore = // 📏 TODO: Replace with measurement-utils
          await secondTab.evaluate((el) => window.getComputedStyle(el).backgroundColor);
         // Hover over the inactive tab
         await hover(secondTab);
+        await page.waitForTimeout(300);
         // Capture background-color after hover
         const bgAfter = // 📏 TODO: Replace with measurement-utils
          await secondTab.evaluate((el) => window.getComputedStyle(el).backgroundColor);

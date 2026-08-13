@@ -46,7 +46,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // Standard Hover — CTA-authored cards (TC-INT-001 – TC-INT-005)
 // ---------------------------------------------------------------------------
 test.describe('TeaserCard — Standard Hover', () => {
-    test('[TC-INT-001] @interaction @regression Hovering a CTA card changes cursor to pointer', async ({ page }) => {
+    test('[TC-INT-001] @interaction @regression @sanity Hovering a CTA card changes cursor to pointer', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
@@ -103,7 +103,7 @@ test.describe('TeaserCard — Standard Hover', () => {
 // Enhanced Hover — Circle/Top only (TC-INT-006 – TC-INT-010)
 // ---------------------------------------------------------------------------
 test.describe('TeaserCard — Enhanced Hover', () => {
-    test('[TC-INT-006] @interaction @regression Enhanced hover: image expands on card hover', async ({ page }) => {
+    test('[TC-INT-006] @interaction @regression @sanity Enhanced hover: image expands on card hover', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
@@ -134,24 +134,28 @@ test.describe('TeaserCard — Enhanced Hover', () => {
             test.skip();
             return;
         }
-        await hover(enhanced);
-        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-        // An overlay element or pseudo-element should introduce a darkening effect
-        // Check via the card's opacity or an overlay child
-        const hasOverlay = // 📏 TODO: Replace with measurement-utils
-         await enhanced.evaluate(el => {
-            const overlays = Array.from(el.querySelectorAll('[class*="overlay"], [class*="backdrop"]'));
-            if (overlays.length > 0)
-                return true;
-            const cs = getComputedStyle(el, '::before');
-            return cs.backgroundColor !== 'rgba(0, 0, 0, 0)' && cs.backgroundColor !== 'transparent';
-        });
-        // Accept if overlay is via pseudo-element or explicit element — skip gracefully if neither
-        if (!hasOverlay) {
+        const imgWrapper = enhanced.locator(TC_IMAGE_WRAPPER).first();
+        if (await imgWrapper.count() === 0) {
             test.skip();
             return;
         }
-        expect(hasOverlay).toBe(true);
+        // Verified against teaser-card.less (ui.apps.ga clientlib-site/less/components):
+        // the darkening overlay is the image-wrapper's own `::after` pseudo-element
+        // (`background: rgba(0, 0, 0, 0.38); opacity: 0` by default), faded to `opacity: 1`
+        // by the `a.cmp-teaser-card:hover`/`:focus-visible` rule inside `--enhanced-hover`.
+        // The previous check looked for a literal "overlay"/"backdrop" class name, or a
+        // `::before` background on the OUTER wrapper — neither exists in the source; it was
+        // checking the wrong element and the wrong pseudo-element, so `hasOverlay` was always
+        // false and the test blindly skipped instead of actually exercising the real mechanism.
+        const before = await imgWrapper.evaluate(el => getComputedStyle(el, '::after').opacity);
+        await hover(enhanced);
+        await expect.poll(
+            () => imgWrapper.evaluate(el => getComputedStyle(el, '::after').opacity),
+            { timeout: 3000 }
+        ).toBe('1');
+        const afterBg = await imgWrapper.evaluate(el => getComputedStyle(el, '::after').backgroundColor);
+        expect(before, 'Overlay must be hidden (opacity 0) before hover').toBe('0');
+        expect(afterBg, 'Overlay background must be a black/dark tint (rgba(0, 0, 0, x))').toMatch(/^rgba\(0, 0, 0,/);
     });
     test('[TC-INT-008] @interaction @regression Enhanced hover: text transitions to white on hover', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
@@ -214,7 +218,7 @@ test.describe('TeaserCard — Enhanced Hover', () => {
 // Keyboard Navigation (TC-INT-011 – TC-INT-015)
 // ---------------------------------------------------------------------------
 test.describe('TeaserCard — Keyboard Navigation', () => {
-    test('[TC-INT-011] @interaction @regression CTA card link is keyboard focusable via Tab', async ({ page }) => {
+    test('[TC-INT-011] @interaction @regression @sanity CTA card link is keyboard focusable via Tab', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
@@ -293,7 +297,7 @@ test.describe('TeaserCard — Keyboard Navigation', () => {
 // No-hover conditions (TC-INT-016 – TC-INT-018)
 // ---------------------------------------------------------------------------
 test.describe('TeaserCard — No-hover Conditions', () => {
-    test('[TC-INT-016] @interaction @regression Non-CTA card: no hover state applied', async ({ page }) => {
+    test('[TC-INT-016] @interaction @regression @sanity Non-CTA card: no hover state applied', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());
@@ -346,7 +350,7 @@ test.describe('TeaserCard — No-hover Conditions', () => {
 // Left / Right Position Interactions (TC-INT-019 – TC-INT-022)
 // ---------------------------------------------------------------------------
 test.describe('TeaserCard — Left/Right Position Layout', () => {
-    test('[TC-INT-019] @interaction @regression Left-position card: image is to the left of content at desktop', async ({ page }) => {
+    test('[TC-INT-019] @interaction @regression @sanity Left-position card: image is to the left of content at desktop', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new TeaserCardPage(page);
         await pom.navigate(BASE());

@@ -50,7 +50,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
         await expect(root).toHaveAttribute('role', 'region');
         await expect(root).toHaveAttribute('aria-label', 'Story Cards');
     });
-    test('[NCC-002] @smoke @regression Wrapper has white background, border-radius 12px, max-width 616px', async ({ page }) => {
+    test('[NCC-002] @smoke @regression @sanity Wrapper has white background, border-radius 12px, max-width 616px', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const wrapper = page.locator(WRAPPER).first();
@@ -71,7 +71,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
         // Max-width is 616px or 100% (mobile/constrained container)
         expect(['616px', '100%']).toContain(styles.maxWidth);
     });
-    test('[NCC-003] @smoke @regression Cards list is a <ul> element', async ({ page }) => {
+    test('[NCC-003] @smoke @regression @sanity Cards list is a <ul> element', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const cardsList = page.locator(CARDS).first();
@@ -80,7 +80,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
          await cardsList.evaluate((el: HTMLElement) => el.tagName.toLowerCase());
         expect(tagName).toBe('ul');
     });
-    test('[NCC-004] @smoke @regression Card is a <li> element inside the list', async ({ page }) => {
+    test('[NCC-004] @smoke @regression @sanity Card is a <li> element inside the list', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const card = page.locator(CARD).first();
@@ -89,7 +89,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
          await card.evaluate((el: HTMLElement) => el.tagName.toLowerCase());
         expect(tagName).toBe('li');
     });
-    test('[NCC-005] @smoke @regression Headline uses semibold font and 2-line clamp', async ({ page }) => {
+    test('[NCC-005] @smoke @regression @sanity Headline uses semibold font and 2-line clamp', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const headline = page.locator(HEADLINE).first();
@@ -112,7 +112,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
         // Overflow hidden for ellipsis
         expect(styles.overflow).toBe('hidden');
     });
-    test('[NCC-006] @smoke @regression CTA button renders with arrow icon and text', async ({ page }) => {
+    test('[NCC-006] @smoke @regression @sanity CTA button renders with arrow icon and text', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const cta = page.locator(CTA).first();
@@ -124,7 +124,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
         const textContent = await text.textContent();
         expect(textContent?.trim().length).toBeGreaterThan(0);
     });
-    test('[NCC-007] @smoke @regression Image container CSS rules define 127x95px dimensions and 8px radius', async ({ page }) => {
+    test('[NCC-007] @smoke @regression @sanity Image container CSS rules define 127x95px dimensions and 8px radius', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
@@ -158,7 +158,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
             expect(cssApplied.borderRadius).toContain('8px');
         }
     });
-    test('[NCC-008] @smoke @regression Spacer is a 1px gray divider between content and controls', async ({ page }) => {
+    test('[NCC-008] @smoke @regression @sanity Spacer is a 1px gray divider between content and controls', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         // Spacer sits inside __wrapper, between the swiper and controls (not inside each card)
@@ -181,7 +181,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
         expect(styles.backgroundColor).not.toBe('rgb(255, 255, 255)');
         // TODO: Use assertBackground() for color checks
     });
-    test('[NCC-009] @smoke @regression Controls section renders counter, progress bar, and toggle', async ({ page }) => {
+    test('[NCC-009] @smoke @regression @sanity Controls section renders counter, progress bar, and toggle', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const controls = page.locator(CONTROLS).first();
@@ -215,7 +215,7 @@ test.describe('NestedContentCarousel — Core Structure', () => {
 // Carousel Behavior (NCC-011 to NCC-016)
 // ---------------------------------------------------------------------------
 test.describe('NestedContentCarousel — Carousel Behavior', () => {
-    test('[NCC-011] @smoke @regression Counter shows "01" as current slide initially', async ({ page }) => {
+    test('[NCC-011] @smoke @regression @sanity Counter shows "01" as current slide initially', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const current = page.locator(CURRENT).first();
@@ -258,7 +258,7 @@ test.describe('NestedContentCarousel — Carousel Behavior', () => {
         // At initial load the animation should be near 0%; allow up to 50px for timing variance
         expect(widthPx).toBeLessThan(50);
     });
-    test('[NCC-015] @smoke @regression Toggle button shows pause icon by default', async ({ page }) => {
+    test('[NCC-015] @smoke @regression @sanity Toggle button shows pause icon by default', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const toggle = page.locator(TOGGLE).first();
@@ -272,7 +272,7 @@ test.describe('NestedContentCarousel — Carousel Behavior', () => {
         // measurement: use measurement-utils for cleaner code
         expect(playDisplay).toBe('none');
     });
-    test('[NCC-016] @smoke @regression Toggle has aria-label "Pause carousel" by default', async ({ page }) => {
+    test('[NCC-016] @smoke @regression @sanity Toggle has aria-label "Pause carousel" by default', async ({ page }) => {
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
         const toggle = page.locator(TOGGLE).first();
@@ -358,7 +358,7 @@ test.describe('NestedContentCarousel — Single Card Mode', () => {
 // Responsive / Mobile (NCC-021 to NCC-026)
 // ---------------------------------------------------------------------------
 test.describe('NestedContentCarousel — Responsive', () => {
-    test('[NCC-021] @mobile @regression At 390px: image container CSS applies display:none', async ({ page }) => {
+    test('[NCC-021] @mobile @regression @sanity At 390px: image container CSS applies display:none', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
@@ -384,7 +384,7 @@ test.describe('NestedContentCarousel — Responsive', () => {
             expect(display).toBe('none');
         }
     });
-    test('[NCC-022] @mobile @regression At 390px: content stacks vertically (flex-direction: column)', async ({ page }) => {
+    test('[NCC-022] @mobile @regression @sanity At 390px: content stacks vertically (flex-direction: column)', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
@@ -395,7 +395,7 @@ test.describe('NestedContentCarousel — Responsive', () => {
         // measurement: use measurement-utils for cleaner code
         expect(flexDir).toBe('column');
     });
-    test('[NCC-023] @mobile @regression At 390px: headline uses smaller font size than desktop', async ({ page }) => {
+    test('[NCC-023] @mobile @regression @sanity At 390px: headline uses smaller font size than desktop', async ({ page }) => {
         // Measure at mobile first
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new NestedContentCarouselPage(page);
@@ -412,7 +412,7 @@ test.describe('NestedContentCarousel — Responsive', () => {
         // measurement: use measurement-utils for cleaner code
         expect(mobileFontSize).toBeLessThan(desktopFontSize);
     });
-    test('[NCC-024] @regression At 1440px: image CSS does not hide the container (display != none)', async ({ page }) => {
+    test('[NCC-024] @regression @sanity At 1440px: image CSS does not hide the container (display != none)', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
@@ -430,7 +430,7 @@ test.describe('NestedContentCarousel — Responsive', () => {
         // At desktop, image container should NOT be hidden
         expect(display).not.toBe('none');
     });
-    test('[NCC-025] @regression At 1440px: content is side-by-side (flex-direction row)', async ({ page }) => {
+    test('[NCC-025] @regression @sanity At 1440px: content is side-by-side (flex-direction row)', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());
@@ -441,7 +441,7 @@ test.describe('NestedContentCarousel — Responsive', () => {
         // measurement: use measurement-utils for cleaner code
         expect(flexDir).toBe('row');
     });
-    test('[NCC-026] @mobile @regression No horizontal overflow on mobile viewport', async ({ page }) => {
+    test('[NCC-026] @mobile @regression @sanity No horizontal overflow on mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new NestedContentCarouselPage(page);
         await pom.navigate(BASE());

@@ -26,7 +26,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 test.describe('Text — Interactions', () => {
-  test('[TEXT-INTERACTION-001] @interaction @regression Text links are clickable', async ({ page }) => {
+  test('[TEXT-INTERACTION-001] @interaction @regression @sanity Text links are clickable', async ({ page }) => {
     const url = resolveComponentUrl('text');
     await page.goto(url, { waitUntil: 'domcontentloaded' });
 

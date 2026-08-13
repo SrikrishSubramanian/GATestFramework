@@ -28,7 +28,7 @@ test.describe('ContentTrail — GAAM-328: Reskin Acceptance Criteria', () => {
         await expect(page.locator('.cmp-content-trail__container.cmp-content-trail__written').first()).toBeVisible();
         await expect(page.locator('.cmp-content-trail__container.cmp-content-trail__link').first()).toBeVisible();
     });
-    test('[CT-016] @smoke @regression Style guide page shows all background variations', async ({ page }) => {
+    test('[CT-016] @smoke @regression @sanity Style guide page shows all background variations', async ({ page }) => {
         const pom = new ContentTrailPage(page);
         await pom.navigate(BASE());
         // Default (transparent with border)
@@ -190,7 +190,7 @@ test.describe('ContentTrail — GAAM-672: Hover State Enhancement', () => {
     });
 });
 test.describe('ContentTrail — Happy Path', () => {
-    test('[CT-002] @smoke @regression ContentTrail renders correctly', async ({ page }) => {
+    test('[CT-002] @smoke @regression @sanity ContentTrail renders correctly', async ({ page }) => {
         const pom = new ContentTrailPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-content-trail').first();
@@ -206,7 +206,7 @@ test.describe('ContentTrail — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[CT-003] @smoke @regression ContentTrail interactive elements are functional', async ({ page }) => {
+    test('[CT-003] @smoke @regression @sanity ContentTrail interactive elements are functional', async ({ page }) => {
         const pom = new ContentTrailPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-content-trail').first();
@@ -221,7 +221,7 @@ test.describe('ContentTrail — Happy Path', () => {
     });
 });
 test.describe('ContentTrail — Negative & Boundary', () => {
-    test('[CT-004] @negative @regression ContentTrail handles empty content gracefully', async ({ page }) => {
+    test('[CT-004] @negative @regression @sanity ContentTrail handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -232,7 +232,7 @@ test.describe('ContentTrail — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-content-trail').first()).toBeVisible();
     });
-    test('[CT-005] @negative @regression ContentTrail handles missing images', async ({ page }) => {
+    test('[CT-005] @negative @regression @sanity ContentTrail handles missing images', async ({ page }) => {
         const pom = new ContentTrailPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-content-trail img');
@@ -245,7 +245,7 @@ test.describe('ContentTrail — Negative & Boundary', () => {
     });
 });
 test.describe('ContentTrail — Responsive', () => {
-    test('[CT-006] @mobile @regression @mobile ContentTrail adapts to mobile viewport', async ({ page }) => {
+    test('[CT-006] @mobile @regression @mobile @sanity ContentTrail adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ContentTrailPage(page);
         await pom.navigate(BASE());
@@ -261,7 +261,7 @@ test.describe('ContentTrail — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[CT-007] @mobile @regression ContentTrail adapts to tablet viewport', async ({ page }) => {
+    test('[CT-007] @mobile @regression @sanity ContentTrail adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new ContentTrailPage(page);
         await pom.navigate(BASE());
@@ -321,7 +321,7 @@ test.describe('ContentTrail — Accessibility', () => {
 test.describe('ContentTrail — AEM Dialog Configuration', () => {
     // Content-trail inherits its dialog from the base component (per GAAM-328: "No updates needed to the dialog").
     // Verify the base dialog is accessible via Sling resource resolution.
-    test('[CT-014] @author @regression @smoke ContentTrail dialog is resolvable via base component', async ({ page }) => {
+    test('[CT-014] @author @regression @smoke @sanity ContentTrail dialog is resolvable via base component', async ({ page }) => {
         // GA overlay inherits dialog from kkr-aem-base/components/content/content-trail
         // Check if the base dialog resolves (Sling resourceSuperType chain)
         const baseDialogUrl = `${BASE()}/apps/kkr-aem-base/components/content/content-trail/_cq_dialog.1.json`;

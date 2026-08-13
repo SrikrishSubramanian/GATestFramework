@@ -20,7 +20,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Form Options — Interactions', () => {
-    test('[FO-INTERACTION-001] @interaction @regression Checkbox toggle works', async ({ page }) => {
+    test('[FO-INTERACTION-001] @interaction @regression @sanity Checkbox toggle works', async ({ page }) => {
         const pom = new FormOptionsPage(page);
         await pom.navigate(BASE());
         const checkboxes = page.locator('.cmp-form-options input[type="checkbox"]');

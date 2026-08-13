@@ -26,7 +26,7 @@ test.describe('RateDetailsHero — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[RDH-002] @smoke @regression RateDetailsHero interactive elements are functional', async ({ page }) => {
+    test('[RDH-002] @smoke @regression @sanity RateDetailsHero interactive elements are functional', async ({ page }) => {
         const pom = new RateDetailsHeroPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-rate-details-hero').first();
@@ -41,7 +41,7 @@ test.describe('RateDetailsHero — Happy Path', () => {
     });
 });
 test.describe('RateDetailsHero — Negative & Boundary', () => {
-    test('[RDH-003] @negative @regression RateDetailsHero handles empty content gracefully', async ({ page }) => {
+    test('[RDH-003] @negative @regression @sanity RateDetailsHero handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('RateDetailsHero — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-rate-details-hero').first()).toBeVisible();
     });
-    test('[RDH-004] @negative @regression RateDetailsHero handles missing images', async ({ page }) => {
+    test('[RDH-004] @negative @regression @sanity RateDetailsHero handles missing images', async ({ page }) => {
         const pom = new RateDetailsHeroPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-rate-details-hero img');
@@ -64,7 +64,7 @@ test.describe('RateDetailsHero — Negative & Boundary', () => {
     });
 });
 test.describe('RateDetailsHero — Responsive', () => {
-    test('[RDH-005] @mobile @regression @mobile RateDetailsHero adapts to mobile viewport', async ({ page }) => {
+    test('[RDH-005] @mobile @regression @mobile @sanity RateDetailsHero adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new RateDetailsHeroPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('RateDetailsHero — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[RDH-006] @mobile @regression RateDetailsHero adapts to tablet viewport', async ({ page }) => {
+    test('[RDH-006] @mobile @regression @sanity RateDetailsHero adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new RateDetailsHeroPage(page);
         await pom.navigate(BASE());
@@ -134,16 +134,41 @@ test.describe('RateDetailsHero — AEM Dialog Configuration', () => {
 // Relocated from image.author.spec.ts (MG-065) — CSV import mis-bucketed this under Image;
 // it's actually about the Rate Details Hero component.
 test.describe('RateDetailsHero — CSV Test Cases (GAAM-1320)', () => {
-    test('[RDH-010] @smoke @regression DR AEM FE: Rate Detail Hero padding is not aligned in responsive mode — AC1', async ({ page }) => {
+    test('[RDH-010] @regression @sanity DR AEM FE: Rate Detail Hero padding is not aligned in responsive mode — AC1', async ({ page }) => {
+        // Confirmed product bug via kkr-aem source (static CSS-cascade read, no live content needed):
+        //
+        // ui.apps.ga/.../clientlibs/clientlib-site/less/components/rate-details-hero.less:27-40 —
+        // the component's base (mobile) side padding is @sp-20 (20px), and it switches to
+        // @sp-63 (63px) at `#ga-aem-mixins.breakpoint(@ga-bp-tablet-min, ...)`, i.e. as soon as
+        // the viewport hits 768px.
+        //
+        // ui.apps.ga/.../less/layout/_layout.less:248-260 — the sitewide page grid (`.ga-page`),
+        // which every other component's content aligns to, uses only 24px left/right padding
+        // for the ENTIRE tablet range 768–1023px ("TABLET GRID (768–1023px) ... Margins: 24px"),
+        // only reaching a wider 30px gutter at desktop (>=1024px, default `.ga-page` rule,
+        // lines 33-39).
+        //
+        // ui.apps.ga/.../less/components/detail-hero.less:32-37 — the sibling hero component
+        // that rate-details-hero.less explicitly says its wave-overlay CSS is "Reused from"
+        // (rate-details-hero.less:43) does NOT jump to 63px padding until
+        // @bp_small_desktop_min (1025px, variables.less:240) — much closer to where the page
+        // grid itself changes.
+        //
+        // Net effect: across the whole tablet breakpoint (768-1023px), Rate Details Hero's
+        // content sits ~39px further from the edge (63px vs the page's 24px gutter) than every
+        // other component on the page — exactly the "Contents are not properly left aligned
+        // with another components" misalignment reported in this ticket.
+        await page.setViewportSize({ width: 800, height: 1024 }); // tablet range per variables.less: @ga-bp-tablet-min=768, @ga-bp-tablet-max=1023
         const pom = new RateDetailsHeroPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: *In Responsive Mode:*
-        //
-        // * Rate Details Hero Contents are not properly left aligned with another components - to be fixed
-        // * Also *check with other possible responsive modes - All gaps should be fixed and tested thoroughly.*
-        // * Update the padding left & right for Rate Details Hero to 20px
-        //
-        // !image-20260619-074723.png|width=1096,alt="image-20260619-074723.png"!
-        test.fixme();
+        const root = page.locator('.cmp-rate-details-hero').first();
+        await expect(root).toBeVisible();
+        const paddingLeft = await root.evaluate(el => parseFloat(getComputedStyle(el).paddingLeft));
+        // Expected: 24px, matching the sitewide tablet-range page gutter (_layout.less:258,
+        // "padding-left: ((768 - 720) / 2) // 24px"). Actual: 63px (rate-details-hero.less:39),
+        // because the component's own breakpoint fires ~257px too early (768px vs 1025px)
+        // relative to the page grid / sibling detail-hero component. This assertion is expected to FAIL until
+        // rate-details-hero.less's tablet padding rule is corrected.
+        expect(paddingLeft, 'Rate Details Hero left padding at tablet width (800px) should match the sitewide page grid gutter (24px, _layout.less tablet rule) instead of jumping early to the 63px desktop value (rate-details-hero.less:38-40)').toBeLessThanOrEqual(24);
     });
 });

@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('BioCard — Component Interactions', () => {
-  test('@interaction @regression bio-card adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity bio-card adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new BioCardPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background

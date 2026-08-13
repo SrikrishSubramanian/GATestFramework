@@ -148,7 +148,7 @@ test.describe('InBrief — State Matrix (Responsive)', () => {
 // ── Invalid: contrast concerns (4 tests) ──
 
 test.describe('InBrief — State Matrix (Invalid Combos)', () => {
-    test('[IN_BRIEF-N] @matrix @negative default + light-theme on white (light-on-light)', async ({ page }) => {
+    test('[IN_BRIEF-N] @matrix @negative @sanity default + light-theme on white (light-on-light)', async ({ page }) => {
       // light-theme on light background (white) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new InBriefPage(page);
@@ -157,7 +157,7 @@ test.describe('InBrief — State Matrix (Invalid Combos)', () => {
       await expect(container).toBeVisible();
     });
 
-    test('[IN_BRIEF-N] @matrix @negative default + light-theme on slate (light-on-light)', async ({ page }) => {
+    test('[IN_BRIEF-N] @matrix @negative @sanity default + light-theme on slate (light-on-light)', async ({ page }) => {
       // light-theme on light background (slate) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new InBriefPage(page);
@@ -166,7 +166,7 @@ test.describe('InBrief — State Matrix (Invalid Combos)', () => {
       await expect(container).toBeVisible();
     });
 
-    test('[IN_BRIEF-N] @matrix @negative default + dark-theme on granite (dark-on-dark)', async ({ page }) => {
+    test('[IN_BRIEF-N] @matrix @negative @sanity default + dark-theme on granite (dark-on-dark)', async ({ page }) => {
       // dark-theme on dark background (granite) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new InBriefPage(page);
@@ -175,7 +175,7 @@ test.describe('InBrief — State Matrix (Invalid Combos)', () => {
       await expect(container).toBeVisible();
     });
 
-    test('[IN_BRIEF-N] @matrix @negative default + dark-theme on azul (dark-on-dark)', async ({ page }) => {
+    test('[IN_BRIEF-N] @matrix @negative @sanity default + dark-theme on azul (dark-on-dark)', async ({ page }) => {
       // dark-theme on dark background (azul) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new InBriefPage(page);

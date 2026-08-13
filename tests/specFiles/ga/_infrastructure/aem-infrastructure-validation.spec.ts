@@ -133,7 +133,7 @@ const STYLE_MAPPINGS: StyleMapping[] = [
 test.describe('Style System — CSS Class Existence', () => {
     // Load a style guide page once — all GA component styles should be in the compiled stylesheet
     const STYLE_GUIDE_URL = '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled';
-    test('@regression @smoke Style system CSS classes exist in compiled GA stylesheet', async ({ page }) => {
+    test('@regression @smoke @sanity Style system CSS classes exist in compiled GA stylesheet', async ({ page }) => {
         await page.goto(`${BASE()}${STYLE_GUIDE_URL}`);
         await page.waitForLoadState('networkidle');
         // Search all loaded stylesheets for each expected CSS class

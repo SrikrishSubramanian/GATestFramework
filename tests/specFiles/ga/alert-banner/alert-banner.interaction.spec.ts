@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('AlertBanner — Component Interactions', () => {
-  test('@interaction @regression alert-banner adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity alert-banner adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new AlertBannerPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background

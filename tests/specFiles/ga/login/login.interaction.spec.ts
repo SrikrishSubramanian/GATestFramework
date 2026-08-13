@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Login — Component Interactions', () => {
-  test('@interaction @regression login adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity login adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new LoginPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background

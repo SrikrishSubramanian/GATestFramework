@@ -36,8 +36,6 @@ const ITEM_CONTENT = '.cmp-accordion__item-content';
 // variants exist on the style guide page — no --ga variant is rendered.
 // --default is the visible GA-branded circular icon indicator.
 const INDICATOR_GA = '.cmp-accordion__item-indicator--default';
-const ICON_LINE_H = '.cmp-accordion__item-icon-line--horizontal';
-const ICON_LINE_V = '.cmp-accordion__item-icon-line--vertical';
 test.describe('Accordion — Style Guide Page', () => {
     test('[ACRD-001] @smoke @regression @sanity Style guide page exists and loads', async ({ page }) => {
         const pom = new AccordionPage(page);
@@ -49,7 +47,7 @@ test.describe('Accordion — Style Guide Page', () => {
         await expect(page.locator(`${SECTION_GRANITE} ${ACCORDION}`)).toBeVisible();
         await expect(page.locator(`${SECTION_AZUL} ${ACCORDION}`)).toBeVisible();
     });
-    test('[ACRD-002] @smoke @regression Each accordion section renders all expected items', async ({ page }) => {
+    test('[ACRD-002] @smoke @regression @sanity Each accordion section renders all expected items', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         // White: 4 items, Slate: 3 items, Granite: 3 items, Azul: 4 items
@@ -109,7 +107,7 @@ test.describe('Accordion — Force Closed on Load', () => {
     });
 });
 test.describe('Accordion — Single Expansion Mode', () => {
-    test('[ACRD-011] @smoke @regression Slate section: only one item can be open at a time', async ({ page }) => {
+    test('[ACRD-011] @smoke @regression @sanity Slate section: only one item can be open at a time', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const slateButtons = page.locator(`${SECTION_SLATE} ${ITEM_BUTTON}`);
@@ -132,7 +130,7 @@ test.describe('Accordion — Single Expansion Mode', () => {
     });
 });
 test.describe('Accordion — Pre-expanded Item on Load', () => {
-    test('[ACRD-013] @smoke @regression Slate section: first item expanded by default on load', async ({ page }) => {
+    test('[ACRD-013] @smoke @regression @sanity Slate section: first item expanded by default on load', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const slateButtons = page.locator(`${SECTION_SLATE} ${ITEM_BUTTON}`);
@@ -144,7 +142,7 @@ test.describe('Accordion — Pre-expanded Item on Load', () => {
     });
 });
 test.describe('Accordion — Expand/Collapse Interaction', () => {
-    test('[ACRD-014] @smoke @regression Clicking a button expands the accordion item', async ({ page }) => {
+    test('[ACRD-014] @smoke @regression @sanity Clicking a button expands the accordion item', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
@@ -181,45 +179,48 @@ test.describe('Accordion — Icon Animation', () => {
         // measurement: style check
         expect(transition).toContain('background-color');
     });
-    test('[ACRD-018] @regression @interaction Icon vertical line has rotation transition', async ({ page }) => {
+    test('[ACRD-018] @regression @interaction Icon vertical bar has opacity fade transition', async ({ page }) => {
+        // Root-caused 2026-08-13: there is no classed .cmp-accordion__item-icon-line--vertical/
+        // --horizontal DOM node — the <svg> icons in the markup are legacy and stay display:none.
+        // The actual +/- glyph is drawn by ::before (2x16px vertical bar) and ::after (16x2px
+        // horizontal bar) pseudo-elements on .cmp-accordion__item-indicator--default. Verified live
+        // (localhost:4502/.../accordion.html): ::before transitions `opacity` (fades out on expand,
+        // leaving the horizontal bar as a "−") — it does NOT rotate. ::after is the one that
+        // transitions `transform` (rotates 180° on expand). getComputedStyle() can't be scoped to a
+        // pseudo-element via a locator selector, so this reads it directly off the indicator.
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
-        const vertLine = page.locator(`${SECTION_WHITE} ${ICON_LINE_V}`).first();
-        const transition = // 📏 TODO: Replace with measurement-utils
-         await vertLine.evaluate(el => getComputedStyle(el).transition);
-        // measurement: style check
-        expect(transition).toContain('transform');
+        const indicator = page.locator(`${SECTION_WHITE} ${INDICATOR_GA}`).first();
+        const transition = await indicator.evaluate(el => getComputedStyle(el, '::before').transition);
+        expect(transition).toContain('opacity');
     });
-    test('[ACRD-019] @regression @interaction Expanded item icon vertical line is rotated/hidden', async ({ page }) => {
+    test('[ACRD-019] @regression @interaction Expanded item icon vertical bar fades to hidden', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
-        // Expand and wait for 300ms CSS transition to complete
+        const indicator = firstButton.locator(INDICATOR_GA);
         await clickElement(firstButton);
         await expect(firstButton).toHaveAttribute('aria-expanded', 'true');
-        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-        // Vertical line should have opacity 0 (rotated to form minus)
-        const vertLine = firstButton.locator(ICON_LINE_V);
-        const opacity = // 📏 TODO: Replace with measurement-utils
-         await vertLine.evaluate(el => getComputedStyle(el).opacity);
-        // measurement: style check
+        // Settle the 0.3s opacity transition (see ACRD-018) before sampling.
+        await page.waitForTimeout(300);
+        // Vertical bar (::before) should have opacity 0, leaving only the horizontal bar ("−")
+        const opacity = await indicator.evaluate(el => getComputedStyle(el, '::before').opacity);
         expect(Number(opacity)).toBeLessThanOrEqual(0.01);
     });
-    test('[ACRD-020] @regression @interaction Collapsed item icon shows plus shape', async ({ page }) => {
+    test('[ACRD-020] @regression @interaction Collapsed item icon shows plus shape (both bars visible)', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const firstButton = page.locator(`${SECTION_WHITE} ${ITEM_BUTTON}`).first();
         // Ensure collapsed
         await expect(firstButton).toHaveAttribute('aria-expanded', 'false');
-        // Both horizontal and vertical lines visible (forming +)
-        const hLine = firstButton.locator(ICON_LINE_H);
-        const vLine = firstButton.locator(ICON_LINE_V);
-        await expect(hLine).toBeVisible();
-        await expect(vLine).toBeVisible();
-        const vOpacity = // 📏 TODO: Replace with measurement-utils
-         await vLine.evaluate(el => getComputedStyle(el).opacity);
-        // measurement: style check
-        expect(Number(vOpacity)).toBe(1);
+        // Both bars (::before vertical, ::after horizontal) visible, forming a "+"
+        const indicator = firstButton.locator(INDICATOR_GA);
+        const opacities = await indicator.evaluate(el => ({
+            before: getComputedStyle(el, '::before').opacity,
+            after: getComputedStyle(el, '::after').opacity,
+        }));
+        expect(Number(opacities.before)).toBe(1);
+        expect(Number(opacities.after)).toBe(1);
     });
 });
 test.describe('Accordion — Hover & Focus States', () => {
@@ -272,13 +273,13 @@ test.describe('Accordion — Dark Background Overrides', () => {
         // measurement: style check
         expect(color).toContain('255');
     });
-    test('[ACRD-028] @regression Granite: icon lines use white color', async ({ page }) => {
+    test('[ACRD-028] @regression Granite: icon bars use white color', async ({ page }) => {
+        // See ACRD-018: the icon is drawn by ::before/::after pseudo-elements on
+        // .cmp-accordion__item-indicator--default, not a classed icon-line element.
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
-        const graniteLine = page.locator(`${SECTION_GRANITE} ${ICON_LINE_H}`).first();
-        const bgColor = // 📏 TODO: Replace with measurement-utils
-         await graniteLine.evaluate(el => getComputedStyle(el).backgroundColor);
-        // measurement: style check
+        const indicator = page.locator(`${SECTION_GRANITE} ${ITEM_BUTTON} ${INDICATOR_GA}`).first();
+        const bgColor = await indicator.evaluate(el => getComputedStyle(el, '::after').backgroundColor);
         // Should be white on dark background
         expect(bgColor).toContain('255');
     });
@@ -341,7 +342,7 @@ test.describe('Accordion — Content Panel', () => {
     });
 });
 test.describe('Accordion — Responsive', () => {
-    test('[ACRD-034] @mobile @regression Accordion renders on mobile viewport', async ({ page }) => {
+    test('[ACRD-034] @mobile @regression @sanity Accordion renders on mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
@@ -349,13 +350,13 @@ test.describe('Accordion — Responsive', () => {
         // All accordion items should still be present
         await expect(page.locator(`${SECTION_WHITE} ${ITEM}`)).toHaveCount(4);
     });
-    test('[ACRD-035] @mobile @regression Accordion renders on tablet viewport', async ({ page }) => {
+    test('[ACRD-035] @mobile @regression @sanity Accordion renders on tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         await expect(page.locator(ACCORDION).first()).toBeVisible();
     });
-    test('[ACRD-036] @mobile @regression Expand/collapse works on mobile', async ({ page }) => {
+    test('[ACRD-036] @mobile @regression @sanity Expand/collapse works on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
@@ -365,7 +366,7 @@ test.describe('Accordion — Responsive', () => {
         await clickElement(firstButton);
         await expect(firstButton).toHaveAttribute('aria-expanded', 'false');
     });
-    test('[ACRD-037] @mobile @regression Mobile font size adjusts', async ({ page }) => {
+    test('[ACRD-037] @mobile @regression @sanity Mobile font size adjusts', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
@@ -394,14 +395,16 @@ test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion
     // The accordion_item_content policy must allow: text, button, image, headline-block,
     // separator, spacer, statistic, image-with-nested-content, video-external.
     // The fixture section_mixed_content has pre-expanded items with diverse child types.
-    test('[ACRD-048] @regression @smoke Accordion item renders button child component', async ({ page }) => {
+    test('[ACRD-048] @regression @smoke @sanity Accordion item renders button child component', async ({ page }) => {
         await deployFixture('accordion', page);
         await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
         // The mixed-content accordion has a button inside item_0
         const buttonInItem = page.locator(`${ITEM_CONTENT} .cmp-button`);
         await expect(buttonInItem.first()).toBeVisible();
-        // Verify it rendered as a proper button with an anchor link
-        await expect(buttonInItem.first().locator('a')).toBeVisible();
+        // .cmp-button IS the anchor itself (ui.apps/.../kkr-aem-base/components/content/button/
+        // button.html renders <a class="cmp-button">) — not a wrapper containing one. Verify it
+        // rendered as a real link, not a nested <a>.
+        await expect(buttonInItem.first()).toHaveAttribute('href', /.+/);
     });
     test('[ACRD-049] @regression Accordion item renders headline-block child component', async ({ page }) => {
         await deployFixture('accordion', page);
@@ -468,23 +471,20 @@ test.describe('Accordion — GAAM-611: Header Tab Removed from Dialog', () => {
     });
 });
 test.describe('Accordion — CSV Test Cases (GAAM-1362)', () => {
-    test('[CCRD-059] @smoke @regression CMS-FE | Text component font size is incorrect when it is added inside "Accordion" component — AC1', async ({ page }) => {
+    test('[CCRD-059] @regression @sanity CMS-FE | Text component font size is incorrect when it is added inside "Accordion" component — AC1', async ({ page }) => {
+        // Verified live: this no longer reproduces. Text <p> inside an accordion item and a
+        // standalone Text component's <p> both render at the expected 18px — not the reported
+        // 22px. Already fixed; encoding the expected (passing) behavior as a regression guard.
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: Launch [https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/components/accordion.html?wcmmode=disabled|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/components/accordion.html?wcmmode=disabled] 
-        // 
-        // Inspect on the text component under Accordion and verify the font size
-        // 
-        // *Actual*: Font size is displayed as 22px when added inside “Accordion” component. But it is showing as 18px correctly for standalone Text component
-        // 
-        // *Expected*: Font size should be displayed as 18px
-        // 
-        // !image-20260624-101015.png|width=344,alt="image-20260624-101015.png"!
-        test.fixme();
+        const textInAccordion = page.locator('.cmp-accordion .cmp-text p').first();
+        await expect(textInAccordion).toBeVisible();
+        const fontSize = await textInAccordion.evaluate(el => getComputedStyle(el).fontSize);
+        expect(fontSize, 'Text inside Accordion should render at 18px, matching standalone Text').toBe('18px');
     });
 });
 test.describe('Accordion — Happy Path', () => {
-    test('[CCRD-060] @smoke @regression Accordion renders correctly', async ({ page }) => {
+    test('[CCRD-060] @smoke @regression @sanity Accordion renders correctly', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-accordion').first();
@@ -500,7 +500,7 @@ test.describe('Accordion — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[CCRD-061] @smoke @regression Accordion interactive elements are functional', async ({ page }) => {
+    test('[CCRD-061] @smoke @regression @sanity Accordion interactive elements are functional', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-accordion').first();
@@ -515,7 +515,7 @@ test.describe('Accordion — Happy Path', () => {
     });
 });
 test.describe('Accordion — Negative & Boundary', () => {
-    test('[CCRD-062] @negative @regression Accordion handles empty content gracefully', async ({ page }) => {
+    test('[CCRD-062] @negative @regression @sanity Accordion handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -526,7 +526,7 @@ test.describe('Accordion — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-accordion').first()).toBeVisible();
     });
-    test('[CCRD-063] @negative @regression Accordion handles missing images', async ({ page }) => {
+    test('[CCRD-063] @negative @regression @sanity Accordion handles missing images', async ({ page }) => {
         const pom = new AccordionPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-accordion img');
@@ -565,88 +565,90 @@ test.describe('Accordion — Accessibility', () => {
 test.describe('Accordion — AEM Dialog Configuration', () => {
 });
 test.describe('Accordion — CSV Test Cases (GAAM-1316)', () => {
-    test('[CCRD-074] @smoke @regression DR AEM FE: Filter Show/Hide Rendering – Annuity Category & Channel — AC1', async ({ page }) => {
-        const pom = new AccordionPage(page);
-        await pom.navigate(BASE());
+    test('[CCRD-074] @regression @sanity DR AEM FE: Filter Show/Hide Rendering – Annuity Category & Channel — AC1', async ({ page }) => {
+        // Root-caused 2026-08-13: this ticket is about ga/components/dynamic-rate/accordion (the
+        // "Rate List Accordion"), not the generic ga/components/content/accordion this spec file
+        // otherwise tests — AccordionPage.navigate() goes to the wrong style-guide page entirely,
+        // and .cmp-accordion__content doesn't exist anywhere in either component (verified live:
+        // real classes are .cmp-accordion__panel and .cmp-accordion__item-content). The dynamic-rate
+        // accordion-item HTL (ui.apps.ga/.../dynamic-rate/accordion/accordion-item/accordion-item.html
+        // ~line 40-49) only renders .cmp-accordion__item-badges (containing
+        // .cmp-accordion__item-annuity-category / .cmp-accordion__item-channel) when
+        // annuityCategoryTitle/channelTitle are set and not the '--' placeholder — i.e. hidden by
+        // default. Verified live against the real style guide page for this component,
+        // /content/global-atlantic/style-guide/components/rate-list-accordion.html: all 14 authored
+        // items have neither field set, and correctly render zero badges — confirming the "hide"
+        // half of this AC (matches CCRD-075's dialog-side finding that both fields are optional).
+        await page.goto(`${BASE()}/content/global-atlantic/style-guide/components/rate-list-accordion.html?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
         const root = page.locator('.cmp-accordion').first();
         await expect(root).toBeVisible();
-        // Element ordering verified by DOM structure
-        const content = root.locator('.cmp-accordion__content').first();
-        await expect(content).toBeVisible();
+        const items = root.locator('.cmp-accordion__item');
+        const itemCount = await items.count();
+        expect(itemCount).toBeGreaterThan(0);
+        // None of the style guide's items configure annuityCategory/channel — badges must stay hidden.
+        await expect(page.locator('.cmp-accordion__item-badges')).toHaveCount(0);
+        // Header renders before content in DOM order for every item (collapsed panel stays after its trigger).
+        for (let i = 0; i < itemCount; i++) {
+            const item = items.nth(i);
+            const order = await item.evaluate((el) => {
+                const header = el.querySelector('.cmp-accordion__item-header');
+                const content = el.querySelector('.cmp-accordion__item-content');
+                if (!header || !content) return null;
+                return header.compareDocumentPosition(content) === Node.DOCUMENT_POSITION_FOLLOWING;
+            });
+            expect(order).toBe(true);
+        }
     });
 });
 test.describe('Accordion — CSV Test Cases (GAAM-1315)', () => {
-    test('[CCRD-075] @smoke @regression DR AEM BE: Filter Show/Hide Dialog Configuration – Annuity Category & Channel — AC1', async ({ page }) => {
-        const pom = new AccordionPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: *As a* content author,
-        // *I want* to control the visibility of Annuity Category and Channel filters via the component dialog and configure them as optional fields in the Accordion Item
-        // *So that* each filter can be independently shown or hidden, and accordion rows without a category or channel value render without a badge.
-        // 
-        // ----
-        // 
-        // *Dialog Field Specifications — “Accordion - Dynamic Rates” Component* 
-        // 
-        // {adf:display=block}
-        // {"type":"table","attrs":{"isNumberColumnEnabled":false,"layout":"center","localId":"57a89a3a-01c7-44a7-b38e-036e7f6fa456"},"content":[{"type":"tableRow","attrs":{"localId":"5b99063a9b9b"},"content":[{"type":"tableHeader","attrs":{"localId":"61e199539b6f","colwidth":[229]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Field Name","marks":[{"type":"strong"}]}],"attrs":{"localId":"6d8578ef46dc"}}]},{"type":"tableHeader","attrs":{"localId":"8928bfc577e7","colwidth":[174]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Type","marks":[{"type":"strong"}]}],"attrs":{"localId":"7cab002ae2d3"}}]},{"type":"tableHeader","attrs":{"localId":"16dacdaeee33","colwidth":[163]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Required?","marks":[{"type":"strong"}]}],"attrs":{"localId":"9d2251ebc69f"}}]},{"type":"tableHeader","attrs":{"localId":"44ce41506972","colwidth":[190]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Default","marks":[{"type":"strong"}]}],"attrs":{"localId":"09ed6cc17e5a"}}]},{"type":"tableHeader","attrs":{"localId":"55fbc06635c4","colwidth":[329]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Authoring Guidance","marks":[{"type":"strong"}]}],"attrs":{"localId":"935110386c05"}}]},{"type":"tableHeader","attrs":{"localId":"4dc3ae7e77ed","colwidth":[288]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Developer Notes","marks":[{"type":"strong"}]}],"attrs":{"localId":"29b82fbe093d"}}]}]},{"type":"tableRow","attrs":{"localId":"f6a0d6829b50"},"content":[{"type":"tableCell","attrs":{"localId":"082fa9a8e347","colwidth":[229]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Show Annuity Category Filter"}],"attrs":{"localId":"73b4f63511d7"}}]},{"type":"tableCell","attrs":{"localId":"cac291dadebf","colwidth":[174]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Checkbox"}],"attrs":{"localId":"4e57ed1188dd"}}]},{"type":"tableCell","attrs":{"localId":"fed4cf70a31a","colwidth":[163]},"content":[{"type":"paragraph","content":[{"type":"text","text":"No"}],"attrs":{"localId":"139c8e884a65"}}]},{"type":"tableCell","attrs":{"localId":"63d500ce046f","colwidth":[190]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Checked (visible)"}],"attrs":{"localId":"0d097f469d6e"}}]},{"type":"tableCell","attrs":{"localId":"f624e00709e2","colwidth":[329]},"content":[{"type":"bulletList","content":[{"type":"listItem","attrs":{"localId":"31b2acd36c27"},"content":[{"type":"paragraph","content":[{"type":"text","text":"Uncheck to hide the Annuity Category filter"}],"attrs":{"localId":"ea8a364460c6"}}]}],"attrs":{"localId":"75ab6eb8ae99"}}]},{"type":"tableCell","attrs":{"localId":"03985760c2c3","colwidth":[288]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Store as "},{"type":"text","text":"./showAnnuityCategory","marks":[{"type":"code"}]},{"type":"text","text":"; default: "},{"type":"text","text":"true","marks":[{"type":"code"}]}],"attrs":{"localId":"3b9b2d157ab2"}}]}]},{"type":"tableRow","attrs":{"localId":"1ccba29c5e31"},"content":[{"type":"tableCell","attrs":{"localId":"75d5f52aa1f9","colwidth":[229]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Show Channel Filter"}],"attrs":{"localId":"8a0157eb748d"}}]},{"type":"tableCell","attrs":{"localId":"050c5642e01f","colwidth":[174]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Checkbox"}],"attrs":{"localId":"5520420d50a4"}}]},{"type":"tableCell","attrs":{"localId":"cdaae91f0b78","colwidth":[163]},"content":[{"type":"paragraph","content":[{"type":"text","text":"No"}],"attrs":{"localId":"68df7b4e3096"}}]},{"type":"tableCell","attrs":{"localId":"d6b902938213","colwidth":[190]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Unchecked (hidden)"}],"attrs":{"localId":"2862a9f45986"}}]},{"type":"tableCell","attrs":{"localId":"fcbcd9e2323f","colwidth":[329]},"content":[{"type":"bulletList","content":[{"type":"listItem","attrs":{"localId":"ac1bab10cb44"},"content":[{"type":"paragraph","content":[{"type":"text","text":"Check to enable the Channel filter"}],"attrs":{"localId":"0ef668e40580"}}]}],"attrs":{"localId":"eda4d903d1ee"}}]},{"type":"tableCell","attrs":{"localId":"36d72c315980","colwidth":[288]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Store as "},{"type":"text","text":"./showChannel","marks":[{"type":"code"}]},{"type":"text","text":"; default: "},{"type":"text","text":"false","marks":[{"type":"code"}]}],"attrs":{"localId":"5791408076ca"}}]}]},{"type":"tableRow","attrs":{"localId":"1ccba29c5e31"},"content":[{"type":"tableCell","attrs":{"localId":"75d5f52aa1f9","colwidth":[229,174],"colspan":2},"content":[{"type":"paragraph","content":[{"type":"text","text":"Existing Component - where changes to be incorporated"}],"attrs":{"localId":"6e55f46d94c5"}}]},{"type":"tableCell","attrs":{"localId":"cdaae91f0b78","colwidth":[163,190,329,288],"colspan":4},"content":[{"type":"mediaSingle","attrs":{"width":275,"widthType":"pixel","localId":"68e296e0767b","layout":"align-start"},"content":[{"type":"media","attrs":{"type":"file","id":"image-20260618-174810.png","alt":"image-20260618-174810.png","collection":"","localId":"4ced8758c286","height":580,"width":556}}]},{"type":"paragraph","attrs":{"localId":"6481c82d1535"}},{"type":"paragraph","attrs":{"localId":"a505fddd151e"}}]}]}]}
-        // {adf}
-        // 
-        // *Dialog Field Specifications — “Accordion Item – Dynamic Rates” Component*
-        // 
-        // {adf:display=block}
-        // {"type":"table","attrs":{"isNumberColumnEnabled":false,"layout":"center","localId":"1e2ad323-c850-4c12-915f-10fa8302c46b"},"content":[{"type":"tableRow","attrs":{"localId":"0cbcb7b7aa62"},"content":[{"type":"tableHeader","attrs":{"localId":"317181918206","colwidth":[199]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Field Name","marks":[{"type":"strong"}]}],"attrs":{"localId":"ffeacd03f4ed"}}]},{"type":"tableHeader","attrs":{"localId":"04979463ad33","colwidth":[172]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Type","marks":[{"type":"strong"}]}],"attrs":{"localId":"5ed8b415766a"}}]},{"type":"tableHeader","attrs":{"localId":"0ec26bcba945","colwidth":[104]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Required?","marks":[{"type":"strong"}]}],"attrs":{"localId":"d6468a30d196"}}]},{"type":"tableHeader","attrs":{"localId":"62de88d592be","colwidth":[494]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Authoring Guidance","marks":[{"type":"strong"}]}],"attrs":{"localId":"7ee86146924d"}}]},{"type":"tableHeader","attrs":{"localId":"5356ada372b8","colwidth":[298]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Developer Notes","marks":[{"type":"strong"}]}],"attrs":{"localId":"282ecf010af3"}}]}]},{"type":"tableRow","attrs":{"localId":"3d809e4791ca"},"content":[{"type":"tableCell","attrs":{"localId":"760c0ee9215c","colwidth":[199]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Title"}],"attrs":{"localId":"570f1544689c"}}]},{"type":"tableCell","attrs":{"localId":"559c36dfbd7a","colwidth":[172]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Text field"}],"attrs":{"localId":"acb0c15dce2e"}}]},{"type":"tableCell","attrs":{"localId":"d5f160eb4c32","colwidth":[104]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Yes"}],"attrs":{"localId":"ad0689036d32"}}]},{"type":"tableCell","attrs":{"localId":"ee91c098be24","colwidth":[494]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Product name displayed as the accordion row label"}],"attrs":{"localId":"489456493639"}}]},{"type":"tableCell","attrs":{"localId":"cca93f9c9d90","colwidth":[298]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Store as "},{"type":"text","text":"./title","marks":[{"type":"code"}]}],"attrs":{"localId":"3bead850653b"}}]}]},{"type":"tableRow","attrs":{"localId":"8d85f2f75b54"},"content":[{"type":"tableCell","attrs":{"localId":"2c763ff3d75a","colwidth":[199]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Annuity Category"}],"attrs":{"localId":"0075ad6e97ba"}}]},{"type":"tableCell","attrs":{"localId":"816caf7ad702","colwidth":[172]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Path field"}],"attrs":{"localId":"ccb965f26ea1"}}]},{"type":"tableCell","attrs":{"localId":"b4aa13e38f99","colwidth":[104]},"content":[{"type":"paragraph","content":[{"type":"text","text":"No"}],"attrs":{"localId":"b5918684aa0b"}}]},{"type":"tableCell","attrs":{"localId":"112ddfcdbc44","colwidth":[494]},"content":[{"type":"bulletList","content":[{"type":"listItem","attrs":{"localId":"3b2622cfc4d8"},"content":[{"type":"paragraph","content":[{"type":"text","text":"Optional; "}],"attrs":{"localId":"3dfa38d94112"}}]},{"type":"listItem","attrs":{"localId":"3b2622cfc4d8"},"content":[{"type":"paragraph","content":[{"type":"text","text":"select the applicable annuity category tag; "}],"attrs":{"localId":"3dfa38d94112"}}]},{"type":"listItem","attrs":{"localId":"3b2622cfc4d8"},"content":[{"type":"paragraph","content":[{"type":"text","text":"if left blank, no badge renders for this row"}],"attrs":{"localId":"3dfa38d94112"}}]}],"attrs":{"localId":"4eac9abb973c"}}]},{"type":"tableCell","attrs":{"localId":"a1fd87b49fe2","colwidth":[298]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Change from mandatory to optional; store as "},{"type":"text","text":"./annuityCategory","marks":[{"type":"code"}]}],"attrs":{"localId":"bfbd3d7bd186"}}]}]},{"type":"tableRow","attrs":{"localId":"2f9f5055f276"},"content":[{"type":"tableCell","attrs":{"localId":"92e5a3770e28","colwidth":[199]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Channel"}],"attrs":{"localId":"67e42c579cac"}}]},{"type":"tableCell","attrs":{"localId":"bae25dd4ba3c","colwidth":[172]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Path field"}],"attrs":{"localId":"13e3f7348286"}}]},{"type":"tableCell","attrs":{"localId":"d2884f49e1d4","colwidth":[104]},"content":[{"type":"paragraph","content":[{"type":"text","text":"No"}],"attrs":{"localId":"4119ae180d64"}}]},{"type":"tableCell","attrs":{"localId":"d481864bddac","colwidth":[494]},"content":[{"type":"bulletList","content":[{"type":"listItem","attrs":{"localId":"3b2622cfc4d8"},"content":[{"type":"paragraph","content":[{"type":"text","text":"Optional; "}],"attrs":{"localId":"e055da79ba00"}}]},{"type":"listItem","attrs":{"localId":"e5a561ca4510"},"content":[{"type":"paragraph","content":[{"type":"text","text":"select the applicable channel tag; "}],"attrs":{"localId":"1f19d9acd937"}}]},{"type":"listItem","attrs":{"localId":"e5a561ca4510"},"content":[{"type":"paragraph","content":[{"type":"text","text":"if left blank, no badge renders for this row"}],"attrs":{"localId":"1f19d9acd937"}}]}],"attrs":{"localId":"3eb4497b6367"}}]},{"type":"tableCell","attrs":{"localId":"c23bf8c9eb1e","colwidth":[298]},"content":[{"type":"paragraph","content":[{"type":"text","text":"Change from mandatory to optional; store as "},{"type":"text","text":"./channel","marks":[{"type":"code"}]}],"attrs":{"localId":"82620f1d71f3"}}]}]},{"type":"tableRow","attrs":{"localId":"77cb7f9e9b92"},"content":[{"type":"tableCell","attrs":{"localId":"b5d4ec9afa88","colwidth":[199,172],"colspan":2},"content":[{"type":"paragraph","content":[{"type":"text","text":"Existing Component - where changes to be incorporated"}],"attrs":{"localId":"b36d079a4411"}}]},{"type":"tableCell","attrs":{"localId":"998bd4cb894e","colwidth":[104,494,298],"colspan":3},"content":[{"type":"mediaSingle","attrs":{"width":380,"widthType":"pixel","localId":"b806c6aa1228","layout":"align-start"},"content":[{"type":"media","attrs":{"type":"file","id":"image-20260618-174944.png","alt":"image-20260618-174944.png","collection":"","localId":"1375c290496d","height":509,"width":539}}]},{"type":"paragraph","attrs":{"localId":"0ccfbaa158eb"}}]}]}]}
-        // {adf}
-        // 
-        // *Acceptance Criteria*
-        // 
-        // *Dialog Structure*
-        // 
-        // * Two independent checkboxes will be added in the *“Accordion - Dynamic Rates” Component* dialog: 
-        // ** Show Annuity Category Filter and 
-        // ** Show Channel Filter
-        // * Annuity Category checkbox is checked by default; 
-        // * Channel checkbox is unchecked by default
-        // * Annuity Category and Channel fields in the *“Accordion Item – Dynamic Rates” Component* dialog:
-        // ** will be changed from mandatory to optional
-        // 
-        // *Field Behavior & Validation*
-        // 
-        // * Each checkbox controls both the filter visibility
-        // * When Channel is unchecked, Channel filter does not render on desktop, mobile, tablet or within the mobile filter modal
-        // * When Annuity Category is unchecked, Annuity Category filter does not render
-        // * If Annuity Category is left blank in the Accordion Item dialog, no Annuity Category badge renders for that row
-        // * If Channel is left blank in the Accordion Item dialog, no Channel badge renders for that row
-        // * Both checkboxes operate independently — hiding one does not affect the other
-        // 
-        // 
-        // 
-        // *Out of Scope*
-        // 
-        // * Front-end rendering and visual validation (covered in [https://bounteous.jira.com/browse/GAAM-1316|https://bounteous.jira.com/browse/GAAM-1316|smart-link])
-        // 
-        // *Developer Instructions*
-        // 
-        // * Component should be available for both GA only
-        // * Component should be available in all templates except Rate Admin and HTML template
-        // * Update Accordion Item – Dynamic Rates dialog to make Annuity Category and Channel optional fields
-        // * Update existing JUnit tests to cover both checkbox states, default values, and empty field badge behavior
-        // * Create / update Author Documentation
-        // 
-        // *QA Checklist*
-        // 
-        // * Annuity Category checkbox is checked by default on a new component instance
-        // * Channel checkbox is unchecked by default on a new component instance
-        // * Both checkboxes save and persist correctly on dialog close
-        // * Annuity Category and Channel fields in Accordion Item – Dynamic Rates dialog are optional — component saves without them
-        // * Author Documentation accessible via the *?* on the component dialog
-        test.fixme();
+    test('[CCRD-075] @regression @sanity DR AEM BE: Filter Show/Hide Dialog Configuration – Annuity Category & Channel — AC1', async ({ page }) => {
+        // Dialog-structure scope only (front-end rendering is CCRD-074). Verified live: the
+        // "Show Annuity Category Filter" / "Show Channel Filter" checkboxes already exist on
+        // the parent dialog with the correct defaults, and Annuity Category / Channel are
+        // already optional on the accordion-item dialog. Already implemented — encoding as a
+        // regression guard against the dialog JSON rather than exercising the UI.
+        const authorUrl = ENV.AEM_AUTHOR_URL || "http://localhost:4502";
+        const accordionDialog = await page.request.get(`${authorUrl}/apps/ga/components/dynamic-rate/accordion/_cq_dialog.infinity.json`).then(r => r.json());
+        const itemDialog = await page.request.get(`${authorUrl}/apps/ga/components/dynamic-rate/accordion/accordion-item/_cq_dialog.infinity.json`).then(r => r.json());
+
+        function findField(node: any, name: string): any {
+            if (node && typeof node === "object") {
+                if (node.name === `./${name}`) return node;
+                for (const key of Object.keys(node)) {
+                    if (typeof node[key] === "object") {
+                        const found = findField(node[key], name);
+                        if (found) return found;
+                    }
+                }
+            }
+            return null;
+        }
+
+        const showAnnuityCategory = findField(accordionDialog, "showAnnuityCategory");
+        const showChannel = findField(accordionDialog, "showChannel");
+        expect(showAnnuityCategory, "Show Annuity Category Filter checkbox must exist").toBeTruthy();
+        expect(showAnnuityCategory.checked, "Annuity Category filter should be checked (visible) by default").toBe(true);
+        expect(showChannel, "Show Channel Filter checkbox must exist").toBeTruthy();
+        expect(showChannel.checked, "Channel filter should be unchecked (hidden) by default").not.toBe(true);
+
+        const annuityCategoryField = findField(itemDialog, "annuityCategory");
+        const channelField = findField(itemDialog, "channel");
+        expect(annuityCategoryField, "Annuity Category field must exist on the accordion-item dialog").toBeTruthy();
+        expect(annuityCategoryField.required, "Annuity Category must be optional, not required").not.toBe(true);
+        expect(channelField, "Channel field must exist on the accordion-item dialog").toBeTruthy();
+        expect(channelField.required, "Channel must be optional, not required").not.toBe(true);
     });
 });
-test.describe('Accordion — CSV Test Cases (GAAM-1097)', () => {
-    test('[CCRD-076] @smoke @regression CMS FE: Decision Tree – Mobile Behavior — AC1', async ({ page }) => {
-        const pom = new AccordionPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Style System*
-        test.fixme();
-    });
-});
+// [CCRD-076] "CMS FE: Decision Tree – Mobile Behavior — AC1" (CSV Test Cases GAAM-1097) was
+// deleted here rather than fixed or relocated. It is CSV-mis-bucketed under Accordion — the
+// title names Decision Tree, not Accordion — but unlike CCRD-074/075 (which carried a full
+// Jira AC body pointing at concrete dialog fields), this ticket's imported AC text was never
+// more than the single fragment "Style System*" (see the original stub this replaced: `// TODO:
+// Implement assertion for: Style System*`), which is CSV-column bleed-over, not an acceptance
+// criterion — there is no scenario, field, or behavior described anywhere to ground a test
+// against. Decision Tree's own generic mobile-viewport-adaptation coverage already exists
+// independently as DT-005 (decision-tree.author.spec.ts) and its authoring-guide ticket is
+// separately tracked as DT-010; there is no distinct, sourceable "mobile behavior" AC left for
+// this ticket to add. Confirmed via repo-wide search: CCRD-076 does not appear in any CSV/data
+// source in this repo — only as a stale row in accordion-test-summary.html — so there is nothing
+// further to recover.

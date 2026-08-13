@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('DecisionTree — Component Interactions', () => {
-  test('@interaction @regression decision-tree adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity decision-tree adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new DecisionTreePage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background

@@ -27,7 +27,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 // ── CTA Button Hover States ──
 test.describe('Headline Block — CTA Hover States', () => {
-    test('[HB-INT-001] @interaction @regression Primary CTA hover changes background on light section', async ({ page }) => {
+    test('[HB-INT-001] @interaction @regression @sanity Primary CTA hover changes background on light section', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
         const btn = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER} .cmp-button`).first();
@@ -121,7 +121,7 @@ test.describe('Headline Block — Keyboard Navigation', () => {
 });
 // ── CTA Layout Responsiveness ──
 test.describe('Headline Block — CTA Layout Transitions', () => {
-    test('[HB-INT-009] @interaction @regression CTA layout: horizontal at 1440px → vertical at 390px', async ({ page }) => {
+    test('[HB-INT-009] @interaction @regression @sanity CTA layout: horizontal at 1440px → vertical at 390px', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         // Desktop first
         await page.setViewportSize({ width: 1440, height: 900 });
@@ -153,7 +153,7 @@ test.describe('Headline Block — CTA Layout Transitions', () => {
 });
 // ── Cross-Background Consistency ──
 test.describe('Headline Block — Cross-Background Interaction Consistency', () => {
-    test('[HB-INT-011] @interaction @regression All 4 backgrounds have functional CTAs', async ({ page }) => {
+    test('[HB-INT-011] @interaction @regression @sanity All 4 backgrounds have functional CTAs', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
         const sections = [SECTION_WHITE, SECTION_SLATE, SECTION_GRANITE, SECTION_AZUL];

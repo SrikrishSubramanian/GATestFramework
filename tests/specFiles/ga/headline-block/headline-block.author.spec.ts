@@ -43,7 +43,7 @@ test.describe('Headline Block — Core Structure (GAAM-344)', () => {
         const titleBox = await block.locator(TITLE).boundingBox();
         expect(eyeBox!.y).toBeLessThan(titleBox!.y);
     });
-    test('[HB-003] @smoke @regression Descriptor renders below headline with body-m class', async ({ page }) => {
+    test('[HB-003] @smoke @regression @sanity Descriptor renders below headline with body-m class', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
         const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
@@ -55,7 +55,7 @@ test.describe('Headline Block — Core Structure (GAAM-344)', () => {
         const titleBox = await block.locator(TITLE).boundingBox();
         expect(descBox!.y).toBeGreaterThan(titleBox!.y);
     });
-    test('[HB-004] @smoke @regression Descriptor supports rich text (contains <p> tags)', async ({ page }) => {
+    test('[HB-004] @smoke @regression @sanity Descriptor supports rich text (contains <p> tags)', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
         const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
@@ -63,7 +63,7 @@ test.describe('Headline Block — Core Structure (GAAM-344)', () => {
         const pTag = descriptor.locator('p');
         await expect(pTag.first()).toBeVisible();
     });
-    test('[HB-005] @smoke @regression Primary and secondary CTAs render below descriptor', async ({ page }) => {
+    test('[HB-005] @smoke @regression @sanity Primary and secondary CTAs render below descriptor', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
         const block = page.locator(`${SECTION_WHITE} ${HB}`).first();
@@ -90,7 +90,7 @@ test.describe('Headline Block — Core Structure (GAAM-344)', () => {
         capture.stop();
         expect(capture.getErrors()).toEqual([]);
     });
-    test('[HB-008] @regression @smoke HeadlineBlock uses cmp-headline-block BEM prefix', async ({ page }) => {
+    test('[HB-008] @regression @smoke @sanity HeadlineBlock uses cmp-headline-block BEM prefix', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
         const block = page.locator(HB).first();
@@ -342,7 +342,7 @@ test.describe('Headline Block — Default Padding (GAAM-655/757)', () => {
 });
 // ── GAAM-344: Responsive Behavior ──
 test.describe('Headline Block — Responsive (GAAM-344)', () => {
-    test('[HB-028] @mobile @regression CTAs stack vertically on mobile', async ({ page }) => {
+    test('[HB-028] @mobile @regression @sanity CTAs stack vertically on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
@@ -352,7 +352,7 @@ test.describe('Headline Block — Responsive (GAAM-344)', () => {
         // measurement: use measurement-utils for cleaner code
         expect(flexDir).toBe('column');
     });
-    test('[HB-029] @regression CTAs stack horizontally on desktop', async ({ page }) => {
+    test('[HB-029] @regression @sanity CTAs stack horizontally on desktop', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
@@ -362,7 +362,7 @@ test.describe('Headline Block — Responsive (GAAM-344)', () => {
         // measurement: use measurement-utils for cleaner code
         expect(flexDir).toBe('row');
     });
-    test('[HB-030] @mobile @regression All elements stack vertically on mobile', async ({ page }) => {
+    test('[HB-030] @mobile @regression @sanity All elements stack vertically on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
@@ -376,7 +376,7 @@ test.describe('Headline Block — Responsive (GAAM-344)', () => {
         expect(titleBox!.y).toBeLessThan(descBox!.y);
         expect(descBox!.y).toBeLessThan(ctaBox!.y);
     });
-    test('[HB-031] @mobile @regression No horizontal overflow on mobile', async ({ page }) => {
+    test('[HB-031] @mobile @regression @sanity No horizontal overflow on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
@@ -387,7 +387,7 @@ test.describe('Headline Block — Responsive (GAAM-344)', () => {
             expect(overflow).toBe(false);
         }
     });
-    test('[HB-032] @regression CTA wrapper has 12px gap between buttons', async ({ page }) => {
+    test('[HB-032] @regression @sanity CTA wrapper has 12px gap between buttons', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());

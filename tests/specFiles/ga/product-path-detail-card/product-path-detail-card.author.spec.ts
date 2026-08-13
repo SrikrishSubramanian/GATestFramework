@@ -26,7 +26,7 @@ test.describe('ProductPathDetailCard — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[PPDC-002] @smoke @regression ProductPathDetailCard interactive elements are functional', async ({ page }) => {
+    test('[PPDC-002] @smoke @regression @sanity ProductPathDetailCard interactive elements are functional', async ({ page }) => {
         const pom = new ProductPathDetailCardPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-product-path-detail-card').first();
@@ -41,7 +41,7 @@ test.describe('ProductPathDetailCard — Happy Path', () => {
     });
 });
 test.describe('ProductPathDetailCard — Negative & Boundary', () => {
-    test('[PPDC-003] @negative @regression ProductPathDetailCard handles empty content gracefully', async ({ page }) => {
+    test('[PPDC-003] @negative @regression @sanity ProductPathDetailCard handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -54,7 +54,7 @@ test.describe('ProductPathDetailCard — Negative & Boundary', () => {
     });
 });
 test.describe('ProductPathDetailCard — Responsive', () => {
-    test('[PPDC-005] @mobile @regression @mobile ProductPathDetailCard adapts to mobile viewport', async ({ page }) => {
+    test('[PPDC-005] @mobile @regression @mobile @sanity ProductPathDetailCard adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ProductPathDetailCardPage(page);
         await pom.navigate(BASE());
@@ -69,7 +69,7 @@ test.describe('ProductPathDetailCard — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[PPDC-006] @mobile @regression ProductPathDetailCard adapts to tablet viewport', async ({ page }) => {
+    test('[PPDC-006] @mobile @regression @sanity ProductPathDetailCard adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new ProductPathDetailCardPage(page);
         await pom.navigate(BASE());
@@ -124,12 +124,34 @@ test.describe('ProductPathDetailCard — AEM Dialog Configuration', () => {
 // Relocated from text.author.spec.ts (TEXT-021) — CSV import mis-bucketed this under Text;
 // it's explicitly about the Product Path Detail Card's superscript support.
 test.describe('ProductPathDetailCard — CSV Test Cases (GAAM-1269)', () => {
-    test('[PPDC-010] @smoke @regression BE: Product Path Detail Card - Superscript — AC1', async ({ page }) => {
+    test('[PPDC-010] @regression @sanity BE: Product Path Detail Card - Superscript — AC1', async ({ page }) => {
+        // Verified via kkr-aem source 2026-08-12: this AC is already implemented on both sides —
+        // listItemTitle/descriptorTitle/ctaCalloutTitle are cq/gui/components/authoring/dialog/richtext
+        // fields whose fieldDescription explicitly says "Supports superscript, symbols, and links"
+        // (_cq_dialog/.content.xml), and product-path-detail-card.html renders each with
+        // `@ context='html'` (not escaped), so any authored <sup> markup survives to the DOM.
+        // Base normalize.less also correctly raises <sup> (position:relative; top:-0.5em).
+        // But no title field on the style-guide page currently authors a <sup> — content gap,
+        // not a component defect. Un-skip once a title/descriptor/CTA-callout title is authored
+        // with superscript text (e.g. a footnote marker on a headline).
         const pom = new ProductPathDetailCardPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: Product Path Detail Card List Item Titles, Descriptor
-        // Titles, and CTA Titles don't support superscript text. Superscript text should render
-        // visually raised relative to the title baseline. See Jira GAAM-1269 for full AC and Figma.
-        test.fixme();
+        const titleSup = page.locator(
+            '.cmp-product-path-detail-card__list-item-title sup, ' +
+            '.cmp-product-path-detail-card__descriptor-title sup, ' +
+            '.cmp-product-path-detail-card__cta-callout-title sup'
+        ).first();
+        const count = await titleSup.count();
+        test.skip(count === 0, 'No title/descriptor/CTA-callout title on the style guide authors superscript text — content gap, not a component defect (dialog + HTL both correctly support it)');
+        await expect(titleSup).toBeVisible();
+        // normalize.less raises <sup> via position:relative + a negative top offset (not
+        // vertical-align, which stays "baseline" by design) plus a smaller font-size.
+        const styles = await titleSup.evaluate(el => {
+            const cs = getComputedStyle(el);
+            const parentFontSize = el.parentElement ? parseFloat(getComputedStyle(el.parentElement).fontSize) : parseFloat(cs.fontSize);
+            return { position: cs.position, top: parseFloat(cs.top) || 0, fontSize: parseFloat(cs.fontSize), parentFontSize };
+        });
+        expect(styles.fontSize, 'Superscript font-size should be smaller than the surrounding title text').toBeLessThan(styles.parentFontSize);
+        expect(styles.position === 'relative' && styles.top < 0, 'Superscript should be raised via position:relative with a negative top offset').toBe(true);
     });
 });

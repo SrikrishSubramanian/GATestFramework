@@ -64,7 +64,7 @@ test.describe('ProductPathSummaryCard — State Matrix (Responsive)', () => {
 // ── Invalid: contrast concerns (1 tests) ──
 
 test.describe('ProductPathSummaryCard — State Matrix (Invalid Combos)', () => {
-    test('[PRODUCT_PATH_SUMMARY_CARD-N] @matrix @negative default + light-theme on white (light-on-light)', async ({ page }) => {
+    test('[PRODUCT_PATH_SUMMARY_CARD-N] @matrix @negative @sanity default + light-theme on white (light-on-light)', async ({ page }) => {
       // light-theme on light background (white) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new ProductPathSummaryCardPage(page);

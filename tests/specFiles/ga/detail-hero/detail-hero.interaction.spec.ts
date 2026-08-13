@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('DetailHero — Component Interactions', () => {
-  test('@interaction @regression detail-hero adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity detail-hero adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new DetailHeroPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background

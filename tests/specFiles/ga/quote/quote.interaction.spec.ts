@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Quote — Component Interactions', () => {
-  test('@interaction @regression quote adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity quote adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new QuotePage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background

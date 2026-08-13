@@ -37,7 +37,7 @@ test.describe('Statistic — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[STTS-002] @smoke @regression Statistic interactive elements are functional', async ({ page }) => {
+    test('[STTS-002] @smoke @regression @sanity Statistic interactive elements are functional', async ({ page }) => {
         const pom = new StatisticPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-statistic').first();
@@ -60,7 +60,7 @@ const SECTION_WHITE = '.cmp-section--background-color-white';
 const SECTION_GRANITE = '.cmp-section--background-color-granite';
 const SECTION_AZUL = '.cmp-section--background-color-azul';
 test.describe('Statistic — Component Structure', () => {
-    test('[STTS-020] @regression @smoke Style guide has multiple statistic instances', async ({ page }) => {
+    test('[STTS-020] @regression @smoke @sanity Style guide has multiple statistic instances', async ({ page }) => {
         const pom = new StatisticPage(page);
         await pom.navigate(BASE());
         const roots = page.locator(ROOT);
@@ -221,7 +221,7 @@ test.describe('Statistic — Typography', () => {
     });
 });
 test.describe('Statistic — Responsive', () => {
-    test('[STTS-006] @mobile @regression Statistic adapts to tablet viewport', async ({ page }) => {
+    test('[STTS-006] @mobile @regression @sanity Statistic adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new StatisticPage(page);
         await pom.navigate(BASE());
@@ -238,34 +238,15 @@ test.describe('Statistic — Responsive', () => {
 test.describe('Statistic — Accessibility', () => {
 });
 test.describe('Statistic — CSV Test Cases (GAAM-1399)', () => {
-    test('[STTS-033] @smoke @regression CMS: FE Product Path Summary Cards – Statistics Headline Does Not Support Superscript Text — AC1', async ({ page }) => {
-        const pom = new StatisticPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: The *Statistics Headline* field in the *BE Product Path Summary Cards* component does not support superscript formatting. As a result, content requiring superscript (e.g., trademark symbols, footnote references, or exponents) cannot be displayed correctly.
-        // 
-        // *Steps to Reproduce:*
-        // 
-        // # Navigate to the CMS authoring page containing the *BE Product Path Summary Cards* component.
-        // # Open the *Statistics Headline* field for editing.
-        // # Enter text that requires superscript (e.g., {{95%¹}}, {{10²}}, or {{Performance™}} with the ™ in superscript).
-        // # Save the changes and publish/preview the page.
-        // 
-        // *Actual Result:*
-        // The superscript formatting is not applied or is not supported. The text appears in normal baseline formatting.
-        // 
-        // !image-20260629-103745.png|width=482,alt="image-20260629-103745.png"!
-        // 
-        // 
-        // 
-        // *Expected Result:*
-        // The *Statistics Headline* field should support superscript formatting so that designated characters or text are rendered correctly on the page.
-        // 
-        // !image-20260629-103929.png|width=600,alt="image-20260629-103929.png"!
-        test.fixme();
-    });
 });
+// STTS-033 (CMS: FE Product Path Summary Cards – Statistics Headline Does Not Support Superscript
+// Text) was relocated to product-path-summary-card.author.spec.ts as PPSC-010 — same CSV
+// bulk-import bucketing bug seen elsewhere (see text.author.spec.ts / PPDC-010 notes): the ticket
+// title explicitly names "Product Path Summary Cards" and its "Statistics Headline" field, which
+// belongs to the product-path-summary-card component, not the generic "statistic" component (whose
+// own dialog only has "Statistic Value" and "Description" fields — no "headline" at all).
 test.describe('Statistic — Negative & Boundary', () => {
-    test('[STTS-036] @negative @regression Statistic handles empty content gracefully', async ({ page }) => {
+    test('[STTS-036] @negative @regression @sanity Statistic handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -276,7 +257,7 @@ test.describe('Statistic — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-statistic').first()).toBeVisible();
     });
-    test('[STTS-037] @negative @regression Statistic handles missing images', async ({ page }) => {
+    test('[STTS-037] @negative @regression @sanity Statistic handles missing images', async ({ page }) => {
         const pom = new StatisticPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-statistic img');

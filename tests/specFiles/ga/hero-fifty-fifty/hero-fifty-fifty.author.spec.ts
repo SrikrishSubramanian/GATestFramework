@@ -441,7 +441,7 @@ test.describe('HeroFiftyFifty — Image (AC32–AC35)', () => {
             expect(['cover', 'contain']).toContain(objectFit);
         }
     });
-    test('[HFF-034] @negative @regression Missing image does not break layout', async ({ page }) => {
+    test('[HFF-034] @negative @regression @sanity Missing image does not break layout', async ({ page }) => {
         const pom = new HeroFiftyFiftyPage(page);
         await pom.navigate(BASE());
         // Fixture 9 has no fileReference — verify no broken layout
@@ -570,7 +570,7 @@ test.describe('HeroFiftyFifty — Console & Resources', () => {
 test.describe('HeroFiftyFifty — Accessibility', () => {
 });
 test.describe('HeroFiftyFifty — Happy Path', () => {
-    test('[HFF-050] @smoke @regression HeroFiftyFifty renders correctly', async ({ page }) => {
+    test('[HFF-050] @smoke @regression @sanity HeroFiftyFifty renders correctly', async ({ page }) => {
         const pom = new HeroFiftyFiftyPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-hero-fifty-fifty').first();
@@ -586,7 +586,7 @@ test.describe('HeroFiftyFifty — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[HFF-051] @smoke @regression HeroFiftyFifty interactive elements are functional', async ({ page }) => {
+    test('[HFF-051] @smoke @regression @sanity HeroFiftyFifty interactive elements are functional', async ({ page }) => {
         const pom = new HeroFiftyFiftyPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-hero-fifty-fifty').first();
@@ -601,7 +601,7 @@ test.describe('HeroFiftyFifty — Happy Path', () => {
     });
 });
 test.describe('HeroFiftyFifty — Negative & Boundary', () => {
-    test('[HFF-052] @negative @regression HeroFiftyFifty handles empty content gracefully', async ({ page }) => {
+    test('[HFF-052] @negative @regression @sanity HeroFiftyFifty handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -614,7 +614,7 @@ test.describe('HeroFiftyFifty — Negative & Boundary', () => {
     });
 });
 test.describe('HeroFiftyFifty — Responsive', () => {
-    test('[HFF-054] @mobile @regression @mobile HeroFiftyFifty adapts to mobile viewport', async ({ page }) => {
+    test('[HFF-054] @mobile @regression @mobile @sanity HeroFiftyFifty adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new HeroFiftyFiftyPage(page);
         await pom.navigate(BASE());
@@ -629,7 +629,7 @@ test.describe('HeroFiftyFifty — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[HFF-055] @mobile @regression HeroFiftyFifty adapts to tablet viewport', async ({ page }) => {
+    test('[HFF-055] @mobile @regression @sanity HeroFiftyFifty adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new HeroFiftyFiftyPage(page);
         await pom.navigate(BASE());
@@ -670,46 +670,51 @@ test.describe('HeroFiftyFifty — AEM Dialog Configuration', () => {
 // Relocated from header.author.spec.ts (HDR-028) — CSV import mis-bucketed this under Header;
 // it's actually about the hero-fifty-fifty component.
 test.describe('HeroFiftyFifty — CSV Test Cases (GAAM-1286)', () => {
-    test('[HFF-059] @smoke @regression 50 50 banner : Background extension in XL breakpoints — AC1', async ({ page }) => {
+    test('[HFF-059] @regression @sanity 50 50 banner : Background extension in XL breakpoints — AC1', async ({ page }) => {
+        // AC1 ("background needs to extend edge to edge while the content stays aligned
+        // ... as per design"), verified against source:
+        //  - hero-fifty-fifty.less:26-36 — .cmp-hero-fifty-fifty has width:100% and NO
+        //    max-width at any breakpoint (unlike .cmp-section, which caps at
+        //    @ga-page-width-desktop per section.less:297-304), and the style-guide content
+        //    (.content.xml) places hero-fifty-fifty as a direct child of the page's
+        //    unconstrained main-par responsivegrid — no ancestor `.ga-page`/`.cmp-section`
+        //    wrapper — so the granite/image column backgrounds genuinely span full width.
+        //  - hero-fifty-fifty.less:147-151 — .cmp-hero-fifty-fifty__content is capped to
+        //    max-width:657px and right-aligned (margin-left:auto) once the viewport crosses
+        //    @site-page-width (1440px, variables.less:260) via #ga-aem-mixins.breakpoint —
+        //    i.e. the content column stays inset/narrow instead of stretching with the
+        //    background once past that breakpoint. (The "divider in the header" portion of
+        //    the ticket is a separate Header/navigation.less concern, out of scope for this
+        //    component's POM — see HDR-028 relocation note in header.author.spec.ts.)
+        const XL = { width: 1920, height: 1080 };
+        await page.setViewportSize(XL);
         const pom = new HeroFiftyFiftyPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: Hi, In XL desktop breakpoints - the background needs to extend edge to egde while the content stays aligned to the header as per design. The divider in the header also needs to extend to the sides.
-        // [~accountid:5e73d47c17c6640c385f56a6] Can you help out with this issue? I’m raising this as a bug.
-        //
-        // Thank you.
-        //
-        // CC: [~accountid:712020:19496377-93fa-4b6a-be8c-4f3dac15dfb5] [~accountid:712020:ad021791-2e09-4b21-b18b-e7d643149e13]  [~accountid:712020:fe8fe45b-af82-40e5-baec-1580ec63583e]
-        //
-        //
-        // !Screenshot 2026-06-15 at 7.03.20 PM-20260615-133326.png|width=686,alt="Screenshot 2026-06-15 at 7.03.20 PM-20260615-133326.png"!
-        test.fixme();
+        const root = page.locator(SEL.root).first();
+        await expect(root).toBeVisible();
+        const rootBox = await root.boundingBox();
+        expect(rootBox).not.toBeNull();
+        // Background extends edge-to-edge: the component root spans the full XL viewport.
+        expect(rootBox!.x).toBeLessThanOrEqual(1);
+        expect(Math.round(rootBox!.width)).toBeGreaterThanOrEqual(XL.width - 2);
+        // Content stays inset/aligned rather than stretching edge-to-edge with the background.
+        const content = page.locator(SEL.content).first();
+        const contentMaxWidth = await content.evaluate(el => getComputedStyle(el).maxWidth);
+        expect(contentMaxWidth).toBe('657px');
+        const contentMarginLeft = await content.evaluate(el => getComputedStyle(el).marginLeft);
+        expect(contentMarginLeft).not.toBe('0px');
     });
 });
-// Relocated from image.author.spec.ts (MG-060) — CSV import mis-bucketed this under Image;
-// it's actually about the hero-fifty-fifty component ("feature 50/50").
-test.describe('HeroFiftyFifty — CSV Test Cases (GAAM-1356)', () => {
-    test('[HFF-060] @smoke @regression CMS: FE: feature 50/50: Removal of Left and Right Padding — AC1', async ({ page }) => {
-        const pom = new HeroFiftyFiftyPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: The "Remove Left and Right Padding" feature is enabled for the 50% rollout group. However, the left and right padding is still being displayed on the affected pages/components, resulting in inconsistent layout behavior between users in the feature-enabled cohort and the expected design.
-        //
-        // URL tested - [ForeIncome II Fixed Index Annuity | Global Atlantic|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/financial-professionals/main/en/annuities/fixed-index-annuities/foreincome-ii-fixed-index-annuity.html?wcmmode=disabled]
-        //
-        // *Steps to Reproduce:*
-        //
-        // # Enable the "Remove Left and Right Padding" feature flag for a test user.
-        // # Navigate to the affected CMS page/component.
-        // # Observe the page layout and spacing on the left and right sides of the content area.
-        //
-        // *Expected Result:*
-        // Left and right padding should be completely removed according to the feature requirements, and the content should align with the updated design specifications.
-        //
-        // *Actual Result:*
-        // Left and/or right padding is still visible, causing extra whitespace and layout inconsistencies.
-        //
-        // !image-20260624-070720.png|width=546,alt="image-20260624-070720.png"!
-        //
-        // !image-20260624-070746.png|width=547,alt="image-20260624-070746.png"!
-        test.fixme();
-    });
-});
+// HFF-060 (GAAM-1356, "CMS: FE: feature 50/50: Removal of Left and Right Padding") removed —
+// mis-bucketed twice over (originally under Image via MG-060, then re-bucketed here on a naive
+// "50/50" string match). The ticket body itself says the "feature is enabled for the 50% rollout
+// group" — i.e. an A/B experiment cohort split ("50/50" traffic split), not the Hero 50/50 UI
+// component. There is also no "Remove Left/Right Padding" style capability anywhere on this
+// component to test against: the ga hero-fifty-fifty _cq_dialog (General/Authenticated tabs only,
+// hero-fifty-fifty/_cq_dialog/.content.xml) has no style/padding fields; its inherited
+// _cq_design_dialog (kkr-aem-base/.../hero-fifty-fifty/_cq_design_dialog/.content.xml:40-68) only
+// exposes "Enable Web Optimized Images"/"JPEG Quality"; and its policy node
+// (wcm/policies/.content.xml:840-849, hero-fifty-fifty-default) defines zero cq:styleGroups
+// (unlike e.g. promo-banner's "Remove Padding Options" style group or section.less:320-354's
+// `--padded-none-left/right-desktop` classes). No UI-testable surface exists for this claim
+// anywhere on hero-fifty-fifty.

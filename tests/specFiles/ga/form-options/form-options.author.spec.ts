@@ -37,7 +37,7 @@ test.describe('FormOptions — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[FO-002] @smoke @regression FormOptions interactive elements are functional', async ({ page }) => {
+    test('[FO-002] @smoke @regression @sanity FormOptions interactive elements are functional', async ({ page }) => {
         const pom = new FormOptionsPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-form-options').first();
@@ -63,7 +63,7 @@ const SECTION_WHITE = '.cmp-section--background-color-white';
 const SECTION_GRANITE = '.cmp-section--background-color-granite';
 const SECTION_AZUL = '.cmp-section--background-color-azul';
 test.describe('FormOptions — Radio Buttons', () => {
-    test('[FO-020] @regression @smoke Style guide renders radio button groups', async ({ page }) => {
+    test('[FO-020] @regression @smoke @sanity Style guide renders radio button groups', async ({ page }) => {
         const pom = new FormOptionsPage(page);
         await pom.navigate(BASE());
         const radios = page.locator(`${ROOT} input[type="radio"]`);
@@ -119,7 +119,7 @@ test.describe('FormOptions — Radio Buttons', () => {
     });
 });
 test.describe('FormOptions — Checkboxes', () => {
-    test('[FO-025] @regression @smoke Style guide renders checkbox groups', async ({ page }) => {
+    test('[FO-025] @regression @smoke @sanity Style guide renders checkbox groups', async ({ page }) => {
         const pom = new FormOptionsPage(page);
         await pom.navigate(BASE());
         const checkboxes = page.locator(`${ROOT} input[type="checkbox"]`);
@@ -248,7 +248,7 @@ test.describe('FormOptions — BEM Structure', () => {
     });
 });
 test.describe('FormOptions — Negative & Boundary', () => {
-    test('[FO-004] @negative @regression FormOptions handles missing images', async ({ page }) => {
+    test('[FO-004] @negative @regression @sanity FormOptions handles missing images', async ({ page }) => {
         const pom = new FormOptionsPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-form-options img');
@@ -260,7 +260,7 @@ test.describe('FormOptions — Negative & Boundary', () => {
     });
 });
 test.describe('FormOptions — Responsive', () => {
-    test('[FO-006] @mobile @regression FormOptions adapts to tablet viewport', async ({ page }) => {
+    test('[FO-006] @mobile @regression @sanity FormOptions adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new FormOptionsPage(page);
         await pom.navigate(BASE());

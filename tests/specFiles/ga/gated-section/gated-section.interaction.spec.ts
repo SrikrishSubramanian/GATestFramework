@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('GatedSection — Component Interactions', () => {
-  test('@interaction @regression gated-section adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity gated-section adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new GatedSectionPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: gated-section with unknown background

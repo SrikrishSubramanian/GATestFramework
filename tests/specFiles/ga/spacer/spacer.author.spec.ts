@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 test.describe('Spacer — CSV Test Cases', () => {
-    test('[SPC-001] @smoke @regression @sanity TC_SPC_001 Verify Spacer component availability', async ({ page }) => {
+    test('[SPC-001] @regression @sanity TC_SPC_001 Verify Spacer component availability', async ({ page }) => {
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
         // Pre-condition: User logged into CMS
@@ -31,7 +31,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         // Expected: Spacer component visible in component list
         await expect(pom.getAllSpacers().first()).toBeVisible();
     });
-    test('[SPC-004] @smoke @regression TC_SPC_004 Verify style options availability', async ({ page }) => {
+    test('[SPC-004] @regression @sanity TC_SPC_004 Verify style options availability', async ({ page }) => {
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
         // Expected: XXS, XS, Small, Medium (default), Large, XL options visible
@@ -40,7 +40,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const count = await wrappers.count();
         expect(count).toBeGreaterThanOrEqual(6);
     });
-    test('[SPC-005] @smoke @regression TC_SPC_005 Validate 3XS style — Desktop spacing', async ({ page }) => {
+    test('[SPC-005] @regression @sanity TC_SPC_005 Validate 3XS style — Desktop spacing', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -49,7 +49,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(6);
     });
-    test('[SPC-006] @smoke @regression TC_SPC_006 Validate 2XS/XXS style — Desktop spacing', async ({ page }) => {
+    test('[SPC-006] @regression @sanity TC_SPC_006 Validate 2XS/XXS style — Desktop spacing', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -59,7 +59,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(12);
     });
-    test('[SPC-007] @smoke @regression TC_SPC_007 Validate XS style — Desktop spacing', async ({ page }) => {
+    test('[SPC-007] @regression @sanity TC_SPC_007 Validate XS style — Desktop spacing', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -69,7 +69,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(20);
     });
-    test('[SPC-008] @smoke @regression TC_SPC_008 Validate Small style — Desktop spacing', async ({ page }) => {
+    test('[SPC-008] @regression @sanity TC_SPC_008 Validate Small style — Desktop spacing', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(32);
     });
-    test('[SPC-009] @smoke @regression TC_SPC_009 Validate default Medium style — Desktop', async ({ page }) => {
+    test('[SPC-009] @regression @sanity TC_SPC_009 Validate default Medium style — Desktop', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -90,7 +90,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(48);
     });
-    test('[SPC-010] @smoke @regression TC_SPC_010 Validate Large style — Desktop spacing', async ({ page }) => {
+    test('[SPC-010] @regression @sanity TC_SPC_010 Validate Large style — Desktop spacing', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -100,7 +100,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(64);
     });
-    test('[SPC-011] @smoke @regression TC_SPC_011 Validate XL style — Desktop spacing', async ({ page }) => {
+    test('[SPC-011] @regression @sanity TC_SPC_011 Validate XL style — Desktop spacing', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -110,7 +110,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(112);
     });
-    test('[SPC-012] @smoke @regression @mobile TC_SPC_012 Validate 3XS style — Mobile spacing', async ({ page }) => {
+    test('[SPC-012] @regression @mobile @sanity TC_SPC_012 Validate 3XS style — Mobile spacing', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -119,7 +119,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(4);
     });
-    test('[SPC-013] @smoke @regression @mobile TC_SPC_013 Validate 2XS/XXS style — Mobile spacing', async ({ page }) => {
+    test('[SPC-013] @regression @mobile @sanity TC_SPC_013 Validate 2XS/XXS style — Mobile spacing', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -129,7 +129,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(8);
     });
-    test('[SPC-014] @smoke @regression @mobile TC_SPC_014 Validate XS style — Mobile spacing', async ({ page }) => {
+    test('[SPC-014] @regression @mobile @sanity TC_SPC_014 Validate XS style — Mobile spacing', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -139,7 +139,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(16);
     });
-    test('[SPC-015] @smoke @regression @mobile TC_SPC_015 Validate Small style — Mobile spacing', async ({ page }) => {
+    test('[SPC-015] @regression @mobile @sanity TC_SPC_015 Validate Small style — Mobile spacing', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -149,7 +149,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(20);
     });
-    test('[SPC-016] @smoke @regression @mobile TC_SPC_016 Validate Medium style — Mobile spacing', async ({ page }) => {
+    test('[SPC-016] @regression @mobile @sanity TC_SPC_016 Validate Medium style — Mobile spacing', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -159,7 +159,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(32);
     });
-    test('[SPC-017] @smoke @regression @mobile TC_SPC_017 Validate Large style — Mobile spacing', async ({ page }) => {
+    test('[SPC-017] @regression @mobile @sanity TC_SPC_017 Validate Large style — Mobile spacing', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -169,7 +169,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(48);
     });
-    test('[SPC-018] @smoke @regression @mobile TC_SPC_018 Validate XL style — Mobile spacing', async ({ page }) => {
+    test('[SPC-018] @regression @mobile @sanity TC_SPC_018 Validate XL style — Mobile spacing', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
@@ -179,7 +179,7 @@ test.describe('Spacer — CSV Test Cases', () => {
         const height = await pom.getSpacerHeight(spacer);
         expect(height).toBe(64);
     });
-    test('[SPC-020] @smoke @regression TC_SPC_020 Multiple Spacer components rendering', async ({ page }) => {
+    test('[SPC-020] @regression @sanity TC_SPC_020 Multiple Spacer components rendering', async ({ page }) => {
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
         // Expected: Each spacer renders correct spacing
@@ -192,14 +192,14 @@ test.describe('Spacer — CSV Test Cases', () => {
             expect(box!.height).toBeGreaterThan(0);
         }
     });
-    test('[SPC-024] @smoke @regression TC_SPC_024 Validate default style without manual selection', async ({ page }) => {
+    test('[SPC-024] @regression @sanity TC_SPC_024 Validate default style without manual selection', async ({ page }) => {
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
         // Expected: Default style is Medium
         const defaultSpacer = page.locator('div.spacer:not([class*="cmp-spacer--"]) > .cmp-spacer').first();
         await expect(defaultSpacer).toBeVisible();
     });
-    test('[SPC-026] @negative @regression TC_SPC_026 Prevent multiple style selection', async ({ page }) => {
+    test('[SPC-026] @negative @regression @sanity TC_SPC_026 Prevent multiple style selection', async ({ page }) => {
         const pom = new SpacerPage(page);
         await pom.navigate(BASE());
         // Expected: Only one style can be active at a time

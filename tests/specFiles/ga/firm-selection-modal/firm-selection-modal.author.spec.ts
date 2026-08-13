@@ -28,7 +28,7 @@ test.describe('FirmSelectionModal — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[FSM-002] @smoke @regression FirmSelectionModal interactive elements are functional', async ({ page }) => {
+    test('[FSM-002] @smoke @regression @sanity FirmSelectionModal interactive elements are functional', async ({ page }) => {
         const pom = new FirmSelectionModalPage(page);
         await pom.navigate(BASE());
         await page.locator('a[data-modal]').first().click();
@@ -48,7 +48,7 @@ test.describe('FirmSelectionModal — Happy Path', () => {
     });
 });
 test.describe('FirmSelectionModal — Negative & Boundary', () => {
-    test('[FSM-003] @negative @regression FirmSelectionModal handles empty content gracefully', async ({ page }) => {
+    test('[FSM-003] @negative @regression @sanity FirmSelectionModal handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -60,7 +60,7 @@ test.describe('FirmSelectionModal — Negative & Boundary', () => {
         // stays hidden until its trigger is clicked, so we check attached, not visible
         await expect(page.locator('.cmp-firm-selection-modal').first()).toBeAttached();
     });
-    test('[FSM-004] @negative @regression FirmSelectionModal handles missing images', async ({ page }) => {
+    test('[FSM-004] @negative @regression @sanity FirmSelectionModal handles missing images', async ({ page }) => {
         const pom = new FirmSelectionModalPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-firm-selection-modal img');
@@ -72,7 +72,7 @@ test.describe('FirmSelectionModal — Negative & Boundary', () => {
     });
 });
 test.describe('FirmSelectionModal — Responsive', () => {
-    test('[FSM-005] @mobile @regression @mobile FirmSelectionModal adapts to mobile viewport', async ({ page }) => {
+    test('[FSM-005] @mobile @regression @mobile @sanity FirmSelectionModal adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new FirmSelectionModalPage(page);
         await pom.navigate(BASE());
@@ -88,7 +88,7 @@ test.describe('FirmSelectionModal — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[FSM-006] @mobile @regression FirmSelectionModal adapts to tablet viewport', async ({ page }) => {
+    test('[FSM-006] @mobile @regression @sanity FirmSelectionModal adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new FirmSelectionModalPage(page);
         await pom.navigate(BASE());
@@ -144,7 +144,7 @@ test.describe('FirmSelectionModal — AEM Dialog Configuration', () => {
 test.describe('FirmSelectionModal — CSV Test Cases (GAAM-693)', () => {
     // Epic ticket has no description/ACs beyond its title — assertions below are
     // scoped to what's verifiable against the live modal's validation behavior.
-    test('[FSM-015] @smoke @regression Confirm CTA stays disabled until a firm is selected', async ({ page }) => {
+    test('[FSM-015] @regression @sanity Confirm CTA stays disabled until a firm is selected', async ({ page }) => {
         const pom = new FirmSelectionModalPage(page);
         await pom.navigate(BASE());
         await page.locator('a[data-modal]').first().click();
@@ -157,11 +157,37 @@ test.describe('FirmSelectionModal — CSV Test Cases (GAAM-693)', () => {
         await expect(firmList).toHaveAttribute('role', 'listbox');
     });
     test('[FSM-016] @regression Selecting a firm enables the Confirm CTA', async ({ page }) => {
-        // The firm list in this environment currently loads with zero options
-        // (no firm data returned by the backing service), so there's no option to
-        // select in order to verify the CTA becomes enabled. Needs test data/API
-        // stubbing for the firm list before this can be implemented without
-        // guessing at how a populated option renders.
-        test.fixme();
+        // The firm list is populated client-side from the `gaUserAttributes` cookie
+        // (firm-selection-modal.js fetchFirms(), lines 105-137), which is only ever
+        // set by the real Ping SSO SAML flow (PingLoginAuthInfoPostProcessor.java
+        // line 140: `new Cookie("gaUserAttributes", encodedValue)`, JSON-encoded
+        // firmNames/firmIds/writingCodes). The admin form-login this framework uses
+        // for author-mode testing never sets that cookie, so the modal's firm list
+        // is genuinely empty in this environment ("User attribute is not available").
+        // We seed a synthetic cookie in the exact shape the SAML post-processor
+        // produces so the real enable/disable logic (enableCta(), lines 209-214)
+        // can be exercised end-to-end without guessing at a populated option's markup.
+        const userAttributes = {
+            firmNames: 'Acme+Insurance|Beta+Underwriters',
+            firmIds: '1001|1002',
+            writingCodes: 'WC-1|WC-2',
+        };
+        await page.context().addCookies([{
+            name: 'gaUserAttributes',
+            value: encodeURIComponent(JSON.stringify(userAttributes)),
+            url: BASE(),
+        }]);
+        const pom = new FirmSelectionModalPage(page);
+        await pom.navigate(BASE());
+        await page.locator('a[data-modal]').first().click();
+        const root = page.locator('.cmp-firm-selection-modal').first();
+        await expect(root).toBeVisible();
+        const cta = root.locator('.cmp-firm-selection-modal__cta').first();
+        await expect(cta).toBeDisabled();
+        const firmItems = root.locator('.cmp-firm-selection-modal__firm-item');
+        await expect(firmItems.first()).toBeVisible();
+        await firmItems.first().click();
+        await expect(cta).toBeEnabled();
+        await expect(cta).not.toHaveAttribute('aria-disabled', 'true');
     });
 });

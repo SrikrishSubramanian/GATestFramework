@@ -26,7 +26,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 test.describe('Spacer — Interactions', () => {
-  test('[SPACER-INTERACTION-001] @interaction @regression Spacer height adjusts responsively', async ({ page }) => {
+  test('[SPACER-INTERACTION-001] @interaction @regression @sanity Spacer height adjusts responsively', async ({ page }) => {
     const pom = new SpacerPage(page);
     await pom.navigate(BASE());
 

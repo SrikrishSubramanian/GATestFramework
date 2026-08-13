@@ -56,14 +56,14 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Explore Solutions"
-                       linkURL="/content/global-atlantic/en/solutions.html"/>
+                       label="Explore Solutions"
+                       path="/content/global-atlantic/en/solutions.html"/>
                    <cta_secondary
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[secondary-outline,auto-theme]"
-                       linkText="Learn More"
-                       linkURL="/content/global-atlantic/en/about.html"/>
+                       label="Learn More"
+                       path="/content/global-atlantic/en/about.html"/>
                    <!-- Right column: Image -->
                    <image
                        jcr:primaryType="nt:unstructured"
@@ -144,8 +144,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Get a Quote"
-                       linkURL="/content/global-atlantic/en/insurance/quote.html"/>
+                       label="Get a Quote"
+                       path="/content/global-atlantic/en/insurance/quote.html"/>
                    <!-- Right column: Image only -->
                    <image
                        jcr:primaryType="nt:unstructured"
@@ -184,8 +184,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Contact Us"
-                       linkURL="/content/global-atlantic/en/contact.html"/>
+                       label="Contact Us"
+                       path="/content/global-atlantic/en/contact.html"/>
                    <!-- Right column: Image only -->
                    <image
                        jcr:primaryType="nt:unstructured"
@@ -320,8 +320,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="View Products"
-                       linkURL="/content/global-atlantic/en/products.html"/>
+                       label="View Products"
+                       path="/content/global-atlantic/en/products.html"/>
                    <image
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/image"
@@ -359,8 +359,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="View Products"
-                       linkURL="/content/global-atlantic/en/products.html"/>
+                       label="View Products"
+                       path="/content/global-atlantic/en/products.html"/>
                    <image
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/image"
@@ -398,8 +398,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Explore Annuities"
-                       linkURL="/content/global-atlantic/en/annuities.html"/>
+                       label="Explore Annuities"
+                       path="/content/global-atlantic/en/annuities.html"/>
                    <image
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/image"
@@ -437,8 +437,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Explore Annuities"
-                       linkURL="/content/global-atlantic/en/annuities.html"/>
+                       label="Explore Annuities"
+                       path="/content/global-atlantic/en/annuities.html"/>
                    <image
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/image"
@@ -476,8 +476,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Read Stories"
-                       linkURL="/content/global-atlantic/en/stories.html"/>
+                       label="Read Stories"
+                       path="/content/global-atlantic/en/stories.html"/>
                    <!-- Right column: Image -->
                    <image
                        jcr:primaryType="nt:unstructured"
@@ -536,8 +536,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Our Performance"
-                       linkURL="/content/global-atlantic/en/performance.html"/>
+                       label="Our Performance"
+                       path="/content/global-atlantic/en/performance.html"/>
                    <!-- Right column: Image -->
                    <image
                        jcr:primaryType="nt:unstructured"
@@ -583,8 +583,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Start Learning"
-                       linkURL="/content/global-atlantic/en/resources.html"/>
+                       label="Start Learning"
+                       path="/content/global-atlantic/en/resources.html"/>
                    <!-- Right column: Image -->
                    <image
                        jcr:primaryType="nt:unstructured"
@@ -632,8 +632,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="Our History"
-                       linkURL="/content/global-atlantic/en/about/history.html"/>
+                       label="Our History"
+                       path="/content/global-atlantic/en/about/history.html"/>
                    <!-- Right column: Image only — no secondary_slot child node -->
                    <image
                        jcr:primaryType="nt:unstructured"
@@ -673,8 +673,8 @@
                        jcr:primaryType="nt:unstructured"
                        sling:resourceType="ga/components/content/button"
                        cq:styleIds="[primary-filled,auto-theme]"
-                       linkText="View Placeholder"
-                       linkURL="/content/global-atlantic/en/placeholder.html"/>
+                       label="View Placeholder"
+                       path="/content/global-atlantic/en/placeholder.html"/>
                    <!-- Image node is present but fileReference is intentionally omitted -->
                    <image
                        jcr:primaryType="nt:unstructured"

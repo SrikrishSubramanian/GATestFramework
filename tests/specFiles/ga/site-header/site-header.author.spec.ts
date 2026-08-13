@@ -40,17 +40,44 @@ test.describe('SiteHeader — Multifield Constraints (GAAM-394)', () => {
 });
 // ─── Author QA Checklist (GAAM-394) ──────────────────────────────────────────
 test.describe('SiteHeader — Author QA Checklist (GAAM-394)', () => {
-    test('[SHDR-039] @author @smoke Author documentation accessible via dialog help icon', async ({ page }) => {
-        // Verified live 2026-08-11: GAAM-792 IS complete — the XF page renders .cmp-site-header
-        // (count=1) in the AEM editor. The remaining blocker is the click-to-select→open-dialog
-        // interaction in this Cloud SDK authoring shell: a direct click on the component does NOT
-        // open its config dialog (it just leaves the always-present side panel showing). Needs a
-        // focused live investigation — ideally non-headless — into the real selection-overlay/
-        // configure-toolbar mechanism before this can be automated without guessing selectors.
-        test.fixme(true, 'Component renders on the XF page now (GAAM-792 confirmed live) — but the click→select→open-dialog interaction in this authoring shell is not yet automatable without further live DOM investigation. Verify manually: open dialog → click ? → confirm help doc opens.');
-        // Steps: Navigate to XF page → Select component → Open dialog → Click ? icon → Assert help page opens
-        // The helpPath configured in SHDR-005/006 drives this button
-        expect(true).toBe(true);
+    test('[SHDR-039] @author @smoke @sanity Author documentation accessible via dialog help icon', async ({ page }) => {
+        // Verified live 2026-08-13: the click→select→open-dialog interaction IS automatable in this
+        // Cloud SDK authoring shell. The editor renders one iframe (name="Main Content") whose real
+        // edit-mode selection overlay (.cq-Overlay--component, aria-controls="EditableToolbar") sits
+        // *outside* that iframe and intercepts pointer events over it — clicking the component inside
+        // the iframe directly times out (the overlay is what must be clicked). Clicking the overlay
+        // reveals #EditableToolbar with a CONFIGURE button, which opens the "Site Header" coral-dialog
+        // (data-path resolves to the site_header_copy XF instance). That dialog's Help button
+        // (title/aria-label="Help", icon="helpCircle") opens a new tab at
+        // mnt/overlay/wcm/core/content/sites/components/details.html/apps/ga/components/structure/site-header
+        // — the real "AEM Sites | Component Properties" doc driven by the component's cq:cellName
+        // registration, confirming SHDR-005/006's help wiring end-to-end.
+        await page.goto(`${BASE()}/editor.html/content/experience-fragments/global-atlantic/style-guide/header/header-master/financial-professionals.html`, { waitUntil: 'domcontentloaded' });
+        const mainContent = page.frameLocator('iframe[name="Main Content"]');
+        const contentFrame = mainContent.frameLocator('#ContentFrame');
+        await expect(contentFrame.locator('.cmp-site-header').first()).toBeVisible({ timeout: 20000 });
+
+        const overlay = mainContent.locator('.cq-Overlay--component[data-path*="site_header"]').first();
+        await overlay.click({ position: { x: 10, y: 10 } });
+
+        const toolbar = mainContent.locator('#EditableToolbar');
+        const configureBtn = toolbar.locator('[data-action="CONFIGURE"]').first();
+        await configureBtn.click();
+
+        const dialog = mainContent.locator('coral-dialog[open]').first();
+        await expect(dialog).toBeVisible();
+        const dialogTitle = await dialog.evaluate((el) => el.querySelector('coral-dialog-header')?.textContent?.trim());
+        expect(dialogTitle).toBe('Site Header');
+
+        const helpButton = dialog.locator('button[title="Help"][aria-label="Help"]').first();
+        const [helpDoc] = await Promise.all([
+            page.context().waitForEvent('page'),
+            helpButton.click(),
+        ]);
+        await helpDoc.waitForLoadState('domcontentloaded');
+        expect(helpDoc.url()).toContain('details.html/apps/ga/components/structure/site-header');
+        expect(await helpDoc.title()).toContain('Component Properties');
+        await helpDoc.close();
     });
 });
 // ─── AEM Convention Compliance (GAAM-394) ────────────────────────────────────
@@ -63,19 +90,39 @@ test.describe('SiteHeader — AEM Convention Compliance (GAAM-394)', () => {
     });
 });
 test.describe('SiteHeader — CSV Test Cases (GAAM-1353)', () => {
-    test('[SH-048] @smoke @regression CMS BE: Logout Processing with OOTB SAML Handler — AC1', async ({ page }) => {
+    test('[SH-048] @regression @sanity CMS BE: Logout Processing with OOTB SAML Handler — AC1', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Clicking Log out invalidates the *AEM session* (login-token dropped).
-        // Verified live 2026-08-11 (isolated context, not the shared auth session — clicking real
-        // Logout would drop the login-token cookie every other test relies on via .auth-state.json):
-        // `.cmp-site-header__logout` has no onclick handler and clicking it fires zero network
-        // requests, no navigation, no cookie change. The GAAM-1353 logout processing described by
-        // this ticket does not appear to be implemented yet — tracked in
-        // confirmed-bugs-2026-08-11.xlsx. Un-fixme once it ships, and drive the assertion through
-        // an isolated context (see PRT-003-SHARE in product-rate-table.author.spec.ts for the
-        // pattern) so it never touches the shared session.
-        test.fixme();
+        // The financial-professionals/main/en/... path previously used here 404s on this instance —
+        // the real, currently-authored FP site-header XF instance lives at
+        // /content/experience-fragments/global-atlantic/style-guide/header/header-master/financial-professionals
+        // (confirmed via ui.content.ga .content.xml + live 200 response), so navigate there directly.
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/style-guide/header/header-master/financial-professionals.html?wcmmode=disabled`);
+        // AC: Clicking Log out invalidates the *AEM session* (login-token dropped).
+        //
+        // Re-investigated live 2026-08-12 — the prior note on this test ("no onclick handler...
+        // does not appear to be implemented yet") does not hold up against the actual source:
+        // ui.apps.ga/.../site-header/clientlibs/site/js/site-header-dropdown.js attaches a real
+        // click listener to every `[data-cmp-hook-site-header="logoutButton"]` element (init(), line
+        // ~49) and its performLogout() (line ~832) clears the `gaUserAttributes` cookie and redirects
+        // to the SAML SLO endpoint from `model.pingLoginConfigService.logoutUrl` — a genuine OSGi
+        // config (PingLoginConfigServiceImpl, GAAM-728) driven by the PING_LOGOUT_URL/PING_LOGOUT_FLAG
+        // env vars. Logout FE processing is implemented, not missing.
+        //
+        // What actually blocks automation: the logout link only exists inside the *authenticated*
+        // tray (desktop `#login-tray-authenticated`) and the mobile login panel, both gated behind
+        // `.cmp-site-header--authenticated`, which the FE only applies when a `gaUserAttributes`
+        // cookie is present (set by a real Ping/SAML SSO login — unrelated to the AEM-author
+        // `loginToAEMAuthor()` session this suite uses). Confirmed live on the FP XF instance above:
+        // `[data-cmp-hook-site-header="logoutButton"]` count = 2, but 0 are `:visible` — Playwright
+        // cannot click a link that isn't reachable without first completing a live SAML round-trip
+        // through PingOne, which this headless suite has no credentials for. Also note: on this local
+        // instance `PING_LOGOUT_URL` isn't configured (the `data-logouturl` attribute is absent
+        // entirely, since `pingLoginConfigService.logoutUrl` resolves null and HTL omits the attr),
+        // so even an authenticated click here wouldn't reach a real IdP — another live/env-only
+        // condition this suite can't fabricate.
+        // Leaving fixme: this needs a genuine SSO-authenticated session (non-headless, real PingOne
+        // test-env credentials) to verify the SLO redirect end-to-end.
+        test.fixme(true, 'Logout FE (click handler + SAML SLO redirect via PingLoginConfigService/GAAM-728) is implemented in site-header-dropdown.js, but the logout link is only reachable in the authenticated header state, which requires a real SAML/PingOne SSO login (not the AEM-author session this suite uses) — confirmed live: 2 logoutButton elements exist, 0 are :visible without that auth. Verify manually with real SSO credentials.');
     });
 });
 test.describe('SiteHeader — Happy Path', () => {
@@ -95,7 +142,7 @@ test.describe('SiteHeader — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[SH-050] @smoke @regression SiteHeader interactive elements are functional', async ({ page }) => {
+    test('[SH-050] @smoke @regression @sanity SiteHeader interactive elements are functional', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
         await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
         const root = page.locator('.cmp-site-header').first();
@@ -110,7 +157,7 @@ test.describe('SiteHeader — Happy Path', () => {
     });
 });
 test.describe('SiteHeader — Negative & Boundary', () => {
-    test('[SH-051] @negative @regression SiteHeader handles empty content gracefully', async ({ page }) => {
+    test('[SH-051] @negative @regression @sanity SiteHeader handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -121,7 +168,7 @@ test.describe('SiteHeader — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-site-header').first()).toBeVisible();
     });
-    test('[SH-052] @negative @regression SiteHeader handles missing images', async ({ page }) => {
+    test('[SH-052] @negative @regression @sanity SiteHeader handles missing images', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
         await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
         await page.waitForLoadState('load'); // header embeds several image-with-nested-content images that finish downloading after domcontentloaded
@@ -134,7 +181,7 @@ test.describe('SiteHeader — Negative & Boundary', () => {
     });
 });
 test.describe('SiteHeader — Responsive', () => {
-    test('[SH-053] @mobile @regression @mobile SiteHeader adapts to mobile viewport', async ({ page }) => {
+    test('[SH-053] @mobile @regression @mobile @sanity SiteHeader adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SiteHeaderPage(page);
         await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
@@ -149,7 +196,7 @@ test.describe('SiteHeader — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[SH-054] @mobile @regression SiteHeader adapts to tablet viewport', async ({ page }) => {
+    test('[SH-054] @mobile @regression @sanity SiteHeader adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new SiteHeaderPage(page);
         await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
@@ -199,9 +246,15 @@ test.describe('SiteHeader — Accessibility', () => {
 test.describe('SiteHeader — AEM Dialog Configuration', () => {
 });
 test.describe('SiteHeader — CSV Test Cases (GAAM-397)', () => {
-    test('[SH-063] @smoke @regression CMS FE: Site Header - Desktop — AC1', async ({ page }) => {
+    test('[SH-063] @regression @sanity CMS FE: Site Header - Desktop — AC1', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
+        // The financial-professionals/main/en/... path this test (and the SiteHeaderPage default)
+        // used to rely on 404s on this instance. Confirmed live 2026-08-12: the real, currently
+        // authored FP site-header XF instance is at
+        // /content/experience-fragments/global-atlantic/style-guide/header/header-master/financial-professionals
+        // (matches ui.content.ga's .content.xml for that node; returns 200 and renders .cmp-site-header
+        // with class cmp-site-header--identified, since this FP instance authors navPanels).
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/style-guide/header/header-master/financial-professionals.html?wcmmode=disabled`);
         // As a site visitor on desktop, I want the Site Header to display the correct navigation experience for my role and authentication state — Agnostic, Identified, or Authenticated — so that I can efficiently navigate to content relevant to me.
         // 
         // ----
@@ -318,14 +371,72 @@ test.describe('SiteHeader — CSV Test Cases (GAAM-397)', () => {
         // * Authoring Guide exists and is updated with all style variations
         // * Style Guide page exists and reflects all variations
         // * Create test landing pages to test role change across all states (Agnostic, Identified, Authenticated)
-        test.fixme();
+        //
+        // Investigated live 2026-08-12: this ticket's AC is implemented, not an untested stub — the
+        // sections below assert the core, ticket-cited, structurally-verifiable desktop contract
+        // against the live FP XF instance navigated to above. Explicitly out of scope here (per the
+        // ticket's own "Out of Scope" section, or already covered elsewhere in this file): XF setup
+        // (GAAM-792 — see SHDR-044/054), Main Navigation panel content (GAAM-794), Navigation child
+        // link columns (GAAM-403), Image with Nested Content child (GAAM-389), Authenticated tray
+        // (GAAM-823), role-selection cookie logic (GAAM-899), and mobile behaviour (GAAM-393). The
+        // Agnostic-state Role Selector card is also not exercised here — the only currently-authored
+        // XF instance found live (financial-professionals) has navPanels authored, so it renders in
+        // the Identified state (per site-header.html's data-sly-test gating), not Agnostic.
+        const root = page.locator('.cmp-site-header').first();
+        await expect(root).toBeVisible();
+        // "The Site Header uses a <header> landmark"
+        expect(await root.evaluate((el) => el.tagName)).toBe('HEADER');
+
+        // "A skip navigation link ('Skip to main content') is the first focusable element in the header"
+        const skipLink = page.locator('.cmp-site-header__skip-link');
+        await expect(skipLink).toHaveAttribute('href', '#main-content');
+        const skipIsFirstFocusable = await page.evaluate(() => {
+            const focusables = Array.from(document.querySelectorAll('a[href], button, [tabindex]'));
+            return focusables[0] === document.querySelector('.cmp-site-header__skip-link');
+        });
+        expect(skipIsFirstFocusable).toBe(true);
+
+        // "The Top Navigation bar renders across all role states" + distinct aria-label ("Top navigation")
+        const topNav = root.locator('.cmp-site-header__top-nav');
+        await expect(topNav).toHaveAttribute('aria-label', 'Top navigation');
+        expect(await topNav.locator('.cmp-site-header__top-nav-item').count()).toBeGreaterThan(0);
+
+        // Identified state: "The Main Navigation bar renders below the Top Navigation bar" + distinct
+        // aria-label ("Primary navigation"), and "the role changer trigger... renders on the left side"
+        const mainNav = root.locator('.cmp-site-header__main-nav');
+        await expect(mainNav).toHaveAttribute('aria-label', 'Primary navigation');
+        await expect(root.locator('.cmp-site-header__role-changer')).toBeVisible();
+
+        // "Dropdown triggers... expose aria-expanded (true/false), aria-haspopup='true', and
+        // aria-controls" + "Activating the trigger expands the login tray dropdown" (login trigger)
+        const loginTrigger = root.locator('[data-cmp-hook-site-header="loginTrigger"]');
+        await expect(loginTrigger).toHaveAttribute('aria-haspopup', 'true');
+        await expect(loginTrigger).toHaveAttribute('aria-expanded', 'false');
+        await loginTrigger.click();
+        await expect(loginTrigger).toHaveAttribute('aria-expanded', 'true');
+        const loginPanelId = await loginTrigger.getAttribute('aria-controls');
+        await expect(page.locator(`#${loginPanelId}`)).not.toHaveAttribute('hidden');
+        // "Escape key closes the active open panel or tray"
+        await page.keyboard.press('Escape');
+        await expect(loginTrigger).toHaveAttribute('aria-expanded', 'false');
+
+        // Same dropdown contract for an L1 Main Navigation category trigger, plus
+        // "The tray closes on click outside" behaviour
+        const l1Trigger = root.locator('.cmp-site-header__main-nav-trigger').first();
+        await expect(l1Trigger).toHaveAttribute('aria-haspopup', 'true');
+        const l1PanelId = await l1Trigger.getAttribute('aria-controls');
+        await l1Trigger.click();
+        await expect(l1Trigger).toHaveAttribute('aria-expanded', 'true');
+        await expect(page.locator(`#${l1PanelId}`)).not.toHaveAttribute('hidden');
+        await page.locator('body').click({ position: { x: 5, y: 5 } });
+        await expect(l1Trigger).toHaveAttribute('aria-expanded', 'false');
     });
 });
 test.describe('SiteHeader — CSV Test Cases (GAAM-394)', () => {
-    test('[SH-064] @smoke @regression CMS BE: Site Header — AC1', async ({ page }) => {
+    test('[SH-064] @regression @sanity CMS BE: Site Header — AC1', async ({ page }) => {
         const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: As a content author, I want to configure the Site Header component through a single AEM dialog — including top navigation links, role selector options, main navigation categories, mega-menu panel content, and login/search controls — so that the complete header experience can be managed.
+        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/style-guide/header/header-master/financial-professionals.html?wcmmode=disabled`);
+        // AC: As a content author, I want to configure the Site Header component through a single AEM dialog — including top navigation links, role selector options, main navigation categories, mega-menu panel content, and login/search controls — so that the complete header experience can be managed.
         // 
         // ----
         // 
@@ -474,6 +585,36 @@ test.describe('SiteHeader — CSV Test Cases (GAAM-394)', () => {
         // * All optional fields can be left empty without errors
         // * Character guidance is included in information areas / Author Guide
         // * Author Documentation can be accessed by clicking the ? on the component dialog and covers all required details for authoring
-        test.fixme();
+        //
+        // Investigated live 2026-08-12 + statically against kkr-aem source. The dialog structure AC
+        // is substantially implemented and verified: apps/ga/components/structure/site-header/_cq_dialog
+        // has exactly the 3 described tabs (Top Navigation / Role Selector / Main Navigation), with
+        // nested multifields (topNavItems -> secondaryNavLinks; loginTraySections -> sectionLinks),
+        // conditional show/hide (Top Nav Type -> Link vs Dropdown Items via showhidetargetvalue,
+        // Authenticated Only -> Additional Login Subheadline via acs-cq-dialog-dropdown-checkbox-showhide
+        // in main-navigation-panel/_cq_dialog), and the required-field set called out in the AC
+        // (Logo Image/Alt/Link, Role Items, CTA Label/URL all `required="{Boolean}true"`).
+        //
+        // CONFIRMED GAP: the "Global properties" table explicitly requires a "Cookie Duration"
+        // *Number field* ("Yes" required, "Carried forward from GAAM-308. Used by GAAM-899 cookie
+        // logic.") — but no such field exists anywhere in the dialog. SiteHeaderImpl.java (line ~128)
+        // declares `@ValueMapValue private Long cookieDuration;` with no `@Default`, and site-header.html
+        // reads it into `data-cmp-cookie-duration="${model.cookieDuration}"`, so the FE/model plumbing
+        // expects the property — but there is no `cookieDuration` field in
+        // apps/ga/components/structure/site-header/_cq_dialog/.content.xml (nor anywhere else in the
+        // repo — grepped all *.xml/*.json for "cookieDuration": zero dialog/policy hits). Confirmed
+        // live: GET /apps/ga/components/structure/site-header/_cq_dialog.infinity.json (200, 16.8KB)
+        // contains no "Cookie Duration" / "cookieDuration" text at all. Authors have no UI path to set
+        // this required value, so it is unset on every authored instance (including the live FP XF
+        // instance navigated to above — its site_header_copy node has no cookieDuration property
+        // either). This is a genuine content-author-facing gap in GAAM-394, not a test-authoring issue.
+        const dialogJson = await page.evaluate(async () => {
+            const res = await fetch('/apps/ga/components/structure/site-header/_cq_dialog.infinity.json', { credentials: 'include' });
+            return { status: res.status, text: await res.text() };
+        });
+        expect(dialogJson.status).toBe(200);
+        // Fails today: confirms the "Cookie Duration" number field required by the AC's Global
+        // properties table is missing from the dialog (GAAM-394 gap — see comment above for evidence).
+        expect(dialogJson.text).toContain('Cookie Duration');
     });
 });

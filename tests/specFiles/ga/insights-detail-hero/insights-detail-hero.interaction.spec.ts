@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('InsightsDetailHero — Component Interactions', () => {
-  test('@interaction @regression insights-detail-hero adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity insights-detail-hero adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new InsightsDetailHeroPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background

@@ -24,7 +24,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // TEXT-001 (GAAM-397/"Homepage Hero Role Card Click Action") relocated to
 // homepage-hero.author.spec.ts — CSV import mis-bucketed it under Text.
 test.describe('Text — Happy Path', () => {
-    test('[TEXT-002] @smoke @regression Text renders correctly', async ({ page }) => {
+    test('[TEXT-002] @smoke @regression @sanity Text renders correctly', async ({ page }) => {
         const pom = new TextPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-text').first();
@@ -40,7 +40,7 @@ test.describe('Text — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[TEXT-003] @smoke @regression Text interactive elements are functional', async ({ page }) => {
+    test('[TEXT-003] @smoke @regression @sanity Text interactive elements are functional', async ({ page }) => {
         const pom = new TextPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-text').first();
@@ -55,7 +55,7 @@ test.describe('Text — Happy Path', () => {
     });
 });
 test.describe('Text — Negative & Boundary', () => {
-    test('[TEXT-004] @negative @regression Text handles empty content gracefully', async ({ page }) => {
+    test('[TEXT-004] @negative @regression @sanity Text handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -66,7 +66,7 @@ test.describe('Text — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-text').first()).toBeVisible();
     });
-    test('[TEXT-005] @negative @regression Text handles missing images', async ({ page }) => {
+    test('[TEXT-005] @negative @regression @sanity Text handles missing images', async ({ page }) => {
         const pom = new TextPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-text img');
@@ -78,7 +78,7 @@ test.describe('Text — Negative & Boundary', () => {
     });
 });
 test.describe('Text — Responsive', () => {
-    test('[TEXT-006] @mobile @regression @mobile Text adapts to mobile viewport', async ({ page }) => {
+    test('[TEXT-006] @mobile @regression @mobile @sanity Text adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new TextPage(page);
         await pom.navigate(BASE());
@@ -94,7 +94,7 @@ test.describe('Text — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[TEXT-007] @mobile @regression Text adapts to tablet viewport', async ({ page }) => {
+    test('[TEXT-007] @mobile @regression @sanity Text adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new TextPage(page);
         await pom.navigate(BASE());

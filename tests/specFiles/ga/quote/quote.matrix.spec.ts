@@ -92,7 +92,7 @@ test.describe('Quote — State Matrix (Responsive)', () => {
 // ── Invalid: contrast concerns (2 tests) ──
 
 test.describe('Quote — State Matrix (Invalid Combos)', () => {
-    test('[QUOTE-N] @matrix @negative default + light-theme on white (light-on-light)', async ({ page }) => {
+    test('[QUOTE-N] @matrix @negative @sanity default + light-theme on white (light-on-light)', async ({ page }) => {
       // light-theme on light background (white) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new QuotePage(page);
@@ -101,7 +101,7 @@ test.describe('Quote — State Matrix (Invalid Combos)', () => {
       await expect(container).toBeVisible();
     });
 
-    test('[QUOTE-N] @matrix @negative default + light-theme on slate (light-on-light)', async ({ page }) => {
+    test('[QUOTE-N] @matrix @negative @sanity default + light-theme on slate (light-on-light)', async ({ page }) => {
       // light-theme on light background (slate) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new QuotePage(page);

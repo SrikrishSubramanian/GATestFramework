@@ -280,28 +280,82 @@ test.describe('Product Rate Table — Known Content Gaps', () => {
 // Relocated from image.author.spec.ts (MG-041, MG-064) — CSV import mis-bucketed these under
 // Image; they're actually about the Dynamic Rates / Product Rate Table component.
 test.describe('Product Rate Table — CSV Test Cases (GAAM-1402)', () => {
-  test('[PRT-010] @smoke @regression DR AEM FE: Only selected Index in dialog should be loaded in DR table — AC1', async ({ page }) => {
+  test('[PRT-010] @regression @sanity DR AEM FE: Only selected Index in dialog should be loaded in DR table — AC1', async ({ page }) => {
     const foreIncomeII = PRODUCTS.find(p => p.id === 'PRT-001')!;
     const pom = new ProductRateTablePage(page);
     await pom.navigate(BASE(), foreIncomeII.productPath, foreIncomeII.childPath);
-    // TODO: Implement assertion for: *Bug:*
-    //
-    // * *Only the selected Index and Year in the dialog - should be loaded in the DR table.*
-    // Refer the attach the AEM author page link.
-    // * This should be done for all the products.
-    //
-    // * [ForeIncome II - Morgan Stanley | Adobe Experience Manager|https://author-p101514-e947796.adobeaemcloud.com/ui#/aem/editor.html/content/global-atlantic/financial-professionals/main/en/resources/rates/foreincome-ii-ms.html]
-    test.fixme();
+
+    // AC1 ("only the selected Index/Year in the dialog should load in the DR table") is already
+    // implemented, not an open bug:
+    //  - _cq_dialog/.content.xml (lines 136-151) authors "Select Index"/"Select Duration"
+    //    tagfields (./indexTags, ./durationTags) on the Tagging tab.
+    //  - ProductRateTableModelImpl.java (fields at lines 85-93, resolved in init() at
+    //    lines 149-153) turns those tags into indexTagTitles/durationTagTitles.
+    //  - product-rate-table.html (lines 25-26) exposes them as data-index-titles /
+    //    data-duration-titles on the root element.
+    //  - product-rate-table.js's indexMatches()/filterRowsByIndex() (lines 74-146) drop any
+    //    row whose `index` doesn't match an authored Index tag before rendering, and
+    //    applyAuthorDurations() (lines 123-129) narrows the duration set the same way — both
+    //    intentionally fall back to "show everything" only when NO tag is authored (that
+    //    fallback is documented behavior, not the bug).
+    // What's genuinely unverifiable here is whether *this* live page has any Index tag
+    // authored today, since Dynamic_rates QA-sandbox content isn't in kkr-aem source control.
+    // So: read the real authored state off the DOM and either exercise the real assertion, or
+    // skip with a precise reason (GAAM-1402).
+    const indexTitlesRaw = await pom.root.getAttribute('data-index-titles');
+    const indexTitles = (indexTitlesRaw ?? '').split(',').map(s => s.trim()).filter(Boolean);
+
+    if (indexTitles.length === 0) {
+      test.skip(true, 'ForeIncome II (Dynamic_rates QA-sandbox page) has no "Select Index" tag authored today — data-index-titles is empty, so indexMatches()/filterRowsByIndex() (product-rate-table.js lines 74-146) have nothing to filter and correctly fall back to showing every index (documented no-filter behavior, confirmed via source, not a defect). Author an Index tag on this page to un-skip and exercise the assertion below.');
+      return;
+    }
+
+    // Real AC1 assertion: every rendered row-index label (".s-name", set from row.index in
+    // buildForeIncomeDesktopTable/buildForeIncomeMobileTable) must be one of the authored tags —
+    // if filterRowsByIndex() regressed, an unfiltered index would leak into this list.
+    const indexLabels = await pom.root.locator('.col-strategy .s-name, tr.row-name .s-name').allTextContents();
+    expect(indexLabels.length, 'Index tags are authored but no row-index labels rendered').toBeGreaterThan(0);
+    for (const label of indexLabels) {
+      const clean = label.trim();
+      expect(
+        indexTitles.some(t => clean.includes(t) || t.includes(clean)),
+        `Rendered row index "${clean}" does not match any authored Index tag [${indexTitles.join(', ')}] — AC1 violation`
+      ).toBe(true);
+    }
   });
 });
 test.describe('Product Rate Table — CSV Test Cases (GAAM-1321)', () => {
-  test('[PRT-011] @smoke @regression DR AEM FE: Rider Charge is not aligned as expected — AC1', async ({ page }) => {
+  test('[PRT-011] @regression @sanity DR AEM FE: Rider Charge is not aligned as expected — AC1', async ({ page }) => {
     const foreIncomeII = PRODUCTS.find(p => p.id === 'PRT-001')!;
     const pom = new ProductRateTablePage(page);
     await pom.navigate(BASE(), foreIncomeII.productPath, foreIncomeII.childPath);
-    // TODO: Implement assertion for: # Rider Charge - Added manually - is not aligned properly on *Dimensions 660 * 815* - should be fixed
-    // # manual table addition would be checked for different products, wherever required.
-    // # Testing Path - [ForeIncome II - All|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/financial-professionals/main/en/resources/rates/foreincome-ii-all.html?wcmmode=disabled]
-    test.fixme();
+
+    // Investigated against kkr-aem source; can't be automated without a live/manual check:
+    //  - "Rider Charge" is not a rate type the ForeIncome II component (ga/dynamic-rate/
+    //    product-rate-table) or its JS renderer knows about at all. The only "Rider Charge"
+    //    reference anywhere in kkr-aem is a rateType label produced by
+    //    ProductRateTableServiceImpl.transformDataForeStructuredGrowthII() (core/src/main/java/
+    //    com/kkr/aem/tenant/ga/services/impl/ProductRateTableServiceImpl.java, ~lines 190-199),
+    //    which belongs to a different product (ForeStructured Growth II) than the page this test
+    //    navigates to.
+    //  - The ticket itself says the Rider Charge table was "Added manually" — i.e. it's very
+    //    likely a plain RTE table dropped into a Text component on the live ForeIncome II page
+    //    (see the generic "RTE TABLE STYLES" block in
+    //    ui.apps.ga/.../clientlib-site/less/components/text.less lines 177-354), not something
+    //    ProductRateTableModel/product-rate-table.js renders or has any selector for.
+    //  - That manually-authored table's markup lives only in the live AEM content tree
+    //    (content/global-atlantic/financial-professionals/.../resources/rates/foreincome-ii-all),
+    //    which is not part of kkr-aem's static source tree, so its exact structure/classes can't
+    //    be inspected here.
+    //  - What IS confirmed from source: the generic RTE table rule (text.less lines 180-198,
+    //    347-353) forces `min-width: 1380px` + `overflow-x: auto` on the table's container below
+    //    @ga-bp-mobile-max (767px) — i.e. RTE tables are designed to scroll horizontally rather
+    //    than reflow at narrow widths. The ticket's "Dimensions 660 * 815" viewport (width 660px)
+    //    falls inside that mobile bucket, so whether the observed "misalignment" is a genuine
+    //    CSS defect (e.g. missing header/cell classes on the manually-authored table so it never
+    //    gets the scroll treatment) or expected scroll behavior can only be determined by opening
+    //    the actual "ForeIncome II - All" page at 660x815 and inspecting the real markup — we
+    //    can't guess selectors for authored content that isn't in source control.
+    test.fixme(true, 'Rider Charge is a manually-authored RTE table on the live ForeIncome II page (not rendered by the product-rate-table component/JS — confirmed via kkr-aem source, see comment above), so its markup/classes cannot be inspected statically. Needs a live check at the 660x815 viewport on the ForeIncome II - All page to identify the actual misaligned element before this can be automated without guessing a selector.');
   });
 });

@@ -177,7 +177,7 @@ test.describe('Button — State Matrix (Invalid Combos)', () => {
     for (const variant of VARIANT_NAMES) {
       const id = String(testNum++).padStart(3, '0');
 
-      test(`[BTN-${id}] @matrix @negative ${variant} + ${pair.theme} on ${pair.bg} (${pair.reason})`, async ({ page }) => {
+      test(`[BTN-${id}] @matrix @negative @sanity ${variant} + ${pair.theme} on ${pair.bg} (${pair.reason})`, async ({ page }) => {
         // This combo has insufficient contrast if applied manually.
         // Auto-theme should be used instead. Verify section still renders.
         const pom = new ButtonPage(page);

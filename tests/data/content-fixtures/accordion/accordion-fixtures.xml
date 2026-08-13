@@ -712,8 +712,8 @@
                                         cq:styleIds="[primary-filled,light-theme]"
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="ga/components/content/button"
-                                        linkURL="/content/global-atlantic"
-                                        text="Learn More"/>
+                                        path="/content/global-atlantic"
+                                        label="Learn More"/>
                                 </accordion-item-par>
                             </item_0>
                             <item_1
@@ -726,8 +726,7 @@
                                     <headline_block_0
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="ga/components/content/headline-block"
-                                        headline="Nested Headline Inside Accordion"
-                                        headlineLevel="h3"/>
+                                        title="&lt;h3&gt;Nested Headline Inside Accordion&lt;/h3&gt;"/>
                                     <separator_0
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="ga/components/content/separator"/>

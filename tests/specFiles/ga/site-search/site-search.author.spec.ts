@@ -26,7 +26,7 @@ test.describe('SiteSearch — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[SS-002] @smoke @regression SiteSearch interactive elements are functional', async ({ page }) => {
+    test('[SS-002] @smoke @regression @sanity SiteSearch interactive elements are functional', async ({ page }) => {
         const pom = new SiteSearchPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-site-search').first();
@@ -41,7 +41,7 @@ test.describe('SiteSearch — Happy Path', () => {
     });
 });
 test.describe('SiteSearch — Negative & Boundary', () => {
-    test('[SS-003] @negative @regression SiteSearch handles empty content gracefully', async ({ page }) => {
+    test('[SS-003] @negative @regression @sanity SiteSearch handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('SiteSearch — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-site-search').first()).toBeVisible();
     });
-    test('[SS-004] @negative @regression SiteSearch handles missing images', async ({ page }) => {
+    test('[SS-004] @negative @regression @sanity SiteSearch handles missing images', async ({ page }) => {
         const pom = new SiteSearchPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-site-search img');
@@ -64,7 +64,7 @@ test.describe('SiteSearch — Negative & Boundary', () => {
     });
 });
 test.describe('SiteSearch — Responsive', () => {
-    test('[SS-005] @mobile @regression @mobile SiteSearch adapts to mobile viewport', async ({ page }) => {
+    test('[SS-005] @mobile @regression @mobile @sanity SiteSearch adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new SiteSearchPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('SiteSearch — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[SS-006] @mobile @regression SiteSearch adapts to tablet viewport', async ({ page }) => {
+    test('[SS-006] @mobile @regression @sanity SiteSearch adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new SiteSearchPage(page);
         await pom.navigate(BASE());
@@ -134,7 +134,7 @@ test.describe('SiteSearch — AEM Dialog Configuration', () => {
 test.describe('SiteSearch — CSV Test Cases (GAAM-2)', () => {
     // Epic: Site Search reskin — Commonly Searched Terms and PDF Result Detection
     // Ref: https://bounteous.jira.com/wiki/spaces/GAFGPL/pages/264469114322947/Site+Search+Commonly+Searched+Terms+and+PDF+Result+Detection
-    test('[SS-015] @smoke @regression Commonly Searched Terms chips trigger a search', async ({ page }) => {
+    test('[SS-015] @regression @sanity Commonly Searched Terms chips trigger a search', async ({ page }) => {
         const pom = new SiteSearchPage(page);
         await pom.navigate(BASE());
         const commonTerms = page.locator('.common-term');
@@ -146,12 +146,32 @@ test.describe('SiteSearch — CSV Test Cases (GAAM-2)', () => {
         expect(page.url()).toMatch(/[#&]q=/);
     });
     test('[SS-016] @regression PDF result type is visually distinguished from page results', async ({ page }) => {
-        // No PDF-indexed content exists in this environment to assert against a
-        // real "PDF" indicator/badge selector — the style guide page's own meta
-        // description references "PDF result types", but no search query returns
-        // an actual .pdf-linked result item to verify against. Needs a content
-        // fixture with an indexed PDF asset before this can be implemented
-        // without guessing at a selector.
-        test.fixme();
+        // Verified via kkr-aem source 2026-08-12: this AC is already implemented. site-search.js
+        // (base clientlib) adds a `pdf-result` modifier class to the result <li> whenever
+        // `item.type === '.pdf'` (SearchServlet#getQueryArray sets type=".pdf" for assets under
+        // the component's `pdfSearchRootPath`) and renders an extra `.search-result-pdf-icon`
+        // <img> (from the `pdfIconPath` dialog field) that plain page results never get. The GA
+        // reskin LESS (clientlib-site/less/components/site-search.less) has dedicated `.pdf-result`
+        // / `.search-result-pdf-icon` rules (row layout, 48px/80px icon) distinct from the default
+        // column layout used for page results. The style guide's "State 3" instance
+        // (content/global-atlantic/style-guide/components/site-search) configures pdfIconPath +
+        // pdfSearchRootPath=/content/dam/global-atlantic/style-guide and its own page description
+        // promises "a mix of Page and PDF result items" for a search like "Wealth" — but no PDF
+        // asset is actually present under that DAM path in this environment, so no live query
+        // returns a `.pdf-result` item to verify against. Content gap, not a component defect.
+        const pom = new SiteSearchPage(page);
+        await pom.navigate(BASE());
+        const input = page.locator('.cmp-site-search__input').first();
+        await input.fill('Wealth');
+        await input.press('Enter');
+        await expect(page.locator('.cmp-site-search__results-list li').first()).toBeVisible({ timeout: 10000 });
+        const pdfResult = page.locator('.cmp-site-search__results-list li.pdf-result').first();
+        const pdfCount = await pdfResult.count();
+        test.skip(pdfCount === 0, 'No PDF asset is indexed under pdfSearchRootPath on the style guide — content gap, not a component defect (JS adds a `pdf-result` class + document-icon image that page results do not get, with dedicated CSS)');
+        await expect(pdfResult.locator('.search-result-pdf-icon img')).toBeVisible();
+        // Page results (no pdf-result class) never render the PDF icon — confirms the two result
+        // types are visually distinguishable, not just internally flagged.
+        const pageResultWithIcon = page.locator('.cmp-site-search__results-list li:not(.pdf-result) .search-result-pdf-icon');
+        expect(await pageResultWithIcon.count()).toBe(0);
     });
 });

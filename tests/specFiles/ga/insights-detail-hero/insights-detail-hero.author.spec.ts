@@ -26,7 +26,7 @@ test.describe('InsightsDetailHero — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[IDH-002] @smoke @regression InsightsDetailHero interactive elements are functional', async ({ page }) => {
+    test('[IDH-002] @smoke @regression @sanity InsightsDetailHero interactive elements are functional', async ({ page }) => {
         const pom = new InsightsDetailHeroPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-insights-detail-hero').first();
@@ -41,7 +41,7 @@ test.describe('InsightsDetailHero — Happy Path', () => {
     });
 });
 test.describe('InsightsDetailHero — Negative & Boundary', () => {
-    test('[IDH-003] @negative @regression InsightsDetailHero handles empty content gracefully', async ({ page }) => {
+    test('[IDH-003] @negative @regression @sanity InsightsDetailHero handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -54,7 +54,7 @@ test.describe('InsightsDetailHero — Negative & Boundary', () => {
     });
 });
 test.describe('InsightsDetailHero — Responsive', () => {
-    test('[IDH-005] @mobile @regression @mobile InsightsDetailHero adapts to mobile viewport', async ({ page }) => {
+    test('[IDH-005] @mobile @regression @mobile @sanity InsightsDetailHero adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new InsightsDetailHeroPage(page);
         await pom.navigate(BASE());

@@ -36,7 +36,7 @@ test.afterEach(async ({ page }, testInfo) => {
   // Auto-Play Behavior
   // ---------------------------------------------------------------------------
 
-  test('NCC-INT-001: Progress bar width increases over time', async ({ page }) => {
+  test('@sanity NCC-INT-001: Progress bar width increases over time', async ({ page }) => {
     const pom = new NestedContentCarouselPage(page);
     await pom.navigate(BASE());
 

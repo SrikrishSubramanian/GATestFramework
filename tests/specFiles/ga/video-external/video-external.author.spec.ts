@@ -39,7 +39,7 @@ test.describe('Video External — Happy Path', () => {
 });
 test.describe('Video External — Responsive', () => {
     test.describe.configure({ retries: 1 });
-    test('[VE-006] @mobile @regression Video adapts to mobile viewport', async ({ page }) => {
+    test('[VE-006] @mobile @regression @sanity Video adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const pom = new VideoExternalPage(page);
         await pom.navigate(BASE());

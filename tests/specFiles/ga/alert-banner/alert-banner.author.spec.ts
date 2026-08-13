@@ -26,7 +26,7 @@ test.describe('AlertBanner — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[AB-002] @smoke @regression AlertBanner interactive elements are functional', async ({ page }) => {
+    test('[AB-002] @smoke @regression @sanity AlertBanner interactive elements are functional', async ({ page }) => {
         const pom = new AlertBannerPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-alert-banner-ga').first();
@@ -41,7 +41,7 @@ test.describe('AlertBanner — Happy Path', () => {
     });
 });
 test.describe('AlertBanner — Negative & Boundary', () => {
-    test('[AB-003] @negative @regression AlertBanner handles empty content gracefully', async ({ page }) => {
+    test('[AB-003] @negative @regression @sanity AlertBanner handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('AlertBanner — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-alert-banner-ga').first()).toBeVisible();
     });
-    test('[AB-004] @negative @regression AlertBanner handles missing images', async ({ page }) => {
+    test('[AB-004] @negative @regression @sanity AlertBanner handles missing images', async ({ page }) => {
         const pom = new AlertBannerPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-alert-banner-ga img');
@@ -64,7 +64,7 @@ test.describe('AlertBanner — Negative & Boundary', () => {
     });
 });
 test.describe('AlertBanner — Responsive', () => {
-    test('[AB-005] @mobile @regression @mobile AlertBanner adapts to mobile viewport', async ({ page }) => {
+    test('[AB-005] @mobile @regression @mobile @sanity AlertBanner adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new AlertBannerPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('AlertBanner — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[AB-006] @mobile @regression AlertBanner adapts to tablet viewport', async ({ page }) => {
+    test('[AB-006] @mobile @regression @sanity AlertBanner adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new AlertBannerPage(page);
         await pom.navigate(BASE());

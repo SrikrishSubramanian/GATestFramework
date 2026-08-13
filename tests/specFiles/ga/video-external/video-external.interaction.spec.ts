@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('VideoExternal — Component Interactions', () => {
-  test('@interaction @regression video-external adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity video-external adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new VideoExternalPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background

@@ -84,14 +84,17 @@ export async function loginToAEMAuthor(page: Page, options?: AuthOptions): Promi
     return;
   }
 
-  // For cloud envs, the login page might auto-redirect through IMS back to AEM
-  // if there's a valid session cookie. Wait briefly to see if that happens.
-  if (isCloudEnv(authorUrl)) {
-    await page.waitForTimeout(2000);
-    if (isAlreadyLoggedIn(page.url())) {
-      await page.waitForTimeout(1500);
-      return;
-    }
+  // The login page can auto-redirect back to AEM if there's already a valid session
+  // cookie — via IMS SSO for cloud envs, or a same-tab client-side redirect for local AEM
+  // SDK once it detects the existing session. That redirect isn't always reflected in
+  // page.url() yet right when `goto()` resolves at 'domcontentloaded', so recheck after a
+  // brief settle before committing to the full login flow (previously this recheck only
+  // ran for cloud envs, so a valid local session could race into loginViaLocalAEM() trying
+  // to fill a login form that had already navigated away to /aem/start.html).
+  await page.waitForTimeout(2000);
+  if (isAlreadyLoggedIn(page.url())) {
+    await page.waitForTimeout(1500);
+    return;
   }
 
   if (isCloudEnv(authorUrl)) {

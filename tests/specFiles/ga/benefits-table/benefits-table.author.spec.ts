@@ -26,7 +26,7 @@ test.describe('BenefitsTable — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[BT-002] @smoke @regression BenefitsTable interactive elements are functional', async ({ page }) => {
+    test('[BT-002] @smoke @regression @sanity BenefitsTable interactive elements are functional', async ({ page }) => {
         const pom = new BenefitsTablePage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-benefits-table').first();
@@ -41,7 +41,7 @@ test.describe('BenefitsTable — Happy Path', () => {
     });
 });
 test.describe('BenefitsTable — Negative & Boundary', () => {
-    test('[BT-003] @negative @regression BenefitsTable handles empty content gracefully', async ({ page }) => {
+    test('[BT-003] @negative @regression @sanity BenefitsTable handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('BenefitsTable — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-benefits-table').first()).toBeVisible();
     });
-    test('[BT-004] @negative @regression BenefitsTable handles missing images', async ({ page }) => {
+    test('[BT-004] @negative @regression @sanity BenefitsTable handles missing images', async ({ page }) => {
         const pom = new BenefitsTablePage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-benefits-table img');
@@ -64,7 +64,7 @@ test.describe('BenefitsTable — Negative & Boundary', () => {
     });
 });
 test.describe('BenefitsTable — Responsive', () => {
-    test('[BT-005] @mobile @regression @mobile BenefitsTable adapts to mobile viewport', async ({ page }) => {
+    test('[BT-005] @mobile @regression @mobile @sanity BenefitsTable adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new BenefitsTablePage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('BenefitsTable — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[BT-006] @mobile @regression BenefitsTable adapts to tablet viewport', async ({ page }) => {
+    test('[BT-006] @mobile @regression @sanity BenefitsTable adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new BenefitsTablePage(page);
         await pom.navigate(BASE());

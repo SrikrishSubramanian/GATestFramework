@@ -92,7 +92,7 @@ test.describe('VideoExternal — State Matrix (Responsive)', () => {
 // ── Invalid: contrast concerns (2 tests) ──
 
 test.describe('VideoExternal — State Matrix (Invalid Combos)', () => {
-    test('[VIDEO_EXTERNAL-N] @matrix @negative default + light-theme on white (light-on-light)', async ({ page }) => {
+    test('[VIDEO_EXTERNAL-N] @matrix @negative @sanity default + light-theme on white (light-on-light)', async ({ page }) => {
       // light-theme on light background (white) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new VideoExternalPage(page);
@@ -101,7 +101,7 @@ test.describe('VideoExternal — State Matrix (Invalid Combos)', () => {
       await expect(container).toBeVisible();
     });
 
-    test('[VIDEO_EXTERNAL-N] @matrix @negative default + dark-theme on granite (dark-on-dark)', async ({ page }) => {
+    test('[VIDEO_EXTERNAL-N] @matrix @negative @sanity default + dark-theme on granite (dark-on-dark)', async ({ page }) => {
       // dark-theme on dark background (granite) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new VideoExternalPage(page);

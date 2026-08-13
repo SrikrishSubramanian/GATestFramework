@@ -11,6 +11,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { Page } from '@playwright/test';
+import { XMLParser } from 'fast-xml-parser';
 import ENV from './env';
 import { loginToAEMAuthor } from './auth-fixture';
 
@@ -128,6 +129,64 @@ function fixtureExistsForComponent(component: string): boolean {
 }
 
 /**
+ * Coerces a raw DocView attribute string into its JS-typed value.
+ * Handles AEM's `{Type}value` type hints and `[a,b,c]` multi-value arrays.
+ */
+function parseTypedValue(raw: string): unknown {
+  const typedMatch = raw.match(/^\{(\w+)\}([\s\S]*)$/);
+  const typeHint = typedMatch ? typedMatch[1] : null;
+  const value = typedMatch ? typedMatch[2] : raw;
+
+  if (value.startsWith('[') && value.endsWith(']')) {
+    const inner = value.slice(1, -1);
+    return inner.length ? inner.split(',').map(v => coerceScalar(v, typeHint)) : [];
+  }
+  return coerceScalar(value, typeHint);
+}
+
+function coerceScalar(value: string, typeHint: string | null): unknown {
+  if (typeHint === 'Boolean') return value === 'true';
+  if (typeHint === 'Long' || typeHint === 'Double' || typeHint === 'Decimal') return Number(value);
+  return value;
+}
+
+/** Recursively converts a fast-xml-parser node into Sling JSON-import shape (props + child nodes as sibling keys). */
+function convertDocViewNode(node: Record<string, unknown>): Record<string, unknown> {
+  const result: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(node)) {
+    if (key.startsWith('xmlns:') || key === '#text') continue;
+    if (value !== null && typeof value === 'object' && !Array.isArray(value)) {
+      result[key] = convertDocViewNode(value as Record<string, unknown>);
+    } else {
+      result[key] = parseTypedValue(String(value));
+    }
+  }
+  return result;
+}
+
+/**
+ * Converts AEM DocView-format XML (jcr:root, element-name-as-nodename, attributes-as-properties)
+ * into the nested JSON object Sling's :operation=import (:contentType=json) expects.
+ *
+ * NOTE: this is NOT the same dialect as JCR System View XML (sv:node/sv:property) — Sling's
+ * :contentType=xml import expects SysView, so posting these DocView fixtures with :contentType=xml
+ * silently no-ops (Sling falls back to creating an empty default-typed node). JSON avoids that
+ * dialect mismatch entirely.
+ */
+function docViewXmlToJson(xml: string): Record<string, unknown> {
+  const parser = new XMLParser({
+    ignoreAttributes: false,
+    attributeNamePrefix: '',
+    parseAttributeValue: false,
+    ignoreDeclaration: true,
+    trimValues: true,
+  });
+  const parsed = parser.parse(xml) as Record<string, unknown>;
+  const root = parsed['jcr:root'] as Record<string, unknown>;
+  return convertDocViewNode(root);
+}
+
+/**
  * Deploy a single component's fixture XML to AEM via Sling POST.
  *
  * Creates the page at /content/global-atlantic/test-fixtures/<component>
@@ -174,13 +233,31 @@ export async function deployFixture(component: string, page: Page): Promise<Depl
       ignoreHTTPSErrors: true,
     });
 
-    // Step 4: Import the fixture XML via Sling POST
-    const importRes = await page.request.post(`${authorUrl}${targetPath}`, {
+    // Step 4: Delete any stale node at the target path first. If a prior deploy ever landed a
+    // POST directly at targetPath, Sling auto-vivifies it as a plain resource before any import
+    // runs — permanently pinning it to the wrong primaryType, since import can only ever set
+    // properties on that already-created node, never its own root type. Starting clean avoids
+    // silently merging into that stale resource.
+    await page.request.post(`${authorUrl}${targetPath}`, {
+      headers,
+      form: { ':operation': 'delete' },
+      ignoreHTTPSErrors: true,
+    });
+
+    // Step 5: Import the fixture as JSON, POSTed to the PARENT with the target keyed by name —
+    // NOT posted directly at targetPath. Posting straight at targetPath hits the same
+    // auto-vivification problem as step 4 describes: Sling creates the resource before handing
+    // off to the import operation, so the imported root's own jcr:primaryType never applies.
+    // Keying it under the parent lets the import operation create the child node fresh.
+    const fixtureJson = docViewXmlToJson(fixtureContent);
+    const payload = { [component]: fixtureJson };
+
+    const importRes = await page.request.post(`${authorUrl}${TEST_FIXTURES_BASE}`, {
       headers,
       form: {
         ':operation': 'import',
-        ':contentType': 'xml',
-        ':content': fixtureContent,
+        ':contentType': 'json',
+        ':content': JSON.stringify(payload),
         ':replace': 'true',
         ':replaceProperties': 'true',
       },
@@ -196,7 +273,7 @@ export async function deployFixture(component: string, page: Page): Promise<Depl
       };
     }
 
-    // Step 5: Verify the page actually renders
+    // Step 6: Verify the page actually deployed as a real cq:Page, not a stray auto-vivified node.
     const verifyRes = await page.request.get(
       `${authorUrl}${targetPath}.1.json`,
       { ignoreHTTPSErrors: true }
@@ -207,6 +284,15 @@ export async function deployFixture(component: string, page: Page): Promise<Depl
         deployed: false,
         path: targetPath,
         message: `Import returned ${importRes.status()} but page node not found at ${targetPath}`,
+      };
+    }
+    const verifyJson = await verifyRes.json();
+    if (verifyJson['jcr:primaryType'] !== 'cq:Page') {
+      return {
+        component,
+        deployed: false,
+        path: targetPath,
+        message: `Import succeeded but ${targetPath} has jcr:primaryType="${verifyJson['jcr:primaryType']}" (expected cq:Page) — fixture content did not apply to the root node.`,
       };
     }
 

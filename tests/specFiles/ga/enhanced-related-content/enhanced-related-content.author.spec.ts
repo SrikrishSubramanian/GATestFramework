@@ -26,7 +26,7 @@ test.describe('EnhancedRelatedContent — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[ERC-002] @smoke @regression EnhancedRelatedContent interactive elements are functional', async ({ page }) => {
+    test('[ERC-002] @smoke @regression @sanity EnhancedRelatedContent interactive elements are functional', async ({ page }) => {
         const pom = new EnhancedRelatedContentPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-enhanced-related-content').first();
@@ -41,7 +41,7 @@ test.describe('EnhancedRelatedContent — Happy Path', () => {
     });
 });
 test.describe('EnhancedRelatedContent — Negative & Boundary', () => {
-    test('[ERC-003] @negative @regression EnhancedRelatedContent handles empty content gracefully', async ({ page }) => {
+    test('[ERC-003] @negative @regression @sanity EnhancedRelatedContent handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('EnhancedRelatedContent — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-enhanced-related-content').first()).toBeVisible();
     });
-    test('[ERC-004] @negative @regression EnhancedRelatedContent handles missing images', async ({ page }) => {
+    test('[ERC-004] @negative @regression @sanity EnhancedRelatedContent handles missing images', async ({ page }) => {
         const pom = new EnhancedRelatedContentPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-enhanced-related-content img');
@@ -64,7 +64,7 @@ test.describe('EnhancedRelatedContent — Negative & Boundary', () => {
     });
 });
 test.describe('EnhancedRelatedContent — Responsive', () => {
-    test('[ERC-005] @mobile @regression @mobile EnhancedRelatedContent adapts to mobile viewport', async ({ page }) => {
+    test('[ERC-005] @mobile @regression @mobile @sanity EnhancedRelatedContent adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new EnhancedRelatedContentPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('EnhancedRelatedContent — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[ERC-006] @mobile @regression EnhancedRelatedContent adapts to tablet viewport', async ({ page }) => {
+    test('[ERC-006] @mobile @regression @sanity EnhancedRelatedContent adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new EnhancedRelatedContentPage(page);
         await pom.navigate(BASE());

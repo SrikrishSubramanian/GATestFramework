@@ -37,7 +37,7 @@ test.describe('Brand Relationship — Happy Path', () => {
 });
 test.describe('Brand Relationship — Responsive', () => {
     test.describe.configure({ retries: 1 });
-    test('[BR-006] @mobile @regression Brand Relationship adapts to mobile viewport', async ({ page }) => {
+    test('[BR-006] @mobile @regression @sanity Brand Relationship adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         const pom = new BrandRelationshipPage(page);
         await pom.navigate(BASE());

@@ -26,7 +26,7 @@ test.describe('InsightsListing — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[IL-002] @smoke @regression InsightsListing interactive elements are functional', async ({ page }) => {
+    test('[IL-002] @smoke @regression @sanity InsightsListing interactive elements are functional', async ({ page }) => {
         const pom = new InsightsListingPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-insights-listing').first();
@@ -41,7 +41,7 @@ test.describe('InsightsListing — Happy Path', () => {
     });
 });
 test.describe('InsightsListing — Negative & Boundary', () => {
-    test('[IL-003] @negative @regression InsightsListing handles empty content gracefully', async ({ page }) => {
+    test('[IL-003] @negative @regression @sanity InsightsListing handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -54,7 +54,7 @@ test.describe('InsightsListing — Negative & Boundary', () => {
     });
 });
 test.describe('InsightsListing — Responsive', () => {
-    test('[IL-005] @mobile @regression @mobile InsightsListing adapts to mobile viewport', async ({ page }) => {
+    test('[IL-005] @mobile @regression @mobile @sanity InsightsListing adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new InsightsListingPage(page);
         await pom.navigate(BASE());
@@ -69,7 +69,7 @@ test.describe('InsightsListing — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[IL-006] @mobile @regression InsightsListing adapts to tablet viewport', async ({ page }) => {
+    test('[IL-006] @mobile @regression @sanity InsightsListing adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new InsightsListingPage(page);
         await pom.navigate(BASE());

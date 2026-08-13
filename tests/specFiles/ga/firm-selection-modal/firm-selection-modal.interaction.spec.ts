@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('FirmSelectionModal — Component Interactions', () => {
-  test('@interaction @regression firm-selection-modal adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity firm-selection-modal adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new FirmSelectionModalPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Modal is hidden until its trigger is clicked

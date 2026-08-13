@@ -41,7 +41,7 @@ test.describe('Breadcrumb — Core Structure', () => {
         // measurement: style check
         expect(display).not.toBe('none');
     });
-    test('[BC-002] @smoke @regression Breadcrumb list is an <ol> element', async ({ page }) => {
+    test('[BC-002] @smoke @regression @sanity Breadcrumb list is an <ol> element', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
@@ -51,7 +51,7 @@ test.describe('Breadcrumb — Core Structure', () => {
          await list.evaluate(el => el.tagName.toLowerCase());
         expect(tag).toBe('ol');
     });
-    test('[BC-003] @smoke @regression Breadcrumb items are <li> elements', async ({ page }) => {
+    test('[BC-003] @smoke @regression @sanity Breadcrumb items are <li> elements', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
@@ -63,7 +63,7 @@ test.describe('Breadcrumb — Core Structure', () => {
             expect(tag).toBe('li');
         }
     });
-    test('[BC-004] @smoke @regression Breadcrumb ancestor links are <a> elements', async ({ page }) => {
+    test('[BC-004] @smoke @regression @sanity Breadcrumb ancestor links are <a> elements', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
@@ -75,14 +75,14 @@ test.describe('Breadcrumb — Core Structure', () => {
             expect(tag).toBe('a');
         }
     });
-    test('[BC-005] @smoke @regression Active (current page) item has --active class', async ({ page }) => {
+    test('[BC-005] @smoke @regression @sanity Active (current page) item has --active class', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
         const active = page.locator(BC_ACTIVE).first();
         await expect(active).toBeVisible();
     });
-    test('[BC-006] @smoke @regression Active item is non-linked (no <a> inside)', async ({ page }) => {
+    test('[BC-006] @smoke @regression @sanity Active item is non-linked (no <a> inside)', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
@@ -503,23 +503,42 @@ test.describe('Breadcrumb — GAAM-700 Current Page Font Color', () => {
 test.describe('Breadcrumb — ARIA Accessibility', () => {
 });
 test.describe('Breadcrumb — CSV Test Cases (GAAM-1451)', () => {
-    test('[BRDC-036] @smoke @regression CMS Analytics FE – Component Tracking | The Breadcrumb component is currently identifying as "homepage"  — AC1', async ({ page }) => {
+    test('[BRDC-036] @regression @sanity CMS Analytics FE – Component Tracking | The Breadcrumb component is currently identifying as "homepage"  — AC1', async ({ page }) => {
+        // AC1: "Inspect breadcrumb and verify the Datalayer. Actual: identifying as
+        // 'homepage'. Expected: identified as 'Breadcrumb'." Verified against
+        // breadcrumb.html (kkr-aem-base/components/content/breadcrumb/breadcrumb.html:44)
+        // — the component's own data-cmp-data-layer comes from breadcrumb.data.json,
+        // built by BaseModel.getComponentData() (BaseModel.java:183-196), which sets only
+        // "@type" (the resource type, e.g. "ga/components/content/breadcrumb") and never a
+        // title/name field — so there is no static field that could literally read
+        // "homepage". Confirmed live on the style-guide page
+        // (localhost:4502/content/global-atlantic/style-guide/components/breadcrumb.html):
+        // every rendered breadcrumb's data-cmp-data-layer resolves to
+        // {"<id>":{"@type":"ga/components/content/breadcrumb"}} — correctly identified as
+        // the breadcrumb component, with no "homepage" reference anywhere in the payload.
+        // This assertion pins that current, correct behavior. The ticket's screenshot is
+        // from Adobe's "CMS Analytics FE" browser extension reading this same datalayer —
+        // that extension's own label-resolution logic lives outside this repo and can't be
+        // driven from Playwright, but the datalayer it reads off this page is verified
+        // correct here.
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: Launch [https://author-p101514-e947796.adobeaemcloud.com/content/global-atlantic/style-guide/components/breadcrumb.html?wcmmode=disabled|https://author-p101514-e947796.adobeaemcloud.com/content/global-atlantic/style-guide/components/breadcrumb.html?wcmmode=disabled]
-        // 
-        // Inspect breadcrumb and verify the Datalayer
-        // 
-        // *Actual*: The Breadcrumb component is currently identifying as "homepage" 
-        // 
-        // *Expected*: it should be identified as “Breadcrumb”
-        // 
-        // !Screenshot 2026-06-09 at 12.57.53 PM.png|width=250,alt="Screenshot 2026-06-09 at 12.57.53 PM.png"!
-        test.fixme();
+        const root = page.locator(BC).first();
+        await expect(root).toBeVisible();
+        const rawLayer = await root.getAttribute('data-cmp-data-layer');
+        expect(rawLayer, 'Breadcrumb root must emit a data-cmp-data-layer attribute').not.toBeNull();
+        const parsed = JSON.parse(rawLayer!);
+        const entries = Object.values(parsed) as Array<Record<string, unknown>>;
+        expect(entries.length).toBeGreaterThan(0);
+        const entry = entries[0];
+        // Must not mis-identify as "homepage" anywhere in the component's own payload.
+        expect(JSON.stringify(entry).toLowerCase()).not.toContain('homepage');
+        // Must correctly identify as the breadcrumb component via @type.
+        expect(String(entry['@type'])).toContain('breadcrumb');
     });
 });
 test.describe('Breadcrumb — Happy Path', () => {
-    test('[BRDC-037] @smoke @regression Breadcrumb renders correctly', async ({ page }) => {
+    test('[BRDC-037] @smoke @regression @sanity Breadcrumb renders correctly', async ({ page }) => {
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-breadcrumb').first();
@@ -535,7 +554,7 @@ test.describe('Breadcrumb — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[BRDC-038] @smoke @regression Breadcrumb interactive elements are functional', async ({ page }) => {
+    test('[BRDC-038] @smoke @regression @sanity Breadcrumb interactive elements are functional', async ({ page }) => {
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-breadcrumb').first();
@@ -550,7 +569,7 @@ test.describe('Breadcrumb — Happy Path', () => {
     });
 });
 test.describe('Breadcrumb — Negative & Boundary', () => {
-    test('[BRDC-039] @negative @regression Breadcrumb handles empty content gracefully', async ({ page }) => {
+    test('[BRDC-039] @negative @regression @sanity Breadcrumb handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -561,7 +580,7 @@ test.describe('Breadcrumb — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-breadcrumb').first()).toBeVisible();
     });
-    test('[BRDC-040] @negative @regression Breadcrumb handles missing images', async ({ page }) => {
+    test('[BRDC-040] @negative @regression @sanity Breadcrumb handles missing images', async ({ page }) => {
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-breadcrumb img');
@@ -573,7 +592,7 @@ test.describe('Breadcrumb — Negative & Boundary', () => {
     });
 });
 test.describe('Breadcrumb — Responsive', () => {
-    test('[BRDC-041] @mobile @regression @mobile Breadcrumb adapts to mobile viewport', async ({ page }) => {
+    test('[BRDC-041] @mobile @regression @mobile @sanity Breadcrumb adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
@@ -588,7 +607,7 @@ test.describe('Breadcrumb — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[BRDC-042] @mobile @regression Breadcrumb adapts to tablet viewport', async ({ page }) => {
+    test('[BRDC-042] @mobile @regression @sanity Breadcrumb adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new BreadcrumbPage(page);
         await pom.navigate(BASE());
@@ -640,17 +659,6 @@ test.describe('Breadcrumb — Accessibility', () => {
 });
 test.describe('Breadcrumb — AEM Dialog Configuration', () => {
 });
-test.describe('Breadcrumb — CSV Test Cases (GAAM-1355)', () => {
-    test('[BRDC-051] @smoke @regression [VQA] - Alignment Adjustments - Detail Hero — AC1', async ({ page }) => {
-        const pom = new BreadcrumbPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Hi, can we please ensure the desktop text container has a max width of 914px (or 8-columns) to match the figma?
-        // Raising this as a separate bug on Arun’s explanation: “This needs to be implemented in both Detail Hero and in Rate Details Hero component. Text alignment and Breadcrumb alignment needs to be addressed.(_fixed width of 914px needs to be verified in tablet view as well_).
-        // According to figma, text container has:
-        // width: 914px;
-        // max-width: 1032px;”
-        // 
-        // CC [~accountid:712020:89a2fe59-27ba-41cb-b203-75c545fb669a] [~accountid:5e73d47c17c6640c385f56a6] [~accountid:606ce8584703e400679818a2] [~accountid:628724d262e0790069a80c2f] [~accountid:712020:19496377-93fa-4b6a-be8c-4f3dac15dfb5] 
-        test.fixme();
-    });
-});
+// BRDC-051 (GAAM-1355, "[VQA] - Alignment Adjustments - Detail Hero") relocated to
+// detail-hero.author.spec.ts — it's about the Detail Hero component's text-container
+// width and breadcrumb alignment, not the Breadcrumb component itself.

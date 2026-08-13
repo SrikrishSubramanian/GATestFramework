@@ -40,7 +40,7 @@ test.describe('GridContainer — Core Structure', () => {
         await expect(roots.first()).toBeVisible();
         await expect(roots.last()).toBeVisible();
     });
-    test('[GC-002] @smoke @regression Each grid container has .cmp-grid-container__items child', async ({ page }) => {
+    test('[GC-002] @smoke @regression @sanity Each grid container has .cmp-grid-container__items child', async ({ page }) => {
         const pom = new GridContainerPage(page);
         await pom.navigate(BASE());
         const wrappers = page.locator(GC_WRAPPER);
@@ -723,19 +723,53 @@ test.describe('GridContainer — Console Errors', () => {
 // Relocated from image.author.spec.ts (MG-057) — CSV import mis-bucketed this under Image;
 // it's actually about the Grid component (used inside the Dynamic Rates table).
 test.describe('GridContainer — CSV Test Cases (GAAM-1387)', () => {
-    test('[GC-047] @smoke @regression CMS BE: Add a style option to Grid component - to be used in DR table component — AC1', async ({ page }) => {
-        const pom = new GridContainerPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: *AS IS:*
+    test('[GC-047] @regression @sanity CMS BE: Add a style option to Grid component - to be used in DR table component — AC1', async ({ page }) => {
+        // AS-IS (ticket): "Grid component is missing with Style option while adding
+        // them in a Dynamic Rate component."
+        // TO BE: Add a Style Option in the Grid component so it can be configured
+        // as needed inside a Dynamic Rate (DR) table page.
         //
-        // * Grid component is missing with Style option while adding them in a Dynamic Rate component
-        // !image-20260626-122947.png|width=1078,alt="image-20260626-122947.png"!
-        //
-        //
-        //
-        // *TO BE:*
-        //
-        // * Add a *Style Option in the Grid component* - so that the grid can be configured as needed.
-        test.fixme();
+        // Root cause confirmed against kkr-aem source and re-verified live against
+        // the local AEM author instance: the "product-rate-components" policy — the
+        // allow-list for the Product Rate Page template's editable regions — omits
+        // grid-container from its `components` list, so it can't be added (and thus
+        // can't be styled) inside a DR table page at all.
+        //   kkr-aem/ui.content.ga/src/main/content/jcr_root/conf/global-atlantic/
+        //   settings/wcm/policies/.content.xml, node
+        //   wcm/foundation/components/responsivegrid/product-rate-components
+        //   (jcr:title="GA Product Rate Page Template - Read Only"):
+        //     components="[/apps/ga/components/dynamic-rate/product-rate-table,
+        //     /apps/ga/components/content/disclosure-list,
+        //     /apps/ga/components/dynamic-rate/rate-details-hero,
+        //     /apps/ga/components/content/embedhtml,
+        //     /apps/ga/components/content/product-path-summary-card,
+        //     /apps/ga/components/content/spacer,/apps/ga/components/content/text,
+        //     /apps/ga/components/content/promo-banner,
+        //     /apps/ga/components/content/section,
+        //     /apps/ga/components/content/separator]"
+        //   — no grid-container entry.
+        // Contrast with the sibling "product-detail-components" policy in the same
+        // file, which DOES include /apps/ga/components/content/grid-container.
+        // Live check (2026-08-13, local author, admin):
+        //   GET /conf/global-atlantic/settings/wcm/policies/wcm/foundation/components/
+        //   responsivegrid/product-rate-components.1.json
+        //   → "components" array confirmed to omit grid-container, matching the
+        //   kkr-aem source exactly.
+        const url = `${BASE()}/conf/global-atlantic/settings/wcm/policies/wcm/foundation/components/responsivegrid/product-rate-components.1.json`;
+        const response = await page.request.get(url);
+        if (!response.ok()) {
+            test.skip();
+            return;
+        }
+        const json = await response.json();
+        const allowedComponents: string[] = Array.isArray(json.components) ? json.components : [];
+        expect(
+            allowedComponents,
+            'AC1: Grid Container must be an allowed component in the Product Rate Page ' +
+            'template ("product-rate-components" policy) so authors can add a Grid ' +
+            '(with style options) inside a Dynamic Rate (DR) table page. It is currently ' +
+            'absent from the components allow-list — see conf/global-atlantic/settings/wcm/' +
+            'policies/.content.xml (product-rate-components) in kkr-aem.'
+        ).toContain('/apps/ga/components/content/grid-container');
     });
 });

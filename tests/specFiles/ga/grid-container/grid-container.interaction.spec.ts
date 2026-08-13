@@ -23,7 +23,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('GridContainer — Deep Interaction Tests', () => {
     // ─── Responsive Layout Transitions ───────────────────────────────────────
-    test('GC-INT-002 @interaction @regression 3col layout transitions from 3-col to stacked at mobile', async ({ page }) => {
+    test('@sanity GC-INT-002 @interaction @regression 3col layout transitions from 3-col to stacked at mobile', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         await page.goto(`${BASE()}${STYLE_GUIDE_PATH}`);
         const grid3col = page.locator('.grid-container.ga-grid--3col').first();

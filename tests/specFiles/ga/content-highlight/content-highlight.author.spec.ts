@@ -26,7 +26,7 @@ test.describe('ContentHighlight — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[CH-002] @smoke @regression ContentHighlight interactive elements are functional', async ({ page }) => {
+    test('[CH-002] @smoke @regression @sanity ContentHighlight interactive elements are functional', async ({ page }) => {
         const pom = new ContentHighlightPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-content-highlight').first();
@@ -41,7 +41,7 @@ test.describe('ContentHighlight — Happy Path', () => {
     });
 });
 test.describe('ContentHighlight — Negative & Boundary', () => {
-    test('[CH-003] @negative @regression ContentHighlight handles empty content gracefully', async ({ page }) => {
+    test('[CH-003] @negative @regression @sanity ContentHighlight handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('ContentHighlight — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-content-highlight').first()).toBeVisible();
     });
-    test('[CH-004] @negative @regression ContentHighlight handles missing images', async ({ page }) => {
+    test('[CH-004] @negative @regression @sanity ContentHighlight handles missing images', async ({ page }) => {
         const pom = new ContentHighlightPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-content-highlight img');
@@ -64,7 +64,7 @@ test.describe('ContentHighlight — Negative & Boundary', () => {
     });
 });
 test.describe('ContentHighlight — Responsive', () => {
-    test('[CH-005] @mobile @regression @mobile ContentHighlight adapts to mobile viewport', async ({ page }) => {
+    test('[CH-005] @mobile @regression @mobile @sanity ContentHighlight adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ContentHighlightPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('ContentHighlight — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[CH-006] @mobile @regression ContentHighlight adapts to tablet viewport', async ({ page }) => {
+    test('[CH-006] @mobile @regression @sanity ContentHighlight adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new ContentHighlightPage(page);
         await pom.navigate(BASE());

@@ -29,7 +29,7 @@ test.afterEach(async ({ page }, testInfo) => {
 // Hover Zoom (IMG-INT-001 to IMG-INT-004)
 // ---------------------------------------------------------------------------
 test.describe('Image — Hover Zoom Interaction', () => {
-    test('[IMG-INT-001] @interaction @regression Linked image hover: transform scale changes from identity', async ({ page }) => {
+    test('[IMG-INT-001] @interaction @regression @sanity Linked image hover: transform scale changes from identity', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
@@ -135,7 +135,7 @@ test.describe('Image — Hover Zoom Interaction', () => {
 // Focus (IMG-INT-005 to IMG-INT-007)
 // ---------------------------------------------------------------------------
 test.describe('Image — Keyboard Focus Interaction', () => {
-    test('[IMG-INT-005] @interaction @regression Linked image (.cmp-image__link) is keyboard focusable', async ({ page }) => {
+    test('[IMG-INT-005] @interaction @regression @sanity Linked image (.cmp-image__link) is keyboard focusable', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
@@ -203,7 +203,7 @@ test.describe('Image — Keyboard Focus Interaction', () => {
 // Responsive (IMG-INT-008 to IMG-INT-010)
 // ---------------------------------------------------------------------------
 test.describe('Image — Responsive Interaction', () => {
-    test('[IMG-INT-010] @interaction @regression Image wrappers do not overflow at 390px', async ({ page }) => {
+    test('[IMG-INT-010] @interaction @regression @sanity Image wrappers do not overflow at 390px', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
@@ -219,7 +219,7 @@ test.describe('Image — Responsive Interaction', () => {
 // Caption Behavior (IMG-INT-011 to IMG-INT-012)
 // ---------------------------------------------------------------------------
 test.describe('Image — Caption Interaction', () => {
-    test('[IMG-INT-011] @interaction @regression Caption appears below image (Y position > picture bottom)', async ({ page }) => {
+    test('[IMG-INT-011] @interaction @regression @sanity Caption appears below image (Y position > picture bottom)', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new ImagePage(page);
         await pom.navigate(BASE());

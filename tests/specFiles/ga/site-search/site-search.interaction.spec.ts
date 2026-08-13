@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('SiteSearch — Component Interactions', () => {
-  test('@interaction @regression site-search adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity site-search adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new SiteSearchPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background

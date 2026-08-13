@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('RatingsCard — Component Interactions', () => {
-  test('@interaction @regression ratings-card adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity ratings-card adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new RatingsCardPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: main-wrapper with unknown background

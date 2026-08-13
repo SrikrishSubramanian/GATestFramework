@@ -48,7 +48,12 @@ export class AEMTestHelper {
    * All AEM components use: .cmp-{component-name}
    */
   async getComponentRoot(): Promise<Locator> {
-    return this.page.locator(`.${this.config.cssClass}`);
+    // basepage's skip-nav link carries `cmp-button` in its class list
+    // (class="basepage__skip-nav cmp-button") and is intentionally visually hidden
+    // until focused — exclude it so a generic `.cmp-button` lookup can't resolve to
+    // it ahead of a real button instance (matches the convention already used in
+    // tests/specFiles/ga/button/button.author.spec.ts: `.cmp-button:not(#skip-nav)`).
+    return this.page.locator(`.${this.config.cssClass}:not(#skip-nav)`);
   }
 
   /**

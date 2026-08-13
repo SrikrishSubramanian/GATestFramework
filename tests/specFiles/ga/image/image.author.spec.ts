@@ -463,7 +463,7 @@ test.describe('Image — Console', () => {
     });
 });
 test.describe('Image — Happy Path', () => {
-    test('[MG-042] @smoke @regression Image renders correctly', async ({ page }) => {
+    test('[MG-042] @smoke @regression @sanity Image renders correctly', async ({ page }) => {
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-image').first();
@@ -479,7 +479,7 @@ test.describe('Image — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[MG-043] @smoke @regression Image interactive elements are functional', async ({ page }) => {
+    test('[MG-043] @smoke @regression @sanity Image interactive elements are functional', async ({ page }) => {
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-image').first();
@@ -494,7 +494,7 @@ test.describe('Image — Happy Path', () => {
     });
 });
 test.describe('Image — Negative & Boundary', () => {
-    test('[MG-044] @negative @regression Image handles empty content gracefully', async ({ page }) => {
+    test('[MG-044] @negative @regression @sanity Image handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -505,7 +505,7 @@ test.describe('Image — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-image').first()).toBeVisible();
     });
-    test('[MG-045] @negative @regression Image handles missing images', async ({ page }) => {
+    test('[MG-045] @negative @regression @sanity Image handles missing images', async ({ page }) => {
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-image img');
@@ -517,7 +517,7 @@ test.describe('Image — Negative & Boundary', () => {
     });
 });
 test.describe('Image — Responsive', () => {
-    test('[MG-046] @mobile @regression @mobile Image adapts to mobile viewport', async ({ page }) => {
+    test('[MG-046] @mobile @regression @mobile @sanity Image adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
@@ -532,7 +532,7 @@ test.describe('Image — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[MG-047] @mobile @regression Image adapts to tablet viewport', async ({ page }) => {
+    test('[MG-047] @mobile @regression @sanity Image adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new ImagePage(page);
         await pom.navigate(BASE());

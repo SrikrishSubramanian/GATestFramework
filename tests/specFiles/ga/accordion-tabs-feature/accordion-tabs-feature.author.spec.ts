@@ -54,7 +54,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
             await expect(roots.nth(i)).toBeVisible();
         }
     });
-    test('[ATF-002] @smoke @regression Accordion instance renders left/right columns', async ({ page }) => {
+    test('[ATF-002] @smoke @regression @sanity Accordion instance renders left/right columns', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).nth(0);
@@ -76,7 +76,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
         expect(tag).toBe('div');
         await expect(tablist).toHaveAttribute('role', 'tablist');
     });
-    test('[ATF-004] @smoke @regression Accordion instance has 3 tabs with correct titles', async ({ page }) => {
+    test('[ATF-004] @smoke @regression @sanity Accordion instance has 3 tabs with correct titles', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const tabs = page.locator(ROOT).nth(0).locator(TAB);
@@ -87,7 +87,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Desktop)', () => {
             await expect(tabs.nth(i)).toContainText(expected[i]);
         }
     });
-    test('[ATF-005] @smoke @regression Tabs have role="tab" attribute', async ({ page }) => {
+    test('[ATF-005] @smoke @regression @sanity Tabs have role="tab" attribute', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const tabs = page.locator(ROOT).nth(0).locator(TAB);
@@ -210,7 +210,7 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Desktop)', () =>
         // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
         return page.locator(ROOT).nth(1);
     }
-    test('[ATF-014] @smoke @regression Scrolling tabs instance has 3 tabs (Discover/Evaluate/Execute)', async ({ page }) => {
+    test('[ATF-014] @smoke @regression @sanity Scrolling tabs instance has 3 tabs (Discover/Evaluate/Execute)', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).nth(1);
@@ -221,20 +221,50 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Desktop)', () =>
             await expect(tabs.nth(i)).toContainText(expected[i]);
         }
     });
-    test('[ATF-016] @regression Scrolling tabs right column has top offset for sticky', async ({ page }) => {
-        const instance = await activateScrollingTabs(page);
+    test('[ATF-016] @regression Scrolling-tabs mode makes the component root sticky (top:0), not the right column', async ({ page }) => {
+        // Original test checked RIGHT (.cmp-accordion-tabs-feature__right) for position:sticky with
+        // top:64px. Investigation of accordion-tabs-feature.less found ZERO occurrences of `sticky`
+        // anywhere in the file — .__right is always `position: relative` on desktop (L446-457). There
+        // is no header-height offset anywhere either: site-header.less sets the header to height:75px
+        // (L199), not 64px, so `top: 64px` had no basis in the codebase.
+        //
+        // The real sticky mechanism lives in accordion-tabs-feature.js initScrollingMode() (L426-465):
+        // it sets `position:sticky; top:0; height:100vh` inline on `this.element` — the component
+        // ROOT (.cmp-accordion-tabs-feature) — not on the right column.
+        //
+        // Also, `activateScrollingTabs()` (setting `data-style` via el.setAttribute after load) never
+        // actually triggers this: `this.style` is captured once at construction from the attribute
+        // (accordion-tabs-feature.js L102), and the component's MutationObserver only watches
+        // childList/subtree/characterData (L831-835), never attribute changes. So the original test
+        // could never observe position:sticky and always fell into its own test.skip() branch —
+        // matching the "flagged as skipped" report. (Separately, the live content's
+        // accordion_tabs_scroll node is also missing the `style="scrolling-tabs"` property that the
+        // checked-in fixture XML defines — an orphaned duplicate node holds it instead — so even a
+        // correct attribute-based approach wouldn't organically reproduce scrolling-tabs mode right now.)
+        //
+        // Fixed test: drive the actual production code path directly (the same method real content
+        // authoring triggers) and verify the real behavior on the real element.
+        const pom = new AccordionTabsFeaturePage(page);
+        await pom.navigate(BASE());
+        const instance = page.locator(ROOT).nth(1);
         const right = instance.locator(RIGHT);
-        const position = // 📏 TODO: Replace with measurement-utils
-         await right.evaluate(el => getComputedStyle(el).position);
-        // measurement: use measurement-utils for cleaner code
-        if (position !== 'sticky') {
-            test.skip();
-            return;
-        }
-        const top = // 📏 TODO: Replace with measurement-utils
-         await right.evaluate(el => getComputedStyle(el).top);
-        // measurement: use measurement-utils for cleaner code
-        expect(top).toBe('64px');
+
+        await instance.evaluate(el => {
+            const inst = (el as unknown as { accordionTabsFeatureInstance?: { style: string; applyMode: () => void } }).accordionTabsFeatureInstance;
+            if (!inst) throw new Error('AccordionTabsFeature instance not attached to element');
+            inst.style = 'scrolling-tabs';
+            inst.applyMode();
+        });
+
+        const rootStyle = await instance.evaluate(el => ({
+            position: getComputedStyle(el).position,
+            top: getComputedStyle(el).top,
+        }));
+        expect(rootStyle.position, 'Component root should be position:sticky in scrolling-tabs mode (accordion-tabs-feature.js L460)').toBe('sticky');
+        expect(rootStyle.top, 'Sticky top offset is 0 per JS (L461) — no header-height compensation exists').toBe('0px');
+
+        const rightPosition = await right.evaluate(el => getComputedStyle(el).position);
+        expect(rightPosition, 'Right column has no sticky rule anywhere in accordion-tabs-feature.less — it stays position:relative').toBe('relative');
     });
     test('[ATF-018] @regression Scrolling tabs accordion bodies all present', async ({ page }) => {
         const instance = await activateScrollingTabs(page);
@@ -269,7 +299,7 @@ test.describe('AccordionTabsFeature — Accordion Variant (Mobile)', () => {
     test.beforeEach(async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
     });
-    test('[ATF-020] @mobile @smoke @regression Component renders on mobile viewport', async ({ page }) => {
+    test('[ATF-020] @mobile @smoke @regression @sanity Component renders on mobile viewport', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).first();
@@ -349,7 +379,7 @@ test.describe('AccordionTabsFeature — Scrolling Tabs Variant (Mobile)', () => 
         // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
         return page.locator(ROOT).nth(1);
     }
-    test('[ATF-026] @mobile @smoke @regression Scrolling tabs renders on mobile', async ({ page }) => {
+    test('[ATF-026] @mobile @smoke @regression @sanity Scrolling tabs renders on mobile', async ({ page }) => {
         const instance = await activateScrollingTabsMobile(page);
         await expect(instance).toBeVisible();
         const tabs = instance.locator(TAB);
@@ -514,19 +544,42 @@ test.describe('AccordionTabsFeature — Component Registration', () => {
 });
 // ─── Style System Verification ───────────────────────────────────────────────
 test.describe('AccordionTabsFeature — Style System', () => {
-    test('[ATF-114] @author @regression Style system CSS classes have rules in compiled stylesheet', async ({ page }) => {
+    test('[ATF-114] @author @regression Style/behavior attribute selectors have rules in compiled stylesheet (not orphaned)', async ({ page }) => {
+        // Original test checked cq:styleIds values ('behavior-accordion', 'behavior-scroll',
+        // 'enable-Headline' — authored on content nodes per accordion-tabs-feature-fixtures.xml)
+        // against document.styleSheets, expecting them to appear as CSS class rules (the classic AEM
+        // Style System pattern: cq:styleGroups/cq:styles map a cq:styleId to a cq:styleClasses value
+        // that gets added to the component's root class list).
+        //
+        // Live investigation shows this component does NOT use that mechanism at all:
+        //  - The component's policy node has no cq:styleGroups/cq:styles config — confirmed live via
+        //    GET /conf/global-atlantic/settings/wcm/policies/ga/components/content/accordion-tabs-feature/
+        //    accordion-tabs-feature-default.infinity.json (only jcr:title/jcr:description/components).
+        //  - The rendered root class list is always exactly "cmp-accordion-tabs-feature" for every
+        //    instance on the live style guide page — no style-system-injected class is ever added.
+        //  - None of 'behavior-accordion' / 'behavior-scroll' / 'enable-Headline' appear anywhere in
+        //    accordion-tabs-feature.less, confirmed by both static grep and a live
+        //    document.styleSheets scan (all 3 return false).
+        // So those cq:styleIds are inert dialog-list metadata for this component — not a Style System
+        // gap to detect, they were simply never wired to CSS in the first place and structurally can't be.
+        //
+        // The component's actual style/behavior toggle is the "./style" dialog dropdown
+        // (kkr-aem-base .../accordion-tabs-feature/_cq_dialog/.content.xml L74-92: values "accordion" /
+        // "scrolling-tabs"), rendered as the `data-style` attribute and consumed via attribute-selector
+        // CSS (accordion-tabs-feature.less L37, L640: `&[data-style="scrolling-tabs"]`). This rewritten
+        // test verifies THAT real mechanism's selector is actually present in the compiled clientlib
+        // (i.e. would catch a broken/orphaned build), which is what live-verified as true.
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
-        const styleClasses = ['behavior-accordion', 'behavior-scroll', 'enable-Headline'];
+        const attributeSelectors = ['data-style="scrolling-tabs"'];
         const missingRules: string[] = [];
-        for (const cls of styleClasses) {
-            const hasRule = // 📏 TODO: Replace with measurement-utils
-             await page.evaluate((className) => {
+        for (const sel of attributeSelectors) {
+            const hasRule = await page.evaluate((needle) => {
                 try {
                     for (const sheet of document.styleSheets) {
                         try {
                             for (const rule of sheet.cssRules) {
-                                if (rule.cssText && rule.cssText.includes(className)) {
+                                if (rule.cssText && rule.cssText.includes(needle)) {
                                     return true;
                                 }
                             }
@@ -536,15 +589,10 @@ test.describe('AccordionTabsFeature — Style System', () => {
                 }
                 catch { /* no access */ }
                 return false;
-            }, cls);
+            }, sel);
             if (!hasRule)
-                missingRules.push(cls);
+                missingRules.push(sel);
         }
-        // If no stylesheets loaded (CSS not compiled), skip
-        if (missingRules.length === styleClasses.length) {
-            test.skip();
-            return;
-        }
-        expect(missingRules, `Style classes missing CSS rules: ${missingRules.join(', ')}`).toEqual([]);
+        expect(missingRules, `Style/behavior attribute selectors missing from compiled CSS: ${missingRules.join(', ')}`).toEqual([]);
     });
 });

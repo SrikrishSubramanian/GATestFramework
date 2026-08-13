@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('ProductPathDetailCard — Component Interactions', () => {
-  test('@interaction @regression product-path-detail-card adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity product-path-detail-card adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new ProductPathDetailCardPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background

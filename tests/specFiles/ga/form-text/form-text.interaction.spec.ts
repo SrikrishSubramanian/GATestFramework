@@ -26,7 +26,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 test.describe('Form Text — Interactions', () => {
-  test('[FORMTEXT-INTERACTION-001] @interaction Form text field receives focus', async ({ page }) => {
+  test('[FORMTEXT-INTERACTION-001] @interaction @sanity Form text field receives focus', async ({ page }) => {
     const url = resolveComponentUrl('form-text');
     await page.goto(url, { waitUntil: 'domcontentloaded' });
 

@@ -30,7 +30,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 // ── Desktop Hover & Focus States ──
 test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
-    test('[NVGT-INT-001] @interaction @regression Link hover adds rounded background on light bg', async ({ page }) => {
+    test('[NVGT-INT-001] @interaction @regression @sanity Link hover adds rounded background on light bg', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
@@ -76,7 +76,7 @@ test.describe('Navigation — Desktop Hover & Focus (GAAM-395)', () => {
 });
 // ── Mobile Accordion Transitions ──
 test.describe('Navigation — Mobile Accordion Interactions (GAAM-396)', () => {
-    test('[NVGT-INT-005] @interaction @mobile @regression Accordion expand shows child links', async ({ page }) => {
+    test('[NVGT-INT-005] @interaction @mobile @regression @sanity Accordion expand shows child links', async ({ page }) => {
         await page.setViewportSize(MOBILE);
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
@@ -165,7 +165,7 @@ test.describe('Navigation — Keyboard Navigation', () => {
 });
 // ── Responsive Layout Transition ──
 test.describe('Navigation — Responsive Transition', () => {
-    test('[NVGT-INT-011] @interaction @regression Horizontal nav: row at desktop, column at mobile', async ({ page }) => {
+    test('[NVGT-INT-011] @interaction @regression @sanity Horizontal nav: row at desktop, column at mobile', async ({ page }) => {
         await page.setViewportSize(DESKTOP);
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());

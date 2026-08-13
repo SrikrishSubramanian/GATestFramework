@@ -26,7 +26,7 @@ test.describe('InBrief — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[IB-002] @smoke @regression InBrief interactive elements are functional', async ({ page }) => {
+    test('[IB-002] @smoke @regression @sanity InBrief interactive elements are functional', async ({ page }) => {
         const pom = new InBriefPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-in-brief').first();
@@ -41,7 +41,7 @@ test.describe('InBrief — Happy Path', () => {
     });
 });
 test.describe('InBrief — Negative & Boundary', () => {
-    test('[IB-003] @negative @regression InBrief handles empty content gracefully', async ({ page }) => {
+    test('[IB-003] @negative @regression @sanity InBrief handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('InBrief — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-in-brief').first()).toBeVisible();
     });
-    test('[IB-004] @negative @regression InBrief handles missing images', async ({ page }) => {
+    test('[IB-004] @negative @regression @sanity InBrief handles missing images', async ({ page }) => {
         const pom = new InBriefPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-in-brief img');
@@ -64,7 +64,7 @@ test.describe('InBrief — Negative & Boundary', () => {
     });
 });
 test.describe('InBrief — Responsive', () => {
-    test('[IB-005] @mobile @regression @mobile InBrief adapts to mobile viewport', async ({ page }) => {
+    test('[IB-005] @mobile @regression @mobile @sanity InBrief adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new InBriefPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('InBrief — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[IB-006] @mobile @regression InBrief adapts to tablet viewport', async ({ page }) => {
+    test('[IB-006] @mobile @regression @sanity InBrief adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new InBriefPage(page);
         await pom.navigate(BASE());

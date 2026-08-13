@@ -44,7 +44,7 @@ test.describe('PromoBanner — Core Structure', () => {
             await expect(banners.nth(i)).toBeVisible();
         }
     });
-    test('[PB-002] @smoke @regression root element has granite background by default', async ({ page }) => {
+    test('[PB-002] @smoke @regression @sanity root element has granite background by default', async ({ page }) => {
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
         // The first banner on the style guide should be the default granite variant
@@ -61,7 +61,7 @@ test.describe('PromoBanner — Core Structure', () => {
             expect(bg, 'Default promo-banner background should not be white').not.toBe('rgb(255, 255, 255)');
         }
     });
-    test('[PB-003] @smoke @regression root has 20px border-radius on desktop', async ({ page }) => {
+    test('[PB-003] @smoke @regression @sanity root has 20px border-radius on desktop', async ({ page }) => {
         await page.setViewportSize({ width: 1280, height: 800 });
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
@@ -72,7 +72,7 @@ test.describe('PromoBanner — Core Structure', () => {
         // measurement: use measurement-utils for cleaner code
         expect(radius, 'Desktop border-radius should be 20px').toBe('20px');
     });
-    test('[PB-004] @smoke @regression root has 12px border-radius on mobile', async ({ page }) => {
+    test('[PB-004] @smoke @regression @sanity root has 12px border-radius on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
@@ -83,7 +83,7 @@ test.describe('PromoBanner — Core Structure', () => {
         // measurement: use measurement-utils for cleaner code
         expect(radius, 'Mobile border-radius should be 12px').toBe('12px');
     });
-    test('[PB-005] @smoke @regression root element has white text color', async ({ page }) => {
+    test('[PB-005] @smoke @regression @sanity root element has white text color', async ({ page }) => {
         await page.setViewportSize({ width: 1280, height: 800 });
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
@@ -94,7 +94,7 @@ test.describe('PromoBanner — Core Structure', () => {
         // measurement: use measurement-utils for cleaner code
         expect(color, 'Promo banner text color should be white (rgb(255, 255, 255))', `Expected 'rgb(255, 255, 255, got ${color, 'Promo banner text color should be white (rgb(255, 255, 255))'}`).toBe('rgb(255, 255, 255)');
     });
-    test('[PB-006] @smoke @regression desktop root uses flex layout with align-items center', async ({ page }) => {
+    test('[PB-006] @smoke @regression @sanity desktop root uses flex layout with align-items center', async ({ page }) => {
         await page.setViewportSize({ width: 1280, height: 800 });
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
@@ -109,7 +109,7 @@ test.describe('PromoBanner — Core Structure', () => {
         // TODO: Use assertLayout() for display checks
         expect(styles.alignItems, 'Root flex align-items should be center on desktop').toBe('center');
     });
-    test('[PB-007] @smoke @regression content area has flex:1 (fills available space)', async ({ page }) => {
+    test('[PB-007] @smoke @regression @sanity content area has flex:1 (fills available space)', async ({ page }) => {
         await page.setViewportSize({ width: 1280, height: 800 });
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
@@ -125,7 +125,7 @@ test.describe('PromoBanner — Core Structure', () => {
         // measurement: use measurement-utils for cleaner code
         expect(flexGrow, 'Content area flexGrow should be 1').toBe('1');
     });
-    test('[PB-009] @smoke @regression CTA buttons are present and visible', async ({ page }) => {
+    test('[PB-009] @smoke @regression @sanity CTA buttons are present and visible', async ({ page }) => {
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
         const ctaArea = page.locator(PB_CTA).first();
@@ -139,7 +139,7 @@ test.describe('PromoBanner — Core Structure', () => {
         const btnCount = await buttons.count();
         expect(btnCount, 'At least one CTA button should exist').toBeGreaterThan(0);
     });
-    test('[PB-010] @smoke @regression no inline styles on root element', async ({ page }) => {
+    test('[PB-010] @smoke @regression @sanity no inline styles on root element', async ({ page }) => {
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
         const root = page.locator(PB).first();
@@ -159,10 +159,11 @@ test.describe('PromoBanner — Style Variants', () => {
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const graniteEl = page.locator(`${PB}.cmp-promo-banner--granite`).first();
         const count = await graniteEl.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
+        // Confirmed bug (see confirmed-bugs-2026-08-11.xlsx): the fixture correctly
+        // sets cq:styleIds="[promo-granite]" and the AEM policy correctly maps it to
+        // cmp-promo-banner--granite, but promo-banner.html never applies the Style
+        // System's cssClasses to its root element — the modifier class never renders.
+        expect(count, 'Granite variant modifier class never renders — promo-banner.html does not apply cq:styleIds-derived CSS classes').toBeGreaterThan(0);
         await expect(graniteEl).toBeVisible();
         const bg = // 📏 TODO: Replace with measurement-utils
          await graniteEl.evaluate(el => getComputedStyle(el).backgroundColor);
@@ -176,10 +177,10 @@ test.describe('PromoBanner — Style Variants', () => {
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const azulEl = page.locator(`${PB}.cmp-promo-banner--azul`).first();
         const count = await azulEl.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
+        // Confirmed bug (see confirmed-bugs-2026-08-11.xlsx) — same as PB-011: the
+        // modifier class never renders because promo-banner.html doesn't apply the
+        // Style System's cssClasses, regardless of correctly-configured cq:styleIds.
+        expect(count, 'Azul variant modifier class never renders — promo-banner.html does not apply cq:styleIds-derived CSS classes').toBeGreaterThan(0);
         await expect(azulEl).toBeVisible();
         const bg = // 📏 TODO: Replace with measurement-utils
          await azulEl.evaluate(el => getComputedStyle(el).backgroundColor);
@@ -192,10 +193,10 @@ test.describe('PromoBanner — Style Variants', () => {
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const aubergineEl = page.locator(`${PB}.cmp-promo-banner--aubergine`).first();
         const count = await aubergineEl.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
+        // Confirmed bug (see confirmed-bugs-2026-08-11.xlsx) — same as PB-011: the
+        // modifier class never renders because promo-banner.html doesn't apply the
+        // Style System's cssClasses, regardless of correctly-configured cq:styleIds.
+        expect(count, 'Aubergine variant modifier class never renders — promo-banner.html does not apply cq:styleIds-derived CSS classes').toBeGreaterThan(0);
         await expect(aubergineEl).toBeVisible();
         const bg = // 📏 TODO: Replace with measurement-utils
          await aubergineEl.evaluate(el => getComputedStyle(el).backgroundColor);
@@ -208,10 +209,10 @@ test.describe('PromoBanner — Style Variants', () => {
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
+        // Confirmed bug (see confirmed-bugs-2026-08-11.xlsx) — same as PB-011: the
+        // modifier class never renders because promo-banner.html doesn't apply the
+        // Style System's cssClasses, regardless of correctly-configured cq:styleIds.
+        expect(count, 'Footer variant modifier class never renders — promo-banner.html does not apply cq:styleIds-derived CSS classes').toBeGreaterThan(0);
         await expect(footerEl).toBeVisible();
         const bg = // 📏 TODO: Replace with measurement-utils
          await footerEl.evaluate(el => getComputedStyle(el).backgroundColor);
@@ -586,10 +587,10 @@ test.describe('PromoBanner — Footer Variant', () => {
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
+        // Confirmed bug (see confirmed-bugs-2026-08-11.xlsx) — same as PB-011: the
+        // modifier class never renders because promo-banner.html doesn't apply the
+        // Style System's cssClasses, regardless of correctly-configured cq:styleIds.
+        expect(count, 'Footer variant modifier class never renders — promo-banner.html does not apply cq:styleIds-derived CSS classes').toBeGreaterThan(0);
         await expect(footerEl).toBeVisible();
         const logo = footerEl.locator(PB_LOGO).first();
         const logoCount = await logo.count();
@@ -608,10 +609,10 @@ test.describe('PromoBanner — Footer Variant', () => {
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
+        // Confirmed bug (see confirmed-bugs-2026-08-11.xlsx) — same as PB-011: the
+        // modifier class never renders because promo-banner.html doesn't apply the
+        // Style System's cssClasses, regardless of correctly-configured cq:styleIds.
+        expect(count, 'Footer variant modifier class never renders — promo-banner.html does not apply cq:styleIds-derived CSS classes').toBeGreaterThan(0);
         await expect(footerEl).toBeVisible();
         const socialLinks = footerEl.locator(`${PB_SOCIAL} a`);
         const socialCount = await socialLinks.count();
@@ -622,10 +623,10 @@ test.describe('PromoBanner — Footer Variant', () => {
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
+        // Confirmed bug (see confirmed-bugs-2026-08-11.xlsx) — same as PB-011: the
+        // modifier class never renders because promo-banner.html doesn't apply the
+        // Style System's cssClasses, regardless of correctly-configured cq:styleIds.
+        expect(count, 'Footer variant modifier class never renders — promo-banner.html does not apply cq:styleIds-derived CSS classes').toBeGreaterThan(0);
         await expect(footerEl).toBeVisible();
         const title = footerEl.locator(PB_TITLE).first();
         const titleCount = await title.count();
@@ -652,10 +653,10 @@ test.describe('PromoBanner — Footer Variant', () => {
         await page.goto(resolveComponentUrl('promo-banner'), { waitUntil: 'domcontentloaded' });
         const footerEl = page.locator(`${PB}.cmp-promo-banner--footer`).first();
         const count = await footerEl.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
+        // Confirmed bug (see confirmed-bugs-2026-08-11.xlsx) — same as PB-011: the
+        // modifier class never renders because promo-banner.html doesn't apply the
+        // Style System's cssClasses, regardless of correctly-configured cq:styleIds.
+        expect(count, 'Footer variant modifier class never renders — promo-banner.html does not apply cq:styleIds-derived CSS classes').toBeGreaterThan(0);
         await expect(footerEl).toBeVisible();
         const logo = footerEl.locator(PB_LOGO).first();
         const logoCount = await logo.count();
@@ -695,42 +696,58 @@ test.describe('PromoBanner — Console Errors', () => {
     });
 });
 test.describe('PromoBanner — CSV Test Cases (GAAM-1329)', () => {
-    test('[PB-046] @smoke @regression CMS: Promo Banner: Tablet view in both Android and Apple is misaligned. — AC1', async ({ page }) => {
-        const pom = new PromoBannerPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: *Environment:*
-        // 
-        // * CMS Web Application
-        // * Android Tablets (various screen sizes)
-        // * Apple iPads (various screen sizes)
-        // * Tablet viewport/responsive mode
-        // 
-        // URL Tested - [Promo-Banner|https://author-p101514-e1845752.adobeaemcloud.com/content/global-atlantic/style-guide/qa-testing/components/Promo-banner.html?wcmmode=disabled]
-        // 
-        // *Description:*
-        // The Promo Banner displayed through the CMS is visually misaligned when viewed on tablet devices. The issue occurs on both Android tablets and Apple iPads, indicating a responsive layout problem specific to tablet breakpoints.
-        // 
-        // *Steps to Reproduce:*
-        // 
-        // # Open the CMS-managed website/application.
-        // # Navigate to a page containing the Promo Banner.
-        // # Access the page using an Android tablet or iPad (or emulate tablet view in browser developer tools).
-        // # Observe the banner layout and alignment.
-        // 
-        // *Actual Result:*
-        // The Promo Banner content appears misaligned in tablet view. Elements such as text, images, buttons, or banner containers are not properly positioned within the layout.
-        // 
-        // *Expected Result:*
-        // The Promo Banner should be correctly aligned and displayed according to the approved design across all supported tablet devices and screen resolutions.
-        // 
-        // 
-        // 
-        // !image-20260622-072622.png|width=451,alt="image-20260622-072622.png"!
-        test.fixme();
+    test('[PB-046] @regression @sanity CMS: Promo Banner: Tablet view in both Android and Apple is misaligned. — AC1', async ({ page }) => {
+        // Investigated via kkr-aem source + live tablet-viewport measurement (methodology per
+        // RDH-010/rate-details-hero.author.spec.ts and BRDC-051/detail-hero.author.spec.ts) — unlike
+        // those two, this ticket's CSS is internally consistent and no cascade gap was found:
+        //
+        // 1) Breakpoint structure: promo-banner.less uses exactly ONE breakpoint call
+        //    (`#ga-aem-mixins.breakpoint(@ga-bp-desktop-min, ...)` at .promo-banner:31,
+        //    .cmp-promo-banner:43, __content:59, __logo:70, __logo img:85, __image:97, __text:119,
+        //    __title:143, __links:174) which mixins.less:261-265 compiles to `@media (min-width:1024px)`.
+        //    variables.less:245-248 defines @ga-bp-tablet-max=1023 / @ga-bp-desktop-min=1024, so this
+        //    breakpoint boundary IS the tablet/desktop boundary — there is no early/premature jump
+        //    inside the 768-1023 tablet range the way RDH-010 had (rate-details-hero switched at 768
+        //    while the page grid didn't change until 1024). Mobile and tablet intentionally share
+        //    identical rules here (single mobile-first breakpoint), which is not itself a bug.
+        //
+        // 2) Live verification (localhost:4502, admin/admin) at
+        //    /content/global-atlantic/style-guide/components/promo-banner.html?wcmmode=disabled across
+        //    all 4 rendered variants (granite/azul/aubergine/footer) at 768x1024 (iPad-min portrait),
+        //    800x1280 (Android tablet portrait), 820x1180 (iPad Air portrait), 1023x1366 (tablet-max
+        //    boundary), and the 1024 desktop boundary: .cmp-promo-banner padding stays a consistent
+        //    20px left/right the entire 768-1023 range (matches promo-banner.less:41 @sp-20, never
+        //    jumps early), no horizontal overflow at any width (document.body.scrollWidth ==
+        //    viewport width every time), __text/__title/__links stay left-aligned at x=20px with no
+        //    overlap, and on the footer variant (the only content combo with both
+        //    __links-social + __links-cta rendered together) the two link groups sit side-by-side
+        //    with a clean 12px gap (right=170px / x=182px) and never overlap at 768/820/1023px.
+        //    Layout cleanly flips to the flex/centered desktop layout exactly at 1024px in every case.
+        //
+        // 3) The ticket's "images... not properly positioned" claim could not be reproduced or
+        //    refuted here: despite the style-guide JCR content configuring image.fileReference (e.g.
+        //    promo_banner_0 under
+        //    /content/global-atlantic/style-guide/components/promo-banner/jcr:content) for all 3
+        //    non-footer variants, NO .cmp-promo-banner__logo/__image/<img> element renders anywhere
+        //    on the live page at any viewport (confirmed via rendered-HTML inspection — zero matches).
+        //    That is a separate, unrelated defect blocking the image resource from resolving,
+        //    independent of breakpoint/viewport; it is out of scope for a tablet-alignment ticket and
+        //    would need its own investigation, but it does mean the "images" axis of this specific
+        //    report cannot be verified either way in this environment.
+        //
+        // Conclusion: no plausible CSS-cascade defect exists for the text/button/container alignment
+        // this ticket describes (unlike RDH-010/BRDC-051's proven bugs), and the image aspect is
+        // blocked by an unrelated rendering defect rather than a viewport/tablet-specific one. What's
+        // left unverifiable here needs either (a) the image defect fixed first so an actual <img>
+        // exists to measure, or (b) a real Android tablet / iPad (a rendering-engine-specific
+        // flex-wrap/gap/image-decode quirk in mobile Safari or Chrome that Playwright's engine
+        // emulation on a desktop browser cannot reproduce) to confirm or refute the original tester's
+        // screenshot.
+        test.fixme(true, 'No CSS-cascade defect found: promo-banner.less has a single min-width:1024px breakpoint that exactly matches the tablet/desktop boundary (variables.less:247-248), and live measurement at 768/800/820/1023px across all 4 style-guide variants shows consistent 20px padding, no overflow, and no element overlap (incl. the footer variant\'s social+CTA link row). The reported "images not positioned" symptom cannot be verified either way here because promo-banner\'s image/logo element never renders on this style-guide page in any variant/viewport (separate defect — image.fileReference is set in the JCR content but no <img>/__logo/__image element ever appears in the rendered HTML), and any remaining rendering-engine-specific quirk would require a real Android tablet or iPad to confirm.');
     });
 });
 test.describe('PromoBanner — Happy Path', () => {
-    test('[PB-047] @smoke @regression PromoBanner renders correctly', async ({ page }) => {
+    test('[PB-047] @smoke @regression @sanity PromoBanner renders correctly', async ({ page }) => {
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-promo-banner').first();
@@ -746,7 +763,7 @@ test.describe('PromoBanner — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[PB-048] @smoke @regression PromoBanner interactive elements are functional', async ({ page }) => {
+    test('[PB-048] @smoke @regression @sanity PromoBanner interactive elements are functional', async ({ page }) => {
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-promo-banner').first();
@@ -761,7 +778,7 @@ test.describe('PromoBanner — Happy Path', () => {
     });
 });
 test.describe('PromoBanner — Negative & Boundary', () => {
-    test('[PB-049] @negative @regression PromoBanner handles empty content gracefully', async ({ page }) => {
+    test('[PB-049] @negative @regression @sanity PromoBanner handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -772,7 +789,7 @@ test.describe('PromoBanner — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-promo-banner').first()).toBeVisible();
     });
-    test('[PB-050] @negative @regression PromoBanner handles missing images', async ({ page }) => {
+    test('[PB-050] @negative @regression @sanity PromoBanner handles missing images', async ({ page }) => {
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-promo-banner img');
@@ -784,7 +801,7 @@ test.describe('PromoBanner — Negative & Boundary', () => {
     });
 });
 test.describe('PromoBanner — Responsive', () => {
-    test('[PB-051] @mobile @regression @mobile PromoBanner adapts to mobile viewport', async ({ page }) => {
+    test('[PB-051] @mobile @regression @mobile @sanity PromoBanner adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());
@@ -799,7 +816,7 @@ test.describe('PromoBanner — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[PB-052] @mobile @regression PromoBanner adapts to tablet viewport', async ({ page }) => {
+    test('[PB-052] @mobile @regression @sanity PromoBanner adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new PromoBannerPage(page);
         await pom.navigate(BASE());

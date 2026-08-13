@@ -604,7 +604,9 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
          await link.evaluate(el => getComputedStyle(el).color);
         // measurement: style check
         await clickElement(link);
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
+        // Wait for the JS-toggled --expanded class rather than reading style
+        // immediately — was racing the click handler and flaking.
+        await expect(trigger).toHaveClass(/cmp-navigation__item--expanded/);
         const colorAfter = // 📏 TODO: Replace with measurement-utils
          await link.evaluate(el => getComputedStyle(el).color);
         // measurement: style check
@@ -612,31 +614,8 @@ test.describe('Navigation — Font Color (GAAM-699)', () => {
         expect(colorAfter).not.toBe(colorBefore);
     });
 });
-test.describe('Navigation — CSV Test Cases (GAAM-1454)', () => {
-    test('[NVGT-049] @smoke @regression DR FE: Preview link opens incorrect Rate Detail page for selected row — AC1', async ({ page }) => {
-        const pom = new NavigationPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: The *Preview* link in each row should open the *Rate Detail* page associated with that specific row, based on the combination of *Product*, *Firm*, and *Effective Date*. Currently, the navigation does not consistently open the exact record corresponding to the Effective date.
-        // 
-        // *Steps to Reproduce:*
-        // 
-        // # Navigate to the DR FE rates table.
-        // # Identify a row with a specific *Product*, *Firm*, and *Effective Date*.
-        // # Click the *Preview* link for that row.
-        // # Observe the Rate Detail page that opens.
-        // 
-        // *Expected Result:*
-        // The *Preview* link should open the *Rate Detail* page for the selected row, matching the *Product*, *Firm*, and *Effective Date*, and navigate to the exact *Effective Date* displayed in the table.
-        // 
-        // *Actual Result:*
-        // The *Preview* link does not consistently open the Rate Detail page corresponding to the selected row and/or does not navigate to the exact *Effective Date* shown in the table.
-        // 
-        // !20260702-1237-25.2803875.mp4|width=559,alt="20260702-1237-25.2803875.mp4"!
-        test.fixme();
-    });
-});
 test.describe('Navigation — Happy Path', () => {
-    test('[NVGT-050] @smoke @regression Navigation renders correctly', async ({ page }) => {
+    test('[NVGT-050] @smoke @regression @sanity Navigation renders correctly', async ({ page }) => {
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-navigation').first();
@@ -652,7 +631,7 @@ test.describe('Navigation — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[NVGT-051] @smoke @regression Navigation interactive elements are functional', async ({ page }) => {
+    test('[NVGT-051] @smoke @regression @sanity Navigation interactive elements are functional', async ({ page }) => {
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-navigation').first();
@@ -667,7 +646,7 @@ test.describe('Navigation — Happy Path', () => {
     });
 });
 test.describe('Navigation — Negative & Boundary', () => {
-    test('[NVGT-052] @negative @regression Navigation handles empty content gracefully', async ({ page }) => {
+    test('[NVGT-052] @negative @regression @sanity Navigation handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -678,7 +657,7 @@ test.describe('Navigation — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-navigation').first()).toBeVisible();
     });
-    test('[NVGT-053] @negative @regression Navigation handles missing images', async ({ page }) => {
+    test('[NVGT-053] @negative @regression @sanity Navigation handles missing images', async ({ page }) => {
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-navigation img');
@@ -690,7 +669,7 @@ test.describe('Navigation — Negative & Boundary', () => {
     });
 });
 test.describe('Navigation — Responsive', () => {
-    test('[NVGT-054] @mobile @regression @mobile Navigation adapts to mobile viewport', async ({ page }) => {
+    test('[NVGT-054] @mobile @regression @mobile @sanity Navigation adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
@@ -705,7 +684,7 @@ test.describe('Navigation — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[NVGT-055] @mobile @regression Navigation adapts to tablet viewport', async ({ page }) => {
+    test('[NVGT-055] @mobile @regression @sanity Navigation adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
@@ -746,7 +725,7 @@ test.describe('Navigation — Accessibility', () => {
 test.describe('Navigation — AEM Dialog Configuration', () => {
 });
 test.describe('Navigation — CSV Test Cases (GAAM-1386)', () => {
-    test('[NVGT-064] @smoke @regression CMS BE: Global External Link Handler — AC1', async ({ page }) => {
+    test('[NVGT-064] @regression @sanity CMS BE: Global External Link Handler — AC1', async ({ page }) => {
         // GAAM-1386: any <a> whose href resolves outside the internal domain list must render
         // target="_blank" rel="noopener noreferrer"; internal/relative links must not be modified.
         // Confirmed live: corporate-agnostic and financial-professionals home pages both have
@@ -777,53 +756,36 @@ test.describe('Navigation — CSV Test Cases (GAAM-1386)', () => {
     });
 });
 test.describe('Navigation — CSV Test Cases (GAAM-1371)', () => {
-    test('[NVGT-065] @smoke @regression CMS FE: Alert Modal – Consent Alert "Show Once" Behavior — AC1', async ({ page }) => {
-        const pom = new NavigationPage(page);
-        await pom.navigate(BASE());
-        // As a site visitor, 
-        // I want a consent alert modal to display only once per browser when the author has configured it as a consent alert, 
-        // so that I'm not repeatedly shown the same acknowledgement prompt on every page load.
-        // 
-        // 
-        // *Background*
-        // This pairs with backend ticket [https://bounteous.jira.com/browse/GAAM-1347|https://bounteous.jira.com/browse/GAAM-1347|smart-link], which replaces the authored Preference Key text field with a "Consent Alert" checkbox and auto-generates a unique key (derived from the component's JCR resource path) rendered as a {{data-consent-key}} attribute on the component's wrapper element. This ticket covers the client-side logic that reads that attribute and manages the "show once" behavior.
-        // 
-        // *Acceptance Criteria*
-        // 
-        // *Functionality*
-        // 
-        // * On page load, component JS reads the {{data-consent-key}} attribute on the wrapper element (present in the DOM regardless of Consent Alert state).
-        // * If the author has checked "Consent Alert" in the dialog and the visitor has previously seen/dismissed the modal, the modal does not display on subsequent page loads.
-        // * Visitor "seen" state is tracked via localStorage, keyed by the {{data-consent-key}} value.
-        // * If "Consent Alert" is unchecked (default), the modal displays on every page load — no localStorage read/write occurs.
-        // * Remove any existing JS logic that reads an authored {{preferenceKey}} string; consent tracking now keys off {{data-consent-key}} only.
-        // * No author input is required for key generation — this is handled entirely on the backend/HTL side.
-        // 
-        // *Responsive Behavior*
-        // 
-        // * "Show once" behavior is consistent across desktop, tablet, and mobile breakpoints.
-        // * No visual or layout changes are introduced by this ticket.
-        // 
-        // *Accessibility (WCAG 2.2 Level AA)*
-        // 
-        // * No new interactive elements are introduced; existing modal focus trap, keyboard navigation, and screen reader behavior remain unchanged.
-        // * Suppressing display of the modal (when previously seen) must not affect tab order or leave hidden focusable elements in the DOM.
-        // 
-        // 
-        // 
-        // *QA Checklist*
-        // 
-        // * Component is available on any existing templates (except Rate Administration)
-        // * Styles match Figma
-        // * Authoring Guide exists and is updated with all style variations
-        // * Style Guide page exists and reflects all variations
-        // * Both desktop and mobile versions are implemented
-        // * Notify the design team that the component is ready for their review and provide a link to the Style Guide page
-        test.fixme();
+    test('[NVGT-065] @regression @sanity CMS FE: Alert Modal – Consent Alert "Show Once" Behavior — AC1', async ({ page }) => {
+        // Misfiled originally: navigated via NavigationPage to the navigation style guide,
+        // which has no alert-modal content at all. Alert Modal is its own component with no
+        // dedicated style guide page — this QA test page is the real, live consent-alert
+        // instance (verified: real attribute is data-cmp-alert-modal-consent-key, not the
+        // {{data-consent-key}} the ticket text describes).
+        const url = `${BASE()}/content/global-atlantic/style-guide/qa-testing/components/alert-model-consent.html?wcmmode=disabled`;
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
+
+        const modal = page.locator('.cmp-alert-modal').first();
+        await expect(modal).toBeVisible();
+        const consentKey = await modal.getAttribute('data-cmp-alert-modal-consent-key');
+        expect(consentKey, 'Consent alert wrapper must carry a non-empty consent key').toBeTruthy();
+
+        // Clean slate — clear any "seen" state from a prior run so this test is deterministic.
+        await page.evaluate((key) => localStorage.removeItem(key as string), consentKey);
+        await page.reload({ waitUntil: 'domcontentloaded' });
+        await expect(modal, 'Modal should display on first visit (not yet seen)').toHaveAttribute('aria-hidden', 'false');
+
+        await modal.locator('.cmp-alert-modal__close').click();
+        const stored = await page.evaluate((key) => localStorage.getItem(key as string), consentKey);
+        expect(stored, '"seen" state should be persisted to localStorage on dismissal').toBe('{"seen":true}');
+        await expect(modal, 'Modal should hide immediately after dismissal').toHaveAttribute('aria-hidden', 'true');
+
+        await page.reload({ waitUntil: 'domcontentloaded' });
+        await expect(modal, 'Modal must not reappear on a subsequent page load once seen').toHaveAttribute('aria-hidden', 'true');
     });
 });
 test.describe('Navigation — CSV Test Cases (GAAM-1358)', () => {
-    test('[NVGT-066] @smoke @regression VQA - Main Nav sticky behavior — AC1', async ({ page }) => {
+    test('[NVGT-066] @regression @sanity VQA - Main Nav sticky behavior — AC1', async ({ page }) => {
         // GAAM-1358 / GAAM-397: once a role is selected (e.g. Financial Professional), the
         // site-header should stick to the top of the viewport on scroll. Reported as broken —
         // confirmed live on the FP persona page (header uses position:static and scrolls away).
@@ -849,16 +811,8 @@ test.describe('Navigation — CSV Test Cases (GAAM-1358)', () => {
         expect(top).toBeGreaterThanOrEqual(-1);
     });
 });
-test.describe('Navigation — CSV Test Cases (GAAM-1342)', () => {
-    test('[NVGT-067] @smoke @regression CMS FE: Navigation Component - Link Type SE2 — AC1', async ({ page }) => {
-        const pom = new NavigationPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Functionality*
-        test.fixme();
-    });
-});
 test.describe('Navigation — CSV Test Cases (GAAM-1233)', () => {
-    test('[NVGT-068] @smoke @regression CMS QA Task: Private Report Fraud Form – Red Oak Submission Integration — AC1', async ({ page }) => {
+    test('[NVGT-068] @regression @sanity CMS QA Task: Private Report Fraud Form – Red Oak Submission Integration — AC1', async ({ page }) => {
         const pom = new NavigationPage(page);
         await pom.navigate(BASE());
         // Desktop
@@ -872,16 +826,8 @@ test.describe('Navigation — CSV Test Cases (GAAM-1233)', () => {
         await expect(page.locator('.cmp-navigation').first()).toBeVisible();
     });
 });
-test.describe('Navigation — CSV Test Cases (GAAM-1215)', () => {
-    test('[NVGT-069] @smoke @regression CMS FE: Navigation Component - flows for snapApp and Illustrations — AC1', async ({ page }) => {
-        const pom = new NavigationPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: h3. Illustrations Nav Item — On Click
-        test.fixme();
-    });
-});
 test.describe('Navigation — CSV Test Cases (GAAM-1214)', () => {
-    test('[NVGT-070] @smoke @regression CMS BE: Navigation Component - Link types : SnapApp, Illustration & SE2 Driven — AC1', async ({ page }) => {
+    test('[NVGT-070] @regression @sanity CMS BE: Navigation Component - Link types : SnapApp, Illustration & SE2 Driven — AC1', async ({ page }) => {
         // GAAM-1214: dialog-only change adding a "Link Type" dropdown (./linkType, default
         // "standard") to Primary/Secondary Links multifields in the GA dialog overlay, with
         // options Standard Link / Illustrations / SnapApp / SE2 Driven. Confirmed live in
@@ -900,16 +846,8 @@ test.describe('Navigation — CSV Test Cases (GAAM-1214)', () => {
         expect(dialog).toContain('SE2');
     });
 });
-test.describe('Navigation — CSV Test Cases (GAAM-549)', () => {
-    test('[NVGT-071] @smoke @regression CMS Analytics FE – Component Tracking: Include Product Info in Click Event — AC1', async ({ page }) => {
-        const pom = new NavigationPage(page);
-        await pom.navigate(BASE());
-        // TODO: Implement assertion for: Functionality*
-        test.fixme();
-    });
-});
 test.describe('Navigation — CSV Test Cases (GAAM-794)', () => {
-    test('[NVGT-072] @smoke @regression CMS FE: Main Nav - MegaMenu Panel layouts — AC1', async ({ page }) => {
+    test('[NVGT-072] @regression @sanity CMS FE: Main Nav - MegaMenu Panel layouts — AC1', async ({ page }) => {
         // GAAM-794: Main Navigation L1 category triggers expand a mega-menu panel of sub-links.
         // This only exists on the site-header integration (FP persona page) — the standalone
         // Navigation style-guide demo page has no aria-haspopup triggers at all.

@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('InBrief — Component Interactions', () => {
-  test('@interaction @regression in-brief adapts to unknown parent (#1)', async ({ page }) => {
+  test('@interaction @regression @sanity in-brief adapts to unknown parent (#1)', async ({ page }) => {
     const pom = new InBriefPage(page);
     await pom.navigate(ENV.AEM_AUTHOR_URL || '');
     // Parent: cmp-section__container with unknown background

@@ -26,7 +26,7 @@ test.describe('Quote — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[QT-002] @smoke @regression Quote interactive elements are functional', async ({ page }) => {
+    test('[QT-002] @smoke @regression @sanity Quote interactive elements are functional', async ({ page }) => {
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-quote').first();
@@ -41,7 +41,7 @@ test.describe('Quote — Happy Path', () => {
     });
 });
 test.describe('Quote — Negative & Boundary', () => {
-    test('[QT-003] @negative @regression Quote handles empty content gracefully', async ({ page }) => {
+    test('[QT-003] @negative @regression @sanity Quote handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('Quote — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-quote').first()).toBeVisible();
     });
-    test('[QT-004] @negative @regression Quote handles missing images', async ({ page }) => {
+    test('[QT-004] @negative @regression @sanity Quote handles missing images', async ({ page }) => {
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-quote img');
@@ -64,7 +64,7 @@ test.describe('Quote — Negative & Boundary', () => {
     });
 });
 test.describe('Quote — Responsive', () => {
-    test('[QT-005] @mobile @regression @mobile Quote adapts to mobile viewport', async ({ page }) => {
+    test('[QT-005] @mobile @regression @mobile @sanity Quote adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('Quote — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[QT-006] @mobile @regression Quote adapts to tablet viewport', async ({ page }) => {
+    test('[QT-006] @mobile @regression @sanity Quote adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
@@ -134,19 +134,45 @@ test.describe('Quote — AEM Dialog Configuration', () => {
 // Relocated from image.author.spec.ts (MG-059) — CSV import mis-bucketed this under Image;
 // it's actually about the Quote component (GAAM-1280).
 test.describe('Quote — CSV Test Cases (GAAM-1357)', () => {
-    test('[QT-010] @smoke @regression CMS FE: GAAM-1280(quote component) alignment issue — AC1', async ({ page }) => {
+    test('[QT-010] @regression @sanity CMS FE: GAAM-1280(quote component) alignment issue — AC1', async ({ page }) => {
+        // Investigated via kkr-aem source 2026-08-12. This AC bundles 3 separate visual claims
+        // from one Jira comment; none can be conclusively confirmed or denied from static source
+        // alone, and there is no live content on the style guide that even renders the part of
+        // the DOM the claims are about:
+        //
+        // 1. "Roles in the info panel are not aligning to the right in small desktop breakpoints."
+        //    quote.less:272-274 explicitly sets `&__author-description { text-align: left }` at
+        //    @bp_small_desktop_min (and quote.less:237-239 does the same for `&__name`) — i.e.
+        //    the code deliberately left-aligns these today. Whether "right" is actually the
+        //    correct direction can only be confirmed against the linked Figma frame
+        //    (figma.com/design/C7DwRfnSXu89s42cug1QyS, node 34313-44453), which isn't fetchable
+        //    from this repo — need a live design comparison, not a source read.
+        //
+        // 2. "Only the quote wraps to multiple lines — the info panel maintains its width."
+        //    quote.less:38-49 gives quote text `flex: 3 1 0` and figcaption `flex: 2 1 0` at
+        //    @bp_small_desktop_min — a deliberate 3:2 proportional split, not a fixed width, so
+        //    whether this reads as a defect depends on real authored quote/role text length at
+        //    the exact small-desktop viewport width — not decidable from the LESS rules alone.
+        //
+        // 3. "Author images and names should be aligned left for left-aligned quote, center for
+        //    center-aligned — mobile works, bring desktop in line." This part already matches
+        //    the code: `&__author`/`&__name` use `align-items/text-align: flex-start`/`left` at
+        //    @bp_small_desktop_min for the default (left) variant (quote.less:227-239), and
+        //    `.cmp-quote--align-center` forces `align-items/text-align: center` end-to-end
+        //    (quote.less:386-397) — desktop already mirrors mobile.
+        //
+        //    BUT: none of the style-guide fixtures (ui.content.ga/.../style-guide/components/
+        //    quote/.content.xml) author an `author` DAM asset — every instance sets only
+        //    `textarea`/`authorDescription`. quote.html:59 guards the role text on
+        //    `${quoteModel.authorDescription && quoteModel.author.name}` (both must be truthy),
+        //    and the name/headshot spans (quote.html:48-58) require `author.imagePath`/
+        //    `author.name` directly. With no `author` asset authored anywhere, the entire
+        //    figcaption "info panel" this AC is about renders empty on every live instance —
+        //    a content gap that blocks visually verifying any of points 1-3, not just point 3.
+        test.fixme(true, 'AC bundles a Figma-direction question (point 1, needs live design comparison — not fetchable from source), a content-length-dependent wrap claim (point 2), and a claim already matching current CSS (point 3) that has no live content to render it (no style-guide quote instance authors an `author` DAM asset, so quote.html:59\'s authorDescription && author.name guard never passes). Verify manually against the linked Figma frame once a quote instance with a real author asset is authored.');
         const pom = new QuotePage(page);
         await pom.navigate(BASE());
-        // TODO: Implement assertion for: Hi, A few more issues:
-        // 1. The roles in the info panel are not aligning to the right in small desktop breakpoints.
-        // 2. At small desktop breakpoints, only the quote wraps to multiple lines — the info panel maintains its width.
-        // 3. In tablet breakpoints, the Author images and names should be aligned to the left for the left aligned quote (Refer [figma|https://www.figma.com/design/C7DwRfnSXu89s42cug1QyS/GAFG-%7C-Web-Design-System?m=auto&node-id=34313-44453&t=HD2vpnOwOlhUfkB4-1]). It should be aligned in the center for the center aligned quote. The mobile implementation working well, kindly incorporate the same implementation for desktop as well.
-        //
-        //
-        // !Screenshot 2026-06-24 at 12.53.56 PM-20260624-072402.png|width=648,alt="Screenshot 2026-06-24 at 12.53.56 PM-20260624-072402.png"!
-        //
-        //
-        // Thank you.
-        test.fixme();
+        const root = page.locator('.cmp-quote').first();
+        await expect(root).toBeVisible();
     });
 });

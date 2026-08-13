@@ -64,7 +64,7 @@ test.describe('ProductComparisonCard — State Matrix (Responsive)', () => {
 // ── Invalid: contrast concerns (1 tests) ──
 
 test.describe('ProductComparisonCard — State Matrix (Invalid Combos)', () => {
-    test('[PRODUCT_COMPARISON_CARD-N] @matrix @negative default + dark-theme on granite (dark-on-dark)', async ({ page }) => {
+    test('[PRODUCT_COMPARISON_CARD-N] @matrix @negative @sanity default + dark-theme on granite (dark-on-dark)', async ({ page }) => {
       // dark-theme on dark background (granite) has insufficient contrast
       // Auto-theme should be used instead. Verify container still renders.
       const pom = new ProductComparisonCardPage(page);

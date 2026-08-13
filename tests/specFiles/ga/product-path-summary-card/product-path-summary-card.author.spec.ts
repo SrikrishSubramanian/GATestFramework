@@ -26,7 +26,7 @@ test.describe('ProductPathSummaryCard — Happy Path', () => {
         page.on('pageerror', e => errors.push(e.message));
         expect(errors.filter(e => !isBenignError(e))).toEqual([]);
     });
-    test('[PPSC-002] @smoke @regression ProductPathSummaryCard interactive elements are functional', async ({ page }) => {
+    test('[PPSC-002] @smoke @regression @sanity ProductPathSummaryCard interactive elements are functional', async ({ page }) => {
         const pom = new ProductPathSummaryCardPage(page);
         await pom.navigate(BASE());
         const root = page.locator('.cmp-product-path-summary-card').first();
@@ -41,7 +41,7 @@ test.describe('ProductPathSummaryCard — Happy Path', () => {
     });
 });
 test.describe('ProductPathSummaryCard — Negative & Boundary', () => {
-    test('[PPSC-003] @negative @regression ProductPathSummaryCard handles empty content gracefully', async ({ page }) => {
+    test('[PPSC-003] @negative @regression @sanity ProductPathSummaryCard handles empty content gracefully', async ({ page }) => {
         // Capture JS errors during page load
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
@@ -52,7 +52,7 @@ test.describe('ProductPathSummaryCard — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-product-path-summary-card').first()).toBeVisible();
     });
-    test('[PPSC-004] @negative @regression ProductPathSummaryCard handles missing images', async ({ page }) => {
+    test('[PPSC-004] @negative @regression @sanity ProductPathSummaryCard handles missing images', async ({ page }) => {
         const pom = new ProductPathSummaryCardPage(page);
         await pom.navigate(BASE());
         const images = page.locator('.cmp-product-path-summary-card img');
@@ -64,7 +64,7 @@ test.describe('ProductPathSummaryCard — Negative & Boundary', () => {
     });
 });
 test.describe('ProductPathSummaryCard — Responsive', () => {
-    test('[PPSC-005] @mobile @regression @mobile ProductPathSummaryCard adapts to mobile viewport', async ({ page }) => {
+    test('[PPSC-005] @mobile @regression @mobile @sanity ProductPathSummaryCard adapts to mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new ProductPathSummaryCardPage(page);
         await pom.navigate(BASE());
@@ -79,7 +79,7 @@ test.describe('ProductPathSummaryCard — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[PPSC-006] @mobile @regression ProductPathSummaryCard adapts to tablet viewport', async ({ page }) => {
+    test('[PPSC-006] @mobile @regression @sanity ProductPathSummaryCard adapts to tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 1024, height: 1366 });
         const pom = new ProductPathSummaryCardPage(page);
         await pom.navigate(BASE());
@@ -130,4 +130,37 @@ test.describe('ProductPathSummaryCard — Broken Images', () => {
 test.describe('ProductPathSummaryCard — Accessibility', () => {
 });
 test.describe('ProductPathSummaryCard — AEM Dialog Configuration', () => {
+});
+// Relocated from statistic.author.spec.ts (STTS-033) — CSV import mis-bucketed this under
+// Statistic; the ticket is explicitly about the Product Path Summary Card's Statistic Headline field.
+test.describe('ProductPathSummaryCard — CSV Test Cases (GAAM-1399)', () => {
+    test('[PPSC-010] @regression @sanity CMS: FE Product Path Summary Cards – Statistics Headline Does Not Support Superscript Text — AC1', async ({ page }) => {
+        // Verified via kkr-aem source 2026-08-12: the reported defect does not reproduce — this AC
+        // is already implemented. statisticHeadline is a plain textfield
+        // (granite/ui/components/coral/foundation/form/textfield in _cq_dialog/.content.xml), unlike
+        // its richtext siblings (statisticValue, statisticDescription, pathDescription), but its
+        // fieldDescription explicitly instructs authors to "use <sup>supText</sup> to add
+        // superscript", and product-path-summary-card.html renders it with `@ context='html'`
+        // (unescaped), so any authored <sup> markup survives to the DOM exactly like a richtext
+        // field would. Base normalize.less globally raises <sup> (font-size:75%; position:relative;
+        // top:-0.5em). The style guide's "Full Content" card instance
+        // (content/global-atlantic/style-guide/components/product-path-summary-card) already
+        // authors statisticHeadline="Guaranteed Roll-up<sup>1</sup>", so this isn't even a content
+        // gap — there is live content demonstrating the working feature.
+        const pom = new ProductPathSummaryCardPage(page);
+        await pom.navigate(BASE());
+        const headlineSup = page.locator('.cmp-product-path-summary-card__statistic-headline sup').first();
+        const count = await headlineSup.count();
+        test.skip(count === 0, 'No statisticHeadline on the style guide currently authors a <sup> — re-verify if style guide content changes; dialog fieldDescription + context=html HTL rendering both already support it');
+        await expect(headlineSup).toBeVisible();
+        // normalize.less raises <sup> via position:relative + a negative top offset (not
+        // vertical-align, which stays "baseline" by design) plus a smaller font-size.
+        const styles = await headlineSup.evaluate(el => {
+            const cs = getComputedStyle(el);
+            const parentFontSize = el.parentElement ? parseFloat(getComputedStyle(el.parentElement).fontSize) : parseFloat(cs.fontSize);
+            return { position: cs.position, top: parseFloat(cs.top) || 0, fontSize: parseFloat(cs.fontSize), parentFontSize };
+        });
+        expect(styles.fontSize, 'Superscript font-size should be smaller than the surrounding headline text').toBeLessThan(styles.parentFontSize);
+        expect(styles.position === 'relative' && styles.top < 0, 'Superscript should be raised via position:relative with a negative top offset').toBe(true);
+    });
 });

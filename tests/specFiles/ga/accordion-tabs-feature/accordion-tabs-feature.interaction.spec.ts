@@ -65,7 +65,7 @@ const HEADLINE_BLOCK = '.cmp-headline-block';
 // ─── Accordion Open/Close Behavior (Desktop) ────────────────────────────────
 // GAAM-421: TC_019, TC_020, TC_037, TC_038
 test.describe('AccordionTabsFeature — Accordion Behavior (Desktop) @interaction @regression', () => {
-    test('[ATF-049] @interaction @regression First tab is expanded by default with aria-selected=true', async ({ page }) => {
+    test('[ATF-049] @interaction @regression @sanity First tab is expanded by default with aria-selected=true', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).nth(0);
@@ -166,7 +166,7 @@ test.describe('AccordionTabsFeature — Accordion Behavior (Desktop) @interactio
 // GAAM-421: TC_021, TC_036
 // GAAM-422: TC_022, TC_023
 test.describe('AccordionTabsFeature — Icon & Animation @interaction @regression', () => {
-    test('[ATF-055] @interaction @regression +/- icon SVGs exist on tab elements', async ({ page }) => {
+    test('[ATF-055] @interaction @regression @sanity +/- icon SVGs exist on tab elements', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).nth(0);
@@ -177,13 +177,38 @@ test.describe('AccordionTabsFeature — Icon & Animation @interaction @regressio
         const minusCount = await firstTab.locator(ICON_MINUS).count();
         expect(plusCount + minusCount, 'Tab should have plus and/or minus icon SVGs').toBeGreaterThan(0);
     });
-    test('[ATF-056] @interaction @regression Icon visibility differs between active and inactive tabs', async ({ page }) => {
+    test('[ATF-056] @interaction @regression Icon rotates between active and inactive tabs (plus/minus SVGs are always display:none)', async ({ page }) => {
+        // Original test compared getComputedStyle(plus/minus SVG).display between the active and
+        // inactive tab, expecting them to differ (a plus/minus swap). Investigation of
+        // accordion-tabs-feature.less L219-221 shows:
+        //   .cmp-accordion-tabs-feature__accordion-icon svg { display: none; /* replaced by CSS
+        //   pseudo-element bars */ }
+        // This rule is unconditional — it is NOT scoped under `--active`, so BOTH icon-plus and
+        // icon-minus SVGs are always display:none regardless of tab state. Live-verified via
+        // Playwright evaluate against the running AEM author instance: plusDisplay/minusDisplay were
+        // both 'none' for the active tab AND the inactive tab — statesDiffer was always false, so the
+        // original test always fell into its own test.skip() branch, matching the "flagged as
+        // skipped" report.
+        //
+        // The actual +/- indicator is a CSS-only construct: `.accordion-icon::before` (horizontal bar,
+        // always visible) and `::after` (vertical bar) — L223-246. The active state rotates `::after`
+        // 90° via `.accordion-item--active .accordion-icon::after { transform: translate(-50%, -50%)
+        // rotate(90deg); }` (L250-253), turning the "+" into a "-". Live-verified computed transforms:
+        //   active tab   ::after → matrix(0, 1, -1, 0, -0.75, -6)   (90° rotation)
+        //   inactive tab ::after → matrix(1, 0, 0, 1, -0.75, -6)    (no rotation)
+        // Fixed test checks this real mechanism instead of the dead SVG-display check.
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).nth(0);
         const tabs = instance.locator(TAB);
-        // Active tab (first): expanded → minus icon shown, plus hidden (or vice versa)
-        const activeIconState = await tabs.nth(0).evaluate(el => {
+        const items = instance.locator('.cmp-accordion-tabs-feature__accordion-item');
+
+        // Sanity: first item active, second inactive (default state)
+        await expect(items.nth(0)).toHaveClass(/accordion-item--active/);
+        await expect(items.nth(1)).not.toHaveClass(/accordion-item--active/);
+
+        // Plus/minus SVGs exist but are always CSS-hidden — confirms they are not the state indicator
+        const activeSvgDisplay = await tabs.nth(0).evaluate(el => {
             const plus = el.querySelector('.cmp-accordion-tabs-feature__icon-plus');
             const minus = el.querySelector('.cmp-accordion-tabs-feature__icon-minus');
             return {
@@ -191,23 +216,19 @@ test.describe('AccordionTabsFeature — Icon & Animation @interaction @regressio
                 minusDisplay: minus ? getComputedStyle(minus).display : 'missing',
             };
         });
-        // Inactive tab (second): collapsed → opposite icon state
-        const inactiveIconState = await tabs.nth(1).evaluate(el => {
-            const plus = el.querySelector('.cmp-accordion-tabs-feature__icon-plus');
-            const minus = el.querySelector('.cmp-accordion-tabs-feature__icon-minus');
-            return {
-                plusDisplay: plus ? getComputedStyle(plus).display : 'missing',
-                minusDisplay: minus ? getComputedStyle(minus).display : 'missing',
-            };
+        expect(activeSvgDisplay.plusDisplay, 'icon-plus SVG is always display:none (L219-221) — replaced by CSS pseudo-element bars').toBe('none');
+        expect(activeSvgDisplay.minusDisplay, 'icon-minus SVG is always display:none (L219-221) — replaced by CSS pseudo-element bars').toBe('none');
+
+        // Real state indicator: the icon's ::after pseudo-element rotation
+        const activeAfterTransform = await tabs.nth(0).evaluate(el => {
+            const icon = el.querySelector('.cmp-accordion-tabs-feature__accordion-icon');
+            return icon ? getComputedStyle(icon, '::after').transform : 'missing-icon';
         });
-        // Icon states should differ between active and inactive
-        const statesDiffer = activeIconState.plusDisplay !== inactiveIconState.plusDisplay ||
-            activeIconState.minusDisplay !== inactiveIconState.minusDisplay;
-        if (!statesDiffer) {
-            test.skip();
-            return;
-        } // CSS not loaded
-        expect(statesDiffer).toBe(true);
+        const inactiveAfterTransform = await tabs.nth(1).evaluate(el => {
+            const icon = el.querySelector('.cmp-accordion-tabs-feature__accordion-icon');
+            return icon ? getComputedStyle(icon, '::after').transform : 'missing-icon';
+        });
+        expect(activeAfterTransform, 'Active tab icon ::after should be rotated 90° (accordion-tabs-feature.less L250-253)').not.toBe(inactiveAfterTransform);
     });
     test('[ATF-057] @interaction @regression Icon state updates when tab selection changes', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
@@ -258,7 +279,7 @@ test.describe('AccordionTabsFeature — Icon & Animation @interaction @regressio
 // GAAM-421: TC_024, TC_025
 // GAAM-422: TC_027, TC_028
 test.describe('AccordionTabsFeature — CTA Navigation @interaction @regression', () => {
-    test('[ATF-059] @interaction @regression CTA links are clickable and trigger navigation', async ({ page }) => {
+    test('[ATF-059] @interaction @regression @sanity CTA links are clickable and trigger navigation', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).nth(0);
@@ -304,7 +325,7 @@ test.describe('AccordionTabsFeature — CTA Navigation @interaction @regression'
 // GAAM-421: TC_039
 // GAAM-422: TC_034
 test.describe('AccordionTabsFeature — Stability @interaction @regression', () => {
-    test('[ATF-065] @interaction @regression Rapid tab switching produces no JS errors', async ({ page }) => {
+    test('[ATF-065] @interaction @regression @sanity Rapid tab switching produces no JS errors', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
@@ -367,7 +388,7 @@ test.describe('AccordionTabsFeature — Stability @interaction @regression', () 
 // GAAM-421: TC_005, TC_007, TC_009
 // GAAM-422: TC_016, TC_018
 test.describe('AccordionTabsFeature — Headline Variant Interaction @interaction @regression', () => {
-    test('[ATF-068] @interaction @regression Headline variant renders headline text content', async ({ page }) => {
+    test('[ATF-068] @interaction @regression @sanity Headline variant renders headline text content', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).nth(2);
@@ -420,7 +441,7 @@ test.describe('AccordionTabsFeature — Mobile Drawer Interaction @interaction @
     test.beforeEach(async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
     });
-    test('[ATF-071] @interaction @mobile @regression Mobile: first drawer expanded by default', async ({ page }) => {
+    test('[ATF-071] @interaction @mobile @regression @sanity Mobile: first drawer expanded by default', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         const instance = page.locator(ROOT).nth(0);
@@ -519,7 +540,7 @@ test.describe('AccordionTabsFeature — Mobile Drawer Interaction @interaction @
 });
 // ─── Dark Background Interaction ─────────────────────────────────────────────
 test.describe('AccordionTabsFeature — Dark Background Interaction @interaction @regression', () => {
-    test('[ATF-078] @interaction @regression Dark bg: accordion tabs are interactive on granite background', async ({ page }) => {
+    test('[ATF-078] @interaction @regression @sanity Dark bg: accordion tabs are interactive on granite background', async ({ page }) => {
         const pom = new AccordionTabsFeaturePage(page);
         await pom.navigate(BASE());
         // Find granite section (instance 3 if fixture deployed, otherwise check section bg)
