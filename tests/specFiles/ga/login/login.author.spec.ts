@@ -163,48 +163,6 @@ test.describe('Login — CSV Test Cases (GAAM-1352)', () => {
         // no credentials/keys for — that full round-trip needs manual/live verification.
     });
 });
-test.describe('Login — CSV Test Cases (GAAM-1351)', () => {
-    test('[LGN-017] @regression @sanity CMS BE: Enable Login Processing with MFA - OTP — AC1', async ({ page }) => {
-        const pom = new LoginPage(page);
-        await pom.navigate(BASE());
-        // Investigated live + source 2026-08-13. The Login dialog's Settings tab now carries new
-        // MFA/OTP copy-config placeholders (authenticateAccountHeader, authenticationInstructions,
-        // mfaErrorMessage, confirmationCodeResentMessage — see LGN-019, confirmed live via
-        // /apps/ga/components/content/login/_cq_dialog.infinity.json on this AEM author instance),
-        // but there is still zero runtime OTP implementation: com.kkr.aem.tenant.ga.models.impl.
-        // LoginImpl.java has no getters exposing these properties, login.html renders no OTP
-        // step/masked-phone markup, and clientlibs/site/js/login.js has no MFA/OTP logic at all —
-        // only password show/hide toggle, inline blur validation, and the auth-fail/system-error
-        // banner handling (see init() in login.js). This matches GAAM-601 ("Login Page -
-        // Multi-Factor Authentication (MFA) Support"), authored as status "In Progress" in
-        // tests/data/gaam-601-requirements.json — a genuinely unbuilt feature, not merely a
-        // live-session-only gap. Once built, this AC ("correct username/password advances to an
-        // OTP step showing the masked registered phone") will additionally need a live OTP
-        // delivery mechanism (SMS/TOTP via a real provider) to verify end-to-end.
-        test.fixme(true, 'MFA/OTP runtime flow is not implemented (GAAM-601 status: In Progress) — the Login dialog has new MFA copy-config fields, but LoginImpl.java/login.html/login.js have zero OTP rendering or logic. Re-test once GAAM-601 ships and a live OTP delivery path is available.');
-    });
-});
-test.describe('Login — CSV Test Cases (GAAM-1299)', () => {
-    test('[LGN-018] @regression @sanity CMS BE: Login Component - New firm Products API integration — AC1', async ({ page }) => {
-        const pom = new LoginPage(page);
-        await pom.navigate(BASE());
-        // Investigated live + source 2026-08-13. Zero "Products API" / "Firms API" / "NTT"
-        // integration exists anywhere on the Login component: com.kkr.aem.tenant.ga.models.Login /
-        // LoginImpl.java expose only marketing-copy and form-label fields (no firm/product
-        // properties), login.html has no firm-related markup, login.js has no such network calls,
-        // and the live dialog (_cq_dialog.infinity.json) has no firm/product fields either — the
-        // only "firm" substring hit in that JSON is the false positive inside
-        // "confirmationCodeResentMessage". Exhaustively grepped kkr-aem case-insensitively for
-        // "NTT" and "Firms API" — zero real hits (only false positives like "currentTime" matching
-        // "ntt" case-insensitively).
-        // A conceptually similar, but entirely separate, firm-lookup integration DOES exist —
-        // com.kkr.aem.tenant.ga.servlets.FirmSelectionServlet.java (resourceType
-        // ga/components/content/firm-selection-modal) + FirmSelectionService, which POSTs to Ping's
-        // user API to patch a rep's active firm/writing-code — but that is a distinct, post-login
-        // firm-selection-modal component that Login never references or renders.
-        test.fixme(true, 'No "New firm Products API" (NTT Firms API) integration exists on the Login component (confirmed via LoginImpl.java, login.html, login.js, and the live dialog JSON) — a similarly-shaped but unrelated firm-lookup API exists only on the separate firm-selection-modal component (FirmSelectionServlet.java). This AC targets unbuilt functionality on Login; once implemented it will also need live NTT API credentials to verify end-to-end.');
-    });
-});
 test.describe('Login — CSV Test Cases (GAAM-1288)', () => {
     test('[LGN-019] @regression @sanity CMS BE: Login Component – MFA Extension — AC1', async ({ page }) => {
         const pom = new LoginPage(page);
@@ -221,8 +179,9 @@ test.describe('Login — CSV Test Cases (GAAM-1288)', () => {
         // matching commit) — i.e. this AEM author instance's JCR content is ahead of the
         // git-tracked kkr-aem source, a real source/content drift worth reconciling separately.
         // These fields also aren't yet wired to a Java model getter (LoginImpl.java has none for
-        // them) or rendered in login.html/login.js (see LGN-017), so "Dialog Structure" is
-        // partially, but not fully, in place — this test asserts the part that is live today.
+        // them) or rendered in login.html/login.js (zero MFA/OTP runtime logic exists at all), so
+        // "Dialog Structure" is partially, but not fully, in place — this test asserts the part
+        // that is live today.
         const authorUrl = BASE();
         const dialogUrl = `${authorUrl}/apps/ga/components/content/login/_cq_dialog.infinity.json`;
         const response = await page.request.get(dialogUrl);

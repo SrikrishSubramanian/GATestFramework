@@ -591,29 +591,6 @@ test.describe('Tabs — Console', () => {
         expect(errors).toEqual([]);
     });
 });
-test.describe('Tabs — CSV Test Cases (GAAM-1375)', () => {
-    test('[TABS-046] @regression @sanity CMS Analytics FE: Include a property label in the form object | Follow-up ticket - GAAM-641 — AC1', async ({ page }) => {
-        const pom = new TabsPage(page);
-        await pom.navigate(BASE());
-        // Investigated 2026-08-12: GAAM-641's AC is about kkrDataLayer form_start/form_interaction
-        // events pushing an author-configured FIELD LABEL instead of the field's `name` attribute.
-        // That logic already exists — but it lives entirely in the form/container component
-        // (ui.apps/src/main/content/jcr_root/apps/kkr-aem-base/components/form/container/clientlibs/
-        // site/js/container.js, getFieldLabel() ~line 169-176), which reads the author-configured
-        // `data-cmp-field-label` attribute and falls back to `name` — i.e. GAAM-641 is implemented,
-        // just not in Tabs.
-        // Tabs renders no <form> and never pushes form_start/form_interaction. Verified live against
-        // the tabs style guide page (curl -u admin:admin http://localhost:4502/content/global-atlantic/
-        // style-guide/components/tabs.html?wcmmode=disabled): the rendered data-cmp-data-layer is
-        // {"tabs-<id>":{"shownItems":[...],"@type":"ga/components/content/tabs"}} — no "form" object,
-        // no "field" property at all. Confirmed against source too: tabs.html template
-        // (data-cmp-data-layer="${tabs.data.json}") and core/src/test/resources/tabs/exporter-tabs.json
-        // both show the same shape (id/shownItems/@type/repo:modifyDate only).
-        // This AC does not apply to the Tabs component — it was likely applied indiscriminately across
-        // components during the GAAM-1375 bulk CSV import.
-        test.skip(true, 'GAAM-641 (form field label in kkrDataLayer) is implemented in form/container.js (getFieldLabel()), not Tabs. Tabs has no <form>, pushes no form_start/form_interaction events, and its live data-cmp-data-layer JSON has no "form"/"field" property (verified against localhost:4502 style guide page) — AC not applicable to this component.');
-    });
-});
 test.describe('Tabs — Happy Path', () => {
     test('[TABS-047] @smoke @regression @sanity Tabs renders correctly', async ({ page }) => {
         const pom = new TabsPage(page);

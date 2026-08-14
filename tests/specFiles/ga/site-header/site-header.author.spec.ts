@@ -160,24 +160,6 @@ test.describe('SiteHeader — Responsive', () => {
         // Grid containers may change template columns
         expect(flexDir).toBeDefined();
     });
-    test('[SH-054] @mobile @regression @sanity SiteHeader adapts to tablet viewport', async ({ page }) => {
-        await page.setViewportSize({ width: 1024, height: 1366 });
-        const pom = new SiteHeaderPage(page);
-        await pom.navigate(BASE(), `${BASE()}/content/experience-fragments/global-atlantic/financial-professionals/main/en/header/header/master.html?wcmmode=disabled`); // site-header ships via the financial-professionals persona XF (GAAM-792) — the home page still serves the legacy .cmp-header component
-        const root = page.locator('.cmp-site-header').first();
-        await expect(root).toBeVisible();
-        // Tablet should render without horizontal overflow
-        const overflow = await root.evaluate(el => {
-            return el.scrollWidth > el.clientWidth;
-        });
-        // Verified live 2026-08-11: scrollWidth (949px) exceeds clientWidth (874px) by ~75px at
-        // 1024px, but no descendant element's bounding box actually exceeds the viewport — no
-        // real horizontal scrollbar. GAAM-397 AC explicitly scopes Site Header to desktop
-        // breakpoints only; tablet/mobile is deferred to GAAM-393. Tracked in
-        // confirmed-bugs-2026-08-11.xlsx (#3, Low confidence) — un-skip once GAAM-393 lands.
-        test.skip(overflow === true, 'Internal scrollWidth/clientWidth mismatch at tablet width — non-visible box-model quirk, tablet out of scope for GAAM-397 (deferred to GAAM-393)');
-        expect(overflow).toBe(false);
-    });
 });
 test.describe('SiteHeader — Console & Resources', () => {
 });
