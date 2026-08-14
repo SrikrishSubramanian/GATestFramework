@@ -21,30 +21,6 @@ test.afterEach(async ({ page }, testInfo) => {
     }
     await annotateEnvironment(testInfo);
 });
-test.describe('Login — CSV Test Cases', () => {
-    test('[LGN-001] @regression @sanity CMS BE: Login cookie sessionIndex update & Ping Logout Servlet implementation — AC1', async ({ page }) => {
-        const pom = new LoginPage(page);
-        await pom.navigate(BASE());
-        // Investigated live + source 2026-08-13 — no "sessionIndex" cookie logic and no dedicated
-        // "Ping Logout Servlet" exist anywhere in kkr-aem (exhaustive case-insensitive source grep:
-        // zero hits for "sessionIndex"; zero servlet registered with a "logout" selector — see
-        // com.kkr.aem.tenant.ga.servlets.PingLoginServlet.java, which registers only a "submit"
-        // selector on resourceType ga/components/content/login, with no logout counterpart).
-        // Live-confirmed against this AEM author instance: POST /saml_logout and POST /ping_logout
-        // both return the same status as an arbitrary unmapped control path — proving neither is a
-        // registered Sling path/servlet (contrast with /saml_login, which IS wired to real SAML
-        // processing — see LGN-016). The only related backend artifact is PingLoginConfigServiceImpl
-        // (GAAM-728, logoutUrl/handleLogout OSGi config), which drives only the site-header FE
-        // click-handler redirect (site-header-dropdown.js performLogout()) — a different
-        // component, and not a servlet implementation.
-        // This AC's actual behavior (a real IdP-issued SessionIndex on the login cookie, consumed by
-        // a server-side Ping Logout Servlet to invalidate the AEM session) would live entirely
-        // inside the OOTB/third-party SAML2 auth handler bundle (not part of kkr-aem's own source)
-        // and requires a genuine SAML SLO round-trip with a live PingOne IdP session to exercise —
-        // this headless, AEM-author-only suite has no credentials for that.
-        test.fixme(true, 'No sessionIndex cookie logic or dedicated Ping Logout Servlet exists in kkr-aem (exhaustive source grep + live probe confirmed: /saml_logout and /ping_logout behave like an unmapped path, unlike /saml_login). Any real implementation would live inside the OOTB SAML2 handler bundle and requires a live PingOne SSO session with a real SessionIndex to verify end-to-end. Verify manually with live SSO credentials.');
-    });
-});
 test.describe('Login — Happy Path', () => {
     test('[LGN-002] @smoke @regression @sanity Login renders correctly', async ({ page }) => {
         const pom = new LoginPage(page);
