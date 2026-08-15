@@ -42,10 +42,16 @@ test.describe('Breadcrumb — State Matrix', () => {
     await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         const root = page.locator('.cmp-breadcrumb').first();
-        await expect(root).toBeVisible({ timeout: 10000 });
-
-        const items = root.locator('[role="listitem"], li');
-        expect(await items.count()).toBeGreaterThan(0);
+        // breadcrumb.less:34-43 ("Hidden on mobile and tablet") intentionally sets display: none
+        // below @ga-bp-desktop-min (1024px) — mobile (375px) and tablet (768px) are correctly
+        // hidden entirely; only desktop (1440px) renders the breadcrumb.
+        if (viewport.width < 1024) {
+          await expect(root).toBeHidden({ timeout: 10000 });
+        } else {
+          await expect(root).toBeVisible({ timeout: 10000 });
+          const items = root.locator('[role="listitem"], li');
+          expect(await items.count()).toBeGreaterThan(0);
+        }
 
         const errors: string[] = [];
         page.on('pageerror', e => errors.push(e.message));
