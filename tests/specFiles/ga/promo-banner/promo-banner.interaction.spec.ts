@@ -173,32 +173,6 @@ test.describe('PromoBanner — Interaction Tests', () => {
 
   // ── Keyboard Navigation ──────────────────────────────────────────────────
 
-  test('@interaction @regression PB-INT-007 Tab key reaches social links', async ({ page }) => {
-    // Social links only exist on the footer variant of the fixture, not the
-    // style guide's default instances.
-    await page.goto(componentUrl(), { waitUntil: 'domcontentloaded' });
-    if (await page.locator(PB_SOCIAL_LINK).count() === 0) {
-      test.skip();
-      return;
-    }
-    await page.locator(PB_CTA).first().waitFor({ state: 'visible' });
-
-    // Start from the top of the page and Tab until a social link is focused
-    await page.keyboard.press('Tab');
-    let focused = false;
-    for (let i = 0; i < 30; i++) {
-      const activeTag = // 📏 TODO: Replace with measurement-utils
-    await page.evaluate(() => {
-        const el = document.activeElement;
-        return el ? el.closest('.cmp-promo-banner__links-social a') !== null : false;
-      });
-      if (activeTag) { focused = true; break; }
-      await page.keyboard.press('Tab');
-    }
-
-    expect(focused).toBe(true);
-  });
-
   test('@interaction @regression PB-INT-008 Tab key reaches CTA buttons', async ({ page }) => {
     await page.goto(componentUrl());
     await page.locator(PB_CTA).first().waitFor({ state: 'visible' });

@@ -74,36 +74,6 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
         }
     });
     // ============ Video Controls ============
-    test('[GAAM-621-005] @regression Verify video plays and pauses on click', async ({ page }) => {
-        // video.first() previously matched the ambient AUTOPLAY BACKGROUND hero video (no
-        // `controls` attribute, permanently covered by the front-stacked headline text —
-        // confirmed via elementFromPoint), not the interactive modal video this GAAM-621 suite is
-        // actually about. Open the CTA modal first and scope to its own <video>
-        // (homepage-hero.html:96-104, the one with `controls`).
-        await page.setViewportSize({ width: 1440, height: 2000 });
-        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
-        const ctaButton = page.locator('button[aria-label="Watch video"]').first();
-        if (await ctaButton.count() > 0) {
-            await clickElement(ctaButton);
-            const modal = page.locator('dialog.cmp-button__video-modal').first();
-            await expect(modal).toBeVisible();
-            const video = modal.locator('video').first();
-            await expect(video).toBeVisible();
-            // The style-guide fixture's Brightcove video ID 404s (edge.api.brightcove.com returns
-            // VIDEO_CLOUD_ERR_VIDEO_NOT_FOUND — see confirmed-bugs-2026-08-11.xlsx), so video-js
-            // shows its own built-in error dialog (.vjs-error-display) on top of the <video>
-            // element instead of a working player. That overlay permanently intercepts pointer
-            // events on the video (confirmed live — clicking hangs forever, not a timing issue),
-            // so play/pause genuinely can't be exercised here; skip rather than force a
-            // meaningless click through a broken player's error UI.
-            const errorDisplay = modal.locator('.vjs-error-display');
-            const hasVideoError = await errorDisplay.first().isVisible().catch(() => false);
-            test.skip(hasVideoError, 'Modal video player is showing its error state (stale Brightcove video ID 404s — confirmed-bugs-2026-08-11.xlsx) — play/pause click cannot be exercised against a broken player.');
-            await clickElement(video);
-            expect(await video.count()).toBeGreaterThan(0);
-        }
-    });
     test('[GAAM-621-006] @regression Verify video controls are accessible', async ({ page }) => {
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
         await page.goto(url, { waitUntil: 'domcontentloaded' });

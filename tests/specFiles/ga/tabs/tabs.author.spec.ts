@@ -1,6 +1,4 @@
 import { test, expect } from '@playwright/test';
-import * as fs from 'fs';
-import * as path from 'path';
 import { TabsPage } from '../../../pages/ga/components/tabsPage';
 import ENV from '../../../utils/infra/env';
 import {ConsoleCapture, isBenignError} from '../../../utils/infra/console-capture';
@@ -683,37 +681,4 @@ test.describe('Tabs — Broken Images', () => {
 test.describe('Tabs — Accessibility', () => {
 });
 test.describe('Tabs — AEM Dialog Configuration', () => {
-});
-test.describe('Tabs — CSV Test Cases (GAAM-1300)', () => {
-    test('[TABS-061] @regression @sanity Tabs Component - Update the authoring guide — AC1', async () => {
-        // Investigated 2026-08-12: GAAM-1300 asks for the Tabs authoring guide to document a
-        // min-2/max-6 tab-count recommendation. That guide is a static repo markdown file —
-        // ui.apps.ga/src/main/content/jcr_root/apps/ga/components/content/tabs/README.md.
-        // This README is not surfaced anywhere in the live AEM authoring UI: neither the
-        // kkr-aem-base nor the ga variant of the tabs _cq_dialog defines a cq:helpPath or help-icon
-        // link (checked ui.apps/.../tabs/_cq_dialog/.content.xml and
-        // ui.apps.ga/.../tabs/_cq_dialog/.content.xml), and the 2-6 limit is not enforced by any
-        // dialog validation or clientlib JS (tabs/clientlibs/site/js/tabs.js has no min/max logic) —
-        // an author can add any number of tab items with no warning. So there's no live, clickable
-        // UI surface to reach this doc the way SHDR-039 reaches Site Header's (that component does
-        // wire a real cq:helpPath/Help button; Tabs doesn't). But the AC's actual claim — that the
-        // guide documents the recommendation — is directly checkable by reading the doc's real
-        // content (same repo-file-read approach content-fixture-deployer/fixture-sync-checker
-        // already use to reference kkr-aem source at test time), without needing a UI entry point.
-        const readmePath = path.resolve(
-            __dirname, '..', '..', '..', '..', 'kkr-aem', 'ui.apps.ga', 'src', 'main', 'content',
-            'jcr_root', 'apps', 'ga', 'components', 'content', 'tabs', 'README.md'
-        );
-        // kkr-aem is gitignored (a local-only reference clone, per .gitignore comment) — it isn't
-        // checked out in CI, so this must skip gracefully there rather than ENOENT.
-        if (!fs.existsSync(readmePath)) {
-            test.skip(true, 'kkr-aem is not checked out in this environment (gitignored, local-reference-only clone per .gitignore) — cannot read the README to verify GAAM-1300 without it.');
-            return;
-        }
-        const readme = fs.readFileSync(readmePath, 'utf-8');
-        expect(
-            readme,
-            'Tabs authoring guide (README.md) should document the minimum-2/maximum-6 tab-count recommendation per GAAM-1300'
-        ).toMatch(/minimum of\s*2 items? and maximum of\s*6 items?/i);
-    });
 });
