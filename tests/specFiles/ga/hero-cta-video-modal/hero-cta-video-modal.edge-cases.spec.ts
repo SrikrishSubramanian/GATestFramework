@@ -61,16 +61,24 @@ test.describe('Hero CTA Video Modal — Edge Cases', () => {
     });
     // ============ Edge Case: Error Scenarios ============
     test('[GAAM-621-EDGE-013] @edge Verify modal gracefully handles missing video source', async ({ page }) => {
+        // Fixed 2026-08-15: this player is video-js/Brightcove (`class="vjs-tech"`, `data-video-id`),
+        // which sets `src`/`<source>` entirely via JS after fetching the Brightcove manifest — it
+        // never uses the legacy HTML5 `<video><source>...fallback text</video>` pattern, so `src`/
+        // `<source>` being absent is normal/expected at any point, not evidence of a "missing source"
+        // needing graceful handling, and checking `video.textContent()` for fallback text (a pattern
+        // that never applies here) is why this always failed. Live-verified on env=dev: this page's
+        // video(s) genuinely have stale/broken Brightcove IDs (see GAAM-621-005/014 in the sibling
+        // hero-cta-video-modal.spec.ts) and never get a currentSrc — but video-js DOES gracefully
+        // handle that by rendering its own `.vjs-error-display` overlay instead of a blank/broken
+        // player or a thrown JS error. That is the real, meaningful "gracefully handles missing video
+        // source" signal for this component.
         const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
+        await page.goto(url, { waitUntil: 'load' });
         const video = page.locator('video').first();
         if (await video.count() > 0) {
-            // Check for fallback content
-            const source = video.locator('source');
-            const hasFallback = (await source.count()) === 0;
-            if (hasFallback) {
-                const fallbackText = await video.textContent();
-                expect(fallbackText).toBeTruthy();
+            const currentSrc = await video.evaluate((el: HTMLVideoElement) => el.currentSrc);
+            if (!currentSrc) {
+                await expect(page.locator('.vjs-error-display').first()).toBeAttached();
             }
         }
     });

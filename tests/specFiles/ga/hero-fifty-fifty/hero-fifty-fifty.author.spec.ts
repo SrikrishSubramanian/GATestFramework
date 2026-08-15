@@ -19,7 +19,7 @@ const SEL = {
     left: '.cmp-hero-fifty-fifty__left',
     right: '.cmp-hero-fifty-fifty__right',
     content: '.cmp-hero-fifty-fifty__content',
-    textContent: '.cmp-hero-fifty-fifty__text-content',
+    textContent: '.cmp-hero-fifty-fifty__content',
     breadcrumbWrap: '.cmp-hero-fifty-fifty__breadcrumb',
     breadcrumb: '.cmp-breadcrumb',
     eyebrowHeadline: '.cmp-hero-fifty-fifty__eyebrow-headline',

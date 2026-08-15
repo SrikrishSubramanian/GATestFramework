@@ -33,7 +33,11 @@ test.describe('AccordionTabsFeature — State Matrix (Valid)', () => {
       await pom.navigate(BASE());
       const container = page.locator(sectionSel('white')).first();
       await expect(container).toBeVisible();
-      const el = container.locator('.cmp-accordion-tabs-feature:visible:not([aria-disabled="true"]) .cmp-accordion-tabs-feature').first();
+      // Was accidentally self-nested (".cmp-accordion-tabs-feature ... .cmp-accordion-tabs-feature"),
+      // requiring a second instance of the component inside itself — matches 0 elements live.
+      // The :visible:not([aria-disabled="true"]) filter is meant to apply to the component root
+      // itself (excluding disabled overlays), not gate a descendant of the same class.
+      const el = container.locator('.cmp-accordion-tabs-feature:visible:not([aria-disabled="true"])').first();
       await expect(el).toBeVisible();
     });
 
@@ -42,7 +46,11 @@ test.describe('AccordionTabsFeature — State Matrix (Valid)', () => {
       await pom.navigate(BASE());
       const container = page.locator(sectionSel('white')).first();
       await expect(container).toBeVisible();
-      const el = container.locator('.cmp-accordion-tabs-feature:visible:not([aria-disabled="true"]) .cmp-accordion-tabs-feature').first();
+      // Was accidentally self-nested (".cmp-accordion-tabs-feature ... .cmp-accordion-tabs-feature"),
+      // requiring a second instance of the component inside itself — matches 0 elements live.
+      // The :visible:not([aria-disabled="true"]) filter is meant to apply to the component root
+      // itself (excluding disabled overlays), not gate a descendant of the same class.
+      const el = container.locator('.cmp-accordion-tabs-feature:visible:not([aria-disabled="true"])').first();
       await expect(el).toBeVisible();
     });
 });
@@ -56,7 +64,11 @@ test.describe('AccordionTabsFeature — State Matrix (Responsive)', () => {
       await pom.navigate(BASE());
       const container = page.locator(sectionSel('white')).first();
       await expect(container).toBeVisible();
-      const el = container.locator('.cmp-accordion-tabs-feature:visible:not([aria-disabled="true"]) .cmp-accordion-tabs-feature').first();
+      // Was accidentally self-nested (".cmp-accordion-tabs-feature ... .cmp-accordion-tabs-feature"),
+      // requiring a second instance of the component inside itself — matches 0 elements live.
+      // The :visible:not([aria-disabled="true"]) filter is meant to apply to the component root
+      // itself (excluding disabled overlays), not gate a descendant of the same class.
+      const el = container.locator('.cmp-accordion-tabs-feature:visible:not([aria-disabled="true"])').first();
       await expect(el).toBeVisible();
     });
 });

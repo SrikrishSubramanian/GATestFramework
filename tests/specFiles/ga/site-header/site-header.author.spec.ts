@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+import * as fs from 'fs';
+import * as path from 'path';
 import { SiteHeaderPage } from '../../../pages/ga/components/siteHeaderPage';
 import ENV from '../../../utils/infra/env';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
@@ -82,11 +84,66 @@ test.describe('SiteHeader — Author QA Checklist (GAAM-394)', () => {
 });
 // ─── AEM Convention Compliance (GAAM-394) ────────────────────────────────────
 test.describe('SiteHeader — AEM Convention Compliance (GAAM-394)', () => {
-    test('[SHDR-044] @author @regression Component is restricted to XF Template (GAAM-792)', async ({ page }) => {
-        test.fixme(true, 'XF Template policy check requires GAAM-792 to be complete. Verify manually in Template Editor that site-header appears only in the XF template allowedComponents list.');
-        // Steps: Open Template Editor for XF template → check allowedComponents list for site-header
-        // Ensure site-header does NOT appear in standard page template allowedComponents
-        expect(true).toBe(true);
+    test('[SHDR-044] @author @regression Component is restricted to XF Template (GAAM-792)', async () => {
+        // Investigated 2026-08-15: GAAM-792 asks that site-header (a structure component) only be
+        // authorable inside the Experience Fragment template, not standard pages. AEM enforces this
+        // via policy allowedComponents, not a component-level flag, so this is checkable statically
+        // from the two policy sources of truth:
+        //   1. /conf/global-atlantic/settings/wcm/policies/.content.xml defines two responsivegrid
+        //      policies: "all-components" (title "GA All Components - ReadOnly", for standard page
+        //      layout containers) and "xf-components" (title "GA Experience Fragment Components",
+        //      jcr:description "...including structure components like header and footer"). Only
+        //      xf-components' `components` list includes /apps/ga/components/structure/site-header —
+        //      all-components does not.
+        //   2. Each template's own policies/.content.xml assigns a policy via cq:policy: confirmed
+        //      experience-fragment-web -> .../responsivegrid/xf-components. The standard templates
+        //      (ga-freeform-page, insights-detail-page) -> .../responsivegrid/all-components, while
+        //      product-detail-page has its own dedicated root policy (product-detail-components) —
+        //      so rather than assume every standard template reuses "all-components" by name, resolve
+        //      each template's actual assigned policy node and check ITS components list directly.
+        // Together these prove site-header is only ever an allowed component on the XF template.
+        const kkrRoot = path.resolve(__dirname, '..', '..', '..', '..', 'kkr-aem');
+        const policiesFile = path.join(
+            kkrRoot, 'ui.content.ga', 'src', 'main', 'content', 'jcr_root', 'conf', 'global-atlantic',
+            'settings', 'wcm', 'policies', '.content.xml'
+        );
+        const templatesDir = path.join(
+            kkrRoot, 'ui.content.ga', 'src', 'main', 'content', 'jcr_root', 'conf', 'global-atlantic',
+            'settings', 'wcm', 'templates'
+        );
+
+        // kkr-aem is gitignored (a local-only reference clone) — not checked out in CI.
+        if (!fs.existsSync(policiesFile) || !fs.existsSync(templatesDir)) {
+            test.skip(true, 'kkr-aem is not checked out in this environment (gitignored, local-reference-only clone) — cannot read the policy sources to verify GAAM-792 without it.');
+            return;
+        }
+
+        const policiesXml = fs.readFileSync(policiesFile, 'utf-8');
+        const extractBlock = (nodeName: string) => {
+            const match = policiesXml.match(new RegExp(`<${nodeName}\\b[\\s\\S]*?</${nodeName}>`));
+            expect(match, `expected a <${nodeName}> policy node in wcm/policies/.content.xml`).not.toBeNull();
+            return match![0];
+        };
+        const allComponents = extractBlock('all-components');
+        const xfComponents = extractBlock('xf-components');
+        expect(allComponents, 'site-header must NOT be allowed on standard page layout containers').not.toContain('/apps/ga/components/structure/site-header');
+        expect(xfComponents, 'site-header must be allowed on XF layout containers').toContain('/apps/ga/components/structure/site-header');
+
+        const templatePolicyNode = (templateName: string) => {
+            const file = path.join(templatesDir, templateName, 'policies', '.content.xml');
+            expect(fs.existsSync(file), `expected a policies/.content.xml for template "${templateName}"`).toBe(true);
+            const xml = fs.readFileSync(file, 'utf-8');
+            const match = xml.match(/cq:policy="wcm\/foundation\/components\/responsivegrid\/([\w-]+)"/);
+            expect(match, `expected a root responsivegrid cq:policy assignment in "${templateName}"`).not.toBeNull();
+            return match![1];
+        };
+        expect(templatePolicyNode('experience-fragment-web')).toBe('xf-components');
+        for (const standardTemplate of ['ga-freeform-page', 'insights-detail-page', 'product-detail-page']) {
+            const nodeName = templatePolicyNode(standardTemplate);
+            expect(nodeName, `standard template "${standardTemplate}" must not use the XF-only policy`).not.toBe('xf-components');
+            const block = extractBlock(nodeName);
+            expect(block, `standard template "${standardTemplate}"'s policy ("${nodeName}") must not allow site-header`).not.toContain('/apps/ga/components/structure/site-header');
+        }
     });
 });
 test.describe('SiteHeader — Happy Path', () => {

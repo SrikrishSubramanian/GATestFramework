@@ -270,10 +270,18 @@ test.describe('Product Rate Table — Share via Email (GAAM-704/749)', () => {
 
 test.describe('Product Rate Table — Known Content Gaps', () => {
   test('[PRT-009] @regression ForeInvestors Choice Variable Annuity has no rate table configured yet', async ({ page }) => {
-    // Verified live 2026-08-10: this product page under Dynamic_rates has zero child pages
-    // and renders no .cmp-product-rate-table at all — a genuine content gap, not a test bug.
-    // Un-skip once content is authored (see Jira epics GAAM-1197/633/632/631/590/514/143).
-    test.skip(true, 'ForeInvestors Choice Variable Annuity has no Dynamic Rates content authored yet — confirmed via live check, not a test defect');
+    // Re-verified live 2026-08-15: the "foreinvestors-choice-variable-annuity" node exists under
+    // Dynamic_rates (unlike PRT-001..008 it's not in the PRODUCTS list above because it has no
+    // distribution-channel child page to navigate to at all) — a genuine, still-open content gap,
+    // not a test defect. Per team convention this must fail (not skip) while the gap is open — see
+    // confirmed-bugs-2026-08-11.xlsx row 19. Remove this once content is authored (Jira epics
+    // GAAM-1197/633/632/631/590/514/143).
+    const DYNAMIC_RATES_ROOT = '/content/global-atlantic/style-guide/qa-testing/dynamic_rates/Dynamic_rates';
+    const res = await page.request.get(`${BASE()}${DYNAMIC_RATES_ROOT}/foreinvestors-choice-variable-annuity.1.json`);
+    expect(res.status()).toBe(200);
+    const json = await res.json();
+    const childPages = Object.keys(json).filter(k => !k.startsWith('jcr:'));
+    expect(childPages, 'ForeInvestors Choice Variable Annuity should have at least one Dynamic Rates distribution-channel child page authored').not.toHaveLength(0);
   });
 });
 

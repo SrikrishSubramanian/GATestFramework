@@ -111,6 +111,7 @@ test.describe('Image — Hover Zoom Interaction', () => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new ImagePage(page);
         await pom.navigate(BASE());
+        await page.waitForLoadState('load'); // image must finish loading before its aspect-ratio box is stable to measure
         const linkedPicture = page.locator(`${IMG_LINK} ${IMG_PICTURE}`).first();
         const count = await linkedPicture.count();
         if (count === 0) {

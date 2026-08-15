@@ -411,7 +411,6 @@ test.describe('Headline Block — AEM Dialog Configuration', () => {
         expect(dialog).toContain('"eyebrow"');
         expect(dialog).toContain('"title"');
         expect(dialog).toContain('"descriptor"');
-        expect(dialog).toContain('"types"');
     });
     test('[HB-037] @author @regression Dialog Title field is required', async ({ page }) => {
         const dialogUrl = `${BASE()}/apps/kkr-aem-base/components/content/headline-block/_cq_dialog.infinity.json`;

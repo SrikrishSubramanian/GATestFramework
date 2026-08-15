@@ -29,10 +29,16 @@ test.describe('Workbench — Happy Path', () => {
         await expect(root).toBeVisible();
     });
     test('[WB-002] @regression Workbench content is displayed', async ({ page }) => {
+        // Fixed 2026-08-15: `.cmp-workbench__content` never exists in workbench.html (kkr-aem-base
+        // components/content/workbench/workbench.html) — the real content wrapper is
+        // `.cmp-workbench__wrapper`, containing `.cmp-workbench__title` and a `.cmp-workbench__tiles`
+        // list. Live-verified on env=dev: wrapper renders visible with real tile content.
         const pom = new WorkbenchPage(page);
         await pom.navigate(BASE());
-        const content = page.locator('.cmp-workbench__content');
+        const content = page.locator('.cmp-workbench__wrapper').first();
         await expect(content).toBeVisible();
+        const tiles = page.locator('.cmp-workbench__tile');
+        expect(await tiles.count()).toBeGreaterThan(0);
     });
 });
 test.describe('Workbench — Interaction', () => {

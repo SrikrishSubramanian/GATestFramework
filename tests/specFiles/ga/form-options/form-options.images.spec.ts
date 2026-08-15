@@ -57,6 +57,15 @@ test.describe('Form Options — Images & Icons', () => {
         await pom.navigate(BASE());
         const checkboxLabels = page.locator('.cmp-form-options label:has(input[type="checkbox"])');
         const count = await checkboxLabels.count();
+        // Live-verified 2026-08-15: the checkbox options ("Select your interests") live inside a
+        // collapsed custom multi-select dropdown (fieldset.cmp-form-options--multi-drop-down) — the
+        // <label> options have zero width/height (not visible) until the dropdown's own visible
+        // control (.select-box, role="combobox") is opened. Open the first group's dropdown so the
+        // labels checked below (all within that same fieldset, per DOM order) are actually visible.
+        if (count > 0) {
+            const firstFieldset = checkboxLabels.first().locator('xpath=ancestor::fieldset[1]');
+            await firstFieldset.locator('.select-box').click();
+        }
         for (let i = 0; i < Math.min(count, 3); i++) {
             const label = checkboxLabels.nth(i);
             // Check if label has custom styling (pseudo-element or nested icon)

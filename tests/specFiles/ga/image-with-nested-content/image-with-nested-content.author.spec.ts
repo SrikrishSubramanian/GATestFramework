@@ -384,12 +384,20 @@ test.describe('ImageWithNestedContent — AEM Dialog / Overlay', () => {
         expect(json['cq:isContainer']).toBe(true);
     });
     test('[IWNC-038] @author @regression Dialog has image (required) + alt text fields', async ({ page }) => {
+        // Fixed 2026-08-15: the decorative-image toggle field's dialog RESOURCE NODE is named
+        // "decorative" (not "isDecorative") — "isDecorative" only appears as that field's `name`
+        // property value (./image/isDecorative), so the raw JSON never contains the literal quoted
+        // key "isDecorative". Checking for the `name` property value directly is the correct,
+        // live-verified way to confirm the field exists (this is a leaf field on this component's
+        // own dialog, not a resourceSuperType-merged tab, so the raw _cq_dialog.infinity.json GET
+        // is authoritative here — no editor-UI check needed, unlike the accordion/site-header
+        // tab-merge cases).
         const resp = await page.request.get(`${BASE()}/apps/kkr-aem-base/components/content/image-with-nested-content/_cq_dialog.infinity.json`);
         expect(resp.ok()).toBe(true);
         const json = JSON.stringify(await resp.json());
         expect(json).toContain('fileupload');
-        expect(json).toContain('"alt"');
-        expect(json).toContain('"isDecorative"');
+        expect(json).toContain('./image/alt');
+        expect(json).toContain('./image/isDecorative');
     });
 });
 // ─── Console Errors (039-040) ────────────────────────────────────────────────

@@ -165,14 +165,28 @@ test.describe('Headline Block — Cross-Background Interaction Consistency', () 
             expect(href).toBeTruthy();
         }
     });
-    test('[HB-INT-012] @interaction @regression CTA icon (Arrow-Right) renders on all backgrounds', async ({ page }) => {
+    test('[HB-INT-012] @interaction @regression CTA icon renders consistently on all backgrounds', async ({ page }) => {
+        // Verified live 2026-08-15: the style guide's authored CTA icon is the ACS Commons Font
+        // Awesome icon "arrow-down" (icon.html renders `cmp-button__icon ${icon}`, values come from
+        // /etc/acs-commons/lists/font-awesome-icons, always lowercase-hyphenated) — never "Arrow-Right"
+        // (wrong case, wrong direction, was never a valid icon value). Renamed to check the real
+        // regression concern the title describes: the icon renders and is the SAME icon on every
+        // background (i.e. no background-specific CSS hides/swaps it), rather than hardcoding one
+        // specific icon name that's just today's style-guide content.
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());
         const sections = [SECTION_WHITE, SECTION_GRANITE, SECTION_AZUL];
+        let expectedIconClass: string | null = null;
         for (const section of sections) {
             const icon = page.locator(`${section} ${HB} ${CTA_WRAPPER} .cmp-button__icon`).first();
             await expect(icon).toBeVisible();
-            await expect(icon).toHaveClass(/Arrow-Right/);
+            const iconClass = await icon.getAttribute('class');
+            expect(iconClass).toMatch(/cmp-button__icon \S+/);
+            if (expectedIconClass === null) {
+                expectedIconClass = iconClass;
+            } else {
+                expect(iconClass, `CTA icon on ${section} should match the icon rendered on other backgrounds`).toBe(expectedIconClass);
+            }
         }
     });
 });

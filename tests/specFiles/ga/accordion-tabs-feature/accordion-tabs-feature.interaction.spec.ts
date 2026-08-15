@@ -592,8 +592,14 @@ test.describe('AccordionTabsFeature — Dark Background Interaction @interaction
             test.skip();
             return;
         }
-        // Check tab text color is light (not dark on dark)
-        const textColor = await tabs.first().evaluate(el => {
+        // Check tab text color is light (not dark on dark). The tab button itself
+        // (.cmp-accordion-tabs-feature__accordion-header) has no direct text node — all visible
+        // text lives in a child .cmp-accordion-tabs-feature__accordion-title span, which is
+        // styled independently. Reading color off the button wrapper picks up an unrendered
+        // default/inherited black instead of the actual white text color (confirmed live and
+        // visually: "Global Reach" renders solid white on the granite background).
+        const title = tabs.first().locator('.cmp-accordion-tabs-feature__accordion-title');
+        const textColor = await title.evaluate(el => {
             return getComputedStyle(el).color;
         });
         // Parse RGB and verify it's a light color (R+G+B > 300 for white-ish text)

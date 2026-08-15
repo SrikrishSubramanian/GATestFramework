@@ -158,6 +158,13 @@ test.describe('DecisionTree — CSV Test Cases (GAAM-1388)', () => {
             { component: 'decision-tree-option', requiredFields: ['Label', 'Description', 'Accessibility Label'] },
         ];
 
+        // kkr-aem is gitignored (a local-only reference clone, per .gitignore comment) — it isn't
+        // checked out in CI, so this must skip gracefully there rather than ENOENT.
+        if (!fs.existsSync(componentsDir)) {
+            test.skip(true, 'kkr-aem is not checked out in this environment (gitignored, local-reference-only clone per .gitignore) — cannot read the READMEs to verify GAAM-1388 without it.');
+            return;
+        }
+
         for (const { component, requiredFields } of guides) {
             const readmePath = path.join(componentsDir, component, 'README.md');
             const readme = fs.readFileSync(readmePath, 'utf-8');

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import ENV from '../../../utils/infra/env';
 import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
-import { resolveComponentUrl } from '../../../utils/infra/content-fixture-deployer';
+import { resolveComponentUrl, deployFixture } from '../../../utils/infra/content-fixture-deployer';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
 import { assertLayout, assertSpacing, assertTypography } from '../../../utils/infra/component-assertions';
 import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/action-utils';
@@ -14,6 +14,10 @@ const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 
 test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
+  // resolveComponentUrl('hero-fifty-fifty') resolves to the test-fixtures path (a fixture
+  // exists for this component) — that path 404s until the fixture is deployed, which then
+  // hangs every locator wait below for the full worker timeout (see promo-banner's identical fix).
+  await deployFixture('hero-fifty-fifty', page);
 
   capture = new ConsoleCapture(page);
   capture.start();});

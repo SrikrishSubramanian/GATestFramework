@@ -119,6 +119,7 @@ test.describe('BioCard — Broken Images', () => {
     test('[BC-008] @regression BioCard all images load successfully', async ({ page }) => {
         const pom = new BioCardPage(page);
         await pom.navigate(BASE());
+        await page.waitForLoadState('load'); // images finish downloading after domcontentloaded
         const images = page.locator('.cmp-bio-card img');
         const count = await images.count();
         for (let i = 0; i < count; i++) {

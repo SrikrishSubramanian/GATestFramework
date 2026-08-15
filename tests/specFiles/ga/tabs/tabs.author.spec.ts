@@ -704,6 +704,12 @@ test.describe('Tabs — CSV Test Cases (GAAM-1300)', () => {
             __dirname, '..', '..', '..', '..', 'kkr-aem', 'ui.apps.ga', 'src', 'main', 'content',
             'jcr_root', 'apps', 'ga', 'components', 'content', 'tabs', 'README.md'
         );
+        // kkr-aem is gitignored (a local-only reference clone, per .gitignore comment) — it isn't
+        // checked out in CI, so this must skip gracefully there rather than ENOENT.
+        if (!fs.existsSync(readmePath)) {
+            test.skip(true, 'kkr-aem is not checked out in this environment (gitignored, local-reference-only clone per .gitignore) — cannot read the README to verify GAAM-1300 without it.');
+            return;
+        }
         const readme = fs.readFileSync(readmePath, 'utf-8');
         expect(
             readme,

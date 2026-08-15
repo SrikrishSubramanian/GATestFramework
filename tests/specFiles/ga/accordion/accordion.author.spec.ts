@@ -11,6 +11,29 @@ import { clickElement, fill, hover, doubleClick } from '../../../../src/utils/ac
 import { getElementMeasurements, getComputedStyles, getElementVisibility } from '../../../utils/infra/measurement-utils';
 const BASE = () => ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
 let capture: ConsoleCapture;
+
+// The accordion component's dialog uses sling:resourceSuperType inheritance
+// (kkr-aem-base/components/content/accordion), with the GA override only hiding one tab
+// (introContent/"Header", sling:hideResource="true"). Fetching the GA override's own
+// _cq_dialog.infinity.json only returns that tiny override fragment, NOT the Sling-merged
+// dialog AEM actually renders for authors — so checking tab presence/absence against that raw
+// JSON is unreliable. Open the real dialog in the editor and read its actual [role="tab"] labels
+// instead (verified live 2026-08-15: merged dialog has exactly two tabs, "Items" and
+// "Properties" — "Header" is correctly hidden).
+async function getAccordionDialogTabs(page: import('@playwright/test').Page): Promise<string[]> {
+    await page.goto(`${BASE()}/editor.html/content/global-atlantic/style-guide/components/accordion.html`, { waitUntil: 'domcontentloaded' });
+    const mainContent = page.frameLocator('iframe[name="Main Content"]');
+    const contentFrame = mainContent.frameLocator('#ContentFrame');
+    await contentFrame.locator('.cmp-accordion').first().waitFor({ state: 'visible', timeout: 20000 });
+    const overlay = mainContent.locator('.cq-Overlay--component[data-path$="accordion_white"]').first();
+    await overlay.click({ position: { x: 10, y: 10 }, timeout: 15000 });
+    const toolbar = mainContent.locator('#EditableToolbar');
+    await toolbar.locator('[data-action="CONFIGURE"]').first().click({ timeout: 15000 });
+    const dialog = mainContent.locator('coral-dialog[open]').first();
+    await dialog.waitFor({ state: 'visible', timeout: 15000 });
+    const tabs = await dialog.locator('[role="tab"]').allTextContents();
+    return tabs.map(t => t.trim());
+}
 test.beforeEach(async ({ page }) => {
     await loginToAEMAuthor(page);
     capture = new ConsoleCapture(page);
@@ -454,27 +477,16 @@ test.describe('Accordion — Console & Resources', () => {
 // ─── GAAM-611: Dialog Structure After Header Tab Removal ─────────────────────
 test.describe('Accordion — GAAM-611: Header Tab Removed from Dialog', () => {
     test('[ACRD-056] @author @regression Accordion dialog has no Header tab', async ({ page }) => {
-        const dialogUrl = `${BASE()}/apps/ga/components/content/accordion/_cq_dialog.infinity.json`;
-        const response = await page.request.get(dialogUrl);
-        expect(response.ok()).toBe(true);
-        const dialog = JSON.stringify(await response.json());
-        // Header tab fields (eyebrow, headline RTE, path) should not be present
-        expect(dialog).not.toContain('"header"');
-        expect(dialog).not.toContain('"eyebrow"');
+        const tabs = await getAccordionDialogTabs(page);
+        expect(tabs, `Accordion dialog tabs: ${JSON.stringify(tabs)}`).not.toContain('Header');
     });
     test('[ACRD-057] @author @regression Accordion dialog retains Items tab', async ({ page }) => {
-        const dialogUrl = `${BASE()}/apps/ga/components/content/accordion/_cq_dialog.infinity.json`;
-        const response = await page.request.get(dialogUrl);
-        expect(response.ok()).toBe(true);
-        const dialog = JSON.stringify(await response.json());
-        expect(dialog).toContain('items');
+        const tabs = await getAccordionDialogTabs(page);
+        expect(tabs, `Accordion dialog tabs: ${JSON.stringify(tabs)}`).toContain('Items');
     });
     test('[ACRD-058] @author @regression Accordion dialog retains Properties tab', async ({ page }) => {
-        const dialogUrl = `${BASE()}/apps/ga/components/content/accordion/_cq_dialog.infinity.json`;
-        const response = await page.request.get(dialogUrl);
-        expect(response.ok()).toBe(true);
-        const dialog = JSON.stringify(await response.json());
-        expect(dialog).toContain('properties');
+        const tabs = await getAccordionDialogTabs(page);
+        expect(tabs, `Accordion dialog tabs: ${JSON.stringify(tabs)}`).toContain('Properties');
     });
 });
 test.describe('Accordion — CSV Test Cases (GAAM-1362)', () => {

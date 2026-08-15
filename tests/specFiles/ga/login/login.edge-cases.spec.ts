@@ -22,7 +22,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     test('[LOGIN-EDGE-002] @edge Verify key points list hidden when not authored', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const keyPointsContainer = page.locator('[class*="key-points"], [class*="keyPoints"]');
         // If no key points authored, container should not be visible
@@ -35,7 +35,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
         }
     });
     test('[LOGIN-EDGE-003] @edge Verify subheadline hidden when not authored', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const subheadline = page.locator('[class*="subheadline"], [class*="subtitle"], .cmp-login h3');
         // Subheadline should only be visible if text is authored
@@ -47,9 +47,12 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
         }
     });
     test('[LOGIN-EDGE-004] @edge Verify fine print hidden when not authored', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
-        const finePrint = page.locator('[class*="fine-print"], [class*="disclaimer"], .cmp-login small');
+        // .first(): the style guide's live login instance renders responsive desktop/mobile fine-print
+        // duplicates (.cmp-login__fine-print--desktop/--mobile) side by side in the DOM (CSS toggles
+        // which is visible per viewport) — both carry the same authored text, so checking one is enough.
+        const finePrint = page.locator('[class*="fine-print"], [class*="disclaimer"], .cmp-login small').first();
         if (await finePrint.count() > 0) {
             const text = await finePrint.textContent();
             if (!text || text.trim().length === 0) {
@@ -60,7 +63,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     // ============ Edge Case: Responsive Behavior ============
     test('[LOGIN-EDGE-005] @edge Verify decorative SVG hidden on mobile viewport', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const svg = page.locator('[class*="login"] [class*="decorative"] svg, [class*="login"] svg[aria-hidden="true"]');
         if (await svg.count() > 0) {
@@ -71,7 +74,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     test('[LOGIN-EDGE-007] @edge Verify single column layout on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
         if (await loginComponent.count() > 0) {
@@ -83,7 +86,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     // ============ Edge Case: Input Validation & Constraints ============
     test('[LOGIN-EDGE-008] @edge Verify username field accepts special characters', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const usernameField = page.locator('input[type="email"], input[name*="username"], input[name*="email"]').first();
         if (await usernameField.count() > 0) {
@@ -94,7 +97,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
         }
     });
     test('[LOGIN-EDGE-009] @edge Verify password field masks input on default state', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const passwordField = page.locator('input[type="password"]').first();
         if (await passwordField.count() > 0) {
@@ -104,20 +107,24 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     // ============ Edge Case: Validation Error Scenarios ============
     test('[LOGIN-EDGE-011] @edge Verify empty username field validation error', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
-        const submitButton = page.locator('button:has-text("Continue"), button[type="submit"], [class*="cta"] button').first();
+        // The style guide renders 2 .cmp-login instances — scope both submit button and error
+        // message to the SAME instance, since an unscoped errorMsg locator strict-mode-violates
+        // by also matching the untouched second instance's field-row wrappers.
+        const loginComponent = page.locator('.cmp-login').first();
+        const submitButton = loginComponent.locator('button:has-text("Continue"), button[type="submit"], [class*="cta"] button').first();
         if (await submitButton.count() > 0) {
             await clickElement(submitButton);
             // Check for error message
-            const errorMsg = page.locator('[role="alert"], [class*="error"], .error-message');
+            const errorMsg = loginComponent.locator('[role="alert"]').first();
             if (await errorMsg.count() > 0) {
                 await expect(errorMsg).toBeVisible();
             }
         }
     });
     test('[LOGIN-EDGE-013] @edge Verify invalid email format detection', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const emailField = page.locator('input[type="email"]').first();
         if (await emailField.count() > 0) {
@@ -128,7 +135,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     // ============ Edge Case: Form State Preservation ============
     test('[LOGIN-EDGE-014] @edge Verify form state after page navigation', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const usernameField = page.locator('input[type="email"], input[name*="username"]').first();
         if (await usernameField.count() > 0) {
@@ -143,7 +150,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
         }
     });
     test('[LOGIN-EDGE-015] @edge Verify form submission with both fields filled', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const usernameField = page.locator('input[type="email"], input[name*="username"]').first();
         const passwordField = page.locator('input[type="password"]').first();
@@ -158,7 +165,17 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     // ============ Edge Case: Accessibility ============
     test('[LOGIN-EDGE-016] @edge Verify form labels associated with inputs via for attribute', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        // Investigated 2026-08-15: a login-fixtures.xml exists in tests/data/content-fixtures/login,
+        // so resolveComponentUrl('login') on env=dev resolves to the test-fixtures path
+        // (/content/global-atlantic/test-fixtures/login) — but no test in this file ever calls
+        // deployFixture('login', page), so that path 404s (live-verified) and the page has zero
+        // <label> elements simply because it never rendered. Using forceStyleGuide routes to the
+        // real, always-live style guide login page instead (live-verified: 4 <label> elements,
+        // 2 .cmp-login instances). Every other resolveComponentUrl('login') call in this file
+        // shared this same latent 404 — their `if (count() > 0)` guards just made them silently
+        // no-op on the empty page instead of failing loudly, so all were switched to
+        // forceStyleGuide too, restoring their real assertions against live content.
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const labels = page.locator('label');
         const labelCount = await labels.count();
@@ -173,7 +190,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
         }
     });
     test('[LOGIN-EDGE-017] @edge Verify password toggle button has accessible label', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const toggleButton = page.locator('button[class*="toggle"], [class*="show-password"], [aria-label*="password"]').first();
         if (await toggleButton.count() > 0) {
@@ -183,7 +200,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
         }
     });
     test('[LOGIN-EDGE-018] @edge Verify form has proper heading hierarchy', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const h1 = page.locator('h1');
         const h2 = page.locator('h2');
@@ -193,7 +210,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
     });
     // ============ Edge Case: Content Constraints ============
     test('[LOGIN-EDGE-019] @edge Verify content order: H1 → subheadline → key points → fine print', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const leftPanel = page.locator('[class*="login"] [class*="panel"], [class*="login"] [class*="left"], [class*="login"] section').first();
         if (await leftPanel.count() > 0) {
@@ -208,7 +225,7 @@ test.describe('Login Component — Edge Cases & Enhanced Validation', () => {
         }
     });
     test('[LOGIN-EDGE-020] @edge Verify slate background color applied', async ({ page }) => {
-        const url = resolveComponentUrl('login');
+        const url = resolveComponentUrl('login', { forceStyleGuide: true });
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const loginComponent = page.locator('.cmp-login, [class*="login"]').first();
         if (await loginComponent.count() > 0) {

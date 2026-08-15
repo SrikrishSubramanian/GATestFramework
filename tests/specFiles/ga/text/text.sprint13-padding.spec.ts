@@ -27,8 +27,12 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
         if (await textComponent.count() > 0) {
-            // Default viewport is desktop-sized — verified live: 20px horizontal, 0 vertical.
-            await assertSpacing(textComponent, { paddingTop: '0px', paddingRight: '20px', paddingBottom: '0px', paddingLeft: '20px' });
+            // Re-verified 2026-08-15 against source (ga/clientlibs/.../components/text.less:30-36,
+            // `.cmp-text { padding: @spacing-large 0; }`, @spacing-large=@sp-48=48px) and live: the
+            // text component's real default is 48px TOP/BOTTOM padding and 0 horizontal — the
+            // previous expectation here had this exactly backwards (0 vertical / 20px horizontal,
+            // a value that doesn't even exist in the design tokens).
+            await assertSpacing(textComponent, { paddingTop: '48px', paddingRight: '0px', paddingBottom: '48px', paddingLeft: '0px' });
         }
     });
     test('[GAAM-675-002] @regression Verify padding is consistent across all text elements', async ({ page }) => {
@@ -50,8 +54,10 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
         if (await textComponent.count() > 0) {
-            // Text component is edge-to-edge on mobile by design — verified live: 0 padding on all sides.
-            await assertSpacing(textComponent, { paddingTop: '0px', paddingRight: '0px', paddingBottom: '0px', paddingLeft: '0px' });
+            // Re-verified 2026-08-15: mobile (<=767px, ga-bp-mobile-max) still has vertical padding
+            // by design (text.less:34-36, @spacing-medium=@sp-32=32px), just narrower than desktop's
+            // 48px — it is not edge-to-edge on any axis (horizontal is 0 at every breakpoint).
+            await assertSpacing(textComponent, { paddingTop: '32px', paddingRight: '0px', paddingBottom: '32px', paddingLeft: '0px' });
         }
     });
     test('[GAAM-675-004] @regression Verify padding on tablet viewport', async ({ page }) => {
@@ -61,8 +67,9 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         await page.goto(url, { waitUntil: 'domcontentloaded' });
         const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
         if (await textComponent.count() > 0) {
-            // Verified live: 20px horizontal, 0 vertical.
-            await assertSpacing(textComponent, { paddingTop: '0px', paddingRight: '20px', paddingBottom: '0px', paddingLeft: '20px' });
+            // Re-verified 2026-08-15: 768px is above ga-bp-mobile-max (767px), so tablet uses the
+            // same base rule as desktop — 48px vertical padding, 0 horizontal (text.less:30-32).
+            await assertSpacing(textComponent, { paddingTop: '48px', paddingRight: '0px', paddingBottom: '48px', paddingLeft: '0px' });
         }
     });
     test('[GAAM-675-005] @regression Verify padding maintains readability', async ({ page }) => {
@@ -130,11 +137,13 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
         }
     });
     test('[GAAM-675-011] @edge Verify text component padding consistency across breakpoints', async ({ page }) => {
-        // Verified live: mobile is edge-to-edge (0 padding); tablet/desktop have 20px horizontal padding.
+        // Re-verified 2026-08-15 against text.less:30-36: horizontal padding is 0 at every
+        // breakpoint; vertical (top/bottom) padding is 32px at/below the mobile breakpoint
+        // (ga-bp-mobile-max=767px, @spacing-medium) and 48px above it (@spacing-large).
         const viewports = [
-            { name: 'mobile', width: 375, expected: { paddingTop: '0px', paddingRight: '0px', paddingBottom: '0px', paddingLeft: '0px' } },
-            { name: 'tablet', width: 768, expected: { paddingTop: '0px', paddingRight: '20px', paddingBottom: '0px', paddingLeft: '20px' } },
-            { name: 'desktop', width: 1440, expected: { paddingTop: '0px', paddingRight: '20px', paddingBottom: '0px', paddingLeft: '20px' } },
+            { name: 'mobile', width: 375, expected: { paddingTop: '32px', paddingRight: '0px', paddingBottom: '32px', paddingLeft: '0px' } },
+            { name: 'tablet', width: 768, expected: { paddingTop: '48px', paddingRight: '0px', paddingBottom: '48px', paddingLeft: '0px' } },
+            { name: 'desktop', width: 1440, expected: { paddingTop: '48px', paddingRight: '0px', paddingBottom: '48px', paddingLeft: '0px' } },
         ];
         for (const viewport of viewports) {
             await page.setViewportSize({ width: viewport.width, height: 600 });
