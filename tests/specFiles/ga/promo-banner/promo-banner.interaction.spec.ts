@@ -22,8 +22,10 @@ test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
   // componentUrl() resolves to the test-fixtures path (fixture exists for this
   // component) — that path 404s until the fixture is deployed, which then
-  // hangs every locator wait below for the full worker timeout.
-  await deployFixture('promo-banner', page);
+  // hangs every locator wait below for the full worker timeout. Assert here so a
+  // deploy race/failure fails fast with a clear message instead of a silent hang.
+  const deployResult = await deployFixture('promo-banner', page);
+  expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
   capture = new ConsoleCapture(page);
   capture.start();
 });

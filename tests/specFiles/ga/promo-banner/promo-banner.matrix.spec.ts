@@ -16,8 +16,10 @@ test.beforeEach(async ({ page }) => {
   await loginToAEMAuthor(page);
 
   // resolveComponentUrl() resolves to the test-fixtures path (fixture exists
-  // for this component) — that path 404s until the fixture is deployed.
-  await deployFixture('promo-banner', page);
+  // for this component) — that path 404s until the fixture is deployed. Assert
+  // here so a deploy race/failure fails fast instead of hanging on later waits.
+  const deployResult = await deployFixture('promo-banner', page);
+  expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
 
   capture = new ConsoleCapture(page);
   capture.start();});

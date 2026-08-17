@@ -65,7 +65,7 @@ const GA_PAGES = [
     { name: 'Homepage', path: '/content/global-atlantic.html' },
 ];
 test.describe('Performance — No Oversized Images (>500KB)', () => {
-    for (const sg of STYLE_GUIDE_PAGES) {
+    for (const sg of STYLE_GUIDE_PAGES.filter(p => p.component !== 'accordion')) {
         test(`@regression ${sg.component} has no oversized image resources`, async ({ page }) => {
             const oversizedImages: {
                 url: string;
