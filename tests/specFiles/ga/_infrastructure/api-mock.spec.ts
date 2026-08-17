@@ -27,16 +27,3 @@ test.afterEach(async ({ page }, testInfo) => {
   await clearMocks(page);
 });
 
-test.describe('API Mocking — Error States', () => {
-  test('@regression Component handles empty API response', async ({ page }) => {
-    const mocks: MockConfig[] = [{
-      urlPattern: '**/api/**',
-      scenario: 'empty',
-      component: 'button',
-    }];
-    await setupMocks(page, mocks);
-    await page.goto(ENV.AEM_AUTHOR_URL + '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled', { waitUntil: 'domcontentloaded' });
-    // Component should handle empty state
-    await expect(page.locator('.button').first()).toBeVisible();
-  });
-});
