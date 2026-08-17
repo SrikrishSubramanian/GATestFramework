@@ -252,6 +252,7 @@ test.describe('PromoBanner — Interaction Tests', () => {
   test('@interaction @regression PB-INT-011 mobile layout: promo-banner is NOT flex-row', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
     await page.goto(componentUrl(), { waitUntil: 'domcontentloaded' });
+    await page.locator(PB).first().waitFor({ state: 'visible' });
 
     const layout = await page.locator(PB).first().evaluate(el => {
       const cs = getComputedStyle(el);
