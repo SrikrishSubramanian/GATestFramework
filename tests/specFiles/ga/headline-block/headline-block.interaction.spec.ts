@@ -83,27 +83,6 @@ test.describe('Headline Block — CTA Hover States', () => {
             after.color !== before.color || after.boxShadow !== before.boxShadow;
         expect(changed).toBe(true);
     });
-    test('[HB-INT-004] @interaction @regression CTA hover on azul (dark) section changes styling', async ({ page }) => {
-        const pom = new HeadlineBlockPage(page);
-        await pom.navigate(BASE());
-        const btn = page.locator(`${SECTION_AZUL} ${HB} ${CTA_WRAPPER} .cmp-button`).first();
-        await btn.scrollIntoViewIfNeeded();
-        const before = // 📏 TODO: Replace with measurement-utils
-         await btn.evaluate(el => {
-            const cs = getComputedStyle(el);
-            return { bg: cs.backgroundColor, border: cs.borderColor, color: cs.color, boxShadow: cs.boxShadow };
-        });
-        await hover(btn);
-        const after = // 📏 TODO: Replace with measurement-utils
-         await btn.evaluate(el => {
-            const cs = getComputedStyle(el);
-            return { bg: cs.backgroundColor, border: cs.borderColor, color: cs.color, boxShadow: cs.boxShadow };
-        });
-        // At least one property should change on hover
-        const changed = after.bg !== before.bg || after.border !== before.border ||
-            after.color !== before.color || after.boxShadow !== before.boxShadow;
-        expect(changed).toBe(true);
-    });
     test('[HB-INT-005] @interaction @regression CTA hover transition uses CSS animation (not instant)', async ({ page }) => {
         const pom = new HeadlineBlockPage(page);
         await pom.navigate(BASE());

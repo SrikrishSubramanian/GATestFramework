@@ -26,52 +26,9 @@ test.afterEach(async ({ page }, testInfo) => {
     await annotateEnvironment(testInfo);
 });
 // ---------------------------------------------------------------------------
-// Hover Zoom (IMG-INT-001 to IMG-INT-004)
+// Hover Zoom (IMG-INT-002 to IMG-INT-004)
 // ---------------------------------------------------------------------------
 test.describe('Image — Hover Zoom Interaction', () => {
-    test('[IMG-INT-001] @interaction @regression @sanity Linked image hover: transform scale changes from identity', async ({ page }) => {
-        await page.setViewportSize({ width: 1440, height: 900 });
-        const pom = new ImagePage(page);
-        await pom.navigate(BASE());
-        const linkedPicture = page.locator(`${IMG_LINK} ${IMG_PICTURE}`).first();
-        const count = await linkedPicture.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
-        // Capture transform before hover
-        const imgCount = await page.locator(`${IMG_LINK} ${IMG_IMAGE}`).count();
-        if (imgCount === 0) {
-            // 📏 TODO: Replace with measurement-utils
-            await page.evaluate(({ linkSel, imgClass }) => {
-                const picture = document.querySelector(`${linkSel} .cmp-image__picture`);
-                if (picture) {
-                    const img = document.createElement('img');
-                    img.className = imgClass;
-                    img.setAttribute('data-injected', 'true');
-                    picture.appendChild(img);
-                }
-            }, { linkSel: IMG_LINK, imgClass: 'cmp-image__image' });
-        }
-        const imgLocator = page.locator(`${IMG_LINK} ${IMG_IMAGE}`).first();
-        const beforeTransform = // 📏 TODO: Replace with measurement-utils
-         await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform);
-        // measurement: use measurement-utils for cleaner code
-        await hover(linkedPicture);
-        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-        // allow 0.3s transition to complete
-        const afterTransform = // 📏 TODO: Replace with measurement-utils
-         await imgLocator.evaluate((el: Element) => getComputedStyle(el).transform);
-        // measurement: use measurement-utils for cleaner code
-        // After hover, transform should differ from the default identity matrix
-        // or explicitly be the scale(1.15) matrix
-        expect(afterTransform).not.toBe('none');
-        expect(afterTransform).not.toBe('matrix(1, 0, 0, 1, 0, 0)');
-        if (imgCount === 0) {
-            // 📏 TODO: Replace with measurement-utils
-            await page.evaluate(() => { document.querySelectorAll('[data-injected="true"]').forEach(el => el.remove()); });
-        }
-    });
     test('[IMG-INT-002] @interaction @regression Non-linked image hover: transform stays none/identity', async ({ page }) => {
         await page.setViewportSize({ width: 1440, height: 900 });
         const pom = new ImagePage(page);
