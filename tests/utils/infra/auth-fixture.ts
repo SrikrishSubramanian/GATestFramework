@@ -35,6 +35,30 @@ function isCloudEnv(authorUrl: string): boolean {
  */
 export async function loginToAEMAuthor(page: Page, options?: AuthOptions): Promise<void> {
   const authorUrl = options?.authorUrl || ENV.AEM_AUTHOR_URL || 'http://localhost:4502';
+
+  // Bound the whole login flow well under the CI test timeout (5 min). Without this, a
+  // stuck/misconfigured environment (e.g. AEM_AUTHOR_URL pointing at an unreachable host
+  // because the wrong `env` was used) silently eats the entire test timeout, then surfaces
+  // as a confusing "Target page, context or browser has been closed" error once Playwright
+  // tears down the context — instead of a clear, actionable message.
+  const overallTimeout = 240000;
+  let timer: ReturnType<typeof setTimeout>;
+  const guard = new Promise<never>((_, reject) => {
+    timer = setTimeout(() => reject(new Error(
+      `loginToAEMAuthor timed out after ${overallTimeout}ms against ${authorUrl} — the environment ` +
+      `may be unreachable or misconfigured. Check that the active 'env' value resolves to the ` +
+      `intended AEM_AUTHOR_URL.`
+    )), overallTimeout);
+  });
+
+  try {
+    await Promise.race([loginToAEMAuthorAttempt(page, authorUrl, options), guard]);
+  } finally {
+    clearTimeout(timer!);
+  }
+}
+
+async function loginToAEMAuthorAttempt(page: Page, authorUrl: string, options?: AuthOptions): Promise<void> {
   const username = options?.username || ENV.AEM_AUTHOR_USERNAME || 'admin';
   const password = options?.password || ENV.AEM_AUTHOR_PASSWORD || 'admin';
   const timeout = options?.timeout || 60000;
