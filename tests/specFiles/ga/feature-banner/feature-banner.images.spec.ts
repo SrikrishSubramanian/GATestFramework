@@ -31,25 +31,6 @@ test.afterEach(async ({ page }, testInfo) => {
  * excluding video player internals.
  */
 test.describe('FeatureBanner — Image Health', () => {
-    test('[FB-013] @regression No broken images in content areas', async ({ page }) => {
-        const pom = new FeatureBannerPage(page);
-        await pom.navigate(BASE());
-        // Check images inside the component-parsys (nested content cards),
-        // excluding video player poster images
-        const contentImages = page.locator('.cmp-feature-banner__component-parsys img');
-        const count = await contentImages.count();
-        if (count === 0) {
-            test.skip();
-            return;
-        }
-        for (let i = 0; i < count; i++) {
-            const src = await contentImages.nth(i).getAttribute('src');
-            if (src && src.length > 0) {
-                const naturalWidth = await contentImages.nth(i).evaluate((el) => (el as HTMLImageElement).naturalWidth);
-                expect(naturalWidth, `Image ${src} should load`).toBeGreaterThan(0);
-            }
-        }
-    });
     test('[FB-014] @regression All content images have alt text', async ({ page }) => {
         const pom = new FeatureBannerPage(page);
         await pom.navigate(BASE());

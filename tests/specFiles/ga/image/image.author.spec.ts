@@ -254,6 +254,15 @@ test.describe('Image — Hover Zoom', () => {
             }, { linkSel: IMG_LINK, imgClass: 'cmp-image__image' });
         }
         await hover(linkedPicture);
+        // The zoom is CSS-transitioned (transition: transform 0.3s ease), so the computed
+        // style right after hover() can still report the pre-hover matrix on the first
+        // frame — wait for the transition to actually start before reading it.
+        await page.waitForFunction((sel) => {
+            const el = document.querySelector(sel);
+            if (!el) return false;
+            const t = getComputedStyle(el).transform;
+            return t !== 'none' && !t.startsWith('matrix(1, 0, 0, 1,');
+        }, `${IMG_LINK} ${IMG_IMAGE}`, { timeout: 2000 });
         const transform = await page.locator(`${IMG_LINK} ${IMG_IMAGE}`).first().evaluate((el: Element) => getComputedStyle(el).transform);
         // measurement: use measurement-utils for cleaner code
         // scale(1.15) resolves to a matrix — check it is not 'none' and not identity

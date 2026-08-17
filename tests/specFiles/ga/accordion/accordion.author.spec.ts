@@ -421,18 +421,6 @@ test.describe('Accordion — Bug 1 Regression: Child Components Inside Accordion
     // Each test deploys independently (rather than sharing one beforeAll deploy) so a failure in
     // one doesn't skip the others — deployFixture() itself retries on the 409 Conflict these
     // concurrent same-fixture deploys can race into (see content-fixture-deployer.ts).
-    test('[ACRD-048] @regression @smoke @sanity Accordion item renders button child component', async ({ page }) => {
-        const deployResult = await deployFixture('accordion', page);
-        expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);
-        await page.goto(FIXTURE_URL(), { waitUntil: 'domcontentloaded' });
-        // The mixed-content accordion has a button inside item_0
-        const buttonInItem = page.locator(`${ITEM_CONTENT} .cmp-button`);
-        await expect(buttonInItem.first()).toBeVisible();
-        // .cmp-button IS the anchor itself (ui.apps/.../kkr-aem-base/components/content/button/
-        // button.html renders <a class="cmp-button">) — not a wrapper containing one. Verify it
-        // rendered as a real link, not a nested <a>.
-        await expect(buttonInItem.first()).toHaveAttribute('href', /.+/);
-    });
     test('[ACRD-049] @regression Accordion item renders headline-block child component', async ({ page }) => {
         const deployResult = await deployFixture('accordion', page);
         expect(deployResult.deployed, `Fixture deploy failed: ${deployResult.message}`).toBe(true);

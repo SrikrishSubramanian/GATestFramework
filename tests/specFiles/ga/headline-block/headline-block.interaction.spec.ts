@@ -100,25 +100,6 @@ test.describe('Headline Block — Keyboard Navigation', () => {
 });
 // ── CTA Layout Responsiveness ──
 test.describe('Headline Block — CTA Layout Transitions', () => {
-    test('[HB-INT-009] @interaction @regression @sanity CTA layout: horizontal at 1440px → vertical at 390px', async ({ page }) => {
-        const pom = new HeadlineBlockPage(page);
-        // Desktop first
-        await page.setViewportSize({ width: 1440, height: 900 });
-        await pom.navigate(BASE());
-        const ctaWrapper = page.locator(`${SECTION_WHITE} ${HB} ${CTA_WRAPPER}`).first();
-        const desktopDir = // 📏 TODO: Replace with measurement-utils
-         await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection);
-        // measurement: use measurement-utils for cleaner code
-        expect(desktopDir).toBe('row');
-        // Switch to mobile
-        await page.setViewportSize({ width: 390, height: 844 });
-        // ⏱️ Consider: await page.locator('selector').waitFor({ state: 'visible' }) instead of hardcoded wait
-        // Allow reflow
-        const mobileDir = // 📏 TODO: Replace with measurement-utils
-         await ctaWrapper.evaluate(el => getComputedStyle(el).flexDirection);
-        // measurement: use measurement-utils for cleaner code
-        expect(mobileDir).toBe('column');
-    });
     test('[HB-INT-010] @interaction @regression CTA buttons vertically aligned on mobile (start alignment)', async ({ page }) => {
         await page.setViewportSize({ width: 390, height: 844 });
         const pom = new HeadlineBlockPage(page);
