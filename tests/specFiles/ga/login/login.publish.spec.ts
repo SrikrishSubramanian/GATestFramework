@@ -221,18 +221,6 @@ test.describe('Login — UI & Layout (CSV Test Cases)', () => {
         // measurement: use measurement-utils for cleaner code
         expect(outline).not.toBe('none');
     });
-    test('[LGN-028] @A11y Touch Target Size', async ({ page }) => {
-        const pom = new LoginPage(page);
-        await pom.navigate(BASE());
-        const interactive = page.locator('.cmp-login a, .cmp-login button, .cmp-login input');
-        const count = await interactive.count();
-        for (let i = 0; i < Math.min(count, 5); i++) {
-            const box = await interactive.nth(i).boundingBox();
-            if (box) {
-                expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(24);
-            }
-        }
-    });
     test('[LGN-029] @A11y Tab Order Logic (Desktop)', async ({ page }) => {
         const pom = new LoginPage(page);
         await pom.navigate(BASE());

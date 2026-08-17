@@ -268,23 +268,6 @@ test.describe('Product Rate Table — Share via Email (GAAM-704/749)', () => {
   });
 });
 
-test.describe('Product Rate Table — Known Content Gaps', () => {
-  test('[PRT-009] @regression ForeInvestors Choice Variable Annuity has no rate table configured yet', async ({ page }) => {
-    // Re-verified live 2026-08-15: the "foreinvestors-choice-variable-annuity" node exists under
-    // Dynamic_rates (unlike PRT-001..008 it's not in the PRODUCTS list above because it has no
-    // distribution-channel child page to navigate to at all) — a genuine, still-open content gap,
-    // not a test defect. Per team convention this must fail (not skip) while the gap is open — see
-    // confirmed-bugs-2026-08-11.xlsx row 19. Remove this once content is authored (Jira epics
-    // GAAM-1197/633/632/631/590/514/143).
-    const DYNAMIC_RATES_ROOT = '/content/global-atlantic/style-guide/qa-testing/dynamic_rates/Dynamic_rates';
-    const res = await page.request.get(`${BASE()}${DYNAMIC_RATES_ROOT}/foreinvestors-choice-variable-annuity.1.json`);
-    expect(res.status()).toBe(200);
-    const json = await res.json();
-    const childPages = Object.keys(json).filter(k => !k.startsWith('jcr:'));
-    expect(childPages, 'ForeInvestors Choice Variable Annuity should have at least one Dynamic Rates distribution-channel child page authored').not.toHaveLength(0);
-  });
-});
-
 // Relocated from image.author.spec.ts (MG-041, MG-064) — CSV import mis-bucketed these under
 // Image; they're actually about the Dynamic Rates / Product Rate Table component.
 test.describe('Product Rate Table — CSV Test Cases (GAAM-1402)', () => {

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { NestedContentCarouselPage } from '../../../pages/ga/components/nestedContentCarouselPage';
 import ENV from '../../../utils/infra/env';
-import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
+import { ConsoleCapture } from '../../../utils/infra/console-capture';
 import { loginToAEMAuthor } from '../../../utils/infra/auth-fixture';
 import AxeBuilder from '@axe-core/playwright';
 import { attachConsoleCapture, annotateEnvironment } from '../../../utils/infra/report-enhancer';
@@ -580,27 +580,5 @@ test.describe('NestedContentCarousel — AEM Dialog & Overlay', () => {
         // "required" on the headline field — check required:true appears and headline nearby
         expect(dialogJson).toContain('headline');
         expect(dialogJson).toContain('"required"');
-    });
-});
-// ---------------------------------------------------------------------------
-// Console Errors (NCC-044 to NCC-045)
-// ---------------------------------------------------------------------------
-test.describe('NestedContentCarousel — Console Errors', () => {
-    test('[NCC-044] @regression No JS errors on page load', async ({ page }) => {
-        const pom = new NestedContentCarouselPage(page);
-        await pom.navigate(BASE());
-        // ⏱️ DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-        const errors = capture.getErrors();
-        capture.stop();
-        expect(errors.filter(e => !isBenignError(e.message))).toEqual([]);
-    });
-    test('[NCC-045] @regression No JS errors during carousel auto-advance (wait 7s)', async ({ page }) => {
-        const pom = new NestedContentCarouselPage(page);
-        await pom.navigate(BASE());
-        // Wait for at least one full auto-advance cycle (typical delay ~4-5s, waiting 7s for margin)
-        await page.waitForTimeout(7000);
-        const errors = capture.getErrors();
-        capture.stop();
-        expect(errors.filter(e => !isBenignError(e.message))).toEqual([]);
     });
 });

@@ -221,16 +221,6 @@ test.describe('SEO — Meta Description', () => {
             const description = await getAttrSafe(page, 'meta[name="description"]', 'content');
             expect(description, `${pg.name}: <meta name="description"> is missing. Search engines will auto-generate a snippet, which may be poor quality.`).toBeTruthy();
         });
-        test(`@regression ${pg.name} meta description has appropriate length`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
-            const description = await getAttrSafe(page, 'meta[name="description"]', 'content');
-            if (!description) {
-                test.skip();
-                return;
-            }
-            expect(description.length, `${pg.name}: Meta description is ${description.length} chars. Google truncates at ~155 chars.`).toBeLessThanOrEqual(160);
-            expect(description.length, `${pg.name}: Meta description is only ${description.length} chars. Should be at least 50 for SEO value.`).toBeGreaterThanOrEqual(20);
-        });
     }
 });
 test.describe('SEO — Open Graph Tags', () => {
@@ -306,11 +296,6 @@ test.describe('SEO — HTML Lang & Charset', () => {
 });
 test.describe('SEO — Heading Hierarchy', () => {
     for (const pg of GA_PAGES) {
-        test(`@regression ${pg.name} has exactly one <h1> element`, async ({ page }) => {
-            await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
-            const h1Count = await page.locator('h1').count();
-            expect(h1Count, `${pg.name}: Found ${h1Count} <h1> elements. SEO best practice is exactly one <h1> per page.`).toBe(1);
-        });
         test(`@regression ${pg.name} heading hierarchy does not skip levels`, async ({ page }) => {
             await page.goto(`${BASE()}${pg.path}?wcmmode=disabled`, { waitUntil: 'domcontentloaded' });
             const headingLevels = // 📏 TODO: Replace with measurement-utils

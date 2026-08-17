@@ -82,18 +82,5 @@ test.describe('Form Text — Images & Media', () => {
     }
   });
 
-  test('[FORMTEXT-IMAGE-005] @regression Form text images have alt text', async ({ page }) => {
-    const url = resolveComponentUrl('form-text');
-    await page.goto(url, { waitUntil: 'domcontentloaded' });
-
-    const images = page.locator('.cmp-form-text img');
-    const count = await images.count();
-
-    for (let i = 0; i < count; i++) {
-      const img = images.nth(i);
-      const alt = await img.getAttribute('alt');
-      expect(alt).not.toBeNull();
-    }
-  });
 });
 

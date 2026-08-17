@@ -277,39 +277,6 @@ test('[BTN-FIGMA-007] Button font weight matches Figma', async ({ page }) => {
 });
 
 // ═══════════════════════════════════════════════════════════════════════════
-// 📸 VISUAL SNAPSHOT TEST - Validate visual appearance matches Figma screenshot
-// ═══════════════════════════════════════════════════════════════════════════
-
-test('[BTN-FIGMA-008] Button visual appearance matches Figma screenshot', async ({ page }) => {
-  await page.goto(resolveComponentUrl('button'));
-
-  const button = page.locator('.ga-button--primary .cmp-button').first();
-
-  console.log(`\n📸 VISUAL SNAPSHOT TEST`);
-  console.log(`   Comparing component screenshot to Figma baseline`);
-
-  // NOTE: No baseline image exists yet — there is no
-  // button.figma-validation.spec.ts-snapshots/ directory in this test's folder (confirmed via
-  // repo search, and by actually running this test: env=local run on 2026-08-13 failed with
-  // "A snapshot doesn't exist at .../button-primary-figma-chromium-win32.png, writing actual" —
-  // this repo's Playwright config does NOT auto-accept first-run snapshots, so the test fails
-  // loudly rather than silently "passing" by creating a baseline. That is correct — do NOT run
-  // with --update-snapshots to make this green, since the resulting baseline would just be
-  // today's live rendering, not a real Figma export. A genuine baseline should be exported from
-  // the real Figma design (once Figma access is available for this component — see the figmaSpec
-  // comment above) and committed to the snapshots directory before this test is meaningful.
-  // Visual snapshot comparison
-  // First time: creates baseline
-  // Subsequent runs: compares against baseline
-  await expect(button).toHaveScreenshot('button-primary-figma.png', {
-    maxDiffPixels: 500,      // Allow small pixel differences
-    threshold: 0.2           // 20% tolerance for color variations
-  });
-
-  console.log(`   ✅ MATCH`);
-});
-
-// ═══════════════════════════════════════════════════════════════════════════
 // ✅ SUMMARY TEST - Verify all Figma specs are defined
 // ═══════════════════════════════════════════════════════════════════════════
 

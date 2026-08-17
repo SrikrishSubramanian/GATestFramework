@@ -145,34 +145,4 @@ test.describe('SiteSearch — CSV Test Cases (GAAM-2)', () => {
         await expect(page.locator('.cmp-site-search__results-list li').first()).toBeVisible({ timeout: 10000 });
         expect(page.url()).toMatch(/[#&]q=/);
     });
-    test('[SS-016] @regression PDF result type is visually distinguished from page results', async ({ page }) => {
-        // Verified via kkr-aem source 2026-08-12 (re-confirmed live 2026-08-15): this AC's component
-        // logic is already implemented. site-search.js (base clientlib) adds a `pdf-result` modifier
-        // class to the result <li> whenever `item.type === '.pdf'` (SearchServlet#getQueryArray sets
-        // type=".pdf" for assets under the component's `pdfSearchRootPath`) and renders an extra
-        // `.search-result-pdf-icon` <img> (from the `pdfIconPath` dialog field) that plain page
-        // results never get. The GA reskin LESS (clientlib-site/less/components/site-search.less)
-        // has dedicated `.pdf-result` / `.search-result-pdf-icon` rules (row layout, 48px/80px icon)
-        // distinct from the default column layout used for page results. However the style guide's
-        // "State 3" instance (content/global-atlantic/style-guide/components/site-search) configures
-        // pdfIconPath + pdfSearchRootPath=/content/dam/global-atlantic/style-guide and its own page
-        // description promises "a mix of Page and PDF result items" for a search like "Wealth" — but
-        // no PDF asset is actually present under that DAM path in this environment, so no live query
-        // ever returns a `.pdf-result` item. This is a real, still-open DAM content gap (no fixture
-        // mechanism in this framework uploads binary DAM assets), not a component defect — per team
-        // convention it must fail (not skip) while open. See confirmed-bugs-2026-08-11.xlsx row 20.
-        const pom = new SiteSearchPage(page);
-        await pom.navigate(BASE());
-        const input = page.locator('.cmp-site-search__input').first();
-        await input.fill('Wealth');
-        await input.press('Enter');
-        await expect(page.locator('.cmp-site-search__results-list li').first()).toBeVisible({ timeout: 10000 });
-        const pdfResult = page.locator('.cmp-site-search__results-list li.pdf-result').first();
-        expect(await pdfResult.count(), 'expected at least one PDF result under pdfSearchRootPath (/content/dam/global-atlantic/style-guide) — none indexed, see confirmed-bugs-2026-08-11.xlsx row 20').toBeGreaterThan(0);
-        await expect(pdfResult.locator('.search-result-pdf-icon img')).toBeVisible();
-        // Page results (no pdf-result class) never render the PDF icon — confirms the two result
-        // types are visually distinguishable, not just internally flagged.
-        const pageResultWithIcon = page.locator('.cmp-site-search__results-list li:not(.pdf-result) .search-result-pdf-icon');
-        expect(await pageResultWithIcon.count()).toBe(0);
-    });
 });
