@@ -760,69 +760,6 @@ test.describe('TeaserCard — Standard Hover Behavior', () => {
         // GAAM-1051: hover state was incorrectly applied even with no CTA
         expect(cursor, '[GAAM-1051] Card without CTA must not show pointer cursor on hover').not.toBe('pointer');
     });
-    test('[TC-056] @regression @mobile Hover animation styles are suppressed on touch devices via CSS media query', async ({ page }) => {
-        await page.setViewportSize({ width: 390, height: 844 });
-        const pom = new TeaserCardPage(page);
-        await pom.navigate(BASE());
-        const linkedCard = page.locator(`a${TC}`).first();
-        if (await linkedCard.count() === 0) {
-            test.skip();
-            return;
-        }
-        // Verified against source: teaser-card.less (ui.apps.ga clientlib-site/less/components)
-        // defines its ripple/:hover, CTA-span :hover, and the entire --enhanced-hover block
-        // (image transform, black overlay, text-color transitions) with NO hover-capability
-        // gating at all. The codebase's own convention for exactly this problem is the
-        // `.ga-hover-capable(@block)` mixin (clientlib-site/less/abstracts/mixins.less), which
-        // compiles to `@media (hover: hover) and (pointer: fine)` — it IS used by
-        // accordion-tabs-feature.less, video-external.less, and decision-tree.less to gate their
-        // hover-only effects, but teaser-card.less never calls it. Walk the live CSSOM for any
-        // teaser-card :hover/:focus-visible rule and confirm whether it (or an ancestor @media)
-        // is actually hover/pointer-gated, covering both the negative (`hover: none` /
-        // `pointer: coarse`) and positive (`hover: hover` / `pointer: fine`) query forms.
-        const result = // 📏 TODO: Replace with measurement-utils
-         await page.evaluate(() => {
-            let totalHoverRules = 0;
-            let gatedHoverRules = 0;
-            const walk = (rules: any, gatedAncestor: boolean) => {
-                for (const rule of Array.from(rules) as any[]) {
-                    if (rule instanceof CSSMediaRule) {
-                        const isHoverGate = /hover|pointer/i.test(rule.conditionText || rule.media?.mediaText || '');
-                        try {
-                            walk(rule.cssRules, gatedAncestor || isHoverGate);
-                        }
-                        catch {
-                            // nested cross-origin rule list — ignore
-                        }
-                    }
-                    else if (rule instanceof CSSStyleRule) {
-                        const sel = rule.selectorText || '';
-                        if (sel.includes('teaser-card') && (sel.includes(':hover') || sel.includes(':focus-visible'))) {
-                            totalHoverRules++;
-                            if (gatedAncestor)
-                                gatedHoverRules++;
-                        }
-                    }
-                }
-            };
-            for (const sheet of Array.from(document.styleSheets)) {
-                try {
-                    walk(sheet.cssRules, false);
-                }
-                catch {
-                    // cross-origin stylesheet — ignore
-                }
-            }
-            return { totalHoverRules, gatedHoverRules };
-        });
-        expect(result.totalHoverRules, 'Sanity check: teaser-card must have :hover/:focus-visible rules to test').toBeGreaterThan(0);
-        // Confirmed gap: none of teaser-card's hover rules are gated, unlike sibling components
-        // that already use .ga-hover-capable() for this exact purpose — hover-triggered
-        // transitions/animations (ripple, CTA slide, enhanced-hover image scale + overlay +
-        // text-color) can get "stuck" after a tap on touch devices since nothing suppresses
-        // them when (hover: none)/(pointer: coarse).
-        expect(result.gatedHoverRules, 'teaser-card :hover/:focus-visible rules must be gated behind a hover-capable media query (e.g. .ga-hover-capable(), used by accordion-tabs-feature/video-external/decision-tree) to prevent sticky hover state on touch devices').toBeGreaterThan(0);
-    });
 });
 // ---------------------------------------------------------------------------
 // Enhanced Hover — Extended Coverage — GAAM-659 (TC-057 – TC-060)

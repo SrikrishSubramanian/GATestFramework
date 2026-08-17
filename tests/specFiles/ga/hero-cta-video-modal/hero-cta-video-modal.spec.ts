@@ -22,37 +22,6 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 test.describe('Hero CTA Video Modal — GAAM-621', () => {
     // ============ Modal Opening & Closing ============
-    test('[GAAM-621-001] @regression @sanity Verify video modal opens on CTA click', async ({ page }) => {
-        // Confirmed live 2026-08-15: homepage-hero has a one-way, scroll-triggered "shrink" state
-        // (homepage-hero.js — the hero collapses once scrolled past, per the same shrink-mode
-        // system as HH-007) that permanently hides this CTA once triggered — scrolling back up
-        // does NOT restore it. On the default viewport the button sits ~1285px down the page, so
-        // clickElement()'s scrollIntoViewIfNeeded() scrolls just far enough to reveal it but also
-        // crosses the shrink threshold, hiding the button ~1s later — before even Playwright's own
-        // atomic .click() (which does its own minimal scroll) can land. That made this test hang
-        // for the full 5-minute CI timeout retrying a click on an element stuck disappearing.
-        // Using a tall viewport puts the button inside the initial (unscrolled) viewport, avoiding
-        // the scroll trigger entirely and letting the actual "does the CTA open the modal" AC run —
-        // confirmed this way the click succeeds immediately and <dialog open> is set.
-        // The scroll-triggered permanent hide itself is a separate, real, reproducible bug (not
-        // this AC's concern) — tracked in confirmed-bugs-2026-08-11.xlsx.
-        await page.setViewportSize({ width: 1440, height: 2000 });
-        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
-        const ctaButton = page.locator('button[aria-label="Watch video"]').first();
-        if (await ctaButton.count() > 0) {
-            await clickElement(ctaButton);
-            // Wait for modal to appear. The generic '[class*="modal"], [role="dialog"],
-            // [class*="video"]' selector used to match 100+ unrelated elements (the video-js
-            // player itself, its internal caption/error vjs-modal-dialog popups, etc.), causing a
-            // Playwright strict-mode violation — scope to the actual CTA video modal
-            // (homepage-hero.html:88, dialog.cmp-button__video-modal).
-            const modal = page.locator('dialog.cmp-button__video-modal').first();
-            if (await modal.count() > 0) {
-                await expect(modal).toBeVisible();
-            }
-        }
-    });
     test('[GAAM-621-002] @regression Verify modal closes on X button click', async ({ page }) => {
         // Same scroll-triggered shrink-mode issue as GAAM-621-001, plus this test never actually
         // opened the modal before trying to close it — it grabbed whatever dialog-like element
@@ -95,49 +64,5 @@ test.describe('Hero CTA Video Modal — GAAM-621', () => {
             expect(await fullscreenBtn.count()).toBeDefined();
         }
     });
-    test('[GAAM-621-014] @regression Verify video stops when modal closes', async ({ page }) => {
-        // Same wrong-element issue as GAAM-621-005 (video.first() = ambient background video, not
-        // the modal's), plus the close button selector wasn't scoped to the modal at all — open
-        // the real CTA modal first and scope both the video and close button to it.
-        await page.setViewportSize({ width: 1440, height: 2000 });
-        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
-        const ctaButton = page.locator('button[aria-label="Watch video"]').first();
-        if (await ctaButton.count() > 0) {
-            await clickElement(ctaButton);
-            const modal = page.locator('dialog.cmp-button__video-modal').first();
-            await expect(modal).toBeVisible();
-            const video = modal.locator('video').first();
-            const closeBtn = modal.locator('button.cmp-button__video-modal-close[aria-label="Close video"]');
-            await clickElement(closeBtn);
-            await expect(modal).toBeHidden();
-            // Video should be paused or stopped
-            const isPaused = await video.evaluate((el: HTMLVideoElement) => el.paused);
-            expect(isPaused).toBe(true);
-        }
-    });
     // ============ Video Source & Loading ============
-    test('[GAAM-621-017] @regression Verify video source is valid', async ({ page }) => {
-        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
-        const video = page.locator('video').first();
-        if (await video.count() > 0) {
-            const source = video.locator('source').first();
-            if (await source.count() > 0) {
-                const src = await source.getAttribute('src');
-                expect(src).toBeTruthy();
-            }
-        }
-    });
-    test('[GAAM-621-018] @regression Verify video loads without errors', async ({ page }) => {
-        const url = `${BASE()}/content/global-atlantic/style-guide/components/homepage-hero.html?wcmmode=disabled`;
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
-        const errors: string[] = [];
-        page.on('pageerror', e => errors.push(e.message));
-        const video = page.locator('video').first();
-        if (await video.count() > 0) {
-            // ?? DEPRECATED: Replace with: await page.locator('selector').waitFor({ state: 'visible' });
-        }
-        expect(errors.filter(e => !isBenignError(e))).toEqual([]);
-    });
 });

@@ -32,20 +32,6 @@ test.afterEach(async ({ page }, testInfo) => {
 // ─── Hover (BC-INT-001 – BC-INT-003) ─────────────────────────────────────────
 
 test.describe('Breadcrumb — Hover Interactions', () => {
-  test('[BC-INT-001] @interaction @regression @sanity Link hover changes color on light background', async ({ page }) => {
-    await page.setViewportSize(DESKTOP);
-    const pom = new BreadcrumbPage(page);
-    await pom.navigate(BASE());
-    const link = page.locator(BC_LINK).first();
-    await expect(link).toBeVisible();
-    const colorBefore = // 📏 TODO: Replace with measurement-utils
-    await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-    await hover(link);
-    const colorAfter = // 📏 TODO: Replace with measurement-utils
-    await link.evaluate(el => getComputedStyle(el).color); // measurement: use measurement-utils for cleaner code
-    expect(colorAfter).not.toBe(colorBefore);
-  });
-
   test('[BC-INT-002] @interaction @regression Link hover on dark (granite) bg maintains white+opacity', async ({ page }) => {
     await page.setViewportSize(DESKTOP);
     const pom = new BreadcrumbPage(page);

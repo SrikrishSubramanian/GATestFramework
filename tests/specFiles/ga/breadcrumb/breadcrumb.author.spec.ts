@@ -655,6 +655,3 @@ test.describe('Breadcrumb — Accessibility', () => {
 });
 test.describe('Breadcrumb — AEM Dialog Configuration', () => {
 });
-// BRDC-051 (GAAM-1355, "[VQA] - Alignment Adjustments - Detail Hero") relocated to
-// detail-hero.author.spec.ts — it's about the Detail Hero component's text-container
-// width and breadcrumb alignment, not the Breadcrumb component itself.

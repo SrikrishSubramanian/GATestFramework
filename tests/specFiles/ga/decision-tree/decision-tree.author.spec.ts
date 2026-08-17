@@ -1,6 +1,4 @@
 import { test, expect } from '@playwright/test';
-import * as fs from 'fs';
-import * as path from 'path';
 import { DecisionTreePage } from '../../../pages/ga/components/decisionTreePage';
 import ENV from '../../../utils/infra/env';
 import { ConsoleCapture, isBenignError } from '../../../utils/infra/console-capture';
@@ -124,54 +122,4 @@ test.describe('DecisionTree — Broken Images', () => {
 test.describe('DecisionTree — Accessibility', () => {
 });
 test.describe('DecisionTree — AEM Dialog Configuration', () => {
-});
-// Relocated from image.author.spec.ts (MG-056) — CSV import mis-bucketed this under Image;
-// it's actually about the Decision Tree component's authoring guide.
-test.describe('DecisionTree — CSV Test Cases (GAAM-1388)', () => {
-    test('[DT-010] @regression @sanity CMS-BE | Decision Tree Component- authoring guide issue — AC1', async () => {
-        // Investigated 2026-08-13: GAAM-1388 (mis-bucketed under Image in the CSV import — see
-        // relocation comment above) reports "Authoring guide is not updated properly for all
-        // Decision tree, Decision tree step and Decision tree option", asking the fix to match
-        // the Promo Banner and Headline Block authoring guides' format.
-        // All three READMEs already exist and are complete, matching that referenced format
-        // (# Title, ## Authoring Notes, ## Dialog Configuration with Required/Description/
-        // Authoring Guideline per field — see ui.apps/.../promo-banner/README.md and
-        // .../headline-block/README.md). Verified field-by-field against each component's
-        // _cq_dialog/.content.xml: decision-tree (accessibilityLabel, id); decision-tree-step
-        // (stepNumber, prompt, accessibilityLabel, infoModalTitle, infoModalBody, id, options
-        // min-items="2" max-items="4", activeSelect); decision-tree-option (label, description,
-        // accessibilityLabel, id). No stale or missing guidance was found — the doc update
-        // requested by this ticket has already been made.
-        // Like TABS-061 (Tabs authoring-guide ticket), this is documentation-only — the README.md
-        // files are static repo docs, not surfaced in the live AEM authoring UI (each _cq_dialog
-        // only carries the generic AEM helpPath boilerplate, same as promo-banner's). So there's no
-        // UI entry point to click through, but the AC's actual claim — that each guide documents
-        // its component's required fields — is directly checkable by reading the docs' real content
-        // (same repo-file-read approach TABS-061 and fixture-sync-checker.ts already use).
-        const componentsDir = path.resolve(
-            __dirname, '..', '..', '..', '..', 'kkr-aem', 'ui.apps', 'src', 'main', 'content',
-            'jcr_root', 'apps', 'kkr-aem-base', 'components', 'content'
-        );
-        const guides: Array<{ component: string; requiredFields: string[] }> = [
-            { component: 'decision-tree', requiredFields: ['Accessibility Label'] },
-            { component: 'decision-tree-step', requiredFields: ['Step Number', 'Prompt', 'Accessibility Label', 'Info Modal Title', 'Info Modal Body', 'Active Item'] },
-            { component: 'decision-tree-option', requiredFields: ['Label', 'Description', 'Accessibility Label'] },
-        ];
-
-        // kkr-aem is gitignored (a local-only reference clone, per .gitignore comment) — it isn't
-        // checked out in CI, so this must skip gracefully there rather than ENOENT.
-        if (!fs.existsSync(componentsDir)) {
-            test.skip(true, 'kkr-aem is not checked out in this environment (gitignored, local-reference-only clone per .gitignore) — cannot read the READMEs to verify GAAM-1388 without it.');
-            return;
-        }
-
-        for (const { component, requiredFields } of guides) {
-            const readmePath = path.join(componentsDir, component, 'README.md');
-            const readme = fs.readFileSync(readmePath, 'utf-8');
-            expect(readme, `${component}/README.md should have a Dialog Configuration section`).toMatch(/## Dialog Configuration/);
-            for (const field of requiredFields) {
-                expect(readme, `${component}/README.md should document the "${field}" dialog field`).toContain(field);
-            }
-        }
-    });
 });

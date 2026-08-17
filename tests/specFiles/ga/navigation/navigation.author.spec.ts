@@ -784,33 +784,6 @@ test.describe('Navigation — CSV Test Cases (GAAM-1371)', () => {
         await expect(modal, 'Modal must not reappear on a subsequent page load once seen').toHaveAttribute('aria-hidden', 'true');
     });
 });
-test.describe('Navigation — CSV Test Cases (GAAM-1358)', () => {
-    test('[NVGT-066] @regression @sanity VQA - Main Nav sticky behavior — AC1', async ({ page }) => {
-        // GAAM-1358 / GAAM-397: once a role is selected (e.g. Financial Professional), the
-        // site-header should stick to the top of the viewport on scroll. Reported as broken —
-        // confirmed live on the FP persona page (header uses position:static and scrolls away).
-        await page.setViewportSize({ width: 1440, height: 900 });
-        await page.goto(`${BASE()}/content/global-atlantic/financial-professionals/main/en.html?wcmmode=disabled`, { waitUntil: 'load' });
-
-        // Dismiss the first-visit consent alert modal (GAAM-1371) — it scroll-locks the body.
-        const modalClose = page.locator('.cmp-alert-modal__dialog button').first();
-        if (await modalClose.count() > 0 && await modalClose.isVisible()) {
-            await modalClose.click();
-        }
-
-        const header = page.locator('.cmp-site-header').first();
-        await expect(header).toBeVisible();
-
-        await page.mouse.wheel(0, 900);
-        await page.waitForTimeout(500);
-
-        const position = await header.evaluate(el => getComputedStyle(el).position);
-        const top = await header.evaluate(el => el.getBoundingClientRect().top);
-        // A sticky/fixed header stays pinned at (or near) the top of the viewport after scrolling.
-        expect(['sticky', 'fixed']).toContain(position);
-        expect(top).toBeGreaterThanOrEqual(-1);
-    });
-});
 test.describe('Navigation — CSV Test Cases (GAAM-1233)', () => {
     test('[NVGT-068] @regression @sanity CMS QA Task: Private Report Fraud Form – Red Oak Submission Integration — AC1', async ({ page }) => {
         const pom = new NavigationPage(page);

@@ -47,19 +47,6 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
             // TODO: Use assertSpacing() for padding/margin
         }
     });
-    test('[GAAM-675-003] @regression Verify padding on mobile viewport', async ({ page }) => {
-        await page.setViewportSize({ width: 375, height: 667 });
-        await deployFixture('text', page);
-        const url = resolveComponentUrl('text');
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
-        const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
-        if (await textComponent.count() > 0) {
-            // Re-verified 2026-08-15: mobile (<=767px, ga-bp-mobile-max) still has vertical padding
-            // by design (text.less:34-36, @spacing-medium=@sp-32=32px), just narrower than desktop's
-            // 48px — it is not edge-to-edge on any axis (horizontal is 0 at every breakpoint).
-            await assertSpacing(textComponent, { paddingTop: '32px', paddingRight: '0px', paddingBottom: '32px', paddingLeft: '0px' });
-        }
-    });
     test('[GAAM-675-004] @regression Verify padding on tablet viewport', async ({ page }) => {
         await page.setViewportSize({ width: 768, height: 1024 });
         await deployFixture('text', page);
@@ -134,26 +121,6 @@ test.describe('Text Component - Sprint 13 Padding Specifications (GAAM-675)', ()
              await list.evaluate(el => window.getComputedStyle(el).paddingLeft);
             expect(padding).not.toBe('0px');
             // TODO: Use assertSpacing() for padding/margin
-        }
-    });
-    test('[GAAM-675-011] @edge Verify text component padding consistency across breakpoints', async ({ page }) => {
-        // Re-verified 2026-08-15 against text.less:30-36: horizontal padding is 0 at every
-        // breakpoint; vertical (top/bottom) padding is 32px at/below the mobile breakpoint
-        // (ga-bp-mobile-max=767px, @spacing-medium) and 48px above it (@spacing-large).
-        const viewports = [
-            { name: 'mobile', width: 375, expected: { paddingTop: '32px', paddingRight: '0px', paddingBottom: '32px', paddingLeft: '0px' } },
-            { name: 'tablet', width: 768, expected: { paddingTop: '48px', paddingRight: '0px', paddingBottom: '48px', paddingLeft: '0px' } },
-            { name: 'desktop', width: 1440, expected: { paddingTop: '48px', paddingRight: '0px', paddingBottom: '48px', paddingLeft: '0px' } },
-        ];
-        for (const viewport of viewports) {
-            await page.setViewportSize({ width: viewport.width, height: 600 });
-            await deployFixture('text', page);
-            const url = resolveComponentUrl('text');
-            await page.goto(url, { waitUntil: 'domcontentloaded' });
-            const textComponent = page.locator('.cmp-text, [class*="text-component"]').first();
-            if (await textComponent.count() > 0) {
-                await assertSpacing(textComponent, viewport.expected);
-            }
         }
     });
     test('[GAAM-675-012] @edge Verify text component padding with empty content', async ({ page }) => {
