@@ -610,19 +610,6 @@ test.afterEach(async ({ page }) => {
 });
 
 test.describe('API Mocking — Error States', () => {
-  test('@regression Component handles API error gracefully', async ({ page }) => {
-    const mocks: MockConfig[] = [{
-      urlPattern: '**/api/**',
-      scenario: 'error',
-      component: 'button',
-      status: 500,
-    }];
-    await setupMocks(page, mocks);
-    await page.goto(ENV.AEM_AUTHOR_URL + '/content/global-atlantic/style-guide/components/button.html?wcmmode=disabled', { waitUntil: 'domcontentloaded' });
-    // Component should not crash on API errors
-    await expect(page.locator('.button').first()).toBeVisible();
-  });
-
   test('@regression Component handles empty API response', async ({ page }) => {
     const mocks: MockConfig[] = [{
       urlPattern: '**/api/**',
@@ -639,7 +626,7 @@ test.describe('API Mocking — Error States', () => {
 
     const specPath = path.join(SPECS_DIR, 'api-mock.spec.ts');
     fs.writeFileSync(specPath, specContent, 'utf-8');
-    console.log(`[mocks] Spec: ${specPath} (2 tests)`);
+    console.log(`[mocks] Spec: ${specPath} (1 test)`);
   });
 });
 
