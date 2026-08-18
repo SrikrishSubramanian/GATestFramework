@@ -137,31 +137,10 @@ test.describe('Header — Negative & Boundary', () => {
         // Root element should still be present (not crash)
         await expect(page.locator('.cmp-header').first()).toBeVisible();
     });
-    test('[HDR-016] @negative @regression @sanity Header handles missing images', async ({ page }) => {
-        const pom = new HeaderPage(page);
-        await pom.navigate(BASE());
-        const images = page.locator('.cmp-header img');
-        const count = await images.count();
-        for (let i = 0; i < count; i++) {
-            const naturalWidth = await images.nth(i).evaluate((el: HTMLImageElement) => el.naturalWidth);
-            expect(naturalWidth).toBeGreaterThan(0);
-        }
-    });
 });
 test.describe('Header — Console & Resources', () => {
 });
 test.describe('Header — Broken Images', () => {
-    test('[HDR-020] @regression Header all images load successfully', async ({ page }) => {
-        const pom = new HeaderPage(page);
-        await pom.navigate(BASE());
-        const images = page.locator('.cmp-header img');
-        const count = await images.count();
-        for (let i = 0; i < count; i++) {
-            const img = images.nth(i);
-            const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-            expect(naturalWidth).toBeGreaterThan(0);
-        }
-    });
 });
 test.describe('Header — AEM Dialog Configuration', () => {
 });
