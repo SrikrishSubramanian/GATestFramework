@@ -52,7 +52,7 @@ export async function attachConsoleCapture(
  */
 export function annotateEnvironment(
   testInfo: TestInfo,
-  env: string = 'local',
+  env: string = process.env.env || 'local',
   mode: 'author' | 'publish' = 'author'
 ): void {
   testInfo.annotations.push(
