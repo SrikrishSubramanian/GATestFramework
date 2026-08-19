@@ -1,29 +1,7 @@
-image: mcr.microsoft.com/playwright:v1.54.1-jammy
+image: mcr.microsoft.com/playwright:v1.59.1-jammy
 
 definitions:
   steps:
-    - step: &mobile_tests
-        name: Run Mobile Test Cases
-        size: 2x
-        caches:
-          - node
-        script:
-          - export CI=true
-          - npm ci
-          - echo "$AEM_AUTH_STATE_JSON" > .auth-state.json
-          - npx playwright test --grep "@mobile" --project=Mobile-Chrome --project=Mobile-WebKit --workers=3
-          # - npx playwright test portfolioFilter.spec.ts --grep "@mobile" --project=Mobile-Chrome --project=Mobile-WebKit --workers=3
-        artifacts:
-          - playwright-report/**
-          - test-results/**
-        after-script:
-          - echo "📢 Sending Mobile Test Report to Teams..."
-          - BUILD_URL="https://bitbucket.org/$BITBUCKET_WORKSPACE/$BITBUCKET_REPO_SLUG/addon/pipelines/home#!/results/$BITBUCKET_BUILD_NUMBER"
-          - export BUILD_URL
-          - export BUILD_STATUS=$BITBUCKET_EXIT_CODE
-          - export BITBUCKET_PROJECT_NAME="Mobile"
-          - node scripts/send-report.js || true
-
     - step: &desktop_tests
         name: Run Desktop Test Cases
         size: 2x
@@ -47,6 +25,89 @@ definitions:
 
 pipelines:
   default:
-    - parallel:
-        - step: *mobile_tests
-        - step: *desktop_tests
+    - step: *desktop_tests
+
+  # GA Regression Suite
+  # Manual trigger ("Run pipeline" -> Custom pipeline) is the primary path — there is
+  # no push trigger here on purpose (this custom pipeline is never referenced under
+  # `default`/`branches`, so pushes to any branch cannot start it).
+  # Daily 01:00 UTC (06:30 IST) run is configured via Repository settings -> Pipelines ->
+  # Schedules (Bitbucket schedules are UI-configured, not YAML) -> pick this custom
+  # pipeline + the `ga_automation_testing` branch. Whichever branch is selected when
+  # running manually, or chosen in the schedule, is what gets checked out — Bitbucket
+  # has no separate "ref" override the way GitHub Actions checkout does.
+  custom:
+    "GA Regression Suite":
+      - variables:
+          - name: environment
+            default: dev
+            allowed-values:
+              - dev
+              - stage
+          - name: testType
+            default: regression
+            allowed-values:
+              - smoke
+              - sanity
+              - regression
+      - parallel:
+          - step:
+              name: Desktop (Firefox) - Shard 1/3
+              size: 2x
+              caches:
+                - node
+              script:
+                - export env="$environment"
+                - export TEST_TYPE="$testType"
+                - export CI=true
+                - npm ci
+                - echo "$AEM_AUTH_STATE_JSON" > .auth-state.json
+                - |
+                  GREP_ARGS=""
+                  if [ "$TEST_TYPE" != "regression" ]; then
+                    GREP_ARGS="--grep @$TEST_TYPE"
+                  fi
+                  npx playwright test tests/specFiles/ga/ --project firefox --shard=1/3 $GREP_ARGS
+              artifacts:
+                - playwright-report/**
+                - test-results/**
+          - step:
+              name: Desktop (Firefox) - Shard 2/3
+              size: 2x
+              caches:
+                - node
+              script:
+                - export env="$environment"
+                - export TEST_TYPE="$testType"
+                - export CI=true
+                - npm ci
+                - echo "$AEM_AUTH_STATE_JSON" > .auth-state.json
+                - |
+                  GREP_ARGS=""
+                  if [ "$TEST_TYPE" != "regression" ]; then
+                    GREP_ARGS="--grep @$TEST_TYPE"
+                  fi
+                  npx playwright test tests/specFiles/ga/ --project firefox --shard=2/3 $GREP_ARGS
+              artifacts:
+                - playwright-report/**
+                - test-results/**
+          - step:
+              name: Desktop (Firefox) - Shard 3/3
+              size: 2x
+              caches:
+                - node
+              script:
+                - export env="$environment"
+                - export TEST_TYPE="$testType"
+                - export CI=true
+                - npm ci
+                - echo "$AEM_AUTH_STATE_JSON" > .auth-state.json
+                - |
+                  GREP_ARGS=""
+                  if [ "$TEST_TYPE" != "regression" ]; then
+                    GREP_ARGS="--grep @$TEST_TYPE"
+                  fi
+                  npx playwright test tests/specFiles/ga/ --project firefox --shard=3/3 $GREP_ARGS
+              artifacts:
+                - playwright-report/**
+                - test-results/**
