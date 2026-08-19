@@ -11,8 +11,8 @@ definitions:
           - export CI=true
           - npm ci
           - echo "$AEM_AUTH_STATE_JSON" > .auth-state.json
-          - npx playwright test --grep "@mobile" --project=Mobile-Chrome --project=Mobile-WebKit --workers=4
-          # - npx playwright test portfolioFilter.spec.ts --grep "@mobile" --project=Mobile-Chrome --project=Mobile-WebKit --workers=4
+          - npx playwright test --grep "@mobile" --project=Mobile-Chrome --project=Mobile-WebKit --workers=3
+          # - npx playwright test portfolioFilter.spec.ts --grep "@mobile" --project=Mobile-Chrome --project=Mobile-WebKit --workers=3
         artifacts:
           - playwright-report/**
           - test-results/**
@@ -22,7 +22,7 @@ definitions:
           - export BUILD_URL
           - export BUILD_STATUS=$BITBUCKET_EXIT_CODE
           - export BITBUCKET_PROJECT_NAME="Mobile"
-          - node send-report.js || true
+          - node scripts/send-report.js || true
 
     - step: &desktop_tests
         name: Run Desktop Test Cases
@@ -33,7 +33,7 @@ definitions:
           - export CI=true
           - npm ci
           - echo "$AEM_AUTH_STATE_JSON" > .auth-state.json
-          - npx playwright test --project=chromium --project=firefox --project=webkit --workers=4
+          - npx playwright test --project=chromium --project=firefox --project=webkit --workers=3
         artifacts:
           - playwright-report/**
           - test-results/**
@@ -43,7 +43,7 @@ definitions:
           - export BUILD_URL
           - export BUILD_STATUS=$BITBUCKET_EXIT_CODE
           - export BITBUCKET_PROJECT_NAME="Desktop"
-          - node send-report.js || true
+          - node scripts/send-report.js || true
 
 pipelines:
   default:

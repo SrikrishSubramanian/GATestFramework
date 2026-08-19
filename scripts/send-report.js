@@ -5,7 +5,36 @@ const https = require("https");
 
 // ---------------- CONFIG ----------------
 const reportDir = path.join(process.cwd(), "playwright-report");
-const resultsJsonPath = path.join(reportDir, "results.json");
+
+// playwright.config.ts writes the JSON reporter to a timestamped subfolder
+// (playwright-report/<date>/run-<timestamp>/results.json), so find the most
+// recently written results.json instead of assuming a flat path.
+function findLatestResultsJson(dir) {
+  let latest = null;
+  let latestMtime = 0;
+
+  function walk(current) {
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const fullPath = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        walk(fullPath);
+      } else if (entry.name === "results.json") {
+        const mtime = fs.statSync(fullPath).mtimeMs;
+        if (mtime > latestMtime) {
+          latestMtime = mtime;
+          latest = fullPath;
+        }
+      }
+    }
+  }
+
+  if (fs.existsSync(dir)) {
+    walk(dir);
+  }
+  return latest;
+}
+
+const resultsJsonPath = findLatestResultsJson(reportDir);
 
 const webhookUrl = process.env.WEBHOOK_URL;
 const buildUrl = `https://bitbucket.org/${process.env.BITBUCKET_WORKSPACE}/${process.env.BITBUCKET_REPO_SLUG}/addon/pipelines/home#!/results/${process.env.BITBUCKET_BUILD_NUMBER}`;
@@ -61,7 +90,7 @@ function parseSummary(report) {
 // ---------------- MAIN ----------------
 async function sendReport() {
   try {
-    if (!fs.existsSync(resultsJsonPath)) {
+    if (!resultsJsonPath) {
       throw new Error("Playwright results.json not found");
     }
 
@@ -77,29 +106,18 @@ async function sendReport() {
       ? "📱 Playwright Mobile Automation Report"
       : "💻 Playwright Desktop Automation Report";
 
+    // Flat fields so the Power Automate flow's trigger schema can map each
+    // one individually (e.g. Total/Passed/Failed/Build link) into its card.
     const payload = {
-      "@type": "MessageCard",
-      "@context": "https://schema.org/extensions",
-      summary: "Playwright Test Results",
-      themeColor: buildFailed ? "FF0000" : "00FF00",
-      title: buildFailed
-        ? `❌ ${reportTitle}`
-        : `✅ ${reportTitle}`,
-      sections: [
-        {
-          facts: [
-            { name: "Project", value: projectName },
-            { name: "Total", value: `${total}` },
-            { name: "Passed", value: `${passed}` },
-            { name: "Failed", value: `${failed}` },
-            { name: "Skipped", value: `${skipped}` },
-            { name: "Flaky", value: `${flaky}` }
-          ]
-        },
-        {
-          text: `[View Bitbucket Build](${buildUrl})`
-        }
-      ]
+      project: projectName,
+      title: buildFailed ? `❌ ${reportTitle}` : `✅ ${reportTitle}`,
+      status: buildFailed ? "Failed" : "Passed",
+      total: total,
+      passed: passed,
+      failed: failed,
+      skipped: skipped,
+      flaky: flaky,
+      buildUrl: buildUrl
     };
 
     await postToTeams(webhookUrl, payload);
